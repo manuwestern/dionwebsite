@@ -140,7 +140,7 @@ const BeforeAfterSection: React.FC = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={handlePrevCase}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 rounded-full p-2 shadow-md hover:bg-opacity-100 md:left-0 md:-translate-x-12"
             aria-label="Vorheriger Fall"
           >
             <ChevronLeft className="w-6 h-6 text-gray-700" />
@@ -148,7 +148,7 @@ const BeforeAfterSection: React.FC = () => {
           
           <button 
             onClick={handleNextCase}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 rounded-full p-2 shadow-md hover:bg-opacity-100 md:right-0 md:translate-x-12"
             aria-label="Nächster Fall"
           >
             <ChevronRight className="w-6 h-6 text-gray-700" />
@@ -208,10 +208,8 @@ const BeforeAfterSection: React.FC = () => {
               style={{ left: `${sliderPosition}%` }}
             >
               <div className="absolute inset-y-0 -left-px w-0.5 bg-white"></div>
-              <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center">
-                  <div className="w-1 h-6 bg-gray-400 rounded-full"></div>
-                </div>
+              <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center">
+                <div className="w-1 h-10 bg-gray-300 rounded-full"></div>
               </div>
             </div>
           </div>
