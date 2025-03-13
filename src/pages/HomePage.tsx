@@ -95,8 +95,8 @@ const HomePage: React.FC = () => {
     <>
       <HeroSection />
       <TreatmentAreasSection />
-      <HolisticConceptSection />
       <TreatmentProcessSection stepRefs={stepRefs} visibleSteps={visibleSteps} />
+      <HolisticConceptSection />
       <BeforeAfterSection />
       <TestimonialsSection />
       <BenefitsSection />
