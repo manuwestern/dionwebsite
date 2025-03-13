@@ -102,8 +102,8 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Navigation */}
-                <div className="flex items-center justify-between mt-6">
-                  <p className="text-sm text-gray-500 font-light">
+                <div className="flex items-center justify-between mt-4">
+                  <p className="text-sm text-gray-500 font-light mb-2">
                     Fall {activeTestimonial + 1} von {testimonials.length}
                   </p>
                   <div className="flex gap-2">
