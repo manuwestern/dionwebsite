@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <div className="relative bg-gray-50">
-      <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-20">
+      <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-0 md:pt-20 md:pb-0">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="w-full text-center md:text-left md:max-w-xl">
             <h1 className="text-4xl font-light mb-3 md:text-5xl md:mb-4">
