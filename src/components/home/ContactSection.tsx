@@ -113,9 +113,9 @@ const ContactSection: React.FC = () => {
             <div className="mt-auto">
               <a 
                 href="#" 
-                className="block w-full bg-gray-800 text-white text-center py-4 px-6 rounded-xl font-light hover:bg-gray-700 transition-colors"
+                className="block w-full bg-[#333333] text-white text-center py-3 px-6 rounded-lg font-light hover:bg-[#444444] transition-colors tracking-wider"
               >
-                Jetzt kostenlose Haaranalyse vereinbaren
+                JETZT KOSTENLOSE HAARANALYSE VEREINBAREN
               </a>
             </div>
           </div>
