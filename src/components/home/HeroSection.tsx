@@ -15,30 +15,30 @@ const HeroSection: React.FC = () => {
             </h1>
             
             {/* Benefits Points */}
-            <div className="mt-4 mb-6 grid grid-cols-2 gap-4 text-left">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Award className="w-4 h-4 text-gray-700" />
+            <div className="mt-5 mb-7 grid grid-cols-2 gap-5 text-left">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                  <Award className="w-5 h-5 text-gray-700" />
                 </div>
-                <span className="text-sm font-light text-gray-700">15+ Jahre Erfahrung</span>
+                <span className="text-base font-light text-gray-700">15+ Jahre Erfahrung</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Stethoscope className="w-4 h-4 text-gray-700" />
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                  <Stethoscope className="w-5 h-5 text-gray-700" />
                 </div>
-                <span className="text-sm font-light text-gray-700">Modernste Technologie</span>
+                <span className="text-base font-light text-gray-700">Modernste Technologie</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Users className="w-4 h-4 text-gray-700" />
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                  <Users className="w-5 h-5 text-gray-700" />
                 </div>
-                <span className="text-sm font-light text-gray-700">Persönliche Betreuung</span>
+                <span className="text-base font-light text-gray-700">Persönliche Betreuung</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                  <HeartPulse className="w-4 h-4 text-gray-700" />
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                  <HeartPulse className="w-5 h-5 text-gray-700" />
                 </div>
-                <span className="text-sm font-light text-gray-700">Natürliche Ergebnisse</span>
+                <span className="text-base font-light text-gray-700">Natürliche Ergebnisse</span>
               </div>
             </div>
             
