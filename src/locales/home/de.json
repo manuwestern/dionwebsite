@@ -173,5 +173,44 @@
         "quote": "Ich hatte kaum noch Augenbrauen und war sehr unsicher. Die Transplantation hat mir ein völlig neues Selbstbewusstsein gegeben. Das Team war einfühlsam und die Ergebnisse sehen sehr natürlich aus."
       }
     ]
+  },
+  "footerSection": {
+    "description": "Premium-Spezialklinik für Haarwiederherstellung mit ganzheitlichen Behandlungsansätzen.",
+    "services": {
+      "title": "Dienstleistungen",
+      "items": [
+        "Haartransplantation",
+        "Barthaartransplantation",
+        "Augenbrauentransplantation",
+        "Haarausfalltherapie"
+      ]
+    },
+    "information": {
+      "title": "Informationen",
+      "items": [
+        "Über uns",
+        "Ergebnisse",
+        "Preisrechner",
+        "Pflegeanleitung",
+        "Karriere"
+      ]
+    },
+    "contact": {
+      "title": "Kontakt",
+      "address": [
+        "Hindenburgstraße 123",
+        "41061 Mönchengladbach",
+        "Deutschland"
+      ],
+      "phone": "+49 151 2345 6789",
+      "email": "info@dionhairclinic.de"
+    },
+    "copyright": "Alle Rechte vorbehalten.",
+    "legal": [
+      "Impressum",
+      "Datenschutz",
+      "AGB",
+      "Cookies"
+    ]
   }
 }

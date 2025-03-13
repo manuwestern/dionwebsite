@@ -173,5 +173,44 @@
         "quote": "I hardly had any eyebrows left and was very insecure. The transplantation has given me a completely new self-confidence. The team was empathetic and the results look very natural."
       }
     ]
+  },
+  "footerSection": {
+    "description": "Premium specialty clinic for hair restoration with holistic treatment approaches.",
+    "services": {
+      "title": "Services",
+      "items": [
+        "Hair Transplantation",
+        "Beard Transplantation",
+        "Eyebrow Transplantation",
+        "Hair Loss Therapy"
+      ]
+    },
+    "information": {
+      "title": "Information",
+      "items": [
+        "About Us",
+        "Results",
+        "Price Calculator",
+        "Care Instructions",
+        "Careers"
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "address": [
+        "Hindenburgstraße 123",
+        "41061 Mönchengladbach",
+        "Germany"
+      ],
+      "phone": "+49 151 2345 6789",
+      "email": "info@dionhairclinic.de"
+    },
+    "copyright": "All rights reserved.",
+    "legal": [
+      "Imprint",
+      "Privacy Policy",
+      "Terms & Conditions",
+      "Cookies"
+    ]
   }
 }
