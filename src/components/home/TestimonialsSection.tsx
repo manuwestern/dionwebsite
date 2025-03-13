@@ -65,6 +65,23 @@ const TestimonialsSection: React.FC = () => {
         </div>
 
         <div className="relative w-full mx-auto">
+          {/* Navigation Arrows */}
+          <button 
+            onClick={handlePrevTestimonial}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:left-0 md:-translate-x-12"
+            aria-label="Vorheriger Patient"
+          >
+            <ChevronLeft className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
+          </button>
+          
+          <button 
+            onClick={handleNextTestimonial}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:right-0 md:translate-x-12"
+            aria-label="Nächster Patient"
+          >
+            <ChevronRight className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
+          </button>
+          
           <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
             <div className="flex flex-col md:flex-row">
               {/* Patient Image - Left Side */}
@@ -101,27 +118,18 @@ const TestimonialsSection: React.FC = () => {
                   </p>
                 </div>
                 
-                {/* Navigation */}
-                <div className="flex items-center justify-between mt-4">
-                  <p className="text-sm text-gray-500 font-light mb-2">
-                    Fall {activeTestimonial + 1} von {testimonials.length}
-                  </p>
-                  <div className="flex gap-2">
-                    <button 
-                      onClick={handlePrevTestimonial}
-                      className="p-1.5 rounded-full bg-white shadow-sm hover:bg-gray-100 transition-colors"
-                      aria-label="Vorheriger Patient"
-                    >
-                      <ChevronLeft className="w-4 h-4 text-gray-700" />
-                    </button>
-                    <button 
-                      onClick={handleNextTestimonial}
-                      className="p-1.5 rounded-full bg-white shadow-sm hover:bg-gray-100 transition-colors"
-                      aria-label="Nächster Patient"
-                    >
-                      <ChevronRight className="w-4 h-4 text-gray-700" />
-                    </button>
-                  </div>
+                {/* Pagination Dots */}
+                <div className="flex justify-center mt-4 space-x-2">
+                  {testimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveTestimonial(index)}
+                      className={`w-2 h-2 rounded-full ${
+                        index === activeTestimonial ? 'bg-gray-700' : 'bg-gray-300'
+                      }`}
+                      aria-label={`Gehe zu Testimonial ${index + 1}`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
