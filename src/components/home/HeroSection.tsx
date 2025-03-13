@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-0 md:pt-16 md:pb-0">
         <div className="relative min-h-[500px] md:min-h-[500px]">
           {/* Image positioned on the right, partially cut off on the side in mobile only */}
-          <div className="absolute right-[-40%] top-0 w-[100%] h-full z-0 md:absolute md:right-0 md:top-[15%] md:bottom-0 md:w-[45%] md:h-[85%]">
+          <div className="absolute right-[-40%] top-0 w-[100%] h-full z-0 md:absolute md:right-0 md:top-[40%] md:bottom-0 md:w-[45%] md:h-[85%]">
               <div className="w-full h-full flex items-end">
                 <img 
                   src="/images/Dion_Model_Home.png"
@@ -21,11 +21,26 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Text content that overlaps with the image */}
-          <div className="relative z-10 max-w-[85%] md:max-w-[60%] flex flex-col justify-center h-full pt-8 md:pt-12">
+          <div className="relative z-10 max-w-[85%] md:max-w-[60%] flex flex-col justify-center h-full pt-16 md:pt-12">
             <h1 className="text-3xl font-light mb-2 md:text-5xl md:mb-3">
               {t('heroSection.title')}
-              <span className="block text-2xl mt-1 text-gray-700 md:text-4xl font-light">
-                {t('heroSection.subtitle')}
+              {/* Mobile version with line break from translation file */}
+              <span className="block text-2xl mt-1 text-gray-700 md:hidden font-light">
+                {t('heroSection.subtitle').split('\n').map((line, i) => (
+                  <React.Fragment key={i}>
+                    {i > 0 && <br />}
+                    {line}
+                  </React.Fragment>
+                ))}
+              </span>
+              {/* Desktop version with line break from translation file */}
+              <span className="hidden md:block text-4xl mt-1 text-gray-700 font-light">
+                {t('heroSection.subtitle').split('\n').map((line, i) => (
+                  <React.Fragment key={i}>
+                    {i > 0 && <br />}
+                    {line}
+                  </React.Fragment>
+                ))}
               </span>
             </h1>
             
