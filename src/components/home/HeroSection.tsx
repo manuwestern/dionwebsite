@@ -37,8 +37,13 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
             
+            {/* SEO Welcome Text */}
+            <p className="text-sm font-light text-gray-600 mb-6 md:text-base md:mb-6 text-left">
+              {t('heroSection.welcomeText')}
+            </p>
+            
             {/* Benefits Points */}
-            <div className="mt-8 mb-7 grid grid-cols-2 gap-5 text-left">
+            <div className="mb-7 grid grid-cols-2 gap-5 text-left">
               {benefitKeys.map((key) => (
                 <div key={key} className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
@@ -48,11 +53,6 @@ const HeroSection: React.FC = () => {
                 </div>
               ))}
             </div>
-            
-            {/* SEO Welcome Text */}
-            <p className="text-sm font-light text-gray-600 mb-6 md:text-base md:mb-8 text-left">
-              {t('heroSection.welcomeText')}
-            </p>
             
             <button className="w-full mt-6 bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:w-auto md:mt-8 md:px-8">
               {t('buttons.consultation', { ns: 'common' })}
