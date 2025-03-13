@@ -137,79 +137,81 @@ const BeforeAfterSection: React.FC = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Navigation Arrows */}
-          <button 
-            onClick={handlePrevCase}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:left-0 md:-translate-x-12"
-            aria-label="Vorheriger Fall"
-          >
-            <ChevronLeft className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
-          </button>
-          
-          <button 
-            onClick={handleNextCase}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:right-0 md:translate-x-12"
-            aria-label="Nächster Fall"
-          >
-            <ChevronRight className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
-          </button>
-
-
-          {/* Before-After Slider */}
-          <div 
-            ref={containerRef}
-            className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl mb-8 cursor-ew-resize"
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleSliderMove}
-            onMouseUp={handleMouseUp}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleSliderMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            {/* Vorher Label */}
-            <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-              Vorher
-            </div>
-            
-            {/* Nachher Label */}
-            <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-              Nachher
-            </div>
-            
-            {/* Before Image (Full Width) */}
-            <div className="absolute inset-0">
-              <img 
-                src={currentCase.beforeImage} 
-                alt={`Vor der Behandlung: ${currentCase.title}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            {/* After Image (Partial Width based on slider) */}
-            <div 
-              className="absolute inset-0 overflow-hidden"
-              style={{ width: `${sliderPosition}%` }}
+          {/* Before-After Slider with Navigation Arrows */}
+          <div className="relative">
+            {/* Navigation Arrows - Now inside the relative container with the slider */}
+            <button 
+              onClick={handlePrevCase}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:left-0 md:-translate-x-12"
+              aria-label="Vorheriger Fall"
             >
-              <img 
-                src={currentCase.afterImage} 
-                alt={`Nach der Behandlung: ${currentCase.title}`}
-                className="w-full h-full object-cover"
-                style={{ 
-                  width: `${100 / (sliderPosition / 100)}%`,
-                  maxWidth: 'none'
-                }}
-              />
-            </div>
+              <ChevronLeft className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
+            </button>
             
-            {/* Slider Control */}
-            <div 
-              ref={sliderRef}
-              className="absolute inset-y-0 z-10"
-              style={{ left: `${sliderPosition}%` }}
+            <button 
+              onClick={handleNextCase}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:right-0 md:translate-x-12"
+              aria-label="Nächster Fall"
             >
-              <div className="absolute inset-y-0 -left-px w-0.5 bg-white"></div>
-              <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center">
-                <div className="w-1 h-10 bg-gray-300 rounded-full"></div>
+              <ChevronRight className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
+            </button>
+
+            {/* Before-After Slider */}
+            <div 
+              ref={containerRef}
+              className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl mb-8 cursor-ew-resize"
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleSliderMove}
+              onMouseUp={handleMouseUp}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleSliderMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              {/* Vorher Label */}
+              <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                Vorher
+              </div>
+              
+              {/* Nachher Label */}
+              <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                Nachher
+              </div>
+              
+              {/* Before Image (Full Width) */}
+              <div className="absolute inset-0">
+                <img 
+                  src={currentCase.beforeImage} 
+                  alt={`Vor der Behandlung: ${currentCase.title}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* After Image (Partial Width based on slider) */}
+              <div 
+                className="absolute inset-0 overflow-hidden"
+                style={{ width: `${sliderPosition}%` }}
+              >
+                <img 
+                  src={currentCase.afterImage} 
+                  alt={`Nach der Behandlung: ${currentCase.title}`}
+                  className="w-full h-full object-cover"
+                  style={{ 
+                    width: `${100 / (sliderPosition / 100)}%`,
+                    maxWidth: 'none'
+                  }}
+                />
+              </div>
+              
+              {/* Slider Control */}
+              <div 
+                ref={sliderRef}
+                className="absolute inset-y-0 z-10"
+                style={{ left: `${sliderPosition}%` }}
+              >
+                <div className="absolute inset-y-0 -left-px w-0.5 bg-white"></div>
+                <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center">
+                  <div className="w-1 h-10 bg-gray-300 rounded-full"></div>
+                </div>
               </div>
             </div>
           </div>
