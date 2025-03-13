@@ -96,14 +96,14 @@ const TestimonialsSection: React.FC = () => {
               {/* Testimonial Content - Right Side */}
               <div className="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-between h-auto md:h-[320px]">
                 {/* Rating Stars */}
-                <div className="flex mb-3">
+                <div className="flex mb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-gray-700 fill-gray-700" />
                   ))}
                 </div>
                 
                 {/* Quote */}
-                <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-6">
+                <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-8">
                   "{currentTestimonial.quote}"
                 </blockquote>
                 
@@ -118,19 +118,7 @@ const TestimonialsSection: React.FC = () => {
                   </p>
                 </div>
                 
-                {/* Pagination Dots */}
-                <div className="flex justify-center mt-4 space-x-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveTestimonial(index)}
-                      className={`w-2 h-2 rounded-full ${
-                        index === activeTestimonial ? 'bg-gray-700' : 'bg-gray-300'
-                      }`}
-                      aria-label={`Gehe zu Testimonial ${index + 1}`}
-                    />
-                  ))}
-                </div>
+                {/* No pagination dots as requested */}
               </div>
             </div>
           </div>
