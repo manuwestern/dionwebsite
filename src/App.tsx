@@ -493,7 +493,7 @@ function App() {
         </div>
 
         {/* Desktop Active Step Card */}
-        <div className="hidden md:block max-w-3xl mx-auto">
+        <div className="hidden md:block w-full mx-auto">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 transform hover:scale-[1.02]">
             <div className="md:flex">
               <div className="md:w-1/2">
