@@ -226,6 +226,11 @@ function App() {
                 </div>
               </div>
               
+              {/* SEO Welcome Text */}
+              <p className="text-sm font-light text-gray-600 mb-6 md:text-base md:mb-8 text-left">
+                Willkommen in der führenden Klinik für Haartransplantation in NRW und ganz Deutschland. Unsere Experten bieten hochwertige Lösungen für Haartransplantationen, Augenbrauentransplantationen und Barthaartransplantationen mit modernsten Methoden. Erleben Sie natürliche Ergebnisse und professionelle Betreuung in unserer Haarklinik in Mönchengladbach.
+              </p>
+              
               <button className="w-full mt-6 bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:w-auto md:mt-8 md:px-8">
                 KOSTENLOSE BERATUNG
               </button>
