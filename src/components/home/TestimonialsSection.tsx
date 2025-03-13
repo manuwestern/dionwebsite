@@ -79,44 +79,44 @@ const TestimonialsSection: React.FC = () => {
               {/* Testimonial Content - Right Side */}
               <div className="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-between h-auto md:h-[320px]">
                 {/* Rating Stars */}
-                <div className="flex mb-4">
+                <div className="flex mb-3">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-gray-700 fill-gray-700" />
+                    <Star key={i} className="w-5 h-5 text-gray-700 fill-gray-700" />
                   ))}
                 </div>
                 
                 {/* Quote */}
-                <blockquote className="text-lg md:text-xl font-light text-gray-700 italic mb-6 overflow-y-auto max-h-[140px] md:max-h-[160px]">
+                <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-6 overflow-y-auto max-h-[160px] md:max-h-[180px]">
                   "{currentTestimonial.quote}"
                 </blockquote>
                 
                 {/* Patient Info */}
                 <div>
-                  <h3 className="text-2xl font-light text-gray-800 mb-1">{currentTestimonial.name}</h3>
-                  <p className="text-gray-600 font-light">
+                  <h3 className="text-xl font-light text-gray-800 mb-1">{currentTestimonial.name}</h3>
+                  <p className="text-sm text-gray-600 font-light">
                     {currentTestimonial.age} Jahre, {currentTestimonial.treatment}
                   </p>
                 </div>
                 
                 {/* Navigation */}
-                <div className="flex items-center justify-between mt-8">
-                  <p className="text-gray-500 font-light">
+                <div className="flex items-center justify-between mt-6">
+                  <p className="text-sm text-gray-500 font-light">
                     Fall {activeTestimonial + 1} von {testimonials.length}
                   </p>
                   <div className="flex gap-2">
                     <button 
                       onClick={handlePrevTestimonial}
-                      className="p-2 rounded-full bg-white shadow-sm hover:bg-gray-100 transition-colors"
+                      className="p-1.5 rounded-full bg-white shadow-sm hover:bg-gray-100 transition-colors"
                       aria-label="Vorheriger Patient"
                     >
-                      <ChevronLeft className="w-5 h-5 text-gray-700" />
+                      <ChevronLeft className="w-4 h-4 text-gray-700" />
                     </button>
                     <button 
                       onClick={handleNextTestimonial}
-                      className="p-2 rounded-full bg-white shadow-sm hover:bg-gray-100 transition-colors"
+                      className="p-1.5 rounded-full bg-white shadow-sm hover:bg-gray-100 transition-colors"
                       aria-label="Nächster Patient"
                     >
-                      <ChevronRight className="w-5 h-5 text-gray-700" />
+                      <ChevronRight className="w-4 h-4 text-gray-700" />
                     </button>
                   </div>
                 </div>
