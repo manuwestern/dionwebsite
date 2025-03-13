@@ -405,7 +405,7 @@ function App() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Hair Transplantation Card */}
           <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
             <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
@@ -448,6 +448,21 @@ function App() {
             <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
             <p className="text-sm text-gray-500 font-light italic">
               "Für langfristige Ergebnisse von innen"
+            </p>
+          </div>
+
+          {/* Medication Therapy Card */}
+          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+            <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
+              <Stethoscope className="w-8 h-8 text-gray-700" />
+            </div>
+            <h3 className="text-xl font-light mb-3">Medikamentöse Therapie</h3>
+            <p className="text-gray-600 font-light mb-4">
+              Wirksame Medikamente zur Behandlung von Haarausfall. Hemmt den Haarverlust und stimuliert das Wachstum neuer Haare.
+            </p>
+            <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
+            <p className="text-sm text-gray-500 font-light italic">
+              "Wissenschaftlich bewährte Wirksamkeit"
             </p>
           </div>
         </div>
