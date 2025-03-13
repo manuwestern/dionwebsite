@@ -154,11 +154,6 @@ const BeforeAfterSection: React.FC = () => {
             <ChevronRight className="w-6 h-6 text-gray-700" />
           </button>
 
-          {/* Case Title and Counter */}
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-light mb-2">{currentCase.title}</h3>
-            <p className="text-sm text-gray-500">Fall {activeCase + 1} von {beforeAfterCases.length}</p>
-          </div>
 
           {/* Before-After Slider */}
           <div 
