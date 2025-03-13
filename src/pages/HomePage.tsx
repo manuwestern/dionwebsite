@@ -6,7 +6,7 @@ import HolisticConceptSection from '../components/home/HolisticConceptSection';
 import TreatmentProcessSection from '../components/home/TreatmentProcessSection';
 import BeforeAfterSection from '../components/home/BeforeAfterSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
-import ContactSection from '../components/home/ContactSection';
+import ContactSection from '../components/layout/ContactSection';
 
 const HomePage: React.FC = () => {
   const [visibleSteps, setVisibleSteps] = useState(new Set<number>());
