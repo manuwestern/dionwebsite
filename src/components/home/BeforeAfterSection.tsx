@@ -52,11 +52,12 @@ const beforeAfterCases: BeforeAfterCase[] = [
 const BeforeAfterSection: React.FC = () => {
   const [activeCase, setActiveCase] = useState(0);
   const [sliderPosition, setSliderPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleSliderMove = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
+    if (!containerRef.current || !isDragging) return;
     
     let clientX: number;
     
@@ -75,6 +76,43 @@ const BeforeAfterSection: React.FC = () => {
     const clampedPosition = Math.max(0, Math.min(100, position));
     setSliderPosition(clampedPosition);
   };
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    handleSliderMove(e);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    handleSliderMove(e);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  // Add global event listeners for mouse up and touch end
+  useEffect(() => {
+    const handleGlobalMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    const handleGlobalTouchEnd = () => {
+      setIsDragging(false);
+    };
+
+    document.addEventListener('mouseup', handleGlobalMouseUp);
+    document.addEventListener('touchend', handleGlobalTouchEnd);
+
+    return () => {
+      document.removeEventListener('mouseup', handleGlobalMouseUp);
+      document.removeEventListener('touchend', handleGlobalTouchEnd);
+    };
+  }, []);
 
   const handlePrevCase = () => {
     setActiveCase((prev) => (prev === 0 ? beforeAfterCases.length - 1 : prev - 1));
@@ -126,8 +164,12 @@ const BeforeAfterSection: React.FC = () => {
           <div 
             ref={containerRef}
             className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl mb-8 cursor-ew-resize"
+            onMouseDown={handleMouseDown}
             onMouseMove={handleSliderMove}
+            onMouseUp={handleMouseUp}
+            onTouchStart={handleTouchStart}
             onTouchMove={handleSliderMove}
+            onTouchEnd={handleTouchEnd}
           >
             {/* Vorher Label */}
             <div className="absolute top-4 left-4 z-10 bg-red-600 text-white px-4 py-2 rounded-lg font-light">
