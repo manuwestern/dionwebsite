@@ -21,8 +21,8 @@ const HeroSection: React.FC = () => {
 
   // List of benefits to display
   const benefitKeys = [
-    'experience', 'technology', 'care', 'results', 
-    'painless', 'satisfaction', 'specialists', 'aftercare'
+    'experience', 'technology', 'care', 
+    'specialists', 'aftercare'
   ];
 
   return (
