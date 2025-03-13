@@ -32,9 +32,11 @@ const HeroSection: React.FC = () => {
               {t('heroSection.welcomeText')}
             </p>
             
-            <button className="mt-4 bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:mt-6 md:px-8">
-              {t('buttons.consultation', { ns: 'common' })}
-            </button>
+            <div>
+              <button className="mt-4 inline-block bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:mt-6 md:px-8">
+                {t('buttons.consultation', { ns: 'common' })}
+              </button>
+            </div>
           </div>
         </div>
       </div>
