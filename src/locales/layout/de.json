@@ -1,0 +1,80 @@
+{
+  "topBar": {
+    "languages": {
+      "german": "Deutsch",
+      "english": "English"
+    },
+    "contact": {
+      "email": "info@dionhairclinic.de",
+      "phone": "+49 170 2637818"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "treatments": "Behandlungen",
+    "information": "Wissenswertes",
+    "clinic": "Klinik",
+    "contact": "Kontakt",
+    "priceCalculator": "Preisrechner"
+  },
+  "footer": {
+    "clinicDescription": "Premium-Spezialklinik für Haarwiederherstellung mit ganzheitlichen Behandlungsansätzen.",
+    "services": {
+      "title": "Dienstleistungen",
+      "hairTransplant": "Haartransplantation",
+      "beardTransplant": "Barthaartransplantation",
+      "eyebrowTransplant": "Augenbrauentransplantation",
+      "hairLossTherapy": "Haarausfalltherapie"
+    },
+    "information": {
+      "title": "Informationen",
+      "aboutUs": "Über uns",
+      "results": "Ergebnisse",
+      "priceCalculator": "Preisrechner",
+      "careInstructions": "Pflegeanleitung",
+      "career": "Karriere"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "address": {
+        "line1": "Dion Hair Clinic",
+        "line2": "Hindenburgstraße 123",
+        "line3": "41061 Mönchengladbach",
+        "line4": "Deutschland"
+      }
+    },
+    "copyright": "© {{year}} Dion Hair Clinic. Alle Rechte vorbehalten.",
+    "legal": {
+      "imprint": "Impressum",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "cookies": "Cookies"
+    }
+  },
+  "contactSection": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir sind für Sie da und beantworten gerne Ihre Fragen",
+    "contactOptions": "Kontaktmöglichkeiten",
+    "address": {
+      "title": "Adresse",
+      "line1": "Dion Hair Clinic",
+      "line2": "Hindenburgstraße 123",
+      "line3": "41061 Mönchengladbach",
+      "line4": "Deutschland"
+    },
+    "hairAnalysis": {
+      "title": "Kostenlose Haaranalyse & Beratung",
+      "description": "Lassen Sie Ihre Haarsituation von unseren Experten analysieren und erhalten Sie eine individuelle Beratung zu Ihren Behandlungsmöglichkeiten – völlig unverbindlich und kostenlos. Wir bieten Ihnen ein kostenloses Beratungsgespräch telefonisch oder vor Ort in unserer Klinik an.",
+      "expectations": {
+        "title": "Das erwartet Sie:",
+        "items": [
+          "Detaillierte Analyse Ihrer Kopfhaut und Haarstruktur",
+          "Persönliches Gespräch mit einem Haarspezialisten",
+          "Beratung telefonisch oder vor Ort in der Klinik",
+          "Individuelle Behandlungsempfehlungen",
+          "Transparente Kostenübersicht"
+        ]
+      }
+    }
+  }
+}

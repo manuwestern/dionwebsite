@@ -1,0 +1,19 @@
+{
+  "language": {
+    "german": "German",
+    "english": "English"
+  },
+  "buttons": {
+    "consultation": "FREE CONSULTATION",
+    "hairAnalysis": "SCHEDULE YOUR FREE HAIR ANALYSIS & CONSULTATION NOW"
+  },
+  "contact": {
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "address": "Address",
+    "businessHours": "Mon-Fri: 9:00 AM - 6:00 PM",
+    "responseTime": "We respond within 24 hours",
+    "quickConsultation": "Quick consultation via chat"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "language": {
+    "german": "Deutsch",
+    "english": "Englisch"
+  },
+  "buttons": {
+    "consultation": "KOSTENLOSE BERATUNG",
+    "hairAnalysis": "JETZT KOSTENLOSE HAARANALYSE & BERATUNG VEREINBAREN"
+  },
+  "contact": {
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp",
+    "address": "Adresse",
+    "businessHours": "Mo-Fr: 9:00 - 18:00 Uhr",
+    "responseTime": "Wir antworten innerhalb von 24 Stunden",
+    "quickConsultation": "Schnelle Beratung per Chat"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "heroSection": {
+    "title": "Ihre Experten",
+    "subtitle": "für Haartransplantationen in Mönchengladbach",
+    "benefits": {
+      "experience": "15+ Jahre Erfahrung",
+      "technology": "Modernste Technologie",
+      "care": "Persönliche Betreuung",
+      "results": "Natürliche Ergebnisse"
+    },
+    "welcomeText": "Willkommen in der führenden Klinik für Haartransplantation in NRW und ganz Deutschland. Unsere Experten bieten hochwertige Lösungen für Haartransplantationen, Augenbrauentransplantationen und Barthaartransplantationen mit modernsten Methoden. Erleben Sie natürliche Ergebnisse und professionelle Betreuung in unserer Haarklinik in Mönchengladbach."
+  },
+  "benefitsSection": {
+    "title": "Warum Dion Hair Clinic?",
+    "subtitle": "Unsere Vorteile auf einen Blick",
+    "benefits": [
+      {
+        "title": "Erfahrene Spezialisten",
+        "description": "Unser Team besteht aus erfahrenen Ärzten mit über 15 Jahren Erfahrung in der Haartransplantation."
+      },
+      {
+        "title": "Modernste Technologien",
+        "description": "Wir verwenden nur die neuesten und schonendsten Techniken für optimale Ergebnisse."
+      },
+      {
+        "title": "Individuelle Beratung",
+        "description": "Jeder Patient erhält eine ausführliche und persönliche Beratung für die beste Behandlungsstrategie."
+      },
+      {
+        "title": "Natürliche Ergebnisse",
+        "description": "Unsere Haartransplantationen sehen natürlich aus und sind nicht von natürlichem Haarwuchs zu unterscheiden."
+      }
+    ]
+  },
+  "treatmentAreasSection": {
+    "title": "Behandlungsbereiche",
+    "subtitle": "Spezialisiert auf verschiedene Bereiche",
+    "areas": [
+      {
+        "title": "Haartransplantation",
+        "description": "Wiederherstellung des Haupthaars mit modernsten Techniken wie FUE und DHI."
+      },
+      {
+        "title": "Barthaartransplantation",
+        "description": "Verdichtung oder Neugestaltung des Bartwuchses für einen volleren Bart."
+      },
+      {
+        "title": "Augenbrauentransplantation",
+        "description": "Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick."
+      },
+      {
+        "title": "Haarausfalltherapie",
+        "description": "Nicht-chirurgische Behandlungen zur Vorbeugung und Behandlung von Haarausfall."
+      }
+    ]
+  },
+  "holisticConceptSection": {
+    "title": "Unser ganzheitliches Konzept",
+    "subtitle": "Mehr als nur eine Haartransplantation",
+    "description": "Bei Dion Hair Clinic betrachten wir Haarausfall als komplexes Problem, das einen ganzheitlichen Ansatz erfordert. Unsere Behandlungen kombinieren chirurgische Eingriffe mit unterstützenden Therapien und Nachsorge für optimale und langanhaltende Ergebnisse.",
+    "concepts": [
+      {
+        "title": "Umfassende Diagnose",
+        "description": "Detaillierte Analyse der Kopfhaut, Haarstruktur und Ursachen des Haarausfalls."
+      },
+      {
+        "title": "Personalisierte Behandlung",
+        "description": "Maßgeschneiderte Behandlungspläne basierend auf Ihren individuellen Bedürfnissen."
+      },
+      {
+        "title": "Kombinierte Therapien",
+        "description": "Integration von chirurgischen und nicht-chirurgischen Methoden für optimale Ergebnisse."
+      },
+      {
+        "title": "Langfristige Nachsorge",
+        "description": "Umfassende Nachsorge und Beratung zur Erhaltung Ihrer Ergebnisse."
+      }
+    ]
+  },
+  "treatmentProcessSection": {
+    "title": "Unser Behandlungsprozess",
+    "subtitle": "Von der Beratung bis zur Nachsorge",
+    "steps": [
+      {
+        "title": "Kostenlose Erstberatung",
+        "description": "Ausführliches Gespräch zur Analyse Ihrer Situation und Besprechung der Möglichkeiten."
+      },
+      {
+        "title": "Individuelle Planung",
+        "description": "Detaillierte Planung des Eingriffs basierend auf Ihren Wünschen und medizinischen Anforderungen."
+      },
+      {
+        "title": "Schmerzfreier Eingriff",
+        "description": "Durchführung der Haartransplantation mit lokaler Betäubung und modernsten Techniken."
+      },
+      {
+        "title": "Umfassende Nachsorge",
+        "description": "Detaillierte Pflegeanleitung und regelmäßige Nachuntersuchungen für optimale Ergebnisse."
+      },
+      {
+        "title": "Langfristige Betreuung",
+        "description": "Kontinuierliche Unterstützung und Beratung auch nach Abschluss der Behandlung."
+      }
+    ]
+  },
+  "beforeAfterSection": {
+    "title": "Vorher-Nachher Ergebnisse",
+    "subtitle": "Überzeugen Sie sich selbst von unseren Ergebnissen",
+    "cases": [
+      {
+        "title": "Fall 1",
+        "description": "Haartransplantation mit 3500 Grafts, 12 Monate nach dem Eingriff"
+      },
+      {
+        "title": "Fall 2",
+        "description": "Barthaartransplantation, 8 Monate nach dem Eingriff"
+      },
+      {
+        "title": "Fall 3",
+        "description": "Augenbrauentransplantation, 6 Monate nach dem Eingriff"
+      }
+    ],
+    "navigation": {
+      "previous": "Vorheriger Fall",
+      "next": "Nächster Fall",
+      "caseCount": "Fall {{current}} von {{total}}"
+    }
+  },
+  "testimonialsSection": {
+    "title": "Patientenerfahrungen",
+    "subtitle": "Was unsere Patienten über uns sagen",
+    "testimonials": [
+      {
+        "name": "Michael Schneider",
+        "age": "42 Jahre",
+        "treatment": "Saphir-FUE Haartransplantation",
+        "quote": "Die Behandlung bei Dion Hair Clinic war absolut professionell. Das Ergebnis übertrifft meine Erwartungen und sieht völlig natürlich aus. Das Team war äußerst kompetent und einfühlsam."
+      },
+      {
+        "name": "Thomas Weber",
+        "age": "38 Jahre",
+        "treatment": "DHI-Technik Haartransplantation",
+        "quote": "Nach jahrelangem Haarausfall habe ich mich für eine Behandlung bei Dion entschieden. Der gesamte Prozess war schmerzfrei und die Ergebnisse sind beeindruckend. Ich kann die Klinik nur weiterempfehlen."
+      },
+      {
+        "name": "Julia Becker",
+        "age": "35 Jahre",
+        "treatment": "Augenbrauen-Transplantation",
+        "quote": "Ich hatte kaum noch Augenbrauen und war sehr unsicher. Die Transplantation hat mir ein völlig neues Selbstbewusstsein gegeben. Das Team war einfühlsam und die Ergebnisse sehen sehr natürlich aus."
+      }
+    ]
+  }
+}

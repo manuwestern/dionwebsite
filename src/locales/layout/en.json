@@ -1,0 +1,80 @@
+{
+  "topBar": {
+    "languages": {
+      "german": "German",
+      "english": "English"
+    },
+    "contact": {
+      "email": "info@dionhairclinic.de",
+      "phone": "+49 170 2637818"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "information": "Information",
+    "clinic": "Clinic",
+    "contact": "Contact",
+    "priceCalculator": "Price Calculator"
+  },
+  "footer": {
+    "clinicDescription": "Premium specialized clinic for hair restoration with holistic treatment approaches.",
+    "services": {
+      "title": "Services",
+      "hairTransplant": "Hair Transplantation",
+      "beardTransplant": "Beard Transplantation",
+      "eyebrowTransplant": "Eyebrow Transplantation",
+      "hairLossTherapy": "Hair Loss Therapy"
+    },
+    "information": {
+      "title": "Information",
+      "aboutUs": "About Us",
+      "results": "Results",
+      "priceCalculator": "Price Calculator",
+      "careInstructions": "Care Instructions",
+      "career": "Career"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": {
+        "line1": "Dion Hair Clinic",
+        "line2": "Hindenburgstraße 123",
+        "line3": "41061 Mönchengladbach",
+        "line4": "Germany"
+      }
+    },
+    "copyright": "© {{year}} Dion Hair Clinic. All rights reserved.",
+    "legal": {
+      "imprint": "Imprint",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "cookies": "Cookies"
+    }
+  },
+  "contactSection": {
+    "title": "Contact Us",
+    "subtitle": "We are here for you and happy to answer your questions",
+    "contactOptions": "Contact Options",
+    "address": {
+      "title": "Address",
+      "line1": "Dion Hair Clinic",
+      "line2": "Hindenburgstraße 123",
+      "line3": "41061 Mönchengladbach",
+      "line4": "Germany"
+    },
+    "hairAnalysis": {
+      "title": "Free Hair Analysis & Consultation",
+      "description": "Have your hair situation analyzed by our experts and receive individual advice on your treatment options - completely non-binding and free of charge. We offer you a free consultation by phone or in person at our clinic.",
+      "expectations": {
+        "title": "What to expect:",
+        "items": [
+          "Detailed analysis of your scalp and hair structure",
+          "Personal conversation with a hair specialist",
+          "Consultation by phone or on-site at the clinic",
+          "Individual treatment recommendations",
+          "Transparent cost overview"
+        ]
+      }
+    }
+  }
+}

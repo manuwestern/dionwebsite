@@ -1,0 +1,153 @@
+{
+  "heroSection": {
+    "title": "Your Experts",
+    "subtitle": "for Hair Transplantation in Mönchengladbach",
+    "benefits": {
+      "experience": "15+ Years Experience",
+      "technology": "Cutting-Edge Technology",
+      "care": "Personal Care",
+      "results": "Natural Results"
+    },
+    "welcomeText": "Welcome to the leading hair transplantation clinic in North Rhine-Westphalia and throughout Germany. Our experts offer high-quality solutions for hair transplantation, eyebrow transplantation, and beard transplantation using state-of-the-art methods. Experience natural results and professional care at our hair clinic in Mönchengladbach."
+  },
+  "benefitsSection": {
+    "title": "Why Dion Hair Clinic?",
+    "subtitle": "Our advantages at a glance",
+    "benefits": [
+      {
+        "title": "Experienced Specialists",
+        "description": "Our team consists of experienced doctors with over 15 years of experience in hair transplantation."
+      },
+      {
+        "title": "Cutting-Edge Technologies",
+        "description": "We only use the latest and gentlest techniques for optimal results."
+      },
+      {
+        "title": "Individual Consultation",
+        "description": "Each patient receives a detailed and personal consultation for the best treatment strategy."
+      },
+      {
+        "title": "Natural Results",
+        "description": "Our hair transplants look natural and are indistinguishable from natural hair growth."
+      }
+    ]
+  },
+  "treatmentAreasSection": {
+    "title": "Treatment Areas",
+    "subtitle": "Specialized in various areas",
+    "areas": [
+      {
+        "title": "Hair Transplantation",
+        "description": "Restoration of scalp hair using state-of-the-art techniques such as FUE and DHI."
+      },
+      {
+        "title": "Beard Transplantation",
+        "description": "Densification or redesign of beard growth for a fuller beard."
+      },
+      {
+        "title": "Eyebrow Transplantation",
+        "description": "Restoration or densification of eyebrows for an expressive look."
+      },
+      {
+        "title": "Hair Loss Therapy",
+        "description": "Non-surgical treatments for the prevention and treatment of hair loss."
+      }
+    ]
+  },
+  "holisticConceptSection": {
+    "title": "Our Holistic Concept",
+    "subtitle": "More than just a hair transplant",
+    "description": "At Dion Hair Clinic, we view hair loss as a complex problem that requires a holistic approach. Our treatments combine surgical procedures with supportive therapies and aftercare for optimal and long-lasting results.",
+    "concepts": [
+      {
+        "title": "Comprehensive Diagnosis",
+        "description": "Detailed analysis of the scalp, hair structure, and causes of hair loss."
+      },
+      {
+        "title": "Personalized Treatment",
+        "description": "Tailored treatment plans based on your individual needs."
+      },
+      {
+        "title": "Combined Therapies",
+        "description": "Integration of surgical and non-surgical methods for optimal results."
+      },
+      {
+        "title": "Long-term Aftercare",
+        "description": "Comprehensive aftercare and advice to maintain your results."
+      }
+    ]
+  },
+  "treatmentProcessSection": {
+    "title": "Our Treatment Process",
+    "subtitle": "From consultation to aftercare",
+    "steps": [
+      {
+        "title": "Free Initial Consultation",
+        "description": "Detailed discussion to analyze your situation and discuss possibilities."
+      },
+      {
+        "title": "Individual Planning",
+        "description": "Detailed planning of the procedure based on your wishes and medical requirements."
+      },
+      {
+        "title": "Pain-Free Procedure",
+        "description": "Performing the hair transplantation with local anesthesia and state-of-the-art techniques."
+      },
+      {
+        "title": "Comprehensive Aftercare",
+        "description": "Detailed care instructions and regular follow-up examinations for optimal results."
+      },
+      {
+        "title": "Long-term Support",
+        "description": "Continuous support and advice even after the treatment is completed."
+      }
+    ]
+  },
+  "beforeAfterSection": {
+    "title": "Before-After Results",
+    "subtitle": "See for yourself our results",
+    "cases": [
+      {
+        "title": "Case 1",
+        "description": "Hair transplantation with 3500 grafts, 12 months after the procedure"
+      },
+      {
+        "title": "Case 2",
+        "description": "Beard transplantation, 8 months after the procedure"
+      },
+      {
+        "title": "Case 3",
+        "description": "Eyebrow transplantation, 6 months after the procedure"
+      }
+    ],
+    "navigation": {
+      "previous": "Previous Case",
+      "next": "Next Case",
+      "caseCount": "Case {{current}} of {{total}}"
+    }
+  },
+  "testimonialsSection": {
+    "title": "Patient Experiences",
+    "subtitle": "What our patients say about us",
+    "testimonials": [
+      {
+        "name": "Michael Schneider",
+        "age": "42 years",
+        "treatment": "Sapphire-FUE Hair Transplantation",
+        "quote": "The treatment at Dion Hair Clinic was absolutely professional. The result exceeds my expectations and looks completely natural. The team was extremely competent and empathetic."
+      },
+      {
+        "name": "Thomas Weber",
+        "age": "38 years",
+        "treatment": "DHI Technique Hair Transplantation",
+        "quote": "After years of hair loss, I decided to get treatment at Dion. The entire process was pain-free and the results are impressive. I can only recommend the clinic."
+      },
+      {
+        "name": "Julia Becker",
+        "age": "35 years",
+        "treatment": "Eyebrow Transplantation",
+        "quote": "I hardly had any eyebrows left and was very insecure. The transplantation has given me a completely new self-confidence. The team was empathetic and the results look very natural."
+      }
+    ]
+  }
+}
