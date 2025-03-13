@@ -174,6 +174,36 @@
       }
     ]
   },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to your most important questions",
+    "faqs": [
+      {
+        "question": "How long does a hair transplant take?",
+        "answer": "The duration of a hair transplant depends on the number of grafts to be transplanted. Typically, the procedure takes between 4 and 8 hours. For more extensive transplants, the treatment may be divided over two days to achieve optimal results."
+      },
+      {
+        "question": "Is a hair transplant painful?",
+        "answer": "No, hair transplantation is performed under local anesthesia, so you won't feel any pain during the procedure. After the procedure, mild discomfort may occur, but this can be well controlled with pain medication. Most patients report minimal discomfort."
+      },
+      {
+        "question": "How long does it take to see results?",
+        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months, when the transplanted hair has fully grown and reached its natural density."
+      },
+      {
+        "question": "Are the results of a hair transplant permanent?",
+        "answer": "Yes, the transplanted hair follicles come from areas that are not genetically susceptible to hair loss. These hairs retain their properties and typically do not fall out. They grow like normal hair for a lifetime and can be cut, colored, and styled."
+      },
+      {
+        "question": "How much does a hair transplant cost?",
+        "answer": "Costs vary depending on the extent of the transplant and the technique chosen. At Dion Hair Clinic, we offer transparent pricing based on the number of grafts needed. For an accurate cost estimate, we recommend a free consultation where we can analyze your individual case."
+      },
+      {
+        "question": "What hair transplant techniques do you offer?",
+        "answer": "We offer various modern techniques, including FUE (Follicular Unit Extraction), Sapphire-FUE, and DHI (Direct Hair Implantation). The most suitable method for you will be recommended based on your hair type, the extent of hair loss, and your personal goals."
+      }
+    ]
+  },
   "footerSection": {
     "description": "Premium specialty clinic for hair restoration with holistic treatment approaches.",
     "services": {

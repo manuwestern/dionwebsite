@@ -174,6 +174,36 @@
       }
     ]
   },
+  "faqSection": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf Ihre wichtigsten Fragen",
+    "faqs": [
+      {
+        "question": "Wie lange dauert eine Haartransplantation?",
+        "answer": "Die Dauer einer Haartransplantation hängt von der Anzahl der zu transplantierenden Grafts ab. In der Regel dauert der Eingriff zwischen 4 und 8 Stunden. Bei umfangreicheren Transplantationen kann die Behandlung auf zwei Tage aufgeteilt werden, um optimale Ergebnisse zu erzielen."
+      },
+      {
+        "question": "Ist eine Haartransplantation schmerzhaft?",
+        "answer": "Nein, die Haartransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind. Die meisten Patienten berichten von minimalen Unannehmlichkeiten."
+      },
+      {
+        "question": "Wie lange dauert es, bis die Ergebnisse sichtbar werden?",
+        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben."
+      },
+      {
+        "question": "Sind die Ergebnisse einer Haartransplantation dauerhaft?",
+        "answer": "Ja, die transplantierten Haarfollikel stammen aus Bereichen, die genetisch nicht für Haarausfall anfällig sind. Diese Haare behalten ihre Eigenschaften bei und fallen in der Regel nicht aus. Sie wachsen ein Leben lang wie normales Haar und können geschnitten, gefärbt und gestylt werden."
+      },
+      {
+        "question": "Wie viel kostet eine Haartransplantation?",
+        "answer": "Die Kosten variieren je nach Umfang der Transplantation und der gewählten Technik. Bei Dion Hair Clinic bieten wir transparente Preisgestaltung basierend auf der Anzahl der benötigten Grafts. Für eine genaue Kosteneinschätzung empfehlen wir eine kostenlose Beratung, bei der wir Ihren individuellen Fall analysieren können."
+      },
+      {
+        "question": "Welche Haartransplantationstechniken bieten Sie an?",
+        "answer": "Wir bieten verschiedene moderne Techniken an, darunter FUE (Follicular Unit Extraction), Saphir-FUE und DHI (Direct Hair Implantation). Die für Sie am besten geeignete Methode wird basierend auf Ihrem Haartyp, dem Ausmaß des Haarverlusts und Ihren persönlichen Zielen empfohlen."
+      }
+    ]
+  },
   "footerSection": {
     "description": "Premium-Spezialklinik für Haarwiederherstellung mit ganzheitlichen Behandlungsansätzen.",
     "services": {

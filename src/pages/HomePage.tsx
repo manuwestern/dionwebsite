@@ -6,6 +6,7 @@ import HolisticConceptSection from '../components/home/HolisticConceptSection';
 import TreatmentProcessSection from '../components/home/TreatmentProcessSection';
 import BeforeAfterSection from '../components/home/BeforeAfterSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
+import FAQSection from '../components/home/FAQSection';
 import ContactSection from '../components/layout/ContactSection';
 
 const HomePage: React.FC = () => {
@@ -100,6 +101,7 @@ const HomePage: React.FC = () => {
       <BeforeAfterSection />
       <TestimonialsSection />
       <BenefitsSection />
+      <FAQSection />
       <ContactSection />
     </>
   );
