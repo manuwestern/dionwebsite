@@ -67,19 +67,23 @@
     "concepts": [
       {
         "title": "Comprehensive Diagnosis",
-        "description": "Detailed analysis of the scalp, hair structure, and causes of hair loss."
+        "description": "Detailed analysis of the scalp, hair structure, and causes of hair loss.",
+        "quote": "The foundation for successful treatments"
       },
       {
         "title": "Personalized Treatment",
-        "description": "Tailored treatment plans based on your individual needs."
+        "description": "Tailored treatment plans based on your individual needs.",
+        "quote": "Every patient is unique"
       },
       {
         "title": "Combined Therapies",
-        "description": "Integration of surgical and non-surgical methods for optimal results."
+        "description": "Integration of surgical and non-surgical methods for optimal results.",
+        "quote": "Synergy effects for better results"
       },
       {
         "title": "Long-term Aftercare",
-        "description": "Comprehensive aftercare and advice to maintain your results."
+        "description": "Comprehensive aftercare and advice to maintain your results.",
+        "quote": "We accompany you on your journey"
       }
     ]
   },
@@ -130,7 +134,16 @@
     "navigation": {
       "previous": "Previous Case",
       "next": "Next Case",
-      "caseCount": "Case {{current}} of {{total}}"
+      "caseCount": "Case {{current}} of {{total}}",
+      "before": "Before",
+      "after": "After"
+    },
+    "caseInfo": {
+      "age": "Age",
+      "years": "years",
+      "technique": "Technique",
+      "grafts": "Transplanted Grafts",
+      "result": "Result after"
     }
   },
   "testimonialsSection": {

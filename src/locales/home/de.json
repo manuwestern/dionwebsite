@@ -67,19 +67,23 @@
     "concepts": [
       {
         "title": "Umfassende Diagnose",
-        "description": "Detaillierte Analyse der Kopfhaut, Haarstruktur und Ursachen des Haarausfalls."
+        "description": "Detaillierte Analyse der Kopfhaut, Haarstruktur und Ursachen des Haarausfalls.",
+        "quote": "Die Basis für erfolgreiche Behandlungen"
       },
       {
         "title": "Personalisierte Behandlung",
-        "description": "Maßgeschneiderte Behandlungspläne basierend auf Ihren individuellen Bedürfnissen."
+        "description": "Maßgeschneiderte Behandlungspläne basierend auf Ihren individuellen Bedürfnissen.",
+        "quote": "Jeder Patient ist einzigartig"
       },
       {
         "title": "Kombinierte Therapien",
-        "description": "Integration von chirurgischen und nicht-chirurgischen Methoden für optimale Ergebnisse."
+        "description": "Integration von chirurgischen und nicht-chirurgischen Methoden für optimale Ergebnisse.",
+        "quote": "Synergieeffekte für bessere Resultate"
       },
       {
         "title": "Langfristige Nachsorge",
-        "description": "Umfassende Nachsorge und Beratung zur Erhaltung Ihrer Ergebnisse."
+        "description": "Umfassende Nachsorge und Beratung zur Erhaltung Ihrer Ergebnisse.",
+        "quote": "Wir begleiten Sie auf Ihrem Weg"
       }
     ]
   },
@@ -130,7 +134,16 @@
     "navigation": {
       "previous": "Vorheriger Fall",
       "next": "Nächster Fall",
-      "caseCount": "Fall {{current}} von {{total}}"
+      "caseCount": "Fall {{current}} von {{total}}",
+      "before": "Vorher",
+      "after": "Nachher"
+    },
+    "caseInfo": {
+      "age": "Alter",
+      "years": "Jahre",
+      "technique": "Technik",
+      "grafts": "Transplantierte Grafts",
+      "result": "Ergebnis nach"
     }
   },
   "testimonialsSection": {

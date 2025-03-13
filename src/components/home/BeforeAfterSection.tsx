@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface BeforeAfterCase {
   id: number;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   age: number;
   technique: string;
   grafts: number;
@@ -13,48 +14,45 @@ interface BeforeAfterCase {
   afterImage: string;
 }
 
-const beforeAfterCases: BeforeAfterCase[] = [
-  {
-    id: 1,
-    title: "Fortgeschrittener Haarausfall, Klasse 5",
-    description: "Patient mit fortgeschrittenem Haarausfall im Stirn- und Scheitelbereich. Deutliche Geheimratsecken und lichte Stellen im vorderen Kopfbereich.",
-    age: 42,
-    technique: "Saphir-FUE",
-    grafts: 3200,
-    result: "12 Monate",
-    beforeImage: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    afterImage: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 2,
-    title: "Geheimratsecken, Klasse 3",
-    description: "Patient mit ausgeprägten Geheimratsecken und beginnender Ausdünnung im Scheitelbereich. Gute Spenderzone im Hinterkopfbereich.",
-    age: 35,
-    technique: "DHI-Technik",
-    grafts: 2400,
-    result: "14 Monate",
-    beforeImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    afterImage: "https://images.unsplash.com/photo-1595163791530-b99f6c0dd4b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 3,
-    title: "Diffuser Haarausfall, Klasse 4",
-    description: "Patient mit diffusem Haarausfall über den gesamten Oberkopf. Besonders im Scheitelbereich starke Ausdünnung mit sichtbarer Kopfhaut.",
-    age: 38,
-    technique: "Saphir-FUE",
-    grafts: 2800,
-    result: "10 Monate",
-    beforeImage: "https://images.unsplash.com/photo-1614859324669-927e70f7e6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    afterImage: "https://images.unsplash.com/photo-1626954079673-f3c3a7a5af61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  }
-];
-
 const BeforeAfterSection: React.FC = () => {
+  const { t } = useTranslation(['home', 'common']);
   const [activeCase, setActiveCase] = useState(0);
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Images for each case
+  const caseImages = [
+    {
+      beforeImage: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      afterImage: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      beforeImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      afterImage: "https://images.unsplash.com/photo-1595163791530-b99f6c0dd4b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      beforeImage: "https://images.unsplash.com/photo-1614859324669-927e70f7e6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      afterImage: "https://images.unsplash.com/photo-1626954079673-f3c3a7a5af61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    }
+  ];
+
+  // Create cases from translation keys
+  const beforeAfterCases: BeforeAfterCase[] = Array.from(
+    { length: (t('beforeAfterSection.cases', { returnObjects: true }) as any[]).length },
+    (_, index) => ({
+      id: index + 1,
+      titleKey: `beforeAfterSection.cases.${index}.title`,
+      descriptionKey: `beforeAfterSection.cases.${index}.description`,
+      age: [42, 35, 38][index],
+      technique: ["Saphir-FUE", "DHI-Technik", "Saphir-FUE"][index],
+      grafts: [3200, 2400, 2800][index],
+      result: ["12 Monate", "14 Monate", "10 Monate"][index],
+      beforeImage: caseImages[index].beforeImage,
+      afterImage: caseImages[index].afterImage
+    })
+  );
 
   const handleSliderMove = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     if (!containerRef.current || !isDragging) return;
@@ -130,9 +128,9 @@ const BeforeAfterSection: React.FC = () => {
     <div className="bg-gray-50 py-16 md:py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Unsere Ergebnisse</h2>
+          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('beforeAfterSection.title')}</h2>
           <p className="text-base text-gray-600 font-light md:text-xl">
-            Vorher-Nachher Bilder unserer erfolgreichen Haartransplantationen
+            {t('beforeAfterSection.subtitle')}
           </p>
         </div>
 
@@ -167,21 +165,21 @@ const BeforeAfterSection: React.FC = () => {
               onTouchMove={handleSliderMove}
               onTouchEnd={handleTouchEnd}
             >
-              {/* Vorher Label */}
+              {/* Before Label */}
               <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-                Vorher
+                {t('beforeAfterSection.navigation.before')}
               </div>
               
-              {/* Nachher Label */}
+              {/* After Label */}
               <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-                Nachher
+                {t('beforeAfterSection.navigation.after')}
               </div>
               
               {/* Before Image (Full Width) */}
               <div className="absolute inset-0">
                 <img 
                   src={currentCase.beforeImage} 
-                  alt={`Vor der Behandlung: ${currentCase.title}`}
+                  alt={`Vor der Behandlung: ${t(currentCase.titleKey)}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -193,7 +191,7 @@ const BeforeAfterSection: React.FC = () => {
               >
                 <img 
                   src={currentCase.afterImage} 
-                  alt={`Nach der Behandlung: ${currentCase.title}`}
+                  alt={`Nach der Behandlung: ${t(currentCase.titleKey)}`}
                   className="w-full h-full object-cover"
                   style={{ 
                     width: `${100 / (sliderPosition / 100)}%`,
@@ -219,26 +217,26 @@ const BeforeAfterSection: React.FC = () => {
           {/* Case Information */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className="text-gray-500 text-sm mb-1">Alter</h4>
-              <p className="text-xl font-light">{currentCase.age} Jahre</p>
+              <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.age')}</h4>
+              <p className="text-xl font-light">{currentCase.age} {t('beforeAfterSection.caseInfo.years')}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className="text-gray-500 text-sm mb-1">Technik</h4>
+              <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.technique')}</h4>
               <p className="text-xl font-light">{currentCase.technique}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className="text-gray-500 text-sm mb-1">Transplantierte Grafts</h4>
+              <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.grafts')}</h4>
               <p className="text-xl font-light">{currentCase.grafts}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className="text-gray-500 text-sm mb-1">Ergebnis nach</h4>
+              <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.result')}</h4>
               <p className="text-xl font-light">{currentCase.result}</p>
             </div>
           </div>
 
           {/* Case Description */}
           <div className="mt-6 text-center">
-            <p className="text-gray-600 font-light">{currentCase.description}</p>
+            <p className="text-gray-600 font-light">{t(currentCase.descriptionKey)}</p>
           </div>
 
           {/* Pagination Dots */}
