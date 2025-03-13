@@ -1,9 +1,29 @@
 import React from 'react';
-import { Award, Stethoscope, Users, HeartPulse } from 'lucide-react';
+import { Award, Stethoscope, Users, HeartPulse, ShieldCheck, ThumbsUp, BadgeCheck, Sparkles, Phone, Puzzle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
+
+  // Define icons for each benefit
+  const benefitIcons = {
+    experience: <Award className="w-5 h-5 text-gray-700" />,
+    technology: <Stethoscope className="w-5 h-5 text-gray-700" />,
+    care: <Users className="w-5 h-5 text-gray-700" />,
+    results: <HeartPulse className="w-5 h-5 text-gray-700" />,
+    painless: <Sparkles className="w-5 h-5 text-gray-700" />,
+    satisfaction: <ThumbsUp className="w-5 h-5 text-gray-700" />,
+    specialists: <BadgeCheck className="w-5 h-5 text-gray-700" />,
+    aftercare: <ShieldCheck className="w-5 h-5 text-gray-700" />,
+    consultation: <Phone className="w-5 h-5 text-gray-700" />,
+    customized: <Puzzle className="w-5 h-5 text-gray-700" />
+  };
+
+  // List of benefits to display
+  const benefitKeys = [
+    'experience', 'technology', 'care', 'results', 
+    'painless', 'satisfaction', 'specialists', 'aftercare'
+  ];
 
   return (
     <div className="relative bg-gray-50">
@@ -19,30 +39,14 @@ const HeroSection: React.FC = () => {
             
             {/* Benefits Points */}
             <div className="mt-8 mb-7 grid grid-cols-2 gap-5 text-left">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Award className="w-5 h-5 text-gray-700" />
+              {benefitKeys.map((key) => (
+                <div key={key} className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                    {benefitIcons[key as keyof typeof benefitIcons]}
+                  </div>
+                  <span className="text-base font-light text-gray-700">{t(`heroSection.benefits.${key}`)}</span>
                 </div>
-                <span className="text-base font-light text-gray-700">{t('heroSection.benefits.experience')}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Stethoscope className="w-5 h-5 text-gray-700" />
-                </div>
-                <span className="text-base font-light text-gray-700">{t('heroSection.benefits.technology')}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Users className="w-5 h-5 text-gray-700" />
-                </div>
-                <span className="text-base font-light text-gray-700">{t('heroSection.benefits.care')}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <HeartPulse className="w-5 h-5 text-gray-700" />
-                </div>
-                <span className="text-base font-light text-gray-700">{t('heroSection.benefits.results')}</span>
-              </div>
+              ))}
             </div>
             
             {/* SEO Welcome Text */}
