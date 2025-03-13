@@ -7,6 +7,7 @@ import TreatmentAreasSection from './components/home/TreatmentAreasSection';
 import HolisticConceptSection from './components/home/HolisticConceptSection';
 import TreatmentProcessSection from './components/home/TreatmentProcessSection';
 import BeforeAfterSection from './components/home/BeforeAfterSection';
+import TestimonialsSection from './components/home/TestimonialsSection';
 
 function App() {
   const [visibleSteps, setVisibleSteps] = useState(new Set<number>());
@@ -101,6 +102,7 @@ function App() {
       <HolisticConceptSection />
       <TreatmentProcessSection stepRefs={stepRefs} visibleSteps={visibleSteps} />
       <BeforeAfterSection />
+      <TestimonialsSection />
     </div>
   );
 }
