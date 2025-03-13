@@ -5,17 +5,19 @@ const HeroSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
 
   return (
-    <div className="relative bg-gray-100">
+    <div className="relative bg-gray-100 overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-0 md:pt-16 md:pb-0">
-        <div className="relative min-h-[400px] md:min-h-[500px]">
+        <div className="relative min-h-[500px] md:min-h-[500px]">
           {/* Image positioned on the right, partially cut off on the side in mobile only */}
-          <div className="absolute right-[-50%] top-0 w-[100%] h-full z-0 md:absolute md:right-0 md:top-auto md:bottom-0 md:w-[45%]">
-              <img 
-                src="/images/Dion_Model_Home.png"
-                alt="Haartransplantation Experte in der Dion Hair Clinic"
-                className="w-full h-full object-contain object-left-top mix-blend-multiply md:w-full md:object-contain md:object-bottom"
-                style={{ filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))' }}
-              />
+          <div className="absolute right-[-40%] top-0 w-[100%] h-full z-0 md:absolute md:right-0 md:top-[15%] md:bottom-0 md:w-[45%] md:h-[85%]">
+              <div className="w-full h-full flex items-end">
+                <img 
+                  src="/images/Dion_Model_Home.png"
+                  alt="Haartransplantation Experte in der Dion Hair Clinic"
+                  className="w-full h-auto object-contain object-left-top mix-blend-multiply md:w-full md:object-contain md:object-bottom"
+                  style={{ filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))' }}
+                />
+              </div>
           </div>
           
           {/* Text content that overlaps with the image */}
