@@ -1,29 +1,8 @@
 import React from 'react';
-import { Award, Stethoscope, Users, HeartPulse, ShieldCheck, ThumbsUp, BadgeCheck, Sparkles, Phone, Puzzle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
-
-  // Define icons for each benefit
-  const benefitIcons = {
-    experience: <Award className="w-5 h-5 text-gray-700" />,
-    technology: <Stethoscope className="w-5 h-5 text-gray-700" />,
-    care: <Users className="w-5 h-5 text-gray-700" />,
-    results: <HeartPulse className="w-5 h-5 text-gray-700" />,
-    painless: <Sparkles className="w-5 h-5 text-gray-700" />,
-    satisfaction: <ThumbsUp className="w-5 h-5 text-gray-700" />,
-    specialists: <BadgeCheck className="w-5 h-5 text-gray-700" />,
-    aftercare: <ShieldCheck className="w-5 h-5 text-gray-700" />,
-    consultation: <Phone className="w-5 h-5 text-gray-700" />,
-    customized: <Puzzle className="w-5 h-5 text-gray-700" />
-  };
-
-  // List of benefits to display
-  const benefitKeys = [
-    'experience', 'technology', 'care', 
-    'specialists', 'aftercare'
-  ];
 
   return (
     <div className="relative bg-gray-50">
@@ -38,21 +17,9 @@ const HeroSection: React.FC = () => {
             </h1>
             
             {/* SEO Welcome Text */}
-            <p className="text-sm font-light text-gray-600 mb-6 md:text-base md:mb-6 text-left">
+            <p className="text-sm font-light text-gray-600 mb-6 md:text-base md:mb-8 text-left">
               {t('heroSection.welcomeText')}
             </p>
-            
-            {/* Benefits Points */}
-            <div className="mb-7 grid grid-cols-2 gap-5 text-left">
-              {benefitKeys.map((key) => (
-                <div key={key} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                    {benefitIcons[key as keyof typeof benefitIcons]}
-                  </div>
-                  <span className="text-base font-light text-gray-700">{t(`heroSection.benefits.${key}`)}</span>
-                </div>
-              ))}
-            </div>
             
             <button className="w-full mt-6 bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:w-auto md:mt-8 md:px-8">
               {t('buttons.consultation', { ns: 'common' })}
