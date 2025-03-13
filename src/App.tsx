@@ -247,7 +247,7 @@ function App() {
       </div>
 
       {/* Benefits Section */}
-      <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-24">
+      <div className="bg-white w-full max-w-7xl mx-auto px-4 py-12 md:py-24">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Warum Dion Hair Clinic?</h2>
           <p className="text-base text-gray-600 font-light md:text-xl">
@@ -397,194 +397,198 @@ function App() {
       </div>
 
       {/* Holistic Concept Section */}
-      <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-24">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Ganzheitliches Konzept</h2>
-          <p className="text-base text-gray-600 font-light md:text-xl">
-            Unser umfassender Ansatz kombiniert verschiedene Therapien für optimale und langfristige Ergebnisse
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Hair Transplantation Card */}
-          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
-              <Microscope className="w-8 h-8 text-gray-700" />
-            </div>
-            <h3 className="text-xl font-light mb-3">Haartransplantation</h3>
-            <p className="text-gray-600 font-light mb-4">
-              Dauerhafte Lösung für kahle Stellen durch modernste FUE-Technik. Natürliche Ergebnisse mit minimalen Ausfallzeiten.
-            </p>
-            <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
-            <p className="text-sm text-gray-500 font-light italic">
-              "Die Basis unseres ganzheitlichen Konzepts"
+      <div className="bg-gray-100 w-full py-12 md:py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Ganzheitliches Konzept</h2>
+            <p className="text-base text-gray-600 font-light md:text-xl">
+              Unser umfassender Ansatz kombiniert verschiedene Therapien für optimale und langfristige Ergebnisse
             </p>
           </div>
 
-          {/* PRP Treatment Card */}
-          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
-              <HeartPulse className="w-8 h-8 text-gray-700" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Hair Transplantation Card */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
+                <Microscope className="w-8 h-8 text-gray-700" />
+              </div>
+              <h3 className="text-xl font-light mb-3">Haartransplantation</h3>
+              <p className="text-gray-600 font-light mb-4">
+                Dauerhafte Lösung für kahle Stellen durch modernste FUE-Technik. Natürliche Ergebnisse mit minimalen Ausfallzeiten.
+              </p>
+              <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
+              <p className="text-sm text-gray-500 font-light italic">
+                "Die Basis unseres ganzheitlichen Konzepts"
+              </p>
             </div>
-            <h3 className="text-xl font-light mb-3">PRP Behandlung</h3>
-            <p className="text-gray-600 font-light mb-4">
-              Eigenbluttherapie zur Stimulation des Haarwachstums. Aktiviert Stammzellen und verbessert die Durchblutung der Kopfhaut.
-            </p>
-            <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
-            <p className="text-sm text-gray-500 font-light italic">
-              "Ideal zur Unterstützung der Haartransplantation"
-            </p>
-          </div>
 
-          {/* Nutritional Supplements Card */}
-          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
-              <Sparkles className="w-8 h-8 text-gray-700" />
+            {/* PRP Treatment Card */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
+                <HeartPulse className="w-8 h-8 text-gray-700" />
+              </div>
+              <h3 className="text-xl font-light mb-3">PRP Behandlung</h3>
+              <p className="text-gray-600 font-light mb-4">
+                Eigenbluttherapie zur Stimulation des Haarwachstums. Aktiviert Stammzellen und verbessert die Durchblutung der Kopfhaut.
+              </p>
+              <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
+              <p className="text-sm text-gray-500 font-light italic">
+                "Ideal zur Unterstützung der Haartransplantation"
+              </p>
             </div>
-            <h3 className="text-xl font-light mb-3">Nahrungsergänzung</h3>
-            <p className="text-gray-600 font-light mb-4">
-              Speziell entwickelte Vitamine und Mineralien für gesundes Haarwachstum. Versorgt die Haarfollikel mit essentiellen Nährstoffen.
-            </p>
-            <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
-            <p className="text-sm text-gray-500 font-light italic">
-              "Für langfristige Ergebnisse von innen"
-            </p>
-          </div>
 
-          {/* Medication Therapy Card */}
-          <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
-              <Stethoscope className="w-8 h-8 text-gray-700" />
+            {/* Nutritional Supplements Card */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
+                <Sparkles className="w-8 h-8 text-gray-700" />
+              </div>
+              <h3 className="text-xl font-light mb-3">Nahrungsergänzung</h3>
+              <p className="text-gray-600 font-light mb-4">
+                Speziell entwickelte Vitamine und Mineralien für gesundes Haarwachstum. Versorgt die Haarfollikel mit essentiellen Nährstoffen.
+              </p>
+              <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
+              <p className="text-sm text-gray-500 font-light italic">
+                "Für langfristige Ergebnisse von innen"
+              </p>
             </div>
-            <h3 className="text-xl font-light mb-3">Medikamentöse Therapie</h3>
-            <p className="text-gray-600 font-light mb-4">
-              Wirksame Medikamente zur Behandlung von Haarausfall. Hemmt den Haarverlust und stimuliert das Wachstum neuer Haare.
-            </p>
-            <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
-            <p className="text-sm text-gray-500 font-light italic">
-              "Wissenschaftlich bewährte Wirksamkeit"
-            </p>
+
+            {/* Medication Therapy Card */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
+                <Stethoscope className="w-8 h-8 text-gray-700" />
+              </div>
+              <h3 className="text-xl font-light mb-3">Medikamentöse Therapie</h3>
+              <p className="text-gray-600 font-light mb-4">
+                Wirksame Medikamente zur Behandlung von Haarausfall. Hemmt den Haarverlust und stimuliert das Wachstum neuer Haare.
+              </p>
+              <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
+              <p className="text-sm text-gray-500 font-light italic">
+                "Wissenschaftlich bewährte Wirksamkeit"
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Treatment Process Section */}
-      <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Ihr Weg zu neuem Haar</h2>
-          <p className="text-base text-gray-600 font-light md:text-xl">
-            Professionelle Haartransplantation in 5 Schritten - von der Beratung bis zum Endergebnis
-          </p>
-        </div>
+      <div className="bg-white py-16 md:py-24">
+        <div className="w-full max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Ihr Weg zu neuem Haar</h2>
+            <p className="text-base text-gray-600 font-light md:text-xl">
+              Professionelle Haartransplantation in 5 Schritten - von der Beratung bis zum Endergebnis
+            </p>
+          </div>
 
-        {/* Desktop Timeline */}
-        <div className="hidden md:flex justify-center gap-4 mb-12">
-          {processSteps.map((step, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveStep(index)}
-              className={`flex items-center gap-2 p-3 rounded-lg transition-all duration-300 ${
-                activeStep === index
-                  ? 'bg-[#333333] text-white shadow-lg scale-105'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              <div className="w-8 h-8 flex items-center justify-center">
-                {step.icon}
-              </div>
-              <span className="font-light">{step.title}</span>
-            </button>
-          ))}
-        </div>
-
-        {/* Mobile Timeline */}
-        <div className="md:hidden space-y-4">
-          {processSteps.map((step, index) => (
-            <div 
-              key={index}
-              ref={el => stepRefs.current[index] = el}
-              className="scroll-mt-4"
-            >
-              {/* Step Button */}
+          {/* Desktop Timeline */}
+          <div className="hidden md:flex justify-center gap-4 mb-12">
+            {processSteps.map((step, index) => (
               <button
-                onClick={() => {
-                  if (visibleSteps.has(index)) {
-                    setVisibleSteps(prev => {
-                      const newSet = new Set(prev);
-                      newSet.delete(index);
-                      return newSet;
-                    });
-                  } else {
-                    setVisibleSteps(prev => {
-                      const newSet = new Set(prev);
-                      newSet.add(index);
-                      return newSet;
-                    });
-                  }
-                  setActiveStep(index);
-                }}
-                className={`w-full flex items-center gap-4 p-4 rounded-lg transition-all duration-300 ${
-                  visibleSteps.has(index)
-                    ? 'bg-[#333333] text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-600'
+                key={index}
+                onClick={() => setActiveStep(index)}
+                className={`flex items-center gap-2 p-3 rounded-lg transition-all duration-300 ${
+                  activeStep === index
+                    ? 'bg-[#333333] text-white shadow-lg scale-105'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                  visibleSteps.has(index) ? 'bg-white text-[#333333]' : 'bg-gray-200'
-                }`}>
+                <div className="w-8 h-8 flex items-center justify-center">
                   {step.icon}
                 </div>
-                <div className="flex-1 text-left">
-                  <div className="font-light text-lg">{step.title}</div>
-                  <div className={`text-sm ${visibleSteps.has(index) ? 'text-gray-200' : 'text-gray-500'}`}>
-                    Schritt {index + 1} von {processSteps.length}
+                <span className="font-light">{step.title}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile Timeline */}
+          <div className="md:hidden space-y-4">
+            {processSteps.map((step, index) => (
+              <div 
+                key={index}
+                ref={el => stepRefs.current[index] = el}
+                className="scroll-mt-4"
+              >
+                {/* Step Button */}
+                <button
+                  onClick={() => {
+                    if (visibleSteps.has(index)) {
+                      setVisibleSteps(prev => {
+                        const newSet = new Set(prev);
+                        newSet.delete(index);
+                        return newSet;
+                      });
+                    } else {
+                      setVisibleSteps(prev => {
+                        const newSet = new Set(prev);
+                        newSet.add(index);
+                        return newSet;
+                      });
+                    }
+                    setActiveStep(index);
+                  }}
+                  className={`w-full flex items-center gap-4 p-4 rounded-lg transition-all duration-300 ${
+                    visibleSteps.has(index)
+                      ? 'bg-[#333333] text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-600'
+                  }`}
+                >
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                    visibleSteps.has(index) ? 'bg-white text-[#333333]' : 'bg-gray-200'
+                  }`}>
+                    {step.icon}
+                  </div>
+                  <div className="flex-1 text-left">
+                    <div className="font-light text-lg">{step.title}</div>
+                    <div className={`text-sm ${visibleSteps.has(index) ? 'text-gray-200' : 'text-gray-500'}`}>
+                      Schritt {index + 1} von {processSteps.length}
+                    </div>
+                  </div>
+                  <ChevronDown className={`w-5 h-5 transition-transform ${visibleSteps.has(index) ? 'rotate-180' : ''}`} />
+                </button>
+
+                {/* Expanded Content */}
+                <div 
+                  className={`mt-4 bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 ${
+                    visibleSteps.has(index) ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-gray-600 font-light">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                <ChevronDown className={`w-5 h-5 transition-transform ${visibleSteps.has(index) ? 'rotate-180' : ''}`} />
-              </button>
+              </div>
+            ))}
+          </div>
 
-              {/* Expanded Content */}
-              <div 
-                className={`mt-4 bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 ${
-                  visibleSteps.has(index) ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <p className="text-gray-600 font-light">
-                    {step.description}
+          {/* Desktop Active Step Card */}
+          <div className="hidden md:block w-full mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 transform hover:scale-[1.02]">
+              <div className="md:flex">
+                <div className="md:w-1/2 h-48 md:h-80 overflow-hidden">
+                  <img
+                    src={processSteps[activeStep].image}
+                    alt={processSteps[activeStep].title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:w-1/2 md:p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-full bg-[#333333] text-white">
+                      {processSteps[activeStep].icon}
+                    </div>
+                    <h3 className="text-2xl font-light">{processSteps[activeStep].title}</h3>
+                  </div>
+                  <p className="text-gray-600 font-light text-lg">
+                    {processSteps[activeStep].description}
                   </p>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop Active Step Card */}
-        <div className="hidden md:block w-full mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 transform hover:scale-[1.02]">
-            <div className="md:flex">
-              <div className="md:w-1/2 h-48 md:h-80 overflow-hidden">
-                <img
-                  src={processSteps[activeStep].image}
-                  alt={processSteps[activeStep].title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6 md:w-1/2 md:p-8">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 rounded-full bg-[#333333] text-white">
-                    {processSteps[activeStep].icon}
-                  </div>
-                  <h3 className="text-2xl font-light">{processSteps[activeStep].title}</h3>
-                </div>
-                <p className="text-gray-600 font-light text-lg">
-                  {processSteps[activeStep].description}
-                </p>
               </div>
             </div>
           </div>
