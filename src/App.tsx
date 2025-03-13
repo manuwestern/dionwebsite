@@ -246,31 +246,6 @@ function App() {
         </div>
       </div>
 
-      {/* Welcome Section */}
-      <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-20">
-        <div className="flex flex-col gap-8 md:flex-row md:gap-20">
-          <div className="w-full text-center md:text-left md:flex-1">
-            <h2 className="text-xl font-light mb-2 md:text-3xl md:mb-4">Willkommen in der</h2>
-            <h3 className="text-2xl font-light mb-6 md:text-4xl md:mb-8">Dion Hair Clinic</h3>
-            <div className="w-16 h-0.5 bg-gray-800 mb-6 mx-auto md:mx-0 md:w-20 md:mb-8"></div>
-            <p className="text-base text-gray-600 font-light md:text-xl">
-              Spezialisiert auf moderne Haartransplantationen und Haarwuchstherapien
-            </p>
-          </div>
-          <div className="w-full space-y-4 font-light text-gray-700 text-center md:text-left md:flex-1 md:space-y-6">
-            <p>
-              In der Dion Hair Clinic in Mönchengladbach haben wir es uns zur Aufgabe gemacht, Haarausfall der Vergangenheit angehören zu lassen.
-            </p>
-            <p>
-              Wir verbinden modernste Technik und Ästhetik mit höchster medizinischer Kompetenz, um Ihnen erstklassige Behandlungen zu fairen Preisen anzubieten.
-            </p>
-            <p>
-              Unser Team besteht aus erfahrenen Ärzten und Experten, mit über 15 Jahren Erfahrung im Bereich der Haartransplantation. Bei uns sind Sie ganz sicher in den besten Händen!
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Benefits Section */}
       <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-24">
         <div className="text-center mb-12">
