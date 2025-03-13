@@ -68,16 +68,16 @@ const TestimonialsSection: React.FC = () => {
           <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
             <div className="flex flex-col md:flex-row">
               {/* Patient Image - Left Side */}
-              <div className="w-full md:w-2/5 h-[300px] md:h-auto">
+              <div className="w-full md:w-2/5 h-[220px] md:h-[320px]">
                 <img 
                   src={currentTestimonial.image} 
                   alt={`Patient ${currentTestimonial.name}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               
               {/* Testimonial Content - Right Side */}
-              <div className="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-between">
+              <div className="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-between h-auto md:h-[320px]">
                 {/* Rating Stars */}
                 <div className="flex mb-4">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
@@ -86,7 +86,7 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Quote */}
-                <blockquote className="text-lg md:text-xl font-light text-gray-700 italic mb-6">
+                <blockquote className="text-lg md:text-xl font-light text-gray-700 italic mb-6 overflow-y-auto max-h-[140px] md:max-h-[160px]">
                   "{currentTestimonial.quote}"
                 </blockquote>
                 
