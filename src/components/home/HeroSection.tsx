@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
           </div>
           <div className="relative w-full md:w-[500px]">
             <img 
-              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              src="/images/Dion_Model_Home.webp"
               alt="Haartransplantation Experte in der Dion Hair Clinic"
               className="w-full rounded-lg shadow-xl h-auto"
             />
