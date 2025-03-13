@@ -6,6 +6,7 @@ import HolisticConceptSection from '../components/home/HolisticConceptSection';
 import TreatmentProcessSection from '../components/home/TreatmentProcessSection';
 import BeforeAfterSection from '../components/home/BeforeAfterSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
+import ContactSection from '../components/home/ContactSection';
 
 const HomePage: React.FC = () => {
   const [visibleSteps, setVisibleSteps] = useState(new Set<number>());
@@ -99,6 +100,7 @@ const HomePage: React.FC = () => {
       <TreatmentProcessSection stepRefs={stepRefs} visibleSteps={visibleSteps} />
       <BeforeAfterSection />
       <TestimonialsSection />
+      <ContactSection />
     </>
   );
 };
