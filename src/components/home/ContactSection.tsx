@@ -83,9 +83,9 @@ const ContactSection: React.FC = () => {
 
           {/* Free Hair Analysis CTA */}
           <div className="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 rounded-2xl shadow-lg p-8 md:p-10 flex flex-col">
-            <h3 className="text-2xl font-light mb-4">Kostenlose Haaranalyse</h3>
+            <h3 className="text-2xl font-light mb-4">Kostenlose Haaranalyse & Beratung</h3>
             <p className="text-gray-600 font-light mb-6">
-              Lassen Sie Ihre Haarsituation von unseren Experten analysieren und erhalten Sie eine individuelle Beratung zu Ihren Behandlungsmöglichkeiten – völlig unverbindlich und kostenlos.
+              Lassen Sie Ihre Haarsituation von unseren Experten analysieren und erhalten Sie eine individuelle Beratung zu Ihren Behandlungsmöglichkeiten – völlig unverbindlich und kostenlos. Wir bieten Ihnen ein kostenloses Beratungsgespräch telefonisch oder vor Ort in unserer Klinik an.
             </p>
             
             <div className="bg-white rounded-xl p-6 mb-8 shadow-sm">
@@ -98,6 +98,10 @@ const ContactSection: React.FC = () => {
                 <li className="flex items-start">
                   <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
                   <span>Persönliches Gespräch mit einem Haarspezialisten</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
+                  <span>Beratung telefonisch oder vor Ort in der Klinik</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
@@ -115,7 +119,7 @@ const ContactSection: React.FC = () => {
                 href="#" 
                 className="block w-full bg-[#333333] text-white text-center py-3 px-6 rounded-lg font-light hover:bg-[#444444] transition-colors tracking-wider"
               >
-                JETZT KOSTENLOSE HAARANALYSE VEREINBAREN
+                JETZT KOSTENLOSE HAARANALYSE & BERATUNG VEREINBAREN
               </a>
             </div>
           </div>
