@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-20">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="w-full text-center md:text-left md:max-w-xl">
-            <h1 className="text-3xl font-light mb-4 md:text-6xl">
+            <h1 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">
               Ihre Experten
               <span className="block text-xl mt-2 text-gray-600 md:text-4xl font-light">
                 für Haartransplantationen in Mönchengladbach
