@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <div className="relative bg-gray-100">
-      <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-16">
+      <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-0 md:pt-16 md:pb-0">
         <div className="relative min-h-[400px] md:min-h-[500px]">
           {/* Image positioned on the right, partially cut off on the side in mobile only */}
           <div className="absolute right-[-50%] top-0 w-[100%] h-full z-0 md:absolute md:right-0 md:top-auto md:bottom-0 md:w-[45%]">
