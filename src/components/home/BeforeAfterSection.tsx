@@ -140,18 +140,18 @@ const BeforeAfterSection: React.FC = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={handlePrevCase}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 rounded-full p-2 shadow-md hover:bg-opacity-100 md:left-0 md:-translate-x-12"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:left-0 md:-translate-x-12"
             aria-label="Vorheriger Fall"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
+            <ChevronLeft className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
           </button>
           
           <button 
             onClick={handleNextCase}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 rounded-full p-2 shadow-md hover:bg-opacity-100 md:right-0 md:translate-x-12"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:right-0 md:translate-x-12"
             aria-label="Nächster Fall"
           >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
+            <ChevronRight className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
           </button>
 
 
