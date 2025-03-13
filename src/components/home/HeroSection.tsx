@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
             </h1>
             
             {/* Benefits Points */}
-            <div className="mt-5 mb-7 grid grid-cols-2 gap-5 text-left">
+            <div className="mt-8 mb-7 grid grid-cols-2 gap-5 text-left">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                   <Award className="w-5 h-5 text-gray-700" />
