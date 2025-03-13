@@ -127,7 +127,7 @@ const BeforeAfterSection: React.FC = () => {
   const currentCase = beforeAfterCases[activeCase];
 
   return (
-    <div className="bg-white py-16 md:py-24">
+    <div className="bg-gray-50 py-16 md:py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Unsere Ergebnisse</h2>
@@ -218,19 +218,19 @@ const BeforeAfterSection: React.FC = () => {
 
           {/* Case Information */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <h4 className="text-gray-500 text-sm mb-1">Alter</h4>
               <p className="text-xl font-light">{currentCase.age} Jahre</p>
             </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <h4 className="text-gray-500 text-sm mb-1">Technik</h4>
               <p className="text-xl font-light">{currentCase.technique}</p>
             </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <h4 className="text-gray-500 text-sm mb-1">Transplantierte Grafts</h4>
               <p className="text-xl font-light">{currentCase.grafts}</p>
             </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <h4 className="text-gray-500 text-sm mb-1">Ergebnis nach</h4>
               <p className="text-xl font-light">{currentCase.result}</p>
             </div>
