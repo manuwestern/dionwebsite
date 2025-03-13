@@ -94,12 +94,12 @@ const HomePage: React.FC = () => {
   return (
     <>
       <HeroSection />
-      <BenefitsSection />
       <TreatmentAreasSection />
       <HolisticConceptSection />
       <TreatmentProcessSection stepRefs={stepRefs} visibleSteps={visibleSteps} />
       <BeforeAfterSection />
       <TestimonialsSection />
+      <BenefitsSection />
       <ContactSection />
     </>
   );
