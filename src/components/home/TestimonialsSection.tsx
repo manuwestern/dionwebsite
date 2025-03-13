@@ -1,48 +1,41 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface Testimonial {
   id: number;
-  name: string;
-  age: number;
-  treatment: string;
-  quote: string;
+  nameKey: string;
+  ageKey: string;
+  treatmentKey: string;
+  quoteKey: string;
   image: string;
   rating: number;
 }
 
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Michael Schneider",
-    age: 42,
-    treatment: "Saphir-FUE Haartransplantation",
-    quote: "Nach jahrelangem Haarausfall hat die Behandlung in der Dion Hair Clinic mein Leben verändert. Das Team war professionell und einfühlsam, und die Ergebnisse haben meine Erwartungen übertroffen. Ich fühle mich wieder selbstbewusst und jünger.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    rating: 5
-  },
-  {
-    id: 2,
-    name: "Thomas Weber",
-    age: 38,
-    treatment: "DHI-Technik Haartransplantation",
-    quote: "Die Entscheidung für eine Haartransplantation in der Dion Hair Clinic war die beste, die ich je getroffen habe. Der gesamte Prozess war schmerzfrei und die Betreuung erstklassig. Heute, ein Jahr später, kann ich mein volles Haar kaum glauben.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    rating: 5
-  },
-  {
-    id: 3,
-    name: "Julia Becker",
-    age: 35,
-    treatment: "Augenbrauen-Transplantation",
-    quote: "Nach einem Unfall hatte ich kaum noch Augenbrauen. Die Spezialisten der Dion Hair Clinic haben mir mit einer Transplantation geholfen. Das Ergebnis sieht unglaublich natürlich aus und hat mir mein Selbstvertrauen zurückgegeben.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    rating: 5
-  }
-];
-
 const TestimonialsSection: React.FC = () => {
+  const { t } = useTranslation('home');
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  // Images for testimonials
+  const testimonialImages = [
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+  ];
+
+  // Create testimonials from translation keys
+  const testimonials: Testimonial[] = Array.from(
+    { length: (t('testimonialsSection.testimonials', { returnObjects: true }) as any[]).length },
+    (_, index) => ({
+      id: index + 1,
+      nameKey: `testimonialsSection.testimonials.${index}.name`,
+      ageKey: `testimonialsSection.testimonials.${index}.age`,
+      treatmentKey: `testimonialsSection.testimonials.${index}.treatment`,
+      quoteKey: `testimonialsSection.testimonials.${index}.quote`,
+      image: testimonialImages[index],
+      rating: 5
+    })
+  );
 
   const handlePrevTestimonial = () => {
     setActiveTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
@@ -58,9 +51,9 @@ const TestimonialsSection: React.FC = () => {
     <div className="bg-white py-16 md:py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">Patientenerfahrungen</h2>
+          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('testimonialsSection.title')}</h2>
           <p className="text-base text-gray-600 font-light md:text-xl">
-            Erfahren Sie, wie unsere Behandlungen das Leben unserer Patienten verändert haben
+            {t('testimonialsSection.subtitle')}
           </p>
         </div>
 
@@ -69,7 +62,7 @@ const TestimonialsSection: React.FC = () => {
           <button 
             onClick={handlePrevTestimonial}
             className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:left-0 md:-translate-x-12"
-            aria-label="Vorheriger Patient"
+            aria-label={t('testimonialsSection.navigation.previous')}
           >
             <ChevronLeft className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
           </button>
@@ -77,7 +70,7 @@ const TestimonialsSection: React.FC = () => {
           <button 
             onClick={handleNextTestimonial}
             className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all md:bg-white md:bg-opacity-80 md:p-2 md:shadow-md md:right-0 md:translate-x-12"
-            aria-label="Nächster Patient"
+            aria-label={t('testimonialsSection.navigation.next')}
           >
             <ChevronRight className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
           </button>
@@ -88,7 +81,7 @@ const TestimonialsSection: React.FC = () => {
               <div className="w-full md:w-2/5 h-[220px] md:h-[320px]">
                 <img 
                   src={currentTestimonial.image} 
-                  alt={`Patient ${currentTestimonial.name}`}
+                  alt={`Patient ${t(currentTestimonial.nameKey)}`}
                   className="w-full h-full object-cover object-center"
                 />
               </div>
@@ -104,7 +97,7 @@ const TestimonialsSection: React.FC = () => {
                 
                 {/* Quote */}
                 <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-8">
-                  "{currentTestimonial.quote}"
+                  "{t(currentTestimonial.quoteKey)}"
                 </blockquote>
                 
                 {/* Spacer */}
@@ -112,9 +105,9 @@ const TestimonialsSection: React.FC = () => {
                 
                 {/* Patient Info */}
                 <div className="mb-2">
-                  <h3 className="text-xl font-light text-gray-800 mb-1">{currentTestimonial.name}</h3>
+                  <h3 className="text-xl font-light text-gray-800 mb-1">{t(currentTestimonial.nameKey)}</h3>
                   <p className="text-sm text-gray-600 font-light">
-                    {currentTestimonial.age} Jahre, {currentTestimonial.treatment}
+                    {t(currentTestimonial.ageKey)}, {t(currentTestimonial.treatmentKey)}
                   </p>
                 </div>
                 

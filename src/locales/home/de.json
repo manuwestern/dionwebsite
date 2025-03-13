@@ -149,6 +149,10 @@
   "testimonialsSection": {
     "title": "Patientenerfahrungen",
     "subtitle": "Was unsere Patienten über uns sagen",
+    "navigation": {
+      "previous": "Vorheriger Patient",
+      "next": "Nächster Patient"
+    },
     "testimonials": [
       {
         "name": "Michael Schneider",
