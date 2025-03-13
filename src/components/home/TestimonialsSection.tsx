@@ -86,12 +86,15 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Quote */}
-                <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-6 overflow-y-auto max-h-[160px] md:max-h-[180px]">
+                <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-6">
                   "{currentTestimonial.quote}"
                 </blockquote>
                 
+                {/* Spacer */}
+                <div className="flex-grow"></div>
+                
                 {/* Patient Info */}
-                <div>
+                <div className="mb-2">
                   <h3 className="text-xl font-light text-gray-800 mb-1">{currentTestimonial.name}</h3>
                   <p className="text-sm text-gray-600 font-light">
                     {currentTestimonial.age} Jahre, {currentTestimonial.treatment}
