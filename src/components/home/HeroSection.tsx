@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Text content that overlaps with the image */}
-          <div className="relative z-10 max-w-[85%] md:max-w-[60%]">
+          <div className="relative z-10 max-w-[85%] md:max-w-[60%] flex flex-col justify-center h-full pt-8 md:pt-12">
             <h1 className="text-3xl font-light mb-2 md:text-5xl md:mb-3">
               {t('heroSection.title')}
               <span className="block text-2xl mt-1 text-gray-700 md:text-4xl font-light">
