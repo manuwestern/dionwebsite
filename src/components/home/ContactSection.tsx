@@ -82,29 +82,29 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Free Hair Analysis CTA */}
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-2xl shadow-lg p-8 md:p-10 flex flex-col">
+          <div className="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 rounded-2xl shadow-lg p-8 md:p-10 flex flex-col">
             <h3 className="text-2xl font-light mb-4">Kostenlose Haaranalyse</h3>
-            <p className="text-gray-300 font-light mb-6">
+            <p className="text-gray-600 font-light mb-6">
               Lassen Sie Ihre Haarsituation von unseren Experten analysieren und erhalten Sie eine individuelle Beratung zu Ihren Behandlungsmöglichkeiten – völlig unverbindlich und kostenlos.
             </p>
             
-            <div className="bg-white/10 rounded-xl p-6 mb-8">
+            <div className="bg-white rounded-xl p-6 mb-8 shadow-sm">
               <h4 className="text-xl font-light mb-4">Das erwartet Sie:</h4>
-              <ul className="space-y-3 text-gray-300 font-light">
+              <ul className="space-y-3 text-gray-600 font-light">
                 <li className="flex items-start">
-                  <span className="inline-block w-5 h-5 bg-white/20 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
+                  <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
                   <span>Detaillierte Analyse Ihrer Kopfhaut und Haarstruktur</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="inline-block w-5 h-5 bg-white/20 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
+                  <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
                   <span>Persönliches Gespräch mit einem Haarspezialisten</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="inline-block w-5 h-5 bg-white/20 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
+                  <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
                   <span>Individuelle Behandlungsempfehlungen</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="inline-block w-5 h-5 bg-white/20 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
+                  <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
                   <span>Transparente Kostenübersicht</span>
                 </li>
               </ul>
@@ -113,7 +113,7 @@ const ContactSection: React.FC = () => {
             <div className="mt-auto">
               <a 
                 href="#" 
-                className="block w-full bg-white text-gray-900 text-center py-4 px-6 rounded-xl font-light hover:bg-gray-100 transition-colors"
+                className="block w-full bg-gray-800 text-white text-center py-4 px-6 rounded-xl font-light hover:bg-gray-700 transition-colors"
               >
                 Jetzt kostenlose Haaranalyse vereinbaren
               </a>
