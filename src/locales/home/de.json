@@ -86,6 +86,7 @@
   "treatmentProcessSection": {
     "title": "Unser Behandlungsprozess",
     "subtitle": "Von der Beratung bis zur Nachsorge",
+    "stepCount": "Schritt {{current}} von {{total}}",
     "steps": [
       {
         "title": "Kostenlose Erstberatung",

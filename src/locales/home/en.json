@@ -86,6 +86,7 @@
   "treatmentProcessSection": {
     "title": "Our Treatment Process",
     "subtitle": "From consultation to aftercare",
+    "stepCount": "Step {{current}} of {{total}}",
     "steps": [
       {
         "title": "Free Initial Consultation",
