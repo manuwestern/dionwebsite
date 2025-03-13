@@ -496,11 +496,11 @@ function App() {
         <div className="hidden md:block w-full mx-auto">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 transform hover:scale-[1.02]">
             <div className="md:flex">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 h-48 md:h-80 overflow-hidden">
                 <img
                   src={processSteps[activeStep].image}
                   alt={processSteps[activeStep].title}
-                  className="w-full h-48 md:h-full object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6 md:w-1/2 md:p-8">
