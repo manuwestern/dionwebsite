@@ -19,6 +19,11 @@
   "benefitsSection": {
     "title": "Warum Dion Hair Clinic?",
     "subtitle": "Unsere Vorteile auf einen Blick",
+    "intro": {
+      "paragraph1": "Haarausfall kann das Selbstbewusstsein und die Lebensqualität erheblich beeinträchtigen. Genetische Faktoren, hormonelle Veränderungen oder Stress können zu verschiedenen Formen von Haarausfall führen.",
+      "paragraph2": "Mit unseren spezialisierten Haartransplantationstechniken bieten wir dauerhafte Lösungen für Männer und Frauen, die unter Haarausfall leiden. Unsere Methoden ermöglichen natürlich aussehende Ergebnisse mit minimaler Erholungszeit."
+    },
+    "overlay": "Unsere Haartransplantationen ermöglichen es Ihnen, wieder volles, natürliches Haar zu haben und Ihr Selbstbewusstsein zurückzugewinnen.",
     "benefits": [
       {
         "title": "Erfahrene Spezialisten",

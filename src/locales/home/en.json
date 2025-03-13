@@ -19,6 +19,11 @@
   "benefitsSection": {
     "title": "Why Dion Hair Clinic?",
     "subtitle": "Our advantages at a glance",
+    "intro": {
+      "paragraph1": "Hair loss can significantly impact self-confidence and quality of life. Genetic factors, hormonal changes, or stress can lead to various forms of hair loss.",
+      "paragraph2": "With our specialized hair transplantation techniques, we offer permanent solutions for men and women suffering from hair loss. Our methods enable natural-looking results with minimal recovery time."
+    },
+    "overlay": "Our hair transplants enable you to regain full, natural hair and restore your self-confidence.",
     "benefits": [
       {
         "title": "Experienced Specialists",
