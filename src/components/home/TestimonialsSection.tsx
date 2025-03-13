@@ -48,7 +48,7 @@ const TestimonialsSection: React.FC = () => {
   const currentTestimonial = testimonials[activeTestimonial];
 
   return (
-    <div className="bg-white py-16 md:py-24">
+    <div className="bg-gray-50 py-16 md:py-24">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('testimonialsSection.title')}</h2>
@@ -75,7 +75,7 @@ const TestimonialsSection: React.FC = () => {
             <ChevronRight className="w-5 h-5 text-white md:w-6 md:h-6 md:text-gray-700" />
           </button>
           
-          <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div className="flex flex-col md:flex-row">
               {/* Patient Image - Left Side */}
               <div className="w-full md:w-2/5 h-[220px] md:h-[320px]">

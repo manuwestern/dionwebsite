@@ -37,7 +37,7 @@ const TreatmentAreasSection: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-8 md:py-20">
+    <div className="bg-white py-8 md:py-20">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('treatmentAreasSection.title')}</h2>
