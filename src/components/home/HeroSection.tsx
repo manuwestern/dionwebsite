@@ -9,11 +9,11 @@ const HeroSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-16">
         <div className="relative min-h-[400px] md:min-h-[500px]">
           {/* Image positioned on the right, partially cut off on the side in mobile only */}
-          <div className="absolute right-[-50%] top-0 w-[100%] h-full z-0 md:absolute md:right-0 md:top-0 md:bottom-0 md:w-[45%]">
+          <div className="absolute right-[-50%] top-0 w-[100%] h-full z-0 md:absolute md:right-0 md:top-0 md:bottom-0 md:w-[45%] md:flex md:items-end">
             <img 
               src="/images/Dion_Model_Home.webp"
               alt="Haartransplantation Experte in der Dion Hair Clinic"
-              className="w-full h-full object-contain object-left-top mix-blend-multiply md:object-cover md:object-right-top md:h-full"
+              className="w-full h-full object-contain object-left-top mix-blend-multiply md:w-full md:h-auto md:object-cover md:object-top"
               style={{ filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))' }}
             />
           </div>
