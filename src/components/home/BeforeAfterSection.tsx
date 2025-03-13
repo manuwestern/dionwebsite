@@ -167,12 +167,12 @@ const BeforeAfterSection: React.FC = () => {
             onTouchEnd={handleTouchEnd}
           >
             {/* Vorher Label */}
-            <div className="absolute top-4 left-4 z-10 bg-red-600 text-white px-4 py-2 rounded-lg font-light">
+            <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
               Vorher
             </div>
             
             {/* Nachher Label */}
-            <div className="absolute top-4 right-4 z-10 bg-green-600 text-white px-4 py-2 rounded-lg font-light">
+            <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
               Nachher
             </div>
             
