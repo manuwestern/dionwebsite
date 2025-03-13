@@ -62,7 +62,8 @@ const HeroSection: React.FC = () => {
             <img 
               src="/images/Dion_Model_Home.webp"
               alt="Haartransplantation Experte in der Dion Hair Clinic"
-              className="w-full rounded-lg shadow-xl h-auto"
+              className="w-full h-auto mix-blend-multiply"
+              style={{ filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))' }}
             />
           </div>
         </div>
