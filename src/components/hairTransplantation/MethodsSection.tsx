@@ -22,25 +22,62 @@ const MethodsSection: React.FC = () => {
           {methods.map((method, index) => (
             <div 
               key={index} 
-              className="bg-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg"
             >
-              <h3 className="text-2xl font-light mb-4 text-center">{method.title}</h3>
-              <p className="text-gray-600 mb-6 font-light">
-                {method.description}
-              </p>
+              {/* Header with title */}
+              <div className="border-b border-gray-300 p-4">
+                <h3 className="text-xl font-medium text-gray-800">{method.title}</h3>
+                <p className="text-sm text-gray-600 font-light">{method.subtitle}</p>
+              </div>
               
-              <div className="bg-white rounded-xl p-4">
-                <h4 className="text-lg font-light mb-3 text-center">Vorteile</h4>
-                <ul className="space-y-2">
-                  {method.benefits.map((benefit: string, i: number) => (
-                    <li key={i} className="flex items-start">
-                      <div className="mt-1 mr-2 flex-shrink-0">
-                        <Check className="h-4 w-4 text-[#333333]" />
-                      </div>
-                      <span className="text-gray-700 font-light">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Method image - would be replaced with actual images */}
+              <div className="h-48 bg-gray-300 relative">
+                {/* Placeholder for image */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-2xl font-light text-white">{method.title}</span>
+                </div>
+              </div>
+              
+              {/* Description */}
+              <div className="p-4 bg-white">
+                <p className="text-gray-700 font-light mb-6">
+                  {method.description}
+                </p>
+                
+                {/* Benefits */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-medium mb-3">Vorteile:</h4>
+                  <ul className="space-y-2">
+                    {method.benefits.map((benefit: string, i: number) => (
+                      <li key={i} className="flex items-start">
+                        <div className="mt-1 mr-2 flex-shrink-0">
+                          <Check className="h-4 w-4 text-[#333333]" />
+                        </div>
+                        <span className="text-gray-700 font-light">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Process */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-medium mb-3">Prozess:</h4>
+                  <ol className="space-y-3">
+                    {method.process.map((step: string, i: number) => (
+                      <li key={i} className="flex items-start">
+                        <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#333333] text-white flex items-center justify-center font-light">
+                          {i + 1}
+                        </div>
+                        <span className="text-gray-700 font-light">{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </div>
+              
+              {/* Footer */}
+              <div className="bg-gray-700 text-white p-3 text-center font-light text-sm">
+                {method.idealFor}
               </div>
             </div>
           ))}

@@ -5,38 +5,62 @@
     "welcomeText": "Unsere Haartransplantationen werden mit modernsten Techniken durchgeführt, um Ihnen natürlich aussehende und dauerhafte Ergebnisse zu garantieren. Wir bieten verschiedene Verfahren an, die individuell auf Ihre Bedürfnisse abgestimmt werden."
   },
   "methodsSection": {
-    "title": "Unsere Verfahren",
+    "title": "Unsere Haartransplantationstechniken",
     "subtitle": "Spezialisierte Techniken für optimale Ergebnisse",
     "methods": [
       {
-        "title": "Saphir FUE",
-        "description": "Die Saphir FUE-Technik verwendet spezielle Saphirklingen für präzisere Schnitte und minimale Traumatisierung des Gewebes. Dies führt zu einer schnelleren Heilung und natürlicheren Ergebnissen.",
+        "title": "Saphir-FUE-Technik",
+        "subtitle": "Spezialisierte Technik",
+        "description": "Die Saphir-FUE-Technik ist eine Weiterentwicklung der klassischen FUE-Methode, bei der spezielle Saphirklingen verwendet werden.",
         "benefits": [
-          "Minimale Narbenbildung",
-          "Schnellere Heilungszeit",
-          "Präzisere Haarentnahme",
-          "Natürlichere Haarwuchsrichtung"
-        ]
+          "Präzisere Schnitte und geringere Gewebeschädigung",
+          "Schnellere Heilung und weniger Schwellungen",
+          "Höhere Anwuchsrate der transplantierten Haarfollikel",
+          "Natürlicheres Erscheinungsbild der Haarlinien"
+        ],
+        "process": [
+          "Entnahme einzelner Follikeleinheiten aus der Spenderzone",
+          "Vorbereitung der Follikel unter dem Mikroskop",
+          "Erstellung der Empfängerkanäle mit Saphirklingen",
+          "Präzise Platzierung der Haarfollikel"
+        ],
+        "idealFor": "Ideal für: Schnelle Heilung, minimale Narben"
       },
       {
-        "title": "DHI FUE",
-        "description": "Die DHI (Direct Hair Implantation) Technik ermöglicht die direkte Implantation der Haarfollikel ohne vorherige Kanalöffnung. Dies erlaubt eine höhere Dichte und präzisere Platzierung der Haare.",
+        "title": "DHI-FUE-Technik",
+        "subtitle": "Spezialisierte Technik",
+        "description": "Die DHI-Technik ermöglicht die direkte Implantation der Haarfollikel ohne vorherige Kanalerstellung.",
         "benefits": [
-          "Höhere Haardichte möglich",
-          "Kürzere Operationszeit",
-          "Geringeres Trauma für die Kopfhaut",
-          "Schnellere Erholung"
-        ]
+          "Höhere Dichte der transplantierten Haare",
+          "Präzisere Kontrolle über Richtung und Winkel",
+          "Minimale Manipulation der Haarfollikel",
+          "Natürlichere Wuchsrichtung"
+        ],
+        "process": [
+          "Entnahme einzelner Follikeleinheiten aus der Spenderzone",
+          "Direkte Ladung der Follikel in spezielle DHI-Implantationsstifte",
+          "Präzise Implantation ohne vorherige Kanalerstellung",
+          "Kontrolle über Tiefe, Winkel und Richtung der Implantation"
+        ],
+        "idealFor": "Ideal für: Hohe Haardichte, präzise Platzierung"
       },
       {
         "title": "Haartransplantation ohne Rasur",
-        "description": "Bei dieser Methode werden nur die zu entnehmenden Haarfollikel rasiert, während der Rest der Haare lang bleibt. Ideal für Patienten, die ihre Haartransplantation diskret durchführen lassen möchten.",
+        "subtitle": "Spezialisierte Technik",
+        "description": "Diese Technik ermöglicht eine Transplantation ohne sichtbare Anzeichen einer Behandlung.",
         "benefits": [
-          "Keine sichtbaren Anzeichen der Operation",
-          "Sofortige Rückkehr zum sozialen Leben",
-          "Ideal für kleinere Transplantationen",
-          "Perfekt für berufstätige Personen"
-        ]
+          "Keine sichtbaren Anzeichen einer Transplantation",
+          "Sofortige soziale Aktivität möglich",
+          "Ideal für berufstätige Personen",
+          "Diskrete Behandlungsoption"
+        ],
+        "process": [
+          "Selektive Entnahme von Follikeln zwischen den bestehenden Haaren",
+          "Längere Haare verdecken die Entnahmestellen",
+          "Implantation in den Empfängerbereich",
+          "Spezielle Nachsorge für optimale Ergebnisse"
+        ],
+        "idealFor": "Ideal für: Diskretion, sofortige soziale Aktivität"
       }
     ]
   },

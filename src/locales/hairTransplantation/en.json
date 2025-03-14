@@ -5,38 +5,62 @@
     "welcomeText": "Our hair transplantations are performed using the most advanced techniques to guarantee you natural-looking and permanent results. We offer various procedures that are individually tailored to your needs."
   },
   "methodsSection": {
-    "title": "Our Methods",
+    "title": "Our Hair Transplantation Techniques",
     "subtitle": "Specialized techniques for optimal results",
     "methods": [
       {
-        "title": "Sapphire FUE",
-        "description": "The Sapphire FUE technique uses special sapphire blades for more precise incisions and minimal tissue trauma. This leads to faster healing and more natural results.",
+        "title": "Sapphire FUE Technique",
+        "subtitle": "Specialized Technique",
+        "description": "The Sapphire FUE technique is an advancement of the classic FUE method, using special sapphire blades.",
         "benefits": [
-          "Minimal scarring",
-          "Faster healing time",
-          "More precise hair extraction",
-          "More natural hair growth direction"
-        ]
+          "More precise incisions and less tissue damage",
+          "Faster healing and less swelling",
+          "Higher success rate of transplanted hair follicles",
+          "More natural appearance of hairlines"
+        ],
+        "process": [
+          "Extraction of individual follicular units from the donor area",
+          "Preparation of follicles under microscope",
+          "Creation of recipient channels with sapphire blades",
+          "Precise placement of hair follicles"
+        ],
+        "idealFor": "Ideal for: Fast healing, minimal scarring"
       },
       {
-        "title": "DHI FUE",
-        "description": "The DHI (Direct Hair Implantation) technique allows direct implantation of hair follicles without prior channel opening. This allows for higher density and more precise placement of the hairs.",
+        "title": "DHI FUE Technique",
+        "subtitle": "Specialized Technique",
+        "description": "The DHI technique enables direct implantation of hair follicles without prior channel creation.",
         "benefits": [
-          "Higher hair density possible",
-          "Shorter operation time",
-          "Less trauma to the scalp",
-          "Faster recovery"
-        ]
+          "Higher density of transplanted hair",
+          "More precise control over direction and angle",
+          "Minimal manipulation of hair follicles",
+          "More natural growth direction"
+        ],
+        "process": [
+          "Extraction of individual follicular units from the donor area",
+          "Direct loading of follicles into special DHI implantation pens",
+          "Precise implantation without prior channel creation",
+          "Control over depth, angle, and direction of implantation"
+        ],
+        "idealFor": "Ideal for: High hair density, precise placement"
       },
       {
         "title": "Hair Transplantation Without Shaving",
-        "description": "With this method, only the hair follicles to be extracted are shaved, while the rest of the hair remains long. Ideal for patients who want to have their hair transplantation performed discreetly.",
+        "subtitle": "Specialized Technique",
+        "description": "This technique allows for transplantation without visible signs of treatment.",
         "benefits": [
-          "No visible signs of the operation",
-          "Immediate return to social life",
-          "Ideal for smaller transplantations",
-          "Perfect for working professionals"
-        ]
+          "No visible signs of transplantation",
+          "Immediate social activity possible",
+          "Ideal for working professionals",
+          "Discreet treatment option"
+        ],
+        "process": [
+          "Selective extraction of follicles between existing hair",
+          "Longer hair conceals the extraction sites",
+          "Implantation in the recipient area",
+          "Special aftercare for optimal results"
+        ],
+        "idealFor": "Ideal for: Discretion, immediate social activity"
       }
     ]
   },
