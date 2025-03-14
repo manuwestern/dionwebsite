@@ -35,24 +35,28 @@ const HairLossPatternsSection: React.FC = () => {
               </div>
               
               {/* Pattern Content with fixed height and positioning */}
-              <div className="p-6 relative h-[180px]">
-                {/* Title and description at the top */}
-                <div className="mb-4">
+              <div className="p-6 relative h-[200px]">
+                {/* Title and description at the top with fixed height */}
+                <div>
                   <h3 className="text-xl font-medium text-gray-800 mb-2">{pattern.title}</h3>
-                  <p className="text-gray-600 font-light">
-                    {pattern.description}
-                  </p>
+                  <div className="h-[80px] overflow-y-auto mb-4">
+                    <p className="text-gray-600 font-light">
+                      {pattern.description}
+                    </p>
+                  </div>
                 </div>
                 
-                {/* Pattern Details - fixed position at bottom */}
-                <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
-                    <p className="text-gray-800 font-medium">{pattern.grafts}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.treatment')}:</h4>
-                    <p className="text-gray-800 font-medium">{pattern.treatment}</p>
+                {/* Pattern Details - fixed position at bottom with clear separation */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="grid grid-cols-2 gap-4 text-sm pt-4 border-t border-gray-100">
+                    <div>
+                      <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
+                      <p className="text-gray-800 font-medium">{pattern.grafts}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.treatment')}:</h4>
+                      <p className="text-gray-800 font-medium">{pattern.treatment}</p>
+                    </div>
                   </div>
                 </div>
               </div>
