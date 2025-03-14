@@ -1,0 +1,87 @@
+{
+  "heroSection": {
+    "title": "Haartransplantation",
+    "subtitle": "Modernste Techniken für natürliche Ergebnisse",
+    "welcomeText": "Unsere Haartransplantationen werden mit modernsten Techniken durchgeführt, um Ihnen natürlich aussehende und dauerhafte Ergebnisse zu garantieren. Wir bieten verschiedene Verfahren an, die individuell auf Ihre Bedürfnisse abgestimmt werden."
+  },
+  "methodsSection": {
+    "title": "Unsere Verfahren",
+    "subtitle": "Spezialisierte Techniken für optimale Ergebnisse",
+    "methods": [
+      {
+        "title": "Saphir FUE",
+        "description": "Die Saphir FUE-Technik verwendet spezielle Saphirklingen für präzisere Schnitte und minimale Traumatisierung des Gewebes. Dies führt zu einer schnelleren Heilung und natürlicheren Ergebnissen.",
+        "benefits": [
+          "Minimale Narbenbildung",
+          "Schnellere Heilungszeit",
+          "Präzisere Haarentnahme",
+          "Natürlichere Haarwuchsrichtung"
+        ]
+      },
+      {
+        "title": "DHI FUE",
+        "description": "Die DHI (Direct Hair Implantation) Technik ermöglicht die direkte Implantation der Haarfollikel ohne vorherige Kanalöffnung. Dies erlaubt eine höhere Dichte und präzisere Platzierung der Haare.",
+        "benefits": [
+          "Höhere Haardichte möglich",
+          "Kürzere Operationszeit",
+          "Geringeres Trauma für die Kopfhaut",
+          "Schnellere Erholung"
+        ]
+      },
+      {
+        "title": "Haartransplantation ohne Rasur",
+        "description": "Bei dieser Methode werden nur die zu entnehmenden Haarfollikel rasiert, während der Rest der Haare lang bleibt. Ideal für Patienten, die ihre Haartransplantation diskret durchführen lassen möchten.",
+        "benefits": [
+          "Keine sichtbaren Anzeichen der Operation",
+          "Sofortige Rückkehr zum sozialen Leben",
+          "Ideal für kleinere Transplantationen",
+          "Perfekt für berufstätige Personen"
+        ]
+      }
+    ]
+  },
+  "processSection": {
+    "title": "Der Behandlungsprozess",
+    "subtitle": "Ihr Weg zu neuem Haar",
+    "steps": [
+      {
+        "title": "Beratung und Analyse",
+        "description": "In einem ausführlichen Beratungsgespräch analysieren wir Ihre Haarsituation und besprechen die für Sie am besten geeignete Methode."
+      },
+      {
+        "title": "Planung des Eingriffs",
+        "description": "Wir planen den Eingriff detailliert und legen die Spender- und Empfängerzonen sowie die Anzahl der zu transplantierenden Grafts fest."
+      },
+      {
+        "title": "Durchführung der Transplantation",
+        "description": "Der Eingriff wird unter lokaler Betäubung durchgeführt und dauert je nach Umfang zwischen 4 und 8 Stunden."
+      },
+      {
+        "title": "Nachsorge und Kontrolle",
+        "description": "Nach dem Eingriff erhalten Sie detaillierte Pflegeanleitungen und regelmäßige Nachkontrollen zur Überwachung des Heilungsprozesses."
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf Ihre Fragen zur Haartransplantation",
+    "faqs": [
+      {
+        "question": "Welche Methode ist für mich am besten geeignet?",
+        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln."
+      },
+      {
+        "question": "Wie lange dauert die Erholungsphase?",
+        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Die Rötungen und Schwellungen klingen in der Regel innerhalb von 7-10 Tagen ab. Die vollständige Heilung der Kopfhaut dauert etwa 2 Wochen."
+      },
+      {
+        "question": "Wann sehe ich die ersten Ergebnisse?",
+        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben."
+      },
+      {
+        "question": "Ist der Eingriff schmerzhaft?",
+        "answer": "Die Haartransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind."
+      }
+    ]
+  }
+}

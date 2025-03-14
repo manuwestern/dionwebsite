@@ -9,17 +9,21 @@ import layoutDE from './locales/layout/de.json';
 import layoutEN from './locales/layout/en.json';
 import homeDE from './locales/home/de.json';
 import homeEN from './locales/home/en.json';
+import hairTransplantationDE from './locales/hairTransplantation/de.json';
+import hairTransplantationEN from './locales/hairTransplantation/en.json';
 
 const resources = {
   de: {
     common: commonDE,
     layout: layoutDE,
-    home: homeDE
+    home: homeDE,
+    hairTransplantation: hairTransplantationDE
   },
   en: {
     common: commonEN,
     layout: layoutEN,
-    home: homeEN
+    home: homeEN,
+    hairTransplantation: hairTransplantationEN
   }
 };
 
@@ -35,7 +39,7 @@ i18n
     debug: false, // Set to true for development
     
     // have a common namespace used around the full app
-    ns: ['common', 'layout', 'home'],
+    ns: ['common', 'layout', 'home', 'hairTransplantation'],
     defaultNS: 'common',
     
     interpolation: {

@@ -1,0 +1,87 @@
+{
+  "heroSection": {
+    "title": "Hair Transplantation",
+    "subtitle": "State-of-the-art techniques for natural results",
+    "welcomeText": "Our hair transplantations are performed using the most advanced techniques to guarantee you natural-looking and permanent results. We offer various procedures that are individually tailored to your needs."
+  },
+  "methodsSection": {
+    "title": "Our Methods",
+    "subtitle": "Specialized techniques for optimal results",
+    "methods": [
+      {
+        "title": "Sapphire FUE",
+        "description": "The Sapphire FUE technique uses special sapphire blades for more precise incisions and minimal tissue trauma. This leads to faster healing and more natural results.",
+        "benefits": [
+          "Minimal scarring",
+          "Faster healing time",
+          "More precise hair extraction",
+          "More natural hair growth direction"
+        ]
+      },
+      {
+        "title": "DHI FUE",
+        "description": "The DHI (Direct Hair Implantation) technique allows direct implantation of hair follicles without prior channel opening. This allows for higher density and more precise placement of the hairs.",
+        "benefits": [
+          "Higher hair density possible",
+          "Shorter operation time",
+          "Less trauma to the scalp",
+          "Faster recovery"
+        ]
+      },
+      {
+        "title": "Hair Transplantation Without Shaving",
+        "description": "With this method, only the hair follicles to be extracted are shaved, while the rest of the hair remains long. Ideal for patients who want to have their hair transplantation performed discreetly.",
+        "benefits": [
+          "No visible signs of the operation",
+          "Immediate return to social life",
+          "Ideal for smaller transplantations",
+          "Perfect for working professionals"
+        ]
+      }
+    ]
+  },
+  "processSection": {
+    "title": "The Treatment Process",
+    "subtitle": "Your path to new hair",
+    "steps": [
+      {
+        "title": "Consultation and Analysis",
+        "description": "In a detailed consultation, we analyze your hair situation and discuss the method best suited for you."
+      },
+      {
+        "title": "Planning the Procedure",
+        "description": "We plan the procedure in detail and determine the donor and recipient areas as well as the number of grafts to be transplanted."
+      },
+      {
+        "title": "Performing the Transplantation",
+        "description": "The procedure is performed under local anesthesia and takes between 4 and 8 hours depending on the extent."
+      },
+      {
+        "title": "Aftercare and Monitoring",
+        "description": "After the procedure, you will receive detailed care instructions and regular follow-up checks to monitor the healing process."
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to your questions about hair transplantation",
+    "faqs": [
+      {
+        "question": "Which method is best suited for me?",
+        "answer": "The best method depends on various factors, such as the extent of hair loss, the quality of the donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you."
+      },
+      {
+        "question": "How long is the recovery phase?",
+        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 7-10 days. Complete healing of the scalp takes about 2 weeks."
+      },
+      {
+        "question": "When will I see the first results?",
+        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months when the transplanted hairs have fully grown and reached their natural density."
+      },
+      {
+        "question": "Is the procedure painful?",
+        "answer": "The hair transplantation is performed under local anesthesia, so you will not feel any pain during the procedure. After the procedure, slight discomfort may occur, which can be well controlled with pain medication."
+      }
+    ]
+  }
+}
