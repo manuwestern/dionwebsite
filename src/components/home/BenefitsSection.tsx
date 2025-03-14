@@ -30,15 +30,17 @@ const BenefitsSection: React.FC = () => {
             </p>
             
             {/* Benefits with Checkmarks */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              {benefits.map((benefitKey, index) => (
-                <div key={index} className="flex items-center gap-3 justify-center md:justify-start">
-                  <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-white" />
+            <div className="flex justify-center md:justify-start mb-8">
+              <div className="inline-block text-left max-w-xs">
+                {benefits.map((benefitKey, index) => (
+                  <div key={index} className="flex items-center gap-3 mb-4">
+                    <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-light">{t(benefitKey)}</span>
                   </div>
-                  <span className="text-gray-700 font-light">{t(benefitKey)}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
             
             {/* CTA Button - Centered in mobile, left-aligned in desktop */}
