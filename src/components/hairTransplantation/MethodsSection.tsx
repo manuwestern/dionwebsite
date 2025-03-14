@@ -38,18 +38,18 @@ const MethodsSection: React.FC = () => {
                 </div>
               </div>
               
-              {/* Content container with fixed height */}
-              <div className="p-4 bg-white flex flex-col h-[650px]">
-                {/* Description with auto height */}
-                <div className="mb-8">
+              {/* Content container with fixed height and absolute positioning for sections */}
+              <div className="p-4 bg-white relative h-[650px]">
+                {/* Description section - fixed position */}
+                <div className="absolute top-4 left-4 right-4 h-[100px] overflow-y-auto">
                   <p className="text-gray-700 font-light">
                     {method.description}
                   </p>
                 </div>
                 
-                {/* Benefits section */}
-                <div className="mb-8">
-                  <h4 className="text-lg font-medium mb-4">Vorteile:</h4>
+                {/* Benefits section - fixed position */}
+                <div className="absolute top-[120px] left-4 right-4 h-[220px] overflow-y-auto">
+                  <h4 className="text-lg font-medium mb-4 sticky top-0 bg-white z-10">Vorteile:</h4>
                   <ul className="space-y-3">
                     {method.benefits.map((benefit: string, i: number) => (
                       <li key={i} className="flex items-start">
@@ -62,9 +62,9 @@ const MethodsSection: React.FC = () => {
                   </ul>
                 </div>
                 
-                {/* Process section */}
-                <div>
-                  <h4 className="text-lg font-medium mb-4">Prozess:</h4>
+                {/* Process section - fixed position */}
+                <div className="absolute top-[360px] left-4 right-4 h-[270px] overflow-y-auto">
+                  <h4 className="text-lg font-medium mb-4 sticky top-0 bg-white z-10">Prozess:</h4>
                   <ol className="space-y-4">
                     {method.process.map((step: string, i: number) => (
                       <li key={i} className="flex items-start">
