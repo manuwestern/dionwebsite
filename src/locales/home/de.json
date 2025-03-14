@@ -98,23 +98,37 @@
     "stepCount": "Schritt {{current}} von {{total}}",
     "steps": [
       {
-        "title": "Kostenlose Erstberatung",
-        "description": "Ausführliches Gespräch zur Analyse Ihrer Situation und Besprechung der Möglichkeiten."
+        "title": "Kostenlose Beratung",
+        "duration": "60 Min.",
+        "description": "In einem ausführlichen Gespräch analysieren wir Ihre individuelle Situation, besprechen Ihre Wünsche und entwickeln einen ersten Behandlungsplan. Dies kann persönlich in unserer Klinik oder bequem per Videogespräch erfolgen.",
+        "features": [
+          "Persönlich oder per Video möglich",
+          "Unverbindlich und kostenlos"
+        ]
       },
       {
-        "title": "Individuelle Planung",
-        "description": "Detaillierte Planung des Eingriffs basierend auf Ihren Wünschen und medizinischen Anforderungen."
+        "title": "Detaillierte Analyse",
+        "duration": "90 Min.",
+        "description": "Wir führen eine gründliche Analyse Ihrer Haarsituation durch, um den optimalen Behandlungsplan zu erstellen."
       },
       {
-        "title": "Schmerzfreier Eingriff",
+        "title": "Vorbereitung",
+        "duration": "2 Wochen",
+        "description": "Wir bereiten Sie optimal auf den Eingriff vor und geben Ihnen alle notwendigen Informationen."
+      },
+      {
+        "title": "Transplantation",
+        "duration": "4-8 Std.",
         "description": "Durchführung der Haartransplantation mit lokaler Betäubung und modernsten Techniken."
       },
       {
-        "title": "Umfassende Nachsorge",
+        "title": "Nachsorge",
+        "duration": "2 Wochen",
         "description": "Detaillierte Pflegeanleitung und regelmäßige Nachuntersuchungen für optimale Ergebnisse."
       },
       {
-        "title": "Langfristige Betreuung",
+        "title": "Langzeitbetreuung",
+        "duration": "12+ Monate",
         "description": "Kontinuierliche Unterstützung und Beratung auch nach Abschluss der Behandlung."
       }
     ]

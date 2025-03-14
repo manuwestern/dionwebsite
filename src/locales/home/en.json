@@ -98,23 +98,37 @@
     "stepCount": "Step {{current}} of {{total}}",
     "steps": [
       {
-        "title": "Free Initial Consultation",
-        "description": "Detailed discussion to analyze your situation and discuss possibilities."
+        "title": "Free Consultation",
+        "duration": "60 Min.",
+        "description": "In a detailed conversation, we analyze your individual situation, discuss your wishes, and develop an initial treatment plan. This can take place in person at our clinic or conveniently via video call.",
+        "features": [
+          "Available in person or via video",
+          "Non-binding and free of charge"
+        ]
       },
       {
-        "title": "Individual Planning",
-        "description": "Detailed planning of the procedure based on your wishes and medical requirements."
+        "title": "Detailed Analysis",
+        "duration": "90 Min.",
+        "description": "We conduct a thorough analysis of your hair situation to create the optimal treatment plan."
       },
       {
-        "title": "Pain-Free Procedure",
+        "title": "Preparation",
+        "duration": "2 Weeks",
+        "description": "We optimally prepare you for the procedure and provide all necessary information."
+      },
+      {
+        "title": "Transplantation",
+        "duration": "4-8 Hours",
         "description": "Performing the hair transplantation with local anesthesia and state-of-the-art techniques."
       },
       {
-        "title": "Comprehensive Aftercare",
+        "title": "Aftercare",
+        "duration": "2 Weeks",
         "description": "Detailed care instructions and regular follow-up examinations for optimal results."
       },
       {
         "title": "Long-term Support",
+        "duration": "12+ Months",
         "description": "Continuous support and advice even after the treatment is completed."
       }
     ]
