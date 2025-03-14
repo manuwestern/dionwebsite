@@ -45,10 +45,10 @@ const HairLossPatternsSection: React.FC = () => {
                 </div>
                 
                 {/* Dividing line at fixed position */}
-                <div className="absolute top-[120px] left-4 right-4 border-t border-gray-200"></div>
+                <div className="absolute top-[160px] left-4 right-4 border-t border-gray-200"></div>
                 
                 {/* Pattern Details - fixed position at bottom */}
-                <div className="absolute top-[140px] left-4 right-4 h-[90px]">
+                <div className="absolute top-[170px] left-4 right-4 h-[90px]">
                   <div className="grid grid-cols-2 gap-4 text-sm pt-4">
                     <div>
                       <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
