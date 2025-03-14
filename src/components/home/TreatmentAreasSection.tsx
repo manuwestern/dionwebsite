@@ -11,28 +11,28 @@ const TreatmentAreasSection: React.FC = () => {
       imageUrl: 'https://images.unsplash.com/photo-1621607512022-6aecc4fed814?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       titleKey: 'treatmentAreasSection.areas.1.title',
       descriptionKey: 'treatmentAreasSection.areas.1.description',
-      altText: t('treatmentAreasSection.areas.1.title')
+      altText: 'Barthaartransplantation in der Dion Hair Clinic - Verdichtung und Neugestaltung des Bartwuchses für einen volleren Bart'
     },
     {
       id: 'head',
       imageUrl: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       titleKey: 'treatmentAreasSection.areas.0.title',
       descriptionKey: 'treatmentAreasSection.areas.0.description',
-      altText: t('treatmentAreasSection.areas.0.title')
+      altText: 'Haartransplantation in Mönchengladbach - Wiederherstellung des Haupthaars mit modernsten FUE und DHI Techniken'
     },
     {
       id: 'eyebrows',
       imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       titleKey: 'treatmentAreasSection.areas.2.title',
       descriptionKey: 'treatmentAreasSection.areas.2.description',
-      altText: t('treatmentAreasSection.areas.2.title')
+      altText: 'Augenbrauentransplantation bei Dion Hair Clinic - Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick'
     },
     {
       id: 'hairloss',
       imageUrl: 'https://images.unsplash.com/photo-1626954079673-f3c3a7a5af61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       titleKey: 'treatmentAreasSection.areas.3.title',
       descriptionKey: 'treatmentAreasSection.areas.3.description',
-      altText: t('treatmentAreasSection.areas.3.title')
+      altText: 'Haarausfalltherapie in der Dion Hair Clinic - Nicht-chirurgische Behandlungen zur Vorbeugung und Behandlung von Haarausfall'
     }
   ];
 

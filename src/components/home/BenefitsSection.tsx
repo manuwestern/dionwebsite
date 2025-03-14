@@ -51,8 +51,11 @@ const BenefitsSection: React.FC = () => {
           <div className="w-full md:w-1/2 relative">
             <img 
               src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Haartransplantation Experte"
+              alt="Haartransplantation Experte in der Dion Hair Clinic - Natürliche Ergebnisse und modernste Technologien in Mönchengladbach"
               className="w-full rounded-2xl shadow-xl h-auto"
+              width="1000"
+              height="667"
+              loading="lazy"
             />
             
             {/* Overlay Message */}

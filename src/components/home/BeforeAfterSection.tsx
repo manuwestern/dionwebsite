@@ -179,8 +179,11 @@ const BeforeAfterSection: React.FC = () => {
               <div className="absolute inset-0">
                 <img 
                   src={currentCase.beforeImage} 
-                  alt={`Vor der Behandlung: ${t(currentCase.titleKey)}`}
+                  alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
                   className="w-full h-full object-cover"
+                  width="1000"
+                  height="667"
+                  loading="lazy"
                 />
               </div>
               
@@ -191,12 +194,15 @@ const BeforeAfterSection: React.FC = () => {
               >
                 <img 
                   src={currentCase.afterImage} 
-                  alt={`Nach der Behandlung: ${t(currentCase.titleKey)}`}
+                  alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
                   className="w-full h-full object-cover"
                   style={{ 
                     width: `${100 / (sliderPosition / 100)}%`,
                     maxWidth: 'none'
                   }}
+                  width="1000"
+                  height="667"
+                  loading="lazy"
                 />
               </div>
               
