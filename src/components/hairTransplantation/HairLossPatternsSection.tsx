@@ -34,33 +34,29 @@ const HairLossPatternsSection: React.FC = () => {
                 </div>
               </div>
               
-              {/* Pattern Content - completely restructured with flex layout */}
-              <div className="flex flex-col h-[250px]">
-                {/* Title and description section - fixed height */}
-                <div className="p-6 pb-0">
+              {/* Pattern Content - using the same approach as MethodsSection */}
+              <div className="p-4 bg-white relative h-[250px]">
+                {/* Title and description at the top with fixed position */}
+                <div className="absolute top-4 left-4 right-4 h-[100px]">
                   <h3 className="text-xl font-medium text-gray-800 mb-2">{pattern.title}</h3>
-                  <div className="h-[70px] overflow-y-auto">
-                    <p className="text-gray-600 font-light">
-                      {pattern.description}
-                    </p>
-                  </div>
+                  <p className="text-gray-600 font-light">
+                    {pattern.description}
+                  </p>
                 </div>
                 
-                {/* Spacer */}
-                <div className="flex-grow"></div>
+                {/* Dividing line at fixed position */}
+                <div className="absolute top-[120px] left-4 right-4 border-t border-gray-200"></div>
                 
-                {/* Pattern Details - fixed at bottom with clear separation */}
-                <div className="p-6 pt-0">
-                  <div className="border-t border-gray-200 pt-6 mt-4">
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
-                        <p className="text-gray-800 font-medium">{pattern.grafts}</p>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.treatment')}:</h4>
-                        <p className="text-gray-800 font-medium">{pattern.treatment}</p>
-                      </div>
+                {/* Pattern Details - fixed position at bottom */}
+                <div className="absolute top-[140px] left-4 right-4 h-[90px]">
+                  <div className="grid grid-cols-2 gap-4 text-sm pt-4">
+                    <div>
+                      <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
+                      <p className="text-gray-800 font-medium">{pattern.grafts}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.treatment')}:</h4>
+                      <p className="text-gray-800 font-medium">{pattern.treatment}</p>
                     </div>
                   </div>
                 </div>
