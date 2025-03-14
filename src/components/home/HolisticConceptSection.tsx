@@ -37,16 +37,25 @@ const HolisticConceptSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {conceptCards.map((card, index) => (
             <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300 flex flex-col h-full">
-              <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
-                {card.icon}
+              {/* Top section with icon and title */}
+              <div>
+                <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
+                  {card.icon}
+                </div>
+                <h3 className="text-xl font-light mb-3">{t(card.titleKey)}</h3>
               </div>
-              <h3 className="text-xl font-light mb-3">{t(card.titleKey)}</h3>
-              <p className="text-gray-600 font-light mb-4 flex-grow">
-                {t(card.descriptionKey)}
-              </p>
-              <div className="mt-auto">
+              
+              {/* Middle section with description - flex-grow to push footer to bottom */}
+              <div className="flex-grow flex flex-col">
+                <p className="text-gray-600 font-light mb-4">
+                  {t(card.descriptionKey)}
+                </p>
+              </div>
+              
+              {/* Footer section with divider and quote - fixed at bottom */}
+              <div className="mt-auto pt-4">
                 <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
-                <p className="text-sm text-gray-500 font-light italic">
+                <p className="text-sm text-gray-500 font-light italic h-12 flex items-center justify-center">
                   "{t(card.quoteKey)}"
                 </p>
               </div>
