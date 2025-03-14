@@ -34,15 +34,18 @@ const HairLossPatternsSection: React.FC = () => {
                 </div>
               </div>
               
-              {/* Pattern Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-medium text-gray-800 mb-2">{pattern.title}</h3>
-                <p className="text-gray-600 font-light mb-6">
-                  {pattern.description}
-                </p>
+              {/* Pattern Content with fixed height and positioning */}
+              <div className="p-6 relative h-[180px]">
+                {/* Title and description at the top */}
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium text-gray-800 mb-2">{pattern.title}</h3>
+                  <p className="text-gray-600 font-light">
+                    {pattern.description}
+                  </p>
+                </div>
                 
-                {/* Pattern Details */}
-                <div className="grid grid-cols-2 gap-4 text-sm">
+                {/* Pattern Details - fixed position at bottom */}
+                <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
                     <p className="text-gray-800 font-medium">{pattern.grafts}</p>
