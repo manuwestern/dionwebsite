@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
           
           {/* Text content that overlaps with the image */}
           <div className="relative z-10 max-w-[85%] md:max-w-[60%] flex flex-col justify-center h-full pt-16 md:pt-12">
-            <h1 className="text-3xl font-light mb-2 md:text-5xl md:mb-3">
+            <h1 className="text-3xl font-light mb-2 md:text-5xl md:mb-6">
               {t('heroSection.title')}
               {/* Mobile version with line break from translation file */}
               <span className="block text-2xl mt-1 text-gray-700 md:hidden font-light">
@@ -59,13 +59,12 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
             
-            {/* SEO Welcome Text */}
-            <p className="text-sm font-light text-gray-700 mb-6 md:text-base md:mb-8 text-left">
+            <p className="text-base text-gray-700 font-light leading-relaxed mt-4 md:text-lg md:mt-6 max-w-2xl">
               {t('heroSection.welcomeText')}
             </p>
             
-            <div>
-              <button className="mt-4 inline-block bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:mt-6 md:px-8">
+            <div className="mt-6">
+              <button className="inline-block bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:px-8">
                 {t('buttons.consultation', { ns: 'common' })}
               </button>
             </div>
