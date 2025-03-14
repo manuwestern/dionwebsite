@@ -39,18 +39,18 @@ const MethodsSection: React.FC = () => {
               </div>
               
               {/* Content container with fixed height */}
-              <div className="p-4 bg-white flex flex-col h-[500px]">
-                {/* Description - fixed height */}
-                <div className="h-24 mb-6">
+              <div className="p-4 bg-white flex flex-col h-[650px]">
+                {/* Description with auto height */}
+                <div className="mb-8">
                   <p className="text-gray-700 font-light">
                     {method.description}
                   </p>
                 </div>
                 
-                {/* Benefits - fixed height */}
-                <div className="mb-6 h-48">
-                  <h4 className="text-lg font-medium mb-3">Vorteile:</h4>
-                  <ul className="space-y-2">
+                {/* Benefits section */}
+                <div className="mb-8">
+                  <h4 className="text-lg font-medium mb-4">Vorteile:</h4>
+                  <ul className="space-y-3">
                     {method.benefits.map((benefit: string, i: number) => (
                       <li key={i} className="flex items-start">
                         <div className="mt-1 mr-2 flex-shrink-0">
@@ -62,10 +62,10 @@ const MethodsSection: React.FC = () => {
                   </ul>
                 </div>
                 
-                {/* Process - flex-grow to fill remaining space */}
-                <div className="flex-grow">
-                  <h4 className="text-lg font-medium mb-3">Prozess:</h4>
-                  <ol className="space-y-3">
+                {/* Process section */}
+                <div>
+                  <h4 className="text-lg font-medium mb-4">Prozess:</h4>
+                  <ol className="space-y-4">
                     {method.process.map((step: string, i: number) => (
                       <li key={i} className="flex items-start">
                         <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#333333] text-white flex items-center justify-center font-light">
