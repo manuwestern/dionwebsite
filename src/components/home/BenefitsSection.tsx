@@ -18,7 +18,7 @@ const BenefitsSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           {/* Left Column - Text Content */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-light mb-6 md:text-5xl">{t('benefitsSection.title')}</h2>
             
             <p className="text-gray-600 font-light mb-6">
@@ -32,7 +32,7 @@ const BenefitsSection: React.FC = () => {
             {/* Benefits with Checkmarks */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {benefits.map((benefitKey, index) => (
-                <div key={index} className="flex items-center gap-3">
+                <div key={index} className="flex items-center gap-3 justify-center md:justify-start">
                   <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" />
                   </div>
@@ -41,10 +41,12 @@ const BenefitsSection: React.FC = () => {
               ))}
             </div>
             
-            {/* CTA Button */}
-            <button className="bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider">
-              {t('buttons.consultation', { ns: 'common' })}
-            </button>
+            {/* CTA Button - Centered in mobile, left-aligned in desktop */}
+            <div className="flex justify-center md:justify-start">
+              <button className="bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider">
+                {t('buttons.consultation', { ns: 'common' })}
+              </button>
+            </div>
           </div>
           
           {/* Right Column - Image with Overlay */}
