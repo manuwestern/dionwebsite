@@ -64,6 +64,50 @@
       }
     ]
   },
+  "hairLossPatternsSection": {
+    "title": "Typische Haarausfallmuster & Behandlungsoptionen",
+    "description": "Jedes Haarausfallmuster erfordert einen individuellen Behandlungsansatz. Hier finden Sie einen Überblick über die häufigsten Muster und die entsprechenden Behandlungsoptionen.",
+    "typicalGrafts": "Typische Grafts",
+    "treatment": "Behandlung",
+    "patterns": [
+      {
+        "title": "Norwood 1-2 (Beginnender Haarausfall)",
+        "description": "Leichter Rückgang des Haaransatzes an den Schläfen",
+        "grafts": "800-1.500",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Norwood 3 (Geheimratsecken)",
+        "description": "Deutlicher Rückgang des Haaransatzes mit tiefen Geheimratsecken",
+        "grafts": "1.500-2.500",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Norwood 4 (Fortgeschrittener Haarausfall)",
+        "description": "Deutlicher Haarausfall im vorderen Bereich und beginnende Tonsur",
+        "grafts": "2.500-3.500",
+        "treatment": "1-2 Sitzungen"
+      },
+      {
+        "title": "Norwood 5-6 (Ausgeprägter Haarausfall)",
+        "description": "Großflächiger Haarausfall mit verbindender Tonsur und Geheimratsecken",
+        "grafts": "3.500-5.000",
+        "treatment": "2 Sitzungen"
+      },
+      {
+        "title": "Norwood 7 (Sehr ausgeprägter Haarausfall)",
+        "description": "Nur noch Haarkranz an den Seiten und am Hinterkopf vorhanden",
+        "grafts": "5.000-7.000",
+        "treatment": "2-3 Sitzungen"
+      },
+      {
+        "title": "Diffuser Haarausfall",
+        "description": "Gleichmäßige Ausdünnung über den gesamten Kopfbereich",
+        "grafts": "2.000-4.000",
+        "treatment": "1-2 Sitzungen"
+      }
+    ]
+  },
   "processSection": {
     "title": "Der Behandlungsprozess",
     "subtitle": "Ihr Weg zu neuem Haar",

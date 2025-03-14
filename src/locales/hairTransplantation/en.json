@@ -64,6 +64,50 @@
       }
     ]
   },
+  "hairLossPatternsSection": {
+    "title": "Typical Hair Loss Patterns & Treatment Options",
+    "description": "Each hair loss pattern requires an individual treatment approach. Here you will find an overview of the most common patterns and the corresponding treatment options.",
+    "typicalGrafts": "Typical Grafts",
+    "treatment": "Treatment",
+    "patterns": [
+      {
+        "title": "Norwood 1-2 (Beginning Hair Loss)",
+        "description": "Slight recession of the hairline at the temples",
+        "grafts": "800-1,500",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Norwood 3 (Receding Hairline)",
+        "description": "Significant recession of the hairline with deep temporal recessions",
+        "grafts": "1,500-2,500",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Norwood 4 (Advanced Hair Loss)",
+        "description": "Significant hair loss in the front area and beginning vertex thinning",
+        "grafts": "2,500-3,500",
+        "treatment": "1-2 Sessions"
+      },
+      {
+        "title": "Norwood 5-6 (Extensive Hair Loss)",
+        "description": "Large-scale hair loss with connecting vertex thinning and receding hairline",
+        "grafts": "3,500-5,000",
+        "treatment": "2 Sessions"
+      },
+      {
+        "title": "Norwood 7 (Very Extensive Hair Loss)",
+        "description": "Only a hair wreath on the sides and back of the head remains",
+        "grafts": "5,000-7,000",
+        "treatment": "2-3 Sessions"
+      },
+      {
+        "title": "Diffuse Hair Loss",
+        "description": "Even thinning across the entire scalp area",
+        "grafts": "2,000-4,000",
+        "treatment": "1-2 Sessions"
+      }
+    ]
+  },
   "processSection": {
     "title": "The Treatment Process",
     "subtitle": "Your path to new hair",
