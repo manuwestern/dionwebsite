@@ -38,7 +38,7 @@ const ProcessSection: React.FC = () => {
           
           <div className="grid grid-cols-4 gap-6 relative">
             {steps.map((step, index) => (
-              <div key={index} className={`flex flex-col items-center ${index % 2 === 0 ? 'pt-0 pb-16' : 'pt-48 pb-0'}`}>
+              <div key={index} className={`flex flex-col items-center relative ${index % 2 === 0 ? 'pt-0 pb-16' : 'pt-48 pb-0'}`}>
                 {/* Step number and icon */}
                 <div className="flex-shrink-0 mb-6 relative">
                   {/* Circle with gradient border */}
@@ -67,9 +67,13 @@ const ProcessSection: React.FC = () => {
                   </p>
                 </div>
                 
-                {/* Vertical connector line */}
-                <div className={`absolute ${index % 2 === 0 ? 'top-16 h-32' : 'bottom-16 h-32'} 
-                                w-0.5 bg-gradient-to-b from-gray-400 to-transparent`}></div>
+                {/* Vertical connector line - positioned in the center of each column */}
+                {index % 2 === 0 && (
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-[64px] h-[48px] w-0.5 bg-gradient-to-b from-gray-400 to-gray-200"></div>
+                )}
+                {index % 2 === 1 && (
+                  <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[64px] h-[48px] w-0.5 bg-gradient-to-b from-gray-200 to-gray-400"></div>
+                )}
               </div>
             ))}
           </div>
