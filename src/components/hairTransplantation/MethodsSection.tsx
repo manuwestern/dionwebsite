@@ -38,14 +38,17 @@ const MethodsSection: React.FC = () => {
                 </div>
               </div>
               
-              {/* Description */}
-              <div className="p-4 bg-white">
-                <p className="text-gray-700 font-light mb-6">
-                  {method.description}
-                </p>
+              {/* Content container with fixed height */}
+              <div className="p-4 bg-white flex flex-col h-[500px]">
+                {/* Description - fixed height */}
+                <div className="h-24 mb-6">
+                  <p className="text-gray-700 font-light">
+                    {method.description}
+                  </p>
+                </div>
                 
-                {/* Benefits */}
-                <div className="mb-6">
+                {/* Benefits - fixed height */}
+                <div className="mb-6 h-48">
                   <h4 className="text-lg font-medium mb-3">Vorteile:</h4>
                   <ul className="space-y-2">
                     {method.benefits.map((benefit: string, i: number) => (
@@ -59,8 +62,8 @@ const MethodsSection: React.FC = () => {
                   </ul>
                 </div>
                 
-                {/* Process */}
-                <div className="mb-6">
+                {/* Process - flex-grow to fill remaining space */}
+                <div className="flex-grow">
                   <h4 className="text-lg font-medium mb-3">Prozess:</h4>
                   <ol className="space-y-3">
                     {method.process.map((step: string, i: number) => (
