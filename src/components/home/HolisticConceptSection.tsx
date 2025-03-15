@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Microscope, HeartPulse, Sparkles, Stethoscope, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HolisticConceptSection: React.FC = () => {
   const { t } = useTranslation('home');
+  const [scrollY, setScrollY] = useState(0);
+
+  // Handle scroll for parallax effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Icons for each concept
   const conceptIcons = [
@@ -25,12 +36,27 @@ const HolisticConceptSection: React.FC = () => {
   );
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white w-full py-16 md:py-28">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="relative w-full py-16 md:py-28 overflow-hidden">
+      {/* Background image - fixed position without parallax for better compatibility */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{ 
+          backgroundImage: 'url("/images/bg_abstrakt.webp")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          opacity: 0.9
+        }}
+      ></div>
+      
+      {/* Overlay to ensure content readability */}
+      <div className="absolute inset-0 bg-white bg-opacity-40 z-1"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-light mb-4 md:text-5xl md:mb-6">{t('holisticConceptSection.title')}</h2>
-          <div className="w-24 h-1 bg-[#333333] mx-auto mb-6"></div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto">
             {t('holisticConceptSection.subtitle')}
           </p>
@@ -68,8 +94,6 @@ const HolisticConceptSection: React.FC = () => {
             </div>
           </div>
         </div>
-        
-        {/* No cards at the bottom as requested */}
       </div>
     </div>
   );

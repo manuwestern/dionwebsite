@@ -35,20 +35,12 @@ const TreatmentAreasSection: React.FC = () => {
       descriptionKey: 'treatmentAreasSection.areas.2.description',
       mobileDescription: 'Möchten Sie ausdrucksstarke, volle Augenbrauen?',
       altText: 'Augenbrauentransplantation bei Dion Hair Clinic - Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick'
-    },
-    {
-      id: 'hairloss',
-      imageUrl: 'https://images.unsplash.com/photo-1626954079673-f3c3a7a5af61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-      titleKey: 'treatmentAreasSection.areas.3.title',
-      descriptionKey: 'treatmentAreasSection.areas.3.description',
-      mobileDescription: 'Suchen Sie nach nicht-chirurgischen Lösungen gegen Haarausfall?',
-      altText: 'Haarausfalltherapie in der Dion Hair Clinic - Nicht-chirurgische Behandlungen zur Vorbeugung und Behandlung von Haarausfall'
     }
   ];
 
   return (
-    // Main section container with background and padding
-    <div className="bg-white py-8 md:py-20">
+    // Main section container with subtle gray gradient background and animation
+    <div className="py-8 md:py-20 bg-gradient-to-b from-gray-50 to-white bg-size-200 animate-gradient-slow">
       {/* Content container with max width and horizontal padding */}
       <div className="w-full max-w-7xl mx-auto px-4">
         {/* Section header with title and subtitle */}
@@ -91,7 +83,7 @@ const TreatmentAreasSection: React.FC = () => {
         </div>
 
         {/* Desktop View - Hidden on small screens, grid layout on medium and up */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-[90%] mx-auto">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-[90%] mx-auto">
           {treatmentAreas.map((area) => (
             // Treatment area card - white card with rounded corners and shadow
             <div key={area.id} className="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 md:rounded-3xl md:flex md:flex-col">

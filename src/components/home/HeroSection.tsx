@@ -1,12 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
+  const [scrollY, setScrollY] = useState(0);
+
+  // Handle scroll for parallax effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="relative bg-gray-100 overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-0 md:pt-16 md:pb-0">
+    <div className="relative overflow-hidden">
+      {/* Background image - fixed position without parallax for better compatibility */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{ 
+          backgroundImage: 'url("/images/bg_abstrakt.webp")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      ></div>
+      
+      {/* Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-white bg-opacity-40 z-1"></div>
+      
+      <div className="w-full max-w-7xl mx-auto px-4 pt-8 pb-0 md:pt-16 md:pb-0 relative z-10">
         <div className="relative min-h-[500px] md:min-h-[600px]">
           {/* Image positioned on the right - with independent mobile and desktop positioning */}
           <div className="
@@ -15,7 +41,7 @@ const HeroSection: React.FC = () => {
             top-[25%] 
             w-[100%] 
             h-full 
-            z-0 
+            z-5 
             md:absolute 
             md:right-0 
             md:top-[30%] 
