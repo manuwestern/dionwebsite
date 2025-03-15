@@ -76,7 +76,7 @@ const TreatmentAreasSection: React.FC = () => {
               {/* Text content container */}
               <div className="p-4 text-center">
                 {/* Treatment area title */}
-                <h3 className="text-2xl font-light mb-2">{t(area.titleKey)}</h3>
+                <h3 className="text-xl font-light mb-2">{t(area.titleKey)}</h3>
                 {/* Treatment area description */}
                 <p className="text-gray-600 mb-4 font-light md:mb-2">
                   {area.mobileDescription}
@@ -118,7 +118,7 @@ const TreatmentAreasSection: React.FC = () => {
                 {/* Button container - pushed to bottom with mt-auto */}
                 <div className="md:mt-auto">
                   {/* "More Info" button */}
-                  <button className="w-3/4 bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:w-auto">
+                  <button className="w-3/4 bg-[#333333] text-white px-8 py-2 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:w-auto">
                     {t('buttons.moreInfo', { ns: 'common' })}
                   </button>
                 </div>
