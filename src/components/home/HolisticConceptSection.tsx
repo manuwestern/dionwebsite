@@ -66,11 +66,11 @@ const HolisticConceptSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center mb-16 gap-8 lg:gap-16">
           {/* Left side - Simple image without shadow or border */}
           <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="w-full overflow-hidden">
+            <div className="w-full overflow-hidden rounded-3xl bg-white p-3 shadow-lg">
               <img 
                 src="/images/Dion_Model_Benefits.png" 
                 alt="Dion Hair Clinic - Ganzheitliches Konzept" 
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover rounded-xl"
               />
             </div>
           </div>
