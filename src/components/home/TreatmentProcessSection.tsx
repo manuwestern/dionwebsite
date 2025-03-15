@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FileText, Microscope, ClipboardList, Stethoscope, HeartPulse, Clock, Check, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { FileText, Microscope, ClipboardList, Stethoscope, HeartPulse, Clock, Check, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface ProcessStep {
@@ -17,6 +17,18 @@ const TreatmentProcessSection: React.FC<{
 }> = ({ stepRefs, visibleSteps }) => {
   const { t } = useTranslation('home');
   const [activeStep, setActiveStep] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  // Handle scroll for parallax effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Icons for each step
   const stepIcons = [
@@ -41,15 +53,38 @@ const TreatmentProcessSection: React.FC<{
     })
   );
 
+  const handleStepChange = (index: number) => {
+    setAnimating(true);
+    setActiveStep(index);
+    setTimeout(() => setAnimating(false), 300);
+  };
+
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-white bg-size-200 animate-gradient-slow py-16 md:py-24">
-      <div className="w-full max-w-7xl mx-auto px-4">
+    <div className="relative py-16 md:py-24 overflow-hidden">
+      {/* Background image - fixed position without parallax for better compatibility */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{ 
+          backgroundImage: 'url("/images/bg_abstrakt.webp")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          opacity: 0.15
+        }}
+      ></div>
+      
+      {/* Overlay to ensure content readability */}
+      <div className="absolute inset-0 bg-white bg-opacity-70 z-1"></div>
+      
+      <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('treatmentProcessSection.title')}</h2>
           <p className="text-base text-gray-600 font-light md:text-xl">
             {t('treatmentProcessSection.subtitle')}
           </p>
         </div>
+
 
         {/* Horizontal Timeline */}
         <div className="hidden md:block mb-16">
@@ -66,17 +101,21 @@ const TreatmentProcessSection: React.FC<{
                     className={`w-14 h-14 rounded-full flex items-center justify-center text-lg font-medium z-10 mb-3 cursor-pointer transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${
                       activeStep === index 
                         ? 'bg-[#333333] text-white shadow-lg' 
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        : index < activeStep 
+                          ? 'bg-gray-400 text-white' 
+                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                     }`}
-                    onClick={() => setActiveStep(index)}
+                    onClick={() => handleStepChange(index)}
                     aria-label={`View details for step ${step.number}: ${t(step.titleKey)}`}
                   >
-                    {step.number}
+                    {index < activeStep ? <Check className="w-6 h-6" /> : step.number}
                   </button>
                   
                   {/* Step Title */}
                   <div className="text-center">
-                    <div className="font-light text-sm md:text-base">{t(step.titleKey)}</div>
+                    <div className={`font-light text-sm md:text-base ${activeStep === index ? 'text-[#333333] font-medium' : 'text-gray-600'}`}>
+                      {t(step.titleKey)}
+                    </div>
                     <div className="text-xs text-gray-500">{t(step.durationKey)}</div>
                   </div>
                 </div>
@@ -87,6 +126,7 @@ const TreatmentProcessSection: React.FC<{
 
         {/* Mobile Timeline with integrated content */}
         <div className="md:hidden space-y-4">
+
           {processSteps.map((step, index) => (
             <div 
               key={index}
@@ -95,18 +135,24 @@ const TreatmentProcessSection: React.FC<{
             >
               {/* Step Button */}
               <button
-                onClick={() => setActiveStep(index)}
+                onClick={() => handleStepChange(index)}
                 className={`w-full flex items-center gap-4 p-4 rounded-lg transition-all duration-300 ${
                   activeStep === index
                     ? 'bg-[#333333] text-white shadow-lg rounded-b-none'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : index < activeStep 
+                      ? 'bg-gray-300 text-gray-700' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
                 aria-expanded={activeStep === index}
               >
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  activeStep === index ? 'bg-white text-[#333333]' : 'bg-gray-200'
+                  activeStep === index 
+                    ? 'bg-white text-[#333333]' 
+                    : index < activeStep 
+                      ? 'bg-gray-400 text-white' 
+                      : 'bg-gray-200'
                 }`}>
-                  {step.number}
+                  {index < activeStep ? <Check className="w-5 h-5" /> : step.number}
                 </div>
                 <div className="flex-1 text-left">
                   <div className="font-light">{t(step.titleKey)}</div>
@@ -148,13 +194,17 @@ const TreatmentProcessSection: React.FC<{
         </div>
 
         {/* Desktop Active Step Card */}
-        <div className="hidden md:block w-full mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div className="hidden md:block w-full max-w-4xl mx-auto">
+          <div 
+            className={`bg-white rounded-2xl shadow-lg overflow-hidden transition-opacity duration-300 ${
+              animating ? 'opacity-0' : 'opacity-100'
+            }`}
+          >
             <div className="p-6 md:p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 rounded-full bg-gray-100">
-                  <div className="w-10 h-10 rounded-full bg-[#333333] text-white flex items-center justify-center">
-                    {processSteps[activeStep].number}
+                  <div className="w-12 h-12 rounded-full bg-[#333333] text-white flex items-center justify-center">
+                    {stepIcons[activeStep]}
                   </div>
                 </div>
                 <div>
@@ -163,12 +213,13 @@ const TreatmentProcessSection: React.FC<{
                 </div>
               </div>
               
-              <p className="text-gray-700 font-light mb-6">
+              <p className="text-gray-700 font-light mb-6 leading-relaxed">
                 {t(processSteps[activeStep].descriptionKey)}
               </p>
               
               {processSteps[activeStep].featuresKey && (
-                <div className="space-y-3">
+                <div className="space-y-3 bg-gray-50 p-4 rounded-xl">
+                  <h4 className="font-medium text-gray-700 mb-2">Wichtige Punkte:</h4>
                   {(t(processSteps[activeStep].featuresKey!, { returnObjects: true }) as string[]).map((feature, i) => (
                     <div key={i} className="flex items-start">
                       <div className="mt-1 mr-2 flex-shrink-0">
@@ -179,6 +230,35 @@ const TreatmentProcessSection: React.FC<{
                   ))}
                 </div>
               )}
+
+              {/* Navigation Buttons */}
+              <div className="flex justify-between mt-8">
+                <button 
+                  onClick={() => handleStepChange(Math.max(0, activeStep - 1))}
+                  disabled={activeStep === 0}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+                    activeStep === 0 
+                      ? 'text-gray-400 cursor-not-allowed' 
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                  <span>Zurück</span>
+                </button>
+                
+                <button 
+                  onClick={() => handleStepChange(Math.min(processSteps.length - 1, activeStep + 1))}
+                  disabled={activeStep === processSteps.length - 1}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+                    activeStep === processSteps.length - 1 
+                      ? 'text-gray-400 cursor-not-allowed' 
+                      : 'bg-[#333333] text-white hover:bg-[#444444]'
+                  }`}
+                >
+                  <span>Weiter</span>
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
