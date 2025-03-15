@@ -63,7 +63,7 @@ const TreatmentAreasSection: React.FC = () => {
         <div className="md:hidden flex flex-col items-center gap-8">
           {treatmentAreas.map((area) => (
             // Treatment area card - white card with rounded corners and shadow
-            <div key={area.id} className="bg-white rounded-3xl shadow-lg overflow-hidden w-[95%] max-w-[360px]">
+            <div key={area.id} className="bg-white rounded-3xl shadow-lg overflow-hidden w-[100%] max-w-[400px]">
               {/* Image container - square aspect ratio */}
               <div className="overflow-hidden">
                 {/* Treatment area image */}
@@ -91,7 +91,7 @@ const TreatmentAreasSection: React.FC = () => {
         </div>
 
         {/* Desktop View - Hidden on small screens, grid layout on medium and up */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
           {treatmentAreas.map((area) => (
             // Treatment area card - white card with rounded corners and shadow
             <div key={area.id} className="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 md:rounded-3xl md:flex md:flex-col">
@@ -105,7 +105,7 @@ const TreatmentAreasSection: React.FC = () => {
                 />
               </div>
               {/* Text content container */}
-              <div className="p-4 text-center md:p-8 md:flex md:flex-col md:flex-grow">
+              <div className="p-1 text-center md:p-8 md:flex md:flex-col md:flex-grow">
                 {/* Title and description container */}
                 <div className="md:flex-grow">
                   {/* Treatment area title */}
