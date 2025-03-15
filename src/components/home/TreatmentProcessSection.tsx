@@ -61,17 +61,18 @@ const TreatmentProcessSection: React.FC<{
             <div className="flex justify-between">
               {processSteps.map((step, index) => (
                 <div key={index} className="flex flex-col items-center relative">
-                  {/* Step Number Circle */}
-                  <div 
-                    className={`w-14 h-14 rounded-full flex items-center justify-center text-lg font-medium z-10 mb-3 ${
+                  {/* Step Number Circle - Clickable with animation */}
+                  <button 
+                    className={`w-14 h-14 rounded-full flex items-center justify-center text-lg font-medium z-10 mb-3 cursor-pointer transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${
                       activeStep === index 
-                        ? 'bg-[#333333] text-white' 
-                        : 'bg-gray-200 text-gray-700'
+                        ? 'bg-[#333333] text-white shadow-lg' 
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                     }`}
                     onClick={() => setActiveStep(index)}
+                    aria-label={`View details for step ${step.number}: ${t(step.titleKey)}`}
                   >
                     {step.number}
-                  </div>
+                  </button>
                   
                   {/* Step Title */}
                   <div className="text-center">
