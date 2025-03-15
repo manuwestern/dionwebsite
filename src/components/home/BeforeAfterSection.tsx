@@ -269,7 +269,57 @@ const BeforeAfterSection: React.FC = () => {
         {/* Desktop Layout - Hidden on small screens, visible on medium and up */}
         <div className="hidden md:block relative w-full mx-auto">
           <div className="flex flex-row gap-8">
-            {/* Left Column - Before-After Slider */}
+            {/* Left Column - Case Information and Description */}
+            <div className="w-2/5">
+              <div className="bg-white rounded-3xl shadow-lg h-full p-8 flex flex-col">
+                <h3 className="text-2xl font-light mb-6 text-[#333333]">{t(currentCase.titleKey)}</h3>
+                
+                {/* Case Information Grid */}
+                <div className="grid grid-cols-2 gap-6 mb-8">
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.age')}</h4>
+                    <p className="text-xl font-light">{currentCase.age} {t('beforeAfterSection.caseInfo.years')}</p>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.technique')}</h4>
+                    <p className="text-xl font-light">{currentCase.technique}</p>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.grafts')}</h4>
+                    <p className="text-xl font-light">{currentCase.grafts}</p>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.result')}</h4>
+                    <p className="text-xl font-light">{currentCase.result}</p>
+                  </div>
+                </div>
+                
+                {/* Case Description */}
+                <div className="mb-8 flex-grow">
+                  <h4 className="text-gray-700 font-medium mb-2">Fallbeschreibung</h4>
+                  <p className="text-gray-600 font-light leading-relaxed">{t(currentCase.descriptionKey)}</p>
+                </div>
+                
+                {/* Pagination Dots */}
+                <div className="flex justify-center space-x-3 mt-auto">
+                  {beforeAfterCases.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        setActiveCase(index);
+                        setSliderPosition(50);
+                      }}
+                      className={`w-3 h-3 rounded-full ${
+                        index === activeCase ? 'bg-gray-700' : 'bg-gray-300'
+                      }`}
+                      aria-label={`Gehe zu Fall ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Before-After Slider */}
             <div className="w-3/5 relative">
               {/* Navigation Arrows */}
               <button 
@@ -352,56 +402,6 @@ const BeforeAfterSection: React.FC = () => {
                   <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center">
                     <div className="w-1 h-10 bg-gray-300 rounded-full"></div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Case Information and Description */}
-            <div className="w-2/5">
-              <div className="bg-white rounded-3xl shadow-lg h-full p-8 flex flex-col">
-                <h3 className="text-2xl font-light mb-6 text-[#333333]">{t(currentCase.titleKey)}</h3>
-                
-                {/* Case Information Grid */}
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="bg-gray-50 p-4 rounded-xl">
-                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.age')}</h4>
-                    <p className="text-xl font-light">{currentCase.age} {t('beforeAfterSection.caseInfo.years')}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-xl">
-                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.technique')}</h4>
-                    <p className="text-xl font-light">{currentCase.technique}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-xl">
-                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.grafts')}</h4>
-                    <p className="text-xl font-light">{currentCase.grafts}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-xl">
-                    <h4 className="text-gray-500 text-sm mb-1">{t('beforeAfterSection.caseInfo.result')}</h4>
-                    <p className="text-xl font-light">{currentCase.result}</p>
-                  </div>
-                </div>
-                
-                {/* Case Description */}
-                <div className="mb-8 flex-grow">
-                  <h4 className="text-gray-700 font-medium mb-2">Fallbeschreibung</h4>
-                  <p className="text-gray-600 font-light leading-relaxed">{t(currentCase.descriptionKey)}</p>
-                </div>
-                
-                {/* Pagination Dots */}
-                <div className="flex justify-center space-x-3 mt-auto">
-                  {beforeAfterCases.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => {
-                        setActiveCase(index);
-                        setSliderPosition(50);
-                      }}
-                      className={`w-3 h-3 rounded-full ${
-                        index === activeCase ? 'bg-gray-700' : 'bg-gray-300'
-                      }`}
-                      aria-label={`Gehe zu Fall ${index + 1}`}
-                    />
-                  ))}
                 </div>
               </div>
             </div>
