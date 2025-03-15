@@ -39,8 +39,8 @@ const TreatmentAreasSection: React.FC = () => {
   ];
 
   return (
-    // Main section container with subtle gray gradient background and animation
-    <div className="py-8 md:py-20 bg-gradient-to-b from-gray-50 to-white bg-size-200 animate-gradient-slow">
+    // Main section container with subtle diagonal gray gradient background and smooth animation
+    <div className="py-8 md:py-20 bg-gradient-to-tr from-gray-200 via-white to-gray-100 bg-size-300 animate-gradient-diagonal">
       {/* Content container with max width and horizontal padding */}
       <div className="w-full max-w-7xl mx-auto px-4">
         {/* Section header with title and subtitle */}
