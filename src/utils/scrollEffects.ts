@@ -107,7 +107,7 @@ function updateSectionBackgrounds(): void {
     
     if (section === mostVisibleSection) {
       // Make the most visible section slightly lighter
-      htmlSection.style.backgroundColor = lightenColor(originalBg, 0.1);
+      htmlSection.style.backgroundColor = lightenColor(originalBg, 0.08);
     } else if (data.isVisible) {
       // Sections that are visible but not the most visible
       const sectionIndex = sortedSections.indexOf(section);
@@ -115,10 +115,21 @@ function updateSectionBackgrounds(): void {
       
       if (sectionIndex < mostVisibleIndex) {
         // Sections above the most visible one - slightly darker
-        htmlSection.style.backgroundColor = darkenColor(originalBg, 0.1);
+        // The further away, the darker it gets
+        const distance = mostVisibleIndex - sectionIndex;
+        const darkenFactor = Math.min(0.15, 0.05 + (distance * 0.03));
+        htmlSection.style.backgroundColor = darkenColor(originalBg, darkenFactor);
       } else {
-        // Sections below the most visible one - normal
-        htmlSection.style.backgroundColor = originalBg;
+        // Sections below the most visible one - normal or slightly darker
+        const distance = sectionIndex - mostVisibleIndex;
+        if (distance <= 1) {
+          // Next section - normal
+          htmlSection.style.backgroundColor = originalBg;
+        } else {
+          // Sections further below - slightly darker
+          const darkenFactor = Math.min(0.1, 0.03 + ((distance - 1) * 0.02));
+          htmlSection.style.backgroundColor = darkenColor(originalBg, darkenFactor);
+        }
       }
     } else {
       // Sections that are not visible at all - reset to original
