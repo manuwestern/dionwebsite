@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Microscope, ClipboardList, Stethoscope, HeartPulse, Clock, Check } from 'lucide-react';
+import { FileText, Microscope, ClipboardList, Stethoscope, HeartPulse, Clock, Check, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface ProcessStep {
@@ -95,11 +95,12 @@ const TreatmentProcessSection: React.FC<{
               {/* Step Button */}
               <button
                 onClick={() => setActiveStep(index)}
-                className={`w-full flex items-center gap-4 p-4 rounded-t-lg transition-all duration-300 ${
+                className={`w-full flex items-center gap-4 p-4 rounded-lg transition-all duration-300 ${
                   activeStep === index
-                    ? 'bg-[#333333] text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-600'
+                    ? 'bg-[#333333] text-white shadow-lg rounded-b-none'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
+                aria-expanded={activeStep === index}
               >
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                   activeStep === index ? 'bg-white text-[#333333]' : 'bg-gray-200'
@@ -112,6 +113,10 @@ const TreatmentProcessSection: React.FC<{
                     {t(step.durationKey)}
                   </div>
                 </div>
+                <ChevronDown 
+                  className={`w-5 h-5 transition-transform duration-300 ${activeStep === index ? 'rotate-180' : ''}`} 
+                  aria-hidden="true"
+                />
               </button>
               
               {/* Step Content - Only visible when active */}
