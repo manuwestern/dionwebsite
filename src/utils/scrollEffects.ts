@@ -3,14 +3,14 @@
  * 
  * This utility adds scroll-based background transitions to sections.
  * When scrolling into a new section, the previous section becomes slightly darker,
- * and the new section becomes slightly lighter.
+ * and the new section becomes white.
  */
 
 // Options for the Intersection Observer
 const observerOptions: IntersectionObserverInit = {
   root: null, // Use the viewport as the root
   rootMargin: '0px',
-  threshold: [0.1, 0.5, 0.9] // Trigger at different visibility thresholds
+  threshold: [0.1, 0.3, 0.5, 0.7, 0.9] // More thresholds for smoother transitions
 };
 
 // Track the currently visible sections
@@ -26,9 +26,16 @@ let visibleSections: Map<Element, SectionVisibility> = new Map();
  * @param {string} sectionSelector - CSS selector for the sections to observe
  */
 export function initScrollEffects(sectionSelector = 'section, [data-section]'): void {
-  // Wait for DOM to be fully loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll(sectionSelector);
+  console.log('Initializing scroll effects with selector:', sectionSelector);
+  
+  // Function to initialize the effects
+  const initialize = () => {
+    // Use a more comprehensive selector but exclude navigation and before/after labels
+    const sections = document.querySelectorAll(
+      sectionSelector + 
+      ', .py-8, .py-16, .py-20, .py-24, .BeforeAfterSection, div[class*="py-"]'
+    );
+    console.log('Found sections:', sections.length);
     
     if (sections.length === 0) {
       console.warn('No sections found with selector:', sectionSelector);
@@ -38,11 +45,80 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     // Set initial styles for all sections
     sections.forEach(section => {
       const htmlSection = section as HTMLElement;
+      
+      // Skip navigation elements and before/after labels
+      if (
+        htmlSection.classList.contains('navigation') || 
+        htmlSection.classList.contains('nav') || 
+        htmlSection.id === 'navigation' ||
+        htmlSection.classList.contains('before-label') ||
+        htmlSection.classList.contains('after-label') ||
+        htmlSection.closest('.navigation') ||
+        htmlSection.closest('nav')
+      ) {
+        return;
+      }
+      
       // Store the original background color or set a default
       htmlSection.dataset.originalBg = getComputedStyle(section).backgroundColor || 'rgba(255, 255, 255, 1)';
       
-      // Add transition for smooth color changes
-      htmlSection.style.transition = 'background-color 0.5s ease-in-out';
+      // Store if the section has a background image
+      const bgImage = getComputedStyle(section).backgroundImage;
+      if (bgImage && bgImage !== 'none') {
+        htmlSection.dataset.hasBgImage = 'true';
+        htmlSection.dataset.originalBgImage = bgImage;
+      }
+      
+      // Add transition for smoother color changes
+      htmlSection.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      
+      // Set all sections to the same initial background color - a very light gray
+      htmlSection.style.backgroundColor = 'rgb(248, 248, 248)';
+      
+      // Create an overlay div for darkening background images if needed
+      if (bgImage && bgImage !== 'none') {
+        const overlay = document.createElement('div');
+        overlay.className = 'bg-overlay';
+        overlay.style.position = 'absolute';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.05)'; // Very light overlay (5% opacity)
+        overlay.style.opacity = '0';
+        overlay.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        overlay.style.pointerEvents = 'none';
+        overlay.style.zIndex = '1';
+        
+        // Make sure the section has position relative for the overlay to work
+        if (getComputedStyle(htmlSection).position === 'static') {
+          htmlSection.style.position = 'relative';
+        }
+        
+        htmlSection.appendChild(overlay);
+        htmlSection.dataset.hasOverlay = 'true';
+      }
+      
+      // Special handling for BeforeAfterSection
+      if (
+        htmlSection.classList.contains('BeforeAfterSection') || 
+        htmlSection.querySelector('.before-after-slider')
+      ) {
+        // Find the container that should receive the background color change
+        const container = htmlSection.querySelector('.container') || htmlSection;
+        if (container) {
+          (container as HTMLElement).style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+          (container as HTMLElement).style.backgroundColor = 'rgb(248, 248, 248)';
+          (container as HTMLElement).dataset.isBeforeAfterContainer = 'true';
+        }
+        
+        // Make sure the before/after labels are not affected
+        const labels = htmlSection.querySelectorAll('.before-label, .after-label');
+        labels.forEach(label => {
+          (label as HTMLElement).style.transition = 'none';
+          (label as HTMLElement).dataset.excludeFromEffect = 'true';
+        });
+      }
     });
     
     // Create an observer instance
@@ -50,6 +126,22 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     
     // Start observing each section
     sections.forEach(section => {
+      const htmlSection = section as HTMLElement;
+      
+      // Skip navigation elements and before/after labels
+      if (
+        htmlSection.classList.contains('navigation') || 
+        htmlSection.classList.contains('nav') || 
+        htmlSection.id === 'navigation' ||
+        htmlSection.classList.contains('before-label') ||
+        htmlSection.classList.contains('after-label') ||
+        htmlSection.closest('.navigation') ||
+        htmlSection.closest('nav') ||
+        htmlSection.dataset.excludeFromEffect === 'true'
+      ) {
+        return;
+      }
+      
       observer.observe(section);
     });
     
@@ -57,7 +149,15 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     window.addEventListener('scroll', () => {
       requestAnimationFrame(updateSectionBackgrounds);
     }, { passive: true });
-  });
+  };
+  
+  // Call initialize function
+  initialize();
+  
+  // Also wait for DOM content to be loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize);
+  }
 }
 
 /**
@@ -97,45 +197,62 @@ function updateSectionBackgrounds(): void {
     }
   });
   
-  // Update backgrounds based on visibility and position relative to most visible section
+  // First, set all sections to a slightly darker background (but not too dark)
   sortedSections.forEach(section => {
-    const data = visibleSections.get(section);
-    if (!data) return;
-    
     const htmlSection = section as HTMLElement;
-    const originalBg = htmlSection.dataset.originalBg || 'rgba(255, 255, 255, 1)';
     
-    if (section === mostVisibleSection) {
-      // Make the most visible section slightly lighter
-      htmlSection.style.backgroundColor = lightenColor(originalBg, 0.08);
-    } else if (data.isVisible) {
-      // Sections that are visible but not the most visible
-      const sectionIndex = sortedSections.indexOf(section);
-      const mostVisibleIndex = mostVisibleSection ? sortedSections.indexOf(mostVisibleSection) : -1;
-      
-      if (sectionIndex < mostVisibleIndex) {
-        // Sections above the most visible one - slightly darker
-        // The further away, the darker it gets
-        const distance = mostVisibleIndex - sectionIndex;
-        const darkenFactor = Math.min(0.15, 0.05 + (distance * 0.03));
-        htmlSection.style.backgroundColor = darkenColor(originalBg, darkenFactor);
-      } else {
-        // Sections below the most visible one - normal or slightly darker
-        const distance = sectionIndex - mostVisibleIndex;
-        if (distance <= 1) {
-          // Next section - normal
-          htmlSection.style.backgroundColor = originalBg;
-        } else {
-          // Sections further below - slightly darker
-          const darkenFactor = Math.min(0.1, 0.03 + ((distance - 1) * 0.02));
-          htmlSection.style.backgroundColor = darkenColor(originalBg, darkenFactor);
-        }
+    // Skip elements that should be excluded
+    if (htmlSection.dataset.excludeFromEffect === 'true') {
+      return;
+    }
+    
+    // Make inactive sections slightly darker - using a lighter gray
+    htmlSection.style.backgroundColor = 'rgb(245, 245, 245)';
+    
+    // If the section has an overlay, make it visible
+    if (htmlSection.dataset.hasOverlay === 'true') {
+      const overlay = htmlSection.querySelector('.bg-overlay') as HTMLElement;
+      if (overlay) {
+        overlay.style.opacity = '1';
       }
-    } else {
-      // Sections that are not visible at all - reset to original
-      htmlSection.style.backgroundColor = originalBg;
+    }
+    
+    // Special handling for BeforeAfterSection
+    if (htmlSection.classList.contains('BeforeAfterSection') || htmlSection.querySelector('.before-after-slider')) {
+      const container = htmlSection.querySelector('.container') || htmlSection;
+      if (container && (container as HTMLElement).dataset.isBeforeAfterContainer === 'true') {
+        (container as HTMLElement).style.backgroundColor = 'rgb(245, 245, 245)';
+      }
     }
   });
+  
+  // Then, only set the most visible section to white
+  if (mostVisibleSection) {
+    const htmlSection = mostVisibleSection as HTMLElement;
+    
+    // Skip elements that should be excluded
+    if (htmlSection.dataset.excludeFromEffect === 'true') {
+      return;
+    }
+    
+    htmlSection.style.backgroundColor = 'rgb(255, 255, 255)';
+    
+    // If the section has an overlay, hide it
+    if (htmlSection.dataset.hasOverlay === 'true') {
+      const overlay = htmlSection.querySelector('.bg-overlay') as HTMLElement;
+      if (overlay) {
+        overlay.style.opacity = '0';
+      }
+    }
+    
+    // Special handling for BeforeAfterSection
+    if (htmlSection.classList.contains('BeforeAfterSection') || htmlSection.querySelector('.before-after-slider')) {
+      const container = htmlSection.querySelector('.container') || htmlSection;
+      if (container && (container as HTMLElement).dataset.isBeforeAfterContainer === 'true') {
+        (container as HTMLElement).style.backgroundColor = 'rgb(255, 255, 255)';
+      }
+    }
+  }
 }
 
 interface RGBA {
