@@ -84,8 +84,8 @@ const TreatmentProcessSection: React.FC<{
           </div>
         </div>
 
-        {/* Mobile Timeline */}
-        <div className="md:hidden space-y-4 mb-8">
+        {/* Mobile Timeline with integrated content */}
+        <div className="md:hidden space-y-4">
           {processSteps.map((step, index) => (
             <div 
               key={index}
@@ -95,7 +95,7 @@ const TreatmentProcessSection: React.FC<{
               {/* Step Button */}
               <button
                 onClick={() => setActiveStep(index)}
-                className={`w-full flex items-center gap-4 p-4 rounded-lg transition-all duration-300 ${
+                className={`w-full flex items-center gap-4 p-4 rounded-t-lg transition-all duration-300 ${
                   activeStep === index
                     ? 'bg-[#333333] text-white shadow-lg'
                     : 'bg-gray-100 text-gray-600'
@@ -113,12 +113,36 @@ const TreatmentProcessSection: React.FC<{
                   </div>
                 </div>
               </button>
+              
+              {/* Step Content - Only visible when active */}
+              {activeStep === index && (
+                <div className="bg-white rounded-b-lg shadow-lg overflow-hidden mb-4">
+                  <div className="p-6">
+                    <p className="text-gray-700 font-light mb-6">
+                      {t(step.descriptionKey)}
+                    </p>
+                    
+                    {step.featuresKey && (
+                      <div className="space-y-3">
+                        {(t(step.featuresKey, { returnObjects: true }) as string[]).map((feature, i) => (
+                          <div key={i} className="flex items-start">
+                            <div className="mt-1 mr-2 flex-shrink-0">
+                              <Check className="h-4 w-4 text-[#333333]" />
+                            </div>
+                            <span className="text-gray-700 font-light">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
 
-        {/* Active Step Card */}
-        <div className="w-full mx-auto">
+        {/* Desktop Active Step Card */}
+        <div className="hidden md:block w-full mx-auto">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="p-6 md:p-8">
               <div className="flex items-center gap-4 mb-6">
