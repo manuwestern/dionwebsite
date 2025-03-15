@@ -1,5 +1,5 @@
 import React from 'react';
-import { Microscope, HeartPulse, Sparkles, Stethoscope } from 'lucide-react';
+import { Microscope, HeartPulse, Sparkles, Stethoscope, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HolisticConceptSection: React.FC = () => {
@@ -7,10 +7,10 @@ const HolisticConceptSection: React.FC = () => {
 
   // Icons for each concept
   const conceptIcons = [
-    <Microscope className="w-8 h-8 text-gray-700" />,
-    <HeartPulse className="w-8 h-8 text-gray-700" />,
-    <Sparkles className="w-8 h-8 text-gray-700" />,
-    <Stethoscope className="w-8 h-8 text-gray-700" />
+    <Microscope className="w-10 h-10 text-[#333333]" />,
+    <HeartPulse className="w-10 h-10 text-[#333333]" />,
+    <Sparkles className="w-10 h-10 text-[#333333]" />,
+    <Stethoscope className="w-10 h-10 text-[#333333]" />
   ];
 
   // Create concept cards from translation keys
@@ -25,43 +25,51 @@ const HolisticConceptSection: React.FC = () => {
   );
 
   return (
-    <div className="bg-gray-100 w-full py-12 md:py-24">
+    <div className="bg-gradient-to-b from-gray-50 to-white w-full py-16 md:py-28">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('holisticConceptSection.title')}</h2>
-          <p className="text-base text-gray-600 font-light md:text-xl">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-light mb-4 md:text-5xl md:mb-6">{t('holisticConceptSection.title')}</h2>
+          <div className="w-24 h-1 bg-[#333333] mx-auto mb-6"></div>
+          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto">
             {t('holisticConceptSection.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {conceptCards.map((card, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center hover:transform hover:scale-105 transition-transform duration-300 flex flex-col h-full">
-              {/* Top section with icon and title */}
-              <div>
-                <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-full flex items-center justify-center">
-                  {card.icon}
-                </div>
-                <h3 className="text-xl font-light mb-3">{t(card.titleKey)}</h3>
-              </div>
-              
-              {/* Middle section with description - flex-grow to push footer to bottom */}
-              <div className="flex-grow flex flex-col">
-                <p className="text-gray-600 font-light mb-4">
-                  {t(card.descriptionKey)}
-                </p>
-              </div>
-              
-              {/* Footer section with divider and quote - fixed at bottom */}
-              <div className="mt-auto pt-4">
-                <div className="w-12 h-0.5 bg-gray-200 mx-auto mb-4"></div>
-                <p className="text-sm text-gray-500 font-light italic h-12 flex items-center justify-center">
-                  "{t(card.quoteKey)}"
-                </p>
-              </div>
+        {/* Main Content - Visual + Text */}
+        <div className="flex flex-col lg:flex-row items-center mb-16 gap-8 lg:gap-16">
+          {/* Left side - Simple image without shadow or border */}
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="w-full max-w-md overflow-hidden">
+              <img 
+                src="/images/Dion_Model_Home.webp" 
+                alt="Dion Hair Clinic - Ganzheitliches Konzept" 
+                className="w-full h-auto object-cover"
+              />
             </div>
-          ))}
+          </div>
+          
+          {/* Right side - Text description */}
+          <div className="w-full lg:w-1/2">
+            <p className="text-lg text-gray-700 font-light mb-8 leading-relaxed">
+              {t('holisticConceptSection.description')}
+            </p>
+            
+            <div className="space-y-4">
+              {conceptCards.map((card, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="w-6 h-6 text-[#333333] mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-lg font-medium mb-1">{t(card.titleKey)}</h4>
+                    <p className="text-gray-600 font-light">{t(card.descriptionKey)}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+        
+        {/* No cards at the bottom as requested */}
       </div>
     </div>
   );
