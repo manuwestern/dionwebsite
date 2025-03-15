@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FileText, Microscope, ClipboardList, Stethoscope, HeartPulse, Clock, Check, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -18,6 +18,8 @@ const TreatmentProcessSection: React.FC<{
   const { t } = useTranslation('home');
   const [activeStep, setActiveStep] = useState(0);
   const [scrollY, setScrollY] = useState(0);
+  const [cardHeight, setCardHeight] = useState<number | null>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   // Handle scroll for parallax effect
   useEffect(() => {
@@ -28,6 +30,16 @@ const TreatmentProcessSection: React.FC<{
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Measure the height of the first card when it's active
+  useEffect(() => {
+    if (activeStep === 0 && cardRef.current) {
+      const height = cardRef.current.offsetHeight;
+      setCardHeight(height);
+    }
+  }, [activeStep]);
+
+  // No need for button position tracking anymore
 
   // Icons for each step
   const stepIcons = [
@@ -57,7 +69,7 @@ const TreatmentProcessSection: React.FC<{
   };
 
   return (
-    <div className="relative py-16 md:py-24 overflow-hidden">
+    <div className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
       {/* Background image - fixed position without parallax for better compatibility */}
       <div 
         className="absolute inset-0 z-0"
@@ -71,13 +83,10 @@ const TreatmentProcessSection: React.FC<{
         }}
       ></div>
       
-      {/* Overlay to ensure content readability */}
-      <div className="absolute inset-0 bg-white bg-opacity-70 z-1"></div>
-      
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('treatmentProcessSection.title')}</h2>
-          <p className="text-base text-gray-600 font-light md:text-xl">
+          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mb-2">
             {t('treatmentProcessSection.subtitle')}
           </p>
         </div>
@@ -191,9 +200,13 @@ const TreatmentProcessSection: React.FC<{
         </div>
 
         {/* Desktop Active Step Card */}
-        <div className="hidden md:block w-full max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="p-6 md:p-8">
+        <div className="hidden md:block w-full mx-auto">
+          <div 
+            ref={activeStep === 0 ? cardRef : undefined}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden"
+            style={cardHeight ? { minHeight: `${cardHeight}px` } : {}}
+          >
+            <div className="p-6 md:p-8 flex flex-col h-full relative" style={{ minHeight: '500px' }}>
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 rounded-full bg-gray-100">
                   <div className="w-12 h-12 rounded-full bg-[#333333] text-white flex items-center justify-center">
@@ -206,26 +219,28 @@ const TreatmentProcessSection: React.FC<{
                 </div>
               </div>
               
-              <p className="text-gray-700 font-light mb-6 leading-relaxed">
-                {t(processSteps[activeStep].descriptionKey)}
-              </p>
-              
-              {processSteps[activeStep].featuresKey && (
-                <div className="space-y-3 bg-gray-50 p-4 rounded-xl">
-                  <h4 className="font-medium text-gray-700 mb-2">Wichtige Punkte:</h4>
-                  {(t(processSteps[activeStep].featuresKey!, { returnObjects: true }) as string[]).map((feature, i) => (
-                    <div key={i} className="flex items-start">
-                      <div className="mt-1 mr-2 flex-shrink-0">
-                        <Check className="h-4 w-4 text-[#333333]" />
+              <div className="flex-grow">
+                <p className="text-gray-700 font-light mb-6 leading-relaxed">
+                  {t(processSteps[activeStep].descriptionKey)}
+                </p>
+                
+                {processSteps[activeStep].featuresKey && (
+                  <div className="space-y-3 bg-gray-50 p-4 rounded-xl">
+                    <h4 className="font-medium text-gray-700 mb-2">Wichtige Punkte:</h4>
+                    {(t(processSteps[activeStep].featuresKey!, { returnObjects: true }) as string[]).map((feature, i) => (
+                      <div key={i} className="flex items-start">
+                        <div className="mt-1 mr-2 flex-shrink-0">
+                          <Check className="h-4 w-4 text-[#333333]" />
+                        </div>
+                        <span className="text-gray-700 font-light">{feature}</span>
                       </div>
-                      <span className="text-gray-700 font-light">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Navigation Buttons */}
-              <div className="flex justify-between mt-8">
+              <div className="flex justify-between absolute bottom-8 left-8 right-8" style={{ zIndex: 10 }}>
                 <button 
                   onClick={() => handleStepChange(Math.max(0, activeStep - 1))}
                   disabled={activeStep === 0}
