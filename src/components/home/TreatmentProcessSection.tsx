@@ -18,7 +18,6 @@ const TreatmentProcessSection: React.FC<{
   const { t } = useTranslation('home');
   const [activeStep, setActiveStep] = useState(0);
   const [scrollY, setScrollY] = useState(0);
-  const [animating, setAnimating] = useState(false);
 
   // Handle scroll for parallax effect
   useEffect(() => {
@@ -193,11 +192,7 @@ const TreatmentProcessSection: React.FC<{
 
         {/* Desktop Active Step Card */}
         <div className="hidden md:block w-full max-w-4xl mx-auto">
-          <div 
-            className={`bg-white rounded-2xl shadow-lg overflow-hidden transition-opacity duration-300 ${
-              animating ? 'opacity-0' : 'opacity-100'
-            }`}
-          >
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="p-6 md:p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 rounded-full bg-gray-100">
