@@ -177,26 +177,27 @@ const BeforeAfterSection: React.FC = () => {
               </div>
               
               {/* Before Image (Full Width) */}
-              <div className="absolute inset-0">
+              <div className="absolute inset-0 select-none">
                 <img 
                   src={currentCase.beforeImage} 
                   alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover pointer-events-none"
                   width="1000"
                   height="667"
                   loading="lazy"
+                  draggable="false"
                 />
               </div>
               
               {/* After Image (Partial Width based on slider) */}
               <div 
-                className="absolute inset-0 overflow-hidden"
+                className="absolute inset-0 overflow-hidden select-none"
                 style={{ width: `${sliderPosition}%` }}
               >
                 <img 
                   src={currentCase.afterImage} 
                   alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover pointer-events-none"
                   style={{ 
                     width: `${100 / (sliderPosition / 100)}%`,
                     maxWidth: 'none'
@@ -204,6 +205,7 @@ const BeforeAfterSection: React.FC = () => {
                   width="1000"
                   height="667"
                   loading="lazy"
+                  draggable="false"
                 />
               </div>
               
@@ -308,26 +310,27 @@ const BeforeAfterSection: React.FC = () => {
                 </div>
                 
                 {/* Before Image (Full Width) */}
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 select-none">
                   <img 
                     src={currentCase.beforeImage} 
                     alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover pointer-events-none"
                     width="1000"
                     height="667"
                     loading="lazy"
+                    draggable="false"
                   />
                 </div>
                 
                 {/* After Image (Partial Width based on slider) */}
                 <div 
-                  className="absolute inset-0 overflow-hidden"
+                  className="absolute inset-0 overflow-hidden select-none"
                   style={{ width: `${sliderPosition}%` }}
                 >
                   <img 
                     src={currentCase.afterImage} 
                     alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover pointer-events-none"
                     style={{ 
                       width: `${100 / (sliderPosition / 100)}%`,
                       maxWidth: 'none'
@@ -335,6 +338,7 @@ const BeforeAfterSection: React.FC = () => {
                     width="1000"
                     height="667"
                     loading="lazy"
+                    draggable="false"
                   />
                 </div>
                 
