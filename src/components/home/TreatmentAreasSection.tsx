@@ -64,13 +64,13 @@ const TreatmentAreasSection: React.FC = () => {
           {treatmentAreas.map((area) => (
             // Treatment area card - white card with rounded corners and shadow
             <div key={area.id} className="bg-white rounded-3xl shadow-lg overflow-hidden w-[100%] max-w-[400px]">
-              {/* Image container - square aspect ratio */}
-              <div className="overflow-hidden">
+              {/* Image container with padding and rounded corners */}
+              <div className="p-3">
                 {/* Treatment area image */}
                 <img
                   src={area.imageUrl}
                   alt={area.altText}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-xl"
                 />
               </div>
               {/* Text content container */}
