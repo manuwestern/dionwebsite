@@ -54,9 +54,7 @@ const TreatmentProcessSection: React.FC<{
   );
 
   const handleStepChange = (index: number) => {
-    setAnimating(true);
     setActiveStep(index);
-    setTimeout(() => setAnimating(false), 300);
   };
 
   return (
