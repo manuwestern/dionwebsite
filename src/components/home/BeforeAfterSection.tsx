@@ -1,6 +1,7 @@
- import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import ReactCompareImage from 'react-compare-image';
 
 interface BeforeAfterCase {
   id: number;
@@ -17,10 +18,6 @@ interface BeforeAfterCase {
 const BeforeAfterSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
   const [activeCase, setActiveCase] = useState(0);
-  const [sliderPosition, setSliderPosition] = useState(50);
-  const [isDragging, setIsDragging] = useState(false);
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   // Images for each case
   const caseImages = [
@@ -54,72 +51,12 @@ const BeforeAfterSection: React.FC = () => {
     })
   );
 
-  const handleSliderMove = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
-    if (!containerRef.current || !isDragging) return;
-    
-    let clientX: number;
-    
-    if ('touches' in e) {
-      // Touch event
-      clientX = e.touches[0].clientX;
-    } else {
-      // Mouse event
-      clientX = e.clientX;
-    }
-    
-    const rect = containerRef.current.getBoundingClientRect();
-    const position = ((clientX - rect.left) / rect.width) * 100;
-    
-    // Clamp position between 0 and 100
-    const clampedPosition = Math.max(0, Math.min(100, position));
-    setSliderPosition(clampedPosition);
-  };
-
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    setIsDragging(true);
-    handleSliderMove(e);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setIsDragging(true);
-    handleSliderMove(e);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
-
-  // Add global event listeners for mouse up and touch end
-  useEffect(() => {
-    const handleGlobalMouseUp = () => {
-      setIsDragging(false);
-    };
-
-    const handleGlobalTouchEnd = () => {
-      setIsDragging(false);
-    };
-
-    document.addEventListener('mouseup', handleGlobalMouseUp);
-    document.addEventListener('touchend', handleGlobalTouchEnd);
-
-    return () => {
-      document.removeEventListener('mouseup', handleGlobalMouseUp);
-      document.removeEventListener('touchend', handleGlobalTouchEnd);
-    };
-  }, []);
-
   const handlePrevCase = () => {
     setActiveCase((prev) => (prev === 0 ? beforeAfterCases.length - 1 : prev - 1));
-    setSliderPosition(50); // Reset slider position
   };
 
   const handleNextCase = () => {
     setActiveCase((prev) => (prev === beforeAfterCases.length - 1 ? 0 : prev + 1));
-    setSliderPosition(50); // Reset slider position
   };
 
   const currentCase = beforeAfterCases[activeCase];
@@ -155,71 +92,14 @@ const BeforeAfterSection: React.FC = () => {
               <ChevronRight className="w-5 h-5 text-white" />
             </button>
 
-            {/* Before-After Slider */}
-            <div 
-              ref={containerRef}
-              className="relative h-[400px] rounded-xl overflow-hidden shadow-xl mb-8 cursor-ew-resize"
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleSliderMove}
-              onMouseUp={handleMouseUp}
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleSliderMove}
-              onTouchEnd={handleTouchEnd}
-            >
-              {/* Before Label */}
-              <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-                {t('beforeAfterSection.navigation.before')}
-              </div>
-              
-              {/* After Label */}
-              <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-                {t('beforeAfterSection.navigation.after')}
-              </div>
-              
-              {/* Before Image (Full Width) */}
-              <div className="absolute inset-0 select-none">
-                <img 
-                  src={currentCase.beforeImage} 
-                  alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
-                  className="w-full h-full object-cover pointer-events-none"
-                  width="1000"
-                  height="667"
-                  loading="lazy"
-                  draggable="false"
-                />
-              </div>
-              
-              {/* After Image (Partial Width based on slider) */}
-              <div 
-                className="absolute inset-0 overflow-hidden select-none"
-                style={{ width: `${sliderPosition}%` }}
-              >
-                <img 
-                  src={currentCase.afterImage} 
-                  alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
-                  className="w-full h-full object-cover pointer-events-none"
-                  style={{ 
-                    width: `${100 / (sliderPosition / 100)}%`,
-                    maxWidth: 'none'
-                  }}
-                  width="1000"
-                  height="667"
-                  loading="lazy"
-                  draggable="false"
-                />
-              </div>
-              
-              {/* Slider Control */}
-              <div 
-                ref={sliderRef}
-                className="absolute inset-y-0 z-10"
-                style={{ left: `${sliderPosition}%` }}
-              >
-                <div className="absolute inset-y-0 -left-px w-0.5 bg-white"></div>
-                <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center">
-                  <div className="w-1 h-10 bg-gray-300 rounded-full"></div>
-                </div>
-              </div>
+            {/* Before-After Slider using ReactCompareImage */}
+            <div className="h-[400px] rounded-xl overflow-hidden shadow-xl mb-8">
+              <ReactCompareImage
+                leftImage={currentCase.beforeImage}
+                rightImage={currentCase.afterImage}
+                sliderLineWidth={2}
+                sliderLineColor="white"
+              />
             </div>
           </div>
 
@@ -253,10 +133,7 @@ const BeforeAfterSection: React.FC = () => {
             {beforeAfterCases.map((_, index) => (
               <button
                 key={index}
-                onClick={() => {
-                  setActiveCase(index);
-                  setSliderPosition(50);
-                }}
+                onClick={() => setActiveCase(index)}
                 className={`w-3 h-3 rounded-full ${
                   index === activeCase ? 'bg-gray-700' : 'bg-gray-300'
                 }`}
@@ -305,10 +182,7 @@ const BeforeAfterSection: React.FC = () => {
                   {beforeAfterCases.map((_, index) => (
                     <button
                       key={index}
-                      onClick={() => {
-                        setActiveCase(index);
-                        setSliderPosition(50);
-                      }}
+                      onClick={() => setActiveCase(index)}
                       className={`w-3 h-3 rounded-full ${
                         index === activeCase ? 'bg-gray-700' : 'bg-gray-300'
                       }`}
@@ -338,71 +212,14 @@ const BeforeAfterSection: React.FC = () => {
                 <ChevronRight className="w-6 h-6 text-gray-700" />
               </button>
 
-              {/* Before-After Slider */}
-              <div 
-                ref={containerRef}
-                className="relative h-[500px] rounded-xl overflow-hidden shadow-xl cursor-ew-resize"
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleSliderMove}
-                onMouseUp={handleMouseUp}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleSliderMove}
-                onTouchEnd={handleTouchEnd}
-              >
-                {/* Before Label */}
-                <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-                  {t('beforeAfterSection.navigation.before')}
-                </div>
-                
-                {/* After Label */}
-                <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
-                  {t('beforeAfterSection.navigation.after')}
-                </div>
-                
-                {/* Before Image (Full Width) */}
-                <div className="absolute inset-0 select-none">
-                  <img 
-                    src={currentCase.beforeImage} 
-                    alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
-                    className="w-full h-full object-cover pointer-events-none"
-                    width="1000"
-                    height="667"
-                    loading="lazy"
-                    draggable="false"
-                  />
-                </div>
-                
-                {/* After Image (Partial Width based on slider) */}
-                <div 
-                  className="absolute inset-0 overflow-hidden select-none"
-                  style={{ width: `${sliderPosition}%` }}
-                >
-                  <img 
-                    src={currentCase.afterImage} 
-                    alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
-                    className="w-full h-full object-cover pointer-events-none"
-                    style={{ 
-                      width: `${100 / (sliderPosition / 100)}%`,
-                      maxWidth: 'none'
-                    }}
-                    width="1000"
-                    height="667"
-                    loading="lazy"
-                    draggable="false"
-                  />
-                </div>
-                
-                {/* Slider Control */}
-                <div 
-                  ref={sliderRef}
-                  className="absolute inset-y-0 z-10"
-                  style={{ left: `${sliderPosition}%` }}
-                >
-                  <div className="absolute inset-y-0 -left-px w-0.5 bg-white"></div>
-                  <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center">
-                    <div className="w-1 h-10 bg-gray-300 rounded-full"></div>
-                  </div>
-                </div>
+              {/* Before-After Slider using ReactCompareImage */}
+              <div className="h-[500px] rounded-xl overflow-hidden shadow-xl">
+                <ReactCompareImage
+                  leftImage={currentCase.beforeImage}
+                  rightImage={currentCase.afterImage}
+                  sliderLineWidth={2}
+                  sliderLineColor="white"
+                />
               </div>
             </div>
           </div>
