@@ -33,7 +33,8 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     // Use a more comprehensive selector but exclude navigation and before/after labels
     const sections = document.querySelectorAll(
       sectionSelector + 
-      ', .py-8, .py-16, .py-20, .py-24, .BeforeAfterSection, div[class*="py-"]'
+      ', .py-8, .py-16, .py-20, .py-24, div[class*="py-"], ' +
+      'div[class*="bg-gradient-to-b"]' // Specifically target gradient backgrounds like in BeforeAfterSection
     );
     console.log('Found sections:', sections.length);
     
@@ -46,13 +47,11 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     sections.forEach(section => {
       const htmlSection = section as HTMLElement;
       
-      // Skip navigation elements and before/after labels
+      // Skip navigation elements
       if (
         htmlSection.classList.contains('navigation') || 
         htmlSection.classList.contains('nav') || 
         htmlSection.id === 'navigation' ||
-        htmlSection.classList.contains('before-label') ||
-        htmlSection.classList.contains('after-label') ||
         htmlSection.closest('.navigation') ||
         htmlSection.closest('nav')
       ) {
@@ -101,22 +100,49 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
       
       // Special handling for BeforeAfterSection
       if (
-        htmlSection.classList.contains('BeforeAfterSection') || 
+        htmlSection.classList.contains('bg-gradient-to-b') || 
         htmlSection.querySelector('.before-after-slider')
       ) {
-        // Find the container that should receive the background color change
-        const container = htmlSection.querySelector('.container') || htmlSection;
-        if (container) {
-          (container as HTMLElement).style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-          (container as HTMLElement).style.backgroundColor = 'rgb(248, 248, 248)';
-          (container as HTMLElement).dataset.isBeforeAfterContainer = 'true';
-        }
+        console.log('Found BeforeAfterSection:', htmlSection);
+        htmlSection.dataset.isBeforeAfterSection = 'true';
         
-        // Make sure the before/after labels are not affected
-        const labels = htmlSection.querySelectorAll('.before-label, .after-label');
-        labels.forEach(label => {
-          (label as HTMLElement).style.transition = 'none';
-          (label as HTMLElement).dataset.excludeFromEffect = 'true';
+        // Find and exclude all before/after labels
+        // These are typically positioned absolutely with classes like "absolute top-4 left-4"
+        const possibleLabels = htmlSection.querySelectorAll('.absolute');
+        possibleLabels.forEach(label => {
+          const labelElement = label as HTMLElement;
+          const computedStyle = getComputedStyle(labelElement);
+          
+          // Check if this is likely a label (positioned at the top of the container)
+          if (
+            computedStyle.position === 'absolute' && 
+            (computedStyle.top === '4px' || computedStyle.top === '16px' || computedStyle.top.startsWith('1'))
+          ) {
+            console.log('Excluding label from effect:', labelElement);
+            labelElement.dataset.excludeFromEffect = 'true';
+            
+            // Make sure the background color of the label is preserved
+            if (labelElement.style.backgroundColor.includes('333333') || 
+                computedStyle.backgroundColor.includes('51, 51, 51')) {
+              labelElement.style.backgroundColor = '#333333';
+              labelElement.style.color = 'white';
+            }
+          }
+        });
+        
+        // Also find any elements with text content that includes "before" or "after"
+        const allElements = htmlSection.querySelectorAll('*');
+        allElements.forEach(el => {
+          const text = el.textContent?.toLowerCase() || '';
+          if (
+            text.includes('before') || 
+            text.includes('after') || 
+            text.includes('vorher') || 
+            text.includes('nachher')
+          ) {
+            console.log('Excluding before/after text element from effect:', el);
+            (el as HTMLElement).dataset.excludeFromEffect = 'true';
+          }
         });
       }
     });
@@ -128,13 +154,11 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     sections.forEach(section => {
       const htmlSection = section as HTMLElement;
       
-      // Skip navigation elements and before/after labels
+      // Skip navigation elements and elements that should be excluded
       if (
         htmlSection.classList.contains('navigation') || 
         htmlSection.classList.contains('nav') || 
         htmlSection.id === 'navigation' ||
-        htmlSection.classList.contains('before-label') ||
-        htmlSection.classList.contains('after-label') ||
         htmlSection.closest('.navigation') ||
         htmlSection.closest('nav') ||
         htmlSection.dataset.excludeFromEffect === 'true'
@@ -157,6 +181,10 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
   // Also wait for DOM content to be loaded
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initialize);
+  } else {
+    // If the document is already loaded, wait a bit and try again
+    // This helps with dynamic content that might be loaded after the initial page load
+    setTimeout(initialize, 1000);
   }
 }
 
@@ -218,11 +246,21 @@ function updateSectionBackgrounds(): void {
     }
     
     // Special handling for BeforeAfterSection
-    if (htmlSection.classList.contains('BeforeAfterSection') || htmlSection.querySelector('.before-after-slider')) {
-      const container = htmlSection.querySelector('.container') || htmlSection;
-      if (container && (container as HTMLElement).dataset.isBeforeAfterContainer === 'true') {
-        (container as HTMLElement).style.backgroundColor = 'rgb(245, 245, 245)';
-      }
+    if (htmlSection.dataset.isBeforeAfterSection === 'true') {
+      console.log('Applying inactive style to BeforeAfterSection');
+      htmlSection.style.backgroundColor = 'rgb(245, 245, 245)';
+      htmlSection.style.background = 'rgb(245, 245, 245)';
+      
+      // Make sure the before/after labels keep their original styling
+      const labels = htmlSection.querySelectorAll('[data-exclude-from-effect="true"]');
+      labels.forEach(label => {
+        const labelElement = label as HTMLElement;
+        if (labelElement.style.backgroundColor.includes('333333') || 
+            getComputedStyle(labelElement).backgroundColor.includes('51, 51, 51')) {
+          labelElement.style.backgroundColor = '#333333';
+          labelElement.style.color = 'white';
+        }
+      });
     }
   });
   
@@ -246,11 +284,21 @@ function updateSectionBackgrounds(): void {
     }
     
     // Special handling for BeforeAfterSection
-    if (htmlSection.classList.contains('BeforeAfterSection') || htmlSection.querySelector('.before-after-slider')) {
-      const container = htmlSection.querySelector('.container') || htmlSection;
-      if (container && (container as HTMLElement).dataset.isBeforeAfterContainer === 'true') {
-        (container as HTMLElement).style.backgroundColor = 'rgb(255, 255, 255)';
-      }
+    if (htmlSection.dataset.isBeforeAfterSection === 'true') {
+      console.log('Applying active style to BeforeAfterSection');
+      htmlSection.style.backgroundColor = 'rgb(255, 255, 255)';
+      htmlSection.style.background = 'rgb(255, 255, 255)';
+      
+      // Make sure the before/after labels keep their original styling
+      const labels = htmlSection.querySelectorAll('[data-exclude-from-effect="true"]');
+      labels.forEach(label => {
+        const labelElement = label as HTMLElement;
+        if (labelElement.style.backgroundColor.includes('333333') || 
+            getComputedStyle(labelElement).backgroundColor.includes('51, 51, 51')) {
+          labelElement.style.backgroundColor = '#333333';
+          labelElement.style.color = 'white';
+        }
+      });
     }
   }
 }
