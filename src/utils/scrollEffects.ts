@@ -20,6 +20,8 @@ interface SectionVisibility {
 }
 
 let visibleSections: Map<Element, SectionVisibility> = new Map();
+let currentObserver: IntersectionObserver | null = null;
+let scrollEventListener: (() => void) | null = null;
 
 /**
  * Initialize scroll effects for the given sections
@@ -27,6 +29,22 @@ let visibleSections: Map<Element, SectionVisibility> = new Map();
  */
 export function initScrollEffects(sectionSelector = 'section, [data-section]'): void {
   console.log('Initializing scroll effects with selector:', sectionSelector);
+  
+  // Clean up any existing observers and event listeners
+  if (currentObserver) {
+    currentObserver.disconnect();
+    currentObserver = null;
+    console.log('Cleaned up previous observer');
+  }
+  
+  if (scrollEventListener) {
+    window.removeEventListener('scroll', scrollEventListener);
+    scrollEventListener = null;
+    console.log('Cleaned up previous scroll event listener');
+  }
+  
+  // Reset the visible sections map
+  visibleSections.clear();
   
   // Function to initialize the effects
   const initialize = () => {
@@ -134,26 +152,34 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
             }
           }
         });
-        
-        // Also find any elements with text content that includes "before" or "after"
-        const allElements = htmlSection.querySelectorAll('*');
-        allElements.forEach(el => {
-          const text = el.textContent?.toLowerCase() || '';
-          if (
-            text.includes('before') || 
-            text.includes('after') || 
-            text.includes('vorher') || 
-            text.includes('nachher')
-          ) {
-            console.log('Excluding before/after text element from effect:', el);
-            (el as HTMLElement).dataset.excludeFromEffect = 'true';
-          }
-        });
       }
+      
+      // Exclude all elements with text content that includes "before" or "after" in various languages
+      const allElements = htmlSection.querySelectorAll('*');
+      allElements.forEach(el => {
+        const text = el.textContent?.toLowerCase() || '';
+        if (
+          text.includes('before') || 
+          text.includes('after') || 
+          text.includes('vorher') || 
+          text.includes('nachher')
+        ) {
+          console.log('Excluding before/after text element from effect:', el);
+          (el as HTMLElement).dataset.excludeFromEffect = 'true';
+          
+          // If this element has a dark background, make sure to preserve its styling
+          const elStyle = getComputedStyle(el as HTMLElement);
+          if (elStyle.backgroundColor.includes('51, 51, 51') || // rgb(51, 51, 51)
+              (el as HTMLElement).style.backgroundColor.includes('333333')) {
+            (el as HTMLElement).style.backgroundColor = '#333333';
+            (el as HTMLElement).style.color = 'white';
+          }
+        }
+      });
     });
     
     // Create an observer instance
-    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+    currentObserver = new IntersectionObserver(handleIntersection, observerOptions);
     
     // Start observing each section
     sections.forEach(section => {
@@ -176,13 +202,16 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
         return;
       }
       
-      observer.observe(section);
+      if (currentObserver) {
+        currentObserver.observe(section);
+      }
     });
     
     // Also listen for scroll events for more fluid updates
-    window.addEventListener('scroll', () => {
+    scrollEventListener = () => {
       requestAnimationFrame(updateSectionBackgrounds);
-    }, { passive: true });
+    };
+    window.addEventListener('scroll', scrollEventListener, { passive: true });
   };
   
   // Call initialize function
@@ -268,18 +297,18 @@ function updateSectionBackgrounds(): void {
       console.log('Applying inactive style to BeforeAfterSection');
       htmlSection.style.backgroundColor = 'rgb(245, 245, 245)';
       htmlSection.style.background = 'rgb(245, 245, 245)';
-      
-      // Make sure the before/after labels keep their original styling
-      const labels = htmlSection.querySelectorAll('[data-exclude-from-effect="true"]');
-      labels.forEach(label => {
-        const labelElement = label as HTMLElement;
-        if (labelElement.style.backgroundColor.includes('333333') || 
-            getComputedStyle(labelElement).backgroundColor.includes('51, 51, 51')) {
-          labelElement.style.backgroundColor = '#333333';
-          labelElement.style.color = 'white';
-        }
-      });
     }
+    
+    // Make sure the before/after labels keep their original styling
+    const labels = htmlSection.querySelectorAll('[data-exclude-from-effect="true"]');
+    labels.forEach(label => {
+      const labelElement = label as HTMLElement;
+      if (labelElement.style.backgroundColor.includes('333333') || 
+          getComputedStyle(labelElement).backgroundColor.includes('51, 51, 51')) {
+        labelElement.style.backgroundColor = '#333333';
+        labelElement.style.color = 'white';
+      }
+    });
   });
   
   // Then, only set the most visible section to white
@@ -306,18 +335,18 @@ function updateSectionBackgrounds(): void {
       console.log('Applying active style to BeforeAfterSection');
       htmlSection.style.backgroundColor = 'rgb(255, 255, 255)';
       htmlSection.style.background = 'rgb(255, 255, 255)';
-      
-      // Make sure the before/after labels keep their original styling
-      const labels = htmlSection.querySelectorAll('[data-exclude-from-effect="true"]');
-      labels.forEach(label => {
-        const labelElement = label as HTMLElement;
-        if (labelElement.style.backgroundColor.includes('333333') || 
-            getComputedStyle(labelElement).backgroundColor.includes('51, 51, 51')) {
-          labelElement.style.backgroundColor = '#333333';
-          labelElement.style.color = 'white';
-        }
-      });
     }
+    
+    // Make sure the before/after labels keep their original styling
+    const labels = htmlSection.querySelectorAll('[data-exclude-from-effect="true"]');
+    labels.forEach(label => {
+      const labelElement = label as HTMLElement;
+      if (labelElement.style.backgroundColor.includes('333333') || 
+          getComputedStyle(labelElement).backgroundColor.includes('51, 51, 51')) {
+        labelElement.style.backgroundColor = '#333333';
+        labelElement.style.color = 'white';
+      }
+    });
   }
 }
 
