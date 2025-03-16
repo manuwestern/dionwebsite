@@ -47,13 +47,18 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     sections.forEach(section => {
       const htmlSection = section as HTMLElement;
       
-      // Skip navigation elements
+      // Skip navigation, top bar, and footer elements
       if (
         htmlSection.classList.contains('navigation') || 
         htmlSection.classList.contains('nav') || 
         htmlSection.id === 'navigation' ||
         htmlSection.closest('.navigation') ||
-        htmlSection.closest('nav')
+        htmlSection.closest('nav') ||
+        htmlSection.tagName.toLowerCase() === 'nav' ||
+        htmlSection.tagName.toLowerCase() === 'footer' ||
+        htmlSection.closest('footer') ||
+        (htmlSection.classList.contains('bg-gray-100') && htmlSection.classList.contains('py-2')) || // TopBar
+        htmlSection.closest('.bg-gray-100.py-2')
       ) {
         return;
       }
@@ -154,13 +159,18 @@ export function initScrollEffects(sectionSelector = 'section, [data-section]'): 
     sections.forEach(section => {
       const htmlSection = section as HTMLElement;
       
-      // Skip navigation elements and elements that should be excluded
+      // Skip navigation, top bar, footer elements and elements that should be excluded
       if (
         htmlSection.classList.contains('navigation') || 
         htmlSection.classList.contains('nav') || 
         htmlSection.id === 'navigation' ||
         htmlSection.closest('.navigation') ||
         htmlSection.closest('nav') ||
+        htmlSection.tagName.toLowerCase() === 'nav' ||
+        htmlSection.tagName.toLowerCase() === 'footer' ||
+        htmlSection.closest('footer') ||
+        (htmlSection.classList.contains('bg-gray-100') && htmlSection.classList.contains('py-2')) || // TopBar
+        htmlSection.closest('.bg-gray-100.py-2') ||
         htmlSection.dataset.excludeFromEffect === 'true'
       ) {
         return;
@@ -229,8 +239,16 @@ function updateSectionBackgrounds(): void {
   sortedSections.forEach(section => {
     const htmlSection = section as HTMLElement;
     
-    // Skip elements that should be excluded
-    if (htmlSection.dataset.excludeFromEffect === 'true') {
+    // Skip navigation, top bar, footer elements and elements that should be excluded
+    if (
+      htmlSection.tagName.toLowerCase() === 'nav' ||
+      htmlSection.closest('nav') ||
+      htmlSection.tagName.toLowerCase() === 'footer' ||
+      htmlSection.closest('footer') ||
+      (htmlSection.classList.contains('bg-gray-100') && htmlSection.classList.contains('py-2')) || // TopBar
+      htmlSection.closest('.bg-gray-100.py-2') ||
+      htmlSection.dataset.excludeFromEffect === 'true'
+    ) {
       return;
     }
     
