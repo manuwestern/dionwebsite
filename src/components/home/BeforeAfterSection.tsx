@@ -104,12 +104,12 @@ const BeforeAfterSection: React.FC = () => {
             {/* Before-After Slider Container */}
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl mb-8">
               {/* Before Label */}
-              <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+              <div className="absolute top-4 left-4 z-10 bg-black bg-opacity-90 text-white px-3 py-1.5 rounded-md text-sm font-light">
                 {t('beforeAfterSection.navigation.before')}
               </div>
               
               {/* After Label */}
-              <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+              <div className="absolute top-4 right-4 z-10 bg-black bg-opacity-90 text-white px-3 py-1.5 rounded-md text-sm font-light">
                 {t('beforeAfterSection.navigation.after')}
               </div>
               
@@ -153,14 +153,10 @@ const BeforeAfterSection: React.FC = () => {
               >
                 <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
                 <div 
-                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
+                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white bg-opacity-70 shadow-md flex items-center justify-center border border-gray-200"
                 >
-                  {/* Left Arrow */}
-                  <div className="absolute left-2.5 w-0 h-0 border-t-4 border-b-4 border-r-4 border-t-transparent border-b-transparent border-r-gray-400"></div>
-                  {/* Divider Line */}
-                  <div className="w-0.5 h-8 bg-gray-400 mx-0.5"></div>
-                  {/* Right Arrow */}
-                  <div className="absolute right-2.5 w-0 h-0 border-t-4 border-b-4 border-l-4 border-t-transparent border-b-transparent border-l-gray-400"></div>
+                  {/* Simple dot indicator */}
+                  <div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
                 </div>
               </div>
               
@@ -289,12 +285,12 @@ const BeforeAfterSection: React.FC = () => {
               {/* Before-After Slider Container */}
               <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
                 {/* Before Label */}
-                <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                <div className="absolute top-4 left-4 z-10 bg-black bg-opacity-90 text-white px-3 py-1.5 rounded-md text-sm font-light">
                   {t('beforeAfterSection.navigation.before')}
                 </div>
                 
                 {/* After Label */}
-                <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                <div className="absolute top-4 right-4 z-10 bg-black bg-opacity-90 text-white px-3 py-1.5 rounded-md text-sm font-light">
                   {t('beforeAfterSection.navigation.after')}
                 </div>
                 
@@ -338,14 +334,10 @@ const BeforeAfterSection: React.FC = () => {
                 >
                   <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
                   <div 
-                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
+                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white bg-opacity-70 shadow-md flex items-center justify-center border border-gray-200"
                   >
-                    {/* Left Arrow */}
-                    <div className="absolute left-2.5 w-0 h-0 border-t-4 border-b-4 border-r-4 border-t-transparent border-b-transparent border-r-gray-400"></div>
-                    {/* Divider Line */}
-                    <div className="w-0.5 h-8 bg-gray-400 mx-0.5"></div>
-                    {/* Right Arrow */}
-                    <div className="absolute right-2.5 w-0 h-0 border-t-4 border-b-4 border-l-4 border-t-transparent border-b-transparent border-l-gray-400"></div>
+                    {/* Simple dot indicator */}
+                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
                   </div>
                 </div>
                 
