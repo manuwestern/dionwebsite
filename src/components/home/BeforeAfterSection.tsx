@@ -84,10 +84,10 @@ const BeforeAfterSection: React.FC = () => {
         <div className="md:hidden relative w-full mx-auto">
           {/* Before-After Slider with Navigation Arrows */}
           <div className="relative">
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - positioned outside the slider container */}
             <button 
               onClick={handlePrevCase}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-40 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
               aria-label="Vorheriger Fall"
             >
               <ChevronLeft className="w-5 h-5 text-white" />
@@ -95,7 +95,7 @@ const BeforeAfterSection: React.FC = () => {
             
             <button 
               onClick={handleNextCase}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-40 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
               aria-label="Nächster Fall"
             >
               <ChevronRight className="w-5 h-5 text-white" />
@@ -153,20 +153,25 @@ const BeforeAfterSection: React.FC = () => {
               >
                 <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
                 <div 
-                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
+                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
                 >
-                  <div className="w-1.5 h-10 bg-gray-400 rounded-full"></div>
+                  {/* Left Arrow */}
+                  <div className="absolute left-2.5 w-0 h-0 border-t-4 border-b-4 border-r-4 border-t-transparent border-b-transparent border-r-gray-400"></div>
+                  {/* Divider Line */}
+                  <div className="w-0.5 h-8 bg-gray-400 mx-0.5"></div>
+                  {/* Right Arrow */}
+                  <div className="absolute right-2.5 w-0 h-0 border-t-4 border-b-4 border-l-4 border-t-transparent border-b-transparent border-l-gray-400"></div>
                 </div>
               </div>
               
-              {/* HTML Range Input (positioned over the entire slider) */}
+              {/* HTML Range Input (positioned over the slider area only, not covering navigation buttons) */}
               <input
                 type="range"
                 min="0"
                 max="100"
                 value={sliderPosition}
                 onChange={handleSliderChange}
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
+                className="absolute inset-y-0 left-10 right-10 w-[calc(100%-80px)] h-full opacity-0 cursor-pointer z-30"
                 aria-label="Slider zum Vergleichen von Vorher und Nachher Bildern"
               />
             </div>
@@ -267,7 +272,7 @@ const BeforeAfterSection: React.FC = () => {
               {/* Navigation Arrows */}
               <button 
                 onClick={handlePrevCase}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white bg-opacity-80 rounded-full p-2 shadow-md -translate-x-6 hover:bg-opacity-100 transition-all"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-80 rounded-full p-2 shadow-md -translate-x-6 hover:bg-opacity-100 transition-all"
                 aria-label="Vorheriger Fall"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-700" />
@@ -275,7 +280,7 @@ const BeforeAfterSection: React.FC = () => {
               
               <button 
                 onClick={handleNextCase}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white bg-opacity-80 rounded-full p-2 shadow-md translate-x-6 hover:bg-opacity-100 transition-all"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-80 rounded-full p-2 shadow-md translate-x-6 hover:bg-opacity-100 transition-all"
                 aria-label="Nächster Fall"
               >
                 <ChevronRight className="w-6 h-6 text-gray-700" />
@@ -333,20 +338,25 @@ const BeforeAfterSection: React.FC = () => {
                 >
                   <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
                   <div 
-                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
+                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
                   >
-                    <div className="w-1.5 h-10 bg-gray-400 rounded-full"></div>
+                    {/* Left Arrow */}
+                    <div className="absolute left-2.5 w-0 h-0 border-t-4 border-b-4 border-r-4 border-t-transparent border-b-transparent border-r-gray-400"></div>
+                    {/* Divider Line */}
+                    <div className="w-0.5 h-8 bg-gray-400 mx-0.5"></div>
+                    {/* Right Arrow */}
+                    <div className="absolute right-2.5 w-0 h-0 border-t-4 border-b-4 border-l-4 border-t-transparent border-b-transparent border-l-gray-400"></div>
                   </div>
                 </div>
                 
-                {/* HTML Range Input (positioned over the entire slider) */}
+                {/* HTML Range Input (positioned over the slider area only, not covering navigation buttons) */}
                 <input
                   type="range"
                   min="0"
                   max="100"
                   value={sliderPosition}
                   onChange={handleSliderChange}
-                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
+                  className="absolute inset-y-0 left-10 right-10 w-[calc(100%-80px)] h-full opacity-0 cursor-pointer z-30"
                   aria-label="Slider zum Vergleichen von Vorher und Nachher Bildern"
                 />
               </div>
