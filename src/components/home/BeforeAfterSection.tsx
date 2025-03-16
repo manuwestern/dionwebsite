@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import ReactCompareImage from 'react-compare-image';
 
 interface BeforeAfterCase {
   id: number;
@@ -18,6 +17,7 @@ interface BeforeAfterCase {
 const BeforeAfterSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
   const [activeCase, setActiveCase] = useState(0);
+  const [sliderPosition, setSliderPosition] = useState(50);
 
   // Images for each case
   const caseImages = [
@@ -51,6 +51,15 @@ const BeforeAfterSection: React.FC = () => {
     })
   );
 
+  // Reset slider position when changing cases
+  useEffect(() => {
+    setSliderPosition(50);
+  }, [activeCase]);
+
+  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSliderPosition(Number(e.target.value));
+  };
+
   const handlePrevCase = () => {
     setActiveCase((prev) => (prev === 0 ? beforeAfterCases.length - 1 : prev - 1));
   };
@@ -78,7 +87,7 @@ const BeforeAfterSection: React.FC = () => {
             {/* Navigation Arrows */}
             <button 
               onClick={handlePrevCase}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
               aria-label="Vorheriger Fall"
             >
               <ChevronLeft className="w-5 h-5 text-white" />
@@ -86,19 +95,79 @@ const BeforeAfterSection: React.FC = () => {
             
             <button 
               onClick={handleNextCase}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-[#333333] bg-opacity-60 rounded-full p-1.5 hover:bg-opacity-80 transition-all"
               aria-label="Nächster Fall"
             >
               <ChevronRight className="w-5 h-5 text-white" />
             </button>
 
-            {/* Before-After Slider using ReactCompareImage */}
-            <div className="h-[400px] rounded-xl overflow-hidden shadow-xl mb-8">
-              <ReactCompareImage
-                leftImage={currentCase.beforeImage}
-                rightImage={currentCase.afterImage}
-                sliderLineWidth={2}
-                sliderLineColor="white"
+            {/* Before-After Slider Container */}
+            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl mb-8">
+              {/* Before Label */}
+              <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                {t('beforeAfterSection.navigation.before')}
+              </div>
+              
+              {/* After Label */}
+              <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                {t('beforeAfterSection.navigation.after')}
+              </div>
+              
+              {/* Before Image (Full Width) */}
+              <div className="absolute inset-0 select-none">
+                <img 
+                  src={currentCase.beforeImage} 
+                  alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
+                  className="w-full h-full object-cover pointer-events-none"
+                  width="1000"
+                  height="667"
+                  loading="lazy"
+                  draggable="false"
+                />
+              </div>
+              
+              {/* After Image (Partial Width based on slider) */}
+              <div 
+                className="absolute inset-0 overflow-hidden select-none"
+                style={{ width: `${sliderPosition}%` }}
+              >
+                <img 
+                  src={currentCase.afterImage} 
+                  alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
+                  className="w-full h-full object-cover pointer-events-none"
+                  style={{ 
+                    width: `${100 / (sliderPosition / 100)}%`,
+                    maxWidth: 'none'
+                  }}
+                  width="1000"
+                  height="667"
+                  loading="lazy"
+                  draggable="false"
+                />
+              </div>
+              
+              {/* Slider Line */}
+              <div 
+                className="absolute inset-y-0 z-20"
+                style={{ left: `${sliderPosition}%` }}
+              >
+                <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
+                <div 
+                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
+                >
+                  <div className="w-1.5 h-10 bg-gray-400 rounded-full"></div>
+                </div>
+              </div>
+              
+              {/* HTML Range Input (positioned over the entire slider) */}
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={sliderPosition}
+                onChange={handleSliderChange}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
+                aria-label="Slider zum Vergleichen von Vorher und Nachher Bildern"
               />
             </div>
           </div>
@@ -198,7 +267,7 @@ const BeforeAfterSection: React.FC = () => {
               {/* Navigation Arrows */}
               <button 
                 onClick={handlePrevCase}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white bg-opacity-80 rounded-full p-2 shadow-md -translate-x-6 hover:bg-opacity-100 transition-all"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white bg-opacity-80 rounded-full p-2 shadow-md -translate-x-6 hover:bg-opacity-100 transition-all"
                 aria-label="Vorheriger Fall"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-700" />
@@ -206,19 +275,79 @@ const BeforeAfterSection: React.FC = () => {
               
               <button 
                 onClick={handleNextCase}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white bg-opacity-80 rounded-full p-2 shadow-md translate-x-6 hover:bg-opacity-100 transition-all"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white bg-opacity-80 rounded-full p-2 shadow-md translate-x-6 hover:bg-opacity-100 transition-all"
                 aria-label="Nächster Fall"
               >
                 <ChevronRight className="w-6 h-6 text-gray-700" />
               </button>
 
-              {/* Before-After Slider using ReactCompareImage */}
-              <div className="h-[500px] rounded-xl overflow-hidden shadow-xl">
-                <ReactCompareImage
-                  leftImage={currentCase.beforeImage}
-                  rightImage={currentCase.afterImage}
-                  sliderLineWidth={2}
-                  sliderLineColor="white"
+              {/* Before-After Slider Container */}
+              <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
+                {/* Before Label */}
+                <div className="absolute top-4 left-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                  {t('beforeAfterSection.navigation.before')}
+                </div>
+                
+                {/* After Label */}
+                <div className="absolute top-4 right-4 z-10 bg-[#333333] bg-opacity-80 text-white px-3 py-1.5 rounded-md text-sm font-light">
+                  {t('beforeAfterSection.navigation.after')}
+                </div>
+                
+                {/* Before Image (Full Width) */}
+                <div className="absolute inset-0 select-none">
+                  <img 
+                    src={currentCase.beforeImage} 
+                    alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
+                    className="w-full h-full object-cover pointer-events-none"
+                    width="1000"
+                    height="667"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </div>
+                
+                {/* After Image (Partial Width based on slider) */}
+                <div 
+                  className="absolute inset-0 overflow-hidden select-none"
+                  style={{ width: `${sliderPosition}%` }}
+                >
+                  <img 
+                    src={currentCase.afterImage} 
+                    alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
+                    className="w-full h-full object-cover pointer-events-none"
+                    style={{ 
+                      width: `${100 / (sliderPosition / 100)}%`,
+                      maxWidth: 'none'
+                    }}
+                    width="1000"
+                    height="667"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </div>
+                
+                {/* Slider Line */}
+                <div 
+                  className="absolute inset-y-0 z-20"
+                  style={{ left: `${sliderPosition}%` }}
+                >
+                  <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
+                  <div 
+                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center border-2 border-gray-200"
+                  >
+                    <div className="w-1.5 h-10 bg-gray-400 rounded-full"></div>
+                  </div>
+                </div>
+                
+                {/* HTML Range Input (positioned over the entire slider) */}
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={sliderPosition}
+                  onChange={handleSliderChange}
+                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-30"
+                  aria-label="Slider zum Vergleichen von Vorher und Nachher Bildern"
                 />
               </div>
             </div>
