@@ -59,7 +59,7 @@ const TreatmentProcessSection: React.FC<{
       titleKey: `treatmentProcessSection.steps.${index}.title`,
       durationKey: `treatmentProcessSection.steps.${index}.duration`,
       descriptionKey: `treatmentProcessSection.steps.${index}.description`,
-      featuresKey: index === 0 ? `treatmentProcessSection.steps.${index}.features` : undefined,
+      featuresKey: `treatmentProcessSection.steps.${index}.features`,
       number: index + 1
     })
   );
@@ -219,7 +219,7 @@ const TreatmentProcessSection: React.FC<{
                 </div>
               </div>
               
-              <div className="flex-grow">
+              <div className="flex-grow pb-20">
                 <p className="text-gray-700 font-light mb-6 leading-relaxed">
                   {t(processSteps[activeStep].descriptionKey)}
                 </p>
@@ -240,7 +240,7 @@ const TreatmentProcessSection: React.FC<{
               </div>
 
               {/* Navigation Buttons */}
-              <div className="flex justify-between absolute bottom-8 left-8 right-8" style={{ zIndex: 10 }}>
+              <div className="flex justify-between absolute bottom-8 left-8 right-8 mt-8" style={{ zIndex: 10 }}>
                 <button 
                   onClick={() => handleStepChange(Math.max(0, activeStep - 1))}
                   disabled={activeStep === 0}

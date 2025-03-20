@@ -98,38 +98,59 @@
     "stepCount": "Schritt {{current}} von {{total}}",
     "steps": [
       {
-        "title": "Kostenlose Beratung",
+        "title": "Analyse der Haarsituation",
         "duration": "60 Min.",
-        "description": "In einem ausführlichen Gespräch analysieren wir Ihre individuelle Situation, besprechen Ihre Wünsche und entwickeln einen ersten Behandlungsplan. Dies kann persönlich in unserer Klinik oder bequem per Videogespräch erfolgen.",
+        "description": "In einem ausführlichen Gespräch analysieren wir Ihre individuelle Haarsituation und untersuchen die Beschaffenheit Ihrer Kopfhaut. Mit modernster Diagnosetechnik und KI-basierter Bildanalyse bestimmen wir präzise Ihre Haardicke, -dichte und das Fortschreiten des Haarverlusts. Unsere fortschrittliche KI-Software erstellt eine detaillierte Prognose Ihres zukünftigen Haarwuchses. Auf Basis dieser umfassenden Analyse entwickeln wir gemeinsam einen maßgeschneiderten Behandlungsplan.",
         "features": [
-          "Persönlich oder per Video möglich",
+          "Detaillierte Haaranalyse mit Digitalmikroskop und KI-Technologie",
+          "Umfassende Besprechung Ihrer Behandlungsoptionen",
+          "Persönlich in unserer Klinik oder bequem per Videogespräch",
           "Unverbindlich und kostenlos"
         ]
       },
       {
-        "title": "Detaillierte Analyse",
-        "duration": "90 Min.",
-        "description": "Wir führen eine gründliche Analyse Ihrer Haarsituation durch, um den optimalen Behandlungsplan zu erstellen."
-      },
-      {
-        "title": "Vorbereitung",
+        "title": "Terminplanung",
         "duration": "2 Wochen",
-        "description": "Wir bereiten Sie optimal auf den Eingriff vor und geben Ihnen alle notwendigen Informationen."
+        "description": "Nach der Analyse planen wir gemeinsam Ihren individuellen Behandlungsablauf. Wir koordinieren alle nötigen Termine und bereiten Sie optimal auf den Eingriff vor. Sie erhalten eine detaillierte Checkliste mit Verhaltensempfehlungen vor der Transplantation sowie alle wichtigen Informationen zur Vorbereitung.",
+        "features": [
+          "Flexible Terminplanung nach Ihren Bedürfnissen",
+          "Ausführliche Vorabinformationen zum Behandlungsablauf",
+          "Klärung aller organisatorischen Fragen",
+          "Bereitstellung aller nötigen Unterlagen"
+        ]
       },
       {
         "title": "Transplantation",
         "duration": "4-8 Std.",
-        "description": "Durchführung der Haartransplantation mit lokaler Betäubung und modernsten Techniken."
+        "description": "Am Tag der Behandlung führen unsere spezialisierten Ärzte die Haartransplantation nach modernsten Standards durch. Unter lokaler Betäubung werden die Haarfollikel aus der Spenderzone entnommen und präzise in die Empfängerzonen eingesetzt. Der gesamte Eingriff erfolgt schmerzarm und mit höchstem Komfort.",
+        "features": [
+          "Modernste FUE-Technik für natürliche Ergebnisse",
+          "Durchführung durch erfahrene Spezialisten",
+          "Schmerzarme Behandlung unter lokaler Betäubung",
+          "Individuell angepasstes Vorgehen für optimale Ergebnisse"
+        ]
       },
       {
         "title": "Nachsorge",
         "duration": "2 Wochen",
-        "description": "Detaillierte Pflegeanleitung und regelmäßige Nachuntersuchungen für optimale Ergebnisse."
+        "description": "In den ersten zwei Wochen nach dem Eingriff begleiten wir Sie intensiv durch die wichtige Heilungsphase. Sie erhalten professionelle Unterstützung bei der ersten Haarwäsche und regelmäßige Kontrolltermine zur Überwachung des Heilungsprozesses. Unser Team steht Ihnen für alle Fragen zur Verfügung und gibt Ihnen konkrete Anleitungen zur optimalen Pflege der transplantierten Haarfollikel.",
+        "features": [
+          "Persönliche Anleitung zur ersten Haarwäsche",
+          "Regelmäßige Kontrolltermine zur Überwachung der Heilung",
+          "Individuelle Pflegeempfehlungen für optimale Ergebnisse",
+          "24/7 Notfall-Hotline für alle Fragen und Anliegen"
+        ]
       },
       {
         "title": "Langzeitbetreuung",
         "duration": "12+ Monate",
-        "description": "Kontinuierliche Unterstützung und Beratung auch nach Abschluss der Behandlung."
+        "description": "Unser Engagement endet nicht nach der Nachsorgephase. Wir begleiten Sie langfristig und dokumentieren Ihren Fortschritt über mindestens 12 Monate. Regelmäßige PRP-Behandlungen zur Stimulation des Haarwachstums sind Teil unseres umfassenden Langzeitkonzepts. Durch individualisierte Check-ups und Beratung zu Haarpflege stellen wir sicher, dass Sie lange Freude an Ihrem Ergebnis haben.",
+        "features": [
+          "Dokumentierte Erfolgskontrolle über mindestens 12 Monate",
+          "Regelmäßige PRP-Behandlungen zur Wachstumsförderung",
+          "Individuelle Beratung zu Haarpflege und -erhalt",
+          "Lebenslange Unterstützung bei weiteren Haarproblemen"
+        ]
       }
     ]
   },

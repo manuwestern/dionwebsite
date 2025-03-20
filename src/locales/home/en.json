@@ -98,38 +98,59 @@
     "stepCount": "Step {{current}} of {{total}}",
     "steps": [
       {
-        "title": "Free Consultation",
+        "title": "Hair Analysis",
         "duration": "60 Min.",
-        "description": "In a detailed conversation, we analyze your individual situation, discuss your wishes, and develop an initial treatment plan. This can take place in person at our clinic or conveniently via video call.",
+        "description": "In a detailed consultation, we analyze your individual hair situation and examine the condition of your scalp. Using state-of-the-art diagnostic technology and AI-based image analysis, we precisely determine your hair thickness, density, and the progression of hair loss. Our advanced AI software creates a detailed prognosis of your future hair growth. Based on this comprehensive analysis, we develop a customized treatment plan together.",
         "features": [
-          "Available in person or via video",
+          "Detailed hair analysis with digital microscope and AI technology",
+          "Comprehensive discussion of your treatment options",
+          "Available in person at our clinic or conveniently via video call",
           "Non-binding and free of charge"
         ]
       },
       {
-        "title": "Detailed Analysis",
-        "duration": "90 Min.",
-        "description": "We conduct a thorough analysis of your hair situation to create the optimal treatment plan."
-      },
-      {
-        "title": "Preparation",
+        "title": "Appointment Planning",
         "duration": "2 Weeks",
-        "description": "We optimally prepare you for the procedure and provide all necessary information."
+        "description": "After the analysis, we plan your individual treatment schedule together. We coordinate all necessary appointments and optimally prepare you for the procedure. You will receive a detailed checklist with behavioral recommendations before the transplantation as well as all important information for preparation.",
+        "features": [
+          "Flexible appointment scheduling according to your needs",
+          "Detailed advance information about the treatment process",
+          "Clarification of all organizational questions",
+          "Provision of all necessary documents"
+        ]
       },
       {
         "title": "Transplantation",
         "duration": "4-8 Hours",
-        "description": "Performing the hair transplantation with local anesthesia and state-of-the-art techniques."
+        "description": "On the day of treatment, our specialized doctors perform the hair transplantation according to the latest standards. Under local anesthesia, the hair follicles are extracted from the donor area and precisely implanted into the recipient areas. The entire procedure is low-pain and performed with maximum comfort.",
+        "features": [
+          "State-of-the-art FUE technique for natural results",
+          "Performed by experienced specialists",
+          "Low-pain treatment under local anesthesia",
+          "Individually adapted approach for optimal results"
+        ]
       },
       {
         "title": "Aftercare",
         "duration": "2 Weeks",
-        "description": "Detailed care instructions and regular follow-up examinations for optimal results."
+        "description": "In the first two weeks after the procedure, we intensively guide you through the important healing phase. You receive professional support with the first hair wash and regular check-ups to monitor the healing process. Our team is available for all questions and provides you with specific instructions for optimal care of the transplanted hair follicles.",
+        "features": [
+          "Personal guidance for the first hair wash",
+          "Regular check-ups to monitor healing",
+          "Individual care recommendations for optimal results",
+          "24/7 emergency hotline for all questions and concerns"
+        ]
       },
       {
-        "title": "Long-term Support",
+        "title": "Long-term Care",
         "duration": "12+ Months",
-        "description": "Continuous support and advice even after the treatment is completed."
+        "description": "Our commitment does not end after the aftercare phase. We accompany you long-term and document your progress over at least 12 months. Regular PRP treatments to stimulate hair growth are part of our comprehensive long-term concept. Through individualized check-ups and advice on hair care, we ensure that you enjoy your results for a long time.",
+        "features": [
+          "Documented success monitoring over at least 12 months",
+          "Regular PRP treatments to promote growth",
+          "Individual advice on hair care and maintenance",
+          "Lifelong support for further hair problems"
+        ]
       }
     ]
   },
