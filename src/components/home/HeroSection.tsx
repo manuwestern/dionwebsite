@@ -37,9 +37,9 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col items-center min-h-[600px]">
           {/* Text content for mobile */}
           <div className="w-full flex flex-col items-center pt-16 mb-8">
-            <h1 className="text-3xl font-light mb-2 text-center">
+            <h1 className="text-4xl font-light mb-3 text-center">
               {t('heroSection.title')}
-              <span className="block text-2xl mt-1 text-gray-700 font-light">
+              <span className="block text-xl mt-2 text-gray-700 font-light">
                 {t('heroSection.subtitle').split('\n').map((line, i) => (
                   <React.Fragment key={i}>
                     {i > 0 && <br />}
@@ -49,12 +49,12 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-base text-gray-700 font-light leading-relaxed mt-4 text-center max-w-2xl">
+            <p className="text-sm text-gray-700 font-light leading-relaxed mt-4 text-center max-w-2xl">
               {t('heroSection.welcomeText')}
             </p>
             
-            <div className="mt-8 relative z-20">
-              <button className="inline-block bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider">
+            <div className="mt-6 relative z-20">
+              <button className="inline-block bg-[#333333] text-white px-6 py-2.5 rounded-lg hover:bg-[#444444] transition-colors text-xs font-light tracking-wider">
                 {t('buttons.consultation', { ns: 'common' })}
               </button>
             </div>
