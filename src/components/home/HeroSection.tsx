@@ -85,11 +85,11 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-base text-gray-700 font-light leading-relaxed mt-4 md:text-lg md:mt-6 max-w-2xl">
+            <p className="text-base text-gray-700 font-light leading-relaxed mt-4 md:text-lg md:mt-0 max-w-2xl">
               {t('heroSection.welcomeText')}
             </p>
             
-            <div className="mt-6">
+            <div className="mt-8">
               <button className="inline-block bg-[#333333] text-white px-6 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider md:px-8">
                 {t('buttons.consultation', { ns: 'common' })}
               </button>
