@@ -35,8 +35,13 @@ const HeroSection: React.FC = () => {
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto px-4 pt-8 pb-0 relative z-10">
         <div className="flex flex-col items-center min-h-[600px]">
+          {/* Logo for mobile */}
+          <div className="w-full flex justify-center mb-8 pt-16">
+            <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" className="h-24" />
+          </div>
+          
           {/* Text content for mobile */}
-          <div className="w-full flex flex-col items-center pt-16 mb-8">
+          <div className="w-full flex flex-col items-center mb-8">
             <h1 className="text-4xl font-light mb-3 text-center">
               {t('heroSection.title')}
               <span className="block text-xl mt-2 text-gray-700 font-light">

@@ -24,10 +24,10 @@ const Navigation: React.FC = () => {
   }, [treatmentsRef]);
 
   return (
-    <nav className="w-full max-w-7xl mx-auto px-4 py-6 relative">
-      <div className="flex flex-col md:flex-row justify-between items-center">
-        <Link to="/" className="flex items-center justify-center w-full md:w-auto mb-4 md:mb-0">
-          <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" className="h-16 md:h-10" />
+    <nav className="w-full max-w-7xl mx-auto px-4 py-6 relative md:bg-white">
+      <div className="flex flex-col md:flex-row justify-between items-center md:py-2">
+        <Link to="/" className="hidden md:flex items-center">
+          <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" className="h-[80px]" />
         </Link>
         <button 
           className="block md:hidden absolute top-6 right-4"
