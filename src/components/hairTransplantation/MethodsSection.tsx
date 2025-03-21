@@ -56,8 +56,8 @@ const MethodsSection: React.FC = () => {
                   <h4 className="text-lg font-medium mb-4 text-center md:text-left">Vorteile:</h4>
                   <ul className="space-y-3 text-center md:text-left">
                     {method.benefits.map((benefit: string, i: number) => (
-                      <li key={i} className="flex flex-row items-center md:items-start pl-4 md:pl-0">
-                        <div className="mr-2 md:mr-2 flex-shrink-0">
+                      <li key={i} className="flex flex-row items-start mb-3 md:mb-0 pl-4 md:pl-0">
+                        <div className="mr-3 flex-shrink-0">
                           <Check className="h-4 w-4 text-[#333333]" />
                         </div>
                         <span className="text-gray-700 font-light text-left">{benefit}</span>

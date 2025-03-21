@@ -38,8 +38,8 @@ const HairLossPatternsSection: React.FC = () => {
               <div className="p-4 bg-white relative h-[250px]">
                 {/* Title and description at the top with fixed position */}
                 <div className="absolute top-4 left-4 right-4 h-[100px]">
-                  <h3 className="text-xl font-medium text-gray-800 mb-2">{pattern.title}</h3>
-                  <p className="text-gray-600 font-light">
+                  <h3 className="text-xl font-medium text-gray-800 mb-2 text-center md:text-left">{pattern.title}</h3>
+                  <p className="text-gray-600 font-light text-center md:text-left">
                     {pattern.description}
                   </p>
                 </div>
