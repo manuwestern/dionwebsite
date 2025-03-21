@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const ContactSection: React.FC = () => {
@@ -96,7 +96,9 @@ const ContactSection: React.FC = () => {
               <ul className="space-y-3">
                 {(t('contactSection.hairAnalysis.expectations.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                   <li key={index} className="flex items-start">
-                    <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
+                    <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
                     <span className="text-base text-gray-600 font-light">{item}</span>
                   </li>
                 ))}

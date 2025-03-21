@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Microscope, HeartPulse, Sparkles, Stethoscope, CheckCircle } from 'lucide-react';
+import { Microscope, HeartPulse, Sparkles, Stethoscope, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HolisticConceptSection: React.FC = () => {
@@ -83,7 +83,9 @@ const HolisticConceptSection: React.FC = () => {
             <div className="space-y-4">
               {conceptCards.map((card, index) => (
                 <div key={index} className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-[#333333] mr-3 mt-1 flex-shrink-0" />
+                  <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
                   <div>
                     <h4 className="text-lg font-light mb-1">{t(card.titleKey)}</h4>
                     <p className="text-base text-gray-600 font-light">{t(card.descriptionKey)}</p>
