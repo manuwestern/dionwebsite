@@ -89,14 +89,14 @@ const TestimonialsSection: React.FC = () => {
               {/* Testimonial Content - Right Side */}
               <div className="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-between h-auto md:h-[320px]">
                 {/* Rating Stars */}
-                <div className="flex mb-6">
+                <div className="flex justify-center md:justify-start mb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-gray-700 fill-gray-700" />
                   ))}
                 </div>
                 
                 {/* Quote */}
-                <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-8">
+                <blockquote className="text-base md:text-lg font-light text-gray-700 italic mb-8 text-center md:text-left">
                   "{t(currentTestimonial.quoteKey)}"
                 </blockquote>
                 
@@ -104,7 +104,7 @@ const TestimonialsSection: React.FC = () => {
                 <div className="flex-grow"></div>
                 
                 {/* Patient Info */}
-                <div className="mb-2">
+                <div className="mb-2 text-center md:text-left">
                   <h3 className="text-xl font-light text-gray-800 mb-1">{t(currentTestimonial.nameKey)}</h3>
                   <p className="text-sm text-gray-600 font-light">
                     {t(currentTestimonial.ageKey)}, {t(currentTestimonial.treatmentKey)}

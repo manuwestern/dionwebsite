@@ -39,7 +39,7 @@ const FAQSection: React.FC = () => {
             <div key={index} className="mb-4">
               <button
                 onClick={() => toggleFAQ(index)}
-                className={`w-full text-left p-5 rounded-lg flex justify-between items-center transition-all duration-300 ${
+                className={`w-full text-center md:text-left p-5 rounded-lg flex justify-between items-center transition-all duration-300 ${
                   openFAQ === index
                     ? 'bg-[#333333] text-white shadow-md'
                     : 'bg-gray-100 text-gray-800 hover:bg-gray-200'

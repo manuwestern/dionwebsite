@@ -95,11 +95,11 @@ const ContactSection: React.FC = () => {
               <h4 className="text-xl font-light mb-4">{t('contactSection.hairAnalysis.expectations.title')}</h4>
               <ul className="space-y-3 flex flex-col items-start px-4 sm:px-8 md:px-0">
                 {(t('contactSection.hairAnalysis.expectations.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
-                  <li key={index} className="flex items-start text-left">
+                  <li key={index} className="flex items-start text-left w-full max-w-xs md:max-w-none">
                     <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
                       <Check className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-base text-gray-600 font-light">{item}</span>
+                    <span className="text-base text-gray-600 font-light text-left">{item}</span>
                   </li>
                 ))}
               </ul>

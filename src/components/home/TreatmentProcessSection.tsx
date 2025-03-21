@@ -160,7 +160,7 @@ const TreatmentProcessSection: React.FC<{
                 }`}>
                   {index < activeStep ? <Check className="w-5 h-5" /> : step.number}
                 </div>
-                <div className="flex-1 text-left">
+                <div className="flex-1 text-center md:text-left">
                   <div className="font-light">{t(step.titleKey)}</div>
                   <div className={`text-xs ${activeStep === index ? 'text-gray-200' : 'text-gray-500'}`}>
                     {t(step.durationKey)}

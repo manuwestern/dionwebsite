@@ -80,7 +80,7 @@ const HolisticConceptSection: React.FC = () => {
               {t('holisticConceptSection.description')}
             </p>
             
-            <div className="space-y-4 flex flex-col items-center lg:items-start">
+            <div className="space-y-4 flex flex-col items-center lg:items-start mx-auto lg:mx-0 max-w-md lg:max-w-none px-8 lg:px-0">
               {conceptCards.map((card, index) => (
                 <div key={index} className="flex items-start text-left">
                   <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
