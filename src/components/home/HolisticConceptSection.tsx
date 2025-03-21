@@ -56,7 +56,7 @@ const HolisticConceptSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-light mb-4 md:text-5xl md:mb-6">{t('holisticConceptSection.title')}</h2>
+          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('holisticConceptSection.title')}</h2>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto">
             {t('holisticConceptSection.subtitle')}
           </p>
@@ -76,7 +76,7 @@ const HolisticConceptSection: React.FC = () => {
           
           {/* Right side - Text description */}
           <div className="w-full lg:w-1/2">
-            <p className="text-lg text-gray-700 font-light mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-700 font-light mb-8 leading-relaxed">
               {t('holisticConceptSection.description')}
             </p>
             
@@ -85,8 +85,8 @@ const HolisticConceptSection: React.FC = () => {
                 <div key={index} className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-[#333333] mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg font-medium mb-1">{t(card.titleKey)}</h4>
-                    <p className="text-gray-600 font-light">{t(card.descriptionKey)}</p>
+                    <h4 className="text-lg font-light mb-1">{t(card.titleKey)}</h4>
+                    <p className="text-base text-gray-600 font-light">{t(card.descriptionKey)}</p>
                   </div>
                 </div>
               ))}

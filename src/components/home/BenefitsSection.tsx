@@ -21,11 +21,11 @@ const BenefitsSection: React.FC = () => {
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-light mb-6 md:text-5xl">{t('benefitsSection.title')}</h2>
             
-            <p className="text-gray-600 font-light mb-6">
+            <p className="text-base md:text-lg text-gray-700 font-light mb-6">
               {t('benefitsSection.intro.paragraph1')}
             </p>
             
-            <p className="text-gray-600 font-light mb-8">
+            <p className="text-base md:text-lg text-gray-700 font-light mb-8">
               {t('benefitsSection.intro.paragraph2')}
             </p>
             
@@ -37,7 +37,7 @@ const BenefitsSection: React.FC = () => {
                     <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0">
                       <Check className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-gray-700 font-light">{t(benefitKey)}</span>
+                    <span className="text-base text-gray-600 font-light">{t(benefitKey)}</span>
                   </div>
                 ))}
               </div>

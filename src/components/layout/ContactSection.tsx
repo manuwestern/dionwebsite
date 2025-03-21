@@ -27,7 +27,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-light mb-1">{t('contact.phone', { ns: 'common' })}</h4>
-                  <p className="text-gray-600 font-light">
+                  <p className="text-base text-gray-600 font-light">
                     <a href="tel:+491702637818" className="hover:text-gray-900 transition-colors">
                       +49 170 2637818
                     </a>
@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-light mb-1">{t('contact.email', { ns: 'common' })}</h4>
-                  <p className="text-gray-600 font-light">
+                  <p className="text-base text-gray-600 font-light">
                     <a href="mailto:info@dionhairclinic.de" className="hover:text-gray-900 transition-colors">
                       info@dionhairclinic.de
                     </a>
@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-light mb-1">{t('contact.whatsapp', { ns: 'common' })}</h4>
-                  <p className="text-gray-600 font-light">
+              <p className="text-base text-gray-600 font-light">
                     <a href="https://wa.me/491702637818" className="hover:text-gray-900 transition-colors">
                       +49 170 2637818
                     </a>
@@ -75,7 +75,7 @@ const ContactSection: React.FC = () => {
 
             <div className="mt-8 pt-8 border-t border-gray-100">
               <h4 className="text-lg font-light mb-3">{t('contactSection.address.title')}</h4>
-              <p className="text-gray-600 font-light">
+              <p className="text-base text-gray-600 font-light">
                 {t('contactSection.address.line1')}<br />
                 {t('contactSection.address.line2')}<br />
                 {t('contactSection.address.line3')}<br />
@@ -87,17 +87,17 @@ const ContactSection: React.FC = () => {
           {/* Free Hair Analysis CTA */}
           <div className="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 rounded-2xl shadow-lg p-8 md:p-10 flex flex-col">
             <h3 className="text-2xl font-light mb-4">{t('contactSection.hairAnalysis.title')}</h3>
-            <p className="text-gray-600 font-light mb-6">
+              <p className="text-base text-gray-600 font-light mb-6">
               {t('contactSection.hairAnalysis.description')}
             </p>
             
             <div className="bg-white rounded-xl p-6 mb-8 shadow-sm">
               <h4 className="text-xl font-light mb-4">{t('contactSection.hairAnalysis.expectations.title')}</h4>
-              <ul className="space-y-3 text-gray-600 font-light">
+              <ul className="space-y-3">
                 {(t('contactSection.hairAnalysis.expectations.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <span className="inline-block w-5 h-5 bg-gray-300 rounded-full mr-3 flex-shrink-0 mt-0.5"></span>
-                    <span>{item}</span>
+                    <span className="text-base text-gray-600 font-light">{item}</span>
                   </li>
                 ))}
               </ul>

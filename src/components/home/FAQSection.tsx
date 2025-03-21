@@ -45,7 +45,7 @@ const FAQSection: React.FC = () => {
                     : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                 }`}
               >
-                <span className="font-light text-lg">{faq.question}</span>
+                <span className="text-lg font-light">{faq.question}</span>
                 <ChevronDown 
                   className={`w-5 h-5 transition-transform duration-300 ${
                     openFAQ === index ? 'transform rotate-180' : ''
@@ -59,7 +59,7 @@ const FAQSection: React.FC = () => {
                     : 'max-h-0 opacity-0 p-0'
                 }`}
               >
-                <p className="text-gray-600 font-light">{faq.answer}</p>
+                <p className="text-base text-gray-600 font-light">{faq.answer}</p>
               </div>
             </div>
           ))}

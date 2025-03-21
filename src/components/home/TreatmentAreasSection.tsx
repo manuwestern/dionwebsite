@@ -70,7 +70,7 @@ const TreatmentAreasSection: React.FC = () => {
                 {/* Treatment area title */}
                 <h3 className="text-xl font-light mb-2">{t(area.titleKey)}</h3>
                 {/* Treatment area description */}
-                <p className="text-gray-600 mb-4 font-light md:mb-2">
+                <p className="text-base text-gray-600 font-light mb-4 md:mb-2">
                   {area.mobileDescription}
                 </p>
                 {/* "More Info" button */}
@@ -103,7 +103,7 @@ const TreatmentAreasSection: React.FC = () => {
                   {/* Treatment area title */}
                   <h3 className="text-lg font-light mb-3 md:text-2xl md:mb-4">{t(area.titleKey)}</h3>
                   {/* Treatment area description */}
-                  <p className="text-gray-600 mb-4 font-light md:mb-6 md:text-base lg:text-base">
+                  <p className="text-base text-gray-600 font-light mb-4 md:mb-6">
                     {t(area.descriptionKey)}
                   </p>
                 </div>

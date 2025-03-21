@@ -176,7 +176,7 @@ const TreatmentProcessSection: React.FC<{
               {activeStep === index && (
                 <div className="bg-white rounded-b-lg shadow-lg overflow-hidden mb-4">
                   <div className="p-6">
-                    <p className="text-gray-700 font-light mb-6">
+                    <p className="text-base md:text-lg text-gray-700 font-light mb-6">
                       {t(step.descriptionKey)}
                     </p>
                     
@@ -187,7 +187,7 @@ const TreatmentProcessSection: React.FC<{
                             <div className="mt-1 mr-2 flex-shrink-0">
                               <Check className="h-4 w-4 text-[#333333]" />
                             </div>
-                            <span className="text-gray-700 font-light">{feature}</span>
+                        <span className="text-base text-gray-600 font-light">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -220,19 +220,19 @@ const TreatmentProcessSection: React.FC<{
               </div>
               
               <div className="flex-grow pb-20">
-                <p className="text-gray-700 font-light mb-6 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-700 font-light mb-6 leading-relaxed">
                   {t(processSteps[activeStep].descriptionKey)}
                 </p>
                 
                 {processSteps[activeStep].featuresKey && (
                   <div className="space-y-3 bg-gray-50 p-4 rounded-xl">
-                    <h4 className="font-medium text-gray-700 mb-2">Wichtige Punkte:</h4>
+                    <h4 className="text-lg font-light text-gray-700 mb-2">Wichtige Punkte:</h4>
                     {(t(processSteps[activeStep].featuresKey!, { returnObjects: true }) as string[]).map((feature, i) => (
                       <div key={i} className="flex items-start">
                         <div className="mt-1 mr-2 flex-shrink-0">
                           <Check className="h-4 w-4 text-[#333333]" />
                         </div>
-                        <span className="text-gray-700 font-light">{feature}</span>
+                        <span className="text-base text-gray-600 font-light">{feature}</span>
                       </div>
                     ))}
                   </div>
