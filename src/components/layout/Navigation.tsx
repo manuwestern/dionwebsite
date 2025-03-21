@@ -35,7 +35,7 @@ const Navigation: React.FC = () => {
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        <div className="hidden md:flex gap-8 text-sm font-light">
+        <div className="hidden md:flex gap-8 text-base font-light">
           <Link to="/" className="hover:text-gray-600">{t('navigation.home')}</Link>
           
           {/* Treatments Dropdown */}
@@ -50,7 +50,7 @@ const Navigation: React.FC = () => {
             
             {isTreatmentsOpen && (
               <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg p-4 z-50 min-w-[200px]">
-                <div className="flex flex-col gap-3 text-sm font-light">
+                <div className="flex flex-col gap-3 text-base font-light">
                   <Link 
                     to="/haartransplantation" 
                     className="hover:text-gray-600"
@@ -94,7 +94,7 @@ const Navigation: React.FC = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg p-4 md:hidden z-50">
-          <div className="flex flex-col gap-4 text-sm font-light">
+          <div className="flex flex-col gap-4 text-base font-light">
             <Link to="/" className="hover:text-gray-600">{t('navigation.home')}</Link>
             
             {/* Mobile Treatments Submenu */}
@@ -108,7 +108,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {isTreatmentsOpen && (
-                <div className="pl-4 mt-2 flex flex-col gap-2">
+                <div className="pl-4 mt-2 flex flex-col gap-2 text-base">
                   <Link 
                     to="/haartransplantation" 
                     className="hover:text-gray-600"
