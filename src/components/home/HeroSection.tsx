@@ -59,8 +59,15 @@ const HeroSection: React.FC = () => {
             </p>
           </div>
           
-          {/* Mobile image at the bottom with button overlay */}
-          <div className="mt-auto flex justify-center items-end relative">
+          {/* Button above the image */}
+          <div className="w-full flex justify-center mb-8">
+            <button className="inline-block bg-[#333333] text-white px-6 py-2.5 rounded-lg hover:bg-[#444444] transition-colors text-xs font-light tracking-wider">
+              {t('buttons.consultation', { ns: 'common' })}
+            </button>
+          </div>
+          
+          {/* Mobile image at the bottom */}
+          <div className="mt-auto flex justify-center items-end">
             <img 
               src="/images/Dion_Model_Mobile.png"
               alt="Dr. Dion - Führender Experte für Haartransplantation und Haarausfall-Behandlung in Mönchengladbach, NRW"
@@ -69,11 +76,6 @@ const HeroSection: React.FC = () => {
               width="400"
               height="600"
             />
-            <div className="absolute top-[45%] z-20">
-              <button className="inline-block bg-[#333333] text-white px-6 py-2.5 rounded-lg hover:bg-[#444444] transition-colors text-xs font-light tracking-wider">
-                {t('buttons.consultation', { ns: 'common' })}
-              </button>
-            </div>
           </div>
         </div>
       </div>
