@@ -64,12 +64,20 @@ const HolisticConceptSection: React.FC = () => {
 
         {/* Main Content - Visual + Text */}
         <div className="flex flex-col lg:flex-row items-center mb-16 gap-8 lg:gap-16">
-          {/* Left side - Simple image without decorative elements */}
+          {/* Left side - Different images for mobile and desktop */}
           <div className="w-full lg:w-1/2">
+            {/* Mobile image */}
+            <img 
+              src="/images/Dion_Model_Ok.png" 
+              alt="Dion Hair Clinic - Ganzheitliches Konzept" 
+              className="w-full h-auto block lg:hidden"
+              loading="lazy"
+            />
+            {/* Desktop image */}
             <img 
               src="/images/Dion_Model_Benefits.png" 
               alt="Dion Hair Clinic - Ganzheitliches Konzept" 
-              className="w-full h-auto"
+              className="w-full h-auto hidden lg:block"
               loading="lazy"
             />
           </div>
