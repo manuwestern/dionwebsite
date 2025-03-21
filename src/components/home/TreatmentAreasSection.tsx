@@ -71,7 +71,7 @@ const TreatmentAreasSection: React.FC = () => {
                 <h3 className="text-xl font-light mb-2">{t(area.titleKey)}</h3>
                 {/* Treatment area description */}
                 <p className="text-base text-gray-600 font-light mb-4 md:mb-2">
-                  {area.mobileDescription}
+                  {t(area.descriptionKey)}
                 </p>
                 {/* "More Info" button */}
                 <button className="w-3/4 bg-[#333333] text-white px-1 py-2 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider mb-5">
