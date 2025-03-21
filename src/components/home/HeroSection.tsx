@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-sm text-gray-700 font-light leading-relaxed mt-4 text-center max-w-2xl">
+            <p className="text-base text-gray-700 font-light leading-relaxed mt-4 text-center max-w-2xl">
               {t('heroSection.welcomeText')}
             </p>
             

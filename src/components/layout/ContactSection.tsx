@@ -17,12 +17,12 @@ const ContactSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Contact Information */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 text-center md:text-left">
             <h3 className="text-2xl font-light mb-6">{t('contactSection.contactOptions')}</h3>
             
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-gray-100 rounded-full p-3 mr-4">
+            <div className="space-y-6 flex flex-col items-center md:items-start">
+              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
+                <div className="bg-gray-100 rounded-full p-3 mb-3 md:mb-0 md:mr-4 w-12 h-12 flex items-center justify-center">
                   <Phone className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
@@ -38,8 +38,8 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-gray-100 rounded-full p-3 mr-4">
+              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
+                <div className="bg-gray-100 rounded-full p-3 mb-3 md:mb-0 md:mr-4 w-12 h-12 flex items-center justify-center">
                   <Mail className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
@@ -55,13 +55,13 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-gray-100 rounded-full p-3 mr-4">
+              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
+                <div className="bg-gray-100 rounded-full p-3 mb-3 md:mb-0 md:mr-4 w-12 h-12 flex items-center justify-center">
                   <MessageCircle className="w-6 h-6 text-gray-700" />
                 </div>
                 <div>
                   <h4 className="text-lg font-light mb-1">{t('contact.whatsapp', { ns: 'common' })}</h4>
-              <p className="text-base text-gray-600 font-light">
+                  <p className="text-base text-gray-600 font-light">
                     <a href="https://wa.me/491702637818" className="hover:text-gray-900 transition-colors">
                       +49 170 2637818
                     </a>
@@ -73,7 +73,7 @@ const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-gray-100">
+            <div className="mt-8 pt-8 border-t border-gray-100 text-center md:text-left">
               <h4 className="text-lg font-light mb-3">{t('contactSection.address.title')}</h4>
               <p className="text-base text-gray-600 font-light">
                 {t('contactSection.address.line1')}<br />
@@ -85,7 +85,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Free Hair Analysis CTA */}
-          <div className="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 rounded-2xl shadow-lg p-8 md:p-10 flex flex-col">
+          <div className="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 rounded-2xl shadow-lg p-8 md:p-10 flex flex-col text-center md:text-left">
             <h3 className="text-2xl font-light mb-4">{t('contactSection.hairAnalysis.title')}</h3>
               <p className="text-base text-gray-600 font-light mb-6">
               {t('contactSection.hairAnalysis.description')}
@@ -93,9 +93,9 @@ const ContactSection: React.FC = () => {
             
             <div className="bg-white rounded-xl p-6 mb-8 shadow-sm">
               <h4 className="text-xl font-light mb-4">{t('contactSection.hairAnalysis.expectations.title')}</h4>
-              <ul className="space-y-3">
+              <ul className="space-y-3 flex flex-col items-start px-4 sm:px-8 md:px-0">
                 {(t('contactSection.hairAnalysis.expectations.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
-                  <li key={index} className="flex items-start">
+                  <li key={index} className="flex items-start text-left">
                     <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
                       <Check className="w-4 h-4 text-white" />
                     </div>

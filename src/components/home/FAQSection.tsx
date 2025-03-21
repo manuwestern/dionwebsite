@@ -59,7 +59,7 @@ const FAQSection: React.FC = () => {
                     : 'max-h-0 opacity-0 p-0'
                 }`}
               >
-                <p className="text-base text-gray-600 font-light">{faq.answer}</p>
+                <p className="text-base text-gray-600 font-light text-center md:text-left">{faq.answer}</p>
               </div>
             </div>
           ))}

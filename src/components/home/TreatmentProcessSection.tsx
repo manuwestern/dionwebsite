@@ -175,15 +175,15 @@ const TreatmentProcessSection: React.FC<{
               {/* Step Content - Only visible when active */}
               {activeStep === index && (
                 <div className="bg-white rounded-b-lg shadow-lg overflow-hidden mb-4">
-                  <div className="p-6">
+                <div className="p-6 text-left">
                     <p className="text-base md:text-lg text-gray-700 font-light mb-6">
                       {t(step.descriptionKey)}
                     </p>
                     
                     {step.featuresKey && (
-                      <div className="space-y-3">
+                      <div className="space-y-3 flex flex-col items-start">
                         {(t(step.featuresKey, { returnObjects: true }) as string[]).map((feature, i) => (
-                          <div key={i} className="flex items-start">
+                          <div key={i} className="flex items-start text-left">
                             <div className="mt-1 mr-2 flex-shrink-0">
                               <Check className="h-4 w-4 text-[#333333]" />
                             </div>
