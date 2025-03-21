@@ -17,20 +17,8 @@ const HeroSection: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden min-h-[800px] flex items-center">
-      {/* Background image - fixed position without parallax for better compatibility */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{ 
-          backgroundImage: 'url("/images/bg_abstrakt.webp")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed'
-        }}
-      ></div>
-      
-      {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-white bg-opacity-40 z-1"></div>
+      {/* White background */}
+      <div className="absolute inset-0 bg-white z-0"></div>
       
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto px-4 pt-8 pb-0 relative z-10">

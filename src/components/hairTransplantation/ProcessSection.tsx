@@ -63,19 +63,7 @@ const ProcessSection: React.FC = () => {
   };
 
   return (
-    <div className="relative py-16 md:py-28 overflow-hidden bg-gradient-to-b from-gray-50 to-white min-h-[800px] flex items-center">
-      {/* Background image - fixed position without parallax for better compatibility */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{ 
-          backgroundImage: 'url("/images/bg_abstrakt.webp")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          opacity: 0.15
-        }}
-      ></div>
+    <div className="relative py-16 md:py-28 overflow-hidden bg-white min-h-[800px] flex items-center">
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">

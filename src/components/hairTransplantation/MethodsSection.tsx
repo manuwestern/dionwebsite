@@ -9,7 +9,7 @@ const MethodsSection: React.FC = () => {
   const methods = t('methodsSection.methods', { returnObjects: true }) as any[];
 
   return (
-    <div className="bg-white py-16 md:py-24">
+    <div className="bg-white py-16 md:py-24 relative">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('methodsSection.title')}</h2>
@@ -22,19 +22,23 @@ const MethodsSection: React.FC = () => {
           {methods.map((method, index) => (
             <div 
               key={index} 
-              className="bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg"
             >
               {/* Header with title */}
-              <div className="border-b border-gray-300 p-4">
+              <div className="border-b border-gray-200 p-4 bg-white">
                 <h3 className="text-xl font-medium text-gray-800">{method.title}</h3>
                 <p className="text-sm text-gray-600 font-light">{method.subtitle}</p>
               </div>
               
               {/* Method image - would be replaced with actual images */}
-              <div className="h-48 bg-gray-300 relative">
+              <div className="h-48 bg-white relative">
                 {/* Placeholder for image */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-2xl font-light text-white">{method.title}</span>
+                  <img 
+                    src={`/images/${method.image || 'FUE_Haartransplantation_Schema.svg'}`}
+                    alt={method.title}
+                    className="h-full w-full object-contain p-4"
+                  />
                 </div>
               </div>
               
@@ -79,7 +83,7 @@ const MethodsSection: React.FC = () => {
               </div>
               
               {/* Footer */}
-              <div className="bg-gray-700 text-white p-3 text-center font-light text-sm">
+              <div className="bg-white border-t border-gray-200 p-3 text-center font-light text-sm text-gray-700">
                 {method.idealFor}
               </div>
             </div>
