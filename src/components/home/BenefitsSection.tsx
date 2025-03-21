@@ -51,23 +51,14 @@ const BenefitsSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Right Column - Image with Overlay */}
+          {/* Right Column - Image */}
           <div className="w-full md:w-1/2 relative">
             <img 
               src="/images/Dion_Model_ThumbsUp.png"
               alt="Haartransplantation Experte in der Dion Hair Clinic - Natürliche Ergebnisse und modernste Technologien in Mönchengladbach"
-              className="w-full rounded-2xl shadow-xl h-auto"
-              width="1000"
-              height="667"
+              className="w-full h-auto"
               loading="lazy"
             />
-            
-            {/* Overlay Message */}
-            <div className="absolute bottom-6 right-6 bg-[#333333] bg-opacity-90 text-white p-6 rounded-xl max-w-xs shadow-lg">
-              <p className="font-light">
-                {t('benefitsSection.overlay')}
-              </p>
-            </div>
           </div>
         </div>
       </div>
