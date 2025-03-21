@@ -9,7 +9,7 @@ const LanguageSwitcher: React.FC = () => {
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="flex justify-center w-full md:w-auto md:justify-start gap-4">
       <button 
         className={`flex items-center gap-1 text-sm ${i18n.language === 'de' ? 'font-medium' : 'font-light'}`}
         onClick={() => changeLanguage('de')}

@@ -52,24 +52,23 @@ const HeroSection: React.FC = () => {
             <p className="text-base text-gray-700 font-light leading-relaxed mt-4 text-center max-w-2xl">
               {t('heroSection.welcomeText')}
             </p>
-            
-            <div className="mt-6 relative z-20">
-              <button className="inline-block bg-[#333333] text-white px-6 py-2.5 rounded-lg hover:bg-[#444444] transition-colors text-xs font-light tracking-wider">
-                {t('buttons.consultation', { ns: 'common' })}
-              </button>
-            </div>
           </div>
           
-          {/* Mobile image at the bottom */}
-          <div className="mt-auto flex justify-center items-end">
+          {/* Mobile image at the bottom with button overlay */}
+          <div className="mt-auto flex justify-center items-end relative">
             <img 
               src="/images/Dion_Model_Mobile.png"
               alt="Dr. Dion - Führender Experte für Haartransplantation und Haarausfall-Behandlung in Mönchengladbach, NRW"
-              className="w-auto h-auto max-h-[350px] object-contain mix-blend-multiply"
+              className="w-auto h-auto max-h-[450px] object-contain mix-blend-multiply"
               style={{ filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))' }}
               width="400"
               height="600"
             />
+            <div className="absolute top-[45%] z-20">
+              <button className="inline-block bg-[#333333] text-white px-6 py-2.5 rounded-lg hover:bg-[#444444] transition-colors text-xs font-light tracking-wider">
+                {t('buttons.consultation', { ns: 'common' })}
+              </button>
+            </div>
           </div>
         </div>
       </div>
