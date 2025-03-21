@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden min-h-[800px] flex items-center">
       {/* Background image - fixed position without parallax for better compatibility */}
       <div 
         className="absolute inset-0 z-0"

@@ -69,7 +69,7 @@ const TreatmentProcessSection: React.FC<{
   };
 
   return (
-    <div className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+    <div className="relative py-16 md:py-28 overflow-hidden bg-gradient-to-b from-gray-50 to-white min-h-[800px] flex items-center">
       {/* Background image - fixed position without parallax for better compatibility */}
       <div 
         className="absolute inset-0 z-0"

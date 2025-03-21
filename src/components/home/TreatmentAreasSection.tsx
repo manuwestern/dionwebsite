@@ -40,7 +40,7 @@ const TreatmentAreasSection: React.FC = () => {
 
   return (
     // Main section container with simple light gray background
-    <div className="py-8 md:py-20 bg-gray-50">
+    <div className="py-8 md:py-28 bg-gray-50 min-h-[800px] flex items-center">
       {/* Content container with max width and horizontal padding */}
       <div className="w-full max-w-7xl mx-auto px-4">
         {/* Section header with title and subtitle */}

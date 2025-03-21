@@ -36,7 +36,7 @@ const HolisticConceptSection: React.FC = () => {
   );
 
   return (
-    <div className="relative w-full py-16 md:py-28 overflow-hidden">
+    <div className="relative w-full py-16 md:py-28 overflow-hidden min-h-[800px] flex items-center">
       {/* Background image - fixed position without parallax for better compatibility */}
       <div 
         className="absolute inset-0 z-0"

@@ -14,7 +14,7 @@ const BenefitsSection: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-gray-50 bg-size-200 animate-gradient-slow py-12 md:py-24">
+    <div className="bg-gradient-to-b from-gray-100 to-gray-50 bg-size-200 animate-gradient-slow py-16 md:py-28 min-h-[800px] flex items-center">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           {/* Left Column - Text Content */}
