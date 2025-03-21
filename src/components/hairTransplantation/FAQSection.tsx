@@ -1,53 +1,31 @@
 import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 
-interface FAQItemProps {
+interface FAQ {
   question: string;
   answer: string;
-  isOpen: boolean;
-  toggleOpen: () => void;
 }
-
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, toggleOpen }) => {
-  return (
-    <div className="border-b border-gray-200 py-4">
-      <button
-        className="flex justify-between items-center w-full text-left focus:outline-none"
-        onClick={toggleOpen}
-        aria-expanded={isOpen}
-      >
-        <h3 className="text-lg font-light">{question}</h3>
-        <span className="ml-4 flex-shrink-0">
-          {isOpen ? (
-            <ChevronUp className="h-5 w-5 text-gray-500" />
-          ) : (
-            <ChevronDown className="h-5 w-5 text-gray-500" />
-          )}
-        </span>
-      </button>
-      {isOpen && (
-        <div className="mt-2 pr-12">
-          <p className="text-gray-600 font-light">{answer}</p>
-        </div>
-      )}
-    </div>
-  );
-};
 
 const FAQSection: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
-  const faqs = t('faqSection.faqs', { returnObjects: true }) as any[];
-  
-  // State to track which FAQ is open
-  const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(0);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(0);
+
+  // Create FAQs from translation keys
+  const faqs: FAQ[] = Array.from(
+    { length: (t('faqSection.faqs', { returnObjects: true }) as any[]).length },
+    (_, index) => ({
+      question: t(`faqSection.faqs.${index}.question`),
+      answer: t(`faqSection.faqs.${index}.answer`)
+    })
+  );
 
   const toggleFAQ = (index: number) => {
-    setOpenFAQIndex(openFAQIndex === index ? null : index);
+    setOpenFAQ(openFAQ === index ? null : index);
   };
 
   return (
-    <div className="bg-white py-16 md:py-24">
+    <div className="bg-gradient-to-b from-white to-gray-100 bg-size-200 animate-gradient-slow py-16 md:py-28 min-h-[800px] flex items-center">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('faqSection.title')}</h2>
@@ -56,15 +34,34 @@ const FAQSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
-            <FAQItem
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-              isOpen={openFAQIndex === index}
-              toggleOpen={() => toggleFAQ(index)}
-            />
+            <div key={index} className="mb-4">
+              <button
+                onClick={() => toggleFAQ(index)}
+                className={`w-full text-center md:text-left p-5 rounded-lg flex justify-between items-center transition-all duration-300 ${
+                  openFAQ === index
+                    ? 'bg-[#333333] text-white shadow-md'
+                    : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                }`}
+              >
+                <span className="text-lg font-light">{faq.question}</span>
+                <ChevronDown 
+                  className={`w-5 h-5 transition-transform duration-300 ${
+                    openFAQ === index ? 'transform rotate-180' : ''
+                  }`} 
+                />
+              </button>
+              <div 
+                className={`overflow-hidden transition-all duration-300 rounded-b-lg bg-white shadow-md ${
+                  openFAQ === index 
+                    ? 'max-h-[500px] opacity-100 p-5 mt-1' 
+                    : 'max-h-0 opacity-0 p-0'
+                }`}
+              >
+                <p className="text-base text-gray-600 font-light text-center md:text-left">{faq.answer}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
