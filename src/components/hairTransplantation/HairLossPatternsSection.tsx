@@ -8,7 +8,7 @@ const HairLossPatternsSection: React.FC = () => {
   const patterns = t('hairLossPatternsSection.patterns', { returnObjects: true }) as any[];
 
   return (
-    <div className="bg-gray-100 py-16 md:py-24">
+    <div className="bg-white py-16 md:py-24 relative">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">
@@ -27,10 +27,10 @@ const HairLossPatternsSection: React.FC = () => {
               className="bg-white rounded-2xl overflow-hidden shadow-lg"
             >
               {/* Pattern Image */}
-              <div className="h-64 bg-gray-300 relative">
+              <div className="h-64 bg-white relative border-b border-gray-200">
                 {/* Placeholder for image - would be replaced with actual images */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-2xl font-light text-white">{pattern.title}</span>
+                  <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
                 </div>
               </div>
               
