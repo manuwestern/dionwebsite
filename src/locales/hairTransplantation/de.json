@@ -11,6 +11,7 @@
       {
         "title": "Saphir-FUE-Technik",
         "subtitle": "Spezialisierte Technik",
+        "image": "saphir_fue.jpg",
         "description": "Die Saphir-FUE-Technik ist eine Weiterentwicklung der klassischen FUE-Methode, bei der spezielle Saphirklingen verwendet werden.",
         "benefits": [
           "Präzisere Schnitte und geringere Gewebeschädigung",
@@ -29,6 +30,7 @@
       {
         "title": "DHI-FUE-Technik",
         "subtitle": "Spezialisierte Technik",
+        "image": "dhi_fue.jpg",
         "description": "Die DHI-Technik ermöglicht die direkte Implantation der Haarfollikel ohne vorherige Kanalerstellung.",
         "benefits": [
           "Höhere Dichte der transplantierten Haare",

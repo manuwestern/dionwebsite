@@ -11,6 +11,7 @@
       {
         "title": "Sapphire FUE Technique",
         "subtitle": "Specialized Technique",
+        "image": "saphir_fue.jpg",
         "description": "The Sapphire FUE technique is an advancement of the classic FUE method, using special sapphire blades.",
         "benefits": [
           "More precise incisions and less tissue damage",
@@ -29,6 +30,7 @@
       {
         "title": "DHI FUE Technique",
         "subtitle": "Specialized Technique",
+        "image": "dhi_fue.jpg",
         "description": "The DHI technique enables direct implantation of hair follicles without prior channel creation.",
         "benefits": [
           "Higher density of transplanted hair",

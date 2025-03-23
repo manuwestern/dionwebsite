@@ -37,7 +37,7 @@ const MethodsSection: React.FC = () => {
                   <img 
                     src={`/images/${method.image || 'FUE_Haartransplantation_Schema.svg'}`}
                     alt={method.title}
-                    className="h-full w-full object-contain p-4"
+                    className={`h-full w-full ${method.image === 'saphir_fue.jpg' || method.image === 'dhi_fue.jpg' ? 'object-cover' : 'object-contain p-4'}`}
                   />
                 </div>
               </div>
