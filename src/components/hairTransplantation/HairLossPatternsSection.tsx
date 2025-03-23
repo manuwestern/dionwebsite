@@ -34,6 +34,30 @@ const HairLossPatternsSection: React.FC = () => {
                     alt={pattern.title}
                     className="w-full h-full object-cover"
                   />
+                ) : pattern.title.includes("Norwood 3") ? (
+                  <img 
+                    src="/images/norwood_scale_3.png" 
+                    alt={pattern.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : pattern.title.includes("Norwood 4") ? (
+                  <img 
+                    src="/images/norwood_scale_4.png" 
+                    alt={pattern.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : pattern.title.includes("Norwood 5-6") ? (
+                  <img 
+                    src="/images/norwood_scale_5.png" 
+                    alt={pattern.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : pattern.title.includes("Norwood 7") ? (
+                  <img 
+                    src="/images/norwood_scale_7.png" 
+                    alt={pattern.title}
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="h-full w-full flex items-center justify-center">
                     <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
