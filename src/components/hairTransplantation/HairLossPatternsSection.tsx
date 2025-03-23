@@ -27,11 +27,18 @@ const HairLossPatternsSection: React.FC = () => {
               className="bg-white rounded-2xl overflow-hidden shadow-lg"
             >
               {/* Pattern Image */}
-              <div className="h-64 bg-white relative border-b border-gray-200">
-                {/* Placeholder for image - would be replaced with actual images */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
-                </div>
+              <div className="h-64 bg-white overflow-hidden border-b border-gray-200">
+                {pattern.title.includes("Norwood 1-2") ? (
+                  <img 
+                    src="/images/norwood_scale_1.png" 
+                    alt={pattern.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="h-full w-full flex items-center justify-center">
+                    <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
+                  </div>
+                )}
               </div>
               
               {/* Pattern Content - using the same approach as MethodsSection */}
