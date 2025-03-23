@@ -58,6 +58,12 @@ const HairLossPatternsSection: React.FC = () => {
                     alt={pattern.title}
                     className="w-full h-full object-cover"
                   />
+                ) : pattern.title.includes("Frauen") ? (
+                  <img 
+                    src="/images/frau_lichter_scheitel.png" 
+                    alt={pattern.title}
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="h-full w-full flex items-center justify-center">
                     <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
