@@ -43,14 +43,14 @@ const HolisticConceptSection: React.FC = () => {
       title: t('holisticConceptSection.steps.3.title'),
       description: t('holisticConceptSection.steps.3.description'),
       icon: <Pill className="w-6 h-6 text-white" />,
-      boxAngle: 130, // Bottom (between 7-8 o'clock)
+      boxAngle: 140, // Bottom (between 7-8 o'clock)
       lineAngle: 126
     },
     {
       title: t('holisticConceptSection.steps.4.title'),
       description: t('holisticConceptSection.steps.4.description'),
       icon: <Droplet className="w-6 h-6 text-white" />,
-      boxAngle: 230, // Left (between 10-11 o'clock)
+      boxAngle: 220, // Left (between 10-11 o'clock)
       lineAngle: 198
     }
   ];
