@@ -9,6 +9,8 @@ interface ConceptStep {
   icon: React.ReactNode;
   boxAngle: number; // Angle for box positioning
   lineAngle: number; // Angle for line positioning
+  xOffset: number; // Additional X offset for fine-tuning
+  yOffset: number; // Additional Y offset for fine-tuning
 }
 
 const HolisticConceptSection: React.FC = () => {
@@ -22,36 +24,46 @@ const HolisticConceptSection: React.FC = () => {
       title: t('holisticConceptSection.steps.0.title'),
       description: t('holisticConceptSection.steps.0.description'),
       icon: <Brain className="w-6 h-6 text-white" />,
-      boxAngle: 280, // Top (12 o'clock position)
-      lineAngle: 270
+      boxAngle: 288, // Top (12 o'clock position)
+      lineAngle: 270,
+      xOffset: -30,
+      yOffset: 30 // Move down by 40px
     },
     {
       title: t('holisticConceptSection.steps.1.title'),
       description: t('holisticConceptSection.steps.1.description'),
       icon: <FileText className="w-6 h-6 text-white" />,
       boxAngle: 360, // Top-right (between 1-2 o'clock)
-      lineAngle: 342
+      lineAngle: 342,
+      xOffset: 0,
+      yOffset: 30
     },
     {
       title: t('holisticConceptSection.steps.2.title'),
       description: t('holisticConceptSection.steps.2.description'),
       icon: <Microscope className="w-6 h-6 text-white" />,
-      boxAngle: 80, // Right (between 4-5 o'clock)
-      lineAngle: 54
+      boxAngle: 72, // Right (between 4-5 o'clock)
+      lineAngle: 54,
+      xOffset: 30,
+      yOffset: 30
     },
     {
       title: t('holisticConceptSection.steps.3.title'),
       description: t('holisticConceptSection.steps.3.description'),
       icon: <Pill className="w-6 h-6 text-white" />,
-      boxAngle: 140, // Bottom (between 7-8 o'clock)
-      lineAngle: 126
+      boxAngle: 144, // Bottom (between 7-8 o'clock)
+      lineAngle: 126,
+      xOffset: 0,
+      yOffset: -10
     },
     {
       title: t('holisticConceptSection.steps.4.title'),
       description: t('holisticConceptSection.steps.4.description'),
       icon: <Droplet className="w-6 h-6 text-white" />,
-      boxAngle: 220, // Left (between 10-11 o'clock)
-      lineAngle: 198
+      boxAngle: 216, // Left (between 10-11 o'clock)
+      lineAngle: 198,
+      xOffset: 0,
+      yOffset: -10
     }
   ];
 
@@ -122,9 +134,9 @@ const HolisticConceptSection: React.FC = () => {
               const boxRadians = step.boxAngle * (Math.PI / 180); // Convert to radians
               const distance = 320; // Increased distance from center to accommodate larger boxes
               
-              // Calculate x and y coordinates
-              const x = Math.sin(boxRadians) * distance;
-              const y = -Math.cos(boxRadians) * distance; // Negative because y increases downward in CSS
+              // Calculate x and y coordinates with offsets
+              const x = Math.sin(boxRadians) * distance + step.xOffset;
+              const y = -Math.cos(boxRadians) * distance + step.yOffset; // Negative because y increases downward in CSS
               
               return (
                 <React.Fragment key={index}>
