@@ -1,0 +1,38 @@
+/* Pulse animations for the connecting lines */
+@keyframes pulse-1 {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse-2 {
+  0% { opacity: 0.6; }
+  100% { opacity: 0.9; }
+}
+
+@keyframes pulse-3 {
+  0% { opacity: 0.4; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes pulse-4 {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse-5 {
+  0% { opacity: 0.5; }
+  100% { opacity: 0.9; }
+}
+
+/* Subtle rotation animation for the center circle */
+@keyframes gentle-rotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Breathing effect for the outer circles */
+@keyframes breathe {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  50% { transform: translate(-50%, -50%) scale(1.02); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+}

@@ -114,6 +114,40 @@
       }
     ]
   },
+  "holisticConceptSection": {
+    "title": "Dion 360° Konzept",
+    "subtitle": "Ein ganzheitlicher Ansatz um das bestmögliche Ergebnis zu erzielen",
+    "introduction": "Unser ganzheitlicher Ansatz kombiniert modernste Technologien mit individueller Beratung für optimale Ergebnisse.",
+    "benefitsTitle": "Die Vorteile unseres 360° Konzepts",
+    "benefits": [
+      "Höhere Erfolgsrate durch ganzheitlichen Ansatz",
+      "Individuell angepasste Behandlung",
+      "Langfristige Ergebnisse durch Nachsorge",
+      "Modernste Technologien für beste Resultate"
+    ],
+    "steps": [
+      {
+        "title": "Präzise KI-gestützte Haaranalyse",
+        "description": "Präzise KI-gestützte Beurteilung Ihres Haarverlusts und der Spenderzone für einen maßgeschneiderten Behandlungsplan."
+      },
+      {
+        "title": "Maßgeschneiderter Behandlungsplan",
+        "description": "Entwicklung eines individuellen Therapieplans basierend auf Ihrer Haaranalyse, abgestimmt auf Ihre persönlichen Bedürfnisse."
+      },
+      {
+        "title": "Innovative Transplantationstechniken",
+        "description": "Einsatz von Saphir-FUE und DHI für präzisere Eingriffe, schnellere Heilung und natürlichere Ergebnisse."
+      },
+      {
+        "title": "Unterstützende Nährstofftherapie",
+        "description": "Spezifische Nährstoffe und Medikamente zur Unterstützung des Haarwachstums und langfristigen Sicherung des Transplantationserfolgs."
+      },
+      {
+        "title": "Regenerative PRP-Behandlung",
+        "description": "Nutzung von Wachstumsfaktoren aus Ihrem eigenen Blut zur Beschleunigung der Heilung und Stimulation des Haarwachstums."
+      }
+    ]
+  },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
     "subtitle": "Antworten auf Ihre Fragen zur Haartransplantation",

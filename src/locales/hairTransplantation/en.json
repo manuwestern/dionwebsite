@@ -114,6 +114,40 @@
       }
     ]
   },
+  "holisticConceptSection": {
+    "title": "Dion 360° Concept",
+    "subtitle": "A holistic approach to achieve the best possible result",
+    "introduction": "Our holistic approach combines cutting-edge technologies with personalized consultation for optimal results.",
+    "benefitsTitle": "The advantages of our 360° concept",
+    "benefits": [
+      "Higher success rate through holistic approach",
+      "Individually tailored treatment",
+      "Long-term results through aftercare",
+      "Cutting-edge technologies for best results"
+    ],
+    "steps": [
+      {
+        "title": "Advanced AI Hair Analysis",
+        "description": "Precise AI-powered assessment of your hair loss and donor area for a customized treatment plan."
+      },
+      {
+        "title": "Customized Treatment Strategy",
+        "description": "Development of a personalized therapy plan based on your hair analysis, aligned with your specific needs."
+      },
+      {
+        "title": "Cutting-edge Transplant Techniques",
+        "description": "Using Sapphire FUE and DHI for more precise procedures, faster healing, and more natural-looking results."
+      },
+      {
+        "title": "Supportive Nutrient Therapy",
+        "description": "Specific nutrients and medications to support hair growth and ensure long-term transplantation success."
+      },
+      {
+        "title": "Regenerative PRP Treatment",
+        "description": "Using growth factors from your own blood to accelerate healing and stimulate hair growth."
+      }
+    ]
+  },
   "faqSection": {
     "title": "Frequently Asked Questions",
     "subtitle": "Answers to your questions about hair transplantation",
