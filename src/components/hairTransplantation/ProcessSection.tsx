@@ -48,10 +48,13 @@ const ProcessSection: React.FC = () => {
               className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100"
             >
               {/* Step Number and Title */}
-              <div className="bg-gradient-to-r from-gray-50 to-white py-3 px-5 border-b border-gray-100 flex items-center justify-between">
-                <h3 className="text-lg font-light text-gray-800">{step.title}</h3>
-                <div className="w-8 h-8 rounded-full bg-[#333333] text-white flex items-center justify-center text-sm font-medium shadow-sm">
-                  {step.number}
+              <div className="bg-gradient-to-r from-gray-50 to-white py-4 px-5 border-b border-gray-100">
+                <div className="flex items-center">
+                  <span className="text-[#333333] text-xl md:text-2xl font-light mr-3 opacity-70">
+                    {step.number}
+                  </span>
+                  <div className="w-[1px] h-6 bg-gray-300 mx-3"></div>
+                  <h3 className="text-base md:text-lg font-light text-gray-800">{step.title}</h3>
                 </div>
               </div>
               
@@ -64,7 +67,7 @@ const ProcessSection: React.FC = () => {
                     className="w-[60%] h-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
                   />
                 </div>
-                <p className="text-sm text-gray-700 font-light leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 font-light leading-relaxed">
                   {step.description}
                 </p>
               </div>
