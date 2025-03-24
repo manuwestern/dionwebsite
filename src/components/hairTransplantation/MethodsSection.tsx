@@ -18,27 +18,27 @@ const MethodsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {methods.map((method, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl overflow-hidden shadow-lg"
+              className="bg-white rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl hover:translate-y-[-4px] border border-gray-100"
             >
-              {/* Header with title */}
-              <div className="border-b border-gray-200 p-4 bg-white text-center md:text-left">
-                <h3 className="text-xl font-medium text-gray-800">{method.title}</h3>
-                <p className="text-sm text-gray-600 font-light">{method.subtitle}</p>
-              </div>
-              
-              {/* Method image - would be replaced with actual images */}
-              <div className="h-48 bg-white relative">
-                {/* Placeholder for image */}
-                <div className="absolute inset-0 flex items-center justify-center">
+              {/* Method image at the top */}
+              <div className="h-64 bg-white relative overflow-hidden">
+                <div className="absolute inset-0">
                   <img 
                     src={`/images/${method.image || 'FUE_Haartransplantation_Schema.svg'}`}
                     alt={method.title}
                     className={`h-full w-full ${method.image === 'saphir_fue.jpg' || method.image === 'dhi_fue.jpg' ? 'object-cover' : 'object-contain p-4'}`}
                   />
+                </div>
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                {/* Title overlay at bottom of image */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h3 className="text-2xl font-medium">{method.title}</h3>
+                  <p className="text-sm text-gray-100 font-light">{method.subtitle}</p>
                 </div>
               </div>
               
