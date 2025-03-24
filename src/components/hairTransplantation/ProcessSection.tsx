@@ -72,27 +72,7 @@ const ProcessSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Process Flow Arrows - Desktop Only */}
-        <div className="hidden lg:flex justify-center mt-8">
-          <div className="flex items-center">
-            <div className="w-16 h-[2px] bg-gray-300"></div>
-            <div className="w-4 h-4 border-t-2 border-r-2 border-gray-300 transform rotate-45"></div>
-          </div>
-          <div className="mx-16 w-16 h-[2px] bg-gray-300"></div>
-          <div className="flex items-center">
-            <div className="w-4 h-4 border-t-2 border-r-2 border-gray-300 transform rotate-45"></div>
-            <div className="w-16 h-[2px] bg-gray-300"></div>
-          </div>
-        </div>
-
-        {/* Mobile Process Flow - Vertical Arrows */}
-        <div className="flex flex-col items-center md:hidden mt-4 space-y-4">
-          <div className="h-8 w-[2px] bg-gray-300"></div>
-          <div className="w-4 h-4 border-b-2 border-r-2 border-gray-300 transform rotate-45"></div>
-          <div className="h-8 w-[2px] bg-gray-300"></div>
-          <div className="w-4 h-4 border-b-2 border-r-2 border-gray-300 transform rotate-45"></div>
-          <div className="h-8 w-[2px] bg-gray-300"></div>
-        </div>
+        {/* No arrows or lines as requested */}
       </div>
     </div>
   );
