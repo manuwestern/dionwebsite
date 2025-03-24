@@ -7,7 +7,8 @@ interface ConceptStep {
   title: string;
   description: string;
   icon: React.ReactNode;
-  angle: number; // Angle in degrees for positioning around the circle
+  boxAngle: number; // Angle for box positioning
+  lineAngle: number; // Angle for line positioning
 }
 
 const HolisticConceptSection: React.FC = () => {
@@ -21,31 +22,36 @@ const HolisticConceptSection: React.FC = () => {
       title: t('holisticConceptSection.steps.0.title'),
       description: t('holisticConceptSection.steps.0.description'),
       icon: <Brain className="w-6 h-6 text-white" />,
-      angle: 288 // Top (12 o'clock position)
+      boxAngle: 280, // Top (12 o'clock position)
+      lineAngle: 270
     },
     {
       title: t('holisticConceptSection.steps.1.title'),
       description: t('holisticConceptSection.steps.1.description'),
       icon: <FileText className="w-6 h-6 text-white" />,
-      angle: 360 // Top-right (between 1-2 o'clock)
+      boxAngle: 360, // Top-right (between 1-2 o'clock)
+      lineAngle: 342
     },
     {
       title: t('holisticConceptSection.steps.2.title'),
       description: t('holisticConceptSection.steps.2.description'),
       icon: <Microscope className="w-6 h-6 text-white" />,
-      angle: 72 // Right (between 4-5 o'clock)
+      boxAngle: 80, // Right (between 4-5 o'clock)
+      lineAngle: 54
     },
     {
       title: t('holisticConceptSection.steps.3.title'),
       description: t('holisticConceptSection.steps.3.description'),
       icon: <Pill className="w-6 h-6 text-white" />,
-      angle: 128 // Bottom (between 7-8 o'clock)
+      boxAngle: 130, // Bottom (between 7-8 o'clock)
+      lineAngle: 126
     },
     {
       title: t('holisticConceptSection.steps.4.title'),
       description: t('holisticConceptSection.steps.4.description'),
       icon: <Droplet className="w-6 h-6 text-white" />,
-      angle: 232 // Left (between 10-11 o'clock)
+      boxAngle: 230, // Left (between 10-11 o'clock)
+      lineAngle: 198
     }
   ];
 
@@ -112,23 +118,23 @@ const HolisticConceptSection: React.FC = () => {
 
             {/* Concept steps positioned in a circle */}
             {conceptSteps.map((step, index) => {
-              // Calculate position based on angle
-              const angle = step.angle * (Math.PI / 180); // Convert to radians
+              // Calculate position based on boxAngle
+              const boxRadians = step.boxAngle * (Math.PI / 180); // Convert to radians
               const distance = 320; // Increased distance from center to accommodate larger boxes
               
               // Calculate x and y coordinates
-              const x = Math.sin(angle) * distance;
-              const y = -Math.cos(angle) * distance; // Negative because y increases downward in CSS
+              const x = Math.sin(boxRadians) * distance;
+              const y = -Math.cos(boxRadians) * distance; // Negative because y increases downward in CSS
               
               return (
                 <React.Fragment key={index}>
-                  {/* Connecting line - aligned with the box position */}
+                  {/* Connecting line - using separate lineAngle */}
                   <div 
                     className="absolute top-1/2 left-1/2 h-[2px] bg-gray-300 z-10"
                     style={{
-                      width: '220px',
+                      width: `${distance - 125}px`, // Distance from center to box minus center circle radius
                       transformOrigin: 'left center',
-                      transform: `rotate(${step.angle}deg) translateX(100px)`
+                      transform: `rotate(${step.lineAngle}deg) translateX(100px)` // Start from edge of center circle
                     }}
                   ></div>
                   
