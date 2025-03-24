@@ -42,49 +42,53 @@ const MethodsSection: React.FC = () => {
                 </div>
               </div>
               
-              {/* Content container with responsive height for mobile and fixed height for desktop */}
-              <div className="p-4 bg-white relative md:h-[800px]">
-                {/* Mobile: Stacked layout, Desktop: Absolute positioning */}
-                <div className="md:absolute md:top-4 md:left-4 md:right-4 md:h-[120px] mb-6 md:mb-0">
-                  <p className="text-gray-700 font-light text-center md:text-left">
+              {/* Content container with grid layout for alignment */}
+              <div className="p-6 bg-white grid grid-rows-[auto_auto_auto_auto] gap-6">
+                {/* Description section */}
+                <div>
+                  <p className="text-gray-700 leading-relaxed">
                     {method.description}
                   </p>
                 </div>
                 
                 {/* Benefits section */}
-                <div className="md:absolute md:top-[140px] md:left-4 md:right-4 md:h-[280px] mb-6 md:mb-0">
-                  <h4 className="text-lg font-medium mb-4 text-center md:text-left">Vorteile:</h4>
-                  <ul className="space-y-3 text-center md:text-left">
+                <div>
+                  <h4 className="text-lg font-medium mb-4 border-b pb-2 border-gray-100">Vorteile:</h4>
+                  <ul className="grid gap-2">
                     {method.benefits.map((benefit: string, i: number) => (
-                      <li key={i} className="flex flex-row items-start mb-3 md:mb-0 pl-4 md:pl-0">
-                        <div className="mr-3 flex-shrink-0">
+                      <li key={i} className="flex items-start">
+                        <div className="mr-3 flex-shrink-0 mt-1">
                           <Check className="h-4 w-4 text-[#333333]" />
                         </div>
-                        <span className="text-gray-700 font-light text-left">{benefit}</span>
+                        <span className="text-gray-700">{benefit}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
                 {/* Process section */}
-                <div className="md:absolute md:top-[440px] md:left-4 md:right-4 md:h-[340px]">
-                  <h4 className="text-lg font-medium mb-4 text-center md:text-left">Prozess:</h4>
-                  <ol className="space-y-4 text-center md:text-left">
+                <div>
+                  <h4 className="text-lg font-medium mb-4 border-b pb-2 border-gray-100">Prozess:</h4>
+                  <ol className="grid gap-2">
                     {method.process.map((step: string, i: number) => (
-                      <li key={i} className="flex flex-row items-start mb-6 md:mb-0 pl-4 md:pl-0">
+                      <li key={i} className="flex items-start">
                         <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#333333] text-white flex items-center justify-center font-light">
                           {i + 1}
                         </div>
-                        <span className="text-gray-700 font-light text-left">{step}</span>
+                        <span className="text-gray-700">{step}</span>
                       </li>
                     ))}
                   </ol>
                 </div>
-              </div>
-              
-              {/* Footer */}
-              <div className="bg-white border-t border-gray-200 p-3 text-center font-light text-sm text-gray-700">
-                {method.idealFor}
+                
+                {/* Ideal for section */}
+                <div className="text-center">
+                  <div className="pt-4 border-t border-gray-100">
+                    <span className="inline-block px-4 py-2 bg-gray-50 rounded-full text-sm font-medium text-gray-700">
+                      {method.idealFor}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
