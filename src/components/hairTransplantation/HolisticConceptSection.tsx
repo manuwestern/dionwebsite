@@ -17,7 +17,7 @@ const HolisticConceptSection: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
   // These values can be easily edited to change the animated ring appearance
   const ringDiameter = 200; // Diameter of the animated ring in pixels (exactly matching the 200px center circle)
-  const ringWidth = 4; // Width of the animated ring in pixels
+  const ringWidth = 10; // Width of the animated ring in pixels
 
   // Create concept steps with icons and angles for circular positioning
   // Evenly spaced at 72-degree intervals (360 / 5 = 72)

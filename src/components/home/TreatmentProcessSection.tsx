@@ -31,9 +31,9 @@ const TreatmentProcessSection: React.FC<{
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Measure the height of the first card when it's active
+  // Measure the height of the card whenever the active step changes
   useEffect(() => {
-    if (activeStep === 0 && cardRef.current) {
+    if (cardRef.current) {
       const height = cardRef.current.offsetHeight;
       setCardHeight(height);
     }
@@ -69,8 +69,14 @@ const TreatmentProcessSection: React.FC<{
   };
 
   return (
-    <div className="relative py-16 md:py-28 overflow-hidden bg-gradient-to-b from-gray-50 to-white min-h-[800px] flex items-center">
-      {/* Background image - fixed position without parallax for better compatibility */}
+    <div className="relative py-16 md:py-28 overflow-hidden min-h-[800px] flex items-center" style={{ backgroundColor: 'white' }}>
+      {/* Solid white background to ensure the section is always white */}
+      <div className="absolute inset-0 bg-white z-0"></div>
+      
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-50 to-white"></div>
+      
+      {/* Background pattern with very low opacity */}
       <div 
         className="absolute inset-0 z-0"
         style={{ 
@@ -78,8 +84,7 @@ const TreatmentProcessSection: React.FC<{
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          opacity: 0.15
+          opacity: 0.1
         }}
       ></div>
       
@@ -149,7 +154,6 @@ const TreatmentProcessSection: React.FC<{
                       ? 'bg-gray-300 text-gray-700' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
-                aria-expanded={activeStep === index}
               >
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                   activeStep === index 
@@ -202,7 +206,7 @@ const TreatmentProcessSection: React.FC<{
         {/* Desktop Active Step Card */}
         <div className="hidden md:block w-full mx-auto">
           <div 
-            ref={activeStep === 0 ? cardRef : undefined}
+            ref={cardRef}
             className="bg-white rounded-2xl shadow-lg overflow-hidden"
             style={cardHeight ? { minHeight: `${cardHeight}px` } : {}}
           >
