@@ -1,118 +1,174 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ChevronRight } from 'lucide-react';
 
 const HairLossPatternsSection: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
+  const [hoverPattern, setHoverPattern] = useState<number | null>(null);
 
   // Get patterns from translation
   const patterns = t('hairLossPatternsSection.patterns', { returnObjects: true }) as any[];
 
+  // Map pattern titles to images
+  const patternImages = {
+    "Norwood 1-2": "/images/norwood_scale_1.png",
+    "Norwood 3": "/images/norwood_scale_3.png",
+    "Norwood 4": "/images/norwood_scale_4.png",
+    "Norwood 5-6": "/images/norwood_scale_5.png",
+    "Norwood 7": "/images/norwood_scale_7.png",
+    "Frauen": "/images/frau_lichter_scheitel.png"
+  };
+
+  // Get image for a pattern
+  const getPatternImage = (title: string) => {
+    for (const [key, value] of Object.entries(patternImages)) {
+      if (title.includes(key)) {
+        return value;
+      }
+    }
+    return null;
+  };
+
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-gray-50 py-16 md:py-24 relative">
-      {/* Subtle background pattern */}
-      <div 
-        className="absolute inset-0 opacity-5 z-0" 
-        style={{ 
-          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-          backgroundSize: '200px',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
+    <section className="py-20 md:py-28 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -left-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">
-            {t('hairLossPatternsSection.title')}
-          </h2>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-block mb-4">
+            <h2 className="text-3xl font-light md:text-5xl">{t('hairLossPatternsSection.title')}</h2>
+            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 mx-auto"></div>
+          </div>
+          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
             {t('hairLossPatternsSection.description')}
           </p>
         </div>
 
         {/* Patterns Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {patterns.map((pattern, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100"
-            >
-              {/* Pattern Image without overlay gradient */}
-              <div className="h-64 overflow-hidden relative">
-                {pattern.title.includes("Norwood 1-2") ? (
-                  <img 
-                    src="/images/norwood_scale_1.png" 
-                    alt={pattern.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : pattern.title.includes("Norwood 3") ? (
-                  <img 
-                    src="/images/norwood_scale_3.png" 
-                    alt={pattern.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : pattern.title.includes("Norwood 4") ? (
-                  <img 
-                    src="/images/norwood_scale_4.png" 
-                    alt={pattern.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : pattern.title.includes("Norwood 5-6") ? (
-                  <img 
-                    src="/images/norwood_scale_5.png" 
-                    alt={pattern.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : pattern.title.includes("Norwood 7") ? (
-                  <img 
-                    src="/images/norwood_scale_7.png" 
-                    alt={pattern.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : pattern.title.includes("Frauen") ? (
-                  <img 
-                    src="/images/frau_lichter_scheitel.png" 
-                    alt={pattern.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="h-full w-full flex items-center justify-center">
-                    <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
+          {patterns.map((pattern, index) => {
+            const isHovered = index === hoverPattern;
+            const patternImage = getPatternImage(pattern.title);
+            
+            return (
+              <div 
+                key={index} 
+                className="group relative"
+                onMouseEnter={() => setHoverPattern(index)}
+                onMouseLeave={() => setHoverPattern(null)}
+              >
+                {/* Card with glass morphism effect */}
+                <div className={`relative h-full bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${
+                  isHovered 
+                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
+                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+                }`}>
+                  {/* Pattern Image with background gradient */}
+                  <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10`}>
+                    {patternImage ? (
+                      <img 
+                        src={patternImage}
+                        alt={pattern.title}
+                        className={`w-full h-full object-cover transition-all duration-700 ${
+                          isHovered ? 'scale-105' : 'scale-100'
+                        }`}
+                      />
+                    ) : (
+                      <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5">
+                        <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
+                      </div>
+                    )}
+                    
+                    {/* Pattern title overlay with dark background for better readability */}
+                    <div className="absolute bottom-0 left-0 right-0 p-5 text-white bg-gradient-to-t from-black/50 to-transparent">
+                      <h3 className="text-xl font-light drop-shadow-md">{pattern.title}</h3>
+                    </div>
                   </div>
-                )}
-              </div>
-              
-              {/* Pattern title - fixed height header */}
-              <div className="w-full p-4 bg-[#7BA7C2] h-[60px] flex items-center justify-center">
-                <h3 className="text-lg font-light text-white text-center line-clamp-2">{pattern.title}</h3>
-              </div>
-              
-              {/* Pattern Content */}
-              <div className="p-5 bg-gradient-to-b from-gray-50 to-white">
-                {/* Description */}
-                <p className="text-sm text-gray-600 font-light mb-5 leading-relaxed">
-                  {pattern.description}
-                </p>
-                
-                {/* Dividing line with gradient */}
-                <div className="h-px bg-gradient-to-r from-transparent via-[#7BA7C2]/30 to-transparent my-4"></div>
-                
-                {/* Pattern Details with improved styling */}
-                <div className="grid grid-cols-2 gap-6 mt-4">
-                  <div className="bg-[#7BA7C2]/5 rounded-lg p-3">
-                    <h4 className="text-xs text-[#7BA7C2] font-light mb-1 uppercase tracking-wider">{t('hairLossPatternsSection.typicalGrafts')}</h4>
-                    <p className="text-lg text-[#7BA7C2] font-light">{pattern.grafts}</p>
-                  </div>
-                  <div className="bg-[#7BA7C2]/5 rounded-lg p-3">
-                    <h4 className="text-xs text-[#7BA7C2] font-light mb-1 uppercase tracking-wider">{t('hairLossPatternsSection.treatment')}</h4>
-                    <p className="text-lg text-[#7BA7C2] font-light">{pattern.treatment}</p>
+                  
+                  {/* Pattern Content */}
+                  <div className="p-6">
+                    {/* Description */}
+                    <p className="text-sm text-gray-600 font-light mb-6 leading-relaxed">
+                      {pattern.description}
+                    </p>
+                    
+                    {/* Pattern Details */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className={`rounded-xl p-4 transition-all duration-300 ${
+                        isHovered 
+                          ? 'bg-[#7BA7C2]/10' 
+                          : 'bg-[#7BA7C2]/5'
+                      }`}>
+                        <h4 className="text-xs text-[#7BA7C2] font-medium mb-1 uppercase tracking-wider">
+                          {t('hairLossPatternsSection.typicalGrafts')}
+                        </h4>
+                        <p className="text-lg text-[#7BA7C2] font-light">{pattern.grafts}</p>
+                      </div>
+                      <div className={`rounded-xl p-4 transition-all duration-300 ${
+                        isHovered 
+                          ? 'bg-[#7BA7C2]/10' 
+                          : 'bg-[#7BA7C2]/5'
+                      }`}>
+                        <h4 className="text-xs text-[#7BA7C2] font-medium mb-1 uppercase tracking-wider">
+                          {t('hairLossPatternsSection.treatment')}
+                        </h4>
+                        <p className="text-lg text-[#7BA7C2] font-light">{pattern.treatment}</p>
+                      </div>
+                    </div>
+                    
+                    {/* Subtle indicator */}
+                    <div className={`mt-6 flex items-center justify-end text-xs text-[#7BA7C2] transition-opacity duration-300 ${
+                      isHovered ? 'opacity-100' : 'opacity-0'
+                    }`}>
+                      <span className="mr-1 font-light">Ideal für Ihren Haartyp</span>
+                      <ChevronRight className="w-3 h-3" />
+                    </div>
                   </div>
                 </div>
+                
+                {/* Decorative elements */}
+                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
+                  isHovered ? 'opacity-70' : 'opacity-0'
+                }`}></div>
               </div>
+            );
+          })}
+        </div>
+        
+        {/* Additional information */}
+        <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
+          <div className="flex flex-col md:flex-row items-start gap-8">
+            <div className="md:w-1/3">
+              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Individuelle Beratung</h3>
+              <p className="text-gray-600 font-light">
+                Jedes Haarausfallmuster ist einzigartig und erfordert eine individuelle Behandlungsstrategie. 
+                In einem persönlichen Beratungsgespräch analysieren wir Ihr spezifisches Muster und entwickeln 
+                einen maßgeschneiderten Behandlungsplan.
+              </p>
             </div>
-          ))}
+            <div className="md:w-1/3">
+              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Modernste Techniken</h3>
+              <p className="text-gray-600 font-light">
+                Unsere fortschrittlichen Transplantationstechniken ermöglichen es uns, selbst bei fortgeschrittenem 
+                Haarausfall natürlich aussehende Ergebnisse zu erzielen. Wir passen die Methode an Ihr 
+                individuelles Haarausfallmuster an.
+              </p>
+            </div>
+            <div className="md:w-1/3">
+              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Langfristige Ergebnisse</h3>
+              <p className="text-gray-600 font-light">
+                Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige 
+                Ergebnisse. Wir berücksichtigen den zukünftigen Haarverlust und planen die Behandlung entsprechend.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
