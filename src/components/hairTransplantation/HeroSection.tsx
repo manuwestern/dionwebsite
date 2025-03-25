@@ -17,15 +17,13 @@ const HeroSection: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden min-h-[800px] flex items-center">
-      {/* White background */}
-      <div className="absolute inset-0 bg-white z-0"></div>
-      
+        
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto px-4 pt-8 pb-0 relative z-10">
         <div className="flex flex-col items-center min-h-[600px]">
-          {/* Logo for mobile */}
+          {/* Logo for mobile - smaller size */}
           <div className="w-full flex justify-center mb-8 pt-16">
-            <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" className="h-24" />
+            <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" className="h-12" />
           </div>
           
           {/* Text content for mobile */}

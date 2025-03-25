@@ -50,8 +50,8 @@ const ProcessSection: React.FC = () => {
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100"
             >
-              {/* Step Number and Title */}
-              <div className="bg-gradient-to-r from-gray-50 to-white py-4 px-5 border-b border-gray-100">
+              {/* Step Number and Title - solid white background */}
+              <div className="bg-white py-4 px-5 border-b border-gray-100">
                 <div className="flex items-center">
                   <span className="text-[#333333] text-xl md:text-2xl font-light mr-3 opacity-70">
                     {step.number}
