@@ -31,13 +31,7 @@ const ProcessSection: React.FC = () => {
   }));
 
   return (
-    <section className="relative py-16 md:py-28 overflow-hidden" style={{ backgroundColor: 'white' }}>
-      {/* Solid white background to ensure the section is always white */}
-      <div className="absolute inset-0 bg-white z-0"></div>
-      
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-50 to-white"></div>
-      
+    <section className="relative py-16 md:py-28 overflow-hidden bg-gray-100">
       {/* Content */}
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
