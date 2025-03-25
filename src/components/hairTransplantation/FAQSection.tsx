@@ -25,7 +25,7 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-100 bg-size-200 animate-gradient-slow py-16 md:py-28 min-h-[800px] flex items-center">
+    <div className="bg-gray-50 py-16 md:py-28 min-h-[800px] flex items-center">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('faqSection.title')}</h2>

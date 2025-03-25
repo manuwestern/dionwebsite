@@ -71,7 +71,7 @@ const HolisticConceptSection: React.FC = () => {
   ];
 
   return (
-    <div className="relative py-16 md:py-28 overflow-hidden min-h-[800px] flex items-center">
+    <div className="relative py-16 md:py-28 overflow-hidden min-h-[800px] flex items-center bg-white">
       {/* Background with gradient overlay */}
       <div 
         className="absolute inset-0 z-0"

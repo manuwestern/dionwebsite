@@ -31,28 +31,10 @@ const ProcessSection: React.FC = () => {
   }));
 
   return (
-    <div 
-      className="relative py-16 md:py-28 overflow-hidden min-h-[800px] flex items-center bg-gradient-to-b from-gray-50 to-white"
-      style={{ transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)' }}
-    >
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-50 to-white"></div>
+    <section className="relative py-16 md:py-28 overflow-hidden bg-gray-100">
+    
       
-      {/* Background pattern with very low opacity */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{ 
-          backgroundImage: 'url("/images/bg_abstrakt.webp")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.1
-        }}
-      ></div>
-      
-      {/* Overlay div for darkening effect - this is specifically used by scrollEffects.ts */}
-      <div className="bg-overlay absolute inset-0 bg-black opacity-0 transition-opacity duration-800 ease-in-out pointer-events-none z-1"></div>
-      
+      {/* Content */}
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('processSection.title')}</h2>
@@ -95,10 +77,8 @@ const ProcessSection: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* No arrows or lines as requested */}
       </div>
-    </div>
+    </section>
   );
 };
 
