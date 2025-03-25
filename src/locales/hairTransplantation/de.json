@@ -92,6 +92,36 @@
       }
     ]
   },
+  "benefitsSection": {
+    "title": "Warum Dion Hair Clinic?",
+    "subtitle": "Die Vorteile einer Haartransplantation bei uns",
+    "cards": [
+      {
+        "title": "Erfahrenes Expertenteam",
+        "description": "Unser Team besteht aus hochqualifizierten Spezialisten mit jahrelanger Erfahrung in der Haartransplantation, die regelmäßig an Fortbildungen teilnehmen."
+      },
+      {
+        "title": "Modernste Verfahren",
+        "description": "Wir setzen auf innovative Techniken wie Saphir-FUE und DHI, die präzisere Ergebnisse, schnellere Heilung und natürlicheres Aussehen ermöglichen."
+      },
+      {
+        "title": "Ganzheitliches Konzept",
+        "description": "Unser 360°-Ansatz umfasst nicht nur die Transplantation, sondern auch Haaranalyse, Ernährungsberatung und ergänzende Behandlungen für optimale Ergebnisse."
+      },
+      {
+        "title": "Individuelle Beratung",
+        "description": "Jeder Patient erhält einen maßgeschneiderten Behandlungsplan, der auf seine spezifischen Bedürfnisse, Haarstruktur und Wünsche abgestimmt ist."
+      },
+      {
+        "title": "Langzeitnachsorge",
+        "description": "Wir begleiten Sie auch nach dem Eingriff mit regelmäßigen Kontrollterminen und unterstützenden Behandlungen für langfristig beste Resultate."
+      },
+      {
+        "title": "Keine Auslandsreise nötig",
+        "description": "Genießen Sie höchste medizinische Standards in Deutschland ohne Sprachbarrieren, lange Reisen oder Risiken durch mangelnde Nachsorge im Ausland."
+      }
+    ]
+  },
   "processSection": {
     "title": "Der Behandlungsprozess",
     "subtitle": "Ihr Weg zu neuem Haar",

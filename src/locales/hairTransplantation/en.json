@@ -92,6 +92,36 @@
       }
     ]
   },
+  "benefitsSection": {
+    "title": "Why Choose Dion Hair Clinic?",
+    "subtitle": "The advantages of getting your hair transplantation with us",
+    "cards": [
+      {
+        "title": "Experienced Expert Team",
+        "description": "Our team consists of highly qualified specialists with years of experience in hair transplantation who regularly participate in advanced training."
+      },
+      {
+        "title": "Cutting-Edge Techniques",
+        "description": "We utilize innovative techniques like Sapphire FUE and DHI that enable more precise results, faster healing, and a more natural appearance."
+      },
+      {
+        "title": "Holistic Approach",
+        "description": "Our 360° approach includes not only the transplantation but also hair analysis, nutritional counseling, and complementary treatments for optimal results."
+      },
+      {
+        "title": "Personalized Consultation",
+        "description": "Each patient receives a tailored treatment plan that is customized to their specific needs, hair structure, and desires."
+      },
+      {
+        "title": "Long-Term Aftercare",
+        "description": "We support you even after the procedure with regular check-ups and supportive treatments for the best long-term results."
+      },
+      {
+        "title": "No Need to Travel Abroad",
+        "description": "Enjoy the highest medical standards in Germany without language barriers, long journeys, or risks due to inadequate aftercare abroad."
+      }
+    ]
+  },
   "processSection": {
     "title": "The Treatment Process",
     "subtitle": "Your path to new hair",
