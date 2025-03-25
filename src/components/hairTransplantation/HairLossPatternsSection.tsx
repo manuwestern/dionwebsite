@@ -90,17 +90,20 @@ const HairLossPatternsSection: React.FC = () => {
                   </div>
                   
                   {/* Pattern Content with grid layout for perfect alignment */}
-                  <div className="p-6 grid grid-rows-[120px_auto_30px] h-[280px]">
+                  <div className="px-8 py-7 grid grid-rows-[120px_auto_auto_30px] h-[280px]">
                     {/* Description with fixed height and scrolling if needed */}
-                    <div className="overflow-auto mb-6">
+                    <div className="overflow-auto pr-1 mb-3">
                       <p className="text-sm text-gray-600 font-light leading-relaxed">
                         {pattern.description}
                       </p>
                     </div>
                     
-                    {/* Pattern Details - always at the same position */}
-                    <div className="grid grid-cols-2 gap-4 self-start">
-                      <div className={`rounded-xl p-4 transition-all duration-300 h-[90px] flex flex-col justify-between ${
+                    {/* Elegant dividing line with subtle gradient */}
+                    <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7BA7C2]/25 to-transparent mb-3"></div>
+                    
+                    {/* Pattern Details - always at the same position with perfect spacing */}
+                    <div className="grid grid-cols-2 gap-5 self-start mt-1">
+                      <div className={`rounded-xl p-4 transition-all duration-300 h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
@@ -110,7 +113,7 @@ const HairLossPatternsSection: React.FC = () => {
                         </h4>
                         <p className="text-lg text-[#7BA7C2] font-light">{pattern.grafts}</p>
                       </div>
-                      <div className={`rounded-xl p-4 transition-all duration-300 h-[90px] flex flex-col justify-between ${
+                      <div className={`rounded-xl p-4 transition-all duration-300 h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
