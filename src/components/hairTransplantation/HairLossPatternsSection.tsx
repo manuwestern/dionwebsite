@@ -8,8 +8,18 @@ const HairLossPatternsSection: React.FC = () => {
   const patterns = t('hairLossPatternsSection.patterns', { returnObjects: true }) as any[];
 
   return (
-    <div className="bg-gray-100 py-16 md:py-24 relative">
-      <div className="w-full max-w-7xl mx-auto px-4">
+    <div className="bg-gradient-to-b from-gray-100 to-gray-50 py-16 md:py-24 relative">
+      {/* Subtle background pattern */}
+      <div 
+        className="absolute inset-0 opacity-5 z-0" 
+        style={{ 
+          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
+          backgroundSize: '200px',
+          backgroundRepeat: 'repeat'
+        }}
+      ></div>
+      
+      <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">
             {t('hairLossPatternsSection.title')}
@@ -24,10 +34,10 @@ const HairLossPatternsSection: React.FC = () => {
           {patterns.map((pattern, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl overflow-hidden shadow-lg"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100"
             >
               {/* Pattern Image */}
-              <div className="h-64 bg-white overflow-hidden border-b border-gray-200">
+              <div className="h-64 bg-gradient-to-t from-[#7BA7C2]/30 to-transparent overflow-hidden border-b border-gray-100 relative">
                 {pattern.title.includes("Norwood 1-2") ? (
                   <img 
                     src="/images/norwood_scale_1.png" 
@@ -75,7 +85,7 @@ const HairLossPatternsSection: React.FC = () => {
               <div className="p-4 bg-white relative h-[250px]">
                 {/* Title and description at the top with fixed position */}
                 <div className="absolute top-4 left-4 right-4 h-[100px]">
-                  <h3 className="text-xl font-medium text-gray-800 mb-2 text-center md:text-left">{pattern.title}</h3>
+                  <h3 className="text-xl font-light text-gray-800 mb-2 text-center md:text-left">{pattern.title}</h3>
                   <p className="text-gray-600 font-light text-center md:text-left">
                     {pattern.description}
                   </p>
@@ -88,12 +98,12 @@ const HairLossPatternsSection: React.FC = () => {
                 <div className="absolute top-[160px] left-4 right-4 h-[90px]">
                   <div className="grid grid-cols-2 gap-4 text-sm pt-4">
                     <div className="text-center">
-                      <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
-                      <p className="text-gray-800 font-medium">{pattern.grafts}</p>
+                      <h4 className="text-gray-500 font-light mb-1">{t('hairLossPatternsSection.typicalGrafts')}:</h4>
+                      <p className="text-[#7BA7C2] font-light">{pattern.grafts}</p>
                     </div>
                     <div className="text-center">
-                      <h4 className="text-gray-500 font-medium mb-1">{t('hairLossPatternsSection.treatment')}:</h4>
-                      <p className="text-gray-800 font-medium">{pattern.treatment}</p>
+                      <h4 className="text-gray-500 font-light mb-1">{t('hairLossPatternsSection.treatment')}:</h4>
+                      <p className="text-[#7BA7C2] font-light">{pattern.treatment}</p>
                     </div>
                   </div>
                 </div>

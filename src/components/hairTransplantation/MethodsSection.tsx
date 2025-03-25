@@ -9,8 +9,18 @@ const MethodsSection: React.FC = () => {
   const methods = t('methodsSection.methods', { returnObjects: true }) as any[];
 
   return (
-    <div className="bg-white py-16 md:py-24 relative">
-      <div className="w-full max-w-7xl mx-auto px-4">
+    <div className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 relative">
+      {/* Subtle background pattern */}
+      <div 
+        className="absolute inset-0 opacity-5 z-0" 
+        style={{ 
+          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
+          backgroundSize: '200px',
+          backgroundRepeat: 'repeat'
+        }}
+      ></div>
+      
+      <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('methodsSection.title')}</h2>
           <p className="text-base text-gray-600 font-light md:text-xl">
@@ -34,10 +44,10 @@ const MethodsSection: React.FC = () => {
                   />
                 </div>
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#7BA7C2]/80 to-transparent"></div>
                 {/* Title overlay at bottom of image */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="text-2xl font-medium">{method.title}</h3>
+                  <h3 className="text-2xl font-light">{method.title}</h3>
                   <p className="text-sm text-gray-100 font-light">{method.subtitle}</p>
                 </div>
               </div>
@@ -53,12 +63,12 @@ const MethodsSection: React.FC = () => {
                 
                 {/* Benefits section */}
                 <div>
-                  <h4 className="text-lg font-medium mb-4 border-b pb-2 border-gray-100">Vorteile:</h4>
+                  <h4 className="text-lg font-light mb-4 border-b pb-2 border-gray-100">Vorteile:</h4>
                   <ul className="grid gap-2">
                     {method.benefits.map((benefit: string, i: number) => (
                       <li key={i} className="flex items-start">
                         <div className="mr-3 flex-shrink-0 mt-1">
-                          <Check className="h-4 w-4 text-[#333333]" />
+                          <Check className="h-4 w-4 text-[#7BA7C2]" />
                         </div>
                         <span className="text-gray-700">{benefit}</span>
                       </li>
@@ -68,11 +78,11 @@ const MethodsSection: React.FC = () => {
                 
                 {/* Process section */}
                 <div>
-                  <h4 className="text-lg font-medium mb-4 border-b pb-2 border-gray-100">Prozess:</h4>
+                  <h4 className="text-lg font-light mb-4 border-b pb-2 border-gray-100">Prozess:</h4>
                   <ol className="grid gap-2">
                     {method.process.map((step: string, i: number) => (
                       <li key={i} className="flex items-start">
-                        <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#333333] text-white flex items-center justify-center font-light">
+                        <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#7BA7C2] text-white flex items-center justify-center font-light">
                           {i + 1}
                         </div>
                         <span className="text-gray-700">{step}</span>
@@ -84,7 +94,7 @@ const MethodsSection: React.FC = () => {
                 {/* Ideal for section */}
                 <div className="text-center">
                   <div className="pt-4 border-t border-gray-100">
-                    <span className="inline-block px-4 py-2 bg-gray-50 rounded-full text-sm font-medium text-gray-700">
+                    <span className="inline-block px-4 py-2 bg-[#7BA7C2]/10 rounded-full text-sm font-light text-[#7BA7C2]">
                       {method.idealFor}
                     </span>
                   </div>

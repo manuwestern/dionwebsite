@@ -11,14 +11,14 @@ interface BenefitCard {
 const BenefitsSection: React.FC = () => {
   const { t } = useTranslation(['hairTransplantation', 'common']);
 
-  // Icons for each benefit
+  // Icons for each benefit with accent color
   const benefitIcons = [
-    <Users className="w-6 h-6 text-white" />,
-    <Zap className="w-6 h-6 text-white" />,
-    <Compass className="w-6 h-6 text-white" />,
-    <UserCheck className="w-6 h-6 text-white" />,
-    <Clock className="w-6 h-6 text-white" />,
-    <MapPin className="w-6 h-6 text-white" />
+    <Users className="w-8 h-8 text-white" />,
+    <Zap className="w-8 h-8 text-white" />,
+    <Compass className="w-8 h-8 text-white" />,
+    <UserCheck className="w-8 h-8 text-white" />,
+    <Clock className="w-8 h-8 text-white" />,
+    <MapPin className="w-8 h-8 text-white" />
   ];
 
   // Get benefits from translation
@@ -32,7 +32,17 @@ const BenefitsSection: React.FC = () => {
 
   return (
     <div className="bg-white py-16 md:py-24 relative">
-      <div className="w-full max-w-7xl mx-auto px-4">
+      {/* Subtle background pattern */}
+      <div 
+        className="absolute inset-0 opacity-5 z-0" 
+        style={{ 
+          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
+          backgroundSize: '200px',
+          backgroundRepeat: 'repeat'
+        }}
+      ></div>
+      
+      <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('benefitsSection.title')}</h2>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto">
@@ -40,38 +50,46 @@ const BenefitsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Benefits Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Benefits Cards Grid - Staggered layout for visual interest */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {benefitCards.map((card, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 h-full"
+              className={`bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100 h-full transform hover:-translate-y-1 ${index % 3 === 1 ? 'md:mt-6' : ''}`}
               data-exclude-from-effect="true"
             >
-              <div className="flex h-full">
-                {/* Gray placeholder image with icon - takes up 25% of the card width */}
-                <div className="w-1/4 bg-gray-300 flex flex-col items-center justify-center">
-                  {/* Icon in circle */}
-                  <div className="w-12 h-12 rounded-full bg-[#333333] flex items-center justify-center mb-2">
-                    {card.icon}
+              <div className="flex flex-col h-full">
+                {/* Gradient header with icon and title in the same row */}
+                <div className="w-full p-4 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/70 flex items-center">
+                  {/* Icon in white circle */}
+                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mr-3 flex-shrink-0">
+                    {React.cloneElement(card.icon as React.ReactElement, { className: "w-5 h-5 text-white" })}
                   </div>
-                  {/* Number indicator */}
-                  <span className="text-white text-sm font-light">{index + 1}</span>
+                  {/* Title */}
+                  <h3 className="text-lg font-light text-white">{card.title}</h3>
                 </div>
                 
-                {/* Content */}
-                <div className="w-3/4 p-5">
-                  <h3 className="text-lg font-medium text-gray-800 mb-2">{card.title}</h3>
-                  <p className="text-sm text-gray-600 font-light">{card.description}</p>
+                {/* Content with subtle pattern background */}
+                <div className="p-6 flex-grow bg-gradient-to-b from-gray-50 to-white relative">
+                  {/* Subtle pattern background */}
+                  <div className="absolute inset-0 opacity-5" 
+                    style={{ 
+                      backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
+                      backgroundSize: '100px',
+                      backgroundRepeat: 'repeat'
+                    }}>
+                  </div>
+                  {/* Description text */}
+                  <p className="text-sm text-gray-600 font-light leading-relaxed relative z-10">{card.description}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="mt-12 text-center">
-          <button className="inline-block bg-[#333333] text-white px-8 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider">
+        {/* CTA Button with t-shirt color */}
+        <div className="mt-16 text-center">
+          <button className="inline-block bg-[#7BA7C2] text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 text-base font-light tracking-wider transform hover:scale-105">
             {t('buttons.consultation', { ns: 'common' })}
           </button>
         </div>

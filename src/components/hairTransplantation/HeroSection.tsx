@@ -16,7 +16,16 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden min-h-[800px] flex items-center">
+    <div className="relative overflow-hidden min-h-[800px] flex items-center bg-gradient-to-b from-gray-50 to-white">
+      {/* Subtle background pattern */}
+      <div 
+        className="absolute inset-0 opacity-5 z-0" 
+        style={{ 
+          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
+          backgroundSize: '200px',
+          backgroundRepeat: 'repeat'
+        }}
+      ></div>
         
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto px-4 pt-8 pb-0 relative z-10">
@@ -42,7 +51,7 @@ const HeroSection: React.FC = () => {
           
           {/* Button above the image */}
           <div className="w-full flex justify-center mb-8">
-            <button className="inline-block bg-[#333333] text-white px-6 py-2.5 rounded-lg hover:bg-[#444444] transition-colors text-xs font-light tracking-wider">
+            <button className="inline-block bg-[#7BA7C2] text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all duration-300 text-xs font-light tracking-wider transform hover:scale-105">
               {t('buttons.consultation', { ns: 'common' })}
             </button>
           </div>
@@ -90,7 +99,7 @@ const HeroSection: React.FC = () => {
             </p>
             
             <div className="mt-8 flex justify-start">
-              <button className="inline-block bg-[#333333] text-white px-8 py-3 rounded-lg hover:bg-[#444444] transition-colors text-sm font-light tracking-wider">
+              <button className="inline-block bg-[#7BA7C2] text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-light tracking-wider transform hover:scale-105">
                 {t('buttons.consultation', { ns: 'common' })}
               </button>
             </div>

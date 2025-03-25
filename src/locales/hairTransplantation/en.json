@@ -144,6 +144,49 @@
       }
     ]
   },
+  "testimonialsSection": {
+    "title": "Success Stories from Our Patients",
+    "subtitle": "Testimonials and Results",
+    "intro": "Our patients share their experiences and results after hair transplantation at Dion Hair Clinic.",
+    "testimonials": [
+      {
+        "name": "Michael K., 42",
+        "rating": 5,
+        "text": "After years of hair loss, I decided to get a hair transplantation at Dion Hair Clinic. The result exceeded my expectations. The team was professional and empathetic, and I feel confident again.",
+        "procedure": "Sapphire FUE, 2,800 Grafts",
+        "date": "March 2024"
+      },
+      {
+        "name": "Thomas S., 38",
+        "rating": 5,
+        "text": "The consultation was thorough and honest. Dr. Dion explained exactly what was possible and what wasn't. After the treatment, I received excellent care. The result looks completely natural - no one would suspect I had a hair transplantation.",
+        "procedure": "DHI Technique, 2,200 Grafts",
+        "date": "January 2024"
+      },
+      {
+        "name": "Sandra M., 45",
+        "rating": 5,
+        "text": "As a woman, it was particularly important for me to find a specialist with experience in female hair loss. At Dion Hair Clinic, I felt in good hands from the beginning. The treatment was painless and the results are fantastic.",
+        "procedure": "Sapphire FUE, 1,800 Grafts",
+        "date": "November 2023"
+      }
+    ],
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfied Patients"
+      },
+      {
+        "value": "5,000+",
+        "label": "Successful Treatments"
+      },
+      {
+        "value": "15+",
+        "label": "Years of Experience"
+      }
+    ],
+    "cta": "Schedule your free consultation now"
+  },
   "faqSection": {
     "title": "Frequently Asked Questions",
     "subtitle": "Answers to your questions about hair transplantation",
