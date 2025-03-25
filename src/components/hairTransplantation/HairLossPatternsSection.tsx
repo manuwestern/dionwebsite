@@ -83,45 +83,47 @@ const HairLossPatternsSection: React.FC = () => {
                       </div>
                     )}
                     
-                    {/* Pattern title overlay with dark background for better readability */}
-                    <div className="absolute bottom-0 left-0 right-0 p-5 text-white bg-gradient-to-t from-black/50 to-transparent">
-                      <h3 className="text-xl font-light drop-shadow-md">{pattern.title}</h3>
+                    {/* Pattern title overlay with fixed height for consistent multi-line titles */}
+                    <div className="absolute bottom-0 left-0 right-0 py-6 px-5 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center">
+                      <h3 className="text-xl font-light drop-shadow-md leading-tight">{pattern.title}</h3>
                     </div>
                   </div>
                   
-                  {/* Pattern Content */}
-                  <div className="p-6">
-                    {/* Description */}
-                    <p className="text-sm text-gray-600 font-light mb-6 leading-relaxed">
-                      {pattern.description}
-                    </p>
+                  {/* Pattern Content with grid layout for perfect alignment */}
+                  <div className="p-6 grid grid-rows-[120px_auto_30px] h-[280px]">
+                    {/* Description with fixed height and scrolling if needed */}
+                    <div className="overflow-auto mb-6">
+                      <p className="text-sm text-gray-600 font-light leading-relaxed">
+                        {pattern.description}
+                      </p>
+                    </div>
                     
-                    {/* Pattern Details */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className={`rounded-xl p-4 transition-all duration-300 ${
+                    {/* Pattern Details - always at the same position */}
+                    <div className="grid grid-cols-2 gap-4 self-start">
+                      <div className={`rounded-xl p-4 transition-all duration-300 h-[90px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className="text-xs text-[#7BA7C2] font-medium mb-1 uppercase tracking-wider">
+                        <h4 className="text-xs text-[#7BA7C2] font-medium uppercase tracking-wider">
                           {t('hairLossPatternsSection.typicalGrafts')}
                         </h4>
                         <p className="text-lg text-[#7BA7C2] font-light">{pattern.grafts}</p>
                       </div>
-                      <div className={`rounded-xl p-4 transition-all duration-300 ${
+                      <div className={`rounded-xl p-4 transition-all duration-300 h-[90px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className="text-xs text-[#7BA7C2] font-medium mb-1 uppercase tracking-wider">
+                        <h4 className="text-xs text-[#7BA7C2] font-medium uppercase tracking-wider">
                           {t('hairLossPatternsSection.treatment')}
                         </h4>
                         <p className="text-lg text-[#7BA7C2] font-light">{pattern.treatment}</p>
                       </div>
                     </div>
                     
-                    {/* Subtle indicator */}
-                    <div className={`mt-6 flex items-center justify-end text-xs text-[#7BA7C2] transition-opacity duration-300 ${
+                    {/* Subtle indicator - always at the bottom */}
+                    <div className={`flex items-center justify-end text-xs text-[#7BA7C2] transition-opacity duration-300 self-end ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
                       <span className="mr-1 font-light">Ideal für Ihren Haartyp</span>
