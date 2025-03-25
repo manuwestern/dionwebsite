@@ -15,6 +15,9 @@ interface ConceptStep {
 
 const HolisticConceptSection: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
+  // These values can be easily edited to change the animated ring appearance
+  const ringDiameter = 200; // Diameter of the animated ring in pixels (exactly matching the 200px center circle)
+  const ringWidth = 4; // Width of the animated ring in pixels
 
   // Create concept steps with icons and angles for circular positioning
   // Evenly spaced at 72-degree intervals (360 / 5 = 72)
@@ -102,22 +105,14 @@ const HolisticConceptSection: React.FC = () => {
         <div className="hidden md:block relative">
           {/* Container with fixed size */}
           <div className="relative mx-auto w-[800px] h-[800px]">
-            {/* Outer decorative circles */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[700px] h-[700px] rounded-full border-2 border-gray-100 opacity-70 animate-pulse"></div>
-            </div>
-            
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[600px] h-[600px] rounded-full border-2 border-gray-200 opacity-80"></div>
-            </div>
-            
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[500px] h-[500px] rounded-full border-2 border-gray-300 opacity-60"></div>
-            </div>
-            
-            {/* Center circle */}
+            {/* Center circle with animated ring */}
             <div className="absolute inset-0 flex items-center justify-center z-20">
-              <div className="w-[200px] h-[200px] rounded-full bg-white shadow-lg flex items-center justify-center">
+              <div 
+                className="w-[200px] h-[200px] rounded-full bg-white shadow-lg flex items-center justify-center center-circle-with-ring"
+                style={{
+                  '--ring-width': `${ringWidth}px`
+                } as React.CSSProperties}
+              >
                 <div className="text-center p-4">
                   <h3 className="text-2xl font-light text-gray-800 mb-2">Dion 360°</h3>
                   <div className="w-16 h-[1px] bg-gray-300 mx-auto mb-2"></div>
