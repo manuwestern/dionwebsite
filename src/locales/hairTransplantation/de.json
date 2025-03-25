@@ -187,6 +187,53 @@
     ],
     "cta": "Vereinbaren Sie jetzt Ihr kostenloses Beratungsgespräch"
   },
+  "careSection": {
+    "title": "Dion Hair Clinic Care+",
+    "subtitle": "Ihr persönlicher Begleiter für eine optimale Vor- und Nachsorge",
+    "description": "Mit Dion Hair Clinic Care+ bieten wir Ihnen eine umfassende Smartphone-App, die Sie durch den gesamten Prozess Ihrer Haartransplantation führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.",
+    "subheading": "Ihr persönlicher Begleiter für den gesamten Behandlungsprozess",
+    "features": [
+      {
+        "title": "Terminplanung",
+        "description": "Alle wichtigen Termine vor und nach der Behandlung im Überblick"
+      },
+      {
+        "title": "Checklisten",
+        "description": "Personalisierte To-Do-Listen für optimale Vor- und Nachsorge"
+      },
+      {
+        "title": "Anleitungen",
+        "description": "Detaillierte Pflegeanleitungen, z.B. zur Haarwäsche nach der Transplantation"
+      },
+      {
+        "title": "Fortschrittsdokumentation",
+        "description": "Dokumentieren Sie Ihren Wachstumsverlauf mit Fotos und Notizen"
+      },
+      {
+        "title": "Erinnerungen",
+        "description": "Automatische Benachrichtigungen für wichtige Pflegeschritte"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Zugriff auf alle Funktionen über unsere benutzerfreundliche App"
+      }
+    ],
+    "appContent": {
+      "progress": "Ihr Fortschritt",
+      "day1": "Tag 1",
+      "month3": "3 Monate",
+      "month12": "12 Monate",
+      "todayTasks": "Heutige Aufgaben",
+      "task1": "Sanfte Haarwäsche mit speziellem Shampoo",
+      "task2": "Feuchtigkeitsspray anwenden",
+      "task3": "Fortschrittsfoto aufnehmen",
+      "nextAppointment": "Nächster Termin",
+      "appointmentDetails": "Kontrolluntersuchung: 15. April 2025, 14:00 Uhr"
+    },
+    "appStoreInfo": "Verfügbar für Android und iPhone – Laden Sie die App kostenlos im Google Play Store oder Apple App Store herunter.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
     "subtitle": "Antworten auf Ihre Fragen zur Haartransplantation",

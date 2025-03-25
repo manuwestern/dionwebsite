@@ -187,6 +187,53 @@
     ],
     "cta": "Schedule your free consultation now"
   },
+  "careSection": {
+    "title": "Dion Hair Clinic Care+",
+    "subtitle": "Your personal companion for optimal pre and post-care",
+    "description": "With Dion Hair Clinic Care+, we offer you a comprehensive smartphone app that guides you through the entire process of your hair transplantation - from preparation to the procedure to long-term aftercare.",
+    "subheading": "Your personal companion throughout the entire treatment process",
+    "features": [
+      {
+        "title": "Appointment Planning",
+        "description": "Overview of all important appointments before and after treatment"
+      },
+      {
+        "title": "Checklists",
+        "description": "Personalized to-do lists for optimal pre and post-care"
+      },
+      {
+        "title": "Instructions",
+        "description": "Detailed care instructions, e.g., for hair washing after transplantation"
+      },
+      {
+        "title": "Progress Documentation",
+        "description": "Document your growth progress with photos and notes"
+      },
+      {
+        "title": "Reminders",
+        "description": "Automatic notifications for important care steps"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Access to all functions via our user-friendly app"
+      }
+    ],
+    "appContent": {
+      "progress": "Your Progress",
+      "day1": "Day 1",
+      "month3": "3 Months",
+      "month12": "12 Months",
+      "todayTasks": "Today's Tasks",
+      "task1": "Gentle hair wash with special shampoo",
+      "task2": "Apply moisture spray",
+      "task3": "Take progress photo",
+      "nextAppointment": "Next Appointment",
+      "appointmentDetails": "Check-up: April 15, 2025, 2:00 PM"
+    },
+    "appStoreInfo": "Available for Android and iPhone – Download the app for free from the Google Play Store or Apple App Store.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
   "faqSection": {
     "title": "Frequently Asked Questions",
     "subtitle": "Answers to your questions about hair transplantation",

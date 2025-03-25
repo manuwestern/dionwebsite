@@ -5,6 +5,7 @@ import TestimonialsSection from '../components/hairTransplantation/TestimonialsS
 import MethodsSection from '../components/hairTransplantation/MethodsSection';
 import HairLossPatternsSection from '../components/hairTransplantation/HairLossPatternsSection';
 import ProcessSection from '../components/hairTransplantation/ProcessSection';
+import CareSection from '../components/hairTransplantation/CareSection';
 import FAQSection from '../components/hairTransplantation/FAQSection';
 import ContactSection from '../components/layout/ContactSection';
 
@@ -82,6 +83,10 @@ const HairTransplantationPage: React.FC = () => {
       
       <SectionWrapper type="light">
         <ProcessSection />
+      </SectionWrapper>
+      
+      <SectionWrapper type="medium">
+        <CareSection />
       </SectionWrapper>
       
       <SectionWrapper type="accent">
