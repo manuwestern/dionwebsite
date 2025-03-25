@@ -31,8 +31,12 @@ const ProcessSection: React.FC = () => {
   }));
 
   return (
-    <section className="relative py-16 md:py-28 overflow-hidden bg-gray-100">
-    
+    <section className="relative py-16 md:py-28 overflow-hidden" style={{ backgroundColor: 'white' }}>
+      {/* Solid white background to ensure the section is always white */}
+      <div className="absolute inset-0 bg-white z-0"></div>
+      
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-50 to-white"></div>
       
       {/* Content */}
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
@@ -49,6 +53,7 @@ const ProcessSection: React.FC = () => {
             <div 
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100"
+              data-exclude-from-effect="true"
             >
               {/* Step Number and Title - solid white background */}
               <div className="bg-white py-4 px-5 border-b border-gray-100">
