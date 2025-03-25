@@ -55,15 +55,6 @@ const TestimonialsSection: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 relative">
-      {/* Subtle background pattern */}
-      <div 
-        className="absolute inset-0 opacity-5 z-0" 
-        style={{ 
-          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-          backgroundSize: '200px',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
