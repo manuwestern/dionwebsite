@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Quote, ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 interface Testimonial {
   name: string;
@@ -18,6 +18,22 @@ interface Stat {
 const TestimonialsSection: React.FC = () => {
   const { t } = useTranslation(['hairTransplantation', 'common']);
   const [activeBeforeAfter, setActiveBeforeAfter] = useState(0);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hoverStat, setHoverStat] = useState<number | null>(null);
+
+  // Trigger entrance animations
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Get testimonials from translation
   const testimonials: Testimonial[] = (t('testimonialsSection.testimonials', { returnObjects: true }) as any[]).map(
@@ -54,12 +70,21 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 relative">
+    <section className="py-20 md:py-28 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -left-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('testimonialsSection.title')}</h2>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto">
+        {/* Section Header with elegant design */}
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4 relative">
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
+            <h2 className="text-3xl font-light md:text-5xl relative">{t('testimonialsSection.title')}</h2>
+            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 w-full"></div>
+          </div>
+          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
             {t('testimonialsSection.subtitle')}
           </p>
           <p className="text-base text-gray-700 font-light mt-4 max-w-3xl mx-auto">
@@ -67,98 +92,140 @@ const TestimonialsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Stats Section with accent color */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-xl shadow-md p-8 text-center transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 border border-gray-100"
-              data-exclude-from-effect="true"
-            >
-              <div className="text-5xl font-light text-[#7BA7C2] mb-3">{stat.value}</div>
-              <div className="text-gray-600 font-light">{stat.label}</div>
-            </div>
-          ))}
+        {/* Featured Testimonial Showcase removed as requested */}
+
+        {/* Stats Section with elegant cards */}
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {stats.map((stat, index) => {
+            const isHovered = index === hoverStat;
+            
+            return (
+              <div 
+                key={index}
+                className="relative group"
+                onMouseEnter={() => setHoverStat(index)}
+                onMouseLeave={() => setHoverStat(null)}
+              >
+                {/* Card with glass morphism effect */}
+                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full p-8 text-center ${
+                  isHovered 
+                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
+                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+                }`}>
+                  {/* Decorative circle */}
+                  <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 blur-xl transition-opacity duration-500 opacity-50 group-hover:opacity-100"></div>
+                  
+                  {/* Stat content */}
+                  <div className="relative z-10">
+                    <div className={`text-5xl font-light transition-all duration-500 ${
+                      isHovered ? 'text-[#5A8BA6]' : 'text-[#7BA7C2]'
+                    } mb-3`}>
+                      {stat.value}
+                    </div>
+                    <div className="text-gray-600 font-light">{stat.label}</div>
+                  </div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
+                  isHovered ? 'opacity-70' : 'opacity-0'
+                }`}></div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Before/After Slider with controls */}
-        <div className="mb-20 relative">
-          <h3 className="text-2xl font-light mb-6 text-center">Vorher / Nachher Ergebnisse</h3>
+        {/* Before/After Slider with elegant design */}
+        <div className={`mb-20 transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-light">Vorher / Nachher Ergebnisse</h3>
+            <div className="h-0.5 w-40 bg-gradient-to-r from-transparent via-[#7BA7C2]/25 to-transparent mx-auto mt-3"></div>
+          </div>
           
           <div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className={`${beforeAfterPairs[activeBeforeAfter].before} rounded-xl h-80 flex items-center justify-center relative overflow-hidden`}>
-                <span className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">Vorher</span>
-                <span className="text-white text-xl font-light">Vorher</span>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+                <div className={`${beforeAfterPairs[activeBeforeAfter].before} h-96 w-full transition-all duration-700 ease-in-out transform group-hover:scale-105`}>
+                  {/* Placeholder for actual image */}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">Vorher</div>
               </div>
-              <div className={`${beforeAfterPairs[activeBeforeAfter].after} rounded-xl h-80 flex items-center justify-center relative overflow-hidden`}>
-                <span className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">Nachher</span>
-                <span className="text-white text-xl font-light">Nachher</span>
+              
+              <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+                <div className={`${beforeAfterPairs[activeBeforeAfter].after} h-96 w-full transition-all duration-700 ease-in-out transform group-hover:scale-105`}>
+                  {/* Placeholder for actual image */}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">Nachher</div>
               </div>
             </div>
             
             {/* Navigation arrows */}
             <button 
               onClick={prevBeforeAfter}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100 transition-colors z-10"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center hover:bg-white transition-colors z-10 border border-gray-100"
               aria-label="Previous result"
             >
               <ChevronLeft className="w-6 h-6 text-gray-700" />
             </button>
             <button 
               onClick={nextBeforeAfter}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100 transition-colors z-10"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center hover:bg-white transition-colors z-10 border border-gray-100"
               aria-label="Next result"
             >
               <ChevronRight className="w-6 h-6 text-gray-700" />
             </button>
             
             {/* Dots indicator */}
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center mt-6">
               {beforeAfterPairs.map((_, index) => (
                 <button 
                   key={index}
                   onClick={() => setActiveBeforeAfter(index)}
-                  className={`w-3 h-3 rounded-full mx-1 ${activeBeforeAfter === index ? 'bg-[#7BA7C2]' : 'bg-gray-300'}`}
+                  className={`w-3 h-3 rounded-full mx-2 transition-all duration-300 ${
+                    activeBeforeAfter === index 
+                      ? 'bg-[#7BA7C2] scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
                   aria-label={`Go to result ${index + 1}`}
-                  title={`Result ${index + 1}`}
                 />
               ))}
             </div>
           </div>
         </div>
 
-        {/* Video section removed as requested */}
-
-        {/* Testimonials Grid - Staggered layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {/* Testimonials Grid - Elegant cards */}
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 h-full transform hover:-translate-y-1 ${index % 3 === 1 ? 'md:mt-6' : ''}`}
-              data-exclude-from-effect="true"
+              className="relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100/80 hover:border-[#7BA7C2]/30 transform hover:-translate-y-1 h-full"
             >
-              <div className="p-6 flex flex-col h-full">
-                {/* Quote Icon with accent color */}
-                <div className="mb-4 text-gradient">
-                  <div className="bg-[#7BA7C2] w-12 h-12 rounded-full flex items-center justify-center">
+              <div className="p-8 flex flex-col h-full relative">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 opacity-50"></div>
+                
+                {/* Quote Icon with elegant design */}
+                <div className="mb-6 relative z-10">
+                  <div className="bg-gradient-to-br from-[#7BA7C2] to-[#5A8BA6] w-12 h-12 rounded-full flex items-center justify-center shadow-md">
                     <Quote className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className="text-gray-700 font-light mb-6 flex-grow italic">"{testimonial.text}"</p>
+                <p className="text-gray-700 font-light mb-6 flex-grow italic relative z-10">"{testimonial.text}"</p>
                 
                 {/* Rating */}
-                <div className="flex mb-4">
+                <div className="flex mb-4 relative z-10">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
                   ))}
                 </div>
                 
                 {/* Patient Info */}
-                <div className="border-t border-gray-100 pt-4">
-                  <div className="font-light text-gray-800">{testimonial.name}</div>
+                <div className="border-t border-gray-100 pt-4 relative z-10">
+                  <div className="font-medium text-gray-800">{testimonial.name}</div>
                   <div className="text-sm text-[#7BA7C2]">{testimonial.procedure}</div>
                   <div className="text-sm text-gray-500">{testimonial.date}</div>
                 </div>
@@ -167,14 +234,36 @@ const TestimonialsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Button with accent color */}
-        <div className="text-center">
-          <button className="inline-block bg-[#7BA7C2] text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 text-base font-light tracking-wider transform hover:scale-105">
-            {t('testimonialsSection.cta')}
-          </button>
+        {/* CTA Section with elegant design */}
+        <div className={`relative transition-all duration-1000 delay-1200 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+              <div className="md:w-2/3">
+                <h3 className="text-2xl md:text-3xl font-light text-[#7BA7C2] mb-4">Werden Sie unser nächster Erfolgsfall</h3>
+                <p className="text-gray-600 font-light">
+                  Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation 
+                  Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von 
+                  unseren Experten beraten.
+                </p>
+              </div>
+              <div className="md:w-1/3 flex justify-center md:justify-end">
+                <button className="group relative inline-flex items-center justify-center px-10 py-4 rounded-xl bg-[#7BA7C2] text-white overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-[#6b97b2]">
+                  <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
+                  <span className="relative flex items-center font-light tracking-wider">
+                    {t('testimonialsSection.cta')}
+                    <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
