@@ -50,7 +50,7 @@ const ContactSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-light md:text-5xl mb-4">{t('contactSection.title')}</h2>
-          <div className="h-1 w-24 bg-[#7BA7C2] mx-auto mb-6"></div>
+          <div className="h-1 w-64 bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mx-auto mb-6"></div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-2xl mx-auto">
             Beginnen Sie Ihre Reise zu vollerem Haar mit einem persönlichen Gespräch.
             Unsere Experten stehen Ihnen für alle Fragen zur Verfügung.

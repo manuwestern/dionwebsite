@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
             
-            <div className={`h-0.5 w-20 bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent my-6 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+            <div className={`h-1 w-[400px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent my-6 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
             
             <p className={`text-base text-gray-700 font-light leading-relaxed mt-4 text-center max-w-2xl transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {t('heroSection.welcomeText')}
@@ -146,7 +146,7 @@ const HeroSection: React.FC = () => {
               </span>
             </h1>
             
-            <div className={`h-0.5 w-32 bg-gradient-to-r from-[#7BA7C2] to-transparent my-8 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+            <div className={`h-1 w-[400px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent my-8 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
             
             <p className={`text-lg text-gray-700 font-light leading-relaxed max-w-2xl transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {t('heroSection.welcomeText')}

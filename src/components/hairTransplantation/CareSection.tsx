@@ -46,7 +46,7 @@ const CareSection: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-block mb-3">
             <h2 className="text-3xl font-light md:text-5xl">Dion Hair Clinic Care<span className="text-[#7BA7C2]">+</span></h2>
-            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-2"></div>
+            <div className="h-1 w-[350px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-2 mx-auto"></div>
           </div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
             Ihr persönlicher Begleiter für eine optimale Vor- und Nachsorge

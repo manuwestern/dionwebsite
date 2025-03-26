@@ -72,7 +72,7 @@ const DPISection: React.FC = () => {
               <span className="text-xl md:text-2xl bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] inline-block text-transparent bg-clip-text ml-2">(DPI)</span>
             </h2>
             
-            <div className="h-1 w-32 bg-gradient-to-r from-[#7BA7C2] to-transparent mb-6"></div>
+            <div className="h-1 w-[400px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mb-6"></div>
             
             <p className="text-lg text-gray-600 font-light mb-8 leading-relaxed">
               Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. 

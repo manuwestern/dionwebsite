@@ -82,7 +82,7 @@ const TestimonialsSection: React.FC = () => {
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className="text-3xl font-light md:text-5xl relative">{t('testimonialsSection.title')}</h2>
-            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 w-full"></div>
+            <div className="h-1 w-[350px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-3 mx-auto"></div>
           </div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
             {t('testimonialsSection.subtitle')}

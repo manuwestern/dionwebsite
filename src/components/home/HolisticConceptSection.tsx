@@ -57,6 +57,7 @@ const HolisticConceptSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('holisticConceptSection.title')}</h2>
+          <div className="h-1 w-[350px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mx-auto mb-4"></div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto">
             {t('holisticConceptSection.subtitle')}
           </p>
