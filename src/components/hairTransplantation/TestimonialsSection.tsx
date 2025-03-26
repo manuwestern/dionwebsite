@@ -89,7 +89,7 @@ const TestimonialsSection: React.FC = () => {
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('testimonialsSection.subtitle')}
           </p>
-          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} mt-4 max-w-3xl mx-auto`}>
+          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mt-4 max-w-3xl mx-auto`}>
             {t('testimonialsSection.intro')}
           </p>
         </div>
@@ -124,7 +124,7 @@ const TestimonialsSection: React.FC = () => {
                     } mb-3`}>
                       {stat.value}
                     </div>
-                    <div className={`${textColor.medium} ${fontWeight.light}`}>{stat.label}</div>
+                    <div className={`${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{stat.label}</div>
                   </div>
                 </div>
                 
@@ -216,7 +216,7 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className={`${textColor.dark} ${fontWeight.light} mb-6 flex-grow italic relative z-10 text-center md:text-left`}>"{testimonial.text}"</p>
+                <p className={`${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left`}>"{testimonial.text}"</p>
                 
                 {/* Rating */}
                 <div className="flex justify-center md:justify-start mb-4 relative z-10">

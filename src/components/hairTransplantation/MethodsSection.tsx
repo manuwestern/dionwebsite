@@ -72,7 +72,7 @@ const MethodsSection: React.FC = () => {
                   {/* Method Content */}
                   <div className="p-4 sm:p-6 md:p-8">
                     {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed} mb-8`}>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
                       {method.description}
                     </p>
                     

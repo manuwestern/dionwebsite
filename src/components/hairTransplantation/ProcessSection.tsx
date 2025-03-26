@@ -154,7 +154,7 @@ const ProcessSection: React.FC = () => {
                     
                     {/* Description - full text without scrollbars */}
                     <div className="flex-grow">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left`}>
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
                         {step.description}
                       </p>
                     </div>
@@ -206,7 +206,7 @@ const ProcessSection: React.FC = () => {
                           }`}>
                             {item.title}
                           </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed}`}>
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                             {item.description}
                           </p>
                         </div>

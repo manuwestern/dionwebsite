@@ -152,7 +152,7 @@ const CareSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-1`}>{feature.title}</h4>
-                    <p className={`${fontSize.sm} ${textColor.medium}`}>{feature.description}</p>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{feature.description}</p>
                   </div>
                 </div>
               ))}

@@ -75,7 +75,7 @@ const ContactSection: React.FC = () => {
                 {isSubmitted ? (
                   <div className="bg-green-50 border border-green-100 rounded-xl p-8 text-center">
                     <h4 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-4`}>Vielen Dank für Ihre Anfrage!</h4>
-                    <p className={`${textStyle.bodyText} mb-6`}>
+                    <p className={`${textStyle.bodyText} ${lineHeight.relaxed} mb-6`}>
                       Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
                     </p>
                     <button 
@@ -185,7 +185,7 @@ const ContactSection: React.FC = () => {
                       <a href="tel:+491702637818" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
                         +49 170 2637818
                       </a>
-                      <p className={`${fontSize.sm} ${textColor.light} mt-1`}>
+                      <p className={`${fontSize.sm} ${textColor.light} ${lineHeight.relaxed} mt-1`}>
                         {t('contact.businessHours', { ns: 'common' })}
                       </p>
                     </div>
@@ -200,7 +200,7 @@ const ContactSection: React.FC = () => {
                       <a href="https://wa.me/491702637818" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
                         +49 170 2637818
                       </a>
-                      <p className={`${fontSize.sm} ${textColor.light} mt-1`}>
+                      <p className={`${fontSize.sm} ${textColor.light} ${lineHeight.relaxed} mt-1`}>
                         {t('contact.quickConsultation', { ns: 'common' })}
                       </p>
                     </div>
@@ -215,7 +215,7 @@ const ContactSection: React.FC = () => {
                       <a href="mailto:info@dionhairclinic.de" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
                         info@dionhairclinic.de
                       </a>
-                      <p className={`${fontSize.sm} ${textColor.light} mt-1`}>
+                      <p className={`${fontSize.sm} ${textColor.light} ${lineHeight.relaxed} mt-1`}>
                         {t('contact.responseTime', { ns: 'common' })}
                       </p>
                     </div>
@@ -224,7 +224,7 @@ const ContactSection: React.FC = () => {
                 
                 <div className="mt-12 pt-8 border-t border-[#7BA7C2]/20">
                   <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-3`}>{t('contactSection.address.title')}</h4>
-                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light}`}>
+                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                     {t('contactSection.address.line1')}<br />
                     {t('contactSection.address.line2')}<br />
                     {t('contactSection.address.line3')}<br />
