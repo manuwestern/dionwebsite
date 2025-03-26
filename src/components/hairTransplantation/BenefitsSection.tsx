@@ -44,14 +44,14 @@ const BenefitsSection: React.FC = () => {
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className="text-3xl font-light md:text-5xl relative">{t('benefitsSection.title')}</h2>
-            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 mx-auto"></div>
+            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 w-full"></div>
           </div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
             {t('benefitsSection.subtitle')}
           </p>
         </div>
 
-        {/* Benefits Cards Grid - Hexagonal layout for visual interest */}
+        {/* Benefits Cards Grid - Equal height cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {benefitCards.map((card, index) => {
             const isHovered = index === hoverCard;
@@ -59,7 +59,7 @@ const BenefitsSection: React.FC = () => {
             return (
               <div 
                 key={index}
-                className={`relative group ${index % 3 === 1 ? 'md:mt-12' : ''}`}
+                className="relative group"
                 onMouseEnter={() => setHoverCard(index)}
                 onMouseLeave={() => setHoverCard(null)}
               >
@@ -69,34 +69,32 @@ const BenefitsSection: React.FC = () => {
                     ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
                     : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
                 }`}>
-                  {/* Icon with gradient background */}
-                  <div className="relative h-32 overflow-hidden">
+                  {/* Header with icon and title side by side */}
+                  <div className="relative h-20 overflow-hidden flex items-center">
                     {/* Gradient background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#7BA7C2] to-[#7BA7C2]/80"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/80"></div>
                     
                     {/* Decorative circles */}
                     <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/10 -mr-20 -mt-20"></div>
                     <div className="absolute bottom-0 left-0 w-20 h-20 rounded-full bg-white/10 -ml-10 -mb-10"></div>
                     
                     {/* Icon container */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className={`w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-500 ${
+                    <div className="relative z-10 ml-6 mr-4">
+                      <div className={`w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-500 ${
                         isHovered ? 'scale-110 bg-white/30' : ''
                       }`}>
                         {React.cloneElement(card.icon as React.ReactElement, { 
-                          className: `w-8 h-8 text-white transition-all duration-500 ${isHovered ? 'scale-110' : ''}` 
+                          className: `w-6 h-6 text-white transition-all duration-500 ${isHovered ? 'scale-110' : ''}` 
                         })}
                       </div>
                     </div>
                     
-                    {/* Title overlay at bottom */}
-                    <div className="absolute bottom-0 left-0 right-0 py-3 px-6 bg-gradient-to-t from-[#7BA7C2]/90 to-transparent">
-                      <h3 className="text-lg font-light text-white drop-shadow-sm">{card.title}</h3>
-                    </div>
+                    {/* Title */}
+                    <h3 className="relative z-10 text-lg font-light text-white drop-shadow-sm flex-1 pr-6 line-clamp-2">{card.title}</h3>
                   </div>
                   
                   {/* Content with subtle gradient */}
-                  <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-[180px] flex flex-col">
+                  <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-[200px] flex flex-col">
                     {/* Description with perfect typography */}
                     <p className="text-sm text-gray-600 font-light leading-relaxed flex-grow">
                       {card.description}

@@ -41,7 +41,7 @@ const HairLossPatternsSection: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <h2 className="text-3xl font-light md:text-5xl">{t('hairLossPatternsSection.title')}</h2>
-            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 mx-auto"></div>
+            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 w-full"></div>
           </div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
             {t('hairLossPatternsSection.description')}
