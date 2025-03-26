@@ -47,8 +47,8 @@ const CareSection: React.FC = () => {
         {/* Header with gradient underline */}
         <div className="text-center mb-16">
           <div className="inline-block mb-3">
-            <h2 className={`${textStyle.sectionTitle}`}>Dion Hair Clinic Care<span className={`${textColor.primary}`}>+</span></h2>
-            <div className={`${gradientUnderline.primary} w-[350px] mt-2 mx-auto`}></div>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">Dion Hair Clinic Care<span className={`${textColor.primary}`}>+</span></h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-2 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             Ihr persönlicher Begleiter für eine optimale Vor- und Nachsorge

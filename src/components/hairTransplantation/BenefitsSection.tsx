@@ -45,8 +45,8 @@ const BenefitsSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-6 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle} relative`}>{t('benefitsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[300px] mt-4 mx-auto`}></div>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('benefitsSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('benefitsSection.subtitle')}
@@ -96,7 +96,7 @@ const BenefitsSection: React.FC = () => {
                   </div>
                   
                   {/* Content with subtle gradient */}
-                  <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-[200px] flex flex-col">
+                  <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-auto min-h-[180px] md:h-[200px] flex flex-col">
                     {/* Description with perfect typography */}
                     <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow`}>
                       {card.description}

@@ -82,7 +82,7 @@ const ProcessSection: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle} relative`}>{t('processSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('processSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[300px] mt-3 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
@@ -105,7 +105,7 @@ const ProcessSection: React.FC = () => {
                 
                 {/* Card with optimized height for perfect visual balance */}
                 <div 
-                  className={`bg-white rounded-2xl shadow-lg overflow-hidden h-[520px] transition-all duration-500 ${
+                  className={`bg-white rounded-2xl shadow-lg overflow-hidden h-auto min-h-[450px] md:h-[520px] transition-all duration-500 ${
                     isHovered
                       ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80 scale-[1.02]' 
                       : 'border border-gray-100 hover:border-[#7BA7C2]/30 hover:shadow-md'
@@ -144,9 +144,9 @@ const ProcessSection: React.FC = () => {
                   </div>
                   
                   {/* Card Content with optimized height */}
-                  <div className="p-6 h-[240px] flex flex-col">
+                  <div className="p-6 h-auto min-h-[180px] md:h-[240px] flex flex-col">
                     {/* Title */}
-                    <h3 className={`${fontSize.h4} ${fontWeight.light} mb-3 transition-colors duration-300 ${
+                    <h3 className={`${fontSize.h4} ${fontWeight.normal} ${tracking.wide} mb-3 transition-colors duration-300 ${
                       isHovered ? textColor.primary : textColor.dark
                     }`}>
                       {step.title}
@@ -154,7 +154,7 @@ const ProcessSection: React.FC = () => {
                     
                     {/* Description - full text without scrollbars */}
                     <div className="flex-grow">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed}`}>
                         {step.description}
                       </p>
                     </div>
@@ -174,7 +174,7 @@ const ProcessSection: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="relative z-10">
-              <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary} mb-8 text-center`}>Unsere Expertise für Ihr perfektes Ergebnis</h3>
+              <h3 className={`${fontSize.h3} ${fontWeight.normal} ${tracking.wide} ${textColor.primary} mb-8 text-center`}>Unsere Expertise für Ihr perfektes Ergebnis</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {advantageItems.map((item, index) => {
@@ -201,12 +201,12 @@ const ProcessSection: React.FC = () => {
                         </div>
                         
                         <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.light} mb-2 transition-colors duration-300 ${
+                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 ${
                             isHovered ? textColor.primary : textColor.dark
                           }`}>
                             {item.title}
                           </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed}`}>
                             {item.description}
                           </p>
                         </div>

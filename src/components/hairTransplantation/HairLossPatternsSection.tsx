@@ -41,8 +41,8 @@ const HairLossPatternsSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <h2 className={`${textStyle.sectionTitle}`}>{t('hairLossPatternsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[350px] mt-3 mx-auto`}></div>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('hairLossPatternsSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('hairLossPatternsSection.description')}

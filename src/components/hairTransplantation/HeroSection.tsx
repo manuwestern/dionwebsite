@@ -70,14 +70,14 @@ const HeroSection: React.FC = () => {
           
           {/* Text content for mobile with staggered animations */}
           <div className="w-full flex flex-col items-center mb-10">
-            <h1 className={`${fontSize.heroMobile} ${fontWeight.normal} mb-4 text-center transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
+            <h1 className={`${fontSize.heroMobile} ${fontWeight.normal} ${tracking.wide} mb-4 text-center break-words hyphens-auto transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`} lang="de">
               {t('heroSection.title')}
-              <span className={`block ${fontSize.h4} mt-4 ${textColor.medium} ${fontWeight.light}`}>
+              <span className={`block ${fontSize.h4} mt-4 ${textColor.medium} ${fontWeight.normal} ${tracking.wide}`}>
                 {t('heroSection.subtitle')}
               </span>
             </h1>
             
-            <div className={`${gradientUnderline.primary} w-[400px] my-6 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[400px] my-6 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
             
             <p className={`${textStyle.bodyText} mt-6 text-center max-w-2xl mx-auto transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {t('heroSection.welcomeText')}
@@ -117,7 +117,7 @@ const HeroSection: React.FC = () => {
             className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             onClick={scrollToNextSection}
           >
-            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light}`}>Mehr entdecken</span>
+            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.normal}`}>Mehr entdecken</span>
             <div className="w-8 h-8 rounded-full border border-[#7BA7C2]/30 flex items-center justify-center animate-bounce">
               <ChevronDown className="w-4 h-4 text-[#7BA7C2]" />
             </div>
@@ -130,9 +130,9 @@ const HeroSection: React.FC = () => {
         <div className="relative min-h-[520px] flex items-center">
           {/* Text content for desktop with staggered animations */}
           <div className="relative z-10 w-[55%] flex flex-col justify-center h-full pt-6">
-            <h1 className={`${fontSize.heroDesktop} ${fontWeight.normal} mb-6 text-left transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
+            <h1 className={`${fontSize.heroDesktop} ${fontWeight.normal} ${tracking.wide} mb-6 text-left transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
               {t('heroSection.title')}
-              <span className={`block ${fontSize.h3} mt-4 ${textColor.medium} ${fontWeight.light}`}>
+              <span className={`block ${fontSize.h3} mt-4 ${textColor.medium} ${fontWeight.normal} ${tracking.wide}`}>
                 {t('heroSection.subtitle')}
               </span>
             </h1>
@@ -146,16 +146,16 @@ const HeroSection: React.FC = () => {
             {/* Stats with elegant animations */}
             <div className={`flex gap-12 mt-10 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex flex-col">
-                <span className={textStyle.stat}>98%</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light}`}>Zufriedene Patienten</span>
+                <span className={`${textStyle.stat}`}>98%</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.normal}`}>Zufriedene Patienten</span>
               </div>
               <div className="flex flex-col">
-                <span className={textStyle.stat}>5.000+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light}`}>Erfolgreiche Behandlungen</span>
+                <span className={`${textStyle.stat}`}>5.000+</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.normal}`}>Erfolgreiche Behandlungen</span>
               </div>
               <div className="flex flex-col">
-                <span className={textStyle.stat}>15+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light}`}>Jahre Erfahrung</span>
+                <span className={`${textStyle.stat}`}>15+</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.normal}`}>Jahre Erfahrung</span>
               </div>
             </div>
             
@@ -178,7 +178,7 @@ const HeroSection: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light}`}>Zertifizierte Experten</span>
+                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>Zertifizierte Experten</span>
               </div>
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mr-3">
@@ -186,7 +186,7 @@ const HeroSection: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light}`}>Modernste Techniken</span>
+                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>Modernste Techniken</span>
               </div>
             </div>
           </div>
@@ -219,7 +219,7 @@ const HeroSection: React.FC = () => {
             className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             onClick={scrollToNextSection}
           >
-            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light}`}>Mehr entdecken</span>
+            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.normal}`}>Mehr entdecken</span>
             <div className="w-8 h-8 rounded-full border border-[#7BA7C2]/30 flex items-center justify-center animate-bounce">
               <ChevronDown className="w-4 h-4 text-[#7BA7C2]" />
             </div>

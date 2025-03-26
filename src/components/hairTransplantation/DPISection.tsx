@@ -69,12 +69,12 @@ const DPISection: React.FC = () => {
               </div>
             </div>
             
-            <h2 className={`${textStyle.sectionTitle} mb-6`}>
+            <h2 className={`${textStyle.sectionTitle} mb-6`} lang="de">
               Dion Painless Injection
               <span className={`${fontSize.h3} ${textColor.primary} ml-2`}>(DPI)</span>
             </h2>
             
-            <div className={`${gradientUnderline.primary} w-[400px] mb-6`}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[400px] mb-6`}></div>
             
             <p className={`${fontSize.lg} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
               Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. 

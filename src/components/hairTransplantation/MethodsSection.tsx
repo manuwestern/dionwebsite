@@ -21,8 +21,8 @@ const MethodsSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <h2 className={`${textStyle.sectionTitle}`}>{t('methodsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[350px] mt-3 mx-auto`}></div>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('methodsSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('methodsSection.subtitle')}
@@ -42,7 +42,7 @@ const MethodsSection: React.FC = () => {
                 onMouseLeave={() => setHoverMethod(null)}
               >
                 {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${
+                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-visible shadow-lg transition-all duration-500 ${
                   isHovered 
                     ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
                     : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
@@ -64,22 +64,22 @@ const MethodsSection: React.FC = () => {
                     
                     {/* Method title overlay with fixed height for consistent multi-line titles */}
                     <div className="absolute bottom-0 left-0 right-0 py-6 px-6 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[90px] flex flex-col justify-end z-20">
-                      <h3 className={`${fontSize.h3} ${fontWeight.light} drop-shadow-md leading-tight`}>{method.title}</h3>
-                      <p className={`${fontSize.sm} text-white/90 ${fontWeight.light} mt-1`}>{method.subtitle}</p>
+                      <h3 className={`${fontSize.h3} ${fontWeight.normal} ${tracking.wide} drop-shadow-md leading-tight`}>{method.title}</h3>
+                      <p className={`${fontSize.sm} text-white/90 ${fontWeight.normal} mt-1`}>{method.subtitle}</p>
                     </div>
                   </div>
                   
                   {/* Method Content */}
-                  <div className="p-8">
+                  <div className="p-4 sm:p-6 md:p-8">
                     {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed} mb-8`}>
                       {method.description}
                     </p>
                     
                     {/* Benefits section */}
                     <div className="mb-8">
-                      <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} mb-4 flex items-center`}>
-                        <span className="w-8 h-[1px] bg-[#7BA7C2]/25 mr-3"></span>
+                      <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
+                        <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
                         Vorteile
                       </h4>
                       <ul className="grid gap-3">
@@ -88,7 +88,7 @@ const MethodsSection: React.FC = () => {
                             <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
                               <Check className="h-3 w-3 text-[#7BA7C2]" />
                             </div>
-                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light}`}>{benefit}</span>
+                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -96,8 +96,8 @@ const MethodsSection: React.FC = () => {
                     
                     {/* Process section */}
                     <div className="mb-8">
-                      <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} mb-4 flex items-center`}>
-                        <span className="w-8 h-[1px] bg-[#7BA7C2]/25 mr-3"></span>
+                      <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
+                        <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
                         Prozess
                       </h4>
                       <ol className="grid gap-4">
@@ -106,15 +106,15 @@ const MethodsSection: React.FC = () => {
                             <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#7BA7C2]/10 text-[#7BA7C2] flex items-center justify-center font-medium text-sm transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
                               {i + 1}
                             </div>
-                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light}`}>{step}</span>
+                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{step}</span>
                           </li>
                         ))}
                       </ol>
                     </div>
                     
                     {/* Ideal for section */}
-                    <div className="flex justify-between items-center">
-                      <span className={`inline-block px-5 py-2.5 bg-[#7BA7C2]/10 rounded-full ${fontSize.sm} ${fontWeight.light} ${textColor.primary} transition-all duration-300 group-hover:bg-[#7BA7C2]/15`}>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
+                      <span className={`inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-[#7BA7C2]/10 rounded-full ${fontSize.sm} ${fontWeight.normal} ${textColor.primary} transition-all duration-300 group-hover:bg-[#7BA7C2]/15`}>
                         {method.idealFor}
                       </span>
                       
@@ -122,7 +122,7 @@ const MethodsSection: React.FC = () => {
                       <div className={`flex items-center ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 ${
                         isHovered ? 'opacity-100' : 'opacity-0'
                       }`}>
-                        <span className={`mr-1 ${fontWeight.light}`}>Mehr erfahren</span>
+                        <span className={`mr-1 ${fontWeight.normal}`}>Mehr erfahren</span>
                         <ChevronRight className="w-3 h-3" />
                       </div>
                     </div>
