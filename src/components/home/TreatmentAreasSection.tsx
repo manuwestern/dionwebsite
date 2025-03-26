@@ -69,29 +69,40 @@ const TreatmentAreasSection: React.FC = () => {
   ];
 
   return (
-    <section id="treatment-areas-section" className="py-20 md:py-28 relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -left-[400px] blur-3xl"></div>
-      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -right-[300px] blur-3xl"></div>
-      
-      {/* Subtle pattern overlay */}
-      <div 
-        className="absolute inset-0 -z-10 opacity-[0.02]" 
-        style={{ 
-          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-          backgroundSize: '200px',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
+    <section id="treatment-areas-section" className="py-24 md:py-32 relative overflow-hidden">
+      {/* Elegant background with subtle animations */}
+      <div className="absolute inset-0 -z-10">
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/80 to-white"></div>
+        
+        {/* Animated gradient circles */}
+        <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-[#7BA7C2]/5 to-transparent -top-[400px] -left-[400px] blur-3xl"></div>
+        <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-[#7BA7C2]/5 to-transparent -bottom-[300px] -right-[300px] blur-3xl"></div>
+        
+        {/* Subtle pattern overlay */}
+        <div 
+          className="absolute inset-0 opacity-[0.015]" 
+          style={{ 
+            backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
+            backgroundSize: '200px',
+            backgroundRepeat: 'repeat'
+          }}
+        ></div>
+        
+        {/* Animated gradient lines */}
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent"></div>
+          <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent"></div>
+        </div>
+      </div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-        {/* Section Header with elegant design */}
-        <div className="text-center mb-16">
-          <div className="inline-block mb-6 relative">
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('treatmentAreasSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+        {/* Elegant section header */}
+        <div className="text-center mb-20">
+          <div className="inline-block relative">
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
+            <h2 className={`${textStyle.sectionTitle} mb-4`} lang="de">{t('treatmentAreasSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('treatmentAreasSection.subtitle')}
@@ -99,7 +110,7 @@ const TreatmentAreasSection: React.FC = () => {
         </div>
 
         {/* Mobile View - Only visible on small screens */}
-        <div className="md:hidden space-y-8">
+        <div className="md:hidden space-y-10">
           {treatmentAreas.map((area, index) => (
             <div 
               key={area.id}
@@ -107,41 +118,48 @@ const TreatmentAreasSection: React.FC = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* Treatment area card with enhanced styling */}
-              <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-                {/* Image container with subtle glow effect */}
-                <div className="relative p-3">
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#7BA7C2]/5 to-transparent rounded-t-3xl"></div>
+              <div className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100/80">
+                {/* Image container with elegant styling */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#7BA7C2]/10 to-transparent"></div>
                   <img
                     src={area.imageUrl}
                     alt={area.altText}
-                    className="w-full h-full object-cover rounded-2xl relative z-10"
+                    className="w-full h-64 object-cover relative z-10"
                     loading="lazy"
                   />
+                  {/* Elegant overlay with title */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 z-20">
+                    <h3 className={`${textStyle.primaryHeading} text-white mb-0`}>{t(area.titleKey)}</h3>
+                  </div>
                 </div>
                 
-                {/* Text content container with refined typography */}
-                <div className="p-6 text-center">
-                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark} mb-3`}>{t(area.titleKey)}</h3>
-                  <p className={`${textStyle.bodyText} mb-6`}>
-                    {t(area.descriptionKey)}
-                  </p>
-                  
-                  {/* Elegant button with ripple effect */}
-                  <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                    <span className={buttonRippleClass}></span>
-                    <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
-                      {t('buttons.moreInfo', { ns: 'common' })}
-                      <ArrowRight className={`${buttonArrowClass} ml-2`} />
-                    </span>
-                  </button>
-                </div>
+                  {/* Text content container with refined typography and fixed height */}
+                  <div className="p-6 text-center flex flex-col h-[220px]">
+                    <div className="flex-grow">
+                      <p className={`${textStyle.bodyText} line-clamp-6`}>
+                        {t(area.descriptionKey)}
+                      </p>
+                    </div>
+                    
+                    {/* Elegant button with ripple effect - positioned at bottom */}
+                    <div className="mt-auto pt-6">
+                      <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                        <span className={buttonRippleClass}></span>
+                        <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+                          {t('buttons.moreInfo', { ns: 'common' })}
+                          <ArrowRight className={`${buttonArrowClass} ml-2`} />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Desktop View - Hidden on small screens, grid layout on medium and up */}
-        <div className="hidden md:grid grid-cols-3 gap-8">
+        <div className="hidden md:grid grid-cols-3 gap-10">
           {treatmentAreas.map((area, index) => {
             const isHovered = area.id === hoverCard;
             
@@ -154,37 +172,49 @@ const TreatmentAreasSection: React.FC = () => {
                 onMouseLeave={() => setHoverCard(null)}
               >
                 {/* Treatment area card with glass morphism and hover effects */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg transition-all duration-500 h-full flex flex-col ${
+                <div className={`group relative bg-white backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg transition-all duration-500 h-full ${
                   isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
-                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+                    ? 'shadow-xl transform -translate-y-2 border-2 border-[#7BA7C2]' 
+                    : 'border border-gray-100/80 hover:shadow-xl'
                 }`}>
-                  {/* Image container with overlay effect on hover */}
-                  <div className="relative h-64 overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-t from-[#7BA7C2]/70 to-transparent z-10 opacity-0 transition-opacity duration-500 ${
-                      isHovered ? 'opacity-30' : ''
+                  {/* Image container with elegant overlay effects */}
+                  <div className="relative h-72 overflow-hidden">
+                    {/* Gradient overlay that intensifies on hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 transition-opacity duration-500 ${
+                      isHovered ? 'opacity-80' : 'opacity-60'
                     }`}></div>
+                    
+                    {/* Subtle color overlay on hover */}
+                    <div className={`absolute inset-0 bg-[#7BA7C2]/20 z-10 transition-opacity duration-500 ${
+                      isHovered ? 'opacity-30' : 'opacity-0'
+                    }`}></div>
+                    
+                    {/* Image with zoom effect on hover */}
                     <img
                       src={area.imageUrl}
                       alt={area.altText}
-                      className={`w-full h-full object-cover transition-transform duration-700 ${
-                        isHovered ? 'scale-110' : 'scale-100'
-                      }`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />
+                    
+                    {/* Title overlay positioned at bottom of image */}
+                    <div className="absolute bottom-0 left-0 right-0 p-8 z-20 transform transition-transform duration-500">
+                      <h3 className={`${textStyle.primaryHeading} text-white mb-0 group-hover:text-[#7BA7C2]/90`}>
+                        {t(area.titleKey)}
+                      </h3>
+                    </div>
                   </div>
                   
-                  {/* Text content container with refined typography */}
-                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark} mb-4 transition-colors duration-300 ${
-                      isHovered ? textColor.primary : ''
-                    }`}>{t(area.titleKey)}</h3>
-                    <p className={`${textStyle.bodyText} mb-8 flex-grow`}>
-                      {t(area.descriptionKey)}
-                    </p>
+                  {/* Text content container with refined typography and fixed height */}
+                  <div className="p-8 flex flex-col h-[240px]">
+                    <div className="flex-grow">
+                      <p className={`${textStyle.bodyText} line-clamp-6`}>
+                        {t(area.descriptionKey)}
+                      </p>
+                    </div>
                     
-                    {/* Elegant button with ripple effect */}
-                    <div className="mt-auto">
+                    {/* Elegant button with ripple effect - positioned at bottom */}
+                    <div className="mt-auto pt-8">
                       <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                         <span className={buttonRippleClass}></span>
                         <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
@@ -197,7 +227,7 @@ const TreatmentAreasSection: React.FC = () => {
                 </div>
                 
                 {/* Decorative shadow element */}
-                <div className={`absolute -z-10 w-full h-full rounded-3xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
+                <div className={`absolute -z-10 w-full h-full rounded-3xl bg-[#7BA7C2]/10 top-3 left-3 transition-all duration-500 ${
                   isHovered ? 'opacity-70' : 'opacity-0'
                 }`}></div>
               </div>
@@ -206,28 +236,32 @@ const TreatmentAreasSection: React.FC = () => {
         </div>
         
         {/* Additional treatment option - Hair Loss Therapy */}
-        <div className={`mt-16 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
+        <div className={`mt-20 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <div className="relative bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] rounded-2xl p-8 md:p-10 shadow-xl overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 -mr-32 -mt-32"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/10 -ml-32 -mb-32"></div>
+            
+            {/* Animated particles */}
+            <div className="absolute top-1/4 right-1/4 w-1 h-1 rounded-full bg-white/70 animate-pulse"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-1 h-1 rounded-full bg-white/70 animate-pulse-slow"></div>
+            <div className="absolute top-1/2 right-1/2 w-1 h-1 rounded-full bg-white/70 animate-pulse-slower"></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>
+                <h3 className={`${textStyle.primaryHeading} text-white mb-4 text-center md:text-left`}>
                   {t('treatmentAreasSection.areas.3.title')}
                 </h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} text-white/90 text-center md:text-left`}>
                   {t('treatmentAreasSection.areas.3.description')}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                  <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                <button className="group relative inline-flex items-center justify-center overflow-hidden transition-all duration-300 shadow-lg px-8 py-4 rounded-xl bg-white text-[#7BA7C2]">
+                  <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#7BA7C2] rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-wider text-[#7BA7C2]`}>
                     {t('buttons.moreInfo', { ns: 'common' })}
-                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
+                    <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </button>
               </div>

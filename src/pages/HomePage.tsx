@@ -75,10 +75,10 @@ const HomePage: React.FC = () => {
         </div>
       )}
       
-      {/* Main Content - Removed redundant sections */}
+      {/* Main Content - Ordered sections with TreatmentAreas before Benefits */}
       <HeroSection />
-      <BenefitsSection />
       <TreatmentAreasSection />
+      <BenefitsSection />
       <BeforeAfterSection />
       <TestimonialsSection />
       <FAQSection />

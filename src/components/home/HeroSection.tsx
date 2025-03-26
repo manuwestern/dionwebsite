@@ -53,35 +53,24 @@ const HeroSection: React.FC = () => {
   return (
     <div 
       ref={heroRef}
-      className="relative overflow-hidden min-h-[100vh] flex items-center"
+      className="relative overflow-hidden min-h-[75vh] flex items-center"
     >
-      {/* Background with advanced gradient and blur effects */}
+      {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 z-0">
-        {/* Main gradient background with subtle animation */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-[#7BA7C2]/5 animate-gradient-x-slower"></div>
+        {/* Main gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
         
-        {/* Decorative elements with parallax effect */}
-        <div 
-          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"
-          style={{ transform: `translateY(${scrollY * 0.1}px)` }}
-        ></div>
-        <div 
-          className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"
-          style={{ transform: `translateY(${scrollY * -0.05}px)` }}
-        ></div>
-        
-        {/* Additional decorative elements */}
-        <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] rounded-full bg-[#7BA7C2]/3 blur-3xl opacity-30"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-[250px] h-[250px] rounded-full bg-[#7BA7C2]/3 blur-3xl opacity-20"></div>
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
         
         {/* Subtle pattern overlay */}
         <div 
-          className="absolute inset-0 opacity-[0.02]" 
+          className="absolute inset-0 opacity-[0.03]" 
           style={{ 
             backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
             backgroundSize: '200px',
-            backgroundRepeat: 'repeat',
-            transform: `translateY(${scrollY * -0.02}px)`
+            backgroundRepeat: 'repeat'
           }}
         ></div>
         
@@ -90,13 +79,6 @@ const HeroSection: React.FC = () => {
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x"></div>
           <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slow"></div>
           <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slower"></div>
-        </div>
-        
-        {/* Light rays effect */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-[#7BA7C2]/50 to-transparent blur-xl"></div>
-          <div className="absolute top-0 left-2/4 w-1 h-full bg-gradient-to-b from-[#7BA7C2]/30 to-transparent blur-xl"></div>
-          <div className="absolute top-0 left-3/4 w-1 h-full bg-gradient-to-b from-[#7BA7C2]/40 to-transparent blur-xl"></div>
         </div>
       </div>
       
@@ -148,35 +130,9 @@ const HeroSection: React.FC = () => {
                 </p>
               </div>
               
-              {/* Trust indicators */}
-              <div className={`flex justify-center gap-4 transition-all duration-1000 delay-800 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <div className="flex items-center">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                    ))}
-                  </div>
-                  <span className="ml-1 text-xs text-gray-600">5.0/5.0</span>
-                </div>
-                <div className="h-4 w-px bg-gray-300"></div>
-                <div className="text-xs text-gray-600">1000+ Patienten</div>
-              </div>
-              
-              {/* Benefits tags with animation */}
-              <div className={`flex flex-wrap justify-center gap-2 mt-6 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                {benefits.slice(0, 6).map((benefitKey, index) => (
-                  <span 
-                    key={index} 
-                    className="inline-block px-3 py-1.5 bg-[#7BA7C2]/10 text-[#7BA7C2] rounded-full text-xs font-light"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    {t(benefitKey)}
-                  </span>
-                ))}
-              </div>
               
               {/* CTA button with refined styling and animation */}
-              <div className={`flex justify-center mt-8 transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+              <div className={`flex justify-center mt-8 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
                 <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
                   <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
@@ -195,7 +151,7 @@ const HeroSection: React.FC = () => {
               </div>
               
               {/* Image with refined animation and effects */}
-              <div className={`relative flex justify-center transition-all duration-1000 delay-1300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+              <div className={`relative flex justify-center transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                 <div className="relative">
                   {/* Enhanced glow effect */}
                   <div className="absolute -inset-4 bottom-0 bg-gradient-to-t from-[#7BA7C2]/20 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
@@ -205,7 +161,7 @@ const HeroSection: React.FC = () => {
                   <div className="absolute bottom-1/3 -right-6 w-16 h-16 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
                   
                   <img 
-                    src="/images/Dion_Model_Home_1.webp"
+                    src="/images/Dion_Model_Mobile.png"
                     alt="Dr. Dion - Führender Experte für Haartransplantation"
                     className="w-auto h-auto max-h-[420px] object-contain relative z-10"
                     style={{ 
@@ -266,32 +222,6 @@ const HeroSection: React.FC = () => {
               </p>
             </div>
             
-            {/* Trust indicators */}
-            <div className={`flex items-center gap-6 mt-6 transition-all duration-1000 delay-800 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <div className="flex items-center">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                  ))}
-                </div>
-                <span className="ml-2 text-sm text-gray-600">5.0/5.0</span>
-              </div>
-              <div className="h-6 w-px bg-gray-300"></div>
-              <div className="text-sm text-gray-600">1000+ zufriedene Patienten</div>
-            </div>
-            
-            {/* Benefits tags with animation */}
-            <div className={`flex flex-wrap gap-2 mt-8 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              {benefits.slice(0, 8).map((benefitKey, index) => (
-                <span 
-                  key={index} 
-                  className="inline-block px-3 py-1.5 bg-[#7BA7C2]/10 text-[#7BA7C2] rounded-full text-xs font-light"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {t(benefitKey)}
-                </span>
-              ))}
-            </div>
             
             {/* Stats with refined styling and animations */}
             <div className={`flex gap-14 mt-12 transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
@@ -310,7 +240,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* CTA button with refined styling and animation */}
-            <div className={`mt-12 flex justify-start transition-all duration-1000 delay-1300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            <div className={`mt-12 flex justify-start transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                 <span className={buttonRippleClass}></span>
                 <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
@@ -372,7 +302,7 @@ const HeroSection: React.FC = () => {
           
           {/* Refined scroll indicator with perfect positioning and animation */}
           <div 
-            className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1700 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             onClick={scrollToNextSection}
           >
             <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>Mehr entdecken</span>
