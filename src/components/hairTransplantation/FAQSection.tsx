@@ -163,7 +163,7 @@ const FAQSection: React.FC = () => {
                         }`}>
                           {categories[faq.category as keyof typeof categories].icon}
                         </div>
-                        <span className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} text-left`}>{faq.question}</span>
+                        <span className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left`}>{faq.question}</span>
                       </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         openFAQ === index 

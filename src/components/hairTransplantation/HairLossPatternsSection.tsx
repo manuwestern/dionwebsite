@@ -86,7 +86,7 @@ const HairLossPatternsSection: React.FC = () => {
                     
                     {/* Pattern title overlay with fixed height for consistent multi-line titles */}
                     <div className="absolute bottom-0 left-0 right-0 py-6 px-5 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center justify-center md:justify-start">
-                      <h3 className={`${fontSize.h4} ${fontWeight.light} drop-shadow-md leading-tight text-center md:text-left`}>{pattern.title}</h3>
+                      <h3 className={`${fontSize.lg} ${fontWeight.normal} drop-shadow-md leading-tight text-center md:text-left`}>{pattern.title}</h3>
                     </div>
                   </div>
                   

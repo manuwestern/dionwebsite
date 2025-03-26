@@ -64,7 +64,7 @@ const MethodsSection: React.FC = () => {
                     
                     {/* Method title overlay with fixed height for consistent multi-line titles */}
                     <div className="absolute bottom-0 left-0 right-0 py-6 px-6 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[90px] flex flex-col justify-end z-20">
-                      <h3 className={`${fontSize.h3} ${fontWeight.normal} ${tracking.wide} drop-shadow-md leading-tight`}>{method.title}</h3>
+                      <h3 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} drop-shadow-md leading-tight`}>{method.title}</h3>
                       <p className={`${fontSize.sm} text-white/90 ${fontWeight.normal} mt-1`}>{method.subtitle}</p>
                     </div>
                   </div>

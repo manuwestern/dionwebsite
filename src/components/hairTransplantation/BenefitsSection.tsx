@@ -92,7 +92,7 @@ const BenefitsSection: React.FC = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.medium} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
+                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
                   </div>
                   
                   {/* Content with subtle gradient */}

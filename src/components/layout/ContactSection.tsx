@@ -142,7 +142,7 @@ const ContactSection: React.FC = () => {
                     <button 
                       type="submit"
                       disabled={isSubmitting}
-                      className={`${buttonStyle.primary} w-full disabled:opacity-70`}
+                      className={`${buttonStyle.primary} w-full disabled:opacity-70 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
                     >
                       {isSubmitting ? (
                         <>
