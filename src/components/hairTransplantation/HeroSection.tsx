@@ -70,9 +70,9 @@ const HeroSection: React.FC = () => {
           
           {/* Text content for mobile with staggered animations */}
           <div className="w-full flex flex-col items-center mb-10">
-            <h1 className={`${fontSize.heroMobile} ${fontWeight.normal} ${tracking.wide} mb-4 text-center break-words hyphens-auto transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`} lang="de">
+            <h1 className={`${textStyle.heroTitle} mb-4 text-center break-words hyphens-auto transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`} lang="de">
               {t('heroSection.title')}
-              <span className={`block ${fontSize.h4} mt-4 ${textColor.medium} ${fontWeight.normal} ${tracking.wide}`}>
+              <span className={`block ${fontSize.h4} mt-4 ${textColor.medium} ${fontWeight.light} ${tracking.wider}`}>
                 {t('heroSection.subtitle')}
               </span>
             </h1>
@@ -130,14 +130,14 @@ const HeroSection: React.FC = () => {
         <div className="relative min-h-[520px] flex items-center">
           {/* Text content for desktop with staggered animations */}
           <div className="relative z-10 w-[55%] flex flex-col justify-center h-full pt-6">
-            <h1 className={`${fontSize.heroDesktop} ${fontWeight.normal} ${tracking.wide} mb-6 text-left transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
+            <h1 className={`${textStyle.heroTitle} mb-6 text-left transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`} lang="de">
               {t('heroSection.title')}
-              <span className={`block ${fontSize.h3} mt-4 ${textColor.medium} ${fontWeight.normal} ${tracking.wide}`}>
+              <span className={`block ${fontSize.h3} mt-4 ${textColor.medium} ${fontWeight.light} ${tracking.wider}`}>
                 {t('heroSection.subtitle')}
               </span>
             </h1>
             
-            <div className={`${gradientUnderline.primary} w-[400px] my-8 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[400px] my-8 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
             
             <p className={`${textStyle.bodyTextImportant} max-w-2xl transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {t('heroSection.welcomeText')}

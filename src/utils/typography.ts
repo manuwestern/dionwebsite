@@ -71,9 +71,9 @@ export const tracking = {
 // Kombinierte Typografie-Stile für häufig verwendete Elemente
 export const textStyle = {
   // Überschriften
-  sectionTitle: `${fontSize.h2} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} break-words hyphens-auto px-2`,
-  sectionSubtitle: `${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} ${textColor.medium}`,
-  cardTitle: `${fontSize.h4} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark} ${tracking.wide}`,
+  sectionTitle: `${fontSize.h2} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.wider} break-words hyphens-auto px-2 md:px-0 md:tracking-widest md:font-normal`,
+  sectionSubtitle: `${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} ${textColor.medium} md:tracking-wide`,
+  cardTitle: `${fontSize.h4} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} md:tracking-wider`,
   
   // Fließtext
   bodyText: `${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} ${textColor.medium}`,
@@ -87,14 +87,14 @@ export const textStyle = {
   // Spezielle Elemente
   button: `${fontSize.base} ${fontWeight.medium} ${tracking.wider} ${textColor.white}`,
   badge: `${fontSize.xs} ${fontWeight.medium} ${tracking.wide}`,
-  stat: `${fontSize.h3} ${fontWeight.medium} ${textColor.primary} ${tracking.wide}`,
+  stat: `${fontSize.h3} ${fontWeight.medium} ${textColor.primary} ${tracking.wider}`,
   
   // Primärfarben-Varianten
-  primaryHeading: `${fontSize.h3} ${fontWeight.normal} ${lineHeight.tight} ${textColor.primary} ${tracking.wide}`,
+  primaryHeading: `${fontSize.h3} ${fontWeight.light} ${lineHeight.tight} ${textColor.primary} ${tracking.wider} md:tracking-widest`,
   primaryText: `${fontSize.base} ${fontWeight.normal} ${lineHeight.normal} ${textColor.primary}`,
   
-  // Responsive Varianten mit Wortumbruch für mobile Ansicht
-  responsiveTitle: `${fontSize.h2} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} break-words hyphens-auto px-2`,
+  // Hero-Titel mit besonderer Eleganz
+  heroTitle: `${fontSize.heroDesktop} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.wider} md:tracking-widest md:leading-tight`,
 };
 
 // Hilfsfunktion zum Kombinieren von Typografie-Klassen
