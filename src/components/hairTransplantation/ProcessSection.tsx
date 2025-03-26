@@ -201,12 +201,12 @@ const ProcessSection: React.FC = () => {
                         </div>
                         
                         <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 text-center md:text-left ${
+                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 ${
                             isHovered ? textColor.primary : textColor.dark
                           }`}>
                             {item.title}
                           </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left`}>
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed}`}>
                             {item.description}
                           </p>
                         </div>
