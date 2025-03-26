@@ -174,7 +174,7 @@ const ProcessSection: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="relative z-10">
-              <h3 className={`${fontSize.h3} ${fontWeight.normal} ${tracking.wide} ${textColor.primary} mb-8 text-center`}>Unsere Expertise für Ihr perfektes Ergebnis</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-8 text-center md:text-left`}>Unsere Expertise für Ihr perfektes Ergebnis</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {advantageItems.map((item, index) => {

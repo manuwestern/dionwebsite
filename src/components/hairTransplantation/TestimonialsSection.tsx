@@ -140,7 +140,7 @@ const TestimonialsSection: React.FC = () => {
         {/* Before/After Slider with elegant design */}
         <div className={`mb-20 transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-8">
-            <h3 className={`${fontSize.h3} ${fontWeight.light}`}>Vorher / Nachher Ergebnisse</h3>
+            <h3 className={`${textStyle.primaryHeading} text-center md:text-left`}>Vorher / Nachher Ergebnisse</h3>
             <div className={`h-0.5 w-40 ${gradientUnderline.light} mx-auto mt-3`}></div>
           </div>
           

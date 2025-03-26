@@ -123,12 +123,12 @@ const CareSection: React.FC = () => {
           
           {/* Right side: Features */}
           <div className="lg:w-1/2">
-            <h3 className={`${fontSize.h3} ${fontWeight.light} mb-6 ${textColor.dark} text-center lg:text-left`}>Ihr persönlicher Begleiter für den gesamten Behandlungsprozess</h3>
-            <p className={`${textStyle.bodyText} mb-4 text-center lg:text-left px-2 lg:px-0`}>
+            <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>Ihr persönlicher Begleiter für den gesamten Behandlungsprozess</h3>
+            <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0`}>
               Mit Dion Hair Clinic Care+ bieten wir Ihnen eine umfassende Smartphone-App, die Sie durch den gesamten Prozess Ihrer Haartransplantation führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.
             </p>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center sm:text-left">
-              <div className="flex space-x-3 mb-3 sm:mb-0 sm:mr-4">
+            <div className="flex flex-col md:flex-row items-center md:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center md:text-left">
+              <div className="flex space-x-3 mb-3 md:mb-0 md:mr-4">
                 <svg viewBox="0 0 24 24" className="w-6 h-6 text-[#7BA7C2]" fill="currentColor">
                   <path d="M17.05,20.28c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Z"/>
                 </svg>
@@ -144,14 +144,14 @@ const CareSection: React.FC = () => {
             {/* Features grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
-                  <div className="mb-3 sm:mb-0 sm:mr-4 sm:mt-1">
+                <div key={index} className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
+                  <div className="mb-3 md:mb-0 md:mr-4 md:mt-1">
                     <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
                       {feature.icon}
                     </div>
                   </div>
                   <div>
-                    <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-1`}>{feature.title}</h4>
+                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-1`}>{feature.title}</h4>
                     <p className={`${fontSize.sm} ${textColor.medium}`}>{feature.description}</p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ const CareSection: React.FC = () => {
             </div>
             
             {/* CTA buttons */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
               <button className={`${buttonStyle.black} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                 <span className={buttonRippleClass}></span>
                 <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
