@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Sparkles, Scissors, Droplets, Compass } from 'lucide-react';
 
 interface ProcessStep {
   image: string;
@@ -9,9 +9,22 @@ interface ProcessStep {
   number: number;
 }
 
+interface AdvantageItem {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
 const ProcessSection: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
   const [hoverStep, setHoverStep] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hoverAdvantage, setHoverAdvantage] = useState<number | null>(null);
+
+  // Trigger entrance animations
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   // Images for each step
   const stepImages = [
@@ -32,6 +45,30 @@ const ProcessSection: React.FC = () => {
     number: index + 1
   }));
 
+  // Additional advantages
+  const advantageItems: AdvantageItem[] = [
+    {
+      icon: <Sparkles strokeWidth={1.5} />,
+      title: "Optimale Gestaltung der Haarlinie",
+      description: "Wir gestalten die Haarlinie individuell passend zum Gesicht des Patienten, unter Berücksichtigung von Gesichtsform, Alter und persönlichem Stil für ein natürliches und harmonisches Erscheinungsbild."
+    },
+    {
+      icon: <Scissors strokeWidth={1.5} />,
+      title: "Unsichtbare Narben durch kleinste FUE Punches",
+      description: "Durch den Einsatz modernster und kleinster FUE Punches hinterlassen wir praktisch unsichtbare Narben im Spenderbereich, sodass Sie Ihre Haare auch kurz tragen können."
+    },
+    {
+      icon: <Droplets strokeWidth={1.5} />,
+      title: "Minimale Schwellungen durch reduzierte Flüssigkeiten",
+      description: "Wir verwenden nur geringe Mengen an Flüssigkeiten wie NaCl während des Eingriffs, um Schwellungen auf ein Minimum zu reduzieren und die Erholungszeit zu verkürzen."
+    },
+    {
+      icon: <Compass strokeWidth={1.5} />,
+      title: "Präzise Platzierung für natürliche Übergänge",
+      description: "Jedes Implantat wird präzise platziert, um natürliche Übergänge vom Haaransatz zum restlichen Haar zu schaffen und die natürliche Haarwuchsrichtung zu respektieren."
+    }
+  ];
+
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-white to-gray-50">
       {/* Decorative elements */}
@@ -42,9 +79,10 @@ const ProcessSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <h2 className="text-3xl font-light md:text-5xl">{t('processSection.title')}</h2>
-            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 mx-auto"></div>
+          <div className="inline-block mb-4 relative">
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
+            <h2 className="text-3xl font-light md:text-5xl relative">{t('processSection.title')}</h2>
+            <div className="h-1 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/30 mt-3 w-full"></div>
           </div>
           <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
             {t('processSection.subtitle')}
@@ -52,7 +90,7 @@ const ProcessSection: React.FC = () => {
         </div>
 
         {/* Process Step Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
           {processSteps.map((step, index) => {
             const isHovered = index === hoverStep;
             
@@ -125,6 +163,59 @@ const ProcessSection: React.FC = () => {
               </div>
             );
           })}
+        </div>
+        
+        {/* Additional Advantages Box */}
+        <div className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-3xl font-light text-[#7BA7C2] mb-8 text-center">Unsere Expertise für Ihr perfektes Ergebnis</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {advantageItems.map((item, index) => {
+                  const isHovered = index === hoverAdvantage;
+                  
+                  return (
+                    <div 
+                      key={index}
+                      className="relative group"
+                      onMouseEnter={() => setHoverAdvantage(index)}
+                      onMouseLeave={() => setHoverAdvantage(null)}
+                    >
+                      <div className={`flex gap-4 p-6 rounded-xl transition-all duration-300 ${
+                        isHovered 
+                          ? 'bg-[#7BA7C2]/5 shadow-sm' 
+                          : 'hover:bg-[#7BA7C2]/5'
+                      }`}>
+                        <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                          isHovered 
+                            ? 'bg-[#7BA7C2] text-white' 
+                            : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
+                        }`}>
+                          {item.icon}
+                        </div>
+                        
+                        <div className="flex-grow">
+                          <h4 className={`text-lg font-light mb-2 transition-colors duration-300 ${
+                            isHovered ? 'text-[#7BA7C2]' : 'text-gray-800'
+                          }`}>
+                            {item.title}
+                          </h4>
+                          <p className="text-sm text-gray-600 font-light leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
         
       </div>
