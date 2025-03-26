@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronRight } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 
 const HairLossPatternsSection: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
@@ -40,10 +41,10 @@ const HairLossPatternsSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <h2 className="text-3xl font-light md:text-5xl">{t('hairLossPatternsSection.title')}</h2>
-            <div className="h-1 w-[350px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-3 mx-auto"></div>
+            <h2 className={`${textStyle.sectionTitle}`}>{t('hairLossPatternsSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('hairLossPatternsSection.description')}
           </p>
         </div>
@@ -79,13 +80,13 @@ const HairLossPatternsSection: React.FC = () => {
                       />
                     ) : (
                       <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5">
-                        <span className="text-2xl font-light text-gray-400">{pattern.title}</span>
+                        <span className={`${fontSize.h3} ${fontWeight.light} text-gray-400`}>{pattern.title}</span>
                       </div>
                     )}
                     
                     {/* Pattern title overlay with fixed height for consistent multi-line titles */}
                     <div className="absolute bottom-0 left-0 right-0 py-6 px-5 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center">
-                      <h3 className="text-xl font-light drop-shadow-md leading-tight">{pattern.title}</h3>
+                      <h3 className={`${fontSize.h4} ${fontWeight.light} drop-shadow-md leading-tight`}>{pattern.title}</h3>
                     </div>
                   </div>
                   
@@ -93,13 +94,13 @@ const HairLossPatternsSection: React.FC = () => {
                   <div className="px-8 py-7 grid grid-rows-[120px_auto_auto_30px] h-[280px]">
                     {/* Description with fixed height and scrolling if needed */}
                     <div className="overflow-auto pr-1 mb-3">
-                      <p className="text-sm text-gray-600 font-light leading-relaxed">
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                         {pattern.description}
                       </p>
                     </div>
                     
                     {/* Elegant dividing line with subtle gradient */}
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7BA7C2]/25 to-transparent mb-3"></div>
+                    <div className={`w-full h-px ${gradientUnderline.light} mb-3`}></div>
                     
                     {/* Pattern Details - always at the same position with perfect spacing */}
                     <div className="grid grid-cols-2 gap-5 self-start mt-1">
@@ -108,28 +109,28 @@ const HairLossPatternsSection: React.FC = () => {
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className="text-xs text-[#7BA7C2] font-medium uppercase tracking-wider">
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider}`}>
                           {t('hairLossPatternsSection.typicalGrafts')}
                         </h4>
-                        <p className="text-lg text-[#7BA7C2] font-light">{pattern.grafts}</p>
+                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light}`}>{pattern.grafts}</p>
                       </div>
                       <div className={`rounded-xl p-4 transition-all duration-300 h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className="text-xs text-[#7BA7C2] font-medium uppercase tracking-wider">
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider}`}>
                           {t('hairLossPatternsSection.treatment')}
                         </h4>
-                        <p className="text-lg text-[#7BA7C2] font-light">{pattern.treatment}</p>
+                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light}`}>{pattern.treatment}</p>
                       </div>
                     </div>
                     
                     {/* Subtle indicator - always at the bottom */}
-                    <div className={`flex items-center justify-end text-xs text-[#7BA7C2] transition-opacity duration-300 self-end ${
+                    <div className={`flex items-center justify-end ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 self-end ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
-                      <span className="mr-1 font-light">Ideal für Ihren Haartyp</span>
+                      <span className={`mr-1 ${fontWeight.light}`}>Ideal für Ihren Haartyp</span>
                       <ChevronRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -148,24 +149,24 @@ const HairLossPatternsSection: React.FC = () => {
         <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/3">
-              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Individuelle Beratung</h3>
-              <p className="text-gray-600 font-light">
+              <h3 className={`${textStyle.primaryHeading} mb-4`}>Individuelle Beratung</h3>
+              <p className={`${textStyle.bodyText}`}>
                 Jedes Haarausfallmuster ist einzigartig und erfordert eine individuelle Behandlungsstrategie. 
                 In einem persönlichen Beratungsgespräch analysieren wir Ihr spezifisches Muster und entwickeln 
                 einen maßgeschneiderten Behandlungsplan.
               </p>
             </div>
             <div className="md:w-1/3">
-              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Modernste Techniken</h3>
-              <p className="text-gray-600 font-light">
+              <h3 className={`${textStyle.primaryHeading} mb-4`}>Modernste Techniken</h3>
+              <p className={`${textStyle.bodyText}`}>
                 Unsere fortschrittlichen Transplantationstechniken ermöglichen es uns, selbst bei fortgeschrittenem 
                 Haarausfall natürlich aussehende Ergebnisse zu erzielen. Wir passen die Methode an Ihr 
                 individuelles Haarausfallmuster an.
               </p>
             </div>
             <div className="md:w-1/3">
-              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Langfristige Ergebnisse</h3>
-              <p className="text-gray-600 font-light">
+              <h3 className={`${textStyle.primaryHeading} mb-4`}>Langfristige Ergebnisse</h3>
+              <p className={`${textStyle.bodyText}`}>
                 Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige 
                 Ergebnisse. Wir berücksichtigen den zukünftigen Haarverlust und planen die Behandlung entsprechend.
               </p>

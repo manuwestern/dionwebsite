@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Search, Clock, Stethoscope, HelpCircle, DollarSign, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 interface FAQ {
   question: string;
@@ -76,10 +78,10 @@ const FAQSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className="text-3xl font-light md:text-5xl relative">{t('faqSection.title')}</h2>
-            <div className="h-1 w-[350px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-3 mx-auto"></div>
+            <h2 className={`${textStyle.sectionTitle} relative`}>{t('faqSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('faqSection.subtitle')}
           </p>
         </div>
@@ -104,7 +106,7 @@ const FAQSection: React.FC = () => {
           <div className="flex flex-wrap gap-3 justify-center">
             <button
               onClick={() => setActiveCategory(null)}
-              className={`px-6 py-3 rounded-xl text-sm font-light transition-all duration-300 ${
+              className={`px-6 py-3 rounded-xl ${fontSize.sm} ${fontWeight.light} transition-all duration-300 ${
                 activeCategory === null
                   ? 'bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white shadow-md transform -translate-y-1'
                   : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:shadow-md border border-gray-100'
@@ -116,7 +118,7 @@ const FAQSection: React.FC = () => {
               <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
-                className={`px-6 py-3 rounded-xl text-sm font-light transition-all duration-300 flex items-center gap-2 ${
+                className={`px-6 py-3 rounded-xl ${fontSize.sm} ${fontWeight.light} transition-all duration-300 flex items-center gap-2 ${
                   activeCategory === key
                     ? 'bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white shadow-md transform -translate-y-1'
                     : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:shadow-md border border-gray-100'
@@ -161,7 +163,7 @@ const FAQSection: React.FC = () => {
                         }`}>
                           {categories[faq.category as keyof typeof categories].icon}
                         </div>
-                        <span className="text-lg font-light text-gray-800">{faq.question}</span>
+                        <span className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{faq.question}</span>
                       </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         openFAQ === index 
@@ -182,7 +184,7 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-0 border-t border-gray-100">
-                        <p className="text-base text-gray-600 font-light leading-relaxed">{faq.answer}</p>
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{faq.answer}</p>
                       </div>
                     </div>
                   </div>
@@ -201,8 +203,8 @@ const FAQSection: React.FC = () => {
                 <div className="w-16 h-16 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto mb-4">
                   <HelpCircle className="w-8 h-8 text-[#7BA7C2]" />
                 </div>
-                <h3 className="text-xl font-light text-gray-800 mb-2">Keine Ergebnisse gefunden</h3>
-                <p className="text-gray-600 font-light">Bitte versuchen Sie eine andere Suche oder wählen Sie eine andere Kategorie.</p>
+                <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2`}>Keine Ergebnisse gefunden</h3>
+                <p className={`${textColor.medium} ${fontWeight.light}`}>Bitte versuchen Sie eine andere Suche oder wählen Sie eine andere Kategorie.</p>
               </div>
             </div>
           )}
@@ -217,18 +219,18 @@ const FAQSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className="text-2xl md:text-3xl font-light text-[#7BA7C2] mb-4">Noch Fragen?</h3>
-                <p className="text-gray-600 font-light">
+                <h3 className={`${textStyle.primaryHeading} mb-4`}>Noch Fragen?</h3>
+                <p className={`${textStyle.bodyText}`}>
                   Wir verstehen, dass eine Haartransplantation eine wichtige Entscheidung ist. Unser Expertenteam 
                   beantwortet gerne alle Ihre Fragen in einem persönlichen und unverbindlichen Beratungsgespräch.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className="group relative inline-flex items-center justify-center px-10 py-4 rounded-xl bg-[#7BA7C2] text-white overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-[#6b97b2]">
-                  <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
-                  <span className="relative flex items-center font-light tracking-wider">
+                <button className={buttonStyle.primary}>
+                  <span className={buttonRippleClass}></span>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase`}>
                     Beratungstermin vereinbaren
-                    <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    <ArrowRight className={buttonArrowClass} />
                   </span>
                 </button>
               </div>

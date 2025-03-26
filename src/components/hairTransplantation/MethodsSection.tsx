@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Check, ChevronRight } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 
 const MethodsSection: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
@@ -20,10 +21,10 @@ const MethodsSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <h2 className="text-3xl font-light md:text-5xl">{t('methodsSection.title')}</h2>
-            <div className="h-1 w-[350px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-3 mx-auto"></div>
+            <h2 className={`${textStyle.sectionTitle}`}>{t('methodsSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('methodsSection.subtitle')}
           </p>
         </div>
@@ -63,21 +64,21 @@ const MethodsSection: React.FC = () => {
                     
                     {/* Method title overlay with fixed height for consistent multi-line titles */}
                     <div className="absolute bottom-0 left-0 right-0 py-6 px-6 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[90px] flex flex-col justify-end z-20">
-                      <h3 className="text-2xl font-light drop-shadow-md leading-tight">{method.title}</h3>
-                      <p className="text-sm text-white/90 font-light mt-1">{method.subtitle}</p>
+                      <h3 className={`${fontSize.h3} ${fontWeight.light} drop-shadow-md leading-tight`}>{method.title}</h3>
+                      <p className={`${fontSize.sm} text-white/90 ${fontWeight.light} mt-1`}>{method.subtitle}</p>
                     </div>
                   </div>
                   
                   {/* Method Content */}
                   <div className="p-8">
                     {/* Description */}
-                    <p className="text-sm text-gray-600 font-light leading-relaxed mb-8">
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
                       {method.description}
                     </p>
                     
                     {/* Benefits section */}
                     <div className="mb-8">
-                      <h4 className="text-base font-medium text-[#7BA7C2] mb-4 flex items-center">
+                      <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} mb-4 flex items-center`}>
                         <span className="w-8 h-[1px] bg-[#7BA7C2]/25 mr-3"></span>
                         Vorteile
                       </h4>
@@ -87,7 +88,7 @@ const MethodsSection: React.FC = () => {
                             <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
                               <Check className="h-3 w-3 text-[#7BA7C2]" />
                             </div>
-                            <span className="text-sm text-gray-700 font-light">{benefit}</span>
+                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light}`}>{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -95,7 +96,7 @@ const MethodsSection: React.FC = () => {
                     
                     {/* Process section */}
                     <div className="mb-8">
-                      <h4 className="text-base font-medium text-[#7BA7C2] mb-4 flex items-center">
+                      <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} mb-4 flex items-center`}>
                         <span className="w-8 h-[1px] bg-[#7BA7C2]/25 mr-3"></span>
                         Prozess
                       </h4>
@@ -105,7 +106,7 @@ const MethodsSection: React.FC = () => {
                             <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#7BA7C2]/10 text-[#7BA7C2] flex items-center justify-center font-medium text-sm transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
                               {i + 1}
                             </div>
-                            <span className="text-sm text-gray-700 font-light">{step}</span>
+                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light}`}>{step}</span>
                           </li>
                         ))}
                       </ol>
@@ -113,15 +114,15 @@ const MethodsSection: React.FC = () => {
                     
                     {/* Ideal for section */}
                     <div className="flex justify-between items-center">
-                      <span className="inline-block px-5 py-2.5 bg-[#7BA7C2]/10 rounded-full text-sm font-light text-[#7BA7C2] transition-all duration-300 group-hover:bg-[#7BA7C2]/15">
+                      <span className={`inline-block px-5 py-2.5 bg-[#7BA7C2]/10 rounded-full ${fontSize.sm} ${fontWeight.light} ${textColor.primary} transition-all duration-300 group-hover:bg-[#7BA7C2]/15`}>
                         {method.idealFor}
                       </span>
                       
                       {/* Subtle indicator */}
-                      <div className={`flex items-center text-xs text-[#7BA7C2] transition-opacity duration-300 ${
+                      <div className={`flex items-center ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 ${
                         isHovered ? 'opacity-100' : 'opacity-0'
                       }`}>
-                        <span className="mr-1 font-light">Mehr erfahren</span>
+                        <span className={`mr-1 ${fontWeight.light}`}>Mehr erfahren</span>
                         <ChevronRight className="w-3 h-3" />
                       </div>
                     </div>
@@ -141,8 +142,8 @@ const MethodsSection: React.FC = () => {
         <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Personalisierte Beratung</h3>
-              <p className="text-gray-600 font-light">
+              <h3 className={`${textStyle.primaryHeading} mb-4`}>Personalisierte Beratung</h3>
+              <p className={`${textStyle.bodyText}`}>
                 Jede Haartransplantationstechnik hat ihre eigenen Vorteile und ist für bestimmte Situationen besonders geeignet. 
                 In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und empfehlen die für Sie 
                 optimale Methode. Unsere Experten berücksichtigen dabei Faktoren wie Ihre Haarstruktur, das Ausmaß des Haarverlusts 
@@ -150,8 +151,8 @@ const MethodsSection: React.FC = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-light text-[#7BA7C2] mb-4">Kombinierte Techniken</h3>
-              <p className="text-gray-600 font-light">
+              <h3 className={`${textStyle.primaryHeading} mb-4`}>Kombinierte Techniken</h3>
+              <p className={`${textStyle.bodyText}`}>
                 In vielen Fällen erzielen wir die besten Ergebnisse durch die Kombination verschiedener Techniken. 
                 So können wir beispielsweise die FUE-Methode für die Entnahme der Haarfollikel nutzen und diese dann 
                 mit der DHI-Technik implantieren. Dieser maßgeschneiderte Ansatz ermöglicht es uns, für jeden Patienten 

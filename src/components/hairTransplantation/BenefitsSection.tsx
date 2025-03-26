@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Users, Zap, Compass, UserCheck, Clock, MapPin, ArrowRight } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 interface BenefitCard {
   title: string;
@@ -43,10 +45,10 @@ const BenefitsSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className="text-3xl font-light md:text-5xl relative">{t('benefitsSection.title')}</h2>
-            <div className="h-1 w-[300px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-3 mx-auto"></div>
+            <h2 className={`${textStyle.sectionTitle} relative`}>{t('benefitsSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[300px] mt-3 mx-auto`}></div>
           </div>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('benefitsSection.subtitle')}
           </p>
         </div>
@@ -90,21 +92,21 @@ const BenefitsSection: React.FC = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="relative z-10 text-lg font-light text-white drop-shadow-sm flex-1 pr-6 line-clamp-2">{card.title}</h3>
+                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.light} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
                   </div>
                   
                   {/* Content with subtle gradient */}
                   <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-[200px] flex flex-col">
                     {/* Description with perfect typography */}
-                    <p className="text-sm text-gray-600 font-light leading-relaxed flex-grow">
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow`}>
                       {card.description}
                     </p>
                     
                     {/* Subtle indicator */}
-                    <div className={`flex items-center justify-end text-xs text-[#7BA7C2] mt-4 transition-opacity duration-300 ${
+                    <div className={`flex items-center justify-end ${fontSize.xs} ${textColor.primary} mt-4 transition-opacity duration-300 ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
-                      <span className="mr-1 font-light">Mehr erfahren</span>
+                      <span className={`mr-1 ${fontWeight.light}`}>Mehr erfahren</span>
                       <ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -129,17 +131,18 @@ const BenefitsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className="text-2xl md:text-3xl font-light text-[#7BA7C2] mb-4">Persönliche Beratung vereinbaren</h3>
-                <p className="text-gray-600 font-light">
+                <h3 className={`${textStyle.primaryHeading} mb-4`}>Persönliche Beratung vereinbaren</h3>
+                <p className={`${textStyle.bodyText}`}>
                   Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen 
                   Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className="inline-block bg-[#7BA7C2] text-white px-8 py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base font-light tracking-wider transform hover:scale-105 hover:bg-[#6b97b2] group">
-                  <span className="flex items-center">
+                <button className={`${buttonStyle.primary} transform hover:scale-105`}>
+                  <span className={buttonRippleClass}></span>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase`}>
                     {t('buttons.consultation', { ns: 'common' })}
-                    <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    <ArrowRight className={buttonArrowClass} />
                   </span>
                 </button>
               </div>

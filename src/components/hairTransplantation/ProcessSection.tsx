@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CheckCircle, Sparkles, Scissors, Droplets, Compass } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 
 interface ProcessStep {
   image: string;
@@ -81,10 +82,10 @@ const ProcessSection: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className="text-3xl font-light md:text-5xl relative">{t('processSection.title')}</h2>
-            <div className="h-1 w-[300px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-3 mx-auto"></div>
+            <h2 className={`${textStyle.sectionTitle} relative`}>{t('processSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[300px] mt-3 mx-auto`}></div>
           </div>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('processSection.subtitle')}
           </p>
         </div>
@@ -122,7 +123,7 @@ const ProcessSection: React.FC = () => {
                         ? 'bg-[#7BA7C2] text-white shadow-md' 
                         : 'bg-white text-[#7BA7C2] border-2 border-[#7BA7C2]/50 shadow-sm'
                     }`}>
-                      <span className="text-lg font-medium">{step.number}</span>
+                      <span className={`${fontSize.lg} ${fontWeight.medium}`}>{step.number}</span>
                     </div>
                     
                     {/* Image */}
@@ -145,15 +146,15 @@ const ProcessSection: React.FC = () => {
                   {/* Card Content with optimized height */}
                   <div className="p-6 h-[240px] flex flex-col">
                     {/* Title */}
-                    <h3 className={`text-xl font-light mb-3 transition-colors duration-300 ${
-                      isHovered ? 'text-[#7BA7C2]' : 'text-gray-800'
+                    <h3 className={`${fontSize.h4} ${fontWeight.light} mb-3 transition-colors duration-300 ${
+                      isHovered ? textColor.primary : textColor.dark
                     }`}>
                       {step.title}
                     </h3>
                     
                     {/* Description - full text without scrollbars */}
                     <div className="flex-grow">
-                      <p className="text-sm text-gray-600 font-light leading-relaxed">
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                         {step.description}
                       </p>
                     </div>
@@ -173,7 +174,7 @@ const ProcessSection: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="relative z-10">
-              <h3 className="text-2xl md:text-3xl font-light text-[#7BA7C2] mb-8 text-center">Unsere Expertise für Ihr perfektes Ergebnis</h3>
+              <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary} mb-8 text-center`}>Unsere Expertise für Ihr perfektes Ergebnis</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {advantageItems.map((item, index) => {
@@ -200,12 +201,12 @@ const ProcessSection: React.FC = () => {
                         </div>
                         
                         <div className="flex-grow">
-                          <h4 className={`text-lg font-light mb-2 transition-colors duration-300 ${
-                            isHovered ? 'text-[#7BA7C2]' : 'text-gray-800'
+                          <h4 className={`${fontSize.lg} ${fontWeight.light} mb-2 transition-colors duration-300 ${
+                            isHovered ? textColor.primary : textColor.dark
                           }`}>
                             {item.title}
                           </h4>
-                          <p className="text-sm text-gray-600 font-light leading-relaxed">
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                             {item.description}
                           </p>
                         </div>

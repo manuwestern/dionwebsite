@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MessageCircle, MapPin, ArrowRight, Calendar } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 const ContactSection: React.FC = () => {
   const { t } = useTranslation(['layout', 'common']);
@@ -49,9 +51,9 @@ const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-light md:text-5xl mb-4">{t('contactSection.title')}</h2>
-          <div className="h-1 w-64 bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mx-auto mb-6"></div>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-2xl mx-auto">
+          <h2 className={`${textStyle.sectionTitle} mb-4`}>{t('contactSection.title')}</h2>
+          <div className={`${gradientUnderline.primary} w-64 mx-auto mb-6`}></div>
+          <p className={`${textStyle.sectionSubtitle} max-w-2xl mx-auto`}>
             Beginnen Sie Ihre Reise zu vollerem Haar mit einem persönlichen Gespräch.
             Unsere Experten stehen Ihnen für alle Fragen zur Verfügung.
           </p>
@@ -67,13 +69,13 @@ const ContactSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
                     <Calendar className="w-6 h-6 text-[#7BA7C2]" />
                   </div>
-                  <h3 className="text-2xl font-light text-gray-800">Kostenlose Beratung</h3>
+                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark}`}>Kostenlose Beratung</h3>
                 </div>
                 
                 {isSubmitted ? (
                   <div className="bg-green-50 border border-green-100 rounded-xl p-8 text-center">
-                    <h4 className="text-xl font-light text-gray-800 mb-4">Vielen Dank für Ihre Anfrage!</h4>
-                    <p className="text-base text-gray-600 font-light mb-6">
+                    <h4 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-4`}>Vielen Dank für Ihre Anfrage!</h4>
+                    <p className={`${textStyle.bodyText} mb-6`}>
                       Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
                     </p>
                     <button 
@@ -87,7 +89,7 @@ const ContactSection: React.FC = () => {
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <label htmlFor="name" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>Name</label>
                         <input
                           type="text"
                           id="name"
@@ -100,7 +102,7 @@ const ContactSection: React.FC = () => {
                       </div>
                       
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+                        <label htmlFor="email" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>E-Mail</label>
                         <input
                           type="email"
                           id="email"
@@ -114,7 +116,7 @@ const ContactSection: React.FC = () => {
                     </div>
                     
                     <div className="mb-6">
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                      <label htmlFor="phone" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>Telefon</label>
                       <input
                         type="tel"
                         id="phone"
@@ -126,7 +128,7 @@ const ContactSection: React.FC = () => {
                     </div>
                     
                     <div className="mb-6">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Ihre Nachricht</label>
+                      <label htmlFor="message" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>Ihre Nachricht</label>
                       <textarea
                         id="message"
                         rows={4}
@@ -140,7 +142,7 @@ const ContactSection: React.FC = () => {
                     <button 
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center px-8 py-4 rounded-lg bg-[#7BA7C2] text-white transition-all duration-300 hover:bg-[#6b97b2] hover:shadow-lg disabled:opacity-70"
+                      className={`${buttonStyle.primary} w-full disabled:opacity-70`}
                     >
                       {isSubmitting ? (
                         <>
@@ -148,12 +150,15 @@ const ContactSection: React.FC = () => {
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
-                          Wird gesendet...
+                          <span className="uppercase">Wird gesendet...</span>
                         </>
                       ) : (
                         <>
-                          Beratungstermin vereinbaren
-                          <ArrowRight className="ml-2 w-5 h-5" />
+                          <span className={buttonRippleClass}></span>
+                          <span className={`relative flex items-center ${textStyle.button} uppercase`}>
+                            Beratungstermin vereinbaren
+                            <ArrowRight className={buttonArrowClass} />
+                          </span>
                         </>
                       )}
                     </button>
@@ -167,7 +172,7 @@ const ContactSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-[#7BA7C2]" />
                   </div>
-                  <h3 className="text-2xl font-light text-gray-800">Kontaktinformationen</h3>
+                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark}`}>Kontaktinformationen</h3>
                 </div>
                 
                 <div className="space-y-8 mb-auto">
@@ -176,11 +181,11 @@ const ContactSection: React.FC = () => {
                       <Phone className="w-5 h-5 text-[#7BA7C2]" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-light text-gray-800 mb-1">{t('contact.phone', { ns: 'common' })}</h4>
-                      <a href="tel:+491702637818" className="text-base text-gray-600 hover:text-[#7BA7C2] transition-colors">
+                      <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-1`}>{t('contact.phone', { ns: 'common' })}</h4>
+                      <a href="tel:+491702637818" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
                         +49 170 2637818
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">
+                      <p className={`${fontSize.sm} ${textColor.light} mt-1`}>
                         {t('contact.businessHours', { ns: 'common' })}
                       </p>
                     </div>
@@ -191,11 +196,11 @@ const ContactSection: React.FC = () => {
                       <MessageCircle className="w-5 h-5 text-[#7BA7C2]" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-light text-gray-800 mb-1">{t('contact.whatsapp', { ns: 'common' })}</h4>
-                      <a href="https://wa.me/491702637818" className="text-base text-gray-600 hover:text-[#7BA7C2] transition-colors">
+                      <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-1`}>{t('contact.whatsapp', { ns: 'common' })}</h4>
+                      <a href="https://wa.me/491702637818" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
                         +49 170 2637818
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">
+                      <p className={`${fontSize.sm} ${textColor.light} mt-1`}>
                         {t('contact.quickConsultation', { ns: 'common' })}
                       </p>
                     </div>
@@ -206,11 +211,11 @@ const ContactSection: React.FC = () => {
                       <Mail className="w-5 h-5 text-[#7BA7C2]" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-light text-gray-800 mb-1">{t('contact.email', { ns: 'common' })}</h4>
-                      <a href="mailto:info@dionhairclinic.de" className="text-base text-gray-600 hover:text-[#7BA7C2] transition-colors">
+                      <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-1`}>{t('contact.email', { ns: 'common' })}</h4>
+                      <a href="mailto:info@dionhairclinic.de" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
                         info@dionhairclinic.de
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">
+                      <p className={`${fontSize.sm} ${textColor.light} mt-1`}>
                         {t('contact.responseTime', { ns: 'common' })}
                       </p>
                     </div>
@@ -218,8 +223,8 @@ const ContactSection: React.FC = () => {
                 </div>
                 
                 <div className="mt-12 pt-8 border-t border-[#7BA7C2]/20">
-                  <h4 className="text-lg font-light text-gray-800 mb-3">{t('contactSection.address.title')}</h4>
-                  <p className="text-base text-gray-600 font-light">
+                  <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-3`}>{t('contactSection.address.title')}</h4>
+                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light}`}>
                     {t('contactSection.address.line1')}<br />
                     {t('contactSection.address.line2')}<br />
                     {t('contactSection.address.line3')}<br />

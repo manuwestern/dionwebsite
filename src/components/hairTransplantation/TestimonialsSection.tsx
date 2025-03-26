@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 interface Testimonial {
   name: string;
@@ -81,13 +83,13 @@ const TestimonialsSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className="text-3xl font-light md:text-5xl relative">{t('testimonialsSection.title')}</h2>
-            <div className="h-1 w-[350px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mt-3 mx-auto"></div>
+            <h2 className={`${textStyle.sectionTitle} relative`}>{t('testimonialsSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className="text-base text-gray-600 font-light md:text-xl max-w-3xl mx-auto mt-4">
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('testimonialsSection.subtitle')}
           </p>
-          <p className="text-base text-gray-700 font-light mt-4 max-w-3xl mx-auto">
+          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} mt-4 max-w-3xl mx-auto`}>
             {t('testimonialsSection.intro')}
           </p>
         </div>
@@ -117,12 +119,12 @@ const TestimonialsSection: React.FC = () => {
                   
                   {/* Stat content */}
                   <div className="relative z-10">
-                    <div className={`text-5xl font-light transition-all duration-500 ${
-                      isHovered ? 'text-[#5A8BA6]' : 'text-[#7BA7C2]'
+                    <div className={`${fontSize.h2} ${fontWeight.light} transition-all duration-500 ${
+                      isHovered ? textColor.primaryDark : textColor.primary
                     } mb-3`}>
                       {stat.value}
                     </div>
-                    <div className="text-gray-600 font-light">{stat.label}</div>
+                    <div className={`${textColor.medium} ${fontWeight.light}`}>{stat.label}</div>
                   </div>
                 </div>
                 
@@ -138,8 +140,8 @@ const TestimonialsSection: React.FC = () => {
         {/* Before/After Slider with elegant design */}
         <div className={`mb-20 transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-light">Vorher / Nachher Ergebnisse</h3>
-            <div className="h-0.5 w-40 bg-gradient-to-r from-transparent via-[#7BA7C2]/25 to-transparent mx-auto mt-3"></div>
+            <h3 className={`${fontSize.h3} ${fontWeight.light}`}>Vorher / Nachher Ergebnisse</h3>
+            <div className={`h-0.5 w-40 ${gradientUnderline.light} mx-auto mt-3`}></div>
           </div>
           
           <div className="relative">
@@ -214,20 +216,20 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className="text-gray-700 font-light mb-6 flex-grow italic relative z-10">"{testimonial.text}"</p>
+                <p className={`${textColor.dark} ${fontWeight.light} mb-6 flex-grow italic relative z-10`}>"{testimonial.text}"</p>
                 
                 {/* Rating */}
                 <div className="flex mb-4 relative z-10">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    <Star key={i} className={`w-5 h-5 ${textColor.accent} fill-current`} />
                   ))}
                 </div>
                 
                 {/* Patient Info */}
                 <div className="border-t border-gray-100 pt-4 relative z-10">
-                  <div className="font-medium text-gray-800">{testimonial.name}</div>
-                  <div className="text-sm text-[#7BA7C2]">{testimonial.procedure}</div>
-                  <div className="text-sm text-gray-500">{testimonial.date}</div>
+                  <div className={`${fontWeight.medium} ${textColor.dark}`}>{testimonial.name}</div>
+                  <div className={`${fontSize.sm} ${textColor.primary}`}>{testimonial.procedure}</div>
+                  <div className={`${fontSize.sm} ${textColor.light}`}>{testimonial.date}</div>
                 </div>
               </div>
             </div>
@@ -243,19 +245,19 @@ const TestimonialsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className="text-2xl md:text-3xl font-light text-[#7BA7C2] mb-4">Werden Sie unser nächster Erfolgsfall</h3>
-                <p className="text-gray-600 font-light">
+                <h3 className={`${textStyle.primaryHeading} mb-4`}>Werden Sie unser nächster Erfolgsfall</h3>
+                <p className={`${textStyle.bodyText}`}>
                   Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation 
                   Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von 
                   unseren Experten beraten.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className="group relative inline-flex items-center justify-center px-10 py-4 rounded-xl bg-[#7BA7C2] text-white overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-[#6b97b2]">
-                  <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
-                  <span className="relative flex items-center font-light tracking-wider">
+                <button className={buttonStyle.primary}>
+                  <span className={buttonRippleClass}></span>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase`}>
                     {t('testimonialsSection.cta')}
-                    <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    <ArrowRight className={buttonArrowClass} />
                   </span>
                 </button>
               </div>

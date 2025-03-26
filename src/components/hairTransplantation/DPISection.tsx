@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ShieldCheck, Zap, HeartPulse, Sparkles } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 interface FeatureItem {
   icon: React.ReactNode;
@@ -67,24 +69,24 @@ const DPISection: React.FC = () => {
               </div>
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-light text-gray-800 mb-6">
-              <span className="text-[#7BA7C2]">Dion Painless Injection</span>
-              <span className="text-xl md:text-2xl bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] inline-block text-transparent bg-clip-text ml-2">(DPI)</span>
+            <h2 className={`${textStyle.sectionTitle} mb-6`}>
+              Dion Painless Injection
+              <span className={`${fontSize.h3} ${textColor.primary} ml-2`}>(DPI)</span>
             </h2>
             
-            <div className="h-1 w-[400px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent mb-6"></div>
+            <div className={`${gradientUnderline.primary} w-[400px] mb-6`}></div>
             
-            <p className="text-lg text-gray-600 font-light mb-8 leading-relaxed">
+            <p className={`${fontSize.lg} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
               Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. 
               Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und 
               verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende.
             </p>
             
-            <button className="group relative inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
-              <span className="relative flex items-center font-light tracking-wider">
+            <button className={buttonStyle.primary}>
+              <span className={buttonRippleClass}></span>
+              <span className={`relative flex items-center ${textStyle.button} uppercase`}>
                 Mehr über DPI erfahren
-                <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className={buttonArrowClass} />
               </span>
             </button>
           </div>
@@ -107,7 +109,7 @@ const DPISection: React.FC = () => {
               </div>
               
               <div className="relative z-10">
-                <h3 className="text-2xl font-light text-[#7BA7C2] mb-6">Vorteile der DPI-Technologie</h3>
+                <h3 className={`${textStyle.primaryHeading} mb-6`}>Vorteile der DPI-Technologie</h3>
                 
                 <div className="space-y-6">
                   {featureItems.map((item, index) => {
@@ -134,12 +136,12 @@ const DPISection: React.FC = () => {
                           </div>
                           
                           <div className="flex-grow">
-                            <h4 className={`text-base font-medium mb-1 transition-colors duration-300 ${
-                              isHovered ? 'text-[#7BA7C2]' : 'text-gray-800'
+                            <h4 className={`${fontSize.base} ${fontWeight.medium} mb-1 transition-colors duration-300 ${
+                              isHovered ? textColor.primary : textColor.dark
                             }`}>
                               {item.title}
                             </h4>
-                            <p className="text-sm text-gray-600 font-light leading-relaxed">
+                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                               {item.description}
                             </p>
                           </div>
