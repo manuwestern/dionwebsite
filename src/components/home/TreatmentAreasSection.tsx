@@ -11,6 +11,7 @@ interface TreatmentArea {
   descriptionKey: string;
   mobileDescription: string;
   altText: string;
+  features: string[];
 }
 
 const TreatmentAreasSection: React.FC = () => {
@@ -40,7 +41,7 @@ const TreatmentAreasSection: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Treatment areas data with images and custom descriptions for mobile view
+  // Treatment areas data with enhanced information
   const treatmentAreas: TreatmentArea[] = [
     {
       id: 'head',
@@ -48,7 +49,12 @@ const TreatmentAreasSection: React.FC = () => {
       titleKey: 'treatmentAreasSection.areas.0.title',
       descriptionKey: 'treatmentAreasSection.areas.0.description',
       mobileDescription: 'Leiden Sie unter kahlen Stellen oder Geheimratsecken?',
-      altText: 'Haartransplantation in Mönchengladbach - Wiederherstellung des Haupthaars mit modernsten FUE und DHI Techniken'
+      altText: 'Haartransplantation in Mönchengladbach - Wiederherstellung des Haupthaars mit modernsten FUE und DHI Techniken',
+      features: [
+        'Dauerhafte Lösung für Haarausfall',
+        'Natürlich aussehende Haarlinie',
+        'Schmerzarme Behandlung unter lokaler Betäubung'
+      ]
     },
     {
       id: 'beard',
@@ -56,7 +62,12 @@ const TreatmentAreasSection: React.FC = () => {
       titleKey: 'treatmentAreasSection.areas.1.title',
       descriptionKey: 'treatmentAreasSection.areas.1.description',
       mobileDescription: 'Wünschen Sie sich einen volleren Bart ohne Lücken?',
-      altText: 'Barthaartransplantation in der Dion Hair Clinic - Verdichtung und Neugestaltung des Bartwuchses für einen volleren Bart'
+      altText: 'Barthaartransplantation in der Dion Hair Clinic - Verdichtung und Neugestaltung des Bartwuchses für einen volleren Bart',
+      features: [
+        'Individuelle Bartgestaltung nach Wunsch',
+        'Füllung von lückenhaftem Bartwuchs',
+        'Definierte Konturen und Vollbart möglich'
+      ]
     },
     {
       id: 'eyebrows',
@@ -64,7 +75,12 @@ const TreatmentAreasSection: React.FC = () => {
       titleKey: 'treatmentAreasSection.areas.2.title',
       descriptionKey: 'treatmentAreasSection.areas.2.description',
       mobileDescription: 'Möchten Sie ausdrucksstarke, volle Augenbrauen?',
-      altText: 'Augenbrauentransplantation bei Dion Hair Clinic - Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick'
+      altText: 'Augenbrauentransplantation bei Dion Hair Clinic - Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick',
+      features: [
+        'Maßgeschneiderte Augenbrauenform',
+        'Präzise Platzierung jedes Haarfollikels',
+        'Natürlicher Wuchswinkel und -richtung'
+      ]
     }
   ];
 
@@ -134,16 +150,32 @@ const TreatmentAreasSection: React.FC = () => {
                   </div>
                 </div>
                 
-                  {/* Text content container with refined typography and fixed height */}
-                  <div className="p-6 text-center flex flex-col h-[220px]">
+                  {/* Text content container with refined typography and fixed height - enhanced with features */}
+                  <div className="p-6 text-center flex flex-col h-[350px]">
                     <div className="flex-grow">
-                      <p className={`${textStyle.bodyText} line-clamp-6`}>
-                        {t(area.descriptionKey)}
-                      </p>
+                      <div className="h-[80px] overflow-hidden">
+                        <p className={`${textStyle.bodyText}`}>
+                          {t(area.descriptionKey)}
+                        </p>
+                      </div>
+                      
+                      {/* Key features with elegant styling and fixed height */}
+                      <div className="mt-4 h-[120px] space-y-2">
+                        {area.features.map((feature, i) => (
+                          <div key={i} className="flex items-start gap-2">
+                            <div className="w-4 h-4 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <div className="w-2 h-2 rounded-full bg-[#7BA7C2]"></div>
+                            </div>
+                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-left`}>
+                              {feature}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
-                    <div className="mt-auto pt-6">
+                    <div className="mt-auto pt-6 pb-2">
                       <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                         <span className={buttonRippleClass}></span>
                         <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
@@ -205,16 +237,32 @@ const TreatmentAreasSection: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Text content container with refined typography and fixed height */}
-                  <div className="p-8 flex flex-col h-[240px]">
+                  {/* Text content container with refined typography and fixed height - enhanced with features */}
+                  <div className="p-8 flex flex-col h-[380px]">
                     <div className="flex-grow">
-                      <p className={`${textStyle.bodyText} line-clamp-6`}>
-                        {t(area.descriptionKey)}
-                      </p>
+                      <div className="h-[100px] overflow-hidden">
+                        <p className={`${textStyle.bodyText}`}>
+                          {t(area.descriptionKey)}
+                        </p>
+                      </div>
+                      
+                      {/* Key features with elegant styling and fixed height */}
+                      <div className="mt-6 h-[120px] space-y-3">
+                        {area.features.map((feature, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <div className="w-5 h-5 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <div className="w-2.5 h-2.5 rounded-full bg-[#7BA7C2]"></div>
+                            </div>
+                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-left`}>
+                              {feature}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
-                    <div className="mt-auto pt-8">
+                    <div className="mt-auto pt-6 pb-2">
                       <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                         <span className={buttonRippleClass}></span>
                         <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
