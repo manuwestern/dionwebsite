@@ -141,7 +141,7 @@ const DPISection: React.FC = () => {
                           </div>
                           
                           <div className="flex-grow">
-                            <h4 className={`${fontSize.base} ${fontWeight.medium} mb-1 transition-colors duration-300 ${
+                            <h4 className={`${fontSize.lg} ${fontWeight.normal} mb-1 transition-colors duration-300 ${
                               isHovered ? textColor.primary : textColor.dark
                             }`}>
                               {item.title}
