@@ -1,15 +1,44 @@
-import React from 'react';
-import { Phone, Mail, MessageCircle, Check } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Phone, Mail, MessageCircle, MapPin, ArrowRight, Calendar } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const ContactSection: React.FC = () => {
   const { t } = useTranslation(['layout', 'common']);
+  const [isVisible, setIsVisible] = useState(false);
+  const [formName, setFormName] = useState('');
+  const [formEmail, setFormEmail] = useState('');
+  const [formPhone, setFormPhone] = useState('');
+  const [formMessage, setFormMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Trigger entrance animations
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      
+      // Reset form
+      setFormName('');
+      setFormEmail('');
+      setFormPhone('');
+      setFormMessage('');
+    }, 1500);
+  };
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-28 min-h-[800px] flex items-center relative">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
       {/* Subtle background pattern */}
       <div 
-        className="absolute inset-0 opacity-5 z-0" 
+        className="absolute inset-0 opacity-[0.02] z-0" 
         style={{ 
           backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
           backgroundSize: '200px',
@@ -17,116 +46,192 @@ const ContactSection: React.FC = () => {
         }}
       ></div>
       
-      <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-3 md:text-5xl md:mb-4">{t('contactSection.title')}</h2>
-          <p className="text-base text-gray-600 font-light md:text-xl">
-            {t('contactSection.subtitle')}
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-light md:text-5xl mb-4">{t('contactSection.title')}</h2>
+          <div className="h-1 w-24 bg-[#7BA7C2] mx-auto mb-6"></div>
+          <p className="text-base text-gray-600 font-light md:text-xl max-w-2xl mx-auto">
+            Beginnen Sie Ihre Reise zu vollerem Haar mit einem persönlichen Gespräch.
+            Unsere Experten stehen Ihnen für alle Fragen zur Verfügung.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* Contact Information */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 text-center md:text-left">
-            <h3 className="text-2xl font-light mb-6">{t('contactSection.contactOptions')}</h3>
-            
-            <div className="space-y-6 flex flex-col items-center md:items-start">
-              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
-                <div className="bg-[#7BA7C2]/10 rounded-full p-3 mb-3 md:mb-0 md:mr-4 w-12 h-12 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-[#7BA7C2]" />
+        {/* Contact Content */}
+        <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* Left side - Contact form */}
+              <div className="p-8 md:p-12">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
+                    <Calendar className="w-6 h-6 text-[#7BA7C2]" />
+                  </div>
+                  <h3 className="text-2xl font-light text-gray-800">Kostenlose Beratung</h3>
                 </div>
-                <div>
-                  <h4 className="text-lg font-light mb-1">{t('contact.phone', { ns: 'common' })}</h4>
-                  <p className="text-base text-gray-600 font-light">
-                    <a href="tel:+491702637818" className="hover:text-gray-900 transition-colors">
-                      +49 170 2637818
-                    </a>
-                  </p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {t('contact.businessHours', { ns: 'common' })}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
-                <div className="bg-[#7BA7C2]/10 rounded-full p-3 mb-3 md:mb-0 md:mr-4 w-12 h-12 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-[#7BA7C2]" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-light mb-1">{t('contact.email', { ns: 'common' })}</h4>
-                  <p className="text-base text-gray-600 font-light">
-                    <a href="mailto:info@dionhairclinic.de" className="hover:text-gray-900 transition-colors">
-                      info@dionhairclinic.de
-                    </a>
-                  </p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {t('contact.responseTime', { ns: 'common' })}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
-                <div className="bg-[#7BA7C2]/10 rounded-full p-3 mb-3 md:mb-0 md:mr-4 w-12 h-12 flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-[#7BA7C2]" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-light mb-1">{t('contact.whatsapp', { ns: 'common' })}</h4>
-                  <p className="text-base text-gray-600 font-light">
-                    <a href="https://wa.me/491702637818" className="hover:text-gray-900 transition-colors">
-                      +49 170 2637818
-                    </a>
-                  </p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {t('contact.quickConsultation', { ns: 'common' })}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-gray-100 text-center md:text-left">
-              <h4 className="text-lg font-light mb-3">{t('contactSection.address.title')}</h4>
-              <p className="text-base text-gray-600 font-light">
-                {t('contactSection.address.line1')}<br />
-                {t('contactSection.address.line2')}<br />
-                {t('contactSection.address.line3')}<br />
-                {t('contactSection.address.line4')}
-              </p>
-            </div>
-          </div>
-
-          {/* Free Hair Analysis CTA */}
-          <div className="bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/20 text-gray-800 rounded-2xl shadow-lg p-8 md:p-10 flex flex-col text-center md:text-left">
-            <h3 className="text-2xl font-light mb-4">{t('contactSection.hairAnalysis.title')}</h3>
-              <p className="text-base text-gray-600 font-light mb-6">
-              {t('contactSection.hairAnalysis.description')}
-            </p>
-            
-            <div className="bg-white rounded-xl p-6 mb-8 shadow-sm">
-              <h4 className="text-xl font-light mb-4">{t('contactSection.hairAnalysis.expectations.title')}</h4>
-              <ul className="space-y-3 flex flex-col items-start px-4 sm:px-8 md:px-0">
-                {(t('contactSection.hairAnalysis.expectations.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
-                  <li key={index} className="flex items-start text-left w-full max-w-xs md:max-w-none">
-                    <div className="w-6 h-6 rounded-full bg-[#7BA7C2] flex items-center justify-center flex-shrink-0 mr-3 mt-0.5">
-                      <Check className="w-4 h-4 text-white" />
+                
+                {isSubmitted ? (
+                  <div className="bg-green-50 border border-green-100 rounded-xl p-8 text-center">
+                    <h4 className="text-xl font-light text-gray-800 mb-4">Vielen Dank für Ihre Anfrage!</h4>
+                    <p className="text-base text-gray-600 font-light mb-6">
+                      Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
+                    </p>
+                    <button 
+                      onClick={() => setIsSubmitted(false)}
+                      className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 transition-colors"
+                    >
+                      Neue Anfrage senden
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input
+                          type="text"
+                          id="name"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
+                          placeholder="Ihr Name"
+                          value={formName}
+                          onChange={(e) => setFormName(e.target.value)}
+                          required
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+                        <input
+                          type="email"
+                          id="email"
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
+                          placeholder="Ihre E-Mail-Adresse"
+                          value={formEmail}
+                          onChange={(e) => setFormEmail(e.target.value)}
+                          required
+                        />
+                      </div>
                     </div>
-                    <span className="text-base text-gray-600 font-light text-left">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="mt-auto">
-              <a 
-                href="#" 
-                className="block w-full bg-[#7BA7C2] text-white text-center py-3 px-6 rounded-lg font-light hover:shadow-lg transition-all duration-300 tracking-wider transform hover:scale-105"
-              >
-                {t('buttons.hairAnalysis', { ns: 'common' })}
-              </a>
+                    
+                    <div className="mb-6">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
+                        placeholder="Ihre Telefonnummer"
+                        value={formPhone}
+                        onChange={(e) => setFormPhone(e.target.value)}
+                      />
+                    </div>
+                    
+                    <div className="mb-6">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Ihre Nachricht</label>
+                      <textarea
+                        id="message"
+                        rows={4}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
+                        placeholder="Beschreiben Sie Ihr Anliegen oder stellen Sie Ihre Fragen"
+                        value={formMessage}
+                        onChange={(e) => setFormMessage(e.target.value)}
+                      ></textarea>
+                    </div>
+                    
+                    <button 
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full inline-flex items-center justify-center px-8 py-4 rounded-lg bg-[#7BA7C2] text-white transition-all duration-300 hover:bg-[#6b97b2] hover:shadow-lg disabled:opacity-70"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Wird gesendet...
+                        </>
+                      ) : (
+                        <>
+                          Beratungstermin vereinbaren
+                          <ArrowRight className="ml-2 w-5 h-5" />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                )}
+              </div>
+              
+              {/* Right side - Contact info */}
+              <div className="bg-[#7BA7C2]/5 p-8 md:p-12 flex flex-col">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-[#7BA7C2]" />
+                  </div>
+                  <h3 className="text-2xl font-light text-gray-800">Kontaktinformationen</h3>
+                </div>
+                
+                <div className="space-y-8 mb-auto">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Phone className="w-5 h-5 text-[#7BA7C2]" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-light text-gray-800 mb-1">{t('contact.phone', { ns: 'common' })}</h4>
+                      <a href="tel:+491702637818" className="text-base text-gray-600 hover:text-[#7BA7C2] transition-colors">
+                        +49 170 2637818
+                      </a>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {t('contact.businessHours', { ns: 'common' })}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <MessageCircle className="w-5 h-5 text-[#7BA7C2]" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-light text-gray-800 mb-1">{t('contact.whatsapp', { ns: 'common' })}</h4>
+                      <a href="https://wa.me/491702637818" className="text-base text-gray-600 hover:text-[#7BA7C2] transition-colors">
+                        +49 170 2637818
+                      </a>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {t('contact.quickConsultation', { ns: 'common' })}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Mail className="w-5 h-5 text-[#7BA7C2]" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-light text-gray-800 mb-1">{t('contact.email', { ns: 'common' })}</h4>
+                      <a href="mailto:info@dionhairclinic.de" className="text-base text-gray-600 hover:text-[#7BA7C2] transition-colors">
+                        info@dionhairclinic.de
+                      </a>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {t('contact.responseTime', { ns: 'common' })}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-12 pt-8 border-t border-[#7BA7C2]/20">
+                  <h4 className="text-lg font-light text-gray-800 mb-3">{t('contactSection.address.title')}</h4>
+                  <p className="text-base text-gray-600 font-light">
+                    {t('contactSection.address.line1')}<br />
+                    {t('contactSection.address.line2')}<br />
+                    {t('contactSection.address.line3')}<br />
+                    {t('contactSection.address.line4')}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
