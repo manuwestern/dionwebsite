@@ -43,12 +43,12 @@ const BenefitsSection: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header with elegant design */}
         <div className="text-center mb-20">
-          <div className="inline-block mb-4 relative">
+          <div className="inline-block mb-6 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle} relative`}>{t('benefitsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[300px] mt-3 mx-auto`}></div>
+            <div className={`${gradientUnderline.primary} w-[300px] mt-4 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('benefitsSection.subtitle')}
           </p>
         </div>
@@ -92,7 +92,7 @@ const BenefitsSection: React.FC = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.light} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
+                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.medium} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
                   </div>
                   
                   {/* Content with subtle gradient */}
@@ -131,7 +131,7 @@ const BenefitsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4`}>Persönliche Beratung vereinbaren</h3>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4`}>Persönliche Beratung vereinbaren</h3>
                 <p className={`${textStyle.bodyText}`}>
                   Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen 
                   Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan.

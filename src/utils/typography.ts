@@ -70,22 +70,26 @@ export const tracking = {
 // Kombinierte Typografie-Stile für häufig verwendete Elemente
 export const textStyle = {
   // Überschriften
-  sectionTitle: `${fontSize.h2} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark}`,
+  sectionTitle: `${fontSize.h2} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark}`,
   sectionSubtitle: `${fontSize.lg} ${fontWeight.light} ${lineHeight.normal} ${textColor.medium}`,
-  cardTitle: `${fontSize.h4} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark}`,
+  cardTitle: `${fontSize.h4} ${fontWeight.medium} ${lineHeight.tight} ${textColor.dark}`,
   
   // Fließtext
   bodyText: `${fontSize.base} ${fontWeight.light} ${lineHeight.relaxed} ${textColor.medium}`,
   bodyTextImportant: `${fontSize.lg} ${fontWeight.light} ${lineHeight.relaxed} ${textColor.dark}`,
   bodyTextSmall: `${fontSize.sm} ${fontWeight.light} ${lineHeight.normal} ${textColor.medium}`,
   
+  // Listen
+  listItem: `${fontSize.base} ${fontWeight.light} ${lineHeight.relaxed} ${textColor.medium} pl-2`,
+  listItemBullet: `${fontSize.base} ${fontWeight.medium} ${textColor.primary} mr-2`,
+  
   // Spezielle Elemente
-  button: `${fontSize.base} ${fontWeight.light} ${tracking.wider} ${textColor.white}`,
+  button: `${fontSize.base} ${fontWeight.medium} ${tracking.wider} ${textColor.white}`,
   badge: `${fontSize.xs} ${fontWeight.medium} ${tracking.wide}`,
-  stat: `${fontSize.h3} ${fontWeight.light} ${textColor.primary}`,
+  stat: `${fontSize.h3} ${fontWeight.medium} ${textColor.primary}`,
   
   // Primärfarben-Varianten
-  primaryHeading: `${fontSize.h3} ${fontWeight.light} ${lineHeight.tight} ${textColor.primary}`,
+  primaryHeading: `${fontSize.h3} ${fontWeight.normal} ${lineHeight.tight} ${textColor.primary}`,
   primaryText: `${fontSize.base} ${fontWeight.light} ${lineHeight.normal} ${textColor.primary}`,
 };
 

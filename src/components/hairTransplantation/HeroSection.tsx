@@ -70,16 +70,16 @@ const HeroSection: React.FC = () => {
           
           {/* Text content for mobile with staggered animations */}
           <div className="w-full flex flex-col items-center mb-10">
-            <h1 className={`${fontSize.heroMobile} ${fontWeight.light} mb-3 text-center transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
+            <h1 className={`${fontSize.heroMobile} ${fontWeight.normal} mb-4 text-center transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
               {t('heroSection.title')}
-              <span className={`block ${fontSize.h4} mt-3 ${textColor.medium} ${fontWeight.light}`}>
+              <span className={`block ${fontSize.h4} mt-4 ${textColor.medium} ${fontWeight.light}`}>
                 {t('heroSection.subtitle')}
               </span>
             </h1>
             
             <div className={`${gradientUnderline.primary} w-[400px] my-6 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
             
-            <p className={`${textStyle.bodyText} mt-4 text-center max-w-2xl transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <p className={`${textStyle.bodyText} mt-6 text-center max-w-2xl mx-auto transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {t('heroSection.welcomeText')}
             </p>
           </div>
@@ -130,9 +130,9 @@ const HeroSection: React.FC = () => {
         <div className="relative min-h-[520px] flex items-center">
           {/* Text content for desktop with staggered animations */}
           <div className="relative z-10 w-[55%] flex flex-col justify-center h-full pt-6">
-            <h1 className={`${fontSize.heroDesktop} ${fontWeight.light} mb-6 text-left transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
+            <h1 className={`${fontSize.heroDesktop} ${fontWeight.normal} mb-6 text-left transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
               {t('heroSection.title')}
-              <span className={`block ${fontSize.h3} mt-2 ${textColor.medium} ${fontWeight.light}`}>
+              <span className={`block ${fontSize.h3} mt-4 ${textColor.medium} ${fontWeight.light}`}>
                 {t('heroSection.subtitle')}
               </span>
             </h1>
@@ -146,15 +146,15 @@ const HeroSection: React.FC = () => {
             {/* Stats with elegant animations */}
             <div className={`flex gap-12 mt-10 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex flex-col">
-                <span className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary}`}>98%</span>
+                <span className={textStyle.stat}>98%</span>
                 <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light}`}>Zufriedene Patienten</span>
               </div>
               <div className="flex flex-col">
-                <span className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary}`}>5.000+</span>
+                <span className={textStyle.stat}>5.000+</span>
                 <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light}`}>Erfolgreiche Behandlungen</span>
               </div>
               <div className="flex flex-col">
-                <span className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary}`}>15+</span>
+                <span className={textStyle.stat}>15+</span>
                 <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light}`}>Jahre Erfahrung</span>
               </div>
             </div>
