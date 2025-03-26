@@ -123,12 +123,12 @@ const CareSection: React.FC = () => {
           
           {/* Right side: Features */}
           <div className="lg:w-1/2">
-            <h3 className={`${fontSize.h3} ${fontWeight.light} mb-6 ${textColor.dark}`}>Ihr persönlicher Begleiter für den gesamten Behandlungsprozess</h3>
-            <p className={`${textStyle.bodyText} mb-4`}>
+            <h3 className={`${fontSize.h3} ${fontWeight.light} mb-6 ${textColor.dark} text-center lg:text-left`}>Ihr persönlicher Begleiter für den gesamten Behandlungsprozess</h3>
+            <p className={`${textStyle.bodyText} mb-4 text-center lg:text-left px-2 lg:px-0`}>
               Mit Dion Hair Clinic Care+ bieten wir Ihnen eine umfassende Smartphone-App, die Sie durch den gesamten Prozess Ihrer Haartransplantation führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.
             </p>
-            <div className="flex items-center mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg">
-              <div className="flex space-x-3 mr-4">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center sm:text-left">
+              <div className="flex space-x-3 mb-3 sm:mb-0 sm:mr-4">
                 <svg viewBox="0 0 24 24" className="w-6 h-6 text-[#7BA7C2]" fill="currentColor">
                   <path d="M17.05,20.28c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Z"/>
                 </svg>
@@ -144,8 +144,8 @@ const CareSection: React.FC = () => {
             {/* Features grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex">
-                  <div className="mr-4 mt-1">
+                <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+                  <div className="mb-3 sm:mb-0 sm:mr-4 sm:mt-1">
                     <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
                       {feature.icon}
                     </div>
@@ -159,19 +159,19 @@ const CareSection: React.FC = () => {
             </div>
             
             {/* CTA buttons */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <button className={buttonStyle.black}>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button className={`${buttonStyle.black} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                 <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase`}>
+                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
                   <svg viewBox="0 0 24 24" className="w-5 h-5 mr-2" fill="currentColor">
                     <path d="M17.03,22H6.97c-1.63,0-2.97-1.34-2.97-2.97V4.97c0-1.63,1.34-2.97,2.97-2.97h10.05c1.63,0,2.97,1.34,2.97,2.97v14.05c0,1.63-1.34,2.97-2.97,2.97ZM12,18.75c.69,0,1.25-.56,1.25-1.25s-.56-1.25-1.25-1.25-1.25,.56-1.25,1.25,.56,1.25,1.25,1.25Z"/>
                   </svg>
                   App Store
                 </span>
               </button>
-              <button className={buttonStyle.primary}>
+              <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                 <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase`}>
+                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
                   <svg viewBox="0 0 24 24" className="w-5 h-5 mr-2" fill="currentColor">
                     <path d="M17.05,20.28c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Z"/>
                   </svg>

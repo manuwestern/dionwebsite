@@ -85,8 +85,8 @@ const HairLossPatternsSection: React.FC = () => {
                     )}
                     
                     {/* Pattern title overlay with fixed height for consistent multi-line titles */}
-                    <div className="absolute bottom-0 left-0 right-0 py-6 px-5 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center">
-                      <h3 className={`${fontSize.h4} ${fontWeight.light} drop-shadow-md leading-tight`}>{pattern.title}</h3>
+                    <div className="absolute bottom-0 left-0 right-0 py-6 px-5 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center justify-center md:justify-start">
+                      <h3 className={`${fontSize.h4} ${fontWeight.light} drop-shadow-md leading-tight text-center md:text-left`}>{pattern.title}</h3>
                     </div>
                   </div>
                   
@@ -94,7 +94,7 @@ const HairLossPatternsSection: React.FC = () => {
                   <div className="px-8 py-7 grid grid-rows-[120px_auto_auto_30px] h-[280px]">
                     {/* Description with fixed height and scrolling if needed */}
                     <div className="overflow-auto pr-1 mb-3">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
                         {pattern.description}
                       </p>
                     </div>
@@ -109,25 +109,25 @@ const HairLossPatternsSection: React.FC = () => {
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider}`}>
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left`}>
                           {t('hairLossPatternsSection.typicalGrafts')}
                         </h4>
-                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light}`}>{pattern.grafts}</p>
+                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.grafts}</p>
                       </div>
                       <div className={`rounded-xl p-4 transition-all duration-300 h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider}`}>
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left`}>
                           {t('hairLossPatternsSection.treatment')}
                         </h4>
-                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light}`}>{pattern.treatment}</p>
+                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.treatment}</p>
                       </div>
                     </div>
                     
                     {/* Subtle indicator - always at the bottom */}
-                    <div className={`flex items-center justify-end ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 self-end ${
+                    <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 self-end ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
                       <span className={`mr-1 ${fontWeight.light}`}>Ideal für Ihren Haartyp</span>
@@ -148,25 +148,25 @@ const HairLossPatternsSection: React.FC = () => {
         {/* Additional information */}
         <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
           <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="md:w-1/3">
-              <h3 className={`${textStyle.primaryHeading} mb-4`}>Individuelle Beratung</h3>
-              <p className={`${textStyle.bodyText}`}>
+            <div className="md:w-1/3 mb-8 md:mb-0">
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Individuelle Beratung</h3>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                 Jedes Haarausfallmuster ist einzigartig und erfordert eine individuelle Behandlungsstrategie. 
                 In einem persönlichen Beratungsgespräch analysieren wir Ihr spezifisches Muster und entwickeln 
                 einen maßgeschneiderten Behandlungsplan.
               </p>
             </div>
-            <div className="md:w-1/3">
-              <h3 className={`${textStyle.primaryHeading} mb-4`}>Modernste Techniken</h3>
-              <p className={`${textStyle.bodyText}`}>
+            <div className="md:w-1/3 mb-8 md:mb-0">
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Modernste Techniken</h3>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                 Unsere fortschrittlichen Transplantationstechniken ermöglichen es uns, selbst bei fortgeschrittenem 
                 Haarausfall natürlich aussehende Ergebnisse zu erzielen. Wir passen die Methode an Ihr 
                 individuelles Haarausfallmuster an.
               </p>
             </div>
             <div className="md:w-1/3">
-              <h3 className={`${textStyle.primaryHeading} mb-4`}>Langfristige Ergebnisse</h3>
-              <p className={`${textStyle.bodyText}`}>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Langfristige Ergebnisse</h3>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                 Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige 
                 Ergebnisse. Wir berücksichtigen den zukünftigen Haarverlust und planen die Behandlung entsprechend.
               </p>

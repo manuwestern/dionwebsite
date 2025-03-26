@@ -63,36 +63,41 @@ const DPISection: React.FC = () => {
         <div className={`flex flex-col md:flex-row gap-12 items-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Left side - Premium badge and content */}
           <div className="md:w-1/2">
-            <div className="mb-6">
-              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white rounded-full text-sm font-medium shadow-md">
-                Premium Option
+            {/* Mobile-optimized layout with center alignment */}
+            <div className="flex flex-col items-center md:items-start">
+              <div className="mb-6">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white rounded-full text-sm font-medium shadow-md">
+                  Premium Option
+                </div>
+              </div>
+              
+              <h2 className={`${textStyle.sectionTitle} mb-6 text-center md:text-left`} lang="de">
+                Dion Painless Injection
+                <span className={`${fontSize.h3} ${textColor.primary} ml-2`}>(DPI)</span>
+              </h2>
+              
+              <div className={`${gradientUnderline.primary} w-[85%] max-w-[280px] md:w-[90%] md:max-w-[400px] mx-auto md:mx-0 mb-6`}></div>
+              
+              <p className={`${fontSize.lg} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8 text-center md:text-left px-2 md:px-0 max-w-md md:max-w-none mx-auto md:mx-0`}>
+                Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. 
+                Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und 
+                verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende.
+              </p>
+              
+              <div className="flex justify-center md:justify-start w-full">
+                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                  <span className={buttonRippleClass}></span>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                    Mehr über DPI erfahren
+                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
+                  </span>
+                </button>
               </div>
             </div>
-            
-            <h2 className={`${textStyle.sectionTitle} mb-6`} lang="de">
-              Dion Painless Injection
-              <span className={`${fontSize.h3} ${textColor.primary} ml-2`}>(DPI)</span>
-            </h2>
-            
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[400px] mb-6`}></div>
-            
-            <p className={`${fontSize.lg} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
-              Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. 
-              Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und 
-              verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende.
-            </p>
-            
-            <button className={buttonStyle.primary}>
-              <span className={buttonRippleClass}></span>
-              <span className={`relative flex items-center ${textStyle.button} uppercase`}>
-                Mehr über DPI erfahren
-                <ArrowRight className={buttonArrowClass} />
-              </span>
-            </button>
           </div>
           
           {/* Right side - Elegant card with features */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 mt-6 md:mt-0">
             <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-100/80 overflow-hidden">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
@@ -109,7 +114,7 @@ const DPISection: React.FC = () => {
               </div>
               
               <div className="relative z-10">
-                <h3 className={`${textStyle.primaryHeading} mb-6`}>Vorteile der DPI-Technologie</h3>
+                <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>Vorteile der DPI-Technologie</h3>
                 
                 <div className="space-y-6">
                   {featureItems.map((item, index) => {

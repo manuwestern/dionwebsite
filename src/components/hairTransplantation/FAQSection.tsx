@@ -163,7 +163,7 @@ const FAQSection: React.FC = () => {
                         }`}>
                           {categories[faq.category as keyof typeof categories].icon}
                         </div>
-                        <span className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{faq.question}</span>
+                        <span className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} text-left`}>{faq.question}</span>
                       </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         openFAQ === index 
@@ -184,7 +184,7 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-0 border-t border-gray-100">
-                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{faq.answer}</p>
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>{faq.answer}</p>
                       </div>
                     </div>
                   </div>
@@ -219,18 +219,18 @@ const FAQSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4`}>Noch Fragen?</h3>
-                <p className={`${textStyle.bodyText}`}>
+                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Noch Fragen?</h3>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                   Wir verstehen, dass eine Haartransplantation eine wichtige Entscheidung ist. Unser Expertenteam 
                   beantwortet gerne alle Ihre Fragen in einem persönlichen und unverbindlichen Beratungsgespräch.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className={buttonStyle.primary}>
+                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase`}>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
                     Beratungstermin vereinbaren
-                    <ArrowRight className={buttonArrowClass} />
+                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
                 </button>
               </div>

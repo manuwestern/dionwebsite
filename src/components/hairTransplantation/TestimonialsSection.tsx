@@ -209,24 +209,24 @@ const TestimonialsSection: React.FC = () => {
                 <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 opacity-50"></div>
                 
                 {/* Quote Icon with elegant design */}
-                <div className="mb-6 relative z-10">
+                <div className="mb-6 relative z-10 flex justify-center md:justify-start">
                   <div className="bg-gradient-to-br from-[#7BA7C2] to-[#5A8BA6] w-12 h-12 rounded-full flex items-center justify-center shadow-md">
                     <Quote className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className={`${textColor.dark} ${fontWeight.light} mb-6 flex-grow italic relative z-10`}>"{testimonial.text}"</p>
+                <p className={`${textColor.dark} ${fontWeight.light} mb-6 flex-grow italic relative z-10 text-center md:text-left`}>"{testimonial.text}"</p>
                 
                 {/* Rating */}
-                <div className="flex mb-4 relative z-10">
+                <div className="flex justify-center md:justify-start mb-4 relative z-10">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className={`w-5 h-5 ${textColor.accent} fill-current`} />
                   ))}
                 </div>
                 
                 {/* Patient Info */}
-                <div className="border-t border-gray-100 pt-4 relative z-10">
+                <div className="border-t border-gray-100 pt-4 relative z-10 text-center md:text-left">
                   <div className={`${fontWeight.medium} ${textColor.dark}`}>{testimonial.name}</div>
                   <div className={`${fontSize.sm} ${textColor.primary}`}>{testimonial.procedure}</div>
                   <div className={`${fontSize.sm} ${textColor.light}`}>{testimonial.date}</div>
@@ -245,19 +245,19 @@ const TestimonialsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4`}>Werden Sie unser nächster Erfolgsfall</h3>
-                <p className={`${textStyle.bodyText}`}>
+                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Werden Sie unser nächster Erfolgsfall</h3>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                   Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation 
                   Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von 
                   unseren Experten beraten.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className={buttonStyle.primary}>
+                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase`}>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
                     {t('testimonialsSection.cta')}
-                    <ArrowRight className={buttonArrowClass} />
+                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
                 </button>
               </div>

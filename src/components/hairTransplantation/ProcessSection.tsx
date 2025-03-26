@@ -146,7 +146,7 @@ const ProcessSection: React.FC = () => {
                   {/* Card Content with optimized height */}
                   <div className="p-6 h-auto min-h-[180px] md:h-[240px] flex flex-col">
                     {/* Title */}
-                    <h3 className={`${fontSize.h4} ${fontWeight.normal} ${tracking.wide} mb-3 transition-colors duration-300 ${
+                    <h3 className={`${fontSize.h4} ${fontWeight.normal} ${tracking.wide} mb-3 transition-colors duration-300 text-center md:text-left ${
                       isHovered ? textColor.primary : textColor.dark
                     }`}>
                       {step.title}
@@ -154,7 +154,7 @@ const ProcessSection: React.FC = () => {
                     
                     {/* Description - full text without scrollbars */}
                     <div className="flex-grow">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed}`}>
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left`}>
                         {step.description}
                       </p>
                     </div>
@@ -201,12 +201,12 @@ const ProcessSection: React.FC = () => {
                         </div>
                         
                         <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 ${
+                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 text-center md:text-left ${
                             isHovered ? textColor.primary : textColor.dark
                           }`}>
                             {item.title}
                           </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed}`}>
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left`}>
                             {item.description}
                           </p>
                         </div>

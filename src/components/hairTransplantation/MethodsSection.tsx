@@ -142,17 +142,17 @@ const MethodsSection: React.FC = () => {
         <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/2">
-              <h3 className={`${textStyle.primaryHeading} mb-4`}>Personalisierte Beratung</h3>
-              <p className={`${textStyle.bodyText}`}>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Personalisierte Beratung</h3>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                 Jede Haartransplantationstechnik hat ihre eigenen Vorteile und ist für bestimmte Situationen besonders geeignet. 
                 In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und empfehlen die für Sie 
                 optimale Methode. Unsere Experten berücksichtigen dabei Faktoren wie Ihre Haarstruktur, das Ausmaß des Haarverlusts 
                 und Ihre persönlichen Wünsche.
               </p>
             </div>
-            <div className="md:w-1/2">
-              <h3 className={`${textStyle.primaryHeading} mb-4`}>Kombinierte Techniken</h3>
-              <p className={`${textStyle.bodyText}`}>
+            <div className="md:w-1/2 mt-8 md:mt-0">
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Kombinierte Techniken</h3>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                 In vielen Fällen erzielen wir die besten Ergebnisse durch die Kombination verschiedener Techniken. 
                 So können wir beispielsweise die FUE-Methode für die Entnahme der Haarfollikel nutzen und diese dann 
                 mit der DHI-Technik implantieren. Dieser maßgeschneiderte Ansatz ermöglicht es uns, für jeden Patienten 
