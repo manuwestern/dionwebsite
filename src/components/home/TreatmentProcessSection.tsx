@@ -17,19 +17,8 @@ const TreatmentProcessSection: React.FC<{
 }> = ({ stepRefs, visibleSteps }) => {
   const { t } = useTranslation('home');
   const [activeStep, setActiveStep] = useState(0);
-  const [scrollY, setScrollY] = useState(0);
   const [cardHeight, setCardHeight] = useState<number | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
-
-  // Handle scroll for parallax effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Measure the height of the card whenever the active step changes
   useEffect(() => {
@@ -38,8 +27,6 @@ const TreatmentProcessSection: React.FC<{
       setCardHeight(height);
     }
   }, [activeStep]);
-
-  // No need for button position tracking anymore
 
   // Icons for each step
   const stepIcons = [
@@ -69,24 +56,7 @@ const TreatmentProcessSection: React.FC<{
   };
 
   return (
-    <div className="relative py-16 md:py-28 overflow-hidden min-h-[800px] flex items-center" style={{ backgroundColor: 'white' }}>
-      {/* Solid white background to ensure the section is always white */}
-      <div className="absolute inset-0 bg-white z-0"></div>
-      
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-gray-50 to-white"></div>
-      
-      {/* Background pattern with very low opacity */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{ 
-          backgroundImage: 'url("/images/bg_abstrakt.webp")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.1
-        }}
-      ></div>
+    <div className="relative py-16 md:py-28 overflow-hidden min-h-[800px] flex items-center bg-white">
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">

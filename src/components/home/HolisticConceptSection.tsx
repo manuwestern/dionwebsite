@@ -1,20 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Microscope, HeartPulse, Sparkles, Stethoscope, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HolisticConceptSection: React.FC = () => {
   const { t } = useTranslation('home');
-  const [scrollY, setScrollY] = useState(0);
-
-  // Handle scroll for parallax effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Icons for each concept
   const conceptIcons = [

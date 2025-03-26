@@ -1,24 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation(['hairTransplantation', 'common']);
-  const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
-  // Handle scroll for parallax effect and animations
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Trigger entrance animations
+  // Trigger entrance animations immediately
   useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -215,8 +204,7 @@ const HeroSection: React.FC = () => {
                 alt="Haartransplantation Experte - Modernste Techniken für natürliche Ergebnisse in der Dion Hair Clinic"
                 className="w-auto h-auto max-h-[580px] object-contain object-center relative z-10"
                 style={{ 
-                  filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))',
-                  transform: `translateY(${scrollY * 0.05}px)`
+                  filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))'
                 }}
                 width="600"
                 height="800"
