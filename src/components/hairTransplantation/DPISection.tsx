@@ -66,10 +66,12 @@ const DPISection: React.FC = () => {
                 </div>
               </div>
               
-              <h2 className={`${textStyle.sectionTitle} mb-6 text-center md:text-left`} lang="de">
-                Dion Painless Injection
-                <span className={`${fontSize.h3} ${textColor.primary} ml-2`}>(DPI)</span>
+              <h2 className={`${textStyle.sectionTitle} mb-2 text-center md:text-left`}>
+                {t('dpiSection.title')}
               </h2>
+              <p className={`${fontSize.h3} ${textColor.primary} mb-4 text-center md:text-left`}>
+                {t('dpiSection.subtitle')}
+              </p>
               
               <div className={`${gradientUnderline.primary} w-[85%] max-w-[280px] md:w-[90%] md:max-w-[400px] mx-auto md:mx-0 mb-6`}></div>
               

@@ -66,10 +66,10 @@ const BenefitsSection: React.FC = () => {
                 onMouseLeave={() => setHoverCard(null)}
               >
                 {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full ${
+                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full border-2 ${
                   isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
-                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
+                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
                 }`}>
                   {/* Header with icon and title side by side */}
                   <div className="relative h-20 overflow-hidden flex items-center">

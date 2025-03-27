@@ -98,10 +98,10 @@ const ProcessSection: React.FC = () => {
                 
                 {/* Card with optimized height for perfect visual balance */}
                 <div 
-                  className={`bg-white rounded-2xl shadow-lg overflow-hidden h-auto min-h-[450px] md:h-[520px] transition-all duration-500 ${
+                  className={`bg-white rounded-2xl shadow-lg overflow-hidden h-auto min-h-[450px] md:h-[520px] transition-all duration-500 border-2 ${
                     isHovered
-                      ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80 scale-[1.02]' 
-                      : 'border border-gray-100 hover:border-[#7BA7C2]/30 hover:shadow-md'
+                      ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80 scale-[1.02]' 
+                      : 'border-gray-100 hover:border-[#7BA7C2]/30 hover:shadow-md'
                   }`}
                 >
                   {/* Card Header with Image */}

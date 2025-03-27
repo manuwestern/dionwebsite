@@ -109,10 +109,10 @@ const TestimonialsSection: React.FC = () => {
                 onMouseLeave={() => setHoverStat(null)}
               >
                 {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full p-8 text-center ${
+                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full p-8 text-center border-2 ${
                   isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
-                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
+                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
                 }`}>
                   {/* Decorative circle */}
                   <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 blur-xl transition-opacity duration-500 opacity-50 group-hover:opacity-100"></div>

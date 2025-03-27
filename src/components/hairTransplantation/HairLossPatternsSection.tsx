@@ -17,7 +17,8 @@ const HairLossPatternsSection: React.FC = () => {
     "Norwood 4": "/images/norwood_scale_4.png",
     "Norwood 5-6": "/images/norwood_scale_5.png",
     "Norwood 7": "/images/norwood_scale_7.png",
-    "Frauen": "/images/frau_lichter_scheitel.png"
+    "Frauen": "/images/frau_lichter_scheitel.png",
+    "Women": "/images/frau_lichter_scheitel.png"
   };
 
   // Get image for a pattern
@@ -63,10 +64,10 @@ const HairLossPatternsSection: React.FC = () => {
                 onMouseLeave={() => setHoverPattern(null)}
               >
                 {/* Card with glass morphism effect */}
-                <div className={`relative h-full bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${
+                <div className={`relative h-full bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 border-2 ${
                   isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
-                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
+                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
                 }`}>
                   {/* Pattern Image with background gradient */}
                   <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10`}>
@@ -109,20 +110,20 @@ const HairLossPatternsSection: React.FC = () => {
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left`}>
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left whitespace-nowrap`}>
                           {t('hairLossPatternsSection.typicalGrafts')}
                         </h4>
-                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.grafts}</p>
+                        <p className={`${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.grafts}</p>
                       </div>
                       <div className={`rounded-xl p-4 transition-all duration-300 h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left`}>
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left whitespace-nowrap`}>
                           {t('hairLossPatternsSection.treatment')}
                         </h4>
-                        <p className={`${fontSize.lg} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.treatment}</p>
+                        <p className={`${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.treatment}</p>
                       </div>
                     </div>
                     
