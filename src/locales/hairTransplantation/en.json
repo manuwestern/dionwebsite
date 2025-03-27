@@ -6,7 +6,22 @@
   },
   "methodsSection": {
     "title": "Our Hair Transplantation Techniques",
-    "subtitle": "Specialized techniques for optimal results",
+    "subtitle": "Specialized techniques for optimal results - Compare our innovative methods and find the perfect solution for your individual needs",
+    "sectionLabels": {
+      "benefits": "Benefits",
+      "process": "Process"
+    },
+    "learnMore": "Learn more",
+    "additionalInfo": {
+      "personalConsultation": {
+        "title": "Personalized Consultation",
+        "description": "Each hair transplantation technique has its own advantages and is particularly suitable for certain situations. In a personal consultation, we analyze your individual situation and recommend the optimal method for you. Our experts consider factors such as your hair structure, the extent of hair loss, and your personal preferences."
+      },
+      "combinedTechniques": {
+        "title": "Combined Techniques",
+        "description": "In many cases, we achieve the best results by combining different techniques. For example, we can use the FUE method for extracting the hair follicles and then implant them using the DHI technique. This customized approach allows us to find the optimal solution for each patient and achieve natural-looking, permanent results."
+      }
+    },
     "methods": [
       {
         "title": "Sapphire FUE Technique",
@@ -53,6 +68,21 @@
     "description": "Each hair loss pattern requires an individual treatment approach. Here you will find an overview of the most common patterns and the corresponding treatment options.",
     "typicalGrafts": "Typical Grafts",
     "treatment": "Treatment",
+    "idealForYourHairType": "Ideal for your hair type",
+    "additionalInfo": {
+      "individualConsultation": {
+        "title": "Individual Consultation",
+        "description": "Each hair loss pattern is unique and requires an individual treatment strategy. In a personal consultation, we analyze your specific pattern and develop a customized treatment plan."
+      },
+      "modernTechniques": {
+        "title": "Modern Techniques",
+        "description": "Our advanced transplantation techniques allow us to achieve natural-looking results even with advanced hair loss. We adapt the method to your individual hair loss pattern."
+      },
+      "longTermResults": {
+        "title": "Long-Term Results",
+        "description": "Through our holistic approach, we achieve not only immediate but also long-term results. We consider future hair loss and plan the treatment accordingly."
+      }
+    },
     "patterns": [
       {
         "title": "Norwood 1-2 (Beginning Hair Loss)",
@@ -94,7 +124,12 @@
   },
   "benefitsSection": {
     "title": "Why Choose Dion Hair Clinic?",
-    "subtitle": "The advantages of getting your hair transplantation with us",
+    "subtitle": "The advantages of getting your hair transplantation with us - Discover why our clinic is the first choice for discerning patients who value quality and expertise",
+    "learnMore": "Learn more",
+    "cta": {
+      "title": "Schedule a Personal Consultation",
+      "description": "Discover how we can help you regain your confidence. In a personal consultation, we analyze your individual situation and develop a customized treatment plan."
+    },
     "cards": [
       {
         "title": "Experienced Expert Team",
@@ -124,7 +159,26 @@
   },
   "processSection": {
     "title": "The Treatment Process",
-    "subtitle": "Your path to new hair",
+    "subtitle": "Your path to new hair - Transparent presentation of all steps from initial planning to the final result of your hair transplantation",
+    "expertiseTitle": "Our Expertise for Your Perfect Result",
+    "advantages": [
+      {
+        "title": "Optimal Hairline Design",
+        "description": "We design the hairline individually to match the patient's face, taking into account facial shape, age, and personal style for a natural and harmonious appearance."
+      },
+      {
+        "title": "Invisible Scars with Smallest FUE Punches",
+        "description": "By using the most modern and smallest FUE punches, we leave practically invisible scars in the donor area, allowing you to wear your hair short as well."
+      },
+      {
+        "title": "Minimal Swelling through Reduced Fluids",
+        "description": "We use only small amounts of fluids like NaCl during the procedure to minimize swelling and shorten the recovery time."
+      },
+      {
+        "title": "Precise Placement for Natural Transitions",
+        "description": "Each implant is precisely placed to create natural transitions from the hairline to the rest of the hair and to respect the natural hair growth direction."
+      }
+    ],
     "steps": [
       {
         "title": "Planning",
@@ -148,6 +202,13 @@
     "title": "Success Stories from Our Patients",
     "subtitle": "Testimonials and Results",
     "intro": "Our patients share their experiences and results after hair transplantation at Dion Hair Clinic.",
+    "beforeAfterTitle": "Before / After Results",
+    "before": "Before",
+    "after": "After",
+    "ctaSection": {
+      "title": "Become Our Next Success Story",
+      "description": "Join our satisfied patients and experience for yourself how a hair transplantation can change your life. Schedule a free consultation today and get advice from our experts."
+    },
     "testimonials": [
       {
         "name": "Michael K., 42",
@@ -233,6 +294,32 @@
     "appStoreInfo": "Available for Android and iPhone – Download the app for free from the Google Play Store or Apple App Store.",
     "appStore": "App Store",
     "googlePlay": "Google Play"
+  },
+  "dpiSection": {
+    "premiumOption": "Premium Option",
+    "title": "Dion Painless Injection",
+    "description": "Experience a revolutionary hair transplantation without the dreaded pain of the anesthesia phase. Our newly developed DPI procedure makes the anesthesia phase almost completely painless and transforms your treatment into a pleasant experience from start to finish.",
+    "learnMore": "Learn more about DPI",
+    "additionalFee": "For an additional fee",
+    "benefitsTitle": "Benefits of DPI Technology",
+    "features": [
+      {
+        "title": "Painless Anesthesia",
+        "description": "Our newly developed procedure makes the anesthesia phase almost completely painless, for a pleasant treatment experience from the beginning."
+      },
+      {
+        "title": "Innovative Technology",
+        "description": "The DPI technology uses computer-controlled precision injections with optimal speed and pressure for maximum comfort."
+      },
+      {
+        "title": "Reduced Anxiety",
+        "description": "The painless anesthesia significantly reduces treatment anxiety, leading to a more relaxed experience and better results."
+      },
+      {
+        "title": "Exclusive Comfort",
+        "description": "As a premium option, DPI offers exclusive comfort that makes your hair transplantation a pleasant, stress-free experience."
+      }
+    ]
   },
   "faqSection": {
     "title": "Frequently Asked Questions",

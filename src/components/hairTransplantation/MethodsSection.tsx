@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Check, ChevronRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
@@ -80,7 +80,7 @@ const MethodsSection: React.FC = () => {
                     <div className="mb-8">
                       <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
                         <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
-                        Vorteile
+                        {t('methodsSection.sectionLabels.benefits')}
                       </h4>
                       <ul className="grid gap-3">
                         {method.benefits.map((benefit: string, i: number) => (
@@ -98,7 +98,7 @@ const MethodsSection: React.FC = () => {
                     <div className="mb-8">
                       <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
                         <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
-                        Prozess
+                        {t('methodsSection.sectionLabels.process')}
                       </h4>
                       <ol className="grid gap-4">
                         {method.process.map((step: string, i: number) => (
@@ -122,7 +122,7 @@ const MethodsSection: React.FC = () => {
                       <div className={`flex items-center ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 ${
                         isHovered ? 'opacity-100' : 'opacity-0'
                       }`}>
-                        <span className={`mr-1 ${fontWeight.normal}`}>Mehr erfahren</span>
+                        <span className={`mr-1 ${fontWeight.normal}`}>{t('methodsSection.learnMore')}</span>
                         <ChevronRight className="w-3 h-3" />
                       </div>
                     </div>
@@ -142,21 +142,15 @@ const MethodsSection: React.FC = () => {
         <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/2">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Personalisierte Beratung</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('methodsSection.additionalInfo.personalConsultation.title')}</h3>
               <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                Jede Haartransplantationstechnik hat ihre eigenen Vorteile und ist für bestimmte Situationen besonders geeignet. 
-                In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und empfehlen die für Sie 
-                optimale Methode. Unsere Experten berücksichtigen dabei Faktoren wie Ihre Haarstruktur, das Ausmaß des Haarverlusts 
-                und Ihre persönlichen Wünsche.
+                {t('methodsSection.additionalInfo.personalConsultation.description')}
               </p>
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Kombinierte Techniken</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('methodsSection.additionalInfo.combinedTechniques.title')}</h3>
               <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                In vielen Fällen erzielen wir die besten Ergebnisse durch die Kombination verschiedener Techniken. 
-                So können wir beispielsweise die FUE-Methode für die Entnahme der Haarfollikel nutzen und diese dann 
-                mit der DHI-Technik implantieren. Dieser maßgeschneiderte Ansatz ermöglicht es uns, für jeden Patienten 
-                die optimale Lösung zu finden und natürlich aussehende, dauerhafte Ergebnisse zu erzielen.
+                {t('methodsSection.additionalInfo.combinedTechniques.description')}
               </p>
             </div>
           </div>

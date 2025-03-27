@@ -203,7 +203,7 @@ const BeforeAfterSection: React.FC = () => {
                 value={sliderPosition}
                 onChange={handleSliderChange}
                 className="absolute inset-y-0 left-10 right-10 w-[calc(100%-80px)] h-full opacity-0 cursor-pointer z-30"
-                aria-label="Slider zum Vergleichen von Vorher und Nachher Bildern"
+              aria-label={t('beforeAfter.sliderAriaLabel', { ns: 'common' })}
               />
             </div>
           </div>
@@ -278,7 +278,7 @@ const BeforeAfterSection: React.FC = () => {
                 
                 {/* Case Description */}
                 <div className="mb-8 flex-grow">
-                  <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-2`}>Fallbeschreibung</h4>
+                <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-2`}>{t('beforeAfter.caseDescription', { ns: 'common' })}</h4>
                   <p className={`${textStyle.bodyText}`}>{t(currentCase.descriptionKey)}</p>
                 </div>
                 
@@ -293,7 +293,7 @@ const BeforeAfterSection: React.FC = () => {
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
                         index === activeCase ? 'bg-[#7BA7C2] scale-125' : 'bg-gray-300 hover:bg-gray-400'
                       }`}
-                      aria-label={`Gehe zu Fall ${index + 1}`}
+                      aria-label={t('beforeAfter.goToCase', { ns: 'common', number: index + 1 })}
                     />
                   ))}
                 </div>
@@ -402,10 +402,9 @@ const BeforeAfterSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Überzeugt von unseren Ergebnissen?</h3>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('beforeAfter.convincedTitle', { ns: 'common' })}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  Vereinbaren Sie jetzt Ihre kostenlose Beratung und erfahren Sie, wie wir auch Ihnen zu vollerem Haar verhelfen können.
-                  Unsere Experten analysieren Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan.
+                  {t('beforeAfter.convincedText', { ns: 'common' })}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">

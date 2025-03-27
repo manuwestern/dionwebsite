@@ -106,7 +106,7 @@ const BenefitsSection: React.FC = () => {
                     <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} ${textColor.primary} mt-4 transition-opacity duration-300 ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
-                      <span className={`mr-1 ${fontWeight.light}`}>Mehr erfahren</span>
+                      <span className={`mr-1 ${fontWeight.light}`}>{t('benefitsSection.learnMore')}</span>
                       <ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -131,10 +131,9 @@ const BenefitsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Persönliche Beratung vereinbaren</h3>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('benefitsSection.cta.title')}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen 
-                  Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan.
+                  {t('benefitsSection.cta.description')}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">

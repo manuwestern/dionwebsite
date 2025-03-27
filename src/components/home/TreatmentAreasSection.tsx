@@ -48,39 +48,27 @@ const TreatmentAreasSection: React.FC = () => {
       imageUrl: '/images/Behandlung_Haartransplantation.webp',
       titleKey: 'treatmentAreasSection.areas.0.title',
       descriptionKey: 'treatmentAreasSection.areas.0.description',
-      mobileDescription: 'Leiden Sie unter kahlen Stellen oder Geheimratsecken?',
+      mobileDescription: t(`treatmentAreasSection.areas.0.mobileDescription`),
       altText: 'Haartransplantation in Mönchengladbach - Wiederherstellung des Haupthaars mit modernsten FUE und DHI Techniken',
-      features: [
-        'Dauerhafte Lösung für Haarausfall',
-        'Natürlich aussehende Haarlinie',
-        'Schmerzarme Behandlung unter lokaler Betäubung'
-      ]
+      features: t(`treatmentAreasSection.areas.0.features`, { returnObjects: true }) as string[]
     },
     {
       id: 'beard',
       imageUrl: '/images/Behandlung_Barthaartransplantation.webp',
       titleKey: 'treatmentAreasSection.areas.1.title',
       descriptionKey: 'treatmentAreasSection.areas.1.description',
-      mobileDescription: 'Wünschen Sie sich einen volleren Bart ohne Lücken?',
+      mobileDescription: t(`treatmentAreasSection.areas.1.mobileDescription`),
       altText: 'Barthaartransplantation in der Dion Hair Clinic - Verdichtung und Neugestaltung des Bartwuchses für einen volleren Bart',
-      features: [
-        'Individuelle Bartgestaltung nach Wunsch',
-        'Füllung von lückenhaftem Bartwuchs',
-        'Definierte Konturen und Vollbart möglich'
-      ]
+      features: t(`treatmentAreasSection.areas.1.features`, { returnObjects: true }) as string[]
     },
     {
       id: 'eyebrows',
       imageUrl: '/images/Behandlung_Augenbrauentransplantation.webp',
       titleKey: 'treatmentAreasSection.areas.2.title',
       descriptionKey: 'treatmentAreasSection.areas.2.description',
-      mobileDescription: 'Möchten Sie ausdrucksstarke, volle Augenbrauen?',
+      mobileDescription: t(`treatmentAreasSection.areas.2.mobileDescription`),
       altText: 'Augenbrauentransplantation bei Dion Hair Clinic - Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick',
-      features: [
-        'Maßgeschneiderte Augenbrauenform',
-        'Präzise Platzierung jedes Haarfollikels',
-        'Natürlicher Wuchswinkel und -richtung'
-      ]
+      features: t(`treatmentAreasSection.areas.2.features`, { returnObjects: true }) as string[]
     }
   ];
 
@@ -269,11 +257,9 @@ const TreatmentAreasSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Kostenlose Erstberatung sichern</h3>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('treatmentAreasSection.cta.title')}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  Lassen Sie sich von unseren Experten beraten und erfahren Sie mehr über die für Sie optimale Behandlungsmethode. 
-                  Wir nehmen uns Zeit, Ihre Fragen zu beantworten und erstellen gemeinsam mit Ihnen einen individuellen Behandlungsplan 
-                  für Ihre Haare, Ihren Bart oder Ihre Augenbrauen.
+                  {t('treatmentAreasSection.cta.description')}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">

@@ -41,7 +41,34 @@
         "title": "Natürliche Ergebnisse",
         "description": "Unsere Haartransplantationen sehen natürlich aus und sind nicht von natürlichem Haarwuchs zu unterscheiden."
       }
-    ]
+    ],
+    "cards": [
+      {
+        "title": "Erfahrenes Expertenteam",
+        "description": "Unser Team besteht aus hochqualifizierten Spezialisten mit jahrelanger Erfahrung in Haar-, Bart- und Augenbrauentransplantationen, die regelmäßig an Fortbildungen teilnehmen."
+      },
+      {
+        "title": "Modernste Verfahren",
+        "description": "Wir setzen auf innovative Techniken wie Saphir-FUE und DHI, die präzisere Ergebnisse, schnellere Heilung und ein natürlicheres Aussehen bei allen Transplantationsarten ermöglichen."
+      },
+      {
+        "title": "Ganzheitliches Konzept",
+        "description": "Unser 360°-Ansatz umfasst nicht nur die Transplantation, sondern auch eine umfassende Analyse, Ernährungsberatung und ergänzende Behandlungen für optimale Ergebnisse."
+      },
+      {
+        "title": "Individuelle Beratung",
+        "description": "Jeder Patient erhält einen maßgeschneiderten Behandlungsplan, der auf seine spezifischen Bedürfnisse, Haarstruktur und persönlichen Wünsche abgestimmt ist."
+      },
+      {
+        "title": "Langzeitnachsorge",
+        "description": "Wir begleiten Sie auch nach dem Eingriff mit regelmäßigen Kontrollterminen und unterstützenden Behandlungen für langfristig beste Resultate in allen Behandlungsbereichen."
+      },
+      {
+        "title": "Keine Auslandsreise nötig",
+        "description": "Genießen Sie höchste medizinische Standards in Deutschland ohne Sprachbarrieren, lange Reisen oder Risiken durch mangelnde Nachsorge im Ausland."
+      }
+    ],
+    "learnMore": "Mehr erfahren"
   },
   "treatmentAreasSection": {
     "title": "Behandlungsbereiche",
@@ -49,21 +76,43 @@
     "areas": [
       {
         "title": "Haare",
-        "description": "Wiederherstellung des Haupthaars mit modernsten Techniken wie FUE und DHI."
+        "description": "Wiederherstellung des Haupthaars mit modernsten Techniken wie FUE und DHI.",
+        "mobileDescription": "Leiden Sie unter kahlen Stellen oder Geheimratsecken?",
+        "features": [
+          "Dauerhafte Lösung für Haarausfall",
+          "Natürlich aussehende Haarlinie",
+          "Schmerzarme Behandlung unter lokaler Betäubung"
+        ]
       },
       {
         "title": "Bart",
-        "description": "Verdichtung oder Neugestaltung des Bartwuchses für einen volleren Bart."
+        "description": "Verdichtung oder Neugestaltung des Bartwuchses für einen volleren Bart.",
+        "mobileDescription": "Wünschen Sie sich einen volleren Bart ohne Lücken?",
+        "features": [
+          "Individuelle Bartgestaltung nach Wunsch",
+          "Füllung von lückenhaftem Bartwuchs",
+          "Definierte Konturen und Vollbart möglich"
+        ]
       },
       {
         "title": "Augenbrauen",
-        "description": "Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick."
+        "description": "Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick.",
+        "mobileDescription": "Möchten Sie ausdrucksstarke, volle Augenbrauen?",
+        "features": [
+          "Maßgeschneiderte Augenbrauenform",
+          "Präzise Platzierung jedes Haarfollikels",
+          "Natürlicher Wuchswinkel und -richtung"
+        ]
       },
       {
         "title": "Haarausfalltherapie",
         "description": "Nicht-chirurgische Behandlungen zur Vorbeugung und Behandlung von Haarausfall."
       }
-    ]
+    ],
+    "cta": {
+      "title": "Kostenlose Erstberatung sichern",
+      "description": "Lassen Sie sich von unseren Experten beraten und erfahren Sie mehr über die für Sie optimale Behandlungsmethode. Wir nehmen uns Zeit, Ihre Fragen zu beantworten und erstellen gemeinsam mit Ihnen einen individuellen Behandlungsplan für Ihre Haare, Ihren Bart oder Ihre Augenbrauen."
+    }
   },
   "holisticConceptSection": {
     "title": "Unser ganzheitliches Konzept",

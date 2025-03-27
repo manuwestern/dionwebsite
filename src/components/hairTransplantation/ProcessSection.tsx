@@ -46,29 +46,22 @@ const ProcessSection: React.FC = () => {
     number: index + 1
   }));
 
-  // Additional advantages
-  const advantageItems: AdvantageItem[] = [
-    {
-      icon: <Sparkles strokeWidth={1.5} />,
-      title: "Optimale Gestaltung der Haarlinie",
-      description: "Wir gestalten die Haarlinie individuell passend zum Gesicht des Patienten, unter Berücksichtigung von Gesichtsform, Alter und persönlichem Stil für ein natürliches und harmonisches Erscheinungsbild."
-    },
-    {
-      icon: <Scissors strokeWidth={1.5} />,
-      title: "Unsichtbare Narben durch kleinste FUE Punches",
-      description: "Durch den Einsatz modernster und kleinster FUE Punches hinterlassen wir praktisch unsichtbare Narben im Spenderbereich, sodass Sie Ihre Haare auch kurz tragen können."
-    },
-    {
-      icon: <Droplets strokeWidth={1.5} />,
-      title: "Minimale Schwellungen durch reduzierte Flüssigkeiten",
-      description: "Wir verwenden nur geringe Mengen an Flüssigkeiten wie NaCl während des Eingriffs, um Schwellungen auf ein Minimum zu reduzieren und die Erholungszeit zu verkürzen."
-    },
-    {
-      icon: <Compass strokeWidth={1.5} />,
-      title: "Präzise Platzierung für natürliche Übergänge",
-      description: "Jedes Implantat wird präzise platziert, um natürliche Übergänge vom Haaransatz zum restlichen Haar zu schaffen und die natürliche Haarwuchsrichtung zu respektieren."
-    }
+  // Get advantages from translation
+  const advantageIcons = [
+    <Sparkles strokeWidth={1.5} />,
+    <Scissors strokeWidth={1.5} />,
+    <Droplets strokeWidth={1.5} />,
+    <Compass strokeWidth={1.5} />
   ];
+
+  // Get advantages from translation
+  const advantageItems: AdvantageItem[] = (t('processSection.advantages', { returnObjects: true }) as any[]).map(
+    (advantage: any, index: number) => ({
+      icon: advantageIcons[index],
+      title: advantage.title,
+      description: advantage.description
+    })
+  );
 
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-white to-gray-50">
@@ -174,7 +167,7 @@ const ProcessSection: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="relative z-10">
-              <h3 className={`${textStyle.primaryHeading} mb-8 text-center md:text-left`}>Unsere Expertise für Ihr perfektes Ergebnis</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-8 text-center md:text-left`}>{t('processSection.expertiseTitle')}</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {advantageItems.map((item, index) => {

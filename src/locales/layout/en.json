@@ -53,7 +53,7 @@
   },
   "contactSection": {
     "title": "Contact Us",
-    "subtitle": "We are here for you and happy to answer your questions",
+    "subtitle": "Begin your journey to fuller hair with a personal consultation. Our experts are available to answer all your questions.",
     "contactOptions": "Contact Options",
     "address": {
       "title": "Address",
@@ -75,6 +75,35 @@
           "Transparent cost overview"
         ]
       }
+    },
+    "form": {
+      "title": "Free Consultation",
+      "name": {
+        "label": "Name",
+        "placeholder": "Your Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Your Email Address"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Your Phone Number"
+      },
+      "message": {
+        "label": "Your Message",
+        "placeholder": "Describe your concern or ask your questions"
+      },
+      "submit": "Schedule Consultation",
+      "sending": "Sending...",
+      "success": {
+        "title": "Thank you for your inquiry!",
+        "message": "We have received your message and will get back to you within 24 hours.",
+        "newRequest": "Send New Request"
+      }
+    },
+    "contactInfo": {
+      "title": "Contact Information"
     }
   }
 }

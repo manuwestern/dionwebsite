@@ -130,7 +130,7 @@ const HairLossPatternsSection: React.FC = () => {
                     <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 self-end ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
-                      <span className={`mr-1 ${fontWeight.light}`}>Ideal für Ihren Haartyp</span>
+                      <span className={`mr-1 ${fontWeight.light}`}>{t('hairLossPatternsSection.idealForYourHairType')}</span>
                       <ChevronRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -149,26 +149,21 @@ const HairLossPatternsSection: React.FC = () => {
         <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/3 mb-8 md:mb-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Individuelle Beratung</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairLossPatternsSection.additionalInfo.individualConsultation.title')}</h3>
               <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                Jedes Haarausfallmuster ist einzigartig und erfordert eine individuelle Behandlungsstrategie. 
-                In einem persönlichen Beratungsgespräch analysieren wir Ihr spezifisches Muster und entwickeln 
-                einen maßgeschneiderten Behandlungsplan.
+                {t('hairLossPatternsSection.additionalInfo.individualConsultation.description')}
               </p>
             </div>
             <div className="md:w-1/3 mb-8 md:mb-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Modernste Techniken</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairLossPatternsSection.additionalInfo.modernTechniques.title')}</h3>
               <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                Unsere fortschrittlichen Transplantationstechniken ermöglichen es uns, selbst bei fortgeschrittenem 
-                Haarausfall natürlich aussehende Ergebnisse zu erzielen. Wir passen die Methode an Ihr 
-                individuelles Haarausfallmuster an.
+                {t('hairLossPatternsSection.additionalInfo.modernTechniques.description')}
               </p>
             </div>
             <div className="md:w-1/3">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Langfristige Ergebnisse</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairLossPatternsSection.additionalInfo.longTermResults.title')}</h3>
               <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige 
-                Ergebnisse. Wir berücksichtigen den zukünftigen Haarverlust und planen die Behandlung entsprechend.
+                {t('hairLossPatternsSection.additionalInfo.longTermResults.description')}
               </p>
             </div>
           </div>

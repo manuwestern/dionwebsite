@@ -7,39 +7,24 @@ import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/bu
 const CareSection: React.FC = () => {
   const { t } = useTranslation(['hairTransplantation', 'common']);
 
-  // Features of the Care+ program
-  const features = [
-    {
-      icon: <Calendar className="w-6 h-6 text-[#7BA7C2]" />,
-      title: "Terminplanung",
-      description: "Alle wichtigen Termine vor und nach der Behandlung im Überblick"
-    },
-    {
-      icon: <CheckSquare className="w-6 h-6 text-[#7BA7C2]" />,
-      title: "Checklisten",
-      description: "Personalisierte To-Do-Listen für optimale Vor- und Nachsorge"
-    },
-    {
-      icon: <FileText className="w-6 h-6 text-[#7BA7C2]" />,
-      title: "Anleitungen",
-      description: "Detaillierte Pflegeanleitungen, z.B. zur Haarwäsche nach der Transplantation"
-    },
-    {
-      icon: <Camera className="w-6 h-6 text-[#7BA7C2]" />,
-      title: "Fortschrittsdokumentation",
-      description: "Dokumentieren Sie Ihren Wachstumsverlauf mit Fotos und Notizen"
-    },
-    {
-      icon: <Bell className="w-6 h-6 text-[#7BA7C2]" />,
-      title: "Erinnerungen",
-      description: "Automatische Benachrichtigungen für wichtige Pflegeschritte"
-    },
-    {
-      icon: <Smartphone className="w-6 h-6 text-[#7BA7C2]" />,
-      title: "Mobile App",
-      description: "Zugriff auf alle Funktionen über unsere benutzerfreundliche App"
-    }
+  // Feature icons
+  const featureIcons = [
+    <Calendar className="w-6 h-6 text-[#7BA7C2]" />,
+    <CheckSquare className="w-6 h-6 text-[#7BA7C2]" />,
+    <FileText className="w-6 h-6 text-[#7BA7C2]" />,
+    <Camera className="w-6 h-6 text-[#7BA7C2]" />,
+    <Bell className="w-6 h-6 text-[#7BA7C2]" />,
+    <Smartphone className="w-6 h-6 text-[#7BA7C2]" />
   ];
+
+  // Get features from translation
+  const features = (t('careSection.features', { returnObjects: true }) as any[]).map(
+    (feature: any, index: number) => ({
+      icon: featureIcons[index],
+      title: feature.title,
+      description: feature.description
+    })
+  );
 
   return (
     <div className="py-16 md:py-24 relative">
@@ -51,7 +36,7 @@ const CareSection: React.FC = () => {
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-2 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
-            Ihr persönlicher Begleiter für eine optimale Vor- und Nachsorge
+            {t('careSection.subtitle')}
           </p>
         </div>
 
@@ -73,44 +58,44 @@ const CareSection: React.FC = () => {
                 <div className="p-4">
                   {/* Progress tracker */}
                   <div className="mb-6">
-                    <h4 className={`${fontSize.sm} ${textColor.light} mb-2`}>Ihr Fortschritt</h4>
+                    <h4 className={`${fontSize.sm} ${textColor.light} mb-2`}>{t('careSection.appContent.progress')}</h4>
                     <div className="w-full bg-gray-100 h-2 rounded-full">
                       <div className="bg-[#7BA7C2] h-2 rounded-full w-[65%]"></div>
                     </div>
                     <div className="flex justify-between text-xs text-gray-500 mt-1">
-                      <span>Tag 1</span>
-                      <span>3 Monate</span>
-                      <span>12 Monate</span>
+                      <span>{t('careSection.appContent.day1')}</span>
+                      <span>{t('careSection.appContent.month3')}</span>
+                      <span>{t('careSection.appContent.month12')}</span>
                     </div>
                   </div>
                   
                   {/* Today's tasks */}
                   <div className="mb-6">
-                    <h4 className={`${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-2`}>Heutige Aufgaben</h4>
+                    <h4 className={`${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-2`}>{t('careSection.appContent.todayTasks')}</h4>
                     <div className="space-y-2">
                       <div className="flex items-center p-2 bg-[#7BA7C2]/5 rounded-lg">
                         <div className="w-5 h-5 rounded-full border-2 border-[#7BA7C2] flex items-center justify-center mr-2">
                           <div className="w-2 h-2 bg-[#7BA7C2] rounded-full"></div>
                         </div>
-                        <span className={`${fontSize.sm}`}>Sanfte Haarwäsche mit speziellem Shampoo</span>
+                        <span className={`${fontSize.sm}`}>{t('careSection.appContent.task1')}</span>
                       </div>
                       <div className="flex items-center p-2 bg-[#7BA7C2]/5 rounded-lg">
                         <div className="w-5 h-5 rounded-full border-2 border-[#7BA7C2] flex items-center justify-center mr-2">
                           <div className="w-2 h-2 bg-[#7BA7C2] rounded-full"></div>
                         </div>
-                        <span className={`${fontSize.sm}`}>Feuchtigkeitsspray anwenden</span>
+                        <span className={`${fontSize.sm}`}>{t('careSection.appContent.task2')}</span>
                       </div>
                       <div className="flex items-center p-2 bg-gray-50 rounded-lg">
                         <div className="w-5 h-5 rounded-full border-2 border-gray-300 mr-2"></div>
-                        <span className={`${fontSize.sm} ${textColor.light}`}>Fortschrittsfoto aufnehmen</span>
+                        <span className={`${fontSize.sm} ${textColor.light}`}>{t('careSection.appContent.task3')}</span>
                       </div>
                     </div>
                   </div>
                   
                   {/* Next appointment */}
                   <div className="bg-[#7BA7C2]/10 p-3 rounded-xl">
-                    <h4 className={`${fontSize.sm} ${fontWeight.medium} ${textColor.primary} mb-1`}>Nächster Termin</h4>
-                    <p className={`${fontSize.sm}`}>Kontrolluntersuchung: 15. April 2025, 14:00 Uhr</p>
+                    <h4 className={`${fontSize.sm} ${fontWeight.medium} ${textColor.primary} mb-1`}>{t('careSection.appContent.nextAppointment')}</h4>
+                    <p className={`${fontSize.sm}`}>{t('careSection.appContent.appointmentDetails')}</p>
                   </div>
                 </div>
               </div>
@@ -123,9 +108,9 @@ const CareSection: React.FC = () => {
           
           {/* Right side: Features */}
           <div className="lg:w-1/2">
-            <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>Ihr persönlicher Begleiter für den gesamten Behandlungsprozess</h3>
+            <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>{t('careSection.subheading')}</h3>
             <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0`}>
-              Mit Dion Hair Clinic Care+ bieten wir Ihnen eine umfassende Smartphone-App, die Sie durch den gesamten Prozess Ihrer Haartransplantation führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.
+              {t('careSection.description')}
             </p>
             <div className="flex flex-col md:flex-row items-center md:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center md:text-left">
               <div className="flex space-x-3 mb-3 md:mb-0 md:mr-4">
@@ -137,7 +122,7 @@ const CareSection: React.FC = () => {
                 </svg>
               </div>
               <p className={`${fontSize.sm} ${textColor.dark}`}>
-                <span className={fontWeight.medium}>Verfügbar für Android und iPhone</span> – Laden Sie die App kostenlos im Google Play Store oder Apple App Store herunter.
+                {t('careSection.appStoreInfo')}
               </p>
             </div>
             
@@ -166,7 +151,7 @@ const CareSection: React.FC = () => {
                   <svg viewBox="0 0 24 24" className="w-5 h-5 mr-2" fill="currentColor">
                     <path d="M17.03,22H6.97c-1.63,0-2.97-1.34-2.97-2.97V4.97c0-1.63,1.34-2.97,2.97-2.97h10.05c1.63,0,2.97,1.34,2.97,2.97v14.05c0,1.63-1.34,2.97-2.97,2.97ZM12,18.75c.69,0,1.25-.56,1.25-1.25s-.56-1.25-1.25-1.25-1.25,.56-1.25,1.25,.56,1.25,1.25,1.25Z"/>
                   </svg>
-                  App Store
+                  {t('careSection.appStore')}
                 </span>
               </button>
               <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
@@ -175,7 +160,7 @@ const CareSection: React.FC = () => {
                   <svg viewBox="0 0 24 24" className="w-5 h-5 mr-2" fill="currentColor">
                     <path d="M17.05,20.28c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Z"/>
                   </svg>
-                  Google Play
+                  {t('careSection.googlePlay')}
                 </span>
               </button>
             </div>

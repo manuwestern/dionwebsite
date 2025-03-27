@@ -16,5 +16,61 @@
     "businessHours": "Mo-Fr: 9:00 - 18:00 Uhr",
     "responseTime": "Wir antworten innerhalb von 24 Stunden",
     "quickConsultation": "Schnelle Beratung per Chat"
+  },
+  "faq": {
+    "searchPlaceholder": "Frage suchen...",
+    "allQuestions": "Alle Fragen",
+    "noResults": {
+      "title": "Keine Ergebnisse gefunden",
+      "description": "Bitte versuchen Sie eine andere Suche oder wählen Sie eine andere Kategorie."
+    },
+    "moreQuestions": {
+      "title": "Noch Fragen?",
+      "description": "Wir verstehen, dass eine Haartransplantation eine wichtige Entscheidung ist. Unser Expertenteam beantwortet gerne alle Ihre Fragen in einem persönlichen und unverbindlichen Beratungsgespräch."
+    },
+    "categories": {
+      "hair": "Haartransplantation",
+      "beard": "Barthaartransplantation",
+      "eyebrows": "Augenbrauentransplantation",
+      "general": "Allgemein",
+      "costs": "Kosten",
+      "aftercare": "Nachsorge",
+      "procedure": "Verfahren",
+      "recovery": "Erholung",
+      "results": "Ergebnisse"
+    }
+  },
+  "navigation": {
+    "scrollDown": "Mehr entdecken"
+  },
+  "stats": {
+    "satisfiedPatients": "Zufriedene Patienten",
+    "successfulTreatments": "Erfolgreiche Behandlungen",
+    "yearsExperience": "Jahre Erfahrung"
+  },
+  "trustBadges": {
+    "certifiedExperts": "Zertifizierte Experten",
+    "modernTechniques": "Modernste Techniken"
+  },
+  "beforeAfter": {
+    "sliderAriaLabel": "Slider zum Vergleichen von Vorher und Nachher Bildern",
+    "caseDescription": "Fallbeschreibung",
+    "goToCase": "Gehe zu Fall {{number}}",
+    "convincedTitle": "Überzeugt von unseren Ergebnissen?",
+    "convincedText": "Vereinbaren Sie jetzt Ihre kostenlose Beratung und erfahren Sie, wie wir auch Ihnen zu vollerem Haar verhelfen können. Unsere Experten analysieren Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan."
+  },
+  "treatmentProcess": {
+    "importantPoints": "Wichtige Punkte:",
+    "back": "Zurück",
+    "next": "Weiter",
+    "finished": "Fertig"
+  },
+  "benefits": {
+    "personalConsultation": "Persönliche Beratung vereinbaren",
+    "personalConsultationText": "Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan für Haare, Bart oder Augenbrauen."
+  },
+  "testimonials": {
+    "nextSuccessStory": "Werden Sie unser nächster Erfolgsfall",
+    "nextSuccessStoryText": "Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation Ihr Leben verändern kann. Vereinbaren Sie jetzt Ihre kostenlose Beratung und lassen Sie sich von unseren Experten beraten."
   }
 }

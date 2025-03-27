@@ -24,39 +24,15 @@ const BenefitsSection: React.FC = () => {
     <MapPin strokeWidth={1.5} />
   ];
 
-  // Create benefit cards with more general content covering all treatment areas
-  const benefitCards: BenefitCard[] = [
-    {
-      title: "Erfahrenes Expertenteam",
-      description: "Unser Team besteht aus hochqualifizierten Spezialisten mit jahrelanger Erfahrung in Haar-, Bart- und Augenbrauentransplantationen, die regelmäßig an Fortbildungen teilnehmen.",
-      icon: benefitIcons[0]
-    },
-    {
-      title: "Modernste Verfahren",
-      description: "Wir setzen auf innovative Techniken wie Saphir-FUE und DHI, die präzisere Ergebnisse, schnellere Heilung und ein natürlicheres Aussehen bei allen Transplantationsarten ermöglichen.",
-      icon: benefitIcons[1]
-    },
-    {
-      title: "Ganzheitliches Konzept",
-      description: "Unser 360°-Ansatz umfasst nicht nur die Transplantation, sondern auch eine umfassende Analyse, Ernährungsberatung und ergänzende Behandlungen für optimale Ergebnisse.",
-      icon: benefitIcons[2]
-    },
-    {
-      title: "Individuelle Beratung",
-      description: "Jeder Patient erhält einen maßgeschneiderten Behandlungsplan, der auf seine spezifischen Bedürfnisse, Haarstruktur und persönlichen Wünsche abgestimmt ist.",
-      icon: benefitIcons[3]
-    },
-    {
-      title: "Langzeitnachsorge",
-      description: "Wir begleiten Sie auch nach dem Eingriff mit regelmäßigen Kontrollterminen und unterstützenden Behandlungen für langfristig beste Resultate in allen Behandlungsbereichen.",
-      icon: benefitIcons[4]
-    },
-    {
-      title: "Keine Auslandsreise nötig",
-      description: "Genießen Sie höchste medizinische Standards in Deutschland ohne Sprachbarrieren, lange Reisen oder Risiken durch mangelnde Nachsorge im Ausland.",
-      icon: benefitIcons[5]
-    }
-  ];
+  // Create benefit cards from translation keys
+  const benefitCards: BenefitCard[] = Array.from(
+    { length: (t('benefitsSection.cards', { returnObjects: true }) as any[]).length },
+    (_, index) => ({
+      title: t(`benefitsSection.cards.${index}.title`),
+      description: t(`benefitsSection.cards.${index}.description`),
+      icon: benefitIcons[index]
+    })
+  );
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
@@ -128,7 +104,7 @@ const BenefitsSection: React.FC = () => {
                     <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} ${textColor.primary} mt-4 transition-opacity duration-300 ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
-                      <span className={`mr-1 ${fontWeight.light}`}>Mehr erfahren</span>
+                      <span className={`mr-1 ${fontWeight.light}`}>{t('benefitsSection.learnMore')}</span>
                       <ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -153,11 +129,9 @@ const BenefitsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Persönliche Beratung vereinbaren</h3>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('benefits.personalConsultation', { ns: 'common' })}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen 
-                  Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan 
-                  für Haare, Bart oder Augenbrauen.
+                  {t('benefits.personalConsultationText', { ns: 'common' })}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">

@@ -255,7 +255,7 @@ const TreatmentProcessSection: React.FC<{
                 
                 {processSteps[activeStep].featuresKey && (
                   <div className="space-y-4 bg-[#7BA7C2]/5 p-6 rounded-xl">
-                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-4`}>Wichtige Punkte:</h4>
+                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-4`}>{t('treatmentProcess.importantPoints', { ns: 'common' })}</h4>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                       {(t(processSteps[activeStep].featuresKey!, { returnObjects: true }) as string[]).map((feature, i) => (
                         <div key={i} className="flex items-start">
@@ -282,7 +282,7 @@ const TreatmentProcessSection: React.FC<{
                   }`}
                 >
                   <ChevronLeft className="w-5 h-5" />
-                  <span>Zurück</span>
+                  <span>{t('treatmentProcess.back', { ns: 'common' })}</span>
                 </button>
                 
                 <button 
@@ -296,14 +296,14 @@ const TreatmentProcessSection: React.FC<{
                 >
                   {activeStep === processSteps.length - 1 ? (
                     <>
-                      <span>Fertig</span>
+                      <span>{t('treatmentProcess.finished', { ns: 'common' })}</span>
                       <Check className="w-5 h-5" />
                     </>
                   ) : (
                     <>
                       <span className={buttonRippleClass}></span>
                       <span className="relative flex items-center">
-                        Weiter
+                        {t('treatmentProcess.next', { ns: 'common' })}
                         <ChevronRight className="w-5 h-5 ml-1" />
                       </span>
                     </>

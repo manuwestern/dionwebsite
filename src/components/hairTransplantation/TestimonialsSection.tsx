@@ -140,7 +140,7 @@ const TestimonialsSection: React.FC = () => {
         {/* Before/After Slider with elegant design */}
         <div className={`mb-20 transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-8">
-            <h3 className={`${textStyle.primaryHeading} text-center md:text-left`}>Vorher / Nachher Ergebnisse</h3>
+            <h3 className={`${textStyle.primaryHeading} text-center md:text-left`}>{t('testimonialsSection.beforeAfterTitle')}</h3>
             <div className={`h-0.5 w-40 ${gradientUnderline.light} mx-auto mt-3`}></div>
           </div>
           
@@ -151,7 +151,7 @@ const TestimonialsSection: React.FC = () => {
                   {/* Placeholder for actual image */}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">Vorher</div>
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.before')}</div>
               </div>
               
               <div className="relative rounded-2xl overflow-hidden shadow-lg group">
@@ -159,7 +159,7 @@ const TestimonialsSection: React.FC = () => {
                   {/* Placeholder for actual image */}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">Nachher</div>
+                <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.after')}</div>
               </div>
             </div>
             
@@ -245,11 +245,9 @@ const TestimonialsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Werden Sie unser nächster Erfolgsfall</h3>
+                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('testimonialsSection.ctaSection.title')}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation 
-                  Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von 
-                  unseren Experten beraten.
+                  {t('testimonialsSection.ctaSection.description')}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">

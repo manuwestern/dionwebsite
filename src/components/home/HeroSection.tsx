@@ -165,7 +165,7 @@ const HeroSection: React.FC = () => {
             className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             onClick={scrollToNextSection}
           >
-            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>Mehr entdecken</span>
+            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>{t('navigation.scrollDown', { ns: 'common' })}</span>
             <div className="w-8 h-8 rounded-full border border-[#7BA7C2]/40 flex items-center justify-center animate-bounce shadow-sm">
               <ChevronDown className="w-4 h-4 text-[#7BA7C2]" />
             </div>
@@ -211,15 +211,15 @@ const HeroSection: React.FC = () => {
             <div className={`flex gap-14 mt-12 transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>98%</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>Zufriedene Patienten</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.satisfiedPatients', { ns: 'common' })}</span>
               </div>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>5.000+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>Erfolgreiche Behandlungen</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.successfulTreatments', { ns: 'common' })}</span>
               </div>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>15+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>Jahre Erfahrung</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.yearsExperience', { ns: 'common' })}</span>
               </div>
             </div>
             
@@ -242,7 +242,7 @@ const HeroSection: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>Zertifizierte Experten</span>
+                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>{t('trustBadges.certifiedExperts', { ns: 'common' })}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mr-3 shadow-sm">
@@ -250,7 +250,7 @@ const HeroSection: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>Modernste Techniken</span>
+                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>{t('trustBadges.modernTechniques', { ns: 'common' })}</span>
               </div>
             </div>
           </div>
@@ -289,7 +289,7 @@ const HeroSection: React.FC = () => {
             className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             onClick={scrollToNextSection}
           >
-            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>Mehr entdecken</span>
+            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>{t('navigation.scrollDown', { ns: 'common' })}</span>
             <div className="w-9 h-9 rounded-full border border-[#7BA7C2]/40 flex items-center justify-center animate-bounce shadow-sm">
               <ChevronDown className="w-5 h-5 text-[#7BA7C2]" />
             </div>

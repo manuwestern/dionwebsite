@@ -54,8 +54,7 @@ const ContactSection: React.FC = () => {
           <h2 className={`${textStyle.sectionTitle} mb-4`}>{t('contactSection.title')}</h2>
           <div className={`${gradientUnderline.primary} w-64 mx-auto mb-6`}></div>
           <p className={`${textStyle.sectionSubtitle} max-w-2xl mx-auto`}>
-            Beginnen Sie Ihre Reise zu vollerem Haar mit einem persönlichen Gespräch.
-            Unsere Experten stehen Ihnen für alle Fragen zur Verfügung.
+            {t('contactSection.subtitle')}
           </p>
         </div>
 
@@ -69,32 +68,32 @@ const ContactSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
                     <Calendar className="w-6 h-6 text-[#7BA7C2]" />
                   </div>
-                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark}`}>Kostenlose Beratung</h3>
+                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark}`}>{t('contactSection.form.title')}</h3>
                 </div>
                 
                 {isSubmitted ? (
                   <div className="bg-green-50 border border-green-100 rounded-xl p-8 text-center">
-                    <h4 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-4`}>Vielen Dank für Ihre Anfrage!</h4>
+                    <h4 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-4`}>{t('contactSection.form.success.title')}</h4>
                     <p className={`${textStyle.bodyText} ${lineHeight.relaxed} mb-6`}>
-                      Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
+                      {t('contactSection.form.success.message')}
                     </p>
                     <button 
                       onClick={() => setIsSubmitted(false)}
                       className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 transition-colors"
                     >
-                      Neue Anfrage senden
+                      {t('contactSection.form.success.newRequest')}
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
-                        <label htmlFor="name" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>Name</label>
+                        <label htmlFor="name" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>{t('contactSection.form.name.label')}</label>
                         <input
                           type="text"
                           id="name"
                           className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
-                          placeholder="Ihr Name"
+                          placeholder={t('contactSection.form.name.placeholder')}
                           value={formName}
                           onChange={(e) => setFormName(e.target.value)}
                           required
@@ -102,12 +101,12 @@ const ContactSection: React.FC = () => {
                       </div>
                       
                       <div>
-                        <label htmlFor="email" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>E-Mail</label>
+                        <label htmlFor="email" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>{t('contactSection.form.email.label')}</label>
                         <input
                           type="email"
                           id="email"
                           className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
-                          placeholder="Ihre E-Mail-Adresse"
+                          placeholder={t('contactSection.form.email.placeholder')}
                           value={formEmail}
                           onChange={(e) => setFormEmail(e.target.value)}
                           required
@@ -116,24 +115,24 @@ const ContactSection: React.FC = () => {
                     </div>
                     
                     <div className="mb-6">
-                      <label htmlFor="phone" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>Telefon</label>
+                      <label htmlFor="phone" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>{t('contactSection.form.phone.label')}</label>
                       <input
                         type="tel"
                         id="phone"
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
-                        placeholder="Ihre Telefonnummer"
+                        placeholder={t('contactSection.form.phone.placeholder')}
                         value={formPhone}
                         onChange={(e) => setFormPhone(e.target.value)}
                       />
                     </div>
                     
                     <div className="mb-6">
-                      <label htmlFor="message" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>Ihre Nachricht</label>
+                      <label htmlFor="message" className={`block ${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-1`}>{t('contactSection.form.message.label')}</label>
                       <textarea
                         id="message"
                         rows={4}
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all"
-                        placeholder="Beschreiben Sie Ihr Anliegen oder stellen Sie Ihre Fragen"
+                        placeholder={t('contactSection.form.message.placeholder')}
                         value={formMessage}
                         onChange={(e) => setFormMessage(e.target.value)}
                       ></textarea>
@@ -150,13 +149,13 @@ const ContactSection: React.FC = () => {
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
-                          <span className="uppercase">Wird gesendet...</span>
+                          <span className="uppercase">{t('contactSection.form.sending')}</span>
                         </>
                       ) : (
                         <>
                           <span className={buttonRippleClass}></span>
                           <span className={`relative flex items-center ${textStyle.button} uppercase`}>
-                            Beratungstermin vereinbaren
+                            {t('contactSection.form.submit')}
                             <ArrowRight className={buttonArrowClass} />
                           </span>
                         </>
@@ -172,7 +171,7 @@ const ContactSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-[#7BA7C2]" />
                   </div>
-                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark}`}>Kontaktinformationen</h3>
+                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.dark}`}>{t('contactSection.contactInfo.title')}</h3>
                 </div>
                 
                 <div className="space-y-8 mb-auto">

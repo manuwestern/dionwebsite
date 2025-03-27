@@ -11,15 +11,15 @@ interface FAQ {
 }
 
 // FAQ categories with icons
-const categories = {
-  procedure: { name: 'Verfahren', icon: <Stethoscope className="w-5 h-5" /> },
-  recovery: { name: 'Erholung', icon: <Clock className="w-5 h-5" /> },
-  results: { name: 'Ergebnisse', icon: <HelpCircle className="w-5 h-5" /> },
-  costs: { name: 'Kosten', icon: <DollarSign className="w-5 h-5" /> }
-};
+const getCategoryIcons = () => ({
+  procedure: { icon: <Stethoscope className="w-5 h-5" /> },
+  recovery: { icon: <Clock className="w-5 h-5" /> },
+  results: { icon: <HelpCircle className="w-5 h-5" /> },
+  costs: { icon: <DollarSign className="w-5 h-5" /> }
+});
 
 const FAQSection: React.FC = () => {
-  const { t } = useTranslation('hairTransplantation');
+  const { t } = useTranslation(['hairTransplantation', 'common']);
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -95,7 +95,7 @@ const FAQSection: React.FC = () => {
             <input
               type="text"
               className="block w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all duration-300"
-              placeholder="Frage suchen..."
+              placeholder={t('faq.searchPlaceholder', { ns: 'common' })}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -112,9 +112,9 @@ const FAQSection: React.FC = () => {
                   : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:shadow-md border border-gray-100'
               }`}
             >
-              Alle Fragen
+              {t('faq.allQuestions', { ns: 'common' })}
             </button>
-            {Object.entries(categories).map(([key, { name, icon }]) => (
+            {Object.entries(getCategoryIcons()).map(([key, { icon }]) => (
               <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
@@ -127,7 +127,7 @@ const FAQSection: React.FC = () => {
                 <span className={activeCategory === key ? 'text-white' : 'text-[#7BA7C2]'}>
                   {icon}
                 </span>
-                {name}
+                {t(`faq.categories.${key}`, { ns: 'common' })}
               </button>
             ))}
           </div>
@@ -161,7 +161,7 @@ const FAQSection: React.FC = () => {
                             ? 'bg-[#7BA7C2] text-white' 
                             : 'bg-[#7BA7C2]/10 text-[#7BA7C2] group-hover:bg-[#7BA7C2]/20'
                         }`}>
-                          {categories[faq.category as keyof typeof categories].icon}
+                          {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>].icon}
                         </div>
                         <span className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left`}>{faq.question}</span>
                       </div>
@@ -203,8 +203,8 @@ const FAQSection: React.FC = () => {
                 <div className="w-16 h-16 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto mb-4">
                   <HelpCircle className="w-8 h-8 text-[#7BA7C2]" />
                 </div>
-                <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2`}>Keine Ergebnisse gefunden</h3>
-                <p className={`${textColor.medium} ${fontWeight.light}`}>Bitte versuchen Sie eine andere Suche oder wählen Sie eine andere Kategorie.</p>
+                <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2`}>{t('faq.noResults.title', { ns: 'common' })}</h3>
+                <p className={`${textColor.medium} ${fontWeight.light}`}>{t('faq.noResults.description', { ns: 'common' })}</p>
               </div>
             </div>
           )}
@@ -219,17 +219,16 @@ const FAQSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>Noch Fragen?</h3>
+                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('faq.moreQuestions.title', { ns: 'common' })}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  Wir verstehen, dass eine Haartransplantation eine wichtige Entscheidung ist. Unser Expertenteam 
-                  beantwortet gerne alle Ihre Fragen in einem persönlichen und unverbindlichen Beratungsgespräch.
+                  {t('faq.moreQuestions.description', { ns: 'common' })}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
                 <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
                   <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
-                    Beratungstermin vereinbaren
+                    {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
                 </button>

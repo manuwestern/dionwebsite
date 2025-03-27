@@ -16,5 +16,61 @@
     "businessHours": "Mon-Fri: 9:00 AM - 6:00 PM",
     "responseTime": "We respond within 24 hours",
     "quickConsultation": "Quick consultation via chat"
+  },
+  "faq": {
+    "searchPlaceholder": "Search question...",
+    "allQuestions": "All Questions",
+    "noResults": {
+      "title": "No results found",
+      "description": "Please try a different search or select another category."
+    },
+    "moreQuestions": {
+      "title": "Still have questions?",
+      "description": "We understand that a hair transplantation is an important decision. Our team of experts is happy to answer all your questions in a personal and non-binding consultation."
+    },
+    "categories": {
+      "hair": "Hair Transplantation",
+      "beard": "Beard Transplantation",
+      "eyebrows": "Eyebrow Transplantation",
+      "general": "General",
+      "costs": "Costs",
+      "aftercare": "Aftercare",
+      "procedure": "Procedure",
+      "recovery": "Recovery",
+      "results": "Results"
+    }
+  },
+  "navigation": {
+    "scrollDown": "Discover more"
+  },
+  "stats": {
+    "satisfiedPatients": "Satisfied Patients",
+    "successfulTreatments": "Successful Treatments",
+    "yearsExperience": "Years Experience"
+  },
+  "trustBadges": {
+    "certifiedExperts": "Certified Experts",
+    "modernTechniques": "Modern Techniques"
+  },
+  "beforeAfter": {
+    "sliderAriaLabel": "Slider to compare before and after images",
+    "caseDescription": "Case Description",
+    "goToCase": "Go to case {{number}}",
+    "convincedTitle": "Convinced by our results?",
+    "convincedText": "Schedule your free consultation now and find out how we can help you achieve fuller hair. Our experts will analyze your individual situation and develop a customized treatment plan."
+  },
+  "treatmentProcess": {
+    "importantPoints": "Important Points:",
+    "back": "Back",
+    "next": "Next",
+    "finished": "Finished"
+  },
+  "benefits": {
+    "personalConsultation": "Schedule a personal consultation",
+    "personalConsultationText": "Discover how we can help you regain your confidence. In a personal consultation, we analyze your individual situation and develop a customized treatment plan for hair, beard, or eyebrows."
+  },
+  "testimonials": {
+    "nextSuccessStory": "Become our next success story",
+    "nextSuccessStoryText": "Join our satisfied patients and experience for yourself how a hair transplant can change your life. Schedule your free consultation now and get advice from our experts."
   }
 }

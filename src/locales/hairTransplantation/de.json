@@ -7,6 +7,21 @@
   "methodsSection": {
     "title": "Unsere Haartransplantationstechniken",
     "subtitle": "Spezialisierte Techniken für optimale Ergebnisse - Vergleichen Sie unsere innovativen Methoden und finden Sie die perfekte Lösung für Ihre individuellen Bedürfnisse",
+    "sectionLabels": {
+      "benefits": "Vorteile",
+      "process": "Prozess"
+    },
+    "learnMore": "Mehr erfahren",
+    "additionalInfo": {
+      "personalConsultation": {
+        "title": "Personalisierte Beratung",
+        "description": "Jede Haartransplantationstechnik hat ihre eigenen Vorteile und ist für bestimmte Situationen besonders geeignet. In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und empfehlen die für Sie optimale Methode. Unsere Experten berücksichtigen dabei Faktoren wie Ihre Haarstruktur, das Ausmaß des Haarverlusts und Ihre persönlichen Wünsche."
+      },
+      "combinedTechniques": {
+        "title": "Kombinierte Techniken",
+        "description": "In vielen Fällen erzielen wir die besten Ergebnisse durch die Kombination verschiedener Techniken. So können wir beispielsweise die FUE-Methode für die Entnahme der Haarfollikel nutzen und diese dann mit der DHI-Technik implantieren. Dieser maßgeschneiderte Ansatz ermöglicht es uns, für jeden Patienten die optimale Lösung zu finden und natürlich aussehende, dauerhafte Ergebnisse zu erzielen."
+      }
+    },
     "methods": [
       {
         "title": "Saphir-FUE-Technik",
@@ -53,6 +68,21 @@
     "description": "Jedes Haarausfallmuster erfordert einen individuellen Behandlungsansatz. Hier finden Sie einen Überblick über die häufigsten Muster und die entsprechenden Behandlungsoptionen.",
     "typicalGrafts": "Typische Grafts",
     "treatment": "Behandlung",
+    "idealForYourHairType": "Ideal für Ihren Haartyp",
+    "additionalInfo": {
+      "individualConsultation": {
+        "title": "Individuelle Beratung",
+        "description": "Jedes Haarausfallmuster ist einzigartig und erfordert eine individuelle Behandlungsstrategie. In einem persönlichen Beratungsgespräch analysieren wir Ihr spezifisches Muster und entwickeln einen maßgeschneiderten Behandlungsplan."
+      },
+      "modernTechniques": {
+        "title": "Modernste Techniken",
+        "description": "Unsere fortschrittlichen Transplantationstechniken ermöglichen es uns, selbst bei fortgeschrittenem Haarausfall natürlich aussehende Ergebnisse zu erzielen. Wir passen die Methode an Ihr individuelles Haarausfallmuster an."
+      },
+      "longTermResults": {
+        "title": "Langfristige Ergebnisse",
+        "description": "Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige Ergebnisse. Wir berücksichtigen den zukünftigen Haarverlust und planen die Behandlung entsprechend."
+      }
+    },
     "patterns": [
       {
         "title": "Norwood 1-2 (Beginnender Haarausfall)",
@@ -95,6 +125,11 @@
   "benefitsSection": {
     "title": "Warum Dion Hair Clinic?",
     "subtitle": "Die Vorteile einer Haartransplantation bei uns - Erfahren Sie, warum unsere Klinik die erste Wahl für anspruchsvolle Patienten ist, die Wert auf Qualität und Expertise legen",
+    "learnMore": "Mehr erfahren",
+    "cta": {
+      "title": "Persönliche Beratung vereinbaren",
+      "description": "Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan."
+    },
     "cards": [
       {
         "title": "Erfahrenes Expertenteam",
@@ -125,6 +160,25 @@
   "processSection": {
     "title": "Der Behandlungsprozess",
     "subtitle": "Ihr Weg zu neuem Haar - Transparente Darstellung aller Schritte von der ersten Planung bis zum endgültigen Ergebnis Ihrer Haartransplantation",
+    "expertiseTitle": "Unsere Expertise für Ihr perfektes Ergebnis",
+    "advantages": [
+      {
+        "title": "Optimale Gestaltung der Haarlinie",
+        "description": "Wir gestalten die Haarlinie individuell passend zum Gesicht des Patienten, unter Berücksichtigung von Gesichtsform, Alter und persönlichem Stil für ein natürliches und harmonisches Erscheinungsbild."
+      },
+      {
+        "title": "Unsichtbare Narben durch kleinste FUE Punches",
+        "description": "Durch den Einsatz modernster und kleinster FUE Punches hinterlassen wir praktisch unsichtbare Narben im Spenderbereich, sodass Sie Ihre Haare auch kurz tragen können."
+      },
+      {
+        "title": "Minimale Schwellungen durch reduzierte Flüssigkeiten",
+        "description": "Wir verwenden nur geringe Mengen an Flüssigkeiten wie NaCl während des Eingriffs, um Schwellungen auf ein Minimum zu reduzieren und die Erholungszeit zu verkürzen."
+      },
+      {
+        "title": "Präzise Platzierung für natürliche Übergänge",
+        "description": "Jedes Implantat wird präzise platziert, um natürliche Übergänge vom Haaransatz zum restlichen Haar zu schaffen und die natürliche Haarwuchsrichtung zu respektieren."
+      }
+    ],
     "steps": [
       {
         "title": "Planung",
@@ -148,6 +202,13 @@
     "title": "Erfolgsgeschichten unserer Patienten",
     "subtitle": "Erfahrungsberichte und Ergebnisse - Lesen Sie authentische Bewertungen von zufriedenen Patienten, die ihre Haartransplantation bei uns durchgeführt haben",
     "intro": "Unsere Patienten berichten von ihren Erfahrungen und teilen ihre Ergebnisse nach einer Haartransplantation in der Dion Hair Clinic.",
+    "beforeAfterTitle": "Vorher / Nachher Ergebnisse",
+    "before": "Vorher",
+    "after": "Nachher",
+    "ctaSection": {
+      "title": "Werden Sie unser nächster Erfolgsfall",
+      "description": "Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von unseren Experten beraten."
+    },
     "testimonials": [
       {
         "name": "Michael K., 42",
@@ -233,6 +294,32 @@
     "appStoreInfo": "Verfügbar für Android und iPhone – Laden Sie die App kostenlos im Google Play Store oder Apple App Store herunter.",
     "appStore": "App Store",
     "googlePlay": "Google Play"
+  },
+  "dpiSection": {
+    "premiumOption": "Premium Option",
+    "title": "Dion Painless Injection",
+    "description": "Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende.",
+    "learnMore": "Mehr über DPI erfahren",
+    "additionalFee": "Gegen Aufpreis",
+    "benefitsTitle": "Vorteile der DPI-Technologie",
+    "features": [
+      {
+        "title": "Schmerzfreie Betäubung",
+        "description": "Unser neuentwickeltes Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei, für ein angenehmes Behandlungserlebnis von Anfang an."
+      },
+      {
+        "title": "Innovative Technologie",
+        "description": "Die DPI-Technologie nutzt computergesteuerte Präzisionsinjektionen mit optimaler Geschwindigkeit und Druck für maximalen Komfort."
+      },
+      {
+        "title": "Reduzierte Angst",
+        "description": "Durch die schmerzfreie Betäubung wird die Behandlungsangst deutlich reduziert, was zu einer entspannteren Erfahrung und besseren Ergebnissen führt."
+      },
+      {
+        "title": "Exklusiver Komfort",
+        "description": "Als Premium-Option bietet DPI einen exklusiven Komfort, der Ihre Haartransplantation zu einem angenehmen, stressfreien Erlebnis macht."
+      }
+    ]
   },
   "faqSection": {
     "title": "Häufig gestellte Fragen",

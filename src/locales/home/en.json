@@ -18,7 +18,7 @@
   },
   "benefitsSection": {
     "title": "Why Dion Hair Clinic?",
-    "subtitle": "Our advantages at a glance",
+    "subtitle": "Our advantages at a glance - Discover what sets us apart from other clinics and how we can help you regain your self-confidence",
     "intro": {
       "paragraph1": "Hair loss can significantly impact self-confidence and quality of life. Genetic factors, hormonal changes, or stress can lead to various forms of hair loss.",
       "paragraph2": "With our specialized hair transplantation techniques, we offer permanent solutions for men and women suffering from hair loss. Our methods enable natural-looking results with minimal recovery time."
@@ -41,29 +41,78 @@
         "title": "Natural Results",
         "description": "Our hair transplants look natural and are indistinguishable from natural hair growth."
       }
-    ]
+    ],
+    "cards": [
+      {
+        "title": "Experienced Expert Team",
+        "description": "Our team consists of highly qualified specialists with years of experience in hair, beard, and eyebrow transplantation, who regularly participate in advanced training."
+      },
+      {
+        "title": "State-of-the-Art Procedures",
+        "description": "We rely on innovative techniques such as Sapphire-FUE and DHI, which enable more precise results, faster healing, and a more natural appearance for all types of transplantation."
+      },
+      {
+        "title": "Holistic Concept",
+        "description": "Our 360° approach includes not only the transplantation but also a comprehensive analysis, nutritional counseling, and complementary treatments for optimal results."
+      },
+      {
+        "title": "Individual Consultation",
+        "description": "Each patient receives a customized treatment plan tailored to their specific needs, hair structure, and personal wishes."
+      },
+      {
+        "title": "Long-term Aftercare",
+        "description": "We accompany you even after the procedure with regular check-ups and supportive treatments for long-term best results in all treatment areas."
+      },
+      {
+        "title": "No Foreign Travel Necessary",
+        "description": "Enjoy the highest medical standards in Germany without language barriers, long journeys, or risks due to inadequate aftercare abroad."
+      }
+    ],
+    "learnMore": "Learn more"
   },
   "treatmentAreasSection": {
     "title": "Treatment Areas",
-    "subtitle": "Specialized in various areas",
+    "subtitle": "Specialized in various areas - Discover our tailored solutions for hair, beard, and eyebrows with state-of-the-art techniques",
     "areas": [
       {
         "title": "Hair Transplantation",
-        "description": "Restoration of scalp hair using state-of-the-art techniques such as FUE and DHI."
+        "description": "Restoration of scalp hair using state-of-the-art techniques such as FUE and DHI.",
+        "mobileDescription": "Are you suffering from bald spots or receding hairline?",
+        "features": [
+          "Permanent solution for hair loss",
+          "Natural-looking hairline",
+          "Low-pain treatment under local anesthesia"
+        ]
       },
       {
         "title": "Beard Transplantation",
-        "description": "Densification or redesign of beard growth for a fuller beard."
+        "description": "Densification or redesign of beard growth for a fuller beard.",
+        "mobileDescription": "Do you wish for a fuller beard without gaps?",
+        "features": [
+          "Individual beard design according to your wishes",
+          "Filling of patchy beard growth",
+          "Defined contours and full beard possible"
+        ]
       },
       {
         "title": "Eyebrow Transplantation",
-        "description": "Restoration or densification of eyebrows for an expressive look."
+        "description": "Restoration or densification of eyebrows for an expressive look.",
+        "mobileDescription": "Would you like expressive, full eyebrows?",
+        "features": [
+          "Customized eyebrow shape",
+          "Precise placement of each hair follicle",
+          "Natural growth angle and direction"
+        ]
       },
       {
         "title": "Hair Loss Therapy",
         "description": "Non-surgical treatments for the prevention and treatment of hair loss."
       }
-    ]
+    ],
+    "cta": {
+      "title": "Secure Your Free Initial Consultation",
+      "description": "Let our experts advise you and learn more about the optimal treatment method for you. We take the time to answer your questions and create an individual treatment plan for your hair, beard, or eyebrows together with you."
+    }
   },
   "holisticConceptSection": {
     "title": "Our Holistic Concept",

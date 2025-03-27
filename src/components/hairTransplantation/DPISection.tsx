@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, ShieldCheck, Zap, HeartPulse, Sparkles } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
@@ -18,29 +19,23 @@ const DPISection: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  // Features of DPI
-  const featureItems: FeatureItem[] = [
-    {
-      icon: <ShieldCheck strokeWidth={1.5} />,
-      title: "Schmerzfreie Betäubung",
-      description: "Unser neuentwickeltes Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei, für ein angenehmes Behandlungserlebnis von Anfang an."
-    },
-    {
-      icon: <Zap strokeWidth={1.5} />,
-      title: "Innovative Technologie",
-      description: "Die DPI-Technologie nutzt computergesteuerte Präzisionsinjektionen mit optimaler Geschwindigkeit und Druck für maximalen Komfort."
-    },
-    {
-      icon: <HeartPulse strokeWidth={1.5} />,
-      title: "Reduzierte Angst",
-      description: "Durch die schmerzfreie Betäubung wird die Behandlungsangst deutlich reduziert, was zu einer entspannteren Erfahrung und besseren Ergebnissen führt."
-    },
-    {
-      icon: <Sparkles strokeWidth={1.5} />,
-      title: "Exklusiver Komfort",
-      description: "Als Premium-Option bietet DPI einen exklusiven Komfort, der Ihre Haartransplantation zu einem angenehmen, stressfreien Erlebnis macht."
-    }
+  // Get features from translation
+  const featureIcons = [
+    <ShieldCheck strokeWidth={1.5} />,
+    <Zap strokeWidth={1.5} />,
+    <HeartPulse strokeWidth={1.5} />,
+    <Sparkles strokeWidth={1.5} />
   ];
+
+  // Get features from translation
+  const { t } = useTranslation('hairTransplantation');
+  const featureItems: FeatureItem[] = (t('dpiSection.features', { returnObjects: true }) as any[]).map(
+    (feature: any, index: number) => ({
+      icon: featureIcons[index],
+      title: feature.title,
+      description: feature.description
+    })
+  );
 
   return (
     <section className="relative py-16 md:py-24 overflow-hidden">
@@ -67,7 +62,7 @@ const DPISection: React.FC = () => {
             <div className="flex flex-col items-center md:items-start">
               <div className="mb-6">
                 <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white rounded-full text-sm font-medium shadow-md">
-                  Premium Option
+                  {t('dpiSection.premiumOption')}
                 </div>
               </div>
               
@@ -79,16 +74,14 @@ const DPISection: React.FC = () => {
               <div className={`${gradientUnderline.primary} w-[85%] max-w-[280px] md:w-[90%] md:max-w-[400px] mx-auto md:mx-0 mb-6`}></div>
               
               <p className={`${fontSize.lg} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8 text-center md:text-left px-2 md:px-0 max-w-md md:max-w-none mx-auto md:mx-0`}>
-                Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. 
-                Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und 
-                verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende.
+                {t('dpiSection.description')}
               </p>
               
               <div className="flex justify-center md:justify-start w-full">
                 <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
                   <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
-                    Mehr über DPI erfahren
+                    {t('dpiSection.learnMore')}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
                 </button>
@@ -108,13 +101,13 @@ const DPISection: React.FC = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-[#7BA7C2]/20 rounded-full blur-md"></div>
                   <div className="relative z-10 bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm">
-                    Gegen Aufpreis
+                    {t('dpiSection.additionalFee')}
                   </div>
                 </div>
               </div>
               
               <div className="relative z-10">
-                <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>Vorteile der DPI-Technologie</h3>
+                <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>{t('dpiSection.benefitsTitle')}</h3>
                 
                 <div className="space-y-6">
                   {featureItems.map((item, index) => {

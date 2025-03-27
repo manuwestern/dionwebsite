@@ -53,7 +53,7 @@
   },
   "contactSection": {
     "title": "Kontaktieren Sie uns",
-    "subtitle": "Wir sind für Sie da und beantworten gerne Ihre Fragen",
+    "subtitle": "Beginnen Sie Ihre Reise zu vollerem Haar mit einem persönlichen Gespräch. Unsere Experten stehen Ihnen für alle Fragen zur Verfügung.",
     "contactOptions": "Kontaktmöglichkeiten",
     "address": {
       "title": "Adresse",
@@ -75,6 +75,35 @@
           "Transparente Kostenübersicht"
         ]
       }
+    },
+    "form": {
+      "title": "Kostenlose Beratung",
+      "name": {
+        "label": "Name",
+        "placeholder": "Ihr Name"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "Ihre E-Mail-Adresse"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Ihre Telefonnummer"
+      },
+      "message": {
+        "label": "Ihre Nachricht",
+        "placeholder": "Beschreiben Sie Ihr Anliegen oder stellen Sie Ihre Fragen"
+      },
+      "submit": "Beratungstermin vereinbaren",
+      "sending": "Wird gesendet...",
+      "success": {
+        "title": "Vielen Dank für Ihre Anfrage!",
+        "message": "Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+        "newRequest": "Neue Anfrage senden"
+      }
+    },
+    "contactInfo": {
+      "title": "Kontaktinformationen"
     }
   }
 }
