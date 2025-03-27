@@ -32,9 +32,9 @@ const FooterSection: React.FC = () => {
           <div className="col-span-1">
             <h3 className="text-lg font-light mb-4">{t('footer.services.title')}</h3>
             <ul className="space-y-2 text-sm font-light text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.hairTransplant')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.beardTransplant')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.eyebrowTransplant')}</a></li>
+              <li><a href="/haartransplantation" className="hover:text-white transition-colors">{t('footer.services.hairTransplant')}</a></li>
+              <li><a href="/barthaartransplantation" className="hover:text-white transition-colors">{t('footer.services.beardTransplant')}</a></li>
+              <li><a href="/augenbrauentransplantation" className="hover:text-white transition-colors">{t('footer.services.eyebrowTransplant')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.hairLossTherapy')}</a></li>
             </ul>
           </div>

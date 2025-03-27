@@ -1,0 +1,379 @@
+{
+  "heroSection": {
+    "title": "Beard\nTransplantation",
+    "subtitle": "State-of-the-art techniques for natural results - Discover our innovative procedures for a fuller and aesthetically pleasing beard",
+    "welcomeText": "Our beard transplantations are performed using the most advanced techniques to guarantee you natural-looking and permanent results. We offer various procedures that are individually tailored to your needs."
+  },
+  "methodsSection": {
+    "title": "Our Beard Transplantation Techniques",
+    "subtitle": "Specialized techniques for optimal results - Compare our innovative methods and find the perfect solution for your individual needs",
+    "sectionLabels": {
+      "benefits": "Benefits",
+      "process": "Process"
+    },
+    "learnMore": "Learn more",
+    "additionalInfo": {
+      "personalConsultation": {
+        "title": "Personalized Consultation",
+        "description": "Each beard transplantation technique has its own advantages and is particularly suitable for certain situations. In a personal consultation, we analyze your individual situation and recommend the optimal method for you. Our experts consider factors such as your beard structure, the extent of beard gaps, and your personal preferences."
+      },
+      "combinedTechniques": {
+        "title": "Combined Techniques",
+        "description": "In many cases, we achieve the best results by combining different techniques. For example, we can use the FUE method for extracting the hair follicles and then implant them using the DHI technique. This customized approach allows us to find the optimal solution for each patient and achieve natural-looking, permanent results."
+      }
+    },
+    "methods": [
+      {
+        "title": "Sapphire FUE Technique",
+        "subtitle": "Specialized Technique",
+        "image": "saphir_fue.jpg",
+        "description": "The Sapphire FUE technique is an advancement of the classic FUE method, using special sapphire blades.",
+        "benefits": [
+          "More precise incisions and less tissue damage",
+          "Faster healing and less swelling",
+          "Higher success rate of transplanted hair follicles",
+          "More natural appearance of beard hairs"
+        ],
+        "process": [
+          "Extraction of individual follicular units from the donor area (usually at the back of the head)",
+          "Preparation of follicles under microscope",
+          "Creation of recipient channels with sapphire blades",
+          "Precise placement of hair follicles in the beard area"
+        ],
+        "idealFor": "Ideal for: Fast healing, minimal scarring"
+      },
+      {
+        "title": "DHI FUE Technique",
+        "subtitle": "Specialized Technique",
+        "image": "dhi_fue.jpg",
+        "description": "The DHI technique enables direct implantation of hair follicles without prior channel creation.",
+        "benefits": [
+          "Higher density of transplanted beard hairs",
+          "More precise control over direction and angle",
+          "Minimal manipulation of hair follicles",
+          "More natural growth direction"
+        ],
+        "process": [
+          "Extraction of individual follicular units from the donor area",
+          "Direct loading of follicles into special DHI implantation pens",
+          "Precise implantation without prior channel creation",
+          "Control over depth, angle, and direction of implantation"
+        ],
+        "idealFor": "Ideal for: High beard density, precise placement"
+      }
+    ]
+  },
+  "patternSection": {
+    "title": "Typical Beard Patterns & Treatment Options",
+    "description": "Each beard pattern requires an individual treatment approach. Here you will find an overview of the most common patterns and the corresponding treatment options.",
+    "typicalGrafts": "Typical Grafts",
+    "treatment": "Treatment",
+    "idealForYourBeardType": "Ideal for your beard type",
+    "additionalInfo": {
+      "individualConsultation": {
+        "title": "Individual Consultation",
+        "description": "Each beard pattern is unique and requires an individual treatment strategy. In a personal consultation, we analyze your specific pattern and develop a customized treatment plan."
+      },
+      "modernTechniques": {
+        "title": "Modern Techniques",
+        "description": "Our advanced transplantation techniques allow us to achieve natural-looking results even with patchy beard growth. We adapt the method to your individual beard pattern."
+      },
+      "longTermResults": {
+        "title": "Long-Term Results",
+        "description": "Through our holistic approach, we achieve not only immediate but also long-term results. We consider the natural beard structure and plan the treatment accordingly."
+      }
+    },
+    "patterns": [
+      {
+        "title": "Full Beard with Gaps",
+        "description": "Uneven beard growth with bald spots",
+        "grafts": "800-1,500",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Chin Beard",
+        "description": "Focused treatment of the chin area",
+        "grafts": "600-1,200",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Mustache",
+        "description": "Densification or redesign of the upper lip area",
+        "grafts": "300-700",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Sideburns",
+        "description": "Design or densification of the cheek area",
+        "grafts": "400-800",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Complete Beard",
+        "description": "Comprehensive treatment for a full beard",
+        "grafts": "1,500-3,000",
+        "treatment": "1-2 Sessions"
+      },
+      {
+        "title": "Beard Contour",
+        "description": "Precise definition of beard lines",
+        "grafts": "500-1,000",
+        "treatment": "1 Session"
+      }
+    ]
+  },
+  "benefitsSection": {
+    "title": "Why Choose Dion Hair Clinic?",
+    "subtitle": "The advantages of getting your beard transplantation with us - Discover why our clinic is the first choice for discerning patients who value quality and expertise",
+    "learnMore": "Learn more",
+    "cta": {
+      "title": "Schedule a Personal Consultation",
+      "description": "Discover how we can help you regain your confidence. In a personal consultation, we analyze your individual situation and develop a customized treatment plan."
+    },
+    "cards": [
+      {
+        "title": "Experienced Expert Team",
+        "description": "Our team consists of highly qualified specialists with years of experience in beard transplantation who regularly participate in advanced training."
+      },
+      {
+        "title": "Cutting-Edge Techniques",
+        "description": "We utilize innovative techniques like Sapphire FUE and DHI that enable more precise results, faster healing, and a more natural appearance."
+      },
+      {
+        "title": "Holistic Approach",
+        "description": "Our 360° approach includes not only the transplantation but also comprehensive analysis, nutritional counseling, and complementary treatments for optimal results."
+      },
+      {
+        "title": "Personalized Consultation",
+        "description": "Each patient receives a tailored treatment plan that is customized to their specific needs, beard structure, and desires."
+      },
+      {
+        "title": "Long-Term Aftercare",
+        "description": "We support you even after the procedure with regular check-ups and supportive treatments for the best long-term results."
+      },
+      {
+        "title": "No Need to Travel Abroad",
+        "description": "Enjoy the highest medical standards in Germany without language barriers, long journeys, or risks due to inadequate aftercare abroad."
+      }
+    ]
+  },
+  "processSection": {
+    "title": "The Treatment Process",
+    "subtitle": "Your path to a fuller beard - Transparent presentation of all steps from initial planning to the final result of your beard transplantation",
+    "expertiseTitle": "Our Expertise for Your Perfect Result",
+    "advantages": [
+      {
+        "title": "Optimal Beard Contour Design",
+        "description": "We design the beard contour individually to match the patient's face, taking into account facial shape, age, and personal style for a natural and harmonious appearance."
+      },
+      {
+        "title": "Invisible Scars with Smallest FUE Punches",
+        "description": "By using the most modern and smallest FUE punches, we leave practically invisible scars in the donor area, allowing you to wear your hair short as well."
+      },
+      {
+        "title": "Minimal Swelling through Reduced Fluids",
+        "description": "We use only small amounts of fluids like NaCl during the procedure to minimize swelling and shorten the recovery time."
+      },
+      {
+        "title": "Precise Placement for Natural Transitions",
+        "description": "Each implant is precisely placed to create natural transitions and to respect the natural beard growth direction."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Planning",
+        "description": "In the planning phase, the beard contour is carefully designed and the number of required grafts is determined. A detailed analysis of your donor areas and recipient area enables precise and individualized planning for optimal results."
+      },
+      {
+        "title": "Extraction",
+        "description": "During extraction, individual hair follicles are removed from the donor area (usually at the back of the head). These follicular units are carefully prepared under the microscope to ensure a high survival rate."
+      },
+      {
+        "title": "Implantation",
+        "description": "The prepared hair follicles are precisely inserted into the predetermined recipient areas in the beard region. Special attention is paid to the natural growth angle and distribution to achieve an aesthetically pleasing result."
+      },
+      {
+        "title": "Final Result",
+        "description": "After about 12-18 months, the final result is visible. The transplanted beard hairs grow naturally and can be cut, trimmed, and styled like your own beard. The result is permanent and blends harmoniously with your existing beard."
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Success Stories from Our Patients",
+    "subtitle": "Testimonials and Results - Read authentic reviews from satisfied patients who had their beard transplantation with us",
+    "intro": "Our patients share their experiences and results after beard transplantation at Dion Hair Clinic.",
+    "beforeAfterTitle": "Before / After Results",
+    "before": "Before",
+    "after": "After",
+    "ctaSection": {
+      "title": "Become Our Next Success Story",
+      "description": "Join our satisfied patients and experience for yourself how a beard transplantation can change your life. Schedule a free consultation today and get advice from our experts."
+    },
+    "testimonials": [
+      {
+        "name": "Markus L., 35",
+        "rating": 5,
+        "text": "After years of trying to grow a fuller beard, I decided to get a beard transplantation at Dion Hair Clinic. The result exceeded my expectations. The team was professional and empathetic, and I finally feel comfortable with my beard.",
+        "procedure": "Sapphire FUE, 1,800 Grafts",
+        "date": "February 2024"
+      },
+      {
+        "name": "Daniel R., 29",
+        "rating": 5,
+        "text": "The consultation was thorough and honest. Dr. Dion explained exactly what was possible and what wasn't. After the treatment, I received excellent care. The result looks completely natural - no one would suspect I had a beard transplantation.",
+        "procedure": "DHI Technique, 1,500 Grafts",
+        "date": "December 2023"
+      },
+      {
+        "name": "Florian M., 32",
+        "rating": 5,
+        "text": "I always had patchy spots in my beard that bothered me a lot. At Dion Hair Clinic, I felt in good hands from the beginning. The treatment was painless and the results are fantastic. Now I can finally wear the full beard I've always wanted.",
+        "procedure": "Sapphire FUE, 1,200 Grafts",
+        "date": "October 2023"
+      }
+    ],
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfied Patients"
+      },
+      {
+        "value": "5,000+",
+        "label": "Successful Treatments"
+      },
+      {
+        "value": "15+",
+        "label": "Years of Experience"
+      }
+    ],
+    "cta": "Schedule your free consultation now"
+  },
+  "careSection": {
+    "title": "Dion App - Your Companion for Pre and Post-Care",
+    "subtitle": "Your digital assistant for optimal pre and post-care - Our innovative smartphone app supports you throughout the entire treatment process with personalized instructions and reminders",
+    "description": "With the Dion App, we offer you a comprehensive digital assistant as a smartphone app that guides you through the entire process of your beard transplantation - from preparation to the procedure to long-term aftercare.",
+    "subheading": "Your digital assistant throughout the entire treatment process",
+    "features": [
+      {
+        "title": "Appointment Planning",
+        "description": "Overview of all important appointments before and after treatment"
+      },
+      {
+        "title": "Checklists",
+        "description": "Personalized to-do lists for optimal pre and post-care"
+      },
+      {
+        "title": "Instructions",
+        "description": "Detailed care instructions, e.g., for beard washing after transplantation"
+      },
+      {
+        "title": "Progress Documentation",
+        "description": "Document your growth progress with photos and notes"
+      },
+      {
+        "title": "Reminders",
+        "description": "Automatic notifications for important care steps"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Access to all functions via our user-friendly app"
+      }
+    ],
+    "appContent": {
+      "progress": "Your Progress",
+      "day1": "Day 1",
+      "month3": "3 Months",
+      "month12": "12 Months",
+      "todayTasks": "Today's Tasks",
+      "task1": "Gentle beard wash with special shampoo",
+      "task2": "Apply moisture spray",
+      "task3": "Take progress photo",
+      "nextAppointment": "Next Appointment",
+      "appointmentDetails": "Check-up: April 15, 2025, 2:00 PM"
+    },
+    "appStoreInfo": "Available for Android and iPhone – Download the app for free from the Google Play Store or Apple App Store.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "dpiSection": {
+    "premiumOption": "Premium Option",
+    "title": "Painless Anesthesia",
+    "subtitle": "Comfort technology for painless treatment - Our innovative DPI method revolutionizes the anesthesia phase for a pleasant experience",
+    "description": "Experience a revolutionary beard transplantation without the dreaded pain of the anesthesia phase. Our newly developed DPI procedure makes the anesthesia phase almost completely painless and transforms your treatment into a pleasant experience from start to finish. This premium option can be added to your treatment for an additional fee.",
+    "learnMore": "Learn more about DPI",
+    "additionalFee": "For an additional fee",
+    "benefitsTitle": "Benefits of DPI Technology",
+    "features": [
+      {
+        "title": "Painless Anesthesia",
+        "description": "Our newly developed procedure makes the anesthesia phase almost completely painless, for a pleasant treatment experience from the beginning."
+      },
+      {
+        "title": "Innovative Technology",
+        "description": "The DPI technology uses computer-controlled precision injections with optimal speed and pressure for maximum comfort."
+      },
+      {
+        "title": "Reduced Anxiety",
+        "description": "The painless anesthesia significantly reduces treatment anxiety, leading to a more relaxed experience and better results."
+      },
+      {
+        "title": "Exclusive Comfort",
+        "description": "As a premium option, DPI offers exclusive comfort that makes your beard transplantation a pleasant, stress-free experience."
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to your questions about beard transplantation - Comprehensive information about procedure, costs, risks, and results of our treatments",
+    "faqs": [
+      {
+        "question": "Which method is best suited for me?",
+        "answer": "The best method depends on various factors, such as the extent of beard gaps, the quality of the donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you."
+      },
+      {
+        "question": "How long is the recovery phase?",
+        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 5-7 days. Complete healing of the treated areas takes about 10-14 days."
+      },
+      {
+        "question": "When will I see the first results?",
+        "answer": "The first new beard hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months when the transplanted hairs have fully grown and reached their natural density."
+      },
+      {
+        "question": "Is the procedure painful?",
+        "answer": "The beard transplantation is performed under local anesthesia, so you will not feel any pain during the procedure. After the procedure, slight discomfort may occur, which can be well controlled with pain medication."
+      },
+      {
+        "question": "How much does a beard transplantation cost?",
+        "answer": "The cost of a beard transplantation depends on various factors, particularly the number of grafts to be transplanted and the chosen method. At Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you."
+      },
+      {
+        "question": "Can I get a beard transplant if I have little beard growth?",
+        "answer": "Yes, a beard transplant is also possible for men with little or no natural beard growth. In this case, the hair follicles are taken from suitable donor areas on the head and transplanted into the desired areas of the face. The result is a natural-looking beard that can be designed according to your wishes."
+      },
+      {
+        "question": "Are there risks or side effects?",
+        "answer": "As with any medical procedure, there are certain risks associated with beard transplantation. However, these are minimal when performed properly. Possible side effects include temporary swelling, redness, slight bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare."
+      },
+      {
+        "question": "How long does the result of a beard transplantation last?",
+        "answer": "The transplanted beard hairs are permanent because they are taken from areas that are not genetically susceptible to hair loss. They grow for a lifetime like normal hair and can be cut, trimmed, and styled."
+      },
+      {
+        "question": "How does a treatment in Germany differ from offers abroad?",
+        "answer": "In Germany, beard transplantations are subject to strict medical standards and quality controls. At Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, our treatments are performed exclusively by experienced specialists, not trained assistants."
+      },
+      {
+        "question": "How realistic are the results?",
+        "answer": "Modern beard transplantation techniques now enable very natural-looking results. The transplanted hair grows like your own beard hair and can be cut, trimmed, and styled normally. The experience of the treatment team, the correct placement of the hair follicles, and consideration of your individual facial features and natural beard growth pattern are crucial for a natural result."
+      },
+      {
+        "question": "How should I prepare for the procedure?",
+        "answer": "For preparation, we recommend avoiding blood-thinning medications (after consulting with your doctor), alcohol, and nicotine for 10 days before the procedure. On the day of the procedure, you should wear comfortable clothing. We will advise you in detail about all further preparatory measures in a personal consultation."
+      },
+      {
+        "question": "What does the aftercare look like?",
+        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, you will receive detailed instructions from us on how to care for the treated areas. This includes special cleaning products, sleeping positions, and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and that your questions are answered at any time."
+      }
+    ]
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "heroSection": {
+    "title": "Augenbrauen\ntransplantation",
+    "subtitle": "Modernste Techniken für natürliche Ergebnisse",
+    "welcomeText": "Unsere Augenbrauentransplantationen werden mit modernsten Techniken durchgeführt um Ihnen natürlich aussehende und dauerhafte Ergebnisse zu garantieren. Wir bieten verschiedene Verfahren an, die individuell auf Ihre Bedürfnisse abgestimmt werden."
+  },
+  "benefitsSection": {
+    "title": "Warum Dion Hair Clinic?",
+    "subtitle": "Die Vorteile einer Augenbrauentransplantation bei uns - Erfahren Sie, warum unsere Klinik die erste Wahl für anspruchsvolle Patienten ist, die Wert auf Qualität und Expertise legen",
+    "learnMore": "Mehr erfahren",
+    "cta": {
+      "title": "Persönliche Beratung vereinbaren",
+      "description": "Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan."
+    },
+    "cards": [
+      {
+        "title": "Erfahrenes Expertenteam",
+        "description": "Unser Team besteht aus hochqualifizierten Spezialisten mit jahrelanger Erfahrung in der Augenbrauentransplantation, die regelmäßig an Fortbildungen teilnehmen."
+      },
+      {
+        "title": "Modernste Verfahren",
+        "description": "Wir setzen auf innovative Techniken wie Saphir-FUE und DHI, die präzisere Ergebnisse, schnellere Heilung und natürlicheres Aussehen ermöglichen."
+      },
+      {
+        "title": "Ganzheitliches Konzept",
+        "description": "Unser 360°-Ansatz umfasst nicht nur die Transplantation, sondern auch eine umfassende Analyse, Ernährungsberatung und ergänzende Behandlungen für optimale Ergebnisse."
+      },
+      {
+        "title": "Individuelle Beratung",
+        "description": "Jeder Patient erhält einen maßgeschneiderten Behandlungsplan, der auf seine spezifischen Bedürfnisse, Augenbrauenstruktur und Wünsche abgestimmt ist."
+      },
+      {
+        "title": "Langzeitnachsorge",
+        "description": "Wir begleiten Sie auch nach dem Eingriff mit regelmäßigen Kontrollterminen und unterstützenden Behandlungen für langfristig beste Resultate."
+      },
+      {
+        "title": "Keine Auslandsreise nötig",
+        "description": "Genießen Sie höchste medizinische Standards in Deutschland ohne Sprachbarrieren, lange Reisen oder Risiken durch mangelnde Nachsorge im Ausland."
+      }
+    ]
+  },
+  "methodsSection": {
+    "title": "Unsere Augenbrauentransplantationstechniken",
+    "subtitle": "Spezialisierte Techniken für optimale Ergebnisse",
+    "sectionLabels": {
+      "benefits": "Vorteile",
+      "process": "Prozess"
+    },
+    "learnMore": "Mehr erfahren",
+    "additionalInfo": {
+      "personalConsultation": {
+        "title": "Personalisierte Beratung",
+        "description": "Jede Augenbrauentransplantationstechnik hat ihre eigenen Vorteile und ist für bestimmte Situationen besonders geeignet."
+      },
+      "combinedTechniques": {
+        "title": "Kombinierte Techniken",
+        "description": "In vielen Fällen erzielen wir die besten Ergebnisse durch die Kombination verschiedener Techniken."
+      }
+    },
+    "methods": [
+      {
+        "title": "Saphir-FUE-Technik",
+        "subtitle": "Spezialisierte Technik",
+        "image": "saphir_fue.jpg",
+        "description": "Die Saphir-FUE-Technik ist eine Weiterentwicklung der klassischen FUE-Methode bei der spezielle Saphirklingen verwendet werden.",
+        "benefits": [
+          "Präzisere Schnitte und geringere Gewebeschädigung",
+          "Schnellere Heilung und weniger Schwellungen",
+          "Höhere Anwuchsrate der transplantierten Haarfollikel",
+          "Natürlicheres Erscheinungsbild der Augenbrauen"
+        ],
+        "process": [
+          "Entnahme einzelner Follikeleinheiten aus der Spenderzone",
+          "Vorbereitung der Follikel unter dem Mikroskop",
+          "Erstellung der Empfängerkanäle mit Saphirklingen",
+          "Präzise Platzierung der Haarfollikel"
+        ],
+        "idealFor": "Ideal für: Schnelle Heilung minimale Narben"
+      },
+      {
+        "title": "DHI-FUE-Technik",
+        "subtitle": "Spezialisierte Technik",
+        "image": "dhi_fue.jpg",
+        "description": "Die DHI-Technik ermöglicht die direkte Implantation der Haarfollikel ohne vorherige Kanalerstellung.",
+        "benefits": [
+          "Höhere Dichte der transplantierten Haare",
+          "Präzisere Kontrolle über Richtung und Winkel",
+          "Minimale Manipulation der Haarfollikel",
+          "Natürlichere Wuchsrichtung"
+        ],
+        "process": [
+          "Entnahme einzelner Follikeleinheiten aus der Spenderzone",
+          "Direkte Ladung der Follikel in spezielle DHI-Implantationsstifte",
+          "Präzise Implantation ohne vorherige Kanalerstellung",
+          "Kontrolle über Tiefe Winkel und Richtung der Implantation"
+        ],
+        "idealFor": "Ideal für: Hohe Haardichte präzise Platzierung"
+      }
+    ]
+  },
+  "patternSection": {
+    "title": "Typische Augenbrauenmuster & Behandlungsoptionen",
+    "description": "Jedes Augenbrauenmuster erfordert einen individuellen Behandlungsansatz. Hier finden Sie einen Überblick über die häufigsten Muster und die entsprechenden Behandlungsoptionen.",
+    "typicalGrafts": "Typische Grafts",
+    "treatment": "Behandlung",
+    "idealForYourEyebrowType": "Ideal für Ihren Augenbrauentyp",
+    "additionalInfo": {
+      "individualConsultation": {
+        "title": "Individuelle Beratung",
+        "description": "Jedes Augenbrauenmuster ist einzigartig und erfordert eine individuelle Behandlungsstrategie. In einem persönlichen Beratungsgespräch analysieren wir Ihr spezifisches Muster und entwickeln einen maßgeschneiderten Behandlungsplan."
+      },
+      "modernTechniques": {
+        "title": "Modernste Techniken",
+        "description": "Unsere fortschrittlichen Transplantationstechniken ermöglichen es uns, selbst bei stark ausgedünnten Augenbrauen natürlich aussehende Ergebnisse zu erzielen. Wir passen die Methode an Ihr individuelles Augenbrauenmuster an."
+      },
+      "longTermResults": {
+        "title": "Langfristige Ergebnisse",
+        "description": "Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige Ergebnisse. Wir berücksichtigen die natürliche Augenbrauenstruktur und planen die Behandlung entsprechend."
+      }
+    },
+    "patterns": [
+      {
+        "title": "Teilweise ausgedünnte Augenbrauen",
+        "description": "Lücken oder dünne Stellen in den Augenbrauen",
+        "grafts": "100-200",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Stark ausgedünnte Augenbrauen",
+        "description": "Großflächig dünne oder fehlende Augenbrauen",
+        "grafts": "200-300",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Narbenbedingte Augenbrauenlücken",
+        "description": "Lücken durch Narben oder Verletzungen",
+        "grafts": "50-150",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Komplette Rekonstruktion",
+        "description": "Vollständige Neugestaltung der Augenbrauen",
+        "grafts": "250-400",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Formkorrektur",
+        "description": "Anpassung der Augenbrauenform an Gesichtsform und Vorlieben",
+        "grafts": "100-250",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Verdichtung",
+        "description": "Erhöhung der Dichte bei natürlich dünnen Augenbrauen",
+        "grafts": "150-300",
+        "treatment": "1 Sitzung"
+      }
+    ]
+  },
+  "processSection": {
+    "title": "Der Behandlungsprozess",
+    "subtitle": "Ihr Weg zu neuen Augenbrauen - Transparente Darstellung aller Schritte von der ersten Planung bis zum endgültigen Ergebnis Ihrer Augenbrauentransplantation",
+    "expertiseTitle": "Unsere Expertise für Ihr perfektes Ergebnis",
+    "advantages": [
+      {
+        "title": "Optimale Gestaltung der Augenbrauenform",
+        "description": "Wir gestalten die Augenbrauenform individuell passend zum Gesicht des Patienten, unter Berücksichtigung von Gesichtsform, Alter und persönlichem Stil für ein natürliches und harmonisches Erscheinungsbild."
+      },
+      {
+        "title": "Unsichtbare Narben durch kleinste FUE Punches",
+        "description": "Durch den Einsatz modernster und kleinster FUE Punches hinterlassen wir praktisch unsichtbare Narben im Spenderbereich, sodass Sie Ihre Haare auch kurz tragen können."
+      },
+      {
+        "title": "Minimale Schwellungen durch reduzierte Flüssigkeiten",
+        "description": "Wir verwenden nur geringe Mengen an Flüssigkeiten wie NaCl während des Eingriffs, um Schwellungen auf ein Minimum zu reduzieren und die Erholungszeit zu verkürzen."
+      },
+      {
+        "title": "Präzise Platzierung für natürliche Übergänge",
+        "description": "Jedes Implantat wird präzise platziert, um natürliche Übergänge zu schaffen und die natürliche Wuchsrichtung der Augenbrauen zu respektieren."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Planung",
+        "description": "In der Planungsphase wird die Augenbrauenform sorgfältig entworfen und die Anzahl der benötigten Grafts bestimmt. Eine detaillierte Analyse Ihrer Spenderzonen und des Empfängerbereichs ermöglicht eine präzise und individuelle Planung für optimale Ergebnisse."
+      },
+      {
+        "title": "Entnahme",
+        "description": "Bei der Entnahme werden einzelne Haarfollikel aus der Spenderzone (meist am Hinterkopf) entnommen. Diese Follikeleinheiten werden sorgfältig unter dem Mikroskop vorbereitet, um eine hohe Überlebensrate zu gewährleisten."
+      },
+      {
+        "title": "Einpflanzung",
+        "description": "Die vorbereiteten Haarfollikel werden präzise in die vorher festgelegten Empfängerzonen im Augenbrauenbereich eingesetzt. Dabei wird besonders auf den natürlichen Wuchswinkel und die Verteilung geachtet, um ein ästhetisch ansprechendes Ergebnis zu erzielen."
+      },
+      {
+        "title": "Endergebnis",
+        "description": "Nach etwa 6-9 Monaten ist das endgültige Ergebnis sichtbar. Die transplantierten Haare wachsen natürlich und können wie Ihre eigenen Augenbrauen getrimmt und gestylt werden. Das Ergebnis ist dauerhaft und fügt sich harmonisch in Ihr Gesicht ein."
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Erfolgsgeschichten unserer Patienten",
+    "subtitle": "Erfahrungsberichte und Ergebnisse - Lesen Sie authentische Bewertungen von zufriedenen Patienten, die ihre Augenbrauentransplantation bei uns durchgeführt haben",
+    "intro": "Unsere Patienten berichten von ihren Erfahrungen und teilen ihre Ergebnisse nach einer Augenbrauentransplantation in der Dion Hair Clinic.",
+    "beforeAfterTitle": "Vorher / Nachher Ergebnisse",
+    "before": "Vorher",
+    "after": "Nachher",
+    "ctaSection": {
+      "title": "Werden Sie unser nächster Erfolgsfall",
+      "description": "Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Augenbrauentransplantation Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von unseren Experten beraten."
+    },
+    "testimonials": [
+      {
+        "name": "Julia M., 38",
+        "rating": 5,
+        "text": "Nach jahrelangem übermäßigen Zupfen hatte ich kaum noch Augenbrauen. Die Transplantation bei Dion Hair Clinic hat mir meine Augenbrauen zurückgegeben. Das Ergebnis sieht unglaublich natürlich aus und hat mein Selbstbewusstsein enorm gesteigert.",
+        "procedure": "Saphir-FUE, 280 Grafts",
+        "date": "März 2024"
+      },
+      {
+        "name": "Sabine K., 45",
+        "rating": 5,
+        "text": "Die Beratung war gründlich und ehrlich. Dr. Dion hat mir genau erklärt, welche Form zu meinem Gesicht passen würde. Nach der Behandlung wurde ich hervorragend betreut. Das Ergebnis sieht völlig natürlich aus - niemand würde vermuten, dass ich eine Augenbrauentransplantation hatte.",
+        "procedure": "DHI-Technik, 220 Grafts",
+        "date": "Januar 2024"
+      },
+      {
+        "name": "Markus H., 42",
+        "rating": 5,
+        "text": "Nach einem Unfall hatte ich eine Narbe, die meine Augenbraue teilweise zerstört hat. In der Dion Hair Clinic fühlte ich mich von Anfang an gut aufgehoben. Die Behandlung war schmerzfrei und die Ergebnisse sind fantastisch. Die Narbe ist jetzt vollständig bedeckt.",
+        "procedure": "Saphir-FUE, 180 Grafts",
+        "date": "Dezember 2023"
+      }
+    ],
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Zufriedene Patienten"
+      },
+      {
+        "value": "5.000+",
+        "label": "Erfolgreiche Behandlungen"
+      },
+      {
+        "value": "15+",
+        "label": "Jahre Erfahrung"
+      }
+    ],
+    "cta": "Vereinbaren Sie jetzt Ihr kostenloses Beratungsgespräch"
+  },
+  "careSection": {
+    "title": "Dion App - Ihr Begleiter für Vor- und Nachsorge",
+    "subtitle": "Ihr digitaler Assistent für eine optimale Vor- und Nachsorge - Unsere innovative Smartphone-App unterstützt Sie durch den gesamten Behandlungsprozess mit personalisierten Anleitungen und Erinnerungen",
+    "description": "Mit der Dion App bieten wir Ihnen einen umfassenden digitalen Assistenten als Smartphone-App, der Sie durch den gesamten Prozess Ihrer Augenbrauentransplantation führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.",
+    "subheading": "Ihr digitaler Assistent für den gesamten Behandlungsprozess",
+    "features": [
+      {
+        "title": "Terminplanung",
+        "description": "Alle wichtigen Termine vor und nach der Behandlung im Überblick"
+      },
+      {
+        "title": "Checklisten",
+        "description": "Personalisierte To-Do-Listen für optimale Vor- und Nachsorge"
+      },
+      {
+        "title": "Anleitungen",
+        "description": "Detaillierte Pflegeanleitungen für den Augenbrauenbereich nach der Transplantation"
+      },
+      {
+        "title": "Fortschrittsdokumentation",
+        "description": "Dokumentieren Sie Ihren Wachstumsverlauf mit Fotos und Notizen"
+      },
+      {
+        "title": "Erinnerungen",
+        "description": "Automatische Benachrichtigungen für wichtige Pflegeschritte"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Zugriff auf alle Funktionen über unsere benutzerfreundliche App"
+      }
+    ],
+    "appContent": {
+      "progress": "Ihr Fortschritt",
+      "day1": "Tag 1",
+      "month3": "3 Monate",
+      "month12": "6 Monate",
+      "todayTasks": "Heutige Aufgaben",
+      "task1": "Sanfte Reinigung des Augenbrauenbereichs",
+      "task2": "Feuchtigkeitsspray anwenden",
+      "task3": "Fortschrittsfoto aufnehmen",
+      "nextAppointment": "Nächster Termin",
+      "appointmentDetails": "Kontrolluntersuchung: 15. April 2025, 14:00 Uhr"
+    },
+    "appStoreInfo": "Verfügbar für Android und iPhone – Laden Sie die App kostenlos im Google Play Store oder Apple App Store herunter.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "dpiSection": {
+    "premiumOption": "Premium Option",
+    "title": "Schmerzfreie Betäubung",
+    "subtitle": "Komfort-Technologie für eine schmerzfreie Behandlung - Unsere innovative DPI-Methode revolutioniert die Betäubungsphase für ein angenehmes Erlebnis",
+    "description": "Erleben Sie eine revolutionäre Augenbrauentransplantation ohne den gefürchteten Schmerz der Betäubungsphase. Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende. Diese Premium-Option können Sie gegen einen Aufpreis zu Ihrer Behandlung hinzubuchen.",
+    "learnMore": "Mehr über DPI erfahren",
+    "additionalFee": "Gegen Aufpreis",
+    "benefitsTitle": "Vorteile der DPI-Technologie",
+    "features": [
+      {
+        "title": "Schmerzfreie Betäubung",
+        "description": "Unser neuentwickeltes Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei, für ein angenehmes Behandlungserlebnis von Anfang an."
+      },
+      {
+        "title": "Innovative Technologie",
+        "description": "Die DPI-Technologie nutzt computergesteuerte Präzisionsinjektionen mit optimaler Geschwindigkeit und Druck für maximalen Komfort."
+      },
+      {
+        "title": "Reduzierte Angst",
+        "description": "Durch die schmerzfreie Betäubung wird die Behandlungsangst deutlich reduziert, was zu einer entspannteren Erfahrung und besseren Ergebnissen führt."
+      },
+      {
+        "title": "Exklusiver Komfort",
+        "description": "Als Premium-Option bietet DPI einen exklusiven Komfort, der Ihre Augenbrauentransplantation zu einem angenehmen, stressfreien Erlebnis macht."
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf Ihre Fragen zur Augenbrauentransplantation - Umfassende Informationen zu Ablauf, Kosten, Risiken und Ergebnissen unserer Behandlungen",
+    "faqs": [
+      {
+        "question": "Welche Methode ist für mich am besten geeignet?",
+        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln."
+      },
+      {
+        "question": "Wie lange dauert die Erholungsphase?",
+        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Rötungen und Schwellungen klingen in der Regel innerhalb von 5-7 Tagen ab. Die vollständige Heilung der behandelten Bereiche dauert etwa 10-14 Tage."
+      },
+      {
+        "question": "Wann sehe ich die ersten Ergebnisse?",
+        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 6-9 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben."
+      },
+      {
+        "question": "Ist der Eingriff schmerzhaft?",
+        "answer": "Die Augenbrauentransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind."
+      },
+      {
+        "question": "Was kostet eine Augenbrauentransplantation?",
+        "answer": "Die Kosten einer Augenbrauentransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot."
+      },
+      {
+        "question": "Muss ich meine Augenbrauen nach der Transplantation regelmäßig trimmen?",
+        "answer": "Ja, da die transplantierten Haare in der Regel vom Kopf stammen, wachsen sie schneller als natürliche Augenbrauenhaare und müssen regelmäßig getrimmt werden. Wir zeigen Ihnen, wie Sie Ihre neuen Augenbrauen pflegen und in Form halten können."
+      },
+      {
+        "question": "Gibt es Risiken oder Nebenwirkungen?",
+        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Augenbrauentransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge."
+      },
+      {
+        "question": "Wie lange hält das Ergebnis einer Augenbrauentransplantation?",
+        "answer": "Die transplantierten Haare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Sie wachsen ein Leben lang und können getrimmt und gestylt werden."
+      },
+      {
+        "question": "Wie unterscheidet sich eine Behandlung in Deutschland von Angeboten im Ausland?",
+        "answer": "In Deutschland unterliegen Augenbrauentransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten."
+      },
+      {
+        "question": "Wie realistisch sind die Ergebnisse?",
+        "answer": "Moderne Augenbrauentransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können normal getrimmt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Wuchsmusters."
+      },
+      {
+        "question": "Wie sollte ich mich auf den Eingriff vorbereiten?",
+        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie im Augenbereich kein Make-up tragen. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch."
+      },
+      {
+        "question": "Wie sieht die Nachsorge aus?",
+        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Reinigungsprodukte und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden."
+      }
+    ]
+  }
+}

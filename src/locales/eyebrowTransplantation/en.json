@@ -1,0 +1,379 @@
+{
+  "heroSection": {
+    "title": "Eyebrow\nTransplantation",
+    "subtitle": "State-of-the-art techniques for natural results",
+    "welcomeText": "Our eyebrow transplantations are performed using the most advanced techniques to guarantee you natural-looking and permanent results. We offer various procedures that are individually tailored to your needs."
+  },
+  "methodsSection": {
+    "title": "Our Eyebrow Transplantation Techniques",
+    "subtitle": "Specialized techniques for optimal results - Compare our innovative methods and find the perfect solution for your individual needs",
+    "sectionLabels": {
+      "benefits": "Benefits",
+      "process": "Process"
+    },
+    "learnMore": "Learn more",
+    "additionalInfo": {
+      "personalConsultation": {
+        "title": "Personalized Consultation",
+        "description": "Each eyebrow transplantation technique has its own advantages and is particularly suitable for certain situations. In a personal consultation, we analyze your individual situation and recommend the optimal method for you. Our experts consider factors such as your eyebrow structure, the extent of hair loss, and your personal preferences."
+      },
+      "combinedTechniques": {
+        "title": "Combined Techniques",
+        "description": "In many cases, we achieve the best results by combining different techniques. For example, we can use the FUE method for extracting the hair follicles and then implant them using the DHI technique. This customized approach allows us to find the optimal solution for each patient and achieve natural-looking, permanent results."
+      }
+    },
+    "methods": [
+      {
+        "title": "Sapphire FUE Technique",
+        "subtitle": "Specialized Technique",
+        "image": "saphir_fue.jpg",
+        "description": "The Sapphire FUE technique is an advancement of the classic FUE method, using special sapphire blades.",
+        "benefits": [
+          "More precise incisions and less tissue damage",
+          "Faster healing and less swelling",
+          "Higher success rate of transplanted hair follicles",
+          "More natural appearance of eyebrows"
+        ],
+        "process": [
+          "Extraction of individual follicular units from the donor area",
+          "Preparation of follicles under microscope",
+          "Creation of recipient channels with sapphire blades",
+          "Precise placement of hair follicles"
+        ],
+        "idealFor": "Ideal for: Fast healing, minimal scarring"
+      },
+      {
+        "title": "DHI FUE Technique",
+        "subtitle": "Specialized Technique",
+        "image": "dhi_fue.jpg",
+        "description": "The DHI technique enables direct implantation of hair follicles without prior channel creation.",
+        "benefits": [
+          "Higher density of transplanted hair",
+          "More precise control over direction and angle",
+          "Minimal manipulation of hair follicles",
+          "More natural growth direction"
+        ],
+        "process": [
+          "Extraction of individual follicular units from the donor area",
+          "Direct loading of follicles into special DHI implantation pens",
+          "Precise implantation without prior channel creation",
+          "Control over depth, angle, and direction of implantation"
+        ],
+        "idealFor": "Ideal for: High hair density, precise placement"
+      }
+    ]
+  },
+  "patternSection": {
+    "title": "Typical Eyebrow Patterns & Treatment Options",
+    "description": "Each eyebrow pattern requires an individual treatment approach. Here you will find an overview of the most common patterns and the corresponding treatment options.",
+    "typicalGrafts": "Typical Grafts",
+    "treatment": "Treatment",
+    "idealForYourEyebrowType": "Ideal for your eyebrow type",
+    "additionalInfo": {
+      "individualConsultation": {
+        "title": "Individual Consultation",
+        "description": "Each eyebrow pattern is unique and requires an individual treatment strategy. In a personal consultation, we analyze your specific pattern and develop a customized treatment plan."
+      },
+      "modernTechniques": {
+        "title": "Modern Techniques",
+        "description": "Our advanced transplantation techniques allow us to achieve natural-looking results even with severely thinned eyebrows. We adapt the method to your individual eyebrow pattern."
+      },
+      "longTermResults": {
+        "title": "Long-Term Results",
+        "description": "Through our holistic approach, we achieve not only immediate but also long-term results. We consider the natural eyebrow structure and plan the treatment accordingly."
+      }
+    },
+    "patterns": [
+      {
+        "title": "Partially Thinned Eyebrows",
+        "description": "Gaps or thin areas in the eyebrows",
+        "grafts": "100-200",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Severely Thinned Eyebrows",
+        "description": "Extensively thin or missing eyebrows",
+        "grafts": "200-300",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Scar-Related Eyebrow Gaps",
+        "description": "Gaps caused by scars or injuries",
+        "grafts": "50-150",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Complete Reconstruction",
+        "description": "Complete redesign of the eyebrows",
+        "grafts": "250-400",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Shape Correction",
+        "description": "Adjustment of eyebrow shape to facial shape and preferences",
+        "grafts": "100-250",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Densification",
+        "description": "Increasing density in naturally thin eyebrows",
+        "grafts": "150-300",
+        "treatment": "1 Session"
+      }
+    ]
+  },
+  "benefitsSection": {
+    "title": "Why Choose Dion Hair Clinic?",
+    "subtitle": "The advantages of getting your eyebrow transplantation with us - Discover why our clinic is the first choice for discerning patients who value quality and expertise",
+    "learnMore": "Learn more",
+    "cta": {
+      "title": "Schedule a Personal Consultation",
+      "description": "Discover how we can help you regain your confidence. In a personal consultation, we analyze your individual situation and develop a customized treatment plan."
+    },
+    "cards": [
+      {
+        "title": "Experienced Expert Team",
+        "description": "Our team consists of highly qualified specialists with years of experience in eyebrow transplantation who regularly participate in advanced training."
+      },
+      {
+        "title": "Cutting-Edge Techniques",
+        "description": "We utilize innovative techniques like Sapphire FUE and DHI that enable more precise results, faster healing, and a more natural appearance."
+      },
+      {
+        "title": "Holistic Approach",
+        "description": "Our 360° approach includes not only the transplantation but also comprehensive analysis, nutritional counseling, and complementary treatments for optimal results."
+      },
+      {
+        "title": "Personalized Consultation",
+        "description": "Each patient receives a tailored treatment plan that is customized to their specific needs, eyebrow structure, and desires."
+      },
+      {
+        "title": "Long-Term Aftercare",
+        "description": "We support you even after the procedure with regular check-ups and supportive treatments for the best long-term results."
+      },
+      {
+        "title": "No Need to Travel Abroad",
+        "description": "Enjoy the highest medical standards in Germany without language barriers, long journeys, or risks due to inadequate aftercare abroad."
+      }
+    ]
+  },
+  "processSection": {
+    "title": "The Treatment Process",
+    "subtitle": "Your path to new eyebrows - Transparent presentation of all steps from initial planning to the final result of your eyebrow transplantation",
+    "expertiseTitle": "Our Expertise for Your Perfect Result",
+    "advantages": [
+      {
+        "title": "Optimal Eyebrow Shape Design",
+        "description": "We design the eyebrow shape individually to match the patient's face, taking into account facial shape, age, and personal style for a natural and harmonious appearance."
+      },
+      {
+        "title": "Invisible Scars with Smallest FUE Punches",
+        "description": "By using the most modern and smallest FUE punches, we leave practically invisible scars in the donor area, allowing you to wear your hair short as well."
+      },
+      {
+        "title": "Minimal Swelling through Reduced Fluids",
+        "description": "We use only small amounts of fluids like NaCl during the procedure to minimize swelling and shorten the recovery time."
+      },
+      {
+        "title": "Precise Placement for Natural Transitions",
+        "description": "Each implant is precisely placed to create natural transitions and to respect the natural growth direction of the eyebrows."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Planning",
+        "description": "In the planning phase, the eyebrow shape is carefully designed and the number of required grafts is determined. A detailed analysis of your donor areas and recipient area enables precise and individualized planning for optimal results."
+      },
+      {
+        "title": "Extraction",
+        "description": "During extraction, individual hair follicles are removed from the donor area (usually at the back of the head). These follicular units are carefully prepared under the microscope to ensure a high survival rate."
+      },
+      {
+        "title": "Implantation",
+        "description": "The prepared hair follicles are precisely inserted into the predetermined recipient areas in the eyebrow region. Special attention is paid to the natural growth angle and distribution to achieve an aesthetically pleasing result."
+      },
+      {
+        "title": "Final Result",
+        "description": "After about 6-9 months, the final result is visible. The transplanted hair grows naturally and can be trimmed and styled like your own eyebrows. The result is permanent and blends harmoniously with your face."
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Success Stories from Our Patients",
+    "subtitle": "Testimonials and Results",
+    "intro": "Our patients share their experiences and results after eyebrow transplantation at Dion Hair Clinic.",
+    "beforeAfterTitle": "Before / After Results",
+    "before": "Before",
+    "after": "After",
+    "ctaSection": {
+      "title": "Become Our Next Success Story",
+      "description": "Join our satisfied patients and experience for yourself how an eyebrow transplantation can change your life. Schedule a free consultation today and get advice from our experts."
+    },
+    "testimonials": [
+      {
+        "name": "Julia M., 38",
+        "rating": 5,
+        "text": "After years of excessive plucking, I had hardly any eyebrows left. The transplantation at Dion Hair Clinic has given me back my eyebrows. The result looks incredibly natural and has greatly boosted my self-confidence.",
+        "procedure": "Sapphire FUE, 280 Grafts",
+        "date": "March 2024"
+      },
+      {
+        "name": "Sabine K., 45",
+        "rating": 5,
+        "text": "The consultation was thorough and honest. Dr. Dion explained exactly which shape would suit my face. After the treatment, I received excellent care. The result looks completely natural - no one would suspect I had an eyebrow transplantation.",
+        "procedure": "DHI Technique, 220 Grafts",
+        "date": "January 2024"
+      },
+      {
+        "name": "Markus H., 42",
+        "rating": 5,
+        "text": "After an accident, I had a scar that partially destroyed my eyebrow. At Dion Hair Clinic, I felt in good hands from the beginning. The treatment was painless and the results are fantastic. The scar is now completely covered.",
+        "procedure": "Sapphire FUE, 180 Grafts",
+        "date": "December 2023"
+      }
+    ],
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfied Patients"
+      },
+      {
+        "value": "5,000+",
+        "label": "Successful Treatments"
+      },
+      {
+        "value": "15+",
+        "label": "Years of Experience"
+      }
+    ],
+    "cta": "Schedule your free consultation now"
+  },
+  "careSection": {
+    "title": "Dion App - Your Companion for Pre and Post-Care",
+    "subtitle": "Your digital assistant for optimal pre and post-care - Our innovative smartphone app supports you throughout the entire treatment process with personalized instructions and reminders",
+    "description": "With the Dion App, we offer you a comprehensive digital assistant as a smartphone app that guides you through the entire process of your eyebrow transplantation - from preparation to the procedure to long-term aftercare.",
+    "subheading": "Your digital assistant throughout the entire treatment process",
+    "features": [
+      {
+        "title": "Appointment Planning",
+        "description": "Overview of all important appointments before and after treatment"
+      },
+      {
+        "title": "Checklists",
+        "description": "Personalized to-do lists for optimal pre and post-care"
+      },
+      {
+        "title": "Instructions",
+        "description": "Detailed care instructions for the eyebrow region after transplantation"
+      },
+      {
+        "title": "Progress Documentation",
+        "description": "Document your growth progress with photos and notes"
+      },
+      {
+        "title": "Reminders",
+        "description": "Automatic notifications for important care steps"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Access to all functions via our user-friendly app"
+      }
+    ],
+    "appContent": {
+      "progress": "Your Progress",
+      "day1": "Day 1",
+      "month3": "3 Months",
+      "month12": "6 Months",
+      "todayTasks": "Today's Tasks",
+      "task1": "Gentle cleaning of the eyebrow region",
+      "task2": "Apply moisture spray",
+      "task3": "Take progress photo",
+      "nextAppointment": "Next Appointment",
+      "appointmentDetails": "Check-up: April 15, 2025, 2:00 PM"
+    },
+    "appStoreInfo": "Available for Android and iPhone – Download the app for free from the Google Play Store or Apple App Store.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "dpiSection": {
+    "premiumOption": "Premium Option",
+    "title": "Painless Anesthesia",
+    "subtitle": "Comfort technology for painless treatment - Our innovative DPI method revolutionizes the anesthesia phase for a pleasant experience",
+    "description": "Experience a revolutionary eyebrow transplantation without the dreaded pain of the anesthesia phase. Our newly developed DPI procedure makes the anesthesia phase almost completely painless and transforms your treatment into a pleasant experience from start to finish. This premium option can be added to your treatment for an additional fee.",
+    "learnMore": "Learn more about DPI",
+    "additionalFee": "For an additional fee",
+    "benefitsTitle": "Benefits of DPI Technology",
+    "features": [
+      {
+        "title": "Painless Anesthesia",
+        "description": "Our newly developed procedure makes the anesthesia phase almost completely painless, for a pleasant treatment experience from the beginning."
+      },
+      {
+        "title": "Innovative Technology",
+        "description": "The DPI technology uses computer-controlled precision injections with optimal speed and pressure for maximum comfort."
+      },
+      {
+        "title": "Reduced Anxiety",
+        "description": "The painless anesthesia significantly reduces treatment anxiety, leading to a more relaxed experience and better results."
+      },
+      {
+        "title": "Exclusive Comfort",
+        "description": "As a premium option, DPI offers exclusive comfort that makes your eyebrow transplantation a pleasant, stress-free experience."
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to your questions about eyebrow transplantation",
+    "faqs": [
+      {
+        "question": "Which method is best suited for me?",
+        "answer": "The best method depends on various factors, such as the extent of hair loss, the quality of the donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you."
+      },
+      {
+        "question": "How long is the recovery phase?",
+        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 5-7 days. Complete healing of the treated areas takes about 10-14 days."
+      },
+      {
+        "question": "When will I see the first results?",
+        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 6-9 months when the transplanted hairs have fully grown and reached their natural density."
+      },
+      {
+        "question": "Is the procedure painful?",
+        "answer": "The eyebrow transplantation is performed under local anesthesia, so you will not feel any pain during the procedure. After the procedure, slight discomfort may occur, which can be well controlled with pain medication."
+      },
+      {
+        "question": "How much does an eyebrow transplantation cost?",
+        "answer": "The cost of an eyebrow transplantation depends on various factors, particularly the number of grafts to be transplanted and the chosen method. At Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you."
+      },
+      {
+        "question": "Do I need to trim my eyebrows regularly after the transplantation?",
+        "answer": "Yes, since the transplanted hairs usually come from the head, they grow faster than natural eyebrow hairs and need to be trimmed regularly. We will show you how to care for and maintain the shape of your new eyebrows."
+      },
+      {
+        "question": "Are there risks or side effects?",
+        "answer": "As with any medical procedure, there are certain risks associated with eyebrow transplantation. However, these are minimal when performed properly. Possible side effects include temporary swelling, redness, slight bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare."
+      },
+      {
+        "question": "How long does the result of an eyebrow transplantation last?",
+        "answer": "The transplanted hairs are permanent because they are taken from areas that are not genetically susceptible to hair loss. They grow for a lifetime and can be trimmed and styled."
+      },
+      {
+        "question": "How does a treatment in Germany differ from offers abroad?",
+        "answer": "In Germany, eyebrow transplantations are subject to strict medical standards and quality controls. At Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, our treatments are performed exclusively by experienced specialists, not trained assistants."
+      },
+      {
+        "question": "How realistic are the results?",
+        "answer": "Modern eyebrow transplantation techniques now enable very natural-looking results. The transplanted hair grows like your own hair and can be trimmed and styled normally. The experience of the treatment team, the correct placement of the hair follicles, and consideration of your individual facial features and natural growth pattern are crucial for a natural result."
+      },
+      {
+        "question": "How should I prepare for the procedure?",
+        "answer": "For preparation, we recommend avoiding blood-thinning medications (after consulting with your doctor), alcohol, and nicotine for 10 days before the procedure. On the day of the procedure, you should not wear makeup in the eye area. We will advise you in detail about all further preparatory measures in a personal consultation."
+      },
+      {
+        "question": "What does the aftercare look like?",
+        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, you will receive detailed instructions from us on how to care for the treated areas. This includes special cleaning products and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and that your questions are answered at any time."
+      }
+    ]
+  }
+}

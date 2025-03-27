@@ -11,19 +11,27 @@ import homeDE from './locales/home/de.json';
 import homeEN from './locales/home/en.json';
 import hairTransplantationDE from './locales/hairTransplantation/de.json';
 import hairTransplantationEN from './locales/hairTransplantation/en.json';
+import beardTransplantationDE from './locales/beardTransplantation/de.json';
+import beardTransplantationEN from './locales/beardTransplantation/en.json';
+import eyebrowTransplantationDE from './locales/eyebrowTransplantation/de.json';
+import eyebrowTransplantationEN from './locales/eyebrowTransplantation/en.json';
 
 const resources = {
   de: {
     common: commonDE,
     layout: layoutDE,
     home: homeDE,
-    hairTransplantation: hairTransplantationDE
+    hairTransplantation: hairTransplantationDE,
+    beardTransplantation: beardTransplantationDE,
+    eyebrowTransplantation: eyebrowTransplantationDE
   },
   en: {
     common: commonEN,
     layout: layoutEN,
     home: homeEN,
-    hairTransplantation: hairTransplantationEN
+    hairTransplantation: hairTransplantationEN,
+    beardTransplantation: beardTransplantationEN,
+    eyebrowTransplantation: eyebrowTransplantationEN
   }
 };
 
@@ -39,7 +47,7 @@ i18n
     debug: false, // Set to true for development
     
     // have a common namespace used around the full app
-    ns: ['common', 'layout', 'home', 'hairTransplantation'],
+    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation'],
     defaultNS: 'common',
     
     interpolation: {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Search, Clock, Stethoscope, HelpCircle, DollarSign, ArrowRight, Scissors, User } from 'lucide-react';
+import { ChevronDown, Search, Clock, Stethoscope, HelpCircle, DollarSign, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
@@ -12,19 +12,14 @@ interface FAQ {
 
 // FAQ categories with icons - ensuring consistent sizing
 const getCategoryIcons = () => ({
-  hair: { icon: <User strokeWidth={1.5} className="w-5 h-5" /> },
-  beard: { icon: <Scissors strokeWidth={1.5} className="w-5 h-5" /> },
-  eyebrows: { icon: <HelpCircle strokeWidth={1.5} className="w-5 h-5" /> },
-  general: { icon: <Stethoscope strokeWidth={1.5} className="w-5 h-5" /> },
-  costs: { icon: <DollarSign strokeWidth={1.5} className="w-5 h-5" /> },
-  aftercare: { icon: <Clock strokeWidth={1.5} className="w-5 h-5" /> },
   procedure: { icon: <Stethoscope strokeWidth={1.5} className="w-5 h-5" /> },
   recovery: { icon: <Clock strokeWidth={1.5} className="w-5 h-5" /> },
-  results: { icon: <HelpCircle strokeWidth={1.5} className="w-5 h-5" /> }
+  results: { icon: <HelpCircle strokeWidth={1.5} className="w-5 h-5" /> },
+  costs: { icon: <DollarSign strokeWidth={1.5} className="w-5 h-5" /> }
 });
 
 const FAQSection: React.FC = () => {
-  const { t, i18n } = useTranslation(['home', 'common']);
+  const { t } = useTranslation(['eyebrowTransplantation', 'common']);
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -35,22 +30,14 @@ const FAQSection: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  // Reset state when language changes
-  useEffect(() => {
-    // Reset open FAQ and search term when language changes
-    setOpenFAQ(0);
-    setSearchTerm('');
-    setActiveCategory(null);
-  }, [i18n.language]);
-
   // Create FAQs from translation keys and assign categories
-  const faqCategories = ['hair', 'beard', 'eyebrows', 'general', 'costs', 'aftercare'];
+  const faqCategories = ['procedure', 'recovery', 'results', 'costs'];
   const faqs: FAQ[] = Array.from(
     { length: (t('faqSection.faqs', { returnObjects: true }) as any[]).length },
     (_, index) => ({
       question: t(`faqSection.faqs.${index}.question`),
       answer: t(`faqSection.faqs.${index}.answer`),
-      category: t(`faqSection.faqs.${index}.category`, { defaultValue: faqCategories[index % faqCategories.length] }) // Use category from translation or assign cyclically
+      category: faqCategories[index % faqCategories.length] // Assign categories cyclically
     })
   );
 
@@ -70,7 +57,7 @@ const FAQSection: React.FC = () => {
   });
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden" id="faq-section">
+    <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
       <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
@@ -174,7 +161,7 @@ const FAQSection: React.FC = () => {
                             : 'bg-[#7BA7C2]/10 text-[#7BA7C2] group-hover:bg-[#7BA7C2]/20'
                         }`}>
                           <div className="flex items-center justify-center w-5 h-5">
-                            {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>]?.icon || <HelpCircle strokeWidth={1.5} className="w-5 h-5" />}
+                            {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>].icon}
                           </div>
                         </div>
                         <span className={`${fontSize.lg} sm:${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left text-sm sm:text-base`}>{faq.question}</span>

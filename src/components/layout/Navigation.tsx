@@ -59,14 +59,14 @@ const Navigation: React.FC = () => {
                     {t('footer.services.hairTransplant')}
                   </Link>
                   <Link 
-                    to="#" 
+                    to="/barthaartransplantation" 
                     className="hover:text-gray-600"
                     onClick={() => setIsTreatmentsOpen(false)}
                   >
                     {t('footer.services.beardTransplant')}
                   </Link>
                   <Link 
-                    to="#" 
+                    to="/augenbrauentransplantation" 
                     className="hover:text-gray-600"
                     onClick={() => setIsTreatmentsOpen(false)}
                   >
@@ -117,14 +117,14 @@ const Navigation: React.FC = () => {
                     {t('footer.services.hairTransplant')}
                   </Link>
                   <Link 
-                    to="#" 
+                    to="/barthaartransplantation" 
                     className="hover:text-gray-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('footer.services.beardTransplant')}
                   </Link>
                   <Link 
-                    to="#" 
+                    to="/augenbrauentransplantation" 
                     className="hover:text-gray-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
