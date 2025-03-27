@@ -4,14 +4,7 @@
  * Dieses Modul definiert ein konsistentes Typografie-System für die gesamte Anwendung.
  * Es enthält Definitionen für Schriftgrößen, Schriftgewichte und Textfarben,
  * die in allen Komponenten verwendet werden sollten.
- * 
- * Dieses Modul verwendet das zentrale Farbsystem aus colors.ts.
- * 
- * Hinweis: Für dynamische Theme-Unterstützung sollte in Komponenten der useTheme-Hook
- * aus ThemeProvider.tsx verwendet werden.
  */
-
-import { defaultTheme, palette } from './colors';
 
 // Schriftgrößen-Klassen für verschiedene Hierarchieebenen
 export const fontSize = {
@@ -51,26 +44,18 @@ export const lineHeight = {
 
 // Textfarben für verschiedene Elemente und Zustände
 export const textColor = {
-  // Primäre Farben (statische Varianten für einfache Verwendung)
-  primary: `text-[${defaultTheme.primary}]`, // Primärfarbe für Hervorhebungen
-  primaryDark: `text-[${defaultTheme.primaryDark}]`, // Dunklere Variante der Primärfarbe
+  // Primäre Farben
+  primary: 'text-[#7BA7C2]', // Primärfarbe für Hervorhebungen
+  primaryDark: 'text-[#5A8BA6]', // Dunklere Variante der Primärfarbe
   
   // Neutrale Farben
-  dark: `text-[${defaultTheme.textPrimary}]`, // Haupttextfarbe
-  medium: `text-[${defaultTheme.textSecondary}]`, // Sekundäre Textfarbe
-  light: `text-[${defaultTheme.textLight}]`, // Tertiäre Textfarbe
+  dark: 'text-gray-800', // Haupttextfarbe
+  medium: 'text-gray-600', // Sekundäre Textfarbe
+  light: 'text-gray-500', // Tertiäre Textfarbe
   
   // Spezielle Farben
-  white: `text-[${palette.white}]`, // Für Text auf dunklem Hintergrund
-  accent: `text-[${defaultTheme.accent}]`, // Für Akzente
-  
-  // Tailwind-Klassen für einfachere Verwendung
-  primaryClass: 'text-gray-700',
-  darkClass: 'text-gray-800',
-  mediumClass: 'text-gray-600',
-  lightClass: 'text-gray-500',
-  whiteClass: 'text-white',
-  accentClass: 'text-blue-400',
+  white: 'text-white', // Für Text auf dunklem Hintergrund
+  accent: 'text-yellow-500', // Für Akzente wie Bewertungssterne
 };
 
 // Tracking (Buchstabenabstand)
@@ -119,12 +104,8 @@ export const combineTypography = (...classes: string[]): string => {
 
 // Gradient-Unterstriche für Überschriften
 export const gradientUnderline = {
-  primary: `h-px ${defaultTheme.gradientDivider}`,
-  light: 'h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent',
-  
-  // Tailwind-Klassen für einfachere Verwendung
-  primaryClass: 'h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent',
-  lightClass: 'h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent',
+  primary: 'h-px bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent',
+  light: 'h-px bg-gradient-to-r from-transparent via-[#7BA7C2]/25 to-transparent',
 };
 
 // Export des gesamten Typografie-Systems als Standard

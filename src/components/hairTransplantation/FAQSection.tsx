@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Search, Clock, Stethoscope, HelpCircle, DollarSign, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
-import { useTheme } from '../../utils/ThemeProvider';
 
 interface FAQ {
   question: string;
@@ -25,7 +24,6 @@ const FAQSection: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const { activeTheme } = useTheme();
 
   // Trigger entrance animations
   useEffect(() => {
@@ -61,12 +59,9 @@ const FAQSection: React.FC = () => {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute -z-10 w-full h-full inset-0" 
-           style={{ background: `linear-gradient(to bottom, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})` }}></div>
-      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full -top-[400px] -right-[400px] blur-3xl"
-           style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
-      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full -bottom-[300px] -left-[300px] blur-3xl"
-           style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+      <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -left-[300px] blur-3xl"></div>
       
       {/* Subtle background pattern */}
       <div 
@@ -82,14 +77,11 @@ const FAQSection: React.FC = () => {
         {/* Section Header with elegant design */}
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full blur-xl"
-                 style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('faqSection.title')}</h2>
-            <div className="w-[90%] max-w-[350px] mt-3 mx-auto h-px" 
-                 style={{ background: `linear-gradient(to right, transparent, ${activeTheme.accent}, transparent)` }}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${fontSize.lg} ${fontWeight.normal} max-w-3xl mx-auto mt-4`}
-             style={{ color: activeTheme.textSecondary }}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
             {t('faqSection.subtitle')}
           </p>
         </div>
@@ -98,18 +90,16 @@ const FAQSection: React.FC = () => {
         <div className={`max-w-4xl mx-auto mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative mb-8">
             <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-              <Search className="h-5 w-5" style={{ color: activeTheme.accent }} />
+              <Search className="h-5 w-5 text-[#7BA7C2]" />
             </div>
             <input
               type="text"
-              className="block w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300"
-              style={{ "--tw-ring-color": activeTheme.accent } as React.CSSProperties}
+              className="block w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#7BA7C2] focus:border-transparent transition-all duration-300"
               placeholder="Frage suchen..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <div className="absolute inset-0 -z-10 rounded-xl blur-sm"
-                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+            <div className="absolute inset-0 -z-10 rounded-xl bg-[#7BA7C2]/5 blur-sm"></div>
           </div>
           
           {/* Category filters with elegant design */}
@@ -118,12 +108,9 @@ const FAQSection: React.FC = () => {
               onClick={() => setActiveCategory(null)}
               className={`px-6 py-3 rounded-xl ${fontSize.sm} ${fontWeight.light} transition-all duration-300 ${
                 activeCategory === null
-                  ? 'text-white shadow-md transform -translate-y-1'
+                  ? 'bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white shadow-md transform -translate-y-1'
                   : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:shadow-md border border-gray-100'
               }`}
-              style={activeCategory === null ? { 
-                background: `linear-gradient(to right, ${activeTheme.accent}, ${activeTheme.accentDark})` 
-              } : undefined}
             >
               Alle Fragen
             </button>
@@ -133,15 +120,11 @@ const FAQSection: React.FC = () => {
                 onClick={() => setActiveCategory(key)}
                 className={`px-6 py-3 rounded-xl ${fontSize.sm} ${fontWeight.light} transition-all duration-300 flex items-center gap-2 ${
                   activeCategory === key
-                    ? 'text-white shadow-md transform -translate-y-1'
+                    ? 'bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white shadow-md transform -translate-y-1'
                     : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:shadow-md border border-gray-100'
                 }`}
-                style={activeCategory === key ? { 
-                  background: `linear-gradient(to right, ${activeTheme.accent}, ${activeTheme.accentDark})` 
-                } : undefined}
               >
-                <span className={activeCategory === key ? 'text-white' : ''}
-                      style={activeCategory !== key ? { color: activeTheme.accent } : undefined}>
+                <span className={activeCategory === key ? 'text-white' : 'text-[#7BA7C2]'}>
                   {icon}
                 </span>
                 {name}
@@ -160,17 +143,11 @@ const FAQSection: React.FC = () => {
                   className="relative group"
                 >
                   {/* Card with glass morphism effect */}
-                  <div 
-                    className={`relative bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-md transition-all duration-500 border border-gray-100/80 ${
-                      openFAQ === index 
-                        ? 'shadow-lg' 
-                        : 'hover:shadow-lg'
-                    }`}
-                    style={{ 
-                      borderColor: openFAQ === index 
-                        ? `${activeTheme.accent}30` 
-                        : undefined
-                    }}>
+                  <div className={`relative bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-md transition-all duration-500 border border-gray-100/80 ${
+                    openFAQ === index 
+                      ? 'shadow-lg border-[#7BA7C2]/30' 
+                      : 'hover:shadow-lg hover:border-[#7BA7C2]/20'
+                  }`}>
                     {/* Question button */}
                     <button
                       onClick={() => toggleFAQ(index)}
@@ -181,30 +158,18 @@ const FAQSection: React.FC = () => {
                       <div className="flex items-center gap-4">
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                           openFAQ === index 
-                            ? 'text-white' 
-                            : 'group-hover:bg-opacity-20'
-                        }`}
-                        style={{ 
-                          backgroundColor: openFAQ === index 
-                            ? activeTheme.accent 
-                            : `${activeTheme.accent}10`,
-                          color: openFAQ === index 
-                            ? 'white' 
-                            : activeTheme.accent
-                        }}>
+                            ? 'bg-[#7BA7C2] text-white' 
+                            : 'bg-[#7BA7C2]/10 text-[#7BA7C2] group-hover:bg-[#7BA7C2]/20'
+                        }`}>
                           {categories[faq.category as keyof typeof categories].icon}
                         </div>
-                        <span className={`${fontSize.lg} ${fontWeight.normal} text-left`} 
-                              style={{ color: activeTheme.textPrimary }}>{faq.question}</span>
+                        <span className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left`}>{faq.question}</span>
                       </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         openFAQ === index 
-                          ? 'text-white rotate-180' 
+                          ? 'bg-[#7BA7C2] text-white rotate-180' 
                           : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'
-                      }`}
-                      style={{ 
-                        backgroundColor: openFAQ === index ? activeTheme.accent : undefined
-                      }}>
+                      }`}>
                         <ChevronDown className="w-5 h-5" />
                       </div>
                     </button>
@@ -219,30 +184,27 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-0 border-t border-gray-100">
-                        <p className={`${fontSize.base} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}
-                           style={{ color: activeTheme.textSecondary }}>{faq.answer}</p>
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>{faq.answer}</p>
                       </div>
                     </div>
                   </div>
                   
                   {/* Decorative elements */}
-                  <div className={`absolute -z-10 w-full h-full rounded-2xl top-2 left-2 transition-all duration-500 ${
+                  <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
                     openFAQ === index ? 'opacity-70' : 'opacity-0 group-hover:opacity-30'
-                  }`} style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
+                  }`}></div>
                 </div>
               ))}
             </div>
           ) : (
             <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-10 text-center shadow-md border border-gray-100">
-              <div className="absolute top-0 right-0 w-40 h-40 rounded-full -mr-20 -mt-20 blur-xl"
-                   style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+              <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 blur-xl"></div>
               <div className="relative z-10">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                   style={{ backgroundColor: `${activeTheme.accent}10` }}>
-                <HelpCircle className="w-8 h-8" style={{ color: activeTheme.accent }} />
+                <div className="w-16 h-16 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto mb-4">
+                  <HelpCircle className="w-8 h-8 text-[#7BA7C2]" />
                 </div>
-                <h3 className={`${fontSize.h4} ${fontWeight.light} mb-2`} style={{ color: activeTheme.textPrimary }}>Keine Ergebnisse gefunden</h3>
-                <p className={`${fontWeight.light}`} style={{ color: activeTheme.textSecondary }}>Bitte versuchen Sie eine andere Suche oder wählen Sie eine andere Kategorie.</p>
+                <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2`}>Keine Ergebnisse gefunden</h3>
+                <p className={`${textColor.medium} ${fontWeight.light}`}>Bitte versuchen Sie eine andere Suche oder wählen Sie eine andere Kategorie.</p>
               </div>
             </div>
           )}
@@ -252,10 +214,8 @@ const FAQSection: React.FC = () => {
         <div className={`max-w-4xl mx-auto mt-16 relative transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 blur-xl"
-               style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full -ml-32 -mb-32 blur-xl"
-               style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">

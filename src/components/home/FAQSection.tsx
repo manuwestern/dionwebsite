@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
-import { useTheme } from '../../utils/ThemeProvider';
 
 interface FAQ {
   question: string;
@@ -15,7 +14,6 @@ const FAQSection: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(0); // First FAQ open by default
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const { activeTheme } = useTheme();
 
   // Trigger entrance animations on scroll
   useEffect(() => {
@@ -59,15 +57,12 @@ const FAQSection: React.FC = () => {
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 -z-10">
-        {/* Main gradient background with theme colors */}
-        <div className="absolute inset-0" 
-             style={{ background: `linear-gradient(to bottom, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})` }}></div>
+        {/* Main gradient background with more visible blue tones */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EBF3FB] via-[#E5EFF7] to-[#EBF3FB]"></div>
         
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full -mr-[400px] -mt-[400px] blur-3xl"
-             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full -ml-[300px] -mb-[300px] blur-3xl"
-             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -84,16 +79,11 @@ const FAQSection: React.FC = () => {
         {/* Section Header with elegant design */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6 relative">
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full blur-xl"
-                 style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
-            <h2 className={`${textStyle.sectionTitle}`} 
-                style={{ color: activeTheme.textPrimary }}
-                lang="de">{t('faqSection.title')}</h2>
-            <div className="w-[90%] max-w-[300px] mt-4 mx-auto h-px" 
-                 style={{ background: `linear-gradient(to right, transparent, ${activeTheme.divider}, transparent)` }}></div>
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('faqSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
           </div>
-          <p className={`${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} max-w-3xl mx-auto mt-6 md:tracking-wide`}
-             style={{ color: activeTheme.textSecondary }}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('faqSection.subtitle')}
           </p>
         </div>
@@ -109,30 +99,20 @@ const FAQSection: React.FC = () => {
                 onClick={() => toggleFAQ(index)}
                 className={`w-full text-center md:text-left p-5 rounded-t-xl flex justify-between items-center transition-all duration-300 ${
                   openFAQ === index
-                    ? 'text-white shadow-md'
-                    : 'bg-white hover:bg-gray-50 border border-gray-100 shadow-sm'
+                    ? 'bg-[#7BA7C2] text-white shadow-md'
+                    : 'bg-white text-gray-800 hover:bg-gray-50 border border-gray-100 shadow-sm'
                 }`}
-                style={{ 
-                  backgroundColor: openFAQ === index ? activeTheme.accent : undefined,
-                  color: openFAQ === index ? 'white' : activeTheme.textPrimary
-                }}
               >
-                <span className={`${fontSize.lg} ${fontWeight.light}`}>{faq.question}</span>
+                <span className={`${fontSize.lg} ${fontWeight.light} ${openFAQ === index ? 'text-white' : textColor.dark}`}>{faq.question}</span>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                   openFAQ === index 
                     ? 'bg-white/20' 
-                    : ''
-                }`}
-                     style={{ 
-                       backgroundColor: openFAQ === index ? 'rgba(255, 255, 255, 0.2)' : `${activeTheme.accent}10`
-                     }}>
+                    : 'bg-[#7BA7C2]/10'
+                }`}>
                   <ChevronDown 
                     className={`w-5 h-5 transition-transform duration-300 ${
-                      openFAQ === index ? 'transform rotate-180 text-white' : ''
-                    }`}
-                    style={{ 
-                      color: openFAQ === index ? 'white' : activeTheme.accent
-                    }}
+                      openFAQ === index ? 'transform rotate-180 text-white' : 'text-[#7BA7C2]'
+                    }`} 
                   />
                 </div>
               </button>
@@ -144,8 +124,7 @@ const FAQSection: React.FC = () => {
                 }`}
               >
                 <div className="p-6">
-                  <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left`}
-                     style={{ color: activeTheme.textSecondary }}>{faq.answer}</p>
+                  <p className={`${textStyle.bodyText} text-center md:text-left`}>{faq.answer}</p>
                 </div>
               </div>
             </div>
@@ -154,20 +133,16 @@ const FAQSection: React.FC = () => {
         
         {/* CTA Section */}
         <div className={`mt-16 relative transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="absolute inset-0 rounded-2xl" style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 blur-xl"
-                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full -ml-32 -mb-32 blur-xl"
-                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} mb-4 text-center md:text-left`}
-                    style={{ color: activeTheme.primary }}>Haben Sie weitere Fragen?</h3>
-                <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left px-2 md:px-0`}
-                   style={{ color: activeTheme.textSecondary }}>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Haben Sie weitere Fragen?</h3>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                   Wir beantworten gerne alle Ihre Fragen in einem persönlichen Beratungsgespräch. 
                   Unsere Experten nehmen sich Zeit für Sie und erklären Ihnen den gesamten Prozess im Detail.
                 </p>

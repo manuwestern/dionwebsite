@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Microscope, HeartPulse, Sparkles, Stethoscope, Check, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
-import { useTheme } from '../../utils/ThemeProvider';
 
 interface Concept {
   icon: React.ReactNode;
@@ -16,7 +15,6 @@ const HolisticConceptSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
   const [isVisible, setIsVisible] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null);
-  const { activeTheme } = useTheme();
 
   // Trigger entrance animations on scroll
   useEffect(() => {
@@ -63,15 +61,12 @@ const HolisticConceptSection: React.FC = () => {
     <section id="holistic-concept-section" className="py-20 md:py-28 relative overflow-hidden">
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 -z-10">
-        {/* Main gradient background with theme colors */}
-        <div className="absolute inset-0" 
-             style={{ background: `linear-gradient(to bottom, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})` }}></div>
+        {/* Main gradient background with more visible blue-gray tones */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EDF5FC] via-[#E5EFF7] to-[#EDF5FC]"></div>
         
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full -mr-[400px] -mt-[400px] blur-3xl"
-             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full -ml-[300px] -mb-[300px] blur-3xl"
-             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -88,16 +83,11 @@ const HolisticConceptSection: React.FC = () => {
         {/* Section Header with elegant design */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6 relative">
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full blur-xl"
-                 style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
-            <h2 className={`${textStyle.sectionTitle}`} 
-                style={{ color: activeTheme.textPrimary }}
-                lang="de">{t('holisticConceptSection.title')}</h2>
-            <div className="w-[90%] max-w-[300px] mt-4 mx-auto h-px" 
-                 style={{ background: `linear-gradient(to right, transparent, ${activeTheme.divider}, transparent)` }}></div>
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('holisticConceptSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
           </div>
-          <p className={`${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} max-w-3xl mx-auto mt-6 md:tracking-wide`}
-             style={{ color: activeTheme.textSecondary }}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('holisticConceptSection.subtitle')}
           </p>
         </div>
@@ -107,14 +97,11 @@ const HolisticConceptSection: React.FC = () => {
           {/* Left Column - Image with enhanced effects */}
           <div className={`w-full lg:w-1/2 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             {/* Decorative elements */}
-            <div className="absolute -inset-4 rounded-full blur-3xl"
-                 style={{ background: `linear-gradient(to top right, ${activeTheme.accent}10, ${activeTheme.accent}05)` }}></div>
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#7BA7C2]/10 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
             
             {/* Subtle animated decorative elements */}
-            <div className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full animate-pulse-slow"
-                 style={{ borderWidth: '1px', borderStyle: 'solid', borderColor: `${activeTheme.accent}20` }}></div>
-            <div className="absolute bottom-1/3 right-1/3 w-28 h-28 rounded-full animate-pulse-slower"
-                 style={{ borderWidth: '1px', borderStyle: 'solid', borderColor: `${activeTheme.accent}10` }}></div>
+            <div className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full border border-[#7BA7C2]/20 animate-pulse-slow"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-28 h-28 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
             
             {/* Mobile image */}
             <img 
@@ -142,8 +129,7 @@ const HolisticConceptSection: React.FC = () => {
           {/* Right Column - Text Content */}
           <div className={`w-full lg:w-1/2 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="text-center lg:text-left">
-              <p className={`${fontSize.lg} ${fontWeight.normal} ${lineHeight.relaxed} mb-8 leading-relaxed`}
-                 style={{ color: activeTheme.textPrimary }}>
+              <p className={`${textStyle.bodyTextImportant} mb-8 leading-relaxed`}>
                 {t('holisticConceptSection.description')}
               </p>
               
@@ -157,28 +143,19 @@ const HolisticConceptSection: React.FC = () => {
                     onMouseEnter={() => setActiveCard(index)}
                     onMouseLeave={() => setActiveCard(null)}
                   >
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm transition-all duration-300 ${activeCard === index ? 'scale-110' : ''}`}
-                         style={{ 
-                           backgroundColor: activeCard === index ? `${activeTheme.accent}30` : `${activeTheme.accent}10`
-                         }}>
+                    <div className={`w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm transition-all duration-300 ${activeCard === index ? 'bg-[#7BA7C2]/30 scale-110' : ''}`}>
                       {React.cloneElement(concept.icon as React.ReactElement, { 
-                        className: `w-6 h-6 transition-all duration-300 ${activeCard === index ? 'scale-110' : ''}`,
-                        style: { color: activeTheme.accent }
+                        className: `w-6 h-6 text-[#7BA7C2] transition-all duration-300 ${activeCard === index ? 'scale-110' : ''}` 
                       })}
                     </div>
                     <div>
-                      <h4 className={`${fontSize.h4} ${fontWeight.normal} mb-2 transition-colors duration-300`}
-                          style={{ 
-                            color: activeCard === index ? activeTheme.primary : activeTheme.textPrimary 
-                          }}>
+                      <h4 className={`${fontSize.h4} ${fontWeight.normal} ${activeCard === index ? textColor.primary : textColor.dark} mb-2 transition-colors duration-300`}>
                         {t(concept.titleKey)}
                       </h4>
-                      <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} mb-2`}
-                         style={{ color: activeTheme.textSecondary }}>
+                      <p className={`${textStyle.bodyText} mb-2`}>
                         {t(concept.descriptionKey)}
                       </p>
-                      <div className={`italic text-sm font-light transition-all duration-300 ${activeCard === index ? 'opacity-100' : 'opacity-70'}`}
-                           style={{ color: activeTheme.primary }}>
+                      <div className={`italic text-sm ${textColor.primary} font-light transition-all duration-300 ${activeCard === index ? 'opacity-100' : 'opacity-70'}`}>
                         "{t(concept.quoteKey)}"
                       </div>
                     </div>
@@ -216,30 +193,20 @@ const HolisticConceptSection: React.FC = () => {
                 {/* Card with glass morphism effect */}
                 <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full ${
                   isActive 
-                    ? 'shadow-xl transform -translate-y-1 border-2' 
-                    : 'border border-gray-100/80 hover:shadow-xl'
-                }`}
-                     style={{ 
-                       borderColor: isActive ? `${activeTheme.accent}80` : `${activeTheme.accent}30`
-                     }}>
+                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
+                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+                }`}>
                   {/* Header with icon and title */}
                   <div className="p-6 text-center">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 ${
-                      isActive ? 'scale-110' : ''
-                    }`}
-                         style={{ 
-                           backgroundColor: isActive ? `${activeTheme.accent}20` : `${activeTheme.accent}10`
-                         }}>
+                    <div className={`w-16 h-16 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto mb-4 transition-all duration-500 ${
+                      isActive ? 'scale-110 bg-[#7BA7C2]/20' : ''
+                    }`}>
                       {React.cloneElement(concept.icon as React.ReactElement, { 
-                        className: `w-8 h-8 transition-all duration-500 ${isActive ? 'scale-110' : ''}`,
-                        style: { color: activeTheme.accent }
+                        className: `w-8 h-8 text-[#7BA7C2] transition-all duration-500 ${isActive ? 'scale-110' : ''}` 
                       })}
                     </div>
                     
-                    <h3 className={`${fontSize.h4} ${fontWeight.normal} mb-3 transition-colors duration-300`}
-                        style={{ 
-                          color: isActive ? activeTheme.primary : activeTheme.textPrimary 
-                        }}>
+                    <h3 className={`${fontSize.h4} ${fontWeight.normal} ${isActive ? textColor.primary : textColor.dark} mb-3 transition-colors duration-300`}>
                       {t(concept.titleKey)}
                     </h3>
                   </div>
@@ -247,24 +214,21 @@ const HolisticConceptSection: React.FC = () => {
                   {/* Content with subtle gradient */}
                   <div className="px-6 pb-6 text-center">
                     {/* Description with perfect typography */}
-                    <p className={`${fontSize.sm} ${fontWeight.light} ${lineHeight.relaxed} mb-4`}
-                       style={{ color: activeTheme.textSecondary }}>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-4`}>
                       {t(concept.descriptionKey)}
                     </p>
                     
                     {/* Quote */}
-                    <div className={`italic text-sm font-light transition-all duration-300 ${isActive ? 'opacity-100' : 'opacity-70'}`}
-                         style={{ color: activeTheme.primary }}>
+                    <div className={`italic text-sm ${textColor.primary} font-light transition-all duration-300 ${isActive ? 'opacity-100' : 'opacity-70'}`}>
                       "{t(concept.quoteKey)}"
                     </div>
                   </div>
                 </div>
                 
                 {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl top-2 left-2 transition-all duration-500 ${
+                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
                   isActive ? 'opacity-70' : 'opacity-0'
-                }`}
-                     style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
+                }`}></div>
               </div>
             );
           })}
