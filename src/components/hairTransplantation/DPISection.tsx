@@ -55,81 +55,70 @@ const DPISection: React.FC = () => {
       ></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-        <div className={`flex flex-col md:flex-row gap-12 items-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          {/* Left side - Premium badge and content */}
-          <div className="md:w-1/2">
-            {/* Mobile-optimized layout with center alignment */}
-            <div className="flex flex-col items-center md:items-start">
-              {/* Premium badge removed */}
+        {/* Section Header with elegant design - exactly matching other sections */}
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4 relative">
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('dpiSection.title')}</h2>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
+          </div>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+            {t('dpiSection.subtitle')}
+          </p>
+        </div>
+        
+        {/* Additional Advantages Box - Exactly matching the ProcessSection */}
+        <div className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            
+            <div className="relative z-10">
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('dpiSection.benefitsTitle')}</h3>
               
-              <h2 className={`${textStyle.sectionTitle} mb-2 text-center md:text-left`}>
-                {t('dpiSection.title')}
-              </h2>
-              <p className={`${fontSize.h3} ${textColor.primary} mb-4 text-center md:text-left`}>
-                {t('dpiSection.subtitle')}
-              </p>
-              
-              <div className={`${gradientUnderline.primary} w-[85%] max-w-[280px] md:w-[90%] md:max-w-[400px] mx-auto md:mx-0 mb-6`}></div>
-              
-              <p className={`${fontSize.lg} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8 text-center md:text-left px-2 md:px-0 max-w-md md:max-w-none mx-auto md:mx-0`}>
+              <p className={`${textStyle.bodyText} mb-8 text-center md:text-left`}>
                 {t('dpiSection.description')}
               </p>
               
-              {/* Learn more button removed */}
-            </div>
-          </div>
-          
-          {/* Right side - Elegant card with features */}
-          <div className="md:w-1/2 mt-6 md:mt-0">
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-100/80 overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
-              
-              {/* Additional fee badge removed */}
-              
-              <div className="relative z-10">
-                <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>{t('dpiSection.benefitsTitle')}</h3>
-                
-                <div className="space-y-6">
-                  {featureItems.map((item, index) => {
-                    const isHovered = index === hoverFeature;
-                    
-                    return (
-                      <div 
-                        key={index}
-                        className="relative group"
-                        onMouseEnter={() => setHoverFeature(index)}
-                        onMouseLeave={() => setHoverFeature(null)}
-                      >
-                        <div className={`flex gap-4 p-4 rounded-xl transition-all duration-300 ${
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {featureItems.map((item, index) => {
+                  const isHovered = index === hoverFeature;
+                  
+                  return (
+                    <div 
+                      key={index}
+                      className="relative group"
+                      onMouseEnter={() => setHoverFeature(index)}
+                      onMouseLeave={() => setHoverFeature(null)}
+                    >
+                      <div className={`flex gap-4 p-6 rounded-xl transition-all duration-300 ${
+                        isHovered 
+                          ? 'bg-[#7BA7C2]/5 shadow-sm' 
+                          : 'hover:bg-[#7BA7C2]/5'
+                      }`}>
+                        <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                           isHovered 
-                            ? 'bg-[#7BA7C2]/5 shadow-sm' 
-                            : 'hover:bg-[#7BA7C2]/5'
+                            ? 'bg-[#7BA7C2] text-white' 
+                            : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
                         }`}>
-                          <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            isHovered 
-                              ? 'bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white' 
-                              : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
+                          {item.icon}
+                        </div>
+                        
+                        <div className="flex-grow">
+                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 ${
+                            isHovered ? textColor.primary : textColor.dark
                           }`}>
-                            {item.icon}
-                          </div>
-                          
-                          <div className="flex-grow">
-                            <h4 className={`${fontSize.lg} ${fontWeight.normal} mb-1 transition-colors duration-300 ${
-                              isHovered ? textColor.primary : textColor.dark
-                            }`}>
-                              {item.title}
-                            </h4>
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
-                              {item.description}
-                            </p>
-                          </div>
+                            {item.title}
+                          </h4>
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                            {item.description}
+                          </p>
                         </div>
                       </div>
-                    );
-                  })}
-                </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
