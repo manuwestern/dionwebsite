@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ChevronDown, Star } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
@@ -36,20 +36,6 @@ const HeroSection: React.FC = () => {
     }
   };
 
-  // Create an array of benefits from translation keys
-  const benefits = [
-    'heroSection.benefits.experience',
-    'heroSection.benefits.technology',
-    'heroSection.benefits.care',
-    'heroSection.benefits.results',
-    'heroSection.benefits.painless',
-    'heroSection.benefits.satisfaction',
-    'heroSection.benefits.specialists',
-    'heroSection.benefits.aftercare',
-    'heroSection.benefits.consultation',
-    'heroSection.benefits.customized'
-  ];
-
   return (
     <div 
       ref={heroRef}
@@ -58,11 +44,11 @@ const HeroSection: React.FC = () => {
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 z-0">
         {/* Main gradient background with subtle gray tones */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[#ffffff] via-[#fcfcfc] to-[#f0f9ff]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/70 via-gray-100/50 to-gray-50/80"></div>
         
-        {/* Decorative elements with subtle gray tones */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#E5E5E7]/10 -mr-[400px] -mt-[400px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#DCDCDE]/10 -ml-[300px] -mb-[300px] blur-3xl"></div>
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -74,11 +60,11 @@ const HeroSection: React.FC = () => {
           }}
         ></div>
         
-        {/* Animated gradient lines with matching gray tones */}
+        {/* Animated gradient lines */}
         <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#CCCCCE] to-transparent animate-gradient-x"></div>
-          <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D8D8DA] to-transparent animate-gradient-x-slow"></div>
-          <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#E2E2E4] to-transparent animate-gradient-x-slower"></div>
+          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x"></div>
+          <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slow"></div>
+          <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slower"></div>
         </div>
       </div>
       
@@ -100,7 +86,7 @@ const HeroSection: React.FC = () => {
           {/* Main content area with perfect spacing */}
           <div className="flex-1 flex flex-col justify-between py-4">
             {/* Text content with refined typography and animations */}
-            <div className="space-y-6 mt-4">
+            <div className="space-y-4 mt-3">
               {/* Title with elegant animation and perfect typography */}
               <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
                 <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto`} lang="de">
@@ -130,9 +116,8 @@ const HeroSection: React.FC = () => {
                 </p>
               </div>
               
-              
               {/* CTA button with refined styling and animation */}
-              <div className={`flex justify-center mt-8 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+              <div className={`flex justify-center mt-6 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
                 <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
                   <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
@@ -144,7 +129,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Image section with enhanced visual effects */}
-            <div className="mt-10 mb-16 relative">
+            <div className="mt-8 mb-12 relative">
               {/* Decorative elements */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[300px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
@@ -172,6 +157,17 @@ const HeroSection: React.FC = () => {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+          
+          {/* Refined scroll indicator with perfect positioning and animation */}
+          <div 
+            className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            onClick={scrollToNextSection}
+          >
+            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>Mehr entdecken</span>
+            <div className="w-8 h-8 rounded-full border border-[#7BA7C2]/40 flex items-center justify-center animate-bounce shadow-sm">
+              <ChevronDown className="w-4 h-4 text-[#7BA7C2]" />
             </div>
           </div>
         </div>
@@ -211,7 +207,6 @@ const HeroSection: React.FC = () => {
               </p>
             </div>
             
-            
             {/* Stats with refined styling and animations */}
             <div className={`flex gap-14 mt-12 transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <div className="flex flex-col">
@@ -237,6 +232,26 @@ const HeroSection: React.FC = () => {
                   <ArrowRight className={`${buttonArrowClass} ml-2`} />
                 </span>
               </button>
+            </div>
+            
+            {/* Trust badges with refined styling */}
+            <div className={`mt-14 flex gap-8 transition-all duration-1000 delay-1300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mr-3 shadow-sm">
+                  <svg className="w-6 h-6 text-[#7BA7C2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>Zertifizierte Experten</span>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mr-3 shadow-sm">
+                  <svg className="w-6 h-6 text-[#7BA7C2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>Modernste Techniken</span>
+              </div>
             </div>
           </div>
           
@@ -266,6 +281,17 @@ const HeroSection: React.FC = () => {
                 width="600"
                 height="800"
               />
+            </div>
+          </div>
+          
+          {/* Refined scroll indicator with perfect positioning and animation */}
+          <div 
+            className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+            onClick={scrollToNextSection}
+          >
+            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>Mehr entdecken</span>
+            <div className="w-9 h-9 rounded-full border border-[#7BA7C2]/40 flex items-center justify-center animate-bounce shadow-sm">
+              <ChevronDown className="w-5 h-5 text-[#7BA7C2]" />
             </div>
           </div>
         </div>

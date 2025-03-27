@@ -18,7 +18,7 @@
   },
   "benefitsSection": {
     "title": "Warum Dion Hair Clinic?",
-    "subtitle": "Unsere Vorteile auf einen Blick",
+    "subtitle": "Unsere Vorteile auf einen Blick - Erfahren Sie, was uns von anderen Kliniken unterscheidet und wie wir Ihnen zu neuem Selbstbewusstsein verhelfen",
     "intro": {
       "paragraph1": "Haarausfall kann das Selbstbewusstsein und die Lebensqualität erheblich beeinträchtigen. Genetische Faktoren, hormonelle Veränderungen oder Stress können zu verschiedenen Formen von Haarausfall führen.",
       "paragraph2": "Mit unseren spezialisierten Haartransplantationstechniken bieten wir dauerhafte Lösungen für Männer und Frauen, die unter Haarausfall leiden. Unsere Methoden ermöglichen natürlich aussehende Ergebnisse mit minimaler Erholungszeit."
@@ -45,7 +45,7 @@
   },
   "treatmentAreasSection": {
     "title": "Behandlungsbereiche",
-    "subtitle": "Spezialisiert auf verschiedene Bereiche",
+    "subtitle": "Spezialisiert auf verschiedene Bereiche - Entdecken Sie unsere maßgeschneiderten Lösungen für Haare, Bart und Augenbrauen mit modernsten Techniken",
     "areas": [
       {
         "title": "Haare",
@@ -67,7 +67,7 @@
   },
   "holisticConceptSection": {
     "title": "Unser ganzheitliches Konzept",
-    "subtitle": "Mehr als nur eine Haartransplantation",
+    "subtitle": "Mehr als nur eine Haartransplantation - Unser 360°-Ansatz kombiniert chirurgische Eingriffe mit unterstützenden Therapien für langanhaltende Ergebnisse",
     "description": "Bei Dion Hair Clinic betrachten wir Haarausfall als komplexes Problem, das einen ganzheitlichen Ansatz erfordert. Unsere Behandlungen kombinieren chirurgische Eingriffe mit unterstützenden Therapien und Nachsorge für optimale und langanhaltende Ergebnisse.",
     "concepts": [
       {
@@ -94,7 +94,7 @@
   },
   "treatmentProcessSection": {
     "title": "Unser Behandlungsprozess",
-    "subtitle": "Von der Beratung bis zur Nachsorge",
+    "subtitle": "Von der Beratung bis zur Nachsorge - Erfahren Sie, wie wir Sie Schritt für Schritt durch Ihre Haartransplantation begleiten",
     "stepCount": "Schritt {{current}} von {{total}}",
     "steps": [
       {
@@ -156,7 +156,7 @@
   },
   "beforeAfterSection": {
     "title": "Vorher-Nachher Ergebnisse",
-    "subtitle": "Überzeugen Sie sich selbst von unseren Ergebnissen",
+    "subtitle": "Überzeugen Sie sich selbst von unseren Ergebnissen - Sehen Sie die beeindruckenden Transformationen unserer Patienten und die natürlichen Resultate unserer Arbeit",
     "cases": [
       {
         "title": "Fall 1",
@@ -188,7 +188,7 @@
   },
   "testimonialsSection": {
     "title": "Patientenerfahrungen",
-    "subtitle": "Was unsere Patienten über uns sagen",
+    "subtitle": "Was unsere Patienten über uns sagen - Authentische Erfahrungsberichte von Menschen, die ihr Selbstbewusstsein durch unsere Behandlungen zurückgewonnen haben",
     "navigation": {
       "previous": "Vorheriger Patient",
       "next": "Nächster Patient"
@@ -216,7 +216,7 @@
   },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Antworten auf Ihre wichtigsten Fragen",
+    "subtitle": "Antworten auf Ihre wichtigsten Fragen - Hier finden Sie detaillierte Informationen zu Ablauf, Kosten und Ergebnissen unserer Haartransplantationen",
     "faqs": [
       {
         "question": "Wie lange dauert eine Haartransplantation?",

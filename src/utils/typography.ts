@@ -10,7 +10,7 @@
 export const fontSize = {
   // Überschriften
   h1: 'text-4xl md:text-5xl lg:text-6xl', // Hauptüberschrift (nur für spezielle Seiten)
-  h2: 'text-2xl md:text-3xl lg:text-4xl', // Sektionsüberschriften - etwas kleiner für Eleganz
+  h2: 'text-3xl md:text-3xl lg:text-4xl', // Sektionsüberschriften - etwas kleiner für Eleganz
   h3: 'text-xl md:text-2xl', // Unterabschnittsüberschriften - feiner und eleganter
   h4: 'text-lg', // Kartenüberschriften, kleinere Abschnitte
   
@@ -71,7 +71,7 @@ export const tracking = {
 // Kombinierte Typografie-Stile für häufig verwendete Elemente
 export const textStyle = {
   // Überschriften
-  sectionTitle: `${fontSize.h2} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.wider} break-words hyphens-auto px-2 md:px-0 md:tracking-widest md:font-normal`,
+  sectionTitle: `${fontSize.h2} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.normal} break-words hyphens-auto px-2 md:px-0 md:tracking-widest md:font-normal`,
   sectionSubtitle: `${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} ${textColor.medium} md:tracking-wide`,
   cardTitle: `${fontSize.h4} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} md:tracking-wider`,
   
@@ -94,7 +94,7 @@ export const textStyle = {
   primaryText: `${fontSize.base} ${fontWeight.normal} ${lineHeight.normal} ${textColor.primary}`,
   
   // Hero-Titel mit besonderer Eleganz
-  heroTitle: `${fontSize.heroDesktop} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.wider} md:tracking-widest md:leading-tight`,
+  heroTitle: `${fontSize.heroDesktop} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} md:tracking-widest md:leading-tight`,
 };
 
 // Hilfsfunktion zum Kombinieren von Typografie-Klassen

@@ -78,25 +78,7 @@ const TestimonialsSection: React.FC = () => {
       id="testimonials-section" 
       className="py-20 md:py-28 relative overflow-hidden"
     >
-      {/* Background with gradient and blur effects */}
-      <div className="absolute inset-0 -z-10">
-        {/* Main gradient background with more visible gray tones */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F2F5F8] via-[#EDF1F5] to-[#F2F5F8]"></div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
-        
-        {/* Subtle pattern overlay */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]" 
-          style={{ 
-            backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-            backgroundSize: '200px',
-            backgroundRepeat: 'repeat'
-          }}
-        ></div>
-      </div>
+      {/* Background is now provided by the SectionWrapper component */}
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header with elegant design */}
@@ -104,7 +86,7 @@ const TestimonialsSection: React.FC = () => {
           <div className="inline-block mb-6 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('testimonialsSection.subtitle')}

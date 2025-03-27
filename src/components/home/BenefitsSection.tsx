@@ -60,10 +60,7 @@ const BenefitsSection: React.FC = () => {
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
-      {/* Decorative elements with more visible light gray background */}
-      <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-[#F5F7FA] via-[#EBEEF2] to-[#F5F7FA]"></div>
-      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
-      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -left-[300px] blur-3xl"></div>
+      {/* Background is now provided by the SectionWrapper component */}
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header with elegant design */}
@@ -71,7 +68,7 @@ const BenefitsSection: React.FC = () => {
           <div className="inline-block mb-6 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('benefitsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('benefitsSection.subtitle')}

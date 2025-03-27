@@ -111,7 +111,7 @@ const TreatmentProcessSection: React.FC<{
           <div className="inline-block mb-6 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('treatmentProcessSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('treatmentProcessSection.subtitle')}

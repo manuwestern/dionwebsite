@@ -101,25 +101,7 @@ const BeforeAfterSection: React.FC = () => {
       id="before-after-section" 
       className="py-20 md:py-28 relative overflow-hidden"
     >
-      {/* Background with gradient and blur effects */}
-      <div className="absolute inset-0 -z-10">
-        {/* Main gradient background with more visible gray tones */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F2F5F8] via-[#EDF1F5] to-[#F2F5F8]"></div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
-        
-        {/* Subtle pattern overlay */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]" 
-          style={{ 
-            backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-            backgroundSize: '200px',
-            backgroundRepeat: 'repeat'
-          }}
-        ></div>
-      </div>
+      {/* Background is now provided by the SectionWrapper component */}
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header with elegant design */}
@@ -127,7 +109,7 @@ const BeforeAfterSection: React.FC = () => {
           <div className="inline-block mb-6 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('beforeAfterSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('beforeAfterSection.subtitle')}
@@ -271,7 +253,7 @@ const BeforeAfterSection: React.FC = () => {
           <div className="flex flex-row gap-8">
             {/* Left Column - Case Information and Description */}
             <div className="w-2/5">
-              <div className="bg-white rounded-3xl shadow-lg h-full p-8 flex flex-col">
+              <div className="bg-white rounded-3xl shadow-lg h-[500px] p-8 flex flex-col">
                 <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary} mb-6`}>{t(currentCase.titleKey)}</h3>
                 
                 {/* Case Information Grid */}
@@ -300,16 +282,7 @@ const BeforeAfterSection: React.FC = () => {
                   <p className={`${textStyle.bodyText}`}>{t(currentCase.descriptionKey)}</p>
                 </div>
                 
-                {/* CTA Button */}
-                <div className="mt-auto">
-                  <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                    <span className={buttonRippleClass}></span>
-                    <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
-                      {t('buttons.consultation', { ns: 'common' })}
-                      <ArrowRight className={`${buttonArrowClass} ml-2`} />
-                    </span>
-                  </button>
-                </div>
+                {/* Removed CTA Button */}
                 
                 {/* Pagination Dots */}
                 <div className="flex justify-center space-x-3 mt-6">
