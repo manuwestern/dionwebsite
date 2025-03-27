@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { useTheme } from '../../utils/ThemeProvider';
 
 interface BeforeAfterCase {
   id: number;
@@ -22,6 +23,7 @@ const BeforeAfterSection: React.FC = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { activeTheme } = useTheme();
 
   // Trigger entrance animations on scroll
   useEffect(() => {
@@ -103,12 +105,15 @@ const BeforeAfterSection: React.FC = () => {
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 -z-10">
-        {/* Main gradient background with more visible gray tones */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F2F5F8] via-[#EDF1F5] to-[#F2F5F8]"></div>
+        {/* Main gradient background with theme colors */}
+        <div className="absolute inset-0" 
+             style={{ background: `linear-gradient(to bottom, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})` }}></div>
         
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full -mr-[400px] -mt-[400px] blur-3xl"
+             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full -ml-[300px] -mb-[300px] blur-3xl"
+             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -125,11 +130,16 @@ const BeforeAfterSection: React.FC = () => {
         {/* Section Header with elegant design */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6 relative">
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('beforeAfterSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
+            <h2 className={`${textStyle.sectionTitle}`} 
+                style={{ color: activeTheme.textPrimary }}
+                lang="de">{t('beforeAfterSection.title')}</h2>
+            <div className="w-[90%] max-w-[300px] mt-4 mx-auto h-px" 
+                 style={{ background: `linear-gradient(to right, transparent, ${activeTheme.divider}, transparent)` }}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} max-w-3xl mx-auto mt-6 md:tracking-wide`}
+             style={{ color: activeTheme.textSecondary }}>
             {t('beforeAfterSection.subtitle')}
           </p>
         </div>
@@ -141,7 +151,10 @@ const BeforeAfterSection: React.FC = () => {
             {/* Navigation Arrows - positioned outside the slider container */}
             <button 
               onClick={handlePrevCase}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-40 bg-[#7BA7C2] bg-opacity-80 rounded-full p-2 hover:bg-opacity-100 transition-all shadow-md"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-40 rounded-full p-2 hover:bg-opacity-100 transition-all shadow-md"
+              style={{ 
+                backgroundColor: `${activeTheme.accent}CC`
+              }}
               aria-label={t('beforeAfterSection.navigation.previous')}
             >
               <ChevronLeft className="w-5 h-5 text-white" />
@@ -149,7 +162,10 @@ const BeforeAfterSection: React.FC = () => {
             
             <button 
               onClick={handleNextCase}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-40 bg-[#7BA7C2] bg-opacity-80 rounded-full p-2 hover:bg-opacity-100 transition-all shadow-md"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-40 rounded-full p-2 hover:bg-opacity-100 transition-all shadow-md"
+              style={{ 
+                backgroundColor: `${activeTheme.accent}CC`
+              }}
               aria-label={t('beforeAfterSection.navigation.next')}
             >
               <ChevronRight className="w-5 h-5 text-white" />
@@ -207,9 +223,10 @@ const BeforeAfterSection: React.FC = () => {
               >
                 <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
                 <div 
-                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white bg-opacity-90 shadow-md flex items-center justify-center border border-[#7BA7C2]/30"
+                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white bg-opacity-90 shadow-md flex items-center justify-center border"
+                  style={{ borderColor: `${activeTheme.accent}30` }}
                 >
-                  <div className="w-2 h-2 bg-[#7BA7C2] rounded-full"></div>
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: activeTheme.accent }}></div>
                 </div>
               </div>
               
@@ -229,26 +246,26 @@ const BeforeAfterSection: React.FC = () => {
           {/* Case Information */}
           <div className="grid grid-cols-2 gap-4 text-center">
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.age')}</h4>
-              <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.age} {t('beforeAfterSection.caseInfo.years')}</p>
+              <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.age')}</h4>
+              <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.age} {t('beforeAfterSection.caseInfo.years')}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.technique')}</h4>
-              <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.technique}</p>
+              <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.technique')}</h4>
+              <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.technique}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.grafts')}</h4>
-              <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.grafts}</p>
+              <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.grafts')}</h4>
+              <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.grafts}</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.result')}</h4>
-              <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.result}</p>
+              <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.result')}</h4>
+              <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.result}</p>
             </div>
           </div>
 
           {/* Case Description */}
           <div className="mt-6 text-center">
-            <p className={`${textStyle.bodyText}`}>{t(currentCase.descriptionKey)}</p>
+            <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed}`} style={{ color: activeTheme.textSecondary }}>{t(currentCase.descriptionKey)}</p>
           </div>
 
           {/* Pagination Dots */}
@@ -258,8 +275,11 @@ const BeforeAfterSection: React.FC = () => {
                 key={index}
                 onClick={() => setActiveCase(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === activeCase ? 'bg-[#7BA7C2] scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                  index === activeCase ? 'scale-125' : 'bg-gray-300 hover:bg-gray-400'
                 }`}
+                style={{ 
+                  backgroundColor: index === activeCase ? activeTheme.accent : undefined
+                }}
                 aria-label={`Gehe zu Fall ${index + 1}`}
               />
             ))}
@@ -272,32 +292,32 @@ const BeforeAfterSection: React.FC = () => {
             {/* Left Column - Case Information and Description */}
             <div className="w-2/5">
               <div className="bg-white rounded-3xl shadow-lg h-full p-8 flex flex-col">
-                <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary} mb-6`}>{t(currentCase.titleKey)}</h3>
+                <h3 className={`${fontSize.h3} ${fontWeight.light} mb-6`} style={{ color: activeTheme.primary }}>{t(currentCase.titleKey)}</h3>
                 
                 {/* Case Information Grid */}
                 <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="bg-[#7BA7C2]/5 p-4 rounded-xl">
-                    <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.age')}</h4>
-                    <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.age} {t('beforeAfterSection.caseInfo.years')}</p>
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: `${activeTheme.accent}05` }}>
+                    <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.age')}</h4>
+                    <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.age} {t('beforeAfterSection.caseInfo.years')}</p>
                   </div>
-                  <div className="bg-[#7BA7C2]/5 p-4 rounded-xl">
-                    <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.technique')}</h4>
-                    <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.technique}</p>
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: `${activeTheme.accent}05` }}>
+                    <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.technique')}</h4>
+                    <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.technique}</p>
                   </div>
-                  <div className="bg-[#7BA7C2]/5 p-4 rounded-xl">
-                    <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.grafts')}</h4>
-                    <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.grafts}</p>
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: `${activeTheme.accent}05` }}>
+                    <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.grafts')}</h4>
+                    <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.grafts}</p>
                   </div>
-                  <div className="bg-[#7BA7C2]/5 p-4 rounded-xl">
-                    <h4 className={`${fontSize.xs} ${textColor.light} mb-1`}>{t('beforeAfterSection.caseInfo.result')}</h4>
-                    <p className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark}`}>{currentCase.result}</p>
+                  <div className="p-4 rounded-xl" style={{ backgroundColor: `${activeTheme.accent}05` }}>
+                    <h4 className={`${fontSize.xs} mb-1`} style={{ color: activeTheme.textLight }}>{t('beforeAfterSection.caseInfo.result')}</h4>
+                    <p className={`${fontSize.lg} ${fontWeight.light}`} style={{ color: activeTheme.textPrimary }}>{currentCase.result}</p>
                   </div>
                 </div>
                 
                 {/* Case Description */}
                 <div className="mb-8 flex-grow">
-                  <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-2`}>Fallbeschreibung</h4>
-                  <p className={`${textStyle.bodyText}`}>{t(currentCase.descriptionKey)}</p>
+                  <h4 className={`${fontSize.lg} ${fontWeight.normal} mb-2`} style={{ color: activeTheme.textPrimary }}>Fallbeschreibung</h4>
+                  <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed}`} style={{ color: activeTheme.textSecondary }}>{t(currentCase.descriptionKey)}</p>
                 </div>
                 
                 {/* CTA Button */}
@@ -318,8 +338,11 @@ const BeforeAfterSection: React.FC = () => {
                       key={index}
                       onClick={() => setActiveCase(index)}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === activeCase ? 'bg-[#7BA7C2] scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                        index === activeCase ? 'scale-125' : 'bg-gray-300 hover:bg-gray-400'
                       }`}
+                      style={{ 
+                        backgroundColor: index === activeCase ? activeTheme.accent : undefined
+                      }}
                       aria-label={`Gehe zu Fall ${index + 1}`}
                     />
                   ))}
@@ -332,7 +355,7 @@ const BeforeAfterSection: React.FC = () => {
               {/* Navigation Arrows */}
               <button 
                 onClick={handlePrevCase}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-90 rounded-full p-2 shadow-md -translate-x-6 hover:bg-[#7BA7C2] hover:text-white transition-all"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-90 rounded-full p-2 shadow-md -translate-x-6 hover:text-white transition-all hover:bg-blue-400"
                 aria-label={t('beforeAfterSection.navigation.previous')}
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -340,7 +363,7 @@ const BeforeAfterSection: React.FC = () => {
               
               <button 
                 onClick={handleNextCase}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-90 rounded-full p-2 shadow-md translate-x-6 hover:bg-[#7BA7C2] hover:text-white transition-all"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-40 bg-white bg-opacity-90 rounded-full p-2 shadow-md translate-x-6 hover:text-white transition-all hover:bg-blue-400"
                 aria-label={t('beforeAfterSection.navigation.next')}
               >
                 <ChevronRight className="w-6 h-6" />
@@ -398,9 +421,10 @@ const BeforeAfterSection: React.FC = () => {
                 >
                   <div className="absolute inset-y-0 -left-px w-1 bg-white"></div>
                   <div 
-                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white bg-opacity-90 shadow-md flex items-center justify-center border border-[#7BA7C2]/30"
+                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white bg-opacity-90 shadow-md flex items-center justify-center border"
+                    style={{ borderColor: `${activeTheme.accent}30` }}
                   >
-                    <div className="w-2.5 h-2.5 bg-[#7BA7C2] rounded-full"></div>
+                    <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: activeTheme.accent }}></div>
                   </div>
                 </div>
                 
@@ -421,16 +445,18 @@ const BeforeAfterSection: React.FC = () => {
         
         {/* CTA Section */}
         <div className={`mt-16 relative transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
+          <div className="absolute inset-0 rounded-2xl" style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full -ml-32 -mb-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Überzeugt von unseren Ergebnissen?</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} mb-4 text-center md:text-left`} style={{ color: activeTheme.primary }}>Überzeugt von unseren Ergebnissen?</h3>
+                <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left px-2 md:px-0`} style={{ color: activeTheme.textSecondary }}>
                   Vereinbaren Sie jetzt Ihre kostenlose Beratung und erfahren Sie, wie wir auch Ihnen zu vollerem Haar verhelfen können.
                   Unsere Experten analysieren Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan.
                 </p>

@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, Instagram, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
-import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
+import { useTheme } from '../../utils/ThemeProvider';
+import { textStyle, fontSize, fontWeight } from '../../utils/typography';
 
 const TopBar: React.FC = () => {
   const { t } = useTranslation(['common', 'layout']);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { activeTheme } = useTheme();
 
   // Handle scroll effect
   useEffect(() => {
@@ -35,17 +37,24 @@ const TopBar: React.FC = () => {
       className={`relative z-50 transition-all duration-300 ${
         isScrolled 
           ? 'py-1 shadow-md bg-white/95 backdrop-blur-sm' 
-          : 'py-2 bg-gradient-to-r from-[#EBF3FB] via-[#F5F7FA] to-[#EBF3FB]'
+          : 'py-2'
       }`}
+      style={{ 
+        background: isScrolled 
+          ? undefined 
+          : `linear-gradient(to right, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})`
+      }}
     >
       {/* Subtle animated gradient line */}
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2]/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[1px]" 
+           style={{ background: `linear-gradient(to right, transparent, ${activeTheme.divider}, transparent)` }}></div>
       
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className={`flex flex-col md:flex-row md:justify-between md:items-center ${isMobile ? 'gap-3' : 'gap-0'}`}>
-          {/* Left side - Language switcher */}
-          <div className="flex justify-center md:justify-start">
+          {/* Left side - Language and Theme switchers */}
+          <div className="flex justify-center md:justify-start items-center gap-4">
             <LanguageSwitcher />
+            {/* Theme Switcher entfernt */}
           </div>
           
           {/* Right side - Contact info and social media */}
@@ -56,12 +65,13 @@ const TopBar: React.FC = () => {
                 href="mailto:info@dionhairclinic.de" 
                 className={`group flex items-center justify-center gap-1.5 ${
                   fontSize.sm
-                } ${textColor.medium} transition-colors duration-300 hover:text-[#7BA7C2]`}
+                } transition-colors duration-300 hover:text-gray-700`}
+                style={{ color: activeTheme.textSecondary }}
               >
                 <div className={`flex items-center justify-center w-6 h-6 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
-                } group-hover:bg-[#7BA7C2]/20 transition-colors duration-300`}>
-                  <Mail size={14} className="text-[#7BA7C2]" />
+                  isScrolled ? 'bg-gray-200' : 'bg-white/50'
+                } group-hover:bg-gray-200 transition-colors duration-300`}>
+                  <Mail size={14} className="text-gray-500" />
                 </div>
                 <span className={`${fontWeight.light} tracking-wide`}>info@dionhairclinic.de</span>
               </a>
@@ -70,30 +80,31 @@ const TopBar: React.FC = () => {
                 href="tel:+491702637818" 
                 className={`group flex items-center justify-center gap-1.5 ${
                   fontSize.sm
-                } ${textColor.medium} transition-colors duration-300 hover:text-[#7BA7C2]`}
+                } transition-colors duration-300 hover:text-gray-700`}
+                style={{ color: activeTheme.textSecondary }}
               >
                 <div className={`flex items-center justify-center w-6 h-6 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
-                } group-hover:bg-[#7BA7C2]/20 transition-colors duration-300`}>
-                  <Phone size={14} className="text-[#7BA7C2]" />
+                  isScrolled ? 'bg-gray-200' : 'bg-white/50'
+                } group-hover:bg-gray-200 transition-colors duration-300`}>
+                  <Phone size={14} className="text-gray-500" />
                 </div>
                 <span className={`${fontWeight.light} tracking-wide`}>+49 170 2637818</span>
               </a>
             </div>
             
             {/* Social media icons */}
-            <div className={`flex items-center justify-center ${isMobile ? 'w-full' : 'border-l border-[#7BA7C2]/20 pl-6'} gap-4`}>
+            <div className={`flex items-center justify-center ${isMobile ? 'w-full' : 'border-l border-gray-300 pl-6'} gap-4`}>
               <a 
                 href="#" 
                 className="group relative flex items-center justify-center"
                 aria-label="WhatsApp"
               >
                 <div className={`absolute inset-0 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/5' : 'bg-white/30'
+                  isScrolled ? 'bg-gray-100' : 'bg-white/30'
                 } scale-0 group-hover:scale-100 transition-transform duration-300 ease-out`}></div>
                 <div className={`relative flex items-center justify-center w-8 h-8 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
-                } group-hover:bg-[#7BA7C2]/20 transition-all duration-300 group-hover:scale-110`}>
+                  isScrolled ? 'bg-gray-200' : 'bg-white/50'
+                } group-hover:bg-gray-200 transition-all duration-300 group-hover:scale-110`}>
                   <img 
                     src="/images/whatsapp_icon_header.png" 
                     alt="WhatsApp" 
@@ -108,11 +119,11 @@ const TopBar: React.FC = () => {
                 aria-label="Instagram"
               >
                 <div className={`absolute inset-0 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/5' : 'bg-white/30'
+                  isScrolled ? 'bg-gray-100' : 'bg-white/30'
                 } scale-0 group-hover:scale-100 transition-transform duration-300 ease-out`}></div>
                 <div className={`relative flex items-center justify-center w-8 h-8 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
-                } group-hover:bg-[#7BA7C2]/20 transition-all duration-300 group-hover:scale-110`}>
+                  isScrolled ? 'bg-gray-200' : 'bg-white/50'
+                } group-hover:bg-gray-200 transition-all duration-300 group-hover:scale-110`}>
                   <img 
                     src="/images/instagram_icon_header.png" 
                     alt="Instagram" 
@@ -127,11 +138,11 @@ const TopBar: React.FC = () => {
                 aria-label="TikTok"
               >
                 <div className={`absolute inset-0 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/5' : 'bg-white/30'
+                  isScrolled ? 'bg-gray-100' : 'bg-white/30'
                 } scale-0 group-hover:scale-100 transition-transform duration-300 ease-out`}></div>
                 <div className={`relative flex items-center justify-center w-8 h-8 rounded-full ${
-                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
-                } group-hover:bg-[#7BA7C2]/20 transition-all duration-300 group-hover:scale-110`}>
+                  isScrolled ? 'bg-gray-200' : 'bg-white/50'
+                } group-hover:bg-gray-200 transition-all duration-300 group-hover:scale-110`}>
                   <img 
                     src="/images/tiktok_icon_header.png" 
                     alt="TikTok" 

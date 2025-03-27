@@ -1,8 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { useTheme } from '../../utils/ThemeProvider';
+
+// Hilfsfunktionen für Typografie-Einstellungen
+const getFontWeight = (weightName: string): number => {
+  switch (weightName) {
+    case 'light': return 300;
+    case 'normal': return 400;
+    case 'medium': return 500;
+    case 'semibold': return 600;
+    case 'bold': return 700;
+    default: return 400;
+  }
+};
+
+const getLineHeight = (lineHeightName: string): number => {
+  switch (lineHeightName) {
+    case 'tight': return 1.25;
+    case 'normal': return 1.5;
+    case 'relaxed': return 1.625;
+    case 'loose': return 2;
+    default: return 1.5;
+  }
+};
+
+const getLetterSpacing = (letterSpacingName: string): string => {
+  switch (letterSpacingName) {
+    case 'tighter': return '-0.05em';
+    case 'tight': return '-0.025em';
+    case 'normal': return '0';
+    case 'wide': return '0.025em';
+    case 'wider': return '0.05em';
+    case 'elegant': return '0.1em';
+    default: return '0';
+  }
+};
 
 interface TreatmentArea {
   id: string;
@@ -18,6 +53,34 @@ const TreatmentAreasSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
   const [isVisible, setIsVisible] = useState(false);
   const [hoverCard, setHoverCard] = useState<string | null>(null);
+  const { activeTheme } = useTheme();
+
+  // Typografie- und UI-Elemente-Einstellungen aus dem Theme
+  const typographySettings = activeTheme.typography || {
+    fontSizeH1: '3rem',
+    fontSizeH2: '2.25rem',
+    fontSizeBase: '1rem',
+    fontWeightHeadings: 'light',
+    fontWeightBody: 'normal',
+    fontWeightButtons: 'medium',
+    lineHeightHeadings: 'tight',
+    lineHeightBody: 'relaxed',
+    letterSpacingHeadings: 'wider',
+    letterSpacingButtons: 'wider'
+  };
+
+  const uiElementsSettings = activeTheme.uiElements || {
+    shadowIntensity: 6,
+    shadowBlur: 8,
+    shadowSpread: 0,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    borderStandard: 1,
+    borderHighlighted: 2,
+    borderRadius: 8
+  };
+
+  // Berechne den Schatten-Stil basierend auf den Einstellungen
+  const shadowStyle = `0 ${uiElementsSettings.shadowIntensity}px ${uiElementsSettings.shadowBlur}px ${uiElementsSettings.shadowSpread}px ${uiElementsSettings.shadowColor}`;
 
   // Trigger entrance animations on scroll
   useEffect(() => {
@@ -88,12 +151,15 @@ const TreatmentAreasSection: React.FC = () => {
     <section id="treatment-areas-section" className="py-24 md:py-32 relative overflow-hidden">
       {/* Elegant background with subtle animations */}
       <div className="absolute inset-0 -z-10">
-        {/* Base gradient with more visible blue tint */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EDF5FC] via-[#E5EFF7] to-[#EDF5FC]"></div>
+        {/* Base gradient with theme colors */}
+        <div className="absolute inset-0" 
+             style={{ background: `linear-gradient(to bottom, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})` }}></div>
         
         {/* Animated gradient circles */}
-        <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-[#7BA7C2]/5 to-transparent -top-[400px] -left-[400px] blur-3xl"></div>
-        <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-[#7BA7C2]/5 to-transparent -bottom-[300px] -right-[300px] blur-3xl"></div>
+        <div className="absolute -z-10 w-[800px] h-[800px] rounded-full -top-[400px] -left-[400px] blur-3xl"
+             style={{ background: `linear-gradient(to bottom right, ${activeTheme.accent}05, transparent)` }}></div>
+        <div className="absolute -z-10 w-[600px] h-[600px] rounded-full -bottom-[300px] -right-[300px] blur-3xl"
+             style={{ background: `linear-gradient(to top right, ${activeTheme.accent}05, transparent)` }}></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -107,8 +173,10 @@ const TreatmentAreasSection: React.FC = () => {
         
         {/* Animated gradient lines */}
         <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent"></div>
-          <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent"></div>
+          <div className="absolute top-1/3 left-0 w-full h-[1px]"
+               style={{ background: `linear-gradient(to right, transparent, ${activeTheme.accent}, transparent)` }}></div>
+          <div className="absolute top-2/3 left-0 w-full h-[1px]"
+               style={{ background: `linear-gradient(to right, transparent, ${activeTheme.accent}, transparent)` }}></div>
         </div>
       </div>
       
@@ -116,11 +184,27 @@ const TreatmentAreasSection: React.FC = () => {
         {/* Elegant section header */}
         <div className="text-center mb-20">
           <div className="inline-block relative">
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle} mb-4`} lang="de">{t('treatmentAreasSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mx-auto`}></div>
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
+            <h2 className={`${textStyle.sectionTitle} mb-4`} 
+                style={{ 
+                  color: activeTheme.textPrimary,
+                  fontSize: typographySettings.fontSizeH2,
+                  fontWeight: getFontWeight(typographySettings.fontWeightHeadings),
+                  lineHeight: getLineHeight(typographySettings.lineHeightHeadings),
+                  letterSpacing: getLetterSpacing(typographySettings.letterSpacingHeadings)
+                }}
+                lang="de">{t('treatmentAreasSection.title')}</h2>
+            <div className="w-[90%] max-w-[300px] mx-auto h-px" 
+                 style={{ background: `linear-gradient(to right, transparent, ${activeTheme.divider}, transparent)` }}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`max-w-3xl mx-auto mt-6`}
+             style={{ 
+               color: activeTheme.textSecondary,
+               fontSize: typographySettings.fontSizeBase,
+               fontWeight: getFontWeight(typographySettings.fontWeightBody),
+               lineHeight: getLineHeight(typographySettings.lineHeightBody)
+             }}>
             {t('treatmentAreasSection.subtitle')}
           </p>
         </div>
@@ -134,10 +218,15 @@ const TreatmentAreasSection: React.FC = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* Treatment area card with enhanced styling */}
-              <div className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100/80">
+              <div className="bg-white overflow-hidden border border-gray-100/80"
+                   style={{ 
+                     borderRadius: `${uiElementsSettings.borderRadius}px`,
+                     boxShadow: shadowStyle
+                   }}>
                 {/* Image container with elegant styling */}
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#7BA7C2]/10 to-transparent"></div>
+                  <div className="absolute inset-0" 
+                       style={{ background: `linear-gradient(to bottom, ${activeTheme.accent}10, transparent)` }}></div>
                   <img
                     src={area.imageUrl}
                     alt={area.altText}
@@ -146,7 +235,11 @@ const TreatmentAreasSection: React.FC = () => {
                   />
                   {/* Elegant overlay with title */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 z-20">
-                    <h3 className={`${textStyle.primaryHeading} text-white mb-0`}>{t(area.titleKey)}</h3>
+                    <h3 className={`${textStyle.primaryHeading} text-white mb-0`}
+                        style={{ 
+                          fontWeight: getFontWeight(typographySettings.fontWeightHeadings),
+                          letterSpacing: getLetterSpacing(typographySettings.letterSpacingHeadings)
+                        }}>{t(area.titleKey)}</h3>
                   </div>
                 </div>
                 
@@ -154,7 +247,12 @@ const TreatmentAreasSection: React.FC = () => {
                   <div className="p-6 text-center flex flex-col h-[350px]">
                     <div className="flex-grow">
                       <div className="h-[80px] overflow-hidden">
-                        <p className={`${textStyle.bodyText}`}>
+                        <p style={{ 
+                          color: activeTheme.textSecondary,
+                          fontSize: typographySettings.fontSizeBase,
+                          fontWeight: getFontWeight(typographySettings.fontWeightBody),
+                          lineHeight: getLineHeight(typographySettings.lineHeightBody)
+                        }}>
                           {t(area.descriptionKey)}
                         </p>
                       </div>
@@ -163,10 +261,15 @@ const TreatmentAreasSection: React.FC = () => {
                       <div className="mt-4 h-[120px] space-y-2">
                         {area.features.map((feature, i) => (
                           <div key={i} className="flex items-start gap-2">
-                            <div className="w-4 h-4 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <div className="w-2 h-2 rounded-full bg-[#7BA7C2]"></div>
+                            <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                                 style={{ backgroundColor: `${activeTheme.accent}20` }}>
+                              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: activeTheme.accent }}></div>
                             </div>
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-left`}>
+                            <p className={`${fontSize.sm} text-left`}
+                               style={{ 
+                                 color: activeTheme.textSecondary,
+                                 fontWeight: getFontWeight(typographySettings.fontWeightBody)
+                               }}>
                               {feature}
                             </p>
                           </div>
@@ -176,9 +279,19 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
                     <div className="mt-auto pt-6 pb-2">
-                      <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                      <button 
+                        className={`${buttonStyle.primary} w-full transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
+                        style={{ 
+                          background: `linear-gradient(to right, ${activeTheme.accent}, ${activeTheme.accentDark})`,
+                          color: 'white',
+                          boxShadow: shadowStyle,
+                          borderRadius: `${uiElementsSettings.borderRadius}px`,
+                          fontWeight: getFontWeight(typographySettings.fontWeightButtons),
+                          letterSpacing: getLetterSpacing(typographySettings.letterSpacingButtons)
+                        }}
+                      >
                         <span className={buttonRippleClass}></span>
-                        <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+                        <span className={`relative flex items-center justify-center ${textStyle.button} uppercase`}>
                           {t('buttons.moreInfo', { ns: 'common' })}
                           <ArrowRight className={`${buttonArrowClass} ml-2`} />
                         </span>
@@ -204,11 +317,16 @@ const TreatmentAreasSection: React.FC = () => {
                 onMouseLeave={() => setHoverCard(null)}
               >
                 {/* Treatment area card with glass morphism and hover effects */}
-                <div className={`group relative bg-white backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg transition-all duration-500 h-full ${
+                <div className={`group relative bg-white backdrop-blur-sm overflow-hidden transition-all duration-500 h-full ${
                   isHovered 
-                    ? 'shadow-xl transform -translate-y-2 border-2 border-[#7BA7C2]' 
+                    ? 'shadow-xl transform -translate-y-2 border-2' 
                     : 'border border-gray-100/80 hover:shadow-xl'
-                }`}>
+                }`}
+                     style={{ 
+                       borderColor: isHovered ? activeTheme.accent : undefined,
+                       borderRadius: `${uiElementsSettings.borderRadius}px`,
+                       boxShadow: shadowStyle
+                     }}>
                   {/* Image container with elegant overlay effects */}
                   <div className="relative h-72 overflow-hidden">
                     {/* Gradient overlay that intensifies on hover */}
@@ -217,9 +335,10 @@ const TreatmentAreasSection: React.FC = () => {
                     }`}></div>
                     
                     {/* Subtle color overlay on hover */}
-                    <div className={`absolute inset-0 bg-[#7BA7C2]/20 z-10 transition-opacity duration-500 ${
+                    <div className={`absolute inset-0 z-10 transition-opacity duration-500 ${
                       isHovered ? 'opacity-30' : 'opacity-0'
-                    }`}></div>
+                    }`}
+                         style={{ backgroundColor: `${activeTheme.accent}20` }}></div>
                     
                     {/* Image with zoom effect on hover */}
                     <img
@@ -231,7 +350,12 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Title overlay positioned at bottom of image */}
                     <div className="absolute bottom-0 left-0 right-0 p-8 z-20 transform transition-transform duration-500">
-                      <h3 className={`${textStyle.primaryHeading} text-white mb-0 group-hover:text-[#7BA7C2]/90`}>
+                      <h3 className={`${textStyle.primaryHeading} mb-0 group-hover:text-white`}
+                          style={{ 
+                            color: isHovered ? `${activeTheme.accent}E6` : 'white',
+                            fontWeight: getFontWeight(typographySettings.fontWeightHeadings),
+                            letterSpacing: getLetterSpacing(typographySettings.letterSpacingHeadings)
+                          }}>
                         {t(area.titleKey)}
                       </h3>
                     </div>
@@ -241,7 +365,12 @@ const TreatmentAreasSection: React.FC = () => {
                   <div className="p-8 flex flex-col h-[380px]">
                     <div className="flex-grow">
                       <div className="h-[100px] overflow-hidden">
-                        <p className={`${textStyle.bodyText}`}>
+                        <p style={{ 
+                          color: activeTheme.textSecondary,
+                          fontSize: typographySettings.fontSizeBase,
+                          fontWeight: getFontWeight(typographySettings.fontWeightBody),
+                          lineHeight: getLineHeight(typographySettings.lineHeightBody)
+                        }}>
                           {t(area.descriptionKey)}
                         </p>
                       </div>
@@ -250,10 +379,15 @@ const TreatmentAreasSection: React.FC = () => {
                       <div className="mt-6 h-[120px] space-y-3">
                         {area.features.map((feature, i) => (
                           <div key={i} className="flex items-start gap-3">
-                            <div className="w-5 h-5 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <div className="w-2.5 h-2.5 rounded-full bg-[#7BA7C2]"></div>
+                            <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                                 style={{ backgroundColor: `${activeTheme.accent}20` }}>
+                              <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: activeTheme.accent }}></div>
                             </div>
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-left`}>
+                            <p className={`${fontSize.sm} text-left`}
+                               style={{ 
+                                 color: activeTheme.textSecondary,
+                                 fontWeight: getFontWeight(typographySettings.fontWeightBody)
+                               }}>
                               {feature}
                             </p>
                           </div>
@@ -263,9 +397,19 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
                     <div className="mt-auto pt-6 pb-2">
-                      <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                      <button 
+                        className={`${buttonStyle.primary} w-full transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
+                        style={{ 
+                          background: `linear-gradient(to right, ${activeTheme.accent}, ${activeTheme.accentDark})`,
+                          color: 'white',
+                          boxShadow: shadowStyle,
+                          borderRadius: `${uiElementsSettings.borderRadius}px`,
+                          fontWeight: getFontWeight(typographySettings.fontWeightButtons),
+                          letterSpacing: getLetterSpacing(typographySettings.letterSpacingButtons)
+                        }}
+                      >
                         <span className={buttonRippleClass}></span>
-                        <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+                        <span className={`relative flex items-center justify-center ${textStyle.button} uppercase`}>
                           {t('buttons.moreInfo', { ns: 'common' })}
                           <ArrowRight className={`${buttonArrowClass} ml-2`} />
                         </span>
@@ -275,9 +419,13 @@ const TreatmentAreasSection: React.FC = () => {
                 </div>
                 
                 {/* Decorative shadow element */}
-                <div className={`absolute -z-10 w-full h-full rounded-3xl bg-[#7BA7C2]/10 top-3 left-3 transition-all duration-500 ${
+                <div className={`absolute -z-10 w-full h-full top-3 left-3 transition-all duration-500 ${
                   isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
+                }`}
+                     style={{ 
+                       backgroundColor: `${activeTheme.accent}10`,
+                       borderRadius: `${uiElementsSettings.borderRadius}px`
+                     }}></div>
               </div>
             );
           })}
@@ -285,25 +433,57 @@ const TreatmentAreasSection: React.FC = () => {
         
         {/* Elegant CTA Section */}
         <div className={`mt-20 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
+          <div className="absolute inset-0" 
+               style={{ 
+                 backgroundColor: `${activeTheme.accent}05`,
+                 borderRadius: `${uiElementsSettings.borderRadius}px`
+               }}></div>
+          <div className="relative bg-white/80 backdrop-blur-sm p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden"
+               style={{ 
+                 borderRadius: `${uiElementsSettings.borderRadius}px`,
+                 boxShadow: shadowStyle
+               }}>
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full -ml-32 -mb-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Persönliche Beratung vereinbaren</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <h3 className={`${fontSize.h3} mb-4 text-center md:text-left`}
+                    style={{ 
+                      color: activeTheme.primary,
+                      fontWeight: getFontWeight(typographySettings.fontWeightHeadings),
+                      lineHeight: getLineHeight(typographySettings.lineHeightHeadings),
+                      letterSpacing: getLetterSpacing(typographySettings.letterSpacingHeadings)
+                    }}>Persönliche Beratung vereinbaren</h3>
+                <p className={`text-center md:text-left px-2 md:px-0`}
+                   style={{ 
+                     color: activeTheme.textSecondary,
+                     fontSize: typographySettings.fontSizeBase,
+                     fontWeight: getFontWeight(typographySettings.fontWeightBody),
+                     lineHeight: getLineHeight(typographySettings.lineHeightBody)
+                   }}>
                   Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen 
                   Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan 
                   für Haare, Bart oder Augenbrauen.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                <button 
+                  className={`${buttonStyle.primary} transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
+                  style={{ 
+                    background: `linear-gradient(to right, ${activeTheme.accent}, ${activeTheme.accentDark})`,
+                    color: 'white',
+                    boxShadow: shadowStyle,
+                    borderRadius: `${uiElementsSettings.borderRadius}px`,
+                    fontWeight: getFontWeight(typographySettings.fontWeightButtons),
+                    letterSpacing: getLetterSpacing(typographySettings.letterSpacingButtons)
+                  }}
+                >
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase`}>
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>

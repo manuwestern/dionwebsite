@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { useTheme } from '../../utils/ThemeProvider';
 
 interface Testimonial {
   id: number;
@@ -19,6 +20,7 @@ const TestimonialsSection: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { activeTheme } = useTheme();
 
   // Trigger entrance animations on scroll
   useEffect(() => {
@@ -80,12 +82,15 @@ const TestimonialsSection: React.FC = () => {
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 -z-10">
-        {/* Main gradient background with more visible gray tones */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F2F5F8] via-[#EDF1F5] to-[#F2F5F8]"></div>
+        {/* Main gradient background with theme colors */}
+        <div className="absolute inset-0" 
+             style={{ background: `linear-gradient(to bottom, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})` }}></div>
         
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full -mr-[400px] -mt-[400px] blur-3xl"
+             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full -ml-[300px] -mb-[300px] blur-3xl"
+             style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -102,11 +107,16 @@ const TestimonialsSection: React.FC = () => {
         {/* Section Header with elegant design */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6 relative">
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
+            <h2 className={`${textStyle.sectionTitle}`} 
+                style={{ color: activeTheme.textPrimary }}
+                lang="de">{t('testimonialsSection.title')}</h2>
+            <div className="w-[90%] max-w-[300px] mt-4 mx-auto h-px" 
+                 style={{ background: `linear-gradient(to right, transparent, ${activeTheme.divider}, transparent)` }}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} max-w-3xl mx-auto mt-6 md:tracking-wide`}
+             style={{ color: activeTheme.textSecondary }}>
             {t('testimonialsSection.subtitle')}
           </p>
         </div>
@@ -115,7 +125,10 @@ const TestimonialsSection: React.FC = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={handlePrevTestimonial}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-[#7BA7C2] bg-opacity-80 rounded-full p-2 hover:bg-opacity-100 transition-all shadow-md md:bg-white md:bg-opacity-90 md:p-3 md:shadow-md md:left-0 md:-translate-x-6 md:hover:bg-[#7BA7C2] md:hover:text-white"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 transition-all shadow-md md:bg-white md:bg-opacity-90 md:p-3 md:shadow-md md:left-0 md:-translate-x-6 md:hover:text-white md:hover:bg-blue-400"
+            style={{ 
+              backgroundColor: 'rgba(123, 167, 194, 0.8)'
+            }}
             aria-label={t('testimonialsSection.navigation.previous')}
           >
             <ChevronLeft className="w-5 h-5 text-white md:text-gray-700 md:group-hover:text-white" />
@@ -123,7 +136,10 @@ const TestimonialsSection: React.FC = () => {
           
           <button 
             onClick={handleNextTestimonial}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-[#7BA7C2] bg-opacity-80 rounded-full p-2 hover:bg-opacity-100 transition-all shadow-md md:bg-white md:bg-opacity-90 md:p-3 md:shadow-md md:right-0 md:translate-x-6 md:hover:bg-[#7BA7C2] md:hover:text-white"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full p-2 transition-all shadow-md md:bg-white md:bg-opacity-90 md:p-3 md:shadow-md md:right-0 md:translate-x-6 md:hover:text-white md:hover:bg-blue-400"
+            style={{ 
+              backgroundColor: 'rgba(123, 167, 194, 0.8)'
+            }}
             aria-label={t('testimonialsSection.navigation.next')}
           >
             <ChevronRight className="w-5 h-5 text-white md:text-gray-700 md:group-hover:text-white" />
@@ -134,7 +150,10 @@ const TestimonialsSection: React.FC = () => {
               {/* Patient Image - Left Side */}
               <div className="w-full md:w-2/5 h-[220px] md:h-[400px] relative">
                 {/* Image with overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2]/20 to-transparent z-10"></div>
+                <div className="absolute inset-0 z-10"
+                     style={{ 
+                       background: `linear-gradient(to right, ${activeTheme.accent}20, transparent)` 
+                     }}></div>
                 <img 
                   src={currentTestimonial.image} 
                   alt={`Patient ${t(currentTestimonial.nameKey)}`}
@@ -153,7 +172,7 @@ const TestimonialsSection: React.FC = () => {
               <div className="w-full md:w-3/5 p-6 md:p-10 flex flex-col justify-between h-auto md:h-[400px] relative">
                 {/* Large quote icon */}
                 <div className="absolute top-6 right-6 opacity-5">
-                  <Quote className="w-24 h-24 text-[#7BA7C2]" />
+                  <Quote className="w-24 h-24" style={{ color: activeTheme.accent }} />
                 </div>
                 
                 {/* Desktop Rating Stars - Only visible on desktop */}
@@ -164,7 +183,8 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Quote */}
-                <blockquote className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} italic mb-8 text-center md:text-left relative z-10 leading-relaxed`}>
+                <blockquote className={`${fontSize.lg} ${fontWeight.light} italic mb-8 text-center md:text-left relative z-10 leading-relaxed`}
+                            style={{ color: activeTheme.textPrimary }}>
                   "{t(currentTestimonial.quoteKey)}"
                 </blockquote>
                 
@@ -173,8 +193,10 @@ const TestimonialsSection: React.FC = () => {
                 
                 {/* Patient Info */}
                 <div className="mb-2 text-center md:text-left">
-                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary} mb-1`}>{t(currentTestimonial.nameKey)}</h3>
-                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light}`}>
+                  <h3 className={`${fontSize.h3} ${fontWeight.light} mb-1`}
+                      style={{ color: activeTheme.primary }}>{t(currentTestimonial.nameKey)}</h3>
+                  <p className={`${fontSize.base} ${fontWeight.light}`}
+                     style={{ color: activeTheme.textSecondary }}>
                     {t(currentTestimonial.ageKey)}, {t(currentTestimonial.treatmentKey)}
                   </p>
                 </div>
@@ -186,8 +208,11 @@ const TestimonialsSection: React.FC = () => {
                       key={index}
                       onClick={() => setActiveTestimonial(index)}
                       className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                        index === activeTestimonial ? 'bg-[#7BA7C2] scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                        index === activeTestimonial ? 'scale-125' : 'bg-gray-300 hover:bg-gray-400'
                       }`}
+                      style={{ 
+                        backgroundColor: index === activeTestimonial ? activeTheme.accent : undefined
+                      }}
                       aria-label={`Gehe zu Testimonial ${index + 1}`}
                     />
                   ))}
@@ -199,16 +224,20 @@ const TestimonialsSection: React.FC = () => {
         
         {/* CTA Section */}
         <div className={`mt-16 relative transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
+          <div className="absolute inset-0 rounded-2xl" style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full -ml-32 -mb-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Werden Sie unser nächster Erfolgsfall</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} mb-4 text-center md:text-left`}
+                    style={{ color: activeTheme.primary }}>Werden Sie unser nächster Erfolgsfall</h3>
+                <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} text-center md:text-left px-2 md:px-0`}
+                   style={{ color: activeTheme.textSecondary }}>
                   Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation Ihr Leben verändern kann.
                   Vereinbaren Sie jetzt Ihre kostenlose Beratung und lassen Sie sich von unseren Experten beraten.
                 </p>

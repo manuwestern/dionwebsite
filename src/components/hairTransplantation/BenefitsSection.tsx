@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Users, Zap, Compass, UserCheck, Clock, MapPin, ArrowRight } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { useTheme } from '../../utils/ThemeProvider';
 
 interface BenefitCard {
   title: string;
@@ -13,6 +14,7 @@ interface BenefitCard {
 const BenefitsSection: React.FC = () => {
   const { t } = useTranslation(['hairTransplantation', 'common']);
   const [hoverCard, setHoverCard] = useState<number | null>(null);
+  const { activeTheme } = useTheme();
 
   // Icons for each benefit
   const benefitIcons = [
@@ -36,19 +38,25 @@ const BenefitsSection: React.FC = () => {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
-      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -left-[300px] blur-3xl"></div>
+      <div className="absolute -z-10 w-full h-full inset-0" 
+           style={{ background: `linear-gradient(to bottom, ${activeTheme.backgroundLight}, ${activeTheme.backgroundDark}, ${activeTheme.backgroundLight})` }}></div>
+      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full -top-[400px] -right-[400px] blur-3xl"
+           style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full -bottom-[300px] -left-[300px] blur-3xl"
+           style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header with elegant design */}
         <div className="text-center mb-20">
           <div className="inline-block mb-6 relative">
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('benefitsSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
+            <div className="w-[90%] max-w-[300px] mt-4 mx-auto h-px" 
+                 style={{ background: `linear-gradient(to right, transparent, ${activeTheme.accent}, transparent)` }}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${fontSize.lg} ${fontWeight.normal} max-w-3xl mx-auto mt-6`}
+             style={{ color: activeTheme.textSecondary }}>
             {t('benefitsSection.subtitle')}
           </p>
         </div>
@@ -68,13 +76,19 @@ const BenefitsSection: React.FC = () => {
                 {/* Card with glass morphism effect */}
                 <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full ${
                   isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
-                    : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                }`}>
+                    ? 'shadow-xl transform -translate-y-1 border-2' 
+                    : 'border border-gray-100/80 hover:shadow-xl'
+                }`}
+                style={{ 
+                  borderColor: isHovered 
+                    ? `${activeTheme.accent}80` 
+                    : isHovered ? undefined : `${activeTheme.accent}30`
+                }}>
                   {/* Header with icon and title side by side */}
                   <div className="relative h-20 overflow-hidden flex items-center">
                     {/* Gradient background */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/80"></div>
+                    <div className="absolute inset-0" 
+                         style={{ background: `linear-gradient(to right, ${activeTheme.accent}, ${activeTheme.accent}80)` }}></div>
                     
                     {/* Decorative circles */}
                     <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/10 -mr-20 -mt-20"></div>
@@ -92,30 +106,31 @@ const BenefitsSection: React.FC = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
+                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} text-white drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
                   </div>
                   
                   {/* Content with subtle gradient */}
                   <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-auto min-h-[180px] md:h-[200px] flex flex-col">
                     {/* Description with perfect typography */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow text-center md:text-left`}>
+                    <p className={`${fontSize.sm} ${fontWeight.light} ${lineHeight.relaxed} flex-grow text-center md:text-left`}
+                       style={{ color: activeTheme.textSecondary }}>
                       {card.description}
                     </p>
                     
                     {/* Subtle indicator */}
-                    <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} ${textColor.primary} mt-4 transition-opacity duration-300 ${
+                    <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} mt-4 transition-opacity duration-300 ${
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}>
-                      <span className={`mr-1 ${fontWeight.light}`}>Mehr erfahren</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <span className={`mr-1 ${fontWeight.light}`} style={{ color: activeTheme.accent }}>Mehr erfahren</span>
+                      <ArrowRight className="w-3 h-3" style={{ color: activeTheme.accent }} />
                     </div>
                   </div>
                 </div>
                 
                 {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
+                <div className={`absolute -z-10 w-full h-full rounded-2xl top-2 left-2 transition-all duration-500 ${
                   isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
+                }`} style={{ backgroundColor: `${activeTheme.accent}10` }}></div>
               </div>
             );
           })}
@@ -123,16 +138,20 @@ const BenefitsSection: React.FC = () => {
 
         {/* Elegant CTA Section */}
         <div className="mt-20 relative">
-          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
+          <div className="absolute inset-0 rounded-2xl" style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full -ml-32 -mb-32 blur-xl"
+                 style={{ backgroundColor: `${activeTheme.accent}05` }}></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Persönliche Beratung vereinbaren</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} mb-4 text-center md:text-left`}
+                    style={{ color: activeTheme.accent }}>Persönliche Beratung vereinbaren</h3>
+                <p className={`${fontSize.base} ${fontWeight.normal} text-center md:text-left px-2 md:px-0`}
+                   style={{ color: activeTheme.textSecondary }}>
                   Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen 
                   Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan.
                 </p>
