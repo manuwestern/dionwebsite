@@ -87,7 +87,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* Search and filter with elegant design */}
-        <div className={`max-w-4xl mx-auto mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`w-full mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative mb-8">
             <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
               <Search className="h-5 w-5 text-[#7BA7C2]" />
@@ -134,7 +134,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* FAQ Accordion with elegant design */}
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`w-full transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {filteredFAQs.length > 0 ? (
             <div className="space-y-5">
               {filteredFAQs.map((faq, index) => (
@@ -211,7 +211,7 @@ const FAQSection: React.FC = () => {
         </div>
         
         {/* Still have questions with elegant design */}
-        <div className={`max-w-4xl mx-auto mt-16 relative transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`w-full mt-16 relative transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
