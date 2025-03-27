@@ -32,7 +32,7 @@ const CareSection: React.FC = () => {
         {/* Header with gradient underline */}
         <div className="text-center mb-16">
           <div className="inline-block mb-3">
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">Dion Hair Clinic Care<span className={`${textColor.primary}`}>+</span></h2>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('careSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-2 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
@@ -49,7 +49,7 @@ const CareSection: React.FC = () => {
                 {/* App header */}
                 <div className="bg-[#7BA7C2] text-white p-4">
                   <div className="flex items-center justify-between">
-                    <h3 className={`${fontSize.lg} ${fontWeight.light}`}>Dion Care+</h3>
+                    <h3 className={`${fontSize.lg} ${fontWeight.light}`}>Dion App</h3>
                     <Shield className="w-5 h-5" />
                   </div>
                 </div>

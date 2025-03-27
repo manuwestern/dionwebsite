@@ -60,11 +60,7 @@ const DPISection: React.FC = () => {
           <div className="md:w-1/2">
             {/* Mobile-optimized layout with center alignment */}
             <div className="flex flex-col items-center md:items-start">
-              <div className="mb-6">
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white rounded-full text-sm font-medium shadow-md">
-                  {t('dpiSection.premiumOption')}
-                </div>
-              </div>
+              {/* Premium badge removed */}
               
               <h2 className={`${textStyle.sectionTitle} mb-2 text-center md:text-left`}>
                 {t('dpiSection.title')}
@@ -79,15 +75,7 @@ const DPISection: React.FC = () => {
                 {t('dpiSection.description')}
               </p>
               
-              <div className="flex justify-center md:justify-start w-full">
-                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                  <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
-                    {t('dpiSection.learnMore')}
-                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
-                  </span>
-                </button>
-              </div>
+              {/* Learn more button removed */}
             </div>
           </div>
           
@@ -98,15 +86,7 @@ const DPISection: React.FC = () => {
               <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
               
-              {/* Premium badge */}
-              <div className="absolute top-6 right-6">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-[#7BA7C2]/20 rounded-full blur-md"></div>
-                  <div className="relative z-10 bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm">
-                    {t('dpiSection.additionalFee')}
-                  </div>
-                </div>
-              </div>
+              {/* Additional fee badge removed */}
               
               <div className="relative z-10">
                 <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>{t('dpiSection.benefitsTitle')}</h3>
