@@ -100,13 +100,7 @@ const BenefitsSection: React.FC = () => {
                       {card.description}
                     </p>
                     
-                    {/* Subtle indicator */}
-                    <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} ${textColor.primary} mt-4 transition-opacity duration-300 ${
-                      isHovered ? 'opacity-100' : 'opacity-0'
-                    }`}>
-                      <span className={`mr-1 ${fontWeight.light}`}>{t('benefitsSection.learnMore')}</span>
-                      <ArrowRight className="w-3 h-3" />
-                    </div>
+                    {/* Subtle indicator removed as requested */}
                   </div>
                 </div>
                 
