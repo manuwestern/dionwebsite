@@ -1,29 +1,144 @@
-import React from 'react';
-import { Phone, Mail, Instagram, Apple as WhatsApp, BookText as TikTok } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Phone, Mail, Instagram, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
 
 const TopBar: React.FC = () => {
   const { t } = useTranslation(['common', 'layout']);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    // Check if mobile on mount and resize
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleResize, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <div className="bg-gray-100 py-2">
+    <div 
+      className={`relative z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'py-1 shadow-md bg-white/95 backdrop-blur-sm' 
+          : 'py-2 bg-gradient-to-r from-[#EBF3FB] via-[#F5F7FA] to-[#EBF3FB]'
+      }`}
+    >
+      {/* Subtle animated gradient line */}
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2]/30 to-transparent"></div>
+      
       <div className="w-full max-w-7xl mx-auto px-4">
-        <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:items-center">
-          <LanguageSwitcher />
-          <div className="flex flex-col items-center gap-4 md:flex-row md:items-center md:gap-6 text-sm">
-            <div className="flex flex-row items-center justify-center gap-4 md:gap-6">
-              <a href="mailto:info@dionhairclinic.de" className="flex items-center justify-center gap-1 hover:text-gray-600">
-                <Mail size={16} /> info@dionhairclinic.de
+        <div className={`flex flex-col md:flex-row md:justify-between md:items-center ${isMobile ? 'gap-3' : 'gap-0'}`}>
+          {/* Left side - Language switcher */}
+          <div className="flex justify-center md:justify-start">
+            <LanguageSwitcher />
+          </div>
+          
+          {/* Right side - Contact info and social media */}
+          <div className={`flex ${isMobile ? 'flex-col gap-3' : 'flex-row items-center gap-8'}`}>
+            {/* Contact information */}
+            <div className={`flex ${isMobile ? 'flex-col gap-2' : 'flex-row items-center gap-6'}`}>
+              <a 
+                href="mailto:info@dionhairclinic.de" 
+                className={`group flex items-center justify-center gap-1.5 ${
+                  fontSize.sm
+                } ${textColor.medium} transition-colors duration-300 hover:text-[#7BA7C2]`}
+              >
+                <div className={`flex items-center justify-center w-6 h-6 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
+                } group-hover:bg-[#7BA7C2]/20 transition-colors duration-300`}>
+                  <Mail size={14} className="text-[#7BA7C2]" />
+                </div>
+                <span className={`${fontWeight.light} tracking-wide`}>info@dionhairclinic.de</span>
               </a>
-              <a href="tel:+491702637818" className="flex items-center justify-center gap-1 hover:text-gray-600">
-                <Phone size={16} /> +49 170 2637818
+              
+              <a 
+                href="tel:+491702637818" 
+                className={`group flex items-center justify-center gap-1.5 ${
+                  fontSize.sm
+                } ${textColor.medium} transition-colors duration-300 hover:text-[#7BA7C2]`}
+              >
+                <div className={`flex items-center justify-center w-6 h-6 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
+                } group-hover:bg-[#7BA7C2]/20 transition-colors duration-300`}>
+                  <Phone size={14} className="text-[#7BA7C2]" />
+                </div>
+                <span className={`${fontWeight.light} tracking-wide`}>+49 170 2637818</span>
               </a>
             </div>
-            <div className="flex items-center justify-center w-full md:w-auto md:justify-start gap-3">
-              <a href="#" className="hover:text-gray-600"><WhatsApp size={20} /></a>
-              <a href="#" className="hover:text-gray-600"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-gray-600"><TikTok size={20} /></a>
+            
+            {/* Social media icons */}
+            <div className={`flex items-center justify-center ${isMobile ? 'w-full' : 'border-l border-[#7BA7C2]/20 pl-6'} gap-4`}>
+              <a 
+                href="#" 
+                className="group relative flex items-center justify-center"
+                aria-label="WhatsApp"
+              >
+                <div className={`absolute inset-0 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/5' : 'bg-white/30'
+                } scale-0 group-hover:scale-100 transition-transform duration-300 ease-out`}></div>
+                <div className={`relative flex items-center justify-center w-8 h-8 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
+                } group-hover:bg-[#7BA7C2]/20 transition-all duration-300 group-hover:scale-110`}>
+                  <img 
+                    src="/images/whatsapp_icon_header.png" 
+                    alt="WhatsApp" 
+                    className="w-4 h-4 object-contain"
+                  />
+                </div>
+              </a>
+              
+              <a 
+                href="#" 
+                className="group relative flex items-center justify-center"
+                aria-label="Instagram"
+              >
+                <div className={`absolute inset-0 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/5' : 'bg-white/30'
+                } scale-0 group-hover:scale-100 transition-transform duration-300 ease-out`}></div>
+                <div className={`relative flex items-center justify-center w-8 h-8 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
+                } group-hover:bg-[#7BA7C2]/20 transition-all duration-300 group-hover:scale-110`}>
+                  <img 
+                    src="/images/instagram_icon_header.png" 
+                    alt="Instagram" 
+                    className="w-4 h-4 object-contain"
+                  />
+                </div>
+              </a>
+              
+              <a 
+                href="#" 
+                className="group relative flex items-center justify-center"
+                aria-label="TikTok"
+              >
+                <div className={`absolute inset-0 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/5' : 'bg-white/30'
+                } scale-0 group-hover:scale-100 transition-transform duration-300 ease-out`}></div>
+                <div className={`relative flex items-center justify-center w-8 h-8 rounded-full ${
+                  isScrolled ? 'bg-[#7BA7C2]/10' : 'bg-white/50'
+                } group-hover:bg-[#7BA7C2]/20 transition-all duration-300 group-hover:scale-110`}>
+                  <img 
+                    src="/images/tiktok_icon_header.png" 
+                    alt="TikTok" 
+                    className="w-4 h-4 object-contain"
+                  />
+                </div>
+              </a>
             </div>
           </div>
         </div>
