@@ -3,8 +3,7 @@ import { ArrowUp } from 'lucide-react';
 import HeroSection from '../components/home/HeroSection';
 import BenefitsSection from '../components/home/BenefitsSection';
 import TreatmentAreasSection from '../components/home/TreatmentAreasSection';
-import BeforeAfterSection from '../components/home/BeforeAfterSection';
-import TestimonialsSection from '../components/home/TestimonialsSection';
+import TestimonialsSection from '../components/hairTransplantation/TestimonialsSection';
 import FAQSection from '../components/home/FAQSection';
 import ContactSection from '../components/layout/ContactSection';
 
@@ -139,10 +138,6 @@ const HomePage: React.FC = () => {
       
       <SectionWrapper type="light">
         <BenefitsSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="medium">
-        <BeforeAfterSection />
       </SectionWrapper>
       
       <SectionWrapper type="accent">
