@@ -78,7 +78,7 @@ const HeroSection: React.FC = () => {
             <div className="space-y-6 mt-4">
               {/* Title with elegant animation and perfect typography */}
               <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
-                <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto`} lang="de">
+              <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto whitespace-pre-line`} lang="de">
                   {t('heroSection.title')}
                 </h1>
                 
@@ -113,7 +113,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Image section with enhanced visual effects */}
-            <div className="mt-10 mb-0 relative">
+            <div className="mt-10 -mb-10 relative">
               {/* Decorative elements */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[300px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
@@ -132,9 +132,9 @@ const HeroSection: React.FC = () => {
                   <img 
                     src="/images/Augenbrauen_Model.png"
                     alt="Dion Hair Clinic - Augenbrauentransplantation"
-                    className="w-auto h-auto max-h-[500px] object-contain relative z-10"
-                    width="400"
-                    height="600"
+                    className="w-auto h-auto max-h-[500px] object-contain relative z-10 scale-125"
+                    width="450"
+                    height="650"
                   />
                 </div>
               </div>
@@ -154,7 +154,7 @@ const HeroSection: React.FC = () => {
           <div className="relative z-10 w-[50%] flex flex-col justify-center h-full pt-6 pr-12">
             {/* Title with elegant animation and perfect typography */}
             <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
-              <h1 className={`${textStyle.heroTitle} text-left leading-tight break-words hyphens-auto`} lang="de">
+              <h1 className={`${textStyle.heroTitle} text-left leading-tight break-words hyphens-auto whitespace-pre-line`} lang="de">
                 {t('heroSection.title')}
               </h1>
               
@@ -207,7 +207,7 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Image section with enhanced visual effects */}
-          <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-end justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="relative">
               {/* Enhanced glow effect */}
               <div className="absolute -inset-12 bg-gradient-to-tr from-[#7BA7C2]/10 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
@@ -220,8 +220,8 @@ const HeroSection: React.FC = () => {
               <img 
                 src="/images/Augenbrauen_Model.png"
                 alt="Augenbrauentransplantation Experte - Modernste Techniken für natürliche Ergebnisse"
-                className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10"
-                width="600"
+                className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10 scale-125"
+                width="650"
                 height="800"
               />
             </div>
