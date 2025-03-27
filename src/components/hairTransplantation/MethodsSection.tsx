@@ -42,7 +42,7 @@ const MethodsSection: React.FC = () => {
                 onMouseLeave={() => setHoverMethod(null)}
               >
                 {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-visible shadow-lg transition-all duration-500 ${
+                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${
                   isHovered 
                     ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
                     : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
