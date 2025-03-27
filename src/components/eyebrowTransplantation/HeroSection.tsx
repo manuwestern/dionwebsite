@@ -151,7 +151,7 @@ const HeroSection: React.FC = () => {
           {/* No logo in desktop version as per original design */}
           
           {/* Text content with refined typography and animations */}
-          <div className="relative z-10 w-[55%] flex flex-col justify-center h-full pt-6">
+          <div className="relative z-10 w-[50%] flex flex-col justify-center h-full pt-6 pr-12">
             {/* Title with elegant animation and perfect typography */}
             <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
               <h1 className={`${textStyle.heroTitle} text-left leading-tight break-words hyphens-auto`} lang="de">
