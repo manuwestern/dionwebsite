@@ -216,31 +216,87 @@
   },
   "faqSection": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Answers to your most important questions",
+    "subtitle": "Answers to your most important questions - Find detailed information about our treatments for hair transplantation, eyebrows, and beard",
     "faqs": [
       {
+        "question": "Which method is best suited for my hair transplantation?",
+        "answer": "The best method depends on various factors, such as the extent of hair loss, the quality of donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you. We offer both the Sapphire-FUE technique and the DHI technique, each with specific advantages.",
+        "category": "hair"
+      },
+      {
         "question": "How long does a hair transplant take?",
-        "answer": "The duration of a hair transplant depends on the number of grafts to be transplanted. Typically, the procedure takes between 4 and 8 hours. For more extensive transplants, the treatment may be divided over two days to achieve optimal results."
+        "answer": "The duration of a hair transplant depends on the number of grafts to be transplanted. Typically, the procedure takes between 4 and 8 hours. For more extensive transplants, the treatment may be divided over two days to achieve optimal results.",
+        "category": "hair"
       },
       {
         "question": "Is a hair transplant painful?",
-        "answer": "No, hair transplantation is performed under local anesthesia, so you won't feel any pain during the procedure. After the procedure, mild discomfort may occur, but this can be well controlled with pain medication. Most patients report minimal discomfort."
+        "answer": "No, hair transplantation is performed under local anesthesia, so you won't feel any pain during the procedure. After the procedure, mild discomfort may occur, but this can be well controlled with pain medication. Most patients report minimal discomfort.",
+        "category": "general"
       },
       {
         "question": "How long does it take to see results?",
-        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months, when the transplanted hair has fully grown and reached its natural density."
+        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months, when the transplanted hair has fully grown and reached its natural density. This applies to all our transplantation types (hair, beard, and eyebrows).",
+        "category": "general"
       },
       {
         "question": "Are the results of a hair transplant permanent?",
-        "answer": "Yes, the transplanted hair follicles come from areas that are not genetically susceptible to hair loss. These hairs retain their properties and typically do not fall out. They grow like normal hair for a lifetime and can be cut, colored, and styled."
+        "answer": "Yes, the transplanted hair follicles come from areas that are not genetically susceptible to hair loss. These hairs retain their properties and typically do not fall out. They grow like normal hair for a lifetime and can be cut, colored, and styled.",
+        "category": "hair"
       },
       {
         "question": "How much does a hair transplant cost?",
-        "answer": "Costs vary depending on the extent of the transplant and the technique chosen. At Dion Hair Clinic, we offer transparent pricing based on the number of grafts needed. For an accurate cost estimate, we recommend a free consultation where we can analyze your individual case."
+        "answer": "Costs vary depending on the extent of the transplant and the technique chosen. At Dion Hair Clinic, we offer transparent pricing based on the number of grafts needed. For an accurate cost estimate, we recommend a free consultation where we can analyze your individual case.",
+        "category": "costs"
       },
       {
-        "question": "What hair transplant techniques do you offer?",
-        "answer": "We offer various modern techniques, including FUE (Follicular Unit Extraction), Sapphire-FUE, and DHI (Direct Hair Implantation). The most suitable method for you will be recommended based on your hair type, the extent of hair loss, and your personal goals."
+        "question": "How does a beard transplant differ from a hair transplant?",
+        "answer": "The basic technique is similar, but a beard transplant requires special care in the placement and angle of the hair follicles to simulate natural beard growth. Additionally, the density and direction of the beard hairs must be precisely adapted to your facial shape and desired beard style. The healing time is usually shorter than for a scalp hair transplant.",
+        "category": "beard"
+      },
+      {
+        "question": "How natural does an eyebrow transplant look?",
+        "answer": "When properly performed, the results of an eyebrow transplant are very natural. Our specialists pay particular attention to the correct angle and direction of the hair follicles to mimic the natural growth pattern of eyebrows. The transplanted hairs can be trimmed and styled like normal eyebrows after the procedure.",
+        "category": "eyebrows"
+      },
+      {
+        "question": "How long is the recovery period after a transplant?",
+        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 7-10 days. Complete healing of the scalp takes about 2 weeks. For beard and eyebrow transplants, the healing time may be slightly shorter.",
+        "category": "aftercare"
+      },
+      {
+        "question": "Are there risks or side effects with the treatments?",
+        "answer": "As with any medical procedure, there are certain risks with our transplants. However, these are minimal when properly performed. Possible side effects include temporary swelling, redness, slight bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare.",
+        "category": "general"
+      },
+      {
+        "question": "What does aftercare look like following a transplant?",
+        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, we provide you with detailed instructions for caring for the treated areas. This includes special shampoos, sleeping positions, and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and your questions are answered at any time.",
+        "category": "aftercare"
+      },
+      {
+        "question": "Can I get a beard transplant if I have little beard growth?",
+        "answer": "Yes, a beard transplant is also possible for men with little or no natural beard growth. In this case, the hair follicles are taken from suitable donor areas on the head and transplanted into the desired areas of the face. The result is a natural-looking beard that can be designed according to your wishes.",
+        "category": "beard"
+      },
+      {
+        "question": "How long do the results of an eyebrow transplant last?",
+        "answer": "The results of an eyebrow transplant are permanent. The transplanted hair follicles retain their original properties, which means they will grow like head hair. Therefore, they need to be trimmed regularly to maintain the desired length and shape. With proper care, you can benefit from full, natural-looking eyebrows for a lifetime.",
+        "category": "eyebrows"
+      },
+      {
+        "question": "What additional treatments do you offer to support hair growth?",
+        "answer": "In addition to transplants, we offer complementary treatments such as PRP (Platelet-Rich Plasma) therapy, mesotherapy, and medicinal treatments. These can stimulate hair growth, slow down existing hair loss, and improve the quality of existing hair. In our holistic concept, we often combine these treatments with transplants for optimal results.",
+        "category": "general"
+      },
+      {
+        "question": "From what age can I have a hair transplant?",
+        "answer": "In general, we recommend having a hair transplant from the age of 25, as the hair loss pattern can still change until then. In some cases, however, treatment may also be useful for younger patients. The crucial factor is that the hair loss is stable and a clear pattern is recognizable.",
+        "category": "hair"
+      },
+      {
+        "question": "How realistic are the results of your transplants?",
+        "answer": "Our modern transplantation techniques enable very natural-looking results. The transplanted hair grows like your own hair and can be cut, colored, and styled normally. Crucial for a natural result are the experience of our team, the correct placement of the hair follicles, and consideration of your individual facial features and natural hair growth pattern.",
+        "category": "general"
       }
     ]
   },

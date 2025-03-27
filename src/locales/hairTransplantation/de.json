@@ -1,12 +1,12 @@
 {
   "heroSection": {
     "title": "Haartransplantation",
-    "subtitle": "Modernste Techniken für natürliche Ergebnisse",
+    "subtitle": "Modernste Techniken für natürliche Ergebnisse - Entdecken Sie unsere innovativen Verfahren für dauerhaft volles und ästhetisch ansprechendes Haar",
     "welcomeText": "Unsere Haartransplantationen werden mit modernsten Techniken durchgeführt, um Ihnen natürlich aussehende und dauerhafte Ergebnisse zu garantieren. Wir bieten verschiedene Verfahren an, die individuell auf Ihre Bedürfnisse abgestimmt werden."
   },
   "methodsSection": {
     "title": "Unsere Haartransplantationstechniken",
-    "subtitle": "Spezialisierte Techniken für optimale Ergebnisse",
+    "subtitle": "Spezialisierte Techniken für optimale Ergebnisse - Vergleichen Sie unsere innovativen Methoden und finden Sie die perfekte Lösung für Ihre individuellen Bedürfnisse",
     "methods": [
       {
         "title": "Saphir-FUE-Technik",
@@ -94,7 +94,7 @@
   },
   "benefitsSection": {
     "title": "Warum Dion Hair Clinic?",
-    "subtitle": "Die Vorteile einer Haartransplantation bei uns",
+    "subtitle": "Die Vorteile einer Haartransplantation bei uns - Erfahren Sie, warum unsere Klinik die erste Wahl für anspruchsvolle Patienten ist, die Wert auf Qualität und Expertise legen",
     "cards": [
       {
         "title": "Erfahrenes Expertenteam",
@@ -124,7 +124,7 @@
   },
   "processSection": {
     "title": "Der Behandlungsprozess",
-    "subtitle": "Ihr Weg zu neuem Haar",
+    "subtitle": "Ihr Weg zu neuem Haar - Transparente Darstellung aller Schritte von der ersten Planung bis zum endgültigen Ergebnis Ihrer Haartransplantation",
     "steps": [
       {
         "title": "Planung",
@@ -146,7 +146,7 @@
   },
   "testimonialsSection": {
     "title": "Erfolgsgeschichten unserer Patienten",
-    "subtitle": "Erfahrungsberichte und Ergebnisse",
+    "subtitle": "Erfahrungsberichte und Ergebnisse - Lesen Sie authentische Bewertungen von zufriedenen Patienten, die ihre Haartransplantation bei uns durchgeführt haben",
     "intro": "Unsere Patienten berichten von ihren Erfahrungen und teilen ihre Ergebnisse nach einer Haartransplantation in der Dion Hair Clinic.",
     "testimonials": [
       {
@@ -189,7 +189,7 @@
   },
   "careSection": {
     "title": "Dion Hair Clinic Care+",
-    "subtitle": "Ihr persönlicher Begleiter für eine optimale Vor- und Nachsorge",
+    "subtitle": "Ihr persönlicher Begleiter für eine optimale Vor- und Nachsorge - Unsere innovative App unterstützt Sie durch den gesamten Behandlungsprozess mit personalisierten Anleitungen und Erinnerungen",
     "description": "Mit Dion Hair Clinic Care+ bieten wir Ihnen eine umfassende Smartphone-App, die Sie durch den gesamten Prozess Ihrer Haartransplantation führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.",
     "subheading": "Ihr persönlicher Begleiter für den gesamten Behandlungsprozess",
     "features": [
@@ -236,7 +236,7 @@
   },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Antworten auf Ihre Fragen zur Haartransplantation",
+    "subtitle": "Antworten auf Ihre Fragen zur Haartransplantation - Umfassende Informationen zu Ablauf, Kosten, Risiken und Ergebnissen unserer Behandlungen",
     "faqs": [
       {
         "question": "Welche Methode ist für mich am besten geeignet?",
