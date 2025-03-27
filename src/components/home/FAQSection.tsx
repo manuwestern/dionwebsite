@@ -57,8 +57,8 @@ const FAQSection: React.FC = () => {
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 -z-10">
-        {/* Main gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+        {/* Main gradient background with more visible blue tones */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EBF3FB] via-[#E5EFF7] to-[#EBF3FB]"></div>
         
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>

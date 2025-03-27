@@ -61,8 +61,8 @@ const HolisticConceptSection: React.FC = () => {
     <section id="holistic-concept-section" className="py-20 md:py-28 relative overflow-hidden">
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 -z-10">
-        {/* Main gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+        {/* Main gradient background with more visible blue-gray tones */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EDF5FC] via-[#E5EFF7] to-[#EDF5FC]"></div>
         
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>

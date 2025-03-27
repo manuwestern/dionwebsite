@@ -60,8 +60,8 @@ const BenefitsSection: React.FC = () => {
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+      {/* Decorative elements with more visible light gray background */}
+      <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-[#F5F7FA] via-[#EBEEF2] to-[#F5F7FA]"></div>
       <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
       <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -left-[300px] blur-3xl"></div>
       
@@ -120,10 +120,10 @@ const BenefitsSection: React.FC = () => {
                     <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
                   </div>
                   
-                  {/* Content with subtle gradient */}
-                  <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-auto min-h-[180px] md:h-[200px] flex flex-col">
+                  {/* Content with subtle gradient - removed fixed height to ensure text is fully visible */}
+                  <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-auto flex flex-col">
                     {/* Description with perfect typography */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow text-center md:text-left`}>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
                       {card.description}
                     </p>
                     

@@ -103,8 +103,8 @@ const BeforeAfterSection: React.FC = () => {
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 -z-10">
-        {/* Main gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+        {/* Main gradient background with more visible gray tones */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F2F5F8] via-[#EDF1F5] to-[#F2F5F8]"></div>
         
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>

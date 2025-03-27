@@ -88,8 +88,8 @@ const TreatmentAreasSection: React.FC = () => {
     <section id="treatment-areas-section" className="py-24 md:py-32 relative overflow-hidden">
       {/* Elegant background with subtle animations */}
       <div className="absolute inset-0 -z-10">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/80 to-white"></div>
+        {/* Base gradient with more visible blue tint */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EDF5FC] via-[#E5EFF7] to-[#EDF5FC]"></div>
         
         {/* Animated gradient circles */}
         <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-[#7BA7C2]/5 to-transparent -top-[400px] -left-[400px] blur-3xl"></div>
@@ -283,33 +283,29 @@ const TreatmentAreasSection: React.FC = () => {
           })}
         </div>
         
-        {/* Additional treatment option - Hair Loss Therapy */}
+        {/* Elegant CTA Section */}
         <div className={`mt-20 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="relative bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] rounded-2xl p-8 md:p-10 shadow-xl overflow-hidden">
+          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
+          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 -mr-32 -mt-32"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/10 -ml-32 -mb-32"></div>
-            
-            {/* Animated particles */}
-            <div className="absolute top-1/4 right-1/4 w-1 h-1 rounded-full bg-white/70 animate-pulse"></div>
-            <div className="absolute bottom-1/3 left-1/3 w-1 h-1 rounded-full bg-white/70 animate-pulse-slow"></div>
-            <div className="absolute top-1/2 right-1/2 w-1 h-1 rounded-full bg-white/70 animate-pulse-slower"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} text-white mb-4 text-center md:text-left`}>
-                  {t('treatmentAreasSection.areas.3.title')}
-                </h3>
-                <p className={`${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} text-white/90 text-center md:text-left`}>
-                  {t('treatmentAreasSection.areas.3.description')}
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>Persönliche Beratung vereinbaren</h3>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                  Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen 
+                  Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan 
+                  für Haare, Bart oder Augenbrauen.
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className="group relative inline-flex items-center justify-center overflow-hidden transition-all duration-300 shadow-lg px-8 py-4 rounded-xl bg-white text-[#7BA7C2]">
-                  <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#7BA7C2] rounded-full group-hover:w-80 group-hover:h-80 opacity-10"></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-wider text-[#7BA7C2]`}>
-                    {t('buttons.moreInfo', { ns: 'common' })}
-                    <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                  <span className={buttonRippleClass}></span>
+                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                    {t('buttons.consultation', { ns: 'common' })}
+                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
                 </button>
               </div>

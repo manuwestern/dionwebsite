@@ -57,8 +57,8 @@ const HeroSection: React.FC = () => {
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 z-0">
-        {/* Main gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
+        {/* Main gradient background with more visible blue tones */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EBF3FB] via-[#E5EFF7] to-[#EBF3FB]"></div>
         
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
@@ -174,17 +174,6 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
           </div>
-          
-          {/* Refined scroll indicator with perfect positioning and animation */}
-          <div 
-            className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-            onClick={scrollToNextSection}
-          >
-            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>Mehr entdecken</span>
-            <div className="w-8 h-8 rounded-full border border-[#7BA7C2]/40 flex items-center justify-center animate-bounce shadow-sm">
-              <ChevronDown className="w-4 h-4 text-[#7BA7C2]" />
-            </div>
-          </div>
         </div>
       </div>
       
@@ -249,26 +238,6 @@ const HeroSection: React.FC = () => {
                 </span>
               </button>
             </div>
-            
-            {/* Trust badges with refined styling */}
-            <div className={`mt-14 flex gap-8 transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mr-3 shadow-sm">
-                  <svg className="w-6 h-6 text-[#7BA7C2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>Zertifizierte Experten</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mr-3 shadow-sm">
-                  <svg className="w-6 h-6 text-[#7BA7C2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.light} tracking-wide`}>Modernste Techniken</span>
-              </div>
-            </div>
           </div>
           
           {/* Image section with enhanced visual effects */}
@@ -297,17 +266,6 @@ const HeroSection: React.FC = () => {
                 width="600"
                 height="800"
               />
-            </div>
-          </div>
-          
-          {/* Refined scroll indicator with perfect positioning and animation */}
-          <div 
-            className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-1000 delay-1500 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-            onClick={scrollToNextSection}
-          >
-            <span className={`${fontSize.xs} ${textColor.light} mb-2 ${fontWeight.light} tracking-wider`}>Mehr entdecken</span>
-            <div className="w-9 h-9 rounded-full border border-[#7BA7C2]/40 flex items-center justify-center animate-bounce shadow-sm">
-              <ChevronDown className="w-5 h-5 text-[#7BA7C2]" />
             </div>
           </div>
         </div>
