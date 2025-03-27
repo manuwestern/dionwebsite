@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
   return (
     <div 
       ref={heroRef}
-      className="relative overflow-hidden min-h-[75vh] flex items-center"
+      className="relative overflow-hidden min-h-[85vh] flex items-center"
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 z-0">
@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Main content area with perfect spacing */}
-          <div className="flex-1 flex flex-col justify-between py-4">
+          <div className="flex-1 flex flex-col justify-between pt-4 pb-0">
             {/* Text content with refined typography and animations */}
             <div className="space-y-6 mt-4">
               {/* Title with elegant animation and perfect typography */}
@@ -113,7 +113,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Image section with enhanced visual effects */}
-            <div className="mt-10 mb-16 relative">
+            <div className="mt-10 mb-0 relative">
               {/* Decorative elements */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[300px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
@@ -130,12 +130,9 @@ const HeroSection: React.FC = () => {
                   <div className="absolute bottom-1/3 -right-6 w-16 h-16 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
                   
                   <img 
-                    src="/images/Behandlung_Augenbrauentransplantation.webp"
+                    src="/images/Augenbrauen_Model.png"
                     alt="Dion Hair Clinic - Augenbrauentransplantation"
-                    className="w-auto h-auto max-h-[420px] object-contain relative z-10"
-                    style={{ 
-                      filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.05)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.1))'
-                    }}
+                    className="w-auto h-auto max-h-[500px] object-contain relative z-10"
                     width="400"
                     height="600"
                   />
@@ -150,7 +147,7 @@ const HeroSection: React.FC = () => {
       
       {/* Desktop Layout - Refined for perfect aesthetics */}
       <div className="hidden md:block w-full max-w-7xl mx-auto px-8 relative z-10">
-        <div className="relative min-h-[600px] flex items-center">
+        <div className="relative min-h-[750px] flex items-center">
           {/* No logo in desktop version as per original design */}
           
           {/* Text content with refined typography and animations */}
@@ -210,7 +207,7 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Image section with enhanced visual effects */}
-          <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-end justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="relative">
               {/* Enhanced glow effect */}
               <div className="absolute -inset-12 bg-gradient-to-tr from-[#7BA7C2]/10 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
@@ -221,12 +218,9 @@ const HeroSection: React.FC = () => {
               <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full border border-[#7BA7C2]/15 animate-pulse"></div>
               
               <img 
-                src="/images/Behandlung_Augenbrauentransplantation.webp"
+                src="/images/Augenbrauen_Model.png"
                 alt="Augenbrauentransplantation Experte - Modernste Techniken für natürliche Ergebnisse"
-                className="w-auto h-auto max-h-[620px] object-contain object-center relative z-10"
-                style={{ 
-                  filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.05)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.1))'
-                }}
+                className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10"
                 width="600"
                 height="800"
               />
