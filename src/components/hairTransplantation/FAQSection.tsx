@@ -10,12 +10,12 @@ interface FAQ {
   category: string;
 }
 
-// FAQ categories with icons
+// FAQ categories with icons - ensuring consistent sizing
 const getCategoryIcons = () => ({
-  procedure: { icon: <Stethoscope className="w-5 h-5" /> },
-  recovery: { icon: <Clock className="w-5 h-5" /> },
-  results: { icon: <HelpCircle className="w-5 h-5" /> },
-  costs: { icon: <DollarSign className="w-5 h-5" /> }
+  procedure: { icon: <Stethoscope strokeWidth={1.5} className="w-5 h-5" /> },
+  recovery: { icon: <Clock strokeWidth={1.5} className="w-5 h-5" /> },
+  results: { icon: <HelpCircle strokeWidth={1.5} className="w-5 h-5" /> },
+  costs: { icon: <DollarSign strokeWidth={1.5} className="w-5 h-5" /> }
 });
 
 const FAQSection: React.FC = () => {
@@ -151,21 +151,22 @@ const FAQSection: React.FC = () => {
                     {/* Question button */}
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full text-left p-6 flex justify-between items-center transition-all duration-300"
-                      
+                      className="w-full text-left p-4 sm:p-6 flex justify-between items-center transition-all duration-300"
                       aria-controls={`faq-answer-${index}`}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      <div className="flex items-center gap-3 sm:gap-4">
+                        <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                           openFAQ === index 
                             ? 'bg-[#7BA7C2] text-white' 
                             : 'bg-[#7BA7C2]/10 text-[#7BA7C2] group-hover:bg-[#7BA7C2]/20'
                         }`}>
-                          {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>].icon}
+                          <div className="flex items-center justify-center w-5 h-5">
+                            {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>].icon}
+                          </div>
                         </div>
-                        <span className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left`}>{faq.question}</span>
+                        <span className={`${fontSize.lg} sm:${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left text-sm sm:text-base`}>{faq.question}</span>
                       </div>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      <div className={`min-w-8 min-h-8 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         openFAQ === index 
                           ? 'bg-[#7BA7C2] text-white rotate-180' 
                           : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'

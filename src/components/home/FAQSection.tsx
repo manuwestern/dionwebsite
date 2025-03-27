@@ -10,17 +10,17 @@ interface FAQ {
   category: string;
 }
 
-// FAQ categories with icons
+// FAQ categories with icons - ensuring consistent sizing
 const getCategoryIcons = () => ({
-  hair: { icon: <User className="w-5 h-5" /> },
-  beard: { icon: <Scissors className="w-5 h-5" /> },
-  eyebrows: { icon: <HelpCircle className="w-5 h-5" /> },
-  general: { icon: <Stethoscope className="w-5 h-5" /> },
-  costs: { icon: <DollarSign className="w-5 h-5" /> },
-  aftercare: { icon: <Clock className="w-5 h-5" /> },
-  procedure: { icon: <Stethoscope className="w-5 h-5" /> },
-  recovery: { icon: <Clock className="w-5 h-5" /> },
-  results: { icon: <HelpCircle className="w-5 h-5" /> }
+  hair: { icon: <User strokeWidth={1.5} className="w-5 h-5" /> },
+  beard: { icon: <Scissors strokeWidth={1.5} className="w-5 h-5" /> },
+  eyebrows: { icon: <HelpCircle strokeWidth={1.5} className="w-5 h-5" /> },
+  general: { icon: <Stethoscope strokeWidth={1.5} className="w-5 h-5" /> },
+  costs: { icon: <DollarSign strokeWidth={1.5} className="w-5 h-5" /> },
+  aftercare: { icon: <Clock strokeWidth={1.5} className="w-5 h-5" /> },
+  procedure: { icon: <Stethoscope strokeWidth={1.5} className="w-5 h-5" /> },
+  recovery: { icon: <Clock strokeWidth={1.5} className="w-5 h-5" /> },
+  results: { icon: <HelpCircle strokeWidth={1.5} className="w-5 h-5" /> }
 });
 
 const FAQSection: React.FC = () => {
@@ -92,7 +92,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* Search and filter with elegant design */}
-        <div className={`max-w-4xl mx-auto mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`w-full mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative mb-8">
             <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
               <Search className="h-5 w-5 text-[#7BA7C2]" />
@@ -139,7 +139,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* FAQ Accordion with elegant design */}
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`w-full transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {filteredFAQs.length > 0 ? (
             <div className="space-y-5">
               {filteredFAQs.map((faq, index) => (
@@ -156,20 +156,22 @@ const FAQSection: React.FC = () => {
                     {/* Question button */}
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full text-left p-6 flex justify-between items-center transition-all duration-300"
+                      className="w-full text-left p-4 sm:p-6 flex justify-between items-center transition-all duration-300"
                       aria-controls={`faq-answer-${index}`}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      <div className="flex items-center gap-3 sm:gap-4">
+                        <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                           openFAQ === index 
                             ? 'bg-[#7BA7C2] text-white' 
                             : 'bg-[#7BA7C2]/10 text-[#7BA7C2] group-hover:bg-[#7BA7C2]/20'
                         }`}>
-                          {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>]?.icon || <HelpCircle className="w-5 h-5" />}
+                          <div className="flex items-center justify-center w-5 h-5">
+                            {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>]?.icon || <HelpCircle strokeWidth={1.5} className="w-5 h-5" />}
+                          </div>
                         </div>
-                        <span className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left`}>{faq.question}</span>
+                        <span className={`${fontSize.lg} sm:${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left text-sm sm:text-base`}>{faq.question}</span>
                       </div>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      <div className={`min-w-8 min-h-8 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         openFAQ === index 
                           ? 'bg-[#7BA7C2] text-white rotate-180' 
                           : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'
@@ -215,7 +217,7 @@ const FAQSection: React.FC = () => {
         </div>
         
         {/* Still have questions with elegant design */}
-        <div className={`max-w-4xl mx-auto mt-16 relative transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`w-full mt-16 relative transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
