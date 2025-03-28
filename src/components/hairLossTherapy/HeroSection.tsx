@@ -130,7 +130,7 @@ const HeroSection: React.FC = () => {
                   <div className="absolute bottom-1/3 -right-6 w-16 h-16 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
                   
                   <img 
-                    src="/images/frau_lichter_scheitel.png"
+                    src="/images/Haarausfall_Model.png"
                     alt="Haarausfalltherapie - Ganzheitliche Ansätze für gesundes Haarwachstum"
                     className="w-auto h-auto max-h-[500px] object-contain relative z-10 scale-125"
                     width="450"
@@ -218,7 +218,7 @@ const HeroSection: React.FC = () => {
               <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full border border-[#7BA7C2]/15 animate-pulse"></div>
               
               <img 
-                src="/images/frau_lichter_scheitel.png"
+                src="/images/Haarausfall_Model.png"
                 alt="Haarausfalltherapie - Ganzheitliche Ansätze für gesundes Haarwachstum"
                 className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10 scale-125"
                 width="650"
