@@ -11,25 +11,28 @@ import ContactPage from './pages/ContactPage';
 import ImprintPage from './pages/ImprintPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import CookieConsent from './components/cookies/CookieConsent';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/haartransplantation" element={<HairTransplantationPage />} />
-          <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
-          <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
-          <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} />
-          <Route path="/klinik" element={<ClinicPage />} />
-          <Route path="/kontakt" element={<ContactPage />} />
-          <Route path="/impressum" element={<ImprintPage />} />
-          <Route path="/datenschutz" element={<PrivacyPage />} />
-          <Route path="/agb" element={<TermsPage />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <CookieConsent>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/haartransplantation" element={<HairTransplantationPage />} />
+            <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
+            <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
+            <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} />
+            <Route path="/klinik" element={<ClinicPage />} />
+            <Route path="/kontakt" element={<ContactPage />} />
+            <Route path="/impressum" element={<ImprintPage />} />
+            <Route path="/datenschutz" element={<PrivacyPage />} />
+            <Route path="/agb" element={<TermsPage />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </CookieConsent>
   );
 }
 

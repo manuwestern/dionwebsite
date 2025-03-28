@@ -1,0 +1,94 @@
+{
+  "banner": {
+    "title": "Privacy Settings",
+    "description": "We use cookies and similar technologies to provide you with an optimal website experience. Some of them are necessary for the operation of the site, while others help us to improve this website and your experience.",
+    "essential": {
+      "title": "Essential Cookies",
+      "description": "These cookies are required for the basic functions of the website and cannot be disabled."
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "These cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user."
+    },
+    "preferences": {
+      "title": "Preference Cookies",
+      "description": "These cookies enable the website to provide enhanced functionality and personalization."
+    },
+    "buttons": {
+      "acceptAll": "Accept All",
+      "acceptSelected": "Accept Selected",
+      "settings": "Customize Settings",
+      "save": "Save Settings",
+      "close": "Close"
+    },
+    "footer": {
+      "privacyPolicy": "Privacy Policy",
+      "imprint": "Imprint",
+      "terms": "Terms & Conditions"
+    }
+  },
+  "settings": {
+    "title": "Cookie Settings",
+    "description": "Here you can customize your cookie preferences. Please note that disabling certain cookies may affect the functionality of our website.",
+    "cookieDetails": "Cookie Details",
+    "cookieName": "Name",
+    "cookiePurpose": "Purpose",
+    "cookieDuration": "Duration",
+    "cookieType": "Type",
+    "cookieProvider": "Provider",
+    "essentialCookies": {
+      "session": {
+        "name": "Session Cookie",
+        "purpose": "Stores your session information during your visit.",
+        "duration": "Session",
+        "provider": "Dion Hair Clinic"
+      },
+      "csrf": {
+        "name": "CSRF Token",
+        "purpose": "Protects against cross-site request forgery attacks.",
+        "duration": "Session",
+        "provider": "Dion Hair Clinic"
+      },
+      "consent": {
+        "name": "Cookie Consent",
+        "purpose": "Stores your cookie preferences.",
+        "duration": "1 year",
+        "provider": "Dion Hair Clinic"
+      }
+    },
+    "analyticsCookies": {
+      "ga": {
+        "name": "Google Analytics",
+        "purpose": "Collects anonymous data about website usage.",
+        "duration": "2 years",
+        "provider": "Google"
+      }
+    },
+    "marketingCookies": {
+      "fb": {
+        "name": "Facebook Pixel",
+        "purpose": "Enables conversion tracking and ad targeting.",
+        "duration": "3 months",
+        "provider": "Facebook"
+      },
+      "ig": {
+        "name": "Instagram Pixel",
+        "purpose": "Enables conversion tracking and ad targeting.",
+        "duration": "3 months",
+        "provider": "Instagram"
+      }
+    },
+    "preferencesCookies": {
+      "language": {
+        "name": "Language Setting",
+        "purpose": "Stores your preferred language.",
+        "duration": "1 year",
+        "provider": "Dion Hair Clinic"
+      }
+    }
+  }
+}
