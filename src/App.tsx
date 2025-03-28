@@ -9,6 +9,8 @@ import HairLossTherapyPage from './pages/HairLossTherapyPage';
 import ClinicPage from './pages/ClinicPage';
 import ContactPage from './pages/ContactPage';
 import ImprintPage from './pages/ImprintPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/klinik" element={<ClinicPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/impressum" element={<ImprintPage />} />
+          <Route path="/datenschutz" element={<PrivacyPage />} />
+          <Route path="/agb" element={<TermsPage />} />
         </Routes>
       </Layout>
     </Router>

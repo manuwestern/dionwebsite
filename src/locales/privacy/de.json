@@ -1,0 +1,196 @@
+{
+  "title": "Datenschutzerklärung",
+  "subtitle": "Informationen zum Schutz Ihrer personenbezogenen Daten",
+  "introduction": {
+    "title": "Einleitung",
+    "text": "Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website, unserer Apps und unserer KI-basierten Haaranalyse."
+  },
+  "responsibleParty": {
+    "title": "Verantwortliche Stelle",
+    "text": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+    "name": "Dion Hair Clinic GmbH",
+    "address": {
+      "street": "Hindenburgstraße 45",
+      "city": "41061 Mönchengladbach",
+      "country": "Deutschland"
+    },
+    "contact": {
+      "phone": "+49 (0) 2161 123 4567",
+      "email": "datenschutz@dionhairclinic.de"
+    }
+  },
+  "dataCollection": {
+    "title": "Erhebung und Verarbeitung personenbezogener Daten",
+    "general": {
+      "title": "Allgemeine Informationen",
+      "text": "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Wir erheben, verarbeiten und nutzen Ihre personenbezogenen Daten nur, wenn eine Rechtsgrundlage dafür besteht oder Sie uns Ihre Einwilligung erteilt haben."
+    },
+    "website": {
+      "title": "Datenerhebung auf unserer Website",
+      "text": "Bei der bloß informatorischen Nutzung unserer Website erheben wir nur die personenbezogenen Daten, die Ihr Browser an unseren Server übermittelt. Diese Daten werden nur temporär in einem sogenannten Logfile gespeichert und spätestens nach 7 Tagen gelöscht.",
+      "data": [
+        "IP-Adresse",
+        "Datum und Uhrzeit der Anfrage",
+        "Zeitzonendifferenz zur Greenwich Mean Time (GMT)",
+        "Inhalt der Anforderung (konkrete Seite)",
+        "Zugriffsstatus/HTTP-Statuscode",
+        "Jeweils übertragene Datenmenge",
+        "Website, von der die Anforderung kommt",
+        "Browser",
+        "Betriebssystem und dessen Oberfläche",
+        "Sprache und Version der Browsersoftware"
+      ]
+    },
+    "contactForm": {
+      "title": "Kontaktformular",
+      "text": "Wenn Sie unser Kontaktformular nutzen, werden die von Ihnen angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
+    },
+    "appointment": {
+      "title": "Terminvereinbarung",
+      "text": "Bei der Vereinbarung eines Beratungstermins oder einer Behandlung erheben und verarbeiten wir die für die Durchführung notwendigen Daten wie Name, Kontaktdaten, Terminwünsche und gegebenenfalls gesundheitsbezogene Daten, die für die Behandlung relevant sind."
+    }
+  },
+  "mobileApps": {
+    "title": "Datenverarbeitung in unseren mobilen Apps",
+    "general": {
+      "title": "Allgemeine Informationen zu unseren Apps",
+      "text": "Unsere mobilen Anwendungen für iOS (Apple App Store) und Android (Google Play Store) bieten Ihnen zusätzliche Funktionen und Services rund um unsere Haarklinik. Dabei werden verschiedene Daten erhoben und verarbeitet."
+    },
+    "appData": {
+      "title": "In den Apps erhobene Daten",
+      "text": "Bei der Nutzung unserer Apps können folgende Daten erhoben werden:",
+      "data": [
+        "Registrierungsdaten (E-Mail, Name, Passwort)",
+        "Profildaten (Alter, Geschlecht, Haartyp)",
+        "Fotos (für die Haaranalyse)",
+        "Geräteinformationen (Gerätetyp, Betriebssystem, App-Version)",
+        "Nutzungsdaten (Nutzungsverhalten, Präferenzen)",
+        "Standortdaten (nur mit Ihrer ausdrücklichen Zustimmung)"
+      ]
+    },
+    "appStore": {
+      "title": "Apple App Store & Google Play Store",
+      "text": "Beim Download unserer App werden bestimmte erforderliche Informationen an den jeweiligen App Store übertragen, insbesondere Nutzername, E-Mail-Adresse, Kundennummer Ihres Accounts, Zeitpunkt des Downloads, Zahlungsinformationen und die individuelle Gerätekennziffer. Auf diese Datenerhebung haben wir keinen Einfluss und sind nicht dafür verantwortlich. Wir verarbeiten diese Daten nur, soweit es für das Herunterladen der App auf Ihr mobiles Endgerät erforderlich ist."
+    },
+    "appPrivacy": {
+      "title": "Datenschutzhinweise der App Stores",
+      "apple": "Weitere Informationen zur Datenverarbeitung durch Apple finden Sie in der Datenschutzerklärung von Apple: https://www.apple.com/de/privacy/",
+      "google": "Weitere Informationen zur Datenverarbeitung durch Google finden Sie in der Datenschutzerklärung von Google: https://policies.google.com/privacy?hl=de"
+    }
+  },
+  "aiHairAnalysis": {
+    "title": "KI-basierte Haaranalyse",
+    "general": {
+      "title": "Funktionsweise der KI-Haaranalyse",
+      "text": "Unsere KI-basierte Haaranalyse nutzt künstliche Intelligenz und maschinelles Lernen, um anhand von Fotos Ihrer Kopfhaut und Haare eine Analyse Ihres Haarzustands zu erstellen. Diese Technologie hilft uns, eine präzisere Diagnose und individuellere Behandlungsempfehlungen zu geben."
+    },
+    "dataProcessing": {
+      "title": "Datenverarbeitung bei der KI-Haaranalyse",
+      "text": "Für die KI-Haaranalyse verarbeiten wir folgende Daten:",
+      "data": [
+        "Von Ihnen hochgeladene Fotos Ihrer Kopfhaut und Haare",
+        "Ihre Angaben zu Haarausfall, Haartyp und Vorgeschichte",
+        "Demografische Daten (Alter, Geschlecht)",
+        "Ergebnisse früherer Analysen (falls vorhanden)"
+      ]
+    },
+    "aiSecurity": {
+      "title": "Sicherheit und Speicherung",
+      "text": "Die für die KI-Analyse verwendeten Daten werden auf sicheren Servern in der Europäischen Union gespeichert. Die Übertragung erfolgt verschlüsselt. Die Bilder werden ausschließlich für den Zweck der Haaranalyse verwendet und nicht ohne Ihre ausdrückliche Einwilligung für andere Zwecke genutzt."
+    },
+    "aiConsent": {
+      "title": "Einwilligung und Widerruf",
+      "text": "Die Nutzung unserer KI-Haaranalyse erfolgt nur mit Ihrer ausdrücklichen Einwilligung. Sie können diese Einwilligung jederzeit widerrufen, indem Sie uns kontaktieren. In diesem Fall werden Ihre für die Analyse gespeicherten Daten gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten bestehen."
+    }
+  },
+  "cookies": {
+    "title": "Cookies und Tracking",
+    "general": {
+      "title": "Was sind Cookies?",
+      "text": "Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden und die eine Analyse der Benutzung der Website ermöglichen. Die durch Cookies erzeugten Informationen werden auf den Servern der Cookie-Anbieter gespeichert."
+    },
+    "types": {
+      "title": "Arten von Cookies",
+      "essential": {
+        "title": "Notwendige Cookies",
+        "text": "Diese Cookies sind für den Betrieb der Website erforderlich und können in unseren Systemen nicht abgeschaltet werden. Sie werden in der Regel nur als Reaktion auf von Ihnen getätigte Aktionen gesetzt, die einer Dienstanforderung entsprechen, wie etwa dem Festlegen Ihrer Datenschutzeinstellungen, dem Anmelden oder dem Ausfüllen von Formularen."
+      },
+      "functional": {
+        "title": "Funktionale Cookies",
+        "text": "Diese Cookies ermöglichen es der Website, erweiterte Funktionalität und Personalisierung bereitzustellen. Sie können von uns oder von Drittanbietern gesetzt werden, deren Dienste wir auf unseren Seiten eingebunden haben."
+      },
+      "analytics": {
+        "title": "Analyse-Cookies",
+        "text": "Diese Cookies ermöglichen es uns, Besuche und Verkehrsquellen zu zählen, damit wir die Leistung unserer Website messen und verbessern können. Sie helfen uns zu verstehen, welche Seiten am beliebtesten und welche am wenigsten beliebt sind, und zu sehen, wie sich Besucher auf der Website bewegen."
+      },
+      "marketing": {
+        "title": "Marketing-Cookies",
+        "text": "Diese Cookies können von unseren Werbepartnern über unsere Website gesetzt werden. Sie können von diesen Unternehmen verwendet werden, um ein Profil Ihrer Interessen zu erstellen und Ihnen relevante Werbung auf anderen Websites zu zeigen."
+      }
+    },
+    "management": {
+      "title": "Cookie-Verwaltung",
+      "text": "Sie können Ihre Cookie-Einstellungen jederzeit über unsere Cookie-Einstellungen auf der Website anpassen. Die meisten Webbrowser erlauben zudem eine Kontrolle der meisten Cookies über die Browser-Einstellungen."
+    }
+  },
+  "thirdPartyServices": {
+    "title": "Dienste von Drittanbietern",
+    "analytics": {
+      "title": "Google Analytics",
+      "text": "Wir nutzen Google Analytics, einen Webanalysedienst der Google Ireland Limited. Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website ermöglichen. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Wir haben die IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt wird."
+    },
+    "maps": {
+      "title": "Google Maps",
+      "text": "Wir nutzen Google Maps zur Darstellung interaktiver Karten und zur Erstellung von Anfahrtsbeschreibungen. Google Maps wird von Google Ireland Limited betrieben. Bei der Nutzung von Google Maps werden von Google Daten über die Nutzung der Maps-Funktionen durch Besucher der Webseiten erhoben, verarbeitet und genutzt."
+    },
+    "social": {
+      "title": "Social Media Plugins",
+      "text": "Auf unserer Website sind Plugins von sozialen Netzwerken integriert. Wenn Sie eine Seite aufrufen, die ein solches Plugin enthält, stellt Ihr Browser eine direkte Verbindung zu den Servern des jeweiligen sozialen Netzwerks her. Der Inhalt des Plugins wird vom sozialen Netzwerk direkt an Ihren Browser übermittelt und in die Seite eingebunden."
+    }
+  },
+  "dataSubjects": {
+    "title": "Rechte der betroffenen Personen",
+    "rights": {
+      "title": "Ihre Rechte",
+      "text": "Sie haben jederzeit das Recht auf Auskunft über die zu Ihrer Person gespeicherten Daten, deren Herkunft und Empfänger sowie den Zweck der Datenverarbeitung. Darüber hinaus haben Sie das Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden."
+    },
+    "rightsList": {
+      "title": "Im Einzelnen haben Sie folgende Rechte:",
+      "data": [
+        "Recht auf Auskunft (Art. 15 DSGVO)",
+        "Recht auf Berichtigung (Art. 16 DSGVO)",
+        "Recht auf Löschung (Art. 17 DSGVO)",
+        "Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+        "Recht auf Datenübertragbarkeit (Art. 20 DSGVO)",
+        "Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)",
+        "Recht auf Widerruf einer Einwilligung (Art. 7 Abs. 3 DSGVO)",
+        "Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)"
+      ]
+    },
+    "supervisoryAuthority": {
+      "title": "Zuständige Aufsichtsbehörde",
+      "text": "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen",
+      "address": "Kavalleriestraße 2-4, 40213 Düsseldorf",
+      "contact": "Telefon: 0211/38424-0, E-Mail: poststelle@ldi.nrw.de"
+    }
+  },
+  "dataSecurity": {
+    "title": "Datensicherheit",
+    "text": "Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren (Secure Socket Layer) in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird. In der Regel handelt es sich dabei um eine 256-Bit Verschlüsselung. Falls Ihr Browser keine 256-Bit Verschlüsselung unterstützt, greifen wir stattdessen auf 128-Bit v3 Technologie zurück. Ob eine einzelne Seite unseres Internetauftrittes verschlüsselt übertragen wird, erkennen Sie an der geschlossenen Darstellung des Schüssel- beziehungsweise Schloss-Symbols in der unteren Statusleiste Ihres Browsers."
+  },
+  "dataRetention": {
+    "title": "Speicherdauer",
+    "text": "Wir speichern personenbezogene Daten nur so lange, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist oder dies gesetzlich vorgeschrieben ist. Danach werden die Daten routinemäßig gelöscht, es sei denn, es bestehen gesetzliche Aufbewahrungspflichten."
+  },
+  "changes": {
+    "title": "Änderungen dieser Datenschutzerklärung",
+    "text": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung."
+  },
+  "contact": {
+    "title": "Kontakt zum Datenschutzbeauftragten",
+    "text": "Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten, bei Auskünften, Berichtigung, Sperrung oder Löschung von Daten sowie Widerruf erteilter Einwilligungen wenden Sie sich bitte an:",
+    "name": "Datenschutzbeauftragter der Dion Hair Clinic GmbH",
+    "email": "datenschutz@dionhairclinic.de",
+    "phone": "+49 (0) 2161 123 4567"
+  }
+}

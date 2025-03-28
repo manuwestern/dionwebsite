@@ -23,6 +23,10 @@ import contactDE from './locales/contact/de.json';
 import contactEN from './locales/contact/en.json';
 import imprintDE from './locales/imprint/de.json';
 import imprintEN from './locales/imprint/en.json';
+import privacyDE from './locales/privacy/de.json';
+import privacyEN from './locales/privacy/en.json';
+import termsDE from './locales/terms/de.json';
+import termsEN from './locales/terms/en.json';
 
 const resources = {
   de: {
@@ -35,7 +39,9 @@ const resources = {
     hairLossTherapy: hairLossTherapyDE,
     clinic: clinicDE,
     contact: contactDE,
-    imprint: imprintDE
+    imprint: imprintDE,
+    privacy: privacyDE,
+    terms: termsDE
   },
   en: {
     common: commonEN,
@@ -47,7 +53,9 @@ const resources = {
     hairLossTherapy: hairLossTherapyEN,
     clinic: clinicEN,
     contact: contactEN,
-    imprint: imprintEN
+    imprint: imprintEN,
+    privacy: privacyEN,
+    terms: termsEN
   }
 };
 
@@ -63,7 +71,7 @@ i18n
     debug: false, // Set to true for development
     
     // have a common namespace used around the full app
-    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact', 'imprint'],
+    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact', 'imprint', 'privacy', 'terms'],
     defaultNS: 'common',
     
     interpolation: {

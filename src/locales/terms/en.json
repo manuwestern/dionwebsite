@@ -1,0 +1,246 @@
+{
+  "title": "Terms and Conditions",
+  "subtitle": "Dion Hair Clinic GmbH",
+  "introduction": {
+    "title": "Introduction",
+    "text": "The following General Terms and Conditions (GTC) govern the contractual relationship between Dion Hair Clinic GmbH (hereinafter referred to as \"Clinic\") and its patients. By arranging a treatment appointment or using the services of the Clinic, the patient accepts these GTC."
+  },
+  "scope": {
+    "title": "Scope of Application",
+    "text": "These GTC apply to all contracts concluded between the Clinic and the patient, in particular for treatment contracts in the field of hair transplantation, beard transplantation, eyebrow transplantation, and hair loss therapy. They also apply to all future business relationships, even if they are not expressly agreed upon again."
+  },
+  "contractConclusion": {
+    "title": "Conclusion of Contract",
+    "text": "The treatment contract is concluded when the patient accepts the Clinic's treatment offer. This can be done through written confirmation, electronic communication, or by conclusive action. The Clinic reserves the right to refuse to conclude a contract without giving reasons.",
+    "consultation": {
+      "title": "Consultation",
+      "text": "Before each treatment, a detailed consultation takes place in which the individual treatment options, risks, and expected results are discussed. This consultation is non-binding and free of charge."
+    },
+    "treatmentPlan": {
+      "title": "Treatment Plan",
+      "text": "After the consultation, the patient receives an individual treatment plan that details the type of treatment, scope, estimated duration, and costs."
+    }
+  },
+  "treatmentServices": {
+    "title": "Treatment Services",
+    "general": {
+      "title": "General",
+      "text": "The Clinic offers specialized treatments in the field of hair transplantation and hair loss therapy. The exact services are specified in the individual treatment contract."
+    },
+    "hairTransplantation": {
+      "title": "Hair Transplantation",
+      "text": "Hair transplantation is performed exclusively using the FUE method (Follicular Unit Extraction). In this method, individual hair follicles are taken directly from the donor area (usually at the back of the head) and transplanted to the areas to be treated.",
+      "details": "The maximum number of grafts/follicles to be transplanted, the areas to be treated, the technique applied, and the estimated duration of the procedure are recorded in the individual treatment contract. The patient is informed that the actual number of transplanted grafts may be less than the specified maximum number, depending on the quality and availability of suitable hair follicles in the donor region."
+    },
+    "beardTransplantation": {
+      "title": "Beard Transplantation",
+      "text": "Beard transplantation follows the same basic principles as hair transplantation, taking into account the specific requirements of the beard region."
+    },
+    "eyebrowTransplantation": {
+      "title": "Eyebrow Transplantation",
+      "text": "In eyebrow transplantation, special consideration is given to the natural growth directions and aesthetic requirements of the eyebrow shape."
+    },
+    "hairLossTherapy": {
+      "title": "Hair Loss Therapy",
+      "text": "Hair loss therapy includes various treatment methods such as PRP therapy, mesotherapy, and medicinal treatments, which are individually tailored to the patient."
+    }
+  },
+  "patientObligations": {
+    "title": "Patient Obligations",
+    "information": {
+      "title": "Duty to Inform",
+      "text": "The patient undertakes to provide all relevant health data truthfully and completely, in particular pre-existing conditions, regular medication, known allergies, high blood pressure, or other cardiovascular diseases. The patient must immediately inform the practitioner of any change in their health condition between signing the contract and the treatment appointment."
+    },
+    "pretreatment": {
+      "title": "Behavior Before Treatment",
+      "text": "The patient undertakes not to consume drugs, excessive alcohol, or medications not agreed upon with the practitioner 48 hours before the procedure, as these can impair the effectiveness of local anesthesia and lead to complications."
+    },
+    "aftercare": {
+      "title": "Aftercare",
+      "text": "The patient undertakes to observe the recommended rules of conduct, to attend regular follow-up checks, and to follow the practitioner's behavioral and care instructions before and after the procedure exactly.",
+      "documentation": "The patient undertakes to provide regular photographic documentation of the healing process and to contact the practitioner immediately if unusual symptoms or complications occur."
+    },
+    "restrictions": {
+      "title": "Restrictions After Treatment",
+      "text": "The patient undertakes not to engage in excessive sports or physical exertion in the first 4 weeks after the procedure, to avoid direct sunlight on the treated areas for at least 3 months, and not to use chemical hair dyes during the first 6 months after the procedure."
+    }
+  },
+  "costs": {
+    "title": "Costs and Payment Terms",
+    "general": {
+      "title": "General",
+      "text": "The costs for the treatment are precisely defined in the separate offer or invoice and are part of the treatment contract."
+    },
+    "payment": {
+      "title": "Payment Methods",
+      "text": "Payment of the entire amount is made either by bank transfer, with payment received at the latest on the day of treatment, or in cash directly on site on the day of treatment. A deposit is not required."
+    },
+    "defaultPayment": {
+      "title": "Late Payment",
+      "text": "In case of late payment of more than 14 days, the Clinic reserves the right to charge interest on arrears at a rate of 5% p.a."
+    },
+    "additionalCosts": {
+      "title": "Additional Costs",
+      "text": "Additional costs not included in the agreed fee include costs for additional services not mentioned in the contract and costs for medications after the agreed aftercare period."
+    }
+  },
+  "cancellation": {
+    "title": "Revocation, Appointment Cancellation, and No-Show",
+    "revocation": {
+      "title": "Right of Revocation",
+      "text": "The patient may revoke their contractual declaration within 14 days without giving reasons in text form (e.g., letter, email). The period begins after receipt of this instruction in text form, but not before the conclusion of the contract."
+    },
+    "cancellationTerms": {
+      "title": "Cancellation Terms",
+      "text": "Free cancellation is possible up to 7 days before the agreed treatment appointment. In case of cancellation within 7 days before the appointment, a processing fee of 20% of the treatment costs is due. In case of cancellation within 48 hours before the appointment, a fee of 50% of the treatment costs is payable. If the patient does not appear for the agreed appointment without prior cancellation, the full amount of the treatment costs is due, unless the patient can prove that they were prevented without their own fault."
+    },
+    "medicalReasons": {
+      "title": "Cancellation for Medical Reasons",
+      "text": "If the treatment cannot be carried out for medical reasons or on the recommendation of the practitioner, the appointment will be canceled or postponed free of charge."
+    },
+    "forceMajeure": {
+      "title": "Force Majeure",
+      "text": "In case of force majeure (e.g., pandemics, natural disasters, sudden illness of the practitioner), the appointment will be postponed without the patient incurring any costs."
+    }
+  },
+  "liability": {
+    "title": "Liability and Warranty",
+    "general": {
+      "title": "General",
+      "text": "The Clinic is liable for the professional execution of the treatment according to current medical standards. A guarantee for the desired end result cannot be given, as individual factors can influence the result."
+    },
+    "limitationOfLiability": {
+      "title": "Limitation of Liability",
+      "text": "The Clinic is only liable for damages caused by gross negligence or intent. Further liability, in particular for subjectively unfulfilled expectations of the patient regarding the result, is excluded."
+    },
+    "revision": {
+      "title": "Revision",
+      "text": "If the end result is not satisfactory with regard to the implanted area, a revision may be carried out in exceptional cases.",
+      "conditions": "The assessment of the end result takes place at the earliest 12 months after the procedure. An unsatisfactory result exists if a significantly lower growth rate than the average expected 80-90% is found in the transplanted area or if there is a clearly uneven distribution of the transplanted hair.",
+      "medicalCheck": "Before a revision, a medical clarification is carried out by means of a blood test to identify possible causes for reduced hair growth.",
+      "scope": "The revision includes the re-transplantation of hair follicles to areas with insufficient growth. The scope is determined individually, but usually does not exceed 30% of the originally transplanted amount.",
+      "costs": "The personal contribution of 750€ covers all costs of the revision treatment, including preliminary examination, procedure, and aftercare. Additional costs only arise if the scope of the revision exceeds 30% of the original treatment.",
+      "exclusions": "A revision cannot be carried out if the patient has not followed the aftercare instructions, external factors have negatively influenced the result, medical contraindications exist, or the blood tests indicate a hormonal or health cause for the reduced hair growth that cannot be remedied by a revision."
+    }
+  },
+  "aftercare": {
+    "title": "Aftercare",
+    "general": {
+      "title": "General",
+      "text": "The patient undertakes to attend the agreed aftercare appointments."
+    },
+    "appointments": {
+      "title": "Aftercare Appointments",
+      "text": "The appointments for the two follow-up examinations in combination with the PRP treatments are recommended at the following times: First check-up: 4-6 weeks after the procedure, Second check-up: 6-8 months after the procedure.",
+      "responsibility": "The patient is expressly informed that they are responsible for arranging these aftercare appointments themselves and must book them independently. The Clinic does not send automatic reminders for these appointments."
+    },
+    "services": {
+      "title": "Aftercare Services",
+      "text": "Aftercare includes 2 check-ups after the procedure in combination with a PRP treatment (Platelet-Rich Plasma)."
+    },
+    "warning": {
+      "title": "Warning",
+      "text": "The patient is advised that failure to comply with aftercare appointments and instructions may impair the treatment result."
+    }
+  },
+  "photoDocumentation": {
+    "title": "Photo Documentation",
+    "text": "The patient agrees that photographs may be taken before, during, and after treatment for documentation purposes. These images will be used exclusively for internal medical documentation purposes and will not be published for advertising, scientific publications, or on social media."
+  },
+  "dataProtection": {
+    "title": "Data Protection",
+    "text": "The patient agrees to the collection, processing, and use of their personal data and health data for the purpose of carrying out the treatment contract. The collected data will only be stored for as long as is necessary for the execution of the treatment and aftercare or as required by legal retention obligations. If images are taken for documentation purposes, the patient will be asked separately whether these may be used anonymously or for advertising purposes."
+  },
+  "medication": {
+    "title": "Medication and Supplementary Therapies",
+    "general": {
+      "title": "General",
+      "text": "The patient has been informed that the following medications or therapies can support the result of hair transplantation: Minoxidil solution (applicable at the earliest 14 days after the procedure), Finasteride (after medical prescription and consultation), Mesotherapy (possible at the earliest 3 months after the procedure)."
+    },
+    "prp": {
+      "title": "PRP Treatments",
+      "text": "The PRP treatments (Platelet-Rich Plasma) included in the aftercare are carried out in combination with the aftercare appointments. PRP promotes wound healing and can support hair growth after transplantation."
+    },
+    "additionalTherapies": {
+      "title": "Supplementary Therapies",
+      "text": "The costs for further supplementary therapies beyond the services mentioned in the contract are not included in the price of the hair transplantation and are charged separately. The Clinic may recommend these therapies, but the patient is not obliged to use them."
+    },
+    "consultation": {
+      "title": "Consultation",
+      "text": "The patient undertakes to consult with the practitioner before taking or using other medications or dietary supplements that could influence hair growth."
+    }
+  },
+  "quality": {
+    "title": "Guarantee and Quality Assurance",
+    "commitment": {
+      "title": "Quality Commitment",
+      "text": "The Clinic is committed to maintaining the highest quality standards in the performance of hair transplantation."
+    },
+    "guarantees": {
+      "title": "Guarantee Services",
+      "text": "The following guarantee services are provided: Each transplanted graft is treated with the utmost care to maximize the survival rate. The instruments and materials used comply with current medical standards. The hair transplantation is carried out under sterile conditions."
+    },
+    "limitation": {
+      "title": "Limitation",
+      "text": "This guarantee refers exclusively to the professional execution of the procedure. A guarantee for a specific aesthetic result or a specific growth rate cannot be given due to individual biological factors."
+    },
+    "feedback": {
+      "title": "Quality Assurance",
+      "text": "For the purpose of quality assurance, the patient agrees to participate in follow-up surveys and satisfaction assessments. This participation is voluntary and has no influence on medical care or possible revision treatments."
+    }
+  },
+  "healthRisks": {
+    "title": "Reservation in Case of Undisclosed Health Risks",
+    "general": {
+      "title": "General",
+      "text": "If the patient has concealed or incorrectly stated relevant health information such as high blood pressure, cardiovascular diseases, blood clotting disorders, diabetes, autoimmune diseases, or the intake of certain medications, special regulations apply."
+    },
+    "cancellation": {
+      "title": "Right of Cancellation",
+      "text": "The Clinic reserves the right to cancel or postpone the procedure on the day of treatment if carrying it out would pose an increased health risk for the patient."
+    },
+    "substanceUse": {
+      "title": "Drug and Alcohol Consumption",
+      "text": "The consumption of drugs, alcohol, or certain medications can impair the effectiveness of local anesthesia and/or pose an increased risk of complications. The patient expressly confirms that they have not consumed drugs, excessive alcohol, or medications not agreed upon with the practitioner within 48 hours before the procedure."
+    },
+    "testing": {
+      "title": "Drug Test",
+      "text": "In case of reasonable suspicion of undisclosed drug or alcohol consumption, the Clinic reserves the right to conduct a drug test or to cancel the procedure. The patient agrees to the performance of such a test."
+    },
+    "cancellationFee": {
+      "title": "Cancellation Fee",
+      "text": "If the procedure is canceled due to a positive drug test or the refusal to perform such a test, the patient is obliged to pay a cancellation fee of 50% of the agreed treatment costs."
+    },
+    "liability": {
+      "title": "Exclusion of Liability",
+      "text": "If it turns out during or after the procedure that the patient has concealed relevant health information, and this leads to complications or a non-optimal treatment result, the Clinic assumes no liability for the resulting consequences. In this case, the patient bears full responsibility and has no claim to free follow-up treatments or a revision."
+    },
+    "emergencyCosts": {
+      "title": "Emergency Costs",
+      "text": "In case of serious health risks that the patient has concealed and that lead to an emergency situation during the procedure, the patient will be charged for the additional costs incurred (e.g., for emergency medications, emergency medical care)."
+    }
+  },
+  "finalProvisions": {
+    "title": "Final Provisions",
+    "amendments": {
+      "title": "Amendments",
+      "text": "Changes and additions to this contract must be made in writing."
+    },
+    "validity": {
+      "title": "Validity",
+      "text": "This contract is legally valid even without the signature of the treating physician. The patient's signature confirms their consent to the treatment as well as their agreement to all conditions mentioned in this contract."
+    },
+    "severability": {
+      "title": "Severability Clause",
+      "text": "Should individual provisions of this contract be or become invalid, this shall not affect the validity of the remaining provisions."
+    },
+    "jurisdiction": {
+      "title": "Place of Jurisdiction",
+      "text": "The place of jurisdiction for disputes arising from this contract is Mönchengladbach."
+    },
+    "applicableLaw": {
+      "title": "Applicable Law",
+      "text": "This contract is subject to the law of the Federal Republic of Germany."
+    }
+  }
+}

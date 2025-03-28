@@ -74,8 +74,8 @@ const FooterSection: React.FC = () => {
           </div>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="/impressum" className="hover:text-white transition-colors">{t('footer.legal.imprint')}</a>
-            <a href="#" className="hover:text-white transition-colors">{t('footer.legal.privacy')}</a>
-            <a href="#" className="hover:text-white transition-colors">{t('footer.legal.terms')}</a>
+            <a href="/datenschutz" className="hover:text-white transition-colors">{t('footer.legal.privacy')}</a>
+            <a href="/agb" className="hover:text-white transition-colors">{t('footer.legal.terms')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('footer.legal.cookies')}</a>
           </div>
         </div>

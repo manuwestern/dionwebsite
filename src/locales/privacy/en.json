@@ -1,0 +1,196 @@
+{
+  "title": "Privacy Policy",
+  "subtitle": "Information on the protection of your personal data",
+  "introduction": {
+    "title": "Introduction",
+    "text": "The protection of your personal data is of particular concern to us. We therefore process your data exclusively on the basis of legal provisions (GDPR, TKG 2003). In this privacy policy, we inform you about the most important aspects of data processing in connection with our website, our apps, and our AI-based hair analysis."
+  },
+  "responsibleParty": {
+    "title": "Responsible Entity",
+    "text": "The entity responsible for data processing on this website is:",
+    "name": "Dion Hair Clinic GmbH",
+    "address": {
+      "street": "Hindenburgstraße 45",
+      "city": "41061 Mönchengladbach",
+      "country": "Germany"
+    },
+    "contact": {
+      "phone": "+49 (0) 2161 123 4567",
+      "email": "privacy@dionhairclinic.de"
+    }
+  },
+  "dataCollection": {
+    "title": "Collection and Processing of Personal Data",
+    "general": {
+      "title": "General Information",
+      "text": "Personal data is any information relating to an identified or identifiable natural person. We collect, process, and use your personal data only if there is a legal basis for doing so or if you have given us your consent."
+    },
+    "website": {
+      "title": "Data Collection on Our Website",
+      "text": "When you use our website for informational purposes only, we only collect the personal data that your browser transmits to our server. This data is stored temporarily in a so-called log file and deleted after 7 days at the latest.",
+      "data": [
+        "IP address",
+        "Date and time of the request",
+        "Time zone difference to Greenwich Mean Time (GMT)",
+        "Content of the request (specific page)",
+        "Access status/HTTP status code",
+        "Amount of data transferred",
+        "Website from which the request comes",
+        "Browser",
+        "Operating system and its interface",
+        "Language and version of the browser software"
+      ]
+    },
+    "contactForm": {
+      "title": "Contact Form",
+      "text": "When you use our contact form, the data you provide will be stored for the purpose of processing your request and for possible follow-up questions. We do not share this data without your consent."
+    },
+    "appointment": {
+      "title": "Appointment Scheduling",
+      "text": "When scheduling a consultation or treatment, we collect and process the data necessary for the execution, such as name, contact details, appointment preferences, and, if applicable, health-related data relevant to the treatment."
+    }
+  },
+  "mobileApps": {
+    "title": "Data Processing in Our Mobile Apps",
+    "general": {
+      "title": "General Information About Our Apps",
+      "text": "Our mobile applications for iOS (Apple App Store) and Android (Google Play Store) offer you additional functions and services related to our hair clinic. Various data is collected and processed in this context."
+    },
+    "appData": {
+      "title": "Data Collected in the Apps",
+      "text": "When using our apps, the following data may be collected:",
+      "data": [
+        "Registration data (email, name, password)",
+        "Profile data (age, gender, hair type)",
+        "Photos (for hair analysis)",
+        "Device information (device type, operating system, app version)",
+        "Usage data (usage behavior, preferences)",
+        "Location data (only with your explicit consent)"
+      ]
+    },
+    "appStore": {
+      "title": "Apple App Store & Google Play Store",
+      "text": "When downloading our app, certain required information is transferred to the respective app store, in particular username, email address, customer number of your account, time of download, payment information, and the individual device identifier. We have no influence on this data collection and are not responsible for it. We only process this data to the extent necessary for downloading the app to your mobile device."
+    },
+    "appPrivacy": {
+      "title": "Privacy Notices of the App Stores",
+      "apple": "For more information about data processing by Apple, please see Apple's Privacy Policy: https://www.apple.com/privacy/",
+      "google": "For more information about data processing by Google, please see Google's Privacy Policy: https://policies.google.com/privacy"
+    }
+  },
+  "aiHairAnalysis": {
+    "title": "AI-Based Hair Analysis",
+    "general": {
+      "title": "How AI Hair Analysis Works",
+      "text": "Our AI-based hair analysis uses artificial intelligence and machine learning to create an analysis of your hair condition based on photos of your scalp and hair. This technology helps us provide a more precise diagnosis and more individualized treatment recommendations."
+    },
+    "dataProcessing": {
+      "title": "Data Processing in AI Hair Analysis",
+      "text": "For AI hair analysis, we process the following data:",
+      "data": [
+        "Photos of your scalp and hair uploaded by you",
+        "Your information about hair loss, hair type, and history",
+        "Demographic data (age, gender)",
+        "Results of previous analyses (if available)"
+      ]
+    },
+    "aiSecurity": {
+      "title": "Security and Storage",
+      "text": "The data used for AI analysis is stored on secure servers in the European Union. The transmission is encrypted. The images are used exclusively for the purpose of hair analysis and are not used for other purposes without your explicit consent."
+    },
+    "aiConsent": {
+      "title": "Consent and Withdrawal",
+      "text": "The use of our AI hair analysis is only with your explicit consent. You can withdraw this consent at any time by contacting us. In this case, your data stored for the analysis will be deleted, unless there are legal retention obligations."
+    }
+  },
+  "cookies": {
+    "title": "Cookies and Tracking",
+    "general": {
+      "title": "What Are Cookies?",
+      "text": "Cookies are small text files that are stored on your device and enable an analysis of your use of the website. The information generated by cookies is stored on the servers of the cookie providers."
+    },
+    "types": {
+      "title": "Types of Cookies",
+      "essential": {
+        "title": "Essential Cookies",
+        "text": "These cookies are necessary for the operation of the website and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms."
+      },
+      "functional": {
+        "title": "Functional Cookies",
+        "text": "These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages."
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "text": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site."
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "text": "These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites."
+      }
+    },
+    "management": {
+      "title": "Cookie Management",
+      "text": "You can adjust your cookie settings at any time via our cookie settings on the website. Most web browsers also allow control of most cookies through the browser settings."
+    }
+  },
+  "thirdPartyServices": {
+    "title": "Third-Party Services",
+    "analytics": {
+      "title": "Google Analytics",
+      "text": "We use Google Analytics, a web analytics service provided by Google Ireland Limited. Google Analytics uses cookies to enable an analysis of your use of the website. The information generated by the cookie about your use of this website is usually transmitted to a Google server in the USA and stored there. We have activated IP anonymization, so that your IP address is shortened by Google within member states of the European Union or in other contracting states of the Agreement on the European Economic Area before transmission."
+    },
+    "maps": {
+      "title": "Google Maps",
+      "text": "We use Google Maps to display interactive maps and to create directions. Google Maps is operated by Google Ireland Limited. When using Google Maps, Google collects, processes, and uses data about the use of the Maps functions by visitors to the websites."
+    },
+    "social": {
+      "title": "Social Media Plugins",
+      "text": "Our website integrates plugins from social networks. When you visit a page that contains such a plugin, your browser establishes a direct connection to the servers of the respective social network. The content of the plugin is transmitted directly from the social network to your browser and integrated into the page."
+    }
+  },
+  "dataSubjects": {
+    "title": "Rights of Data Subjects",
+    "rights": {
+      "title": "Your Rights",
+      "text": "You have the right to request information about the personal data we store about you, its origin, recipients, and the purpose of data processing at any time. In addition, you have the right to correct, block, or delete this data. You can contact us at the address given in the imprint for this and other questions on the subject of personal data."
+    },
+    "rightsList": {
+      "title": "Specifically, you have the following rights:",
+      "data": [
+        "Right to information (Art. 15 GDPR)",
+        "Right to rectification (Art. 16 GDPR)",
+        "Right to erasure (Art. 17 GDPR)",
+        "Right to restriction of processing (Art. 18 GDPR)",
+        "Right to data portability (Art. 20 GDPR)",
+        "Right to object to processing (Art. 21 GDPR)",
+        "Right to withdraw consent (Art. 7 para. 3 GDPR)",
+        "Right to lodge a complaint with a supervisory authority (Art. 77 GDPR)"
+      ]
+    },
+    "supervisoryAuthority": {
+      "title": "Competent Supervisory Authority",
+      "text": "State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia",
+      "address": "Kavalleriestraße 2-4, 40213 Düsseldorf, Germany",
+      "contact": "Phone: +49 211/38424-0, Email: poststelle@ldi.nrw.de"
+    }
+  },
+  "dataSecurity": {
+    "title": "Data Security",
+    "text": "We use the widespread SSL (Secure Socket Layer) procedure in conjunction with the highest level of encryption supported by your browser during your visit to the website. Usually, this is a 256-bit encryption. If your browser does not support 256-bit encryption, we use 128-bit v3 technology instead. You can tell whether an individual page of our website is being transmitted in encrypted form by the closed display of the key or lock symbol in the lower status bar of your browser."
+  },
+  "dataRetention": {
+    "title": "Data Retention",
+    "text": "We store personal data only for as long as is necessary for the purposes for which it is processed or as required by law. After that, the data is routinely deleted, unless there are legal retention obligations."
+  },
+  "changes": {
+    "title": "Changes to This Privacy Policy",
+    "text": "We reserve the right to adapt this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy, e.g., when introducing new services. The new privacy policy will then apply to your subsequent visits."
+  },
+  "contact": {
+    "title": "Contact the Data Protection Officer",
+    "text": "If you have any questions about the collection, processing, or use of your personal data, for information, correction, blocking, or deletion of data, as well as revocation of consent given, please contact:",
+    "name": "Data Protection Officer of Dion Hair Clinic GmbH",
+    "email": "privacy@dionhairclinic.de",
+    "phone": "+49 (0) 2161 123 4567"
+  }
+}

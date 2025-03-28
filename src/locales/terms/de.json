@@ -1,0 +1,246 @@
+{
+  "title": "Allgemeine Geschäftsbedingungen",
+  "subtitle": "Dion Hair Clinic GmbH",
+  "introduction": {
+    "title": "Einleitung",
+    "text": "Die nachfolgenden Allgemeinen Geschäftsbedingungen (AGB) regeln das Vertragsverhältnis zwischen der Dion Hair Clinic GmbH (im Folgenden \"Klinik\" genannt) und ihren Patienten. Mit der Vereinbarung eines Behandlungstermins oder der Inanspruchnahme von Leistungen der Klinik erkennt der Patient diese AGB an."
+  },
+  "scope": {
+    "title": "Geltungsbereich",
+    "text": "Diese AGB gelten für alle Verträge, die zwischen der Klinik und dem Patienten geschlossen werden, insbesondere für Behandlungsverträge im Bereich der Haartransplantation, Barthaartransplantation, Augenbrauentransplantation und Haarausfalltherapie. Sie gelten auch für alle künftigen Geschäftsbeziehungen, selbst wenn sie nicht nochmals ausdrücklich vereinbart werden."
+  },
+  "contractConclusion": {
+    "title": "Vertragsschluss",
+    "text": "Der Behandlungsvertrag kommt durch die Annahme des Behandlungsangebots der Klinik durch den Patienten zustande. Dies kann durch schriftliche Bestätigung, elektronische Kommunikation oder durch konkludentes Handeln erfolgen. Die Klinik behält sich das Recht vor, einen Vertragsschluss ohne Angabe von Gründen abzulehnen.",
+    "consultation": {
+      "title": "Beratungsgespräch",
+      "text": "Vor jeder Behandlung findet ein ausführliches Beratungsgespräch statt, in dem die individuellen Behandlungsmöglichkeiten, Risiken und zu erwartenden Ergebnisse besprochen werden. Dieses Gespräch ist unverbindlich und kostenfrei."
+    },
+    "treatmentPlan": {
+      "title": "Behandlungsplan",
+      "text": "Nach dem Beratungsgespräch erhält der Patient einen individuellen Behandlungsplan, der die Art der Behandlung, den Umfang, die voraussichtliche Dauer und die Kosten detailliert darstellt."
+    }
+  },
+  "treatmentServices": {
+    "title": "Behandlungsleistungen",
+    "general": {
+      "title": "Allgemeines",
+      "text": "Die Klinik bietet spezialisierte Behandlungen im Bereich der Haartransplantation und Haarausfalltherapie an. Die genauen Leistungen werden im individuellen Behandlungsvertrag festgelegt."
+    },
+    "hairTransplantation": {
+      "title": "Haartransplantation",
+      "text": "Die Haartransplantation wird ausschließlich mit der FUE-Methode (Follicular Unit Extraction) durchgeführt. Bei dieser Methode werden einzelne Haarfollikel direkt aus der Spenderzone (in der Regel am Hinterkopf) entnommen und in die zu behandelnden Bereiche transplantiert.",
+      "details": "Die maximale Anzahl der zu transplantierenden Grafts/Follikel, die zu behandelnden Bereiche, die angewandte Technik und die voraussichtliche Dauer des Eingriffs werden im individuellen Behandlungsvertrag festgehalten. Der Patient wird darüber informiert, dass die tatsächlich transplantierte Menge von der Qualität und Verfügbarkeit geeigneter Haarfollikel in der Spenderregion abhängt und daher unter der angegebenen maximalen Anzahl liegen kann."
+    },
+    "beardTransplantation": {
+      "title": "Barthaartransplantation",
+      "text": "Die Barthaartransplantation erfolgt nach den gleichen Grundprinzipien wie die Haartransplantation, wobei die spezifischen Anforderungen an die Bartregion berücksichtigt werden."
+    },
+    "eyebrowTransplantation": {
+      "title": "Augenbrauentransplantation",
+      "text": "Bei der Augenbrauentransplantation werden die natürlichen Wuchsrichtungen und die ästhetischen Anforderungen an die Augenbrauenform besonders berücksichtigt."
+    },
+    "hairLossTherapy": {
+      "title": "Haarausfalltherapie",
+      "text": "Die Haarausfalltherapie umfasst verschiedene Behandlungsmethoden wie PRP-Therapie, Mesotherapie und medikamentöse Behandlungen, die individuell auf den Patienten abgestimmt werden."
+    }
+  },
+  "patientObligations": {
+    "title": "Pflichten des Patienten",
+    "information": {
+      "title": "Informationspflicht",
+      "text": "Der Patient verpflichtet sich, alle relevanten Gesundheitsdaten wahrheitsgemäß und vollständig anzugeben, insbesondere Vorerkrankungen, regelmäßige Medikamenteneinnahme, bekannte Allergien, Bluthochdruck oder andere Herz-Kreislauf-Erkrankungen. Der Patient muss den Behandler über jede Änderung seines Gesundheitszustands zwischen Vertragsunterzeichnung und Behandlungstermin umgehend informieren."
+    },
+    "pretreatment": {
+      "title": "Verhalten vor der Behandlung",
+      "text": "Der Patient verpflichtet sich, 48 Stunden vor dem Eingriff keine Drogen, keinen übermäßigen Alkohol und keine nicht mit dem Behandler abgesprochenen Medikamente zu konsumieren, da diese die Wirksamkeit der örtlichen Betäubung beeinträchtigen und zu Komplikationen führen können."
+    },
+    "aftercare": {
+      "title": "Nachsorge",
+      "text": "Der Patient verpflichtet sich, die empfohlenen Verhaltensregeln zu beachten, regelmäßige Nachkontrollen wahrzunehmen und die Verhaltens- und Pflegeanweisungen des Behandlers vor und nach dem Eingriff genau zu befolgen.",
+      "documentation": "Der Patient verpflichtet sich, eine regelmäßige Fotodokumentation des Heilungsverlaufs zur Verfügung zu stellen und den Behandler umgehend zu kontaktieren, falls ungewöhnliche Symptome oder Komplikationen auftreten."
+    },
+    "restrictions": {
+      "title": "Einschränkungen nach der Behandlung",
+      "text": "Der Patient verpflichtet sich, keinen übermäßigen Sport oder körperliche Anstrengung in den ersten 4 Wochen nach dem Eingriff zu betreiben, direkte Sonneneinstrahlung auf die behandelten Bereiche für mindestens 3 Monate zu vermeiden und während der ersten 6 Monate nach dem Eingriff keine chemischen Haarfärbemittel zu verwenden."
+    }
+  },
+  "costs": {
+    "title": "Kosten und Zahlungsbedingungen",
+    "general": {
+      "title": "Allgemeines",
+      "text": "Die Kosten für die Behandlung werden im separaten Angebot bzw. in der Rechnung genau definiert und sind Bestandteil des Behandlungsvertrages."
+    },
+    "payment": {
+      "title": "Zahlungsmodalitäten",
+      "text": "Die Zahlung des gesamten Betrags erfolgt wahlweise per Überweisung, mit Zahlungseingang spätestens am Tag der Behandlung, oder in bar direkt vor Ort am Tag der Behandlung. Eine Anzahlung ist nicht erforderlich."
+    },
+    "defaultPayment": {
+      "title": "Zahlungsverzug",
+      "text": "Bei Zahlungsverzug von mehr als 14 Tagen behält sich die Klinik das Recht vor, Verzugszinsen in Höhe von 5 % p.a. zu berechnen."
+    },
+    "additionalCosts": {
+      "title": "Zusätzliche Kosten",
+      "text": "Zusätzliche Kosten, die nicht im vereinbarten Honorar enthalten sind, umfassen Kosten für zusätzliche, nicht im Vertrag genannte Leistungen und Kosten für Medikamente nach dem vereinbarten Nachsorgezeitraum."
+    }
+  },
+  "cancellation": {
+    "title": "Widerruf, Terminabsage und Nichterscheinen",
+    "revocation": {
+      "title": "Widerrufsrecht",
+      "text": "Der Patient kann seine Vertragserklärung innerhalb von 14 Tagen ohne Angabe von Gründen in Textform (z.B. Brief, E-Mail) widerrufen. Die Frist beginnt nach Erhalt dieser Belehrung in Textform, jedoch nicht vor Vertragsschluss."
+    },
+    "cancellationTerms": {
+      "title": "Stornierungsbedingungen",
+      "text": "Eine kostenfreie Stornierung ist bis zu 7 Tage vor dem vereinbarten Behandlungstermin möglich. Bei einer Stornierung innerhalb von 7 Tagen vor dem Termin wird eine Bearbeitungsgebühr in Höhe von 20 % der Behandlungskosten fällig. Bei einer Absage innerhalb von 48 Stunden vor dem Termin ist eine Gebühr von 50 % der Behandlungskosten zu zahlen. Sollte der Patient ohne vorherige Absage nicht zum vereinbarten Termin erscheinen, ist der volle Betrag der Behandlungskosten fällig, es sei denn, der Patient kann nachweisen, dass er ohne eigenes Verschulden verhindert war."
+    },
+    "medicalReasons": {
+      "title": "Absage aus medizinischen Gründen",
+      "text": "Falls die Behandlung aus medizinischen Gründen oder auf Empfehlung des Behandlers nicht durchgeführt werden kann, wird der Termin kostenfrei storniert oder verschoben."
+    },
+    "forceMajeure": {
+      "title": "Höhere Gewalt",
+      "text": "Im Falle höherer Gewalt (z. B. Pandemien, Naturkatastrophen, plötzliche Erkrankung des Behandlers) wird der Termin verschoben, ohne dass dem Patienten Kosten entstehen."
+    }
+  },
+  "liability": {
+    "title": "Haftung und Gewährleistung",
+    "general": {
+      "title": "Allgemeines",
+      "text": "Die Klinik haftet für eine fachgerechte Durchführung der Behandlung nach aktuellem medizinischen Standard. Eine Garantie für das gewünschte Endergebnis kann nicht gegeben werden, da individuelle Faktoren das Ergebnis beeinflussen können."
+    },
+    "limitationOfLiability": {
+      "title": "Haftungsbeschränkung",
+      "text": "Die Klinik haftet nur für Schäden, die durch grobe Fahrlässigkeit oder Vorsatz entstehen. Eine weitergehende Haftung, insbesondere für subjektiv nicht erfüllte Erwartungen des Patienten hinsichtlich des Ergebnisses, ist ausgeschlossen."
+    },
+    "revision": {
+      "title": "Revision",
+      "text": "Sollte das Endergebnis nicht zufriedenstellend sein bezogen auf den implantierten Bereich, so kann in Ausnahmefällen eine Revision erfolgen.",
+      "conditions": "Die Beurteilung des Endergebnisses erfolgt frühestens 12 Monate nach dem Eingriff. Ein nicht zufriedenstellendes Ergebnis liegt vor, wenn im transplantierten Bereich eine signifikant niedrigere Anwuchsrate als die durchschnittlich zu erwartenden 80-90% festgestellt wird oder wenn eine deutlich ungleichmäßige Verteilung der transplantierten Haare vorliegt.",
+      "medicalCheck": "Vor einer Revision wird eine ärztliche Abklärung mittels Bluttest durchgeführt, um mögliche Ursachen für ein vermindertes Haarwachstum zu identifizieren.",
+      "scope": "Die Revision umfasst die erneute Transplantation von Haarfollikeln in Bereiche mit unzureichendem Wachstum. Der Umfang wird individuell festgelegt, überschreitet jedoch in der Regel 30% der ursprünglich transplantierten Menge nicht.",
+      "costs": "Der Selbstkostenanteil von 750€ deckt sämtliche Kosten der Revisionsbehandlung ab, einschließlich Voruntersuchung, Eingriff und Nachsorge. Zusätzliche Kosten entstehen nur, wenn der Umfang der Revision 30% der ursprünglichen Behandlung überschreitet.",
+      "exclusions": "Eine Revision kann nicht durchgeführt werden, wenn der Patient die Nachsorgeanweisungen nicht befolgt hat, äußere Faktoren das Ergebnis negativ beeinflusst haben, medizinische Kontraindikationen vorliegen oder die Bluttests auf eine hormonelle oder gesundheitliche Ursache für das verminderte Haarwachstum hinweisen, die nicht durch eine Revision behoben werden kann."
+    }
+  },
+  "aftercare": {
+    "title": "Nachsorge",
+    "general": {
+      "title": "Allgemeines",
+      "text": "Der Patient verpflichtet sich, die vereinbarten Nachsorgetermine wahrzunehmen."
+    },
+    "appointments": {
+      "title": "Nachsorgetermine",
+      "text": "Die Termine für die zwei Nachsorgeuntersuchungen in Kombination mit den PRP-Behandlungen werden zu folgenden Zeitpunkten empfohlen: Erster Kontrolltermin: 4-6 Wochen nach dem Eingriff, Zweiter Kontrolltermin: 6-8 Monate nach dem Eingriff.",
+      "responsibility": "Der Patient wird ausdrücklich darauf hingewiesen, dass er selbst für die Vereinbarung dieser Nachsorgetermine verantwortlich ist und diese eigenständig buchen muss. Die Klinik sendet keine automatischen Erinnerungen für diese Termine."
+    },
+    "services": {
+      "title": "Nachsorgeleistungen",
+      "text": "Die Nachsorge umfasst 2 Kontrollen nach dem Eingriff in Kombination mit einer PRP Behandlung (Platelet-Rich Plasma)."
+    },
+    "warning": {
+      "title": "Hinweis",
+      "text": "Der Patient wird darauf hingewiesen, dass die Nichteinhaltung der Nachsorgetermine und -anweisungen das Behandlungsergebnis beeinträchtigen kann."
+    }
+  },
+  "photoDocumentation": {
+    "title": "Fotodokumentation",
+    "text": "Der Patient erklärt sich damit einverstanden, dass vor, während und nach der Behandlung Fotografien zu Dokumentationszwecken angefertigt werden. Diese Aufnahmen werden ausschließlich für interne medizinische Dokumentationszwecke verwendet und nicht für Werbung, wissenschaftliche Veröffentlichungen oder in sozialen Medien veröffentlicht."
+  },
+  "dataProtection": {
+    "title": "Datenschutz",
+    "text": "Der Patient erklärt sich mit der Erhebung, Verarbeitung und Nutzung seiner personenbezogenen Daten und Gesundheitsdaten zum Zwecke der Durchführung des Behandlungsvertrages einverstanden. Die erhobenen Daten werden nur so lange gespeichert, wie es für die Durchführung der Behandlung und Nachsorge notwendig ist oder gesetzliche Aufbewahrungspflichten entgegenstehen. Falls Bildaufnahmen für Dokumentationszwecke gemacht werden, wird der Patient separat gefragt, ob diese anonymisiert oder für Werbezwecke genutzt werden dürfen."
+  },
+  "medication": {
+    "title": "Medikamenteneinnahme und ergänzende Therapien",
+    "general": {
+      "title": "Allgemeines",
+      "text": "Der Patient wurde darüber informiert, dass folgende Medikamente oder Therapien das Ergebnis der Haartransplantation unterstützen können: Minoxidil-Lösung (frühestens 14 Tage nach dem Eingriff anwendbar), Finasterid (nach ärztlicher Verschreibung und Beratung), Mesotherapie (frühestens 3 Monate nach dem Eingriff möglich)."
+    },
+    "prp": {
+      "title": "PRP-Behandlungen",
+      "text": "Die im Rahmen der Nachsorge enthaltenen PRP-Behandlungen (Platelet-Rich Plasma) werden in Kombination mit den Nachsorgeterminen durchgeführt. PRP fördert die Wundheilung und kann das Haarwachstum nach der Transplantation unterstützen."
+    },
+    "additionalTherapies": {
+      "title": "Ergänzende Therapien",
+      "text": "Die Kosten für weitere ergänzende Therapien über die im Vertrag genannten Leistungen hinaus sind nicht im Preis der Haartransplantation enthalten und werden separat berechnet. Die Klinik kann diese Therapien empfehlen, der Patient ist jedoch nicht verpflichtet, diese in Anspruch zu nehmen."
+    },
+    "consultation": {
+      "title": "Rücksprache",
+      "text": "Der Patient verpflichtet sich, vor der Einnahme oder Anwendung anderer Medikamente oder Nahrungsergänzungsmittel, die Einfluss auf das Haarwachstum haben könnten, Rücksprache mit dem Behandler zu halten."
+    }
+  },
+  "quality": {
+    "title": "Garantie und Qualitätssicherung",
+    "commitment": {
+      "title": "Qualitätsverpflichtung",
+      "text": "Die Klinik verpflichtet sich zur Einhaltung höchster Qualitätsstandards bei der Durchführung der Haartransplantation."
+    },
+    "guarantees": {
+      "title": "Garantieleistungen",
+      "text": "Folgende Garantieleistungen werden gewährt: Jeder transplantierte Graft wird mit größter Sorgfalt behandelt, um die Überlebensrate zu maximieren. Die verwendeten Instrumente und Materialien entsprechen den aktuellen medizinischen Standards. Die Haartransplantation wird unter sterilen Bedingungen durchgeführt."
+    },
+    "limitation": {
+      "title": "Einschränkung",
+      "text": "Diese Garantie bezieht sich ausschließlich auf die fachgerechte Durchführung des Eingriffs. Eine Garantie für ein bestimmtes ästhetisches Ergebnis oder eine bestimmte Anwuchsrate kann aufgrund individueller biologischer Faktoren nicht gegeben werden."
+    },
+    "feedback": {
+      "title": "Qualitätssicherung",
+      "text": "Zum Zweck der Qualitätssicherung erklärt sich der Patient bereit, an Nachbefragungen und Zufriedenheitsbeurteilungen teilzunehmen. Diese Teilnahme ist freiwillig und hat keinen Einfluss auf die medizinische Versorgung oder eventuelle Revisionsbehandlungen."
+    }
+  },
+  "healthRisks": {
+    "title": "Vorbehalt bei nicht offengelegten Gesundheitsrisiken",
+    "general": {
+      "title": "Allgemeines",
+      "text": "Sollte der Patient relevante Gesundheitsinformationen wie Bluthochdruck, Herz-Kreislauf-Erkrankungen, Blutgerinnungsstörungen, Diabetes, Autoimmunerkrankungen oder die Einnahme bestimmter Medikamente verschwiegen oder falsch angegeben haben, gelten besondere Regelungen."
+    },
+    "cancellation": {
+      "title": "Absagerecht",
+      "text": "Die Klinik behält sich das Recht vor, den Eingriff am Tag der Behandlung abzusagen oder zu verschieben, wenn die Durchführung ein erhöhtes Gesundheitsrisiko für den Patienten darstellen würde."
+    },
+    "substanceUse": {
+      "title": "Drogen- und Alkoholkonsum",
+      "text": "Die Einnahme von Drogen, Alkohol oder bestimmten Medikamenten kann die Wirksamkeit der örtlichen Betäubung beeinträchtigen und/oder ein erhöhtes Komplikationsrisiko darstellen. Der Patient bestätigt ausdrücklich, dass er innerhalb von 48 Stunden vor dem Eingriff keine Drogen, übermäßigen Alkohol oder nicht mit dem Behandler abgesprochene Medikamente eingenommen hat."
+    },
+    "testing": {
+      "title": "Drogentest",
+      "text": "Bei begründetem Verdacht auf eine nicht offengelegte Drogen- oder Alkoholeinnahme behält sich die Klinik das Recht vor, einen Drogentest durchzuführen oder den Eingriff abzusagen. Der Patient erklärt sich mit der Durchführung eines solchen Tests einverstanden."
+    },
+    "cancellationFee": {
+      "title": "Ausfallgebühr",
+      "text": "Wird der Eingriff aufgrund eines positiven Drogentests oder der Weigerung, einen solchen Test durchzuführen, abgesagt, ist der Patient verpflichtet, eine Ausfallgebühr in Höhe von 50% der vereinbarten Behandlungskosten zu entrichten."
+    },
+    "liability": {
+      "title": "Haftungsausschluss",
+      "text": "Stellt sich während des Eingriffs oder danach heraus, dass der Patient relevante Gesundheitsinformationen verschwiegen hat, und führt dies zu Komplikationen oder einem nicht optimalen Behandlungsergebnis, übernimmt die Klinik keine Haftung für daraus resultierende Folgen. Der Patient trägt in diesem Fall die volle Verantwortung und hat keinen Anspruch auf kostenlose Nachbehandlungen oder eine Revision."
+    },
+    "emergencyCosts": {
+      "title": "Notfallkosten",
+      "text": "Bei schwerwiegenden Gesundheitsrisiken, die der Patient verschwiegen hat und die zu einer Notfallsituation während des Eingriffs führen, werden dem Patienten die zusätzlich entstehenden Kosten (z.B. für Notfallmedikamente, ärztliche Notfallversorgung) in Rechnung gestellt."
+    }
+  },
+  "finalProvisions": {
+    "title": "Schlussbestimmungen",
+    "amendments": {
+      "title": "Änderungen",
+      "text": "Änderungen und Ergänzungen dieses Vertrages bedürfen der Schriftform."
+    },
+    "validity": {
+      "title": "Gültigkeit",
+      "text": "Dieser Vertrag ist auch ohne Unterschrift der behandelnden Ärztin rechtsgültig. Die Unterschrift des Patienten bestätigt dessen Einwilligung in die Behandlung sowie die Zustimmung zu allen in diesem Vertrag genannten Bedingungen."
+    },
+    "severability": {
+      "title": "Salvatorische Klausel",
+      "text": "Sollten einzelne Bestimmungen dieses Vertrages unwirksam sein oder werden, so berührt dies die Wirksamkeit der übrigen Bestimmungen nicht."
+    },
+    "jurisdiction": {
+      "title": "Gerichtsstand",
+      "text": "Gerichtsstand für Streitigkeiten aus diesem Vertrag ist Mönchengladbach."
+    },
+    "applicableLaw": {
+      "title": "Anwendbares Recht",
+      "text": "Dieser Vertrag unterliegt dem Recht der Bundesrepublik Deutschland."
+    }
+  }
+}
