@@ -73,7 +73,7 @@ const FooterSection: React.FC = () => {
             {t('footer.copyright', { year: new Date().getFullYear() })}
           </div>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">{t('footer.legal.imprint')}</a>
+            <a href="/impressum" className="hover:text-white transition-colors">{t('footer.legal.imprint')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('footer.legal.privacy')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('footer.legal.terms')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('footer.legal.cookies')}</a>

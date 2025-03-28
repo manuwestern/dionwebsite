@@ -1,4 +1,4 @@
- import i18n from 'i18next';
+import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
@@ -21,6 +21,8 @@ import clinicDE from './locales/clinic/de.json';
 import clinicEN from './locales/clinic/en.json';
 import contactDE from './locales/contact/de.json';
 import contactEN from './locales/contact/en.json';
+import imprintDE from './locales/imprint/de.json';
+import imprintEN from './locales/imprint/en.json';
 
 const resources = {
   de: {
@@ -32,7 +34,8 @@ const resources = {
     eyebrowTransplantation: eyebrowTransplantationDE,
     hairLossTherapy: hairLossTherapyDE,
     clinic: clinicDE,
-    contact: contactDE
+    contact: contactDE,
+    imprint: imprintDE
   },
   en: {
     common: commonEN,
@@ -43,7 +46,8 @@ const resources = {
     eyebrowTransplantation: eyebrowTransplantationEN,
     hairLossTherapy: hairLossTherapyEN,
     clinic: clinicEN,
-    contact: contactEN
+    contact: contactEN,
+    imprint: imprintEN
   }
 };
 
@@ -59,7 +63,7 @@ i18n
     debug: false, // Set to true for development
     
     // have a common namespace used around the full app
-    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact'],
+    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact', 'imprint'],
     defaultNS: 'common',
     
     interpolation: {
