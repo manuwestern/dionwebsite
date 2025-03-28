@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage';
 import ImprintPage from './pages/ImprintPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import KnowledgePage from './pages/KnowledgePage';
 import CookieConsent from './components/cookies/CookieConsent';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/impressum" element={<ImprintPage />} />
             <Route path="/datenschutz" element={<PrivacyPage />} />
             <Route path="/agb" element={<TermsPage />} />
+            <Route path="/wissenswertes" element={<KnowledgePage />} />
           </Routes>
         </Layout>
       </Router>

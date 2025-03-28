@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -84,7 +84,7 @@ const Navigation: React.FC = () => {
             )}
           </div>
           
-          <Link to="#" className="hover:text-gray-600">{t('navigation.information')}</Link>
+          <Link to="/wissenswertes" className="hover:text-gray-600">{t('navigation.information')}</Link>
           <Link to="/klinik" className="hover:text-gray-600">{t('navigation.clinic')}</Link>
           <Link to="/kontakt" className="hover:text-gray-600">{t('navigation.contact')}</Link>
           <Link to="#" className="text-red-600 hover:text-red-700">{t('navigation.priceCalculator')}</Link>
@@ -141,7 +141,7 @@ const Navigation: React.FC = () => {
               )}
             </div>
             
-            <Link to="#" className="hover:text-gray-600">{t('navigation.information')}</Link>
+            <Link to="/wissenswertes" className="hover:text-gray-600">{t('navigation.information')}</Link>
             <Link to="/klinik" className="hover:text-gray-600">{t('navigation.clinic')}</Link>
             <Link to="/kontakt" className="hover:text-gray-600">{t('navigation.contact')}</Link>
             <Link to="#" className="text-red-600 hover:text-red-700">{t('navigation.priceCalculator')}</Link>
