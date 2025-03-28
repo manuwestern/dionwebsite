@@ -17,6 +17,8 @@ import eyebrowTransplantationDE from './locales/eyebrowTransplantation/de.json';
 import eyebrowTransplantationEN from './locales/eyebrowTransplantation/en.json';
 import hairLossTherapyDE from './locales/hairLossTherapy/de.json';
 import hairLossTherapyEN from './locales/hairLossTherapy/en.json';
+import clinicDE from './locales/clinic/de.json';
+import clinicEN from './locales/clinic/en.json';
 
 const resources = {
   de: {
@@ -26,7 +28,8 @@ const resources = {
     hairTransplantation: hairTransplantationDE,
     beardTransplantation: beardTransplantationDE,
     eyebrowTransplantation: eyebrowTransplantationDE,
-    hairLossTherapy: hairLossTherapyDE
+    hairLossTherapy: hairLossTherapyDE,
+    clinic: clinicDE
   },
   en: {
     common: commonEN,
@@ -35,7 +38,8 @@ const resources = {
     hairTransplantation: hairTransplantationEN,
     beardTransplantation: beardTransplantationEN,
     eyebrowTransplantation: eyebrowTransplantationEN,
-    hairLossTherapy: hairLossTherapyEN
+    hairLossTherapy: hairLossTherapyEN,
+    clinic: clinicEN
   }
 };
 
@@ -51,7 +55,7 @@ i18n
     debug: false, // Set to true for development
     
     // have a common namespace used around the full app
-    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy'],
+    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic'],
     defaultNS: 'common',
     
     interpolation: {
