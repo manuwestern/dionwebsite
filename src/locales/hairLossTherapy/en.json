@@ -1,0 +1,394 @@
+{
+  "heroSection": {
+    "title": "Hair Loss\nTherapy",
+    "subtitle": "Holistic Approaches for Healthy Hair Growth",
+    "welcomeText": "Our hair loss therapies are performed using state-of-the-art methods to stop your hair loss and promote new hair growth. We offer various non-surgical procedures that are individually tailored to your needs."
+  },
+  "methodsSection": {
+    "title": "Our Hair Loss Therapy Methods",
+    "subtitle": "Specialized techniques for optimal results - Compare our innovative methods and find the perfect solution for your individual needs",
+    "sectionLabels": {
+      "benefits": "Benefits",
+      "process": "Process"
+    },
+    "learnMore": "Learn more",
+    "additionalInfo": {
+      "personalConsultation": {
+        "title": "Personalized Consultation",
+        "description": "Each hair loss therapy has its own advantages and is particularly suitable for specific situations. In a personal consultation, we analyze your individual situation and recommend the optimal method for you. Our experts consider factors such as your hair structure, the extent of hair loss, and your personal preferences."
+      },
+      "combinedTechniques": {
+        "title": "Combined Techniques",
+        "description": "In many cases, we achieve the best results by combining different techniques. For example, we can combine medication therapy with PRP and targeted nutrient therapy. This tailored approach allows us to find the optimal solution for each patient and achieve natural-looking, lasting results."
+      }
+    },
+    "methods": [
+      {
+        "title": "Medication Therapy",
+        "subtitle": "Scientifically proven active ingredients",
+        "image": "mesotherapie.png",
+        "description": "Medication therapy involves the application of scientifically proven active ingredients that promote hair growth and stop hair loss.",
+        "benefits": [
+          "Simple and convenient application",
+          "Scientifically proven effectiveness",
+          "Stops active hair loss",
+          "Promotes the growth of new hair"
+        ],
+        "process": [
+          "Detailed hair analysis and consultation",
+          "Individual selection of suitable active ingredients",
+          "Regular application according to medical instructions",
+          "Regular check-ups to monitor progress"
+        ],
+        "idealFor": "Ideal for: Early hair loss, long-term prevention"
+      },
+      {
+        "title": "PRP Therapy",
+        "subtitle": "Autologous blood treatment",
+        "image": "haaranalyse.png",
+        "description": "PRP therapy (Platelet-Rich Plasma) uses growth factors from your own blood to stimulate hair follicles and promote hair growth.",
+        "benefits": [
+          "Natural method without chemicals",
+          "Stimulates hair follicles and improves blood circulation",
+          "Strengthens existing hair and promotes new growth",
+          "Minimal side effects due to body's own substances"
+        ],
+        "process": [
+          "Taking a small amount of blood",
+          "Processing the blood to obtain platelet-rich plasma",
+          "Targeted injection of PRP into the scalp",
+          "Repeating the treatment at regular intervals"
+        ],
+        "idealFor": "Ideal for: Diffuse hair loss, thickening thinning hair"
+      },
+      {
+        "title": "Nutrient Therapy",
+        "subtitle": "Targeted micronutrients",
+        "image": "hairselection.jpeg",
+        "description": "Nutrient therapy supplies hair follicles with important vitamins, minerals, and trace elements that are essential for healthy hair growth.",
+        "benefits": [
+          "Remedies nutrient deficiencies that can cause hair loss",
+          "Strengthens hair structure from within",
+          "Improves overall scalp health",
+          "Optimally supports other hair loss therapies"
+        ],
+        "process": [
+          "Comprehensive blood analysis to identify nutrient deficiencies",
+          "Individually compiled nutrient combination",
+          "Oral intake or direct injection into the scalp",
+          "Regular adjustment of nutrient composition"
+        ],
+        "idealFor": "Ideal for: Nutrient-related hair loss, supportive therapy"
+      }
+    ]
+  },
+  "hairLossTypesSection": {
+    "title": "Hair Loss Types & Treatment Options",
+    "description": "Each type of hair loss requires an individual treatment approach. Here is an overview of the most common types and the corresponding treatment options.",
+    "recommendedTherapy": "Recommended Therapy",
+    "expectedResults": "Expected Results",
+    "idealForYourHairType": "Ideal for your hair type",
+    "additionalInfo": {
+      "individualConsultation": {
+        "title": "Individual Consultation",
+        "description": "Each hair loss type is unique and requires an individual treatment strategy. In a personal consultation, we analyze your specific type and develop a customized treatment plan."
+      },
+      "modernTechniques": {
+        "title": "Modern Techniques",
+        "description": "Our advanced therapy methods enable us to achieve good results even with advanced hair loss. We adapt the method to your individual hair loss type."
+      },
+      "longTermResults": {
+        "title": "Long-term Results",
+        "description": "Through our holistic approach, we achieve not only immediate but also long-term results. We consider future hair loss and plan the treatment accordingly."
+      }
+    },
+    "types": [
+      {
+        "title": "Androgenetic Hair Loss",
+        "description": "Hereditary hair loss caused by hormones",
+        "therapy": "Medication therapy, PRP",
+        "results": "Slowing of hair loss, partial regrowth"
+      },
+      {
+        "title": "Diffuse Hair Loss",
+        "description": "Even hair loss across the entire head",
+        "therapy": "Nutrient therapy, PRP",
+        "results": "Significant improvement in hair density"
+      },
+      {
+        "title": "Alopecia Areata",
+        "description": "Sudden hair loss in circular areas",
+        "therapy": "PRP, medication therapy",
+        "results": "Often complete restoration"
+      },
+      {
+        "title": "Stress-induced Hair Loss",
+        "description": "Temporary hair loss due to physical or emotional stress",
+        "therapy": "Nutrient therapy, PRP",
+        "results": "Complete restoration in most cases"
+      },
+      {
+        "title": "Nutrient Deficiency Hair Loss",
+        "description": "Hair loss due to lack of important vitamins and minerals",
+        "therapy": "Nutrient therapy",
+        "results": "Complete restoration after remedying the deficiency"
+      },
+      {
+        "title": "Hormone-related Hair Loss",
+        "description": "Hair loss due to hormonal changes (e.g., after pregnancy)",
+        "therapy": "Medication therapy, nutrient therapy",
+        "results": "Good restoration after hormone stabilization"
+      }
+    ]
+  },
+  "benefitsSection": {
+    "title": "Why Dion Hair Clinic?",
+    "subtitle": "The benefits of hair loss therapy with us - Learn why our clinic is the first choice for discerning patients who value quality and expertise",
+    "learnMore": "Learn more",
+    "cta": {
+      "title": "Schedule a Personal Consultation",
+      "description": "Discover how we can help you regain your confidence. In a personal consultation, we analyze your individual situation and develop a customized treatment plan."
+    },
+    "cards": [
+      {
+        "title": "Experienced Expert Team",
+        "description": "Our team consists of highly qualified specialists with years of experience in treating hair loss, who regularly participate in continuing education."
+      },
+      {
+        "title": "State-of-the-art Procedures",
+        "description": "We use innovative techniques such as PRP and advanced medication therapies that are proven effective and enable natural results."
+      },
+      {
+        "title": "Holistic Concept",
+        "description": "Our 360° approach includes not only therapy but also hair analysis, nutritional counseling, and complementary treatments for optimal results."
+      },
+      {
+        "title": "Individual Consultation",
+        "description": "Each patient receives a customized treatment plan tailored to their specific needs, hair structure, and wishes."
+      },
+      {
+        "title": "Long-term Aftercare",
+        "description": "We accompany you even after treatment with regular check-ups and supportive therapies for the best long-term results."
+      },
+      {
+        "title": "No Foreign Travel Necessary",
+        "description": "Enjoy the highest medical standards in Germany without language barriers, long journeys, or risks due to lack of aftercare abroad."
+      }
+    ]
+  },
+  "processSection": {
+    "title": "The Treatment Process",
+    "subtitle": "Your path to healthier hair - Transparent presentation of all steps from initial planning to the final result of your hair loss therapy",
+    "expertiseTitle": "Our Expertise for Your Perfect Result",
+    "advantages": [
+      {
+        "title": "Comprehensive Hair Analysis",
+        "description": "We conduct a detailed analysis of your scalp and hair structure to precisely determine the causes of your hair loss and develop the optimal treatment strategy."
+      },
+      {
+        "title": "Individual Therapy Plan",
+        "description": "Based on the results of the hair analysis, we create a customized therapy plan that is specifically tailored to your needs and goals."
+      },
+      {
+        "title": "Combined Treatment Approaches",
+        "description": "We combine different therapy methods to maximize effectiveness and both stop hair loss and promote new hair growth."
+      },
+      {
+        "title": "Long-term Support",
+        "description": "Our care does not end with the treatment. We accompany you long-term with regular check-ups and adjustments to your therapy plan."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Diagnosis",
+        "description": "In the diagnostic phase, we conduct a comprehensive hair analysis to identify the causes of your hair loss. With state-of-the-art technologies such as digital microscopy and blood tests, we obtain a detailed picture of your hair situation."
+      },
+      {
+        "title": "Therapy Plan",
+        "description": "Based on the results of the diagnosis, we develop an individual therapy plan that combines the optimal treatment methods for you. We consider your personal goals and needs."
+      },
+      {
+        "title": "Treatment",
+        "description": "The treatment phase includes the implementation of selected therapies, such as medication treatments, PRP injections, or nutrient therapies. All treatments are performed by our experienced specialists."
+      },
+      {
+        "title": "Aftercare",
+        "description": "The aftercare phase is crucial for long-term success. We accompany you with regular check-ups, adjust your therapy plan if necessary, and give you recommendations for optimal hair care at home."
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Success Stories from Our Patients",
+    "subtitle": "Experience reports and results - Read authentic reviews from satisfied patients who have undergone hair loss therapy with us",
+    "intro": "Our patients share their experiences and results after hair loss therapy at the Dion Hair Clinic.",
+    "beforeAfterTitle": "Before / After Results",
+    "before": "Before",
+    "after": "After",
+    "ctaSection": {
+      "title": "Become Our Next Success Story",
+      "description": "Join our satisfied patients and experience for yourself how hair loss therapy can change your life. Schedule a free consultation today and get advice from our experts."
+    },
+    "testimonials": [
+      {
+        "name": "Michael K., 42",
+        "rating": 5,
+        "text": "After years of hair loss, I decided to undergo hair loss therapy at the Dion Hair Clinic. The result exceeded my expectations. The team was professional and empathetic, and I feel confident again.",
+        "procedure": "PRP Therapy & Medication Treatment",
+        "date": "March 2024"
+      },
+      {
+        "name": "Thomas S., 38",
+        "rating": 5,
+        "text": "The consultation was thorough and honest. Dr. Dion explained exactly what was possible and what wasn't. After the treatment, I received excellent care. My hair is significantly thicker and the hair loss has stopped.",
+        "procedure": "Nutrient Therapy & PRP",
+        "date": "January 2024"
+      },
+      {
+        "name": "Sandra M., 45",
+        "rating": 5,
+        "text": "As a woman, it was particularly important to me to find a specialist with experience in female hair loss. At the Dion Hair Clinic, I felt in good hands from the start. The treatment was painless and the results are fantastic.",
+        "procedure": "Medication Therapy & Nutrient Therapy",
+        "date": "November 2023"
+      }
+    ],
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Satisfied Patients"
+      },
+      {
+        "value": "5,000+",
+        "label": "Successful Treatments"
+      },
+      {
+        "value": "15+",
+        "label": "Years of Experience"
+      }
+    ],
+    "cta": "Schedule your free consultation now"
+  },
+  "careSection": {
+    "title": "Dion App - Your Companion for Your Therapy",
+    "subtitle": "Your digital assistant for optimal therapy support - Our innovative smartphone app supports you throughout the entire treatment process with personalized instructions and reminders",
+    "description": "With the Dion App, we offer you a comprehensive digital assistant as a smartphone app that guides you through the entire process of your hair loss therapy - from preparation to treatment to long-term aftercare.",
+    "subheading": "Your digital assistant for the entire treatment process",
+    "features": [
+      {
+        "title": "Appointment Planning",
+        "description": "Overview of all important appointments before and after treatment"
+      },
+      {
+        "title": "Checklists",
+        "description": "Personalized to-do lists for optimal therapy support"
+      },
+      {
+        "title": "Instructions",
+        "description": "Detailed instructions for using your medications and care products"
+      },
+      {
+        "title": "Progress Documentation",
+        "description": "Document your growth progress with photos and notes"
+      },
+      {
+        "title": "Reminders",
+        "description": "Automatic notifications for important therapy steps"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Access to all functions via our user-friendly app"
+      }
+    ],
+    "appContent": {
+      "progress": "Your Progress",
+      "day1": "Day 1",
+      "month3": "3 Months",
+      "month12": "12 Months",
+      "todayTasks": "Today's Tasks",
+      "task1": "Take medications",
+      "task2": "Perform scalp massage",
+      "task3": "Take progress photo",
+      "nextAppointment": "Next Appointment",
+      "appointmentDetails": "PRP Treatment: April 15, 2025, 2:00 PM"
+    },
+    "appStoreInfo": "Available for Android and iPhone – Download the app for free from the Google Play Store or Apple App Store.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "analysisSection": {
+    "premiumOption": "Premium Option",
+    "title": "Comprehensive Hair Analysis",
+    "subtitle": "State-of-the-art diagnostics for precise results - Our advanced analysis method enables accurate determination of the causes of your hair loss",
+    "description": "Experience a revolutionary hair analysis with cutting-edge technology. Our comprehensive diagnostics combine digital microscopy, blood tests, and genetic analyses to identify the exact causes of your hair loss and develop a customized therapy plan.",
+    "learnMore": "Learn more about hair analysis",
+    "additionalFee": "Included in the therapy price",
+    "benefitsTitle": "Benefits of our Hair Analysis",
+    "features": [
+      {
+        "title": "Precise Diagnosis",
+        "description": "Our advanced analysis method enables accurate determination of the causes of your hair loss, which forms the basis for successful therapy."
+      },
+      {
+        "title": "Digital Microscopy",
+        "description": "With high-resolution digital microscopy, we examine your scalp and hair follicles in detail to detect changes and problems early."
+      },
+      {
+        "title": "Comprehensive Blood Analysis",
+        "description": "Through a detailed blood test, we identify nutrient deficiencies, hormonal disorders, and other factors that may contribute to your hair loss."
+      },
+      {
+        "title": "Individual Therapy Plan",
+        "description": "Based on the results of the hair analysis, we develop a customized therapy plan that is specifically tailored to your needs and goals."
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to your questions about hair loss therapy - Comprehensive information on procedures, costs, risks, and results of our treatments",
+    "faqs": [
+      {
+        "question": "Which method is best suited for me?",
+        "answer": "The best method depends on various factors, such as the cause of hair loss, the extent of hair loss, and your personal preferences. In a personal consultation, we can determine the optimal method for you."
+      },
+      {
+        "question": "How long does it take to see results?",
+        "answer": "The first results are usually visible after 3-4 months. The full effect of the therapy becomes apparent after about 6-12 months of regular treatment. The exact timeframe depends on the chosen therapy method and your individual response to the treatment."
+      },
+      {
+        "question": "Are the results of hair loss therapy permanent?",
+        "answer": "The results can be permanent if the therapy is consistently continued. For hormone-related hair loss, maintenance therapy is often necessary to secure the results in the long term. We advise you in detail about the necessary measures to maintain your results."
+      },
+      {
+        "question": "Is the treatment painful?",
+        "answer": "Most hair loss therapies are painless or cause only minimal discomfort. With PRP therapy, slight pain may occur during the injection, which can be minimized by the application of local anesthetics."
+      },
+      {
+        "question": "How much does hair loss therapy cost?",
+        "answer": "The cost of hair loss therapy depends on various factors, particularly the chosen method and the duration of treatment. At the Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you."
+      },
+      {
+        "question": "Who is hair loss therapy suitable for?",
+        "answer": "Hair loss therapy is suitable for men and women of all ages who suffer from hair loss. It is particularly effective for early hair loss, diffuse hair loss, stress-induced hair loss, and hair loss due to nutrient deficiency. Good results can also be achieved with hormone-related hair loss."
+      },
+      {
+        "question": "Are there risks or side effects?",
+        "answer": "The risks and side effects of hair loss therapies are generally minimal. With medication therapies, side effects may occur in rare cases, about which we will inform you in detail. PRP therapy and nutrient therapy are very safe as they work with the body's own substances or natural nutrients."
+      },
+      {
+        "question": "How often do I need to come for treatment?",
+        "answer": "The frequency of treatments depends on the chosen therapy method. For PRP therapy, typically 3-4 treatments at intervals of 4-6 weeks are required, followed by maintenance treatments every 6-12 months. Medication therapies are performed daily at home, with regular check-ups at our clinic."
+      },
+      {
+        "question": "Can hair loss therapy be combined with a hair transplant?",
+        "answer": "Yes, hair loss therapy can be very well combined with a hair transplant. The therapy can be performed before a transplant to stabilize hair loss and optimally prepare the scalp. After a transplant, it helps to strengthen the transplanted hair and promote growth."
+      },
+      {
+        "question": "How does a treatment in Germany differ from offers abroad?",
+        "answer": "In Germany, hair loss therapies are subject to strict medical standards and quality controls. At the Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, only experienced specialists perform the treatment with us."
+      },
+      {
+        "question": "How realistic are the results?",
+        "answer": "The results of hair loss therapy are usually very natural as they promote the growth of your own hair. The effectiveness depends on various factors, such as the cause of hair loss, the time of treatment initiation, and your individual response to the therapy. In a personal consultation, we can give you a realistic assessment of the expected results."
+      }
+    ]
+  }
+}

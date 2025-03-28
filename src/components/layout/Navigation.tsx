@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
                     {t('footer.services.eyebrowTransplant')}
                   </Link>
                   <Link 
-                    to="#" 
+                    to="/haarausfalltherapie" 
                     className="hover:text-gray-600"
                     onClick={() => setIsTreatmentsOpen(false)}
                   >
@@ -131,7 +131,7 @@ const Navigation: React.FC = () => {
                     {t('footer.services.eyebrowTransplant')}
                   </Link>
                   <Link 
-                    to="#" 
+                    to="/haarausfalltherapie" 
                     className="hover:text-gray-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
