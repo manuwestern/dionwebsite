@@ -1,8 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import HeroSection from '../components/clinic/HeroSection';
-import AboutSection from '../components/clinic/AboutSection';
-import FacilitySection from '../components/clinic/FacilitySection';
 import TeamSection from '../components/clinic/TeamSection';
 import TechnologySection from '../components/clinic/TechnologySection';
 import QualitySection from '../components/clinic/QualitySection';
@@ -133,14 +131,6 @@ const ClinicPage: React.FC = () => {
       {/* Main Content */}
       <SectionWrapper type="hero">
         <HeroSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="light">
-        <AboutSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="medium">
-        <FacilitySection />
       </SectionWrapper>
       
       <SectionWrapper type="light">
