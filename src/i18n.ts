@@ -1,4 +1,4 @@
-import i18n from 'i18next';
+ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
@@ -19,6 +19,8 @@ import hairLossTherapyDE from './locales/hairLossTherapy/de.json';
 import hairLossTherapyEN from './locales/hairLossTherapy/en.json';
 import clinicDE from './locales/clinic/de.json';
 import clinicEN from './locales/clinic/en.json';
+import contactDE from './locales/contact/de.json';
+import contactEN from './locales/contact/en.json';
 
 const resources = {
   de: {
@@ -29,7 +31,8 @@ const resources = {
     beardTransplantation: beardTransplantationDE,
     eyebrowTransplantation: eyebrowTransplantationDE,
     hairLossTherapy: hairLossTherapyDE,
-    clinic: clinicDE
+    clinic: clinicDE,
+    contact: contactDE
   },
   en: {
     common: commonEN,
@@ -39,7 +42,8 @@ const resources = {
     beardTransplantation: beardTransplantationEN,
     eyebrowTransplantation: eyebrowTransplantationEN,
     hairLossTherapy: hairLossTherapyEN,
-    clinic: clinicEN
+    clinic: clinicEN,
+    contact: contactEN
   }
 };
 
@@ -55,7 +59,7 @@ i18n
     debug: false, // Set to true for development
     
     // have a common namespace used around the full app
-    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic'],
+    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact'],
     defaultNS: 'common',
     
     interpolation: {

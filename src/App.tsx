@@ -7,6 +7,7 @@ import BeardTransplantationPage from './pages/BeardTransplantationPage';
 import EyebrowTransplantationPage from './pages/EyebrowTransplantationPage';
 import HairLossTherapyPage from './pages/HairLossTherapyPage';
 import ClinicPage from './pages/ClinicPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
           <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} />
           <Route path="/klinik" element={<ClinicPage />} />
+          <Route path="/kontakt" element={<ContactPage />} />
         </Routes>
       </Layout>
     </Router>

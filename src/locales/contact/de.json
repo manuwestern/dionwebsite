@@ -1,0 +1,75 @@
+{
+  "heroSection": {
+    "title": "Kontakt",
+    "subtitle": "Wir sind für Sie da",
+    "welcomeText": "Haben Sie Fragen zu unseren Behandlungen oder möchten Sie einen Beratungstermin vereinbaren? Unser Team steht Ihnen mit persönlicher Beratung und Unterstützung zur Seite."
+  },
+  "contactInfo": {
+    "title": "Kontaktmöglichkeiten",
+    "description": "Sie können uns über verschiedene Kanäle erreichen. Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten.",
+    "address": {
+      "title": "Besuchen Sie unsere Klinik",
+      "line1": "Dion Hair Clinic",
+      "line2": "Hindenburgstraße 45",
+      "line3": "41061 Mönchengladbach",
+      "line4": "Deutschland"
+    },
+    "phone": {
+      "title": "Rufen Sie uns an",
+      "number": "+49 (0) 2161 123 4567",
+      "hours": "Montag - Freitag: 9:00 - 18:00 Uhr"
+    },
+    "email": {
+      "title": "Schreiben Sie uns",
+      "address": "info@dionhairclinic.de",
+      "response": "Wir antworten auf alle E-Mails innerhalb von 24 Stunden"
+    },
+    "social": {
+      "title": "Folgen Sie uns",
+      "description": "Bleiben Sie über unsere neuesten Nachrichten und Ergebnisse in den sozialen Medien auf dem Laufenden"
+    }
+  },
+  "formSection": {
+    "title": "Senden Sie uns eine Nachricht",
+    "description": "Füllen Sie das untenstehende Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden.",
+    "nameLabel": "Ihr Name",
+    "namePlaceholder": "Geben Sie Ihren vollständigen Namen ein",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "phoneLabel": "Telefonnummer (optional)",
+    "phonePlaceholder": "Geben Sie Ihre Telefonnummer ein",
+    "subjectLabel": "Betreff",
+    "subjectPlaceholder": "Worum geht es in Ihrer Anfrage?",
+    "messageLabel": "Ihre Nachricht",
+    "messagePlaceholder": "Bitte geben Sie Details zu Ihrer Anfrage an...",
+    "consentText": "Ich stimme zu, dass die Dion Hair Clinic meine persönlichen Daten gemäß ihrer Datenschutzrichtlinie verarbeitet.",
+    "submitButton": "Nachricht senden",
+    "successMessage": "Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden."
+  },
+  "faqSection": {
+    "title": "Häufig gestellte Fragen",
+    "description": "Finden Sie schnelle Antworten auf häufige Fragen zu unseren Dienstleistungen und Beratungen.",
+    "faqs": [
+      {
+        "question": "Wie vereinbare ich einen Beratungstermin?",
+        "answer": "Sie können einen Beratungstermin vereinbaren, indem Sie unser Kontaktformular ausfüllen, uns direkt anrufen oder uns eine E-Mail senden. Unser Team wird sich umgehend bei Ihnen melden, um einen passenden Termin zu vereinbaren."
+      },
+      {
+        "question": "Sind Beratungen kostenlos?",
+        "answer": "Ja, Erstberatungen sind völlig kostenlos. Wir möchten Ihnen alle Informationen zur Verfügung stellen, die Sie für eine fundierte Entscheidung benötigen, ohne jegliche Verpflichtung."
+      },
+      {
+        "question": "Kann ich eine virtuelle Beratung erhalten?",
+        "answer": "Selbstverständlich! Wir bieten virtuelle Beratungen per Videoanruf für Patienten an, die unsere Klinik nicht persönlich besuchen können. Dies ist eine bequeme Möglichkeit, Ihre Anliegen zu besprechen und persönliche Beratung zu erhalten."
+      },
+      {
+        "question": "Welche Informationen sollte ich für meine Beratung vorbereiten?",
+        "answer": "Es ist hilfreich, Informationen über Ihre Krankengeschichte, Medikamente, die Sie einnehmen, und gegebenenfalls Fotos Ihres Haar-/Kopfhautzustands bereitzuhalten. Für persönliche Beratungen ist keine besondere Vorbereitung erforderlich."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "So finden Sie uns",
+    "description": "Unsere Klinik befindet sich zentral in Mönchengladbach, mit guter Anbindung an öffentliche Verkehrsmittel und Parkmöglichkeiten in der Nähe."
+  }
+}

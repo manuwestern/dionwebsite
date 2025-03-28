@@ -1,0 +1,75 @@
+{
+  "heroSection": {
+    "title": "Contact Us",
+    "subtitle": "We're Here to Help",
+    "welcomeText": "Have questions about our treatments or want to schedule a consultation? Our team is ready to assist you with personalized advice and support."
+  },
+  "contactInfo": {
+    "title": "Get in Touch",
+    "description": "Feel free to reach out to us through any of the following channels. We strive to respond to all inquiries within 24 hours.",
+    "address": {
+      "title": "Visit Our Clinic",
+      "line1": "Dion Hair Clinic",
+      "line2": "Hindenburgstraße 45",
+      "line3": "41061 Mönchengladbach",
+      "line4": "Germany"
+    },
+    "phone": {
+      "title": "Call Us",
+      "number": "+49 (0) 2161 123 4567",
+      "hours": "Monday - Friday: 9:00 - 18:00"
+    },
+    "email": {
+      "title": "Email Us",
+      "address": "info@dionhairclinic.de",
+      "response": "We respond to all emails within 24 hours"
+    },
+    "social": {
+      "title": "Follow Us",
+      "description": "Stay updated with our latest news and results on social media"
+    }
+  },
+  "formSection": {
+    "title": "Send Us a Message",
+    "description": "Fill out the form below and we'll get back to you as soon as possible.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your full name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "phoneLabel": "Phone Number (optional)",
+    "phonePlaceholder": "Enter your phone number",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What is your inquiry about?",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "Please provide details about your inquiry...",
+    "consentText": "I consent to Dion Hair Clinic processing my personal data in accordance with their privacy policy.",
+    "submitButton": "Send Message",
+    "successMessage": "Thank you for your message! We'll get back to you shortly."
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "description": "Find quick answers to common questions about our services and consultations.",
+    "faqs": [
+      {
+        "question": "How do I schedule a consultation?",
+        "answer": "You can schedule a consultation by filling out our contact form, calling us directly, or sending us an email. Our team will get back to you promptly to arrange a convenient time."
+      },
+      {
+        "question": "Are consultations free?",
+        "answer": "Yes, initial consultations are completely free of charge. We believe in providing you with all the information you need to make an informed decision without any obligation."
+      },
+      {
+        "question": "Can I have a virtual consultation?",
+        "answer": "Absolutely! We offer virtual consultations via video call for patients who cannot visit our clinic in person. This is a convenient way to discuss your concerns and get personalized advice."
+      },
+      {
+        "question": "What information should I prepare for my consultation?",
+        "answer": "It's helpful to have information about your medical history, any medications you're taking, and photos of your hair/scalp condition if applicable. For in-person consultations, no special preparation is needed."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "Find Us",
+    "description": "Our clinic is conveniently located in the heart of Mönchengladbach, with easy access to public transportation and parking facilities nearby."
+  }
+}

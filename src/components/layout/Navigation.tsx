@@ -86,7 +86,7 @@ const Navigation: React.FC = () => {
           
           <Link to="#" className="hover:text-gray-600">{t('navigation.information')}</Link>
           <Link to="/klinik" className="hover:text-gray-600">{t('navigation.clinic')}</Link>
-          <Link to="#" className="hover:text-gray-600">{t('navigation.contact')}</Link>
+          <Link to="/kontakt" className="hover:text-gray-600">{t('navigation.contact')}</Link>
           <Link to="#" className="text-red-600 hover:text-red-700">{t('navigation.priceCalculator')}</Link>
         </div>
       </div>
@@ -143,7 +143,7 @@ const Navigation: React.FC = () => {
             
             <Link to="#" className="hover:text-gray-600">{t('navigation.information')}</Link>
             <Link to="/klinik" className="hover:text-gray-600">{t('navigation.clinic')}</Link>
-            <Link to="#" className="hover:text-gray-600">{t('navigation.contact')}</Link>
+            <Link to="/kontakt" className="hover:text-gray-600">{t('navigation.contact')}</Link>
             <Link to="#" className="text-red-600 hover:text-red-700">{t('navigation.priceCalculator')}</Link>
           </div>
         </div>
