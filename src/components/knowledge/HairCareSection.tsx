@@ -72,10 +72,10 @@ const HairCareSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {careItems.map((item) => {
             const isHovered = item.id === hoverItem;
-            
+
             return (
               <div
                 key={item.id}
@@ -101,14 +101,14 @@ const HairCareSection: React.FC = () => {
                         {item.title}
                       </h3>
                     </div>
-                    
+
                     {/* Description */}
                     <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow`}>
                       {item.text}
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Decorative elements */}
                 <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
                   isHovered ? 'opacity-70' : 'opacity-0'
@@ -116,24 +116,6 @@ const HairCareSection: React.FC = () => {
               </div>
             );
           })}
-        </div>
-        
-        {/* Additional information */}
-        <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
-          <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="md:w-1/2">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairCare.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                {t('hairCare.subtitle')}
-              </p>
-            </div>
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairCare.dietTitle')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                {t('hairCare.dietText')}
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

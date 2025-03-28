@@ -6,7 +6,6 @@ import HairLossCausesSection from '../components/knowledge/HairLossCausesSection
 import HairCareSection from '../components/knowledge/HairCareSection';
 import TransplantCareSection from '../components/knowledge/TransplantCareSection';
 import HairFactsSection from '../components/knowledge/HairFactsSection';
-import MythsFactsSection from '../components/knowledge/MythsFactsSection';
 import NutritionSection from '../components/knowledge/NutritionSection';
 
 const KnowledgePage: React.FC = () => {
@@ -24,7 +23,6 @@ const KnowledgePage: React.FC = () => {
       <HairCareSection />
       <TransplantCareSection />
       <HairFactsSection />
-      <MythsFactsSection />
       <NutritionSection />
     </>
   );

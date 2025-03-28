@@ -117,24 +117,6 @@ const TransplantCareSection: React.FC = () => {
             );
           })}
         </div>
-        
-        {/* Additional information */}
-        <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
-          <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="md:w-1/2">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('transplantCare.beforeTitle')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                {t('transplantCare.beforeText')}
-              </p>
-            </div>
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('transplantCare.afterTitle')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                {t('transplantCare.afterText')}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
