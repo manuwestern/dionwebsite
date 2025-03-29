@@ -1,11 +1,8 @@
 import React from 'react';
 import HeroSection from '../components/hairLossTherapy/HeroSection';
 import BenefitsSection from '../components/hairLossTherapy/BenefitsSection';
-import TestimonialsSection from '../components/hairLossTherapy/TestimonialsSection';
 import MethodsSection from '../components/hairLossTherapy/MethodsSection';
-import HairLossTypesSection from '../components/hairLossTherapy/HairLossTypesSection';
 import AnalysisSection from '../components/hairLossTherapy/AnalysisSection';
-import CareSection from '../components/hairLossTherapy/CareSection';
 import FAQSection from '../components/hairLossTherapy/FAQSection';
 import ContactSection from '../components/layout/ContactSection';
 
@@ -77,20 +74,8 @@ const HairLossTherapyPage: React.FC = () => {
         <MethodsSection />
       </SectionWrapper>
       
-      <SectionWrapper type="medium">
-        <HairLossTypesSection />
-      </SectionWrapper>
-      
       <SectionWrapper type="accent" className="py-4">
         <AnalysisSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="medium">
-        <CareSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="accent">
-        <TestimonialsSection />
       </SectionWrapper>
       
       <SectionWrapper type="light">

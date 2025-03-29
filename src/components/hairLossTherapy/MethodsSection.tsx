@@ -30,7 +30,7 @@ const MethodsSection: React.FC = () => {
         </div>
 
         {/* Methods Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {methods.map((method, index) => {
             const isHovered = index === hoverMethod;
             
@@ -69,51 +69,57 @@ const MethodsSection: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Method Content */}
-                  <div className="p-4 sm:p-6 md:p-8">
-                    {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
-                      {method.description}
-                    </p>
+                  {/* Method Content - Fixed layout with consistent positioning */}
+                  <div className="p-4 sm:p-6 md:p-8 flex flex-col h-[600px]">
+                    {/* Description - Fixed height */}
+                    <div className="h-[100px]">
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} overflow-y-auto h-full`}>
+                        {method.description}
+                      </p>
+                    </div>
                     
-                    {/* Benefits section */}
-                    <div className="mb-8">
+                    {/* Benefits section - Fixed position and height */}
+                    <div className="mt-4">
                       <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
                         <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
                         {t('methodsSection.sectionLabels.benefits')}
                       </h4>
-                      <ul className="grid gap-3">
-                        {method.benefits.map((benefit: string, i: number) => (
-                          <li key={i} className="flex items-start group">
-                            <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
-                              <Check className="h-3 w-3 text-[#7BA7C2]" />
-                            </div>
-                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="h-[180px] overflow-y-auto">
+                        <ul className="grid gap-3">
+                          {method.benefits.map((benefit: string, i: number) => (
+                            <li key={i} className="flex items-start group">
+                              <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
+                                <Check className="h-3 w-3 text-[#7BA7C2]" />
+                              </div>
+                              <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                     
-                    {/* Process section */}
-                    <div className="mb-8">
+                    {/* Process section - Fixed position and height */}
+                    <div className="mt-6">
                       <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
                         <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
                         {t('methodsSection.sectionLabels.process')}
                       </h4>
-                      <ol className="grid gap-4">
-                        {method.process.map((step: string, i: number) => (
-                          <li key={i} className="flex items-start">
-                            <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#7BA7C2]/10 text-[#7BA7C2] flex items-center justify-center font-medium text-sm transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
-                              {i + 1}
-                            </div>
-                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{step}</span>
-                          </li>
-                        ))}
-                      </ol>
+                      <div className="h-[180px] overflow-y-auto">
+                        <ol className="grid gap-4">
+                          {method.process.map((step: string, i: number) => (
+                            <li key={i} className="flex items-start">
+                              <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#7BA7C2]/10 text-[#7BA7C2] flex items-center justify-center font-medium text-sm transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
+                                {i + 1}
+                              </div>
+                              <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{step}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
                     </div>
                     
-                    {/* Ideal for section */}
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
+                    {/* Ideal for section - Fixed at bottom */}
+                    <div className="mt-auto pt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                       <span className={`inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-[#7BA7C2]/10 rounded-full ${fontSize.sm} ${fontWeight.normal} ${textColor.primary} transition-all duration-300 group-hover:bg-[#7BA7C2]/15`}>
                         {method.idealFor}
                       </span>
