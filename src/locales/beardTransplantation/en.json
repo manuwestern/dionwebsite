@@ -85,39 +85,27 @@
     },
     "patterns": [
       {
-        "title": "Full Beard with Gaps",
-        "description": "Uneven beard growth with bald spots",
-        "grafts": "800-1,500",
-        "treatment": "1 Session"
-      },
-      {
-        "title": "Chin Beard",
-        "description": "Focused treatment of the chin area",
-        "grafts": "600-1,200",
-        "treatment": "1 Session"
-      },
-      {
-        "title": "Mustache",
-        "description": "Densification or redesign of the upper lip area",
-        "grafts": "300-700",
-        "treatment": "1 Session"
-      },
-      {
-        "title": "Sideburns",
-        "description": "Design or densification of the cheek area",
-        "grafts": "400-800",
-        "treatment": "1 Session"
-      },
-      {
         "title": "Complete Beard",
-        "description": "Comprehensive treatment for a full beard",
+        "description": "Comprehensive treatment for a full beard with optimal density",
         "grafts": "1,500-3,000",
         "treatment": "1-2 Sessions"
       },
       {
+        "title": "Thin Beard",
+        "description": "Treatment for sparse or thin beard growth to increase density",
+        "grafts": "800-1,500",
+        "treatment": "1 Session"
+      },
+      {
         "title": "Beard Contour",
-        "description": "Precise definition of beard lines",
+        "description": "Precise definition of beard lines and contours",
         "grafts": "500-1,000",
+        "treatment": "1 Session"
+      },
+      {
+        "title": "Beard with Gaps",
+        "description": "Targeted treatment of patchy areas and gaps in beard growth",
+        "grafts": "800-1,500",
         "treatment": "1 Session"
       }
     ]

@@ -10,8 +10,16 @@ const PatternSection: React.FC = () => {
   // Get patterns from translation
   const patterns = t('patternSection.patterns', { returnObjects: true }) as any[];
 
-  // Map pattern titles to images - using the beard treatment image for all patterns
-  const getPatternImage = () => "/images/Behandlung_Barthaartransplantation.webp";
+  // Map pattern titles to images based on pattern index
+  const getPatternImage = (index: number) => {
+    const images = [
+      "/images/Bart_komplett.png",
+      "/images/Bart_undicht.png", 
+      "/images/Bart_Kontur.png",
+      "/images/Bart_Lücken.png"
+    ];
+    return images[index] || images[0];
+  };
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
@@ -36,7 +44,7 @@ const PatternSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {patterns.map((pattern, index) => {
             const isHovered = index === hoverPattern;
-            const patternImage = getPatternImage();
+            const patternImage = getPatternImage(index);
             
             return (
               <div 

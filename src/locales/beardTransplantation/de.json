@@ -85,39 +85,27 @@
     },
     "patterns": [
       {
-        "title": "Vollbart mit Lücken",
-        "description": "Ungleichmäßiger Bartwuchs mit kahlen Stellen",
-        "grafts": "800-1.500",
-        "treatment": "1 Sitzung"
-      },
-      {
-        "title": "Kinnbart",
-        "description": "Fokussierte Behandlung des Kinnbereichs",
-        "grafts": "600-1.200",
-        "treatment": "1 Sitzung"
-      },
-      {
-        "title": "Schnurrbart",
-        "description": "Verdichtung oder Neugestaltung des Oberlippenbereichs",
-        "grafts": "300-700",
-        "treatment": "1 Sitzung"
-      },
-      {
-        "title": "Koteletten",
-        "description": "Gestaltung oder Verdichtung der Wangenpartie",
-        "grafts": "400-800",
-        "treatment": "1 Sitzung"
-      },
-      {
         "title": "Kompletter Bart",
-        "description": "Umfassende Behandlung für einen vollständigen Bart",
+        "description": "Umfassende Behandlung für einen vollständigen Bart mit optimaler Dichte",
         "grafts": "1.500-3.000",
         "treatment": "1-2 Sitzungen"
       },
       {
+        "title": "Dünner Bart",
+        "description": "Behandlung für spärlichen oder dünnen Bartwuchs zur Erhöhung der Dichte",
+        "grafts": "800-1.500",
+        "treatment": "1 Sitzung"
+      },
+      {
         "title": "Bartkontur",
-        "description": "Präzise Definition der Bartlinien",
+        "description": "Präzise Definition der Bartlinien und Konturen",
         "grafts": "500-1.000",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Bart mit Lücken",
+        "description": "Gezielte Behandlung von lückenhaften Bereichen im Bartwuchs",
+        "grafts": "800-1.500",
         "treatment": "1 Sitzung"
       }
     ]
