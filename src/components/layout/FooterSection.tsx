@@ -35,7 +35,7 @@ const FooterSection: React.FC = () => {
               <li><a href="/haartransplantation" className="hover:text-white transition-colors">{t('footer.services.hairTransplant')}</a></li>
               <li><a href="/barthaartransplantation" className="hover:text-white transition-colors">{t('footer.services.beardTransplant')}</a></li>
               <li><a href="/augenbrauentransplantation" className="hover:text-white transition-colors">{t('footer.services.eyebrowTransplant')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.hairLossTherapy')}</a></li>
+              <li><a href="/haarausfalltherapie" className="hover:text-white transition-colors">{t('footer.services.hairLossTherapy')}</a></li>
             </ul>
           </div>
 
@@ -45,7 +45,7 @@ const FooterSection: React.FC = () => {
             <ul className="space-y-2 text-sm font-light text-gray-300">
               <li><a href="#" className="hover:text-white transition-colors">{t('footer.information.aboutUs')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('footer.information.results')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.information.priceCalculator')}</a></li>
+              <li><a href="/preise" className="hover:text-white transition-colors">{t('footer.information.priceCalculator')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('footer.information.careInstructions')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('footer.information.career')}</a></li>
             </ul>

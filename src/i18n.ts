@@ -31,6 +31,8 @@ import cookiesDE from './locales/cookies/de.json';
 import cookiesEN from './locales/cookies/en.json';
 import knowledgeDE from './locales/knowledge/de.json';
 import knowledgeEN from './locales/knowledge/en.json';
+import pricesDE from './locales/prices/de.json';
+import pricesEN from './locales/prices/en.json';
 
 const resources = {
   de: {
@@ -47,7 +49,8 @@ const resources = {
     privacy: privacyDE,
     terms: termsDE,
     cookies: cookiesDE,
-    knowledge: knowledgeDE
+    knowledge: knowledgeDE,
+    prices: pricesDE
   },
   en: {
     common: commonEN,
@@ -63,7 +66,8 @@ const resources = {
     privacy: privacyEN,
     terms: termsEN,
     cookies: cookiesEN,
-    knowledge: knowledgeEN
+    knowledge: knowledgeEN,
+    prices: pricesEN
   }
 };
 
@@ -79,7 +83,7 @@ i18n
     debug: false, // Set to true for development
     
     // have a common namespace used around the full app
-    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact', 'imprint', 'privacy', 'terms', 'cookies', 'knowledge'],
+    ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact', 'imprint', 'privacy', 'terms', 'cookies', 'knowledge', 'prices'],
     defaultNS: 'common',
     
     interpolation: {

@@ -12,6 +12,7 @@ import ImprintPage from './pages/ImprintPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import KnowledgePage from './pages/KnowledgePage';
+import PricesPage from './pages/PricesPage';
 import CookieConsent from './components/cookies/CookieConsent';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/datenschutz" element={<PrivacyPage />} />
             <Route path="/agb" element={<TermsPage />} />
             <Route path="/wissenswertes" element={<KnowledgePage />} />
+            <Route path="/preise" element={<PricesPage />} />
           </Routes>
         </Layout>
       </Router>

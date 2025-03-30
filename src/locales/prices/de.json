@@ -1,0 +1,240 @@
+{
+  "heroSection": {
+    "title": "Transparente\nPreisgestaltung",
+    "subtitle": "Qualität und Fairness zu einem attraktiven Preis",
+    "welcomeText": "Bei der Dion Hair Clinic bieten wir Ihnen hochwertige Behandlungen zu transparenten und fairen Preisen. Unsere Pakete sind so gestaltet, dass sie Ihren individuellen Bedürfnissen gerecht werden und gleichzeitig ein optimales Preis-Leistungs-Verhältnis bieten."
+  },
+  "priceOverviewSection": {
+    "title": "Unsere Behandlungspakete",
+    "subtitle": "Maßgeschneiderte Lösungen für Ihre individuellen Bedürfnisse",
+    "description": "Wir bieten verschiedene Pakete an, die auf Ihre spezifischen Anforderungen zugeschnitten sind. Jedes Paket umfasst alle notwendigen Leistungen für ein optimales Ergebnis.",
+    "hairTransplantation": {
+      "title": "Haartransplantation",
+      "description": "Unsere Haartransplantationspakete umfassen alle notwendigen Leistungen für ein natürliches und dauerhaftes Ergebnis.",
+      "packages": {
+        "basicSaphirFUE": {
+          "title": "Basic Paket Saphir FUE Hair",
+          "description": "Das Basic Paket bietet Ihnen eine hochwertige Haartransplantation mit der Saphir FUE Methode zu einem attraktiven Preis.",
+          "prices": [
+            {
+              "title": "bis 2000 Grafts",
+              "price": "2599€"
+            },
+            {
+              "title": "bis 4500 Grafts",
+              "price": "2999€"
+            }
+          ],
+          "features": [
+            "Normale Betäubung",
+            "Nackenkissen und Pflegeshampoo",
+            "3 PRP Behandlungen"
+          ]
+        },
+        "advancedSaphirFUE": {
+          "title": "Advanced Paket Saphir FUE Hair",
+          "description": "Das Advanced Paket bietet Ihnen zusätzliche Leistungen für ein optimales Ergebnis und maximalen Komfort.",
+          "prices": [
+            {
+              "title": "bis 2000 Grafts",
+              "price": "3299€"
+            },
+            {
+              "title": "bis 4500 Grafts",
+              "price": "3799€"
+            }
+          ],
+          "features": [
+            "Haarausfall Blut- und Mikronährstoffanalyse",
+            "Schmerzfreie Betäubung",
+            "Nackenkissen und Pflegeshampoo",
+            "4 PRP Behandlungen"
+          ]
+        },
+        "basicDHIFUE": {
+          "title": "Basic Paket DHI FUE Hair",
+          "description": "Das Basic DHI Paket bietet Ihnen eine Haartransplantation ohne Rasur des Haupthaars mit der innovativen DHI Methode.",
+          "prices": [
+            {
+              "title": "bis 2000 Grafts",
+              "price": "3599€"
+            },
+            {
+              "title": "bis 4000 Grafts",
+              "price": "3999€"
+            }
+          ],
+          "features": [
+            "Keine Rasur des Haupthaars",
+            "Normale Betäubung",
+            "Nackenkissen und Pflegeshampoo",
+            "3 PRP Behandlungen"
+          ]
+        },
+        "advancedDHIFUE": {
+          "title": "Advanced Paket DHI FUE Hair",
+          "description": "Das Advanced DHI Paket kombiniert die Vorteile der DHI Methode mit zusätzlichen Leistungen für ein optimales Ergebnis.",
+          "prices": [
+            {
+              "title": "bis 2000 Grafts",
+              "price": "4299€"
+            },
+            {
+              "title": "bis 4500 Grafts",
+              "price": "4799€"
+            }
+          ],
+          "features": [
+            "Keine Rasur des Haupthaars",
+            "Haarausfall Blut- und Mikronährstoffanalyse",
+            "Schmerzfreie Betäubung",
+            "Nackenkissen und Pflegeshampoo",
+            "4 PRP Behandlungen"
+          ]
+        }
+      }
+    },
+    "eyebrowTransplantation": {
+      "title": "Augenbrauentransplantation",
+      "description": "Unsere Augenbrauentransplantationspakete bieten Ihnen natürlich aussehende und dauerhafte Ergebnisse.",
+      "packages": {
+        "saphirFUE": {
+          "title": "Saphir FUE Eyebrow",
+          "description": "Die Saphir FUE Methode für Augenbrauen bietet präzise und natürlich aussehende Ergebnisse.",
+          "prices": [
+            {
+              "title": "bis 1000 Grafts",
+              "price": "1699€"
+            }
+          ],
+          "features": [
+            "Nackenkissen und Pflegeshampoo",
+            "1 PRP Behandlung"
+          ]
+        },
+        "dhiFUE": {
+          "title": "DHI FUE Eyebrow",
+          "description": "Die DHI FUE Methode für Augenbrauen ermöglicht eine präzise Platzierung der Haarfollikel für ein natürliches Ergebnis.",
+          "prices": [
+            {
+              "title": "Standard",
+              "price": "2099€"
+            }
+          ],
+          "features": [
+            "Nackenkissen und Pflegeshampoo",
+            "1 PRP Behandlung"
+          ]
+        }
+      }
+    },
+    "beardTransplantation": {
+      "title": "Barthaartransplantation",
+      "description": "Unsere Barthaartransplantationspakete bieten Ihnen die Möglichkeit, Ihren Bart zu verdichten oder zu vervollständigen.",
+      "packages": {
+        "saphirFUE": {
+          "title": "Saphir FUE Beard",
+          "description": "Die Saphir FUE Methode für Barthaare bietet präzise und natürlich aussehende Ergebnisse.",
+          "prices": [
+            {
+              "title": "bis 2000 Grafts",
+              "price": "2599€"
+            },
+            {
+              "title": "bis 4500 Grafts",
+              "price": "2999€"
+            }
+          ],
+          "features": [
+            "Normale Betäubung",
+            "Pflegeshampoo",
+            "3 PRP Behandlungen"
+          ]
+        },
+        "dhiFUE": {
+          "title": "DHI FUE Beard",
+          "description": "Die DHI FUE Methode für Barthaare ermöglicht eine präzise Platzierung der Haarfollikel ohne Rasur.",
+          "prices": [
+            {
+              "title": "bis 2000 Grafts",
+              "price": "3599€"
+            },
+            {
+              "title": "bis 4000 Grafts",
+              "price": "3999€"
+            }
+          ],
+          "features": [
+            "Keine Rasur des Haupthaars",
+            "Normale Betäubung",
+            "Nackenkissen und Pflegeshampoo",
+            "3 PRP Behandlungen"
+          ]
+        }
+      }
+    },
+    "additionalOptions": {
+      "title": "Zusatzoptionen",
+      "description": "Ergänzen Sie Ihre Behandlung mit zusätzlichen Optionen für ein optimales Ergebnis.",
+      "options": [
+        {
+          "title": "Haarausfall Laboranalyse",
+          "price": "349€",
+          "description": "Umfassende Analyse der Ursachen Ihres Haarausfalls für eine gezielte Behandlung."
+        },
+        {
+          "title": "Basic PRP Behandlung",
+          "price": "179€",
+          "description": "Stimuliert das Haarwachstum und verbessert die Haarqualität."
+        },
+        {
+          "title": "Advanced PRP Behandlung",
+          "price": "239€",
+          "description": "Erweiterte PRP Behandlung mit zusätzlichen Wachstumsfaktoren."
+        },
+        {
+          "title": "Mikronährstoff - Infusionstherapie",
+          "price": "229€",
+          "description": "Gezielte Zufuhr von Mikronährstoffen für gesundes Haarwachstum."
+        },
+        {
+          "title": "Dion Painless Injection",
+          "price": "299€",
+          "description": "Schmerzfreie Betäubung für maximalen Komfort während der Behandlung."
+        },
+        {
+          "title": "Deep Sleep Betäubung",
+          "price": "899€",
+          "description": "Tiefe Sedierung für einen entspannten Behandlungsverlauf."
+        }
+      ]
+    }
+  },
+  "consultationSection": {
+    "title": "Persönliche Beratung",
+    "description": "In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan. Wir beraten Sie ausführlich zu den verschiedenen Behandlungsmöglichkeiten und erstellen ein individuelles Angebot.",
+    "buttonText": "Beratungstermin vereinbaren"
+  },
+  "faqSection": {
+    "title": "Häufig gestellte Fragen zu unseren Preisen",
+    "subtitle": "Antworten auf Ihre Fragen zur Preisgestaltung und Finanzierung",
+    "faqs": [
+      {
+        "question": "Sind in den angegebenen Preisen alle Kosten enthalten?",
+        "answer": "Ja, unsere Preise sind Komplettpreise und beinhalten alle notwendigen Leistungen für Ihre Behandlung. Es gibt keine versteckten Kosten oder Zusatzgebühren."
+      },
+      {
+        "question": "Bieten Sie Finanzierungsmöglichkeiten an?",
+        "answer": "Ja, wir bieten verschiedene Finanzierungsmöglichkeiten an, um Ihnen die Entscheidung für eine Behandlung zu erleichtern. Sprechen Sie uns gerne in einem persönlichen Beratungsgespräch darauf an."
+      },
+      {
+        "question": "Wie wird die Anzahl der benötigten Grafts bestimmt?",
+        "answer": "Die Anzahl der benötigten Grafts wird in einem persönlichen Beratungsgespräch anhand Ihrer individuellen Situation und Ihrer Wünsche bestimmt. Dabei spielen Faktoren wie die Größe des zu behandelnden Bereichs und die gewünschte Dichte eine Rolle."
+      },
+      {
+        "question": "Kann ich die Behandlung mit meiner Krankenversicherung abrechnen?",
+        "answer": "In der Regel werden ästhetische Behandlungen nicht von den gesetzlichen Krankenversicherungen übernommen. Bei einigen privaten Krankenversicherungen besteht jedoch die Möglichkeit einer teilweisen oder vollständigen Kostenübernahme. Wir beraten Sie gerne zu den Möglichkeiten."
+      }
+    ]
+  }
+}

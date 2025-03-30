@@ -1,0 +1,240 @@
+{
+  "heroSection": {
+    "title": "Transparent\nPricing",
+    "subtitle": "Quality and fairness at an attractive price",
+    "welcomeText": "At Dion Hair Clinic, we offer high-quality treatments at transparent and fair prices. Our packages are designed to meet your individual needs while providing optimal value for money."
+  },
+  "priceOverviewSection": {
+    "title": "Our Treatment Packages",
+    "subtitle": "Tailored solutions for your individual needs",
+    "description": "We offer various packages tailored to your specific requirements. Each package includes all necessary services for optimal results.",
+    "hairTransplantation": {
+      "title": "Hair Transplantation",
+      "description": "Our hair transplantation packages include all necessary services for a natural and permanent result.",
+      "packages": {
+        "basicSaphirFUE": {
+          "title": "Basic Package Saphir FUE Hair",
+          "description": "The Basic Package offers you a high-quality hair transplantation with the Saphir FUE method at an attractive price.",
+          "prices": [
+            {
+              "title": "up to 2000 Grafts",
+              "price": "2599€"
+            },
+            {
+              "title": "up to 4500 Grafts",
+              "price": "2999€"
+            }
+          ],
+          "features": [
+            "Normal anesthesia",
+            "Neck pillow and care shampoo",
+            "3 PRP treatments"
+          ]
+        },
+        "advancedSaphirFUE": {
+          "title": "Advanced Package Saphir FUE Hair",
+          "description": "The Advanced Package offers you additional services for optimal results and maximum comfort.",
+          "prices": [
+            {
+              "title": "up to 2000 Grafts",
+              "price": "3299€"
+            },
+            {
+              "title": "up to 4500 Grafts",
+              "price": "3799€"
+            }
+          ],
+          "features": [
+            "Hair loss blood and micronutrient analysis",
+            "Painless anesthesia",
+            "Neck pillow and care shampoo",
+            "4 PRP treatments"
+          ]
+        },
+        "basicDHIFUE": {
+          "title": "Basic Package DHI FUE Hair",
+          "description": "The Basic DHI Package offers you a hair transplantation without shaving your head using the innovative DHI method.",
+          "prices": [
+            {
+              "title": "up to 2000 Grafts",
+              "price": "3599€"
+            },
+            {
+              "title": "up to 4000 Grafts",
+              "price": "3999€"
+            }
+          ],
+          "features": [
+            "No shaving of the main hair",
+            "Normal anesthesia",
+            "Neck pillow and care shampoo",
+            "3 PRP treatments"
+          ]
+        },
+        "advancedDHIFUE": {
+          "title": "Advanced Package DHI FUE Hair",
+          "description": "The Advanced DHI Package combines the benefits of the DHI method with additional services for optimal results.",
+          "prices": [
+            {
+              "title": "up to 2000 Grafts",
+              "price": "4299€"
+            },
+            {
+              "title": "up to 4500 Grafts",
+              "price": "4799€"
+            }
+          ],
+          "features": [
+            "No shaving of the main hair",
+            "Hair loss blood and micronutrient analysis",
+            "Painless anesthesia",
+            "Neck pillow and care shampoo",
+            "4 PRP treatments"
+          ]
+        }
+      }
+    },
+    "eyebrowTransplantation": {
+      "title": "Eyebrow Transplantation",
+      "description": "Our eyebrow transplantation packages offer you natural-looking and permanent results.",
+      "packages": {
+        "saphirFUE": {
+          "title": "Saphir FUE Eyebrow",
+          "description": "The Saphir FUE method for eyebrows offers precise and natural-looking results.",
+          "prices": [
+            {
+              "title": "up to 1000 Grafts",
+              "price": "1699€"
+            }
+          ],
+          "features": [
+            "Neck pillow and care shampoo",
+            "1 PRP treatment"
+          ]
+        },
+        "dhiFUE": {
+          "title": "DHI FUE Eyebrow",
+          "description": "The DHI FUE method for eyebrows allows precise placement of hair follicles for a natural result.",
+          "prices": [
+            {
+              "title": "Standard",
+              "price": "2099€"
+            }
+          ],
+          "features": [
+            "Neck pillow and care shampoo",
+            "1 PRP treatment"
+          ]
+        }
+      }
+    },
+    "beardTransplantation": {
+      "title": "Beard Transplantation",
+      "description": "Our beard transplantation packages offer you the opportunity to densify or complete your beard.",
+      "packages": {
+        "saphirFUE": {
+          "title": "Saphir FUE Beard",
+          "description": "The Saphir FUE method for beard hair offers precise and natural-looking results.",
+          "prices": [
+            {
+              "title": "up to 2000 Grafts",
+              "price": "2599€"
+            },
+            {
+              "title": "up to 4500 Grafts",
+              "price": "2999€"
+            }
+          ],
+          "features": [
+            "Normal anesthesia",
+            "Care shampoo",
+            "3 PRP treatments"
+          ]
+        },
+        "dhiFUE": {
+          "title": "DHI FUE Beard",
+          "description": "The DHI FUE method for beard hair allows precise placement of hair follicles without shaving.",
+          "prices": [
+            {
+              "title": "up to 2000 Grafts",
+              "price": "3599€"
+            },
+            {
+              "title": "up to 4000 Grafts",
+              "price": "3999€"
+            }
+          ],
+          "features": [
+            "No shaving of the main hair",
+            "Normal anesthesia",
+            "Neck pillow and care shampoo",
+            "3 PRP treatments"
+          ]
+        }
+      }
+    },
+    "additionalOptions": {
+      "title": "Additional Options",
+      "description": "Complement your treatment with additional options for optimal results.",
+      "options": [
+        {
+          "title": "Hair Loss Laboratory Analysis",
+          "price": "349€",
+          "description": "Comprehensive analysis of the causes of your hair loss for targeted treatment."
+        },
+        {
+          "title": "Basic PRP Treatment",
+          "price": "179€",
+          "description": "Stimulates hair growth and improves hair quality."
+        },
+        {
+          "title": "Advanced PRP Treatment",
+          "price": "239€",
+          "description": "Advanced PRP treatment with additional growth factors."
+        },
+        {
+          "title": "Micronutrient Infusion Therapy",
+          "price": "229€",
+          "description": "Targeted supply of micronutrients for healthy hair growth."
+        },
+        {
+          "title": "Dion Painless Injection",
+          "price": "299€",
+          "description": "Painless anesthesia for maximum comfort during treatment."
+        },
+        {
+          "title": "Deep Sleep Anesthesia",
+          "price": "899€",
+          "description": "Deep sedation for a relaxed treatment process."
+        }
+      ]
+    }
+  },
+  "consultationSection": {
+    "title": "Personal Consultation",
+    "description": "In a personal consultation, we analyze your individual situation and develop a customized treatment plan. We advise you in detail on the various treatment options and create an individual offer.",
+    "buttonText": "Schedule a consultation"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions about our Prices",
+    "subtitle": "Answers to your questions about pricing and financing",
+    "faqs": [
+      {
+        "question": "Do the prices include all costs?",
+        "answer": "Yes, our prices are all-inclusive and include all necessary services for your treatment. There are no hidden costs or additional fees."
+      },
+      {
+        "question": "Do you offer financing options?",
+        "answer": "Yes, we offer various financing options to make it easier for you to decide on a treatment. Please feel free to ask about this in a personal consultation."
+      },
+      {
+        "question": "How is the number of required grafts determined?",
+        "answer": "The number of required grafts is determined in a personal consultation based on your individual situation and your wishes. Factors such as the size of the area to be treated and the desired density play a role."
+      },
+      {
+        "question": "Can I bill the treatment with my health insurance?",
+        "answer": "As a rule, aesthetic treatments are not covered by statutory health insurance. However, some private health insurance companies may partially or fully cover the costs. We are happy to advise you on the possibilities."
+      }
+    ]
+  }
+}
