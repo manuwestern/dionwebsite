@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
       
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col min-h-[100vh] px-5">
+        <div className="flex flex-col min-h-[90vh] px-4">
           {/* Top section with logo and subtle animation */}
           <div className="pt-6 pb-4 flex justify-center">
             <div className={`relative transition-all duration-700 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
           {/* Main content area with perfect spacing */}
           <div className="flex-1 flex flex-col justify-between pt-4 pb-0">
             {/* Text content with refined typography and animations */}
-            <div className="space-y-6 mt-4">
+            <div className="space-y-4 mt-2">
               {/* Title with elegant animation and perfect typography */}
               <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
               <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto whitespace-pre-line`} lang="de">
@@ -94,14 +94,14 @@ const HeroSection: React.FC = () => {
               </div>
               
               {/* Welcome text with perfect spacing and animation */}
-              <div className={`px-2 transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto leading-relaxed`}>
+              <div className={`px-1 transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+                <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-center max-w-md mx-auto leading-relaxed`}>
                   {t('heroSection.welcomeText')}
                 </p>
               </div>
               
               {/* CTA button with refined styling and animation */}
-              <div className={`flex justify-center mt-8 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+              <div className={`flex justify-center mt-6 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
                 <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
                   <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
@@ -113,10 +113,10 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Image section with enhanced visual effects */}
-            <div className="mt-10 -mb-10 relative">
+            <div className="mt-2 mb-12 relative">
               {/* Decorative elements */}
               <div className="absolute inset-0 -z-10">
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[300px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[200px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
               </div>
               
               {/* Decorative price tag elements */}
@@ -125,19 +125,23 @@ const HeroSection: React.FC = () => {
                   {/* Enhanced glow effect */}
                   <div className="absolute -inset-4 bottom-0 bg-gradient-to-t from-[#7BA7C2]/20 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
                   
-                  {/* Decorative price tags */}
-                  <div className="flex flex-col items-center space-y-4">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#7BA7C2]/20 transform rotate-[-5deg] hover:rotate-0 transition-all duration-300">
-                      <div className="text-[#7BA7C2] font-medium text-xl">Saphir FUE</div>
-                      <div className="text-gray-800 font-light text-3xl">ab 2599€</div>
+                  {/* Decorative price tags - Grid layout for better mobile display */}
+                  <div className="grid grid-cols-2 gap-4 max-w-[360px] mx-auto">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-300">
+                      <div className="text-[#7BA7C2] font-medium text-lg">Saphir FUE</div>
+                      <div className="text-gray-800 font-light text-2xl">ab 2599€</div>
                     </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#7BA7C2]/20 transform rotate-[3deg] hover:rotate-0 transition-all duration-300 ml-8">
-                      <div className="text-[#7BA7C2] font-medium text-xl">DHI FUE</div>
-                      <div className="text-gray-800 font-light text-3xl">ab 3599€</div>
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[2deg] hover:rotate-0 transition-all duration-300">
+                      <div className="text-[#7BA7C2] font-medium text-lg">DHI FUE</div>
+                      <div className="text-gray-800 font-light text-2xl">ab 3599€</div>
                     </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#7BA7C2]/20 transform rotate-[-2deg] hover:rotate-0 transition-all duration-300 mr-4">
-                      <div className="text-[#7BA7C2] font-medium text-xl">Eyebrow</div>
-                      <div className="text-gray-800 font-light text-3xl">ab 1699€</div>
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[1deg] hover:rotate-0 transition-all duration-300">
+                      <div className="text-[#7BA7C2] font-medium text-lg">Beard</div>
+                      <div className="text-gray-800 font-light text-2xl">ab 2599€</div>
+                    </div>
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[-2deg] hover:rotate-0 transition-all duration-300">
+                      <div className="text-[#7BA7C2] font-medium text-lg">Eyebrow</div>
+                      <div className="text-gray-800 font-light text-2xl">ab 1699€</div>
                     </div>
                   </div>
                 </div>
