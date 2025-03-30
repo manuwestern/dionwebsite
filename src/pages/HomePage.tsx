@@ -153,16 +153,7 @@ const HomePage: React.FC = () => {
         <ContactSection />
       </SectionWrapper>
       
-      {/* Scroll to Top Button */}
-      <button 
-        onClick={scrollToTop}
-        className={`fixed right-6 bottom-6 z-40 w-12 h-12 rounded-full bg-[#7BA7C2] text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-[#6A96B1] hover:scale-110 active:scale-95 ${
-          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
-        }`}
-        aria-label="Zum Seitenanfang scrollen"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
+      {/* Scroll to Top Button removed as requested */}
       
       {/* Subtle page overlay for depth effect */}
       <div 
