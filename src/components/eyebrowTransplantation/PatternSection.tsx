@@ -10,23 +10,30 @@ const PatternSection: React.FC = () => {
   // Get patterns from translation
   const patterns = t('patternSection.patterns', { returnObjects: true }) as any[];
 
-  // Map pattern titles to images (placeholder - update with actual eyebrow pattern images)
-  const patternImages = {
-    "Sparse": "/images/Augenbrauentransplantation_Planung.svg",
-    "Thin": "/images/Augenbrauentransplantation_Entnahme.svg",
-    "Partial": "/images/Augenbrauentransplantation_Einpflanzung.svg",
-    "Complete": "/images/Augenbrauentransplantation_Endergebnis.svg"
-  };
-
-  // Get image for a pattern
-  const getPatternImage = (title: string) => {
-    for (const [key, value] of Object.entries(patternImages)) {
-      if (title.includes(key)) {
-        return value;
-      }
+  // Fixed patterns with specific images
+  const eyebrowPatterns = [
+    {
+      title: "Kahle Augenbrauen",
+      description: "Vollständig fehlende oder extrem dünne Augenbrauen, die eine komplette Rekonstruktion erfordern",
+      grafts: "250-400",
+      treatment: "1 Sitzung",
+      image: "/images/Augenbrauen_kahl.png"
+    },
+    {
+      title: "Undichte Augenbrauen",
+      description: "Lücken oder dünne Stellen in den Augenbrauen, die eine Verdichtung benötigen",
+      grafts: "150-250",
+      treatment: "1 Sitzung",
+      image: "/images/Augenbrauen_undicht.png"
+    },
+    {
+      title: "Microblading-Alternative",
+      description: "Natürliche und dauerhafte Alternative zu Microblading für definierte Augenbrauen",
+      grafts: "200-300",
+      treatment: "1 Sitzung",
+      image: "/images/Augenbrauen_Microblading.png"
     }
-    return null;
-  };
+  ];
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
@@ -49,9 +56,8 @@ const PatternSection: React.FC = () => {
 
         {/* Patterns Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {patterns.map((pattern, index) => {
+          {eyebrowPatterns.map((pattern, index) => {
             const isHovered = index === hoverPattern;
-            const patternImage = getPatternImage(pattern.title);
             
             return (
               <div 
@@ -68,19 +74,13 @@ const PatternSection: React.FC = () => {
                 }`}>
                   {/* Pattern Image with background gradient */}
                   <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10`}>
-                    {patternImage ? (
-                      <img 
-                        src={patternImage}
-                        alt={pattern.title}
-                        className={`w-full h-full object-contain p-6 transition-all duration-700 ${
-                          isHovered ? 'scale-105' : 'scale-100'
-                        }`}
-                      />
-                    ) : (
-                      <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5">
-                        <span className={`${fontSize.h3} ${fontWeight.light} text-gray-400`}>{pattern.title}</span>
-                      </div>
-                    )}
+                    <img 
+                      src={pattern.image}
+                      alt={pattern.title}
+                      className={`w-full h-full object-cover transition-all duration-700 ${
+                        isHovered ? 'scale-105' : 'scale-100'
+                      }`}
+                    />
                     
                     {/* Pattern title overlay with fixed height for consistent multi-line titles */}
                     <div className="absolute bottom-0 left-0 right-0 py-6 px-5 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center justify-center md:justify-start">

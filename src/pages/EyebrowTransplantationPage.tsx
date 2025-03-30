@@ -3,6 +3,7 @@ import HeroSection from '../components/eyebrowTransplantation/HeroSection';
 import BenefitsSection from '../components/eyebrowTransplantation/BenefitsSection';
 import TestimonialsSection from '../components/eyebrowTransplantation/TestimonialsSection';
 import MethodsSection from '../components/eyebrowTransplantation/MethodsSection';
+import PatternSection from '../components/eyebrowTransplantation/PatternSection';
 import ProcessSection from '../components/eyebrowTransplantation/ProcessSection';
 import DPISection from '../components/eyebrowTransplantation/DPISection';
 import CareSection from '../components/eyebrowTransplantation/CareSection';
@@ -75,6 +76,10 @@ const EyebrowTransplantationPage: React.FC = () => {
       
       <SectionWrapper type="pattern">
         <MethodsSection />
+      </SectionWrapper>
+      
+      <SectionWrapper type="medium">
+        <PatternSection />
       </SectionWrapper>
       
       <SectionWrapper type="light">
