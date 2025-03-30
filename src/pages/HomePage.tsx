@@ -6,6 +6,7 @@ import TreatmentAreasSection from '../components/home/TreatmentAreasSection';
 import TestimonialsSection from '../components/hairTransplantation/TestimonialsSection';
 import FAQSection from '../components/home/FAQSection';
 import ContactSection from '../components/layout/ContactSection';
+import HairAnalysisPopup from '../components/home/HairAnalysisPopup';
 
 // Section wrapper component for elegant, subtle styling
 interface SectionWrapperProps {
@@ -170,6 +171,9 @@ const HomePage: React.FC = () => {
           background: `radial-gradient(circle at ${scrollY * 0.05}% ${scrollY * 0.02}%, rgba(123, 167, 194, 0.1) 0%, rgba(255, 255, 255, 0) 60%)`,
         }}
       ></div>
+      
+      {/* KI Hair Analysis Popup */}
+      <HairAnalysisPopup delay={5000} />
     </div>
   );
 };
