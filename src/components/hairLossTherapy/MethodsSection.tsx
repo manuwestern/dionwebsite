@@ -41,8 +41,8 @@ const MethodsSection: React.FC = () => {
                 onMouseEnter={() => setHoverMethod(index)}
                 onMouseLeave={() => setHoverMethod(null)}
               >
-                {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ${
+                {/* Card with glass morphism effect and fixed height */}
+                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full ${
                   isHovered 
                     ? 'shadow-xl transform -translate-y-1 border-2 border-[#7BA7C2]/80' 
                     : 'border border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
@@ -69,22 +69,22 @@ const MethodsSection: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Method Content - Fixed layout with consistent positioning */}
-                  <div className="p-4 sm:p-6 md:p-8 flex flex-col h-[600px]">
-                    {/* Description - Fixed height */}
-                    <div className="h-[100px]">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} overflow-y-auto h-full`}>
+                  {/* Method Content - Flexible layout with consistent positioning and equal spacing */}
+                  <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
+                    {/* Description - Auto height with consistent spacing */}
+                    <div className="mb-6">
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                         {method.description}
                       </p>
                     </div>
                     
-                    {/* Benefits section - Fixed position and height */}
-                    <div className="mt-4">
+                    {/* Benefits section - Auto height with consistent spacing */}
+                    <div className="mb-6">
                       <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
                         <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
                         {t('methodsSection.sectionLabels.benefits')}
                       </h4>
-                      <div className="h-[180px] overflow-y-auto">
+                      <div>
                         <ul className="grid gap-3">
                           {method.benefits.map((benefit: string, i: number) => (
                             <li key={i} className="flex items-start group">
@@ -98,13 +98,13 @@ const MethodsSection: React.FC = () => {
                       </div>
                     </div>
                     
-                    {/* Process section - Fixed position and height */}
-                    <div className="mt-6">
+                    {/* Process section - Auto height with consistent spacing */}
+                    <div className="mb-6">
                       <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4 flex items-center`}>
                         <span className="w-8 h-px bg-[#7BA7C2]/25 mr-3"></span>
                         {t('methodsSection.sectionLabels.process')}
                       </h4>
-                      <div className="h-[180px] overflow-y-auto">
+                      <div>
                         <ol className="grid gap-4">
                           {method.process.map((step: string, i: number) => (
                             <li key={i} className="flex items-start">
@@ -118,7 +118,7 @@ const MethodsSection: React.FC = () => {
                       </div>
                     </div>
                     
-                    {/* Ideal for section - Fixed at bottom */}
+                    {/* Ideal for section - Fixed at bottom with consistent spacing */}
                     <div className="mt-auto pt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                       <span className={`inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-[#7BA7C2]/10 rounded-full ${fontSize.sm} ${fontWeight.normal} ${textColor.primary} transition-all duration-300 group-hover:bg-[#7BA7C2]/15`}>
                         {method.idealFor}
