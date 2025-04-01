@@ -12,10 +12,10 @@ interface FAQ {
 
 // FAQ categories with icons - ensuring consistent sizing
 const getCategoryIcons = () => ({
-  procedure: { icon: <Stethoscope strokeWidth={1.5} className="w-5 h-5" /> },
-  recovery: { icon: <Clock strokeWidth={1.5} className="w-5 h-5" /> },
-  results: { icon: <HelpCircle strokeWidth={1.5} className="w-5 h-5" /> },
-  costs: { icon: <DollarSign strokeWidth={1.5} className="w-5 h-5" /> }
+  procedure: { icon: <Stethoscope strokeWidth={1.5} /> },
+  recovery: { icon: <Clock strokeWidth={1.5} /> },
+  results: { icon: <HelpCircle strokeWidth={1.5} /> },
+  costs: { icon: <DollarSign strokeWidth={1.5} /> }
 });
 
 const FAQSection: React.FC = () => {
@@ -151,22 +151,29 @@ const FAQSection: React.FC = () => {
                     {/* Question button */}
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full text-left p-4 sm:p-6 flex justify-between items-center transition-all duration-300"
+                      className="w-full p-4 sm:p-6 flex flex-col sm:flex-row justify-between items-center transition-all duration-300"
                       aria-controls={`faq-answer-${index}`}
                     >
-                      <div className="flex items-center gap-3 sm:gap-4">
-                        <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      {/* Mobile layout: Icon on top, question below, centered */}
+                      <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 w-full sm:w-auto">
+                        {/* Larger circle with centered icon */}
+                        <div className={`w-12 h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
                           openFAQ === index 
                             ? 'bg-[#7BA7C2] text-white' 
                             : 'bg-[#7BA7C2]/10 text-[#7BA7C2] group-hover:bg-[#7BA7C2]/20'
                         }`}>
-                          <div className="flex items-center justify-center w-5 h-5">
+                          <div className="flex items-center justify-center w-6 h-6 sm:w-5 sm:h-5">
                             {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>].icon}
                           </div>
                         </div>
-                        <span className={`${fontSize.lg} sm:${fontSize.lg} ${fontWeight.normal} ${textColor.dark} text-left text-sm sm:text-base`}>{faq.question}</span>
+                        {/* Question text - centered on mobile */}
+                        <span className={`${fontSize.base} ${fontWeight.normal} ${textColor.dark} text-center sm:text-left`}>
+                          {faq.question}
+                        </span>
                       </div>
-                      <div className={`min-w-8 min-h-8 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      
+                      {/* Chevron icon - below question on mobile */}
+                      <div className={`min-w-8 min-h-8 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 mt-4 sm:mt-0 ${
                         openFAQ === index 
                           ? 'bg-[#7BA7C2] text-white rotate-180' 
                           : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'
@@ -185,7 +192,9 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-0 border-t border-gray-100">
-                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>{faq.answer}</p>
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
+                          {faq.answer}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -202,7 +211,9 @@ const FAQSection: React.FC = () => {
               <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 blur-xl"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto mb-4">
-                  <HelpCircle className="w-8 h-8 text-[#7BA7C2]" />
+                  <div className="flex items-center justify-center w-8 h-8">
+                    <HelpCircle className="w-full h-full text-[#7BA7C2]" />
+                  </div>
                 </div>
                 <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2`}>{t('faq.noResults.title', { ns: 'common' })}</h3>
                 <p className={`${textColor.medium} ${fontWeight.light}`}>{t('faq.noResults.description', { ns: 'common' })}</p>

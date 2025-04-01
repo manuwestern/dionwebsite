@@ -52,20 +52,20 @@ const FAQSection: React.FC = () => {
             >
               {/* Question */}
               <button 
-                className="w-full px-6 py-5 flex justify-between items-center text-left"
+                className="w-full px-6 py-5 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left"
                 onClick={() => toggleFAQ(index)}
-                aria-expanded={openFAQ === index ? true : false}
+                aria-expanded={openFAQ === index}
                 aria-controls={`faq-answer-${index}`}
               >
-                <h3 className={`${fontSize.base} ${fontWeight.medium} ${textColor.dark} pr-4`}>
+                <h3 className={`${fontSize.base} ${fontWeight.medium} ${textColor.dark} pr-4 mb-3 sm:mb-0`}>
                   {faq.question}
                 </h3>
-                <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                   openFAQ === index 
                     ? 'bg-[#7BA7C2] text-white transform rotate-180' 
                     : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
                 }`}>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-5 h-5" />
                 </div>
               </button>
               
@@ -78,7 +78,7 @@ const FAQSection: React.FC = () => {
               >
                 <div className="px-6 pb-5">
                   <div className={`w-full h-px ${gradientUnderline.light} mb-4`}></div>
-                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center sm:text-left`}>
                     {faq.answer}
                   </p>
                 </div>
