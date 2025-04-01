@@ -60,17 +60,7 @@ const HeroSection: React.FC = () => {
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col min-h-[90vh] px-4">
-          {/* Top section with logo and subtle animation */}
-          <div className="pt-6 pb-4 flex justify-center">
-            <div className={`relative transition-all duration-700 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-              <div className="absolute -inset-3 bg-gradient-to-r from-[#7BA7C2]/10 to-white/80 rounded-full blur-xl"></div>
-              <img 
-                src="/images/DionHairClinic_Logo.svg" 
-                alt="Dion Hair Clinic" 
-                className="h-12 relative z-10 drop-shadow-sm" 
-              />
-            </div>
-          </div>
+          
           
           {/* Main content area with perfect spacing */}
           <div className="flex-1 flex flex-col justify-between pt-4 pb-0">
