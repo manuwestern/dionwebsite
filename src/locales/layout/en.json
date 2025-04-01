@@ -12,10 +12,11 @@
   "navigation": {
     "home": "Home",
     "treatments": "Treatments",
-    "information": "Information",
+    "information": "Knowledge",
     "clinic": "Clinic",
     "contact": "Contact",
-    "priceCalculator": "Price Calculator"
+    "priceCalculator": "Price Calculator",
+    "appointment": "Book Appointment"
   },
   "footer": {
     "clinicDescription": "Premium specialized clinic for hair restoration with holistic treatment approaches.",
