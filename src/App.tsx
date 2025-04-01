@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import ScrollToTop from './components/layout/ScrollToTop';
 import HomePage from './pages/HomePage';
 import HairTransplantationPage from './pages/HairTransplantationPage';
 import BeardTransplantationPage from './pages/BeardTransplantationPage';
@@ -19,6 +20,7 @@ function App() {
   return (
     <CookieConsent>
       <Router>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
