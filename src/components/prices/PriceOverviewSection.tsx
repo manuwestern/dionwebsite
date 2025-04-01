@@ -195,14 +195,6 @@ const PriceOverviewSection: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-                    
-                    {/* Subtle indicator */}
-                    <div className={`flex items-center justify-end ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 ${
-                      isHovered ? 'opacity-100' : 'opacity-0'
-                    }`}>
-                      <span className={`mr-1 ${fontWeight.normal}`}>Beratungstermin vereinbaren</span>
-                      <ChevronRight className="w-3 h-3" />
-                    </div>
                   </div>
                 </div>
                 

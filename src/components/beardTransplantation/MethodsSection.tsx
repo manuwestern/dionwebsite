@@ -116,15 +116,7 @@ const MethodsSection: React.FC = () => {
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                       <span className={`inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-[#7BA7C2]/10 rounded-full ${fontSize.sm} ${fontWeight.normal} ${textColor.primary} transition-all duration-300 group-hover:bg-[#7BA7C2]/15`}>
                         {method.idealFor}
-                      </span>
-                      
-                      {/* Subtle indicator */}
-                      <div className={`flex items-center ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 ${
-                        isHovered ? 'opacity-100' : 'opacity-0'
-                      }`}>
-                        <span className={`mr-1 ${fontWeight.normal}`}>{t('methodsSection.learnMore')}</span>
-                        <ChevronRight className="w-3 h-3" />
-                      </div>
+                      </span>                                            
                     </div>
                   </div>
                 </div>

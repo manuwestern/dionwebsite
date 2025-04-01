@@ -117,14 +117,6 @@ const HairLossTypesSection: React.FC = () => {
                         <p className={`${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{type.treatment}</p>
                       </div>
                     </div>
-                    
-                    {/* Subtle indicator - always at the bottom */}
-                    <div className={`flex items-center justify-center md:justify-end ${fontSize.xs} ${textColor.primary} transition-opacity duration-300 self-end ${
-                      isHovered ? 'opacity-100' : 'opacity-0'
-                    }`}>
-                      <span className={`mr-1 ${fontWeight.light}`}>{t('hairLossTypesSection.moreInfo')}</span>
-                      <ChevronRight className="w-3 h-3" />
-                    </div>
                   </div>
                 </div>
                 
