@@ -14,7 +14,6 @@ import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import KnowledgePage from './pages/KnowledgePage';
 import PricesPage from './pages/PricesPage';
-import AppointmentPage from './pages/AppointmentPage';
 import CookieConsent from './components/cookies/CookieConsent';
 
 function App() {
@@ -36,7 +35,6 @@ function App() {
             <Route path="/agb" element={<TermsPage />} />
             <Route path="/wissenswertes" element={<KnowledgePage />} />
             <Route path="/preise" element={<PricesPage />} />
-            <Route path="/termin" element={<AppointmentPage />} />
           </Routes>
         </Layout>
       </Router>

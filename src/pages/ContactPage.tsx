@@ -4,6 +4,8 @@ import HeroSection from '../components/contact/HeroSection';
 import ContactInfoSection from '../components/contact/ContactInfoSection';
 import ContactFormSection from '../components/contact/ContactFormSection';
 import MapSection from '../components/contact/MapSection';
+import AppointmentOptionsSection from '../components/appointment/OptionsSection';
+import AppointmentFormSection from '../components/appointment/FormSection';
 import { useTranslation } from 'react-i18next';
 
 // Section wrapper component for elegant, subtle styling
@@ -136,11 +138,19 @@ const ContactPage: React.FC = () => {
         <ContactInfoSection />
       </SectionWrapper>
       
+      <SectionWrapper type="accent">
+        <AppointmentOptionsSection />
+      </SectionWrapper>
+      
       <SectionWrapper type="medium">
         <ContactFormSection />
       </SectionWrapper>
       
       <SectionWrapper type="light">
+        <AppointmentFormSection />
+      </SectionWrapper>
+      
+      <SectionWrapper type="medium">
         <MapSection />
       </SectionWrapper>
       
