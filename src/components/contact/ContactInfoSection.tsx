@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { MapPin, Phone, Mail, Instagram, Music } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Music, MessageCircle } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
 
 interface ContactCardProps {
@@ -49,19 +49,7 @@ const ContactInfoSection: React.FC = () => {
         </div>
         
         {/* Contact Information Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Address Card */}
-          <ContactCard 
-            icon={<MapPin className="w-6 h-6 text-[#7BA7C2]" />} 
-            title={t('contactInfo.address.title')}
-          >
-            <address className="not-italic">
-              <p>{t('contactInfo.address.line1')}</p>
-              <p>{t('contactInfo.address.line2')}</p>
-              <p>{t('contactInfo.address.line3')}</p>
-              <p>{t('contactInfo.address.line4')}</p>
-            </address>
-          </ContactCard>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           {/* Phone Card */}
           <ContactCard 
@@ -77,6 +65,24 @@ const ContactInfoSection: React.FC = () => {
               </a>
             </p>
             <p>{t('contactInfo.phone.hours')}</p>
+          </ContactCard>
+          
+          {/* WhatsApp Card */}
+          <ContactCard 
+            icon={<MessageCircle className="w-6 h-6 text-[#7BA7C2]" />} 
+            title={t('contactInfo.whatsapp.title')}
+          >
+            <p className="mb-2">
+              <a 
+                href={`https://wa.me/${t('contactInfo.whatsapp.number').replace(/[^0-9]/g, '')}`} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#7BA7C2] hover:underline transition-all duration-300"
+              >
+                {t('contactInfo.whatsapp.number')}
+              </a>
+            </p>
+            <p>{t('contactInfo.whatsapp.response')}</p>
           </ContactCard>
           
           {/* Email Card */}

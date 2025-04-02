@@ -146,10 +146,6 @@ const ContactPage: React.FC = () => {
         <ContactFormSection />
       </SectionWrapper>
       
-      <SectionWrapper type="light">
-        <AppointmentFormSection />
-      </SectionWrapper>
-      
       <SectionWrapper type="medium">
         <MapSection />
       </SectionWrapper>

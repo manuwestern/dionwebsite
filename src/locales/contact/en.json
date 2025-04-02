@@ -24,6 +24,11 @@
       "address": "info@dionhairclinic.de",
       "response": "We respond to all emails within 24 hours"
     },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "number": "+49 (0) 2161 123 4567",
+      "response": "Quick responses and easy communication via WhatsApp"
+    },
     "social": {
       "title": "Follow Us",
       "description": "Stay updated with our latest news and results on social media"
