@@ -9,9 +9,8 @@ interface OptionCardProps {
   description: string;
   benefits: string[];
   icon: React.ReactNode;
-  isActive: boolean;
-  onClick: () => void;
-  onChoose: () => void;
+  isHovered: boolean;
+  onHover: (isHovered: boolean) => void;
 }
 
 const OptionCard: React.FC<OptionCardProps> = ({ 
@@ -19,32 +18,26 @@ const OptionCard: React.FC<OptionCardProps> = ({
   description, 
   benefits, 
   icon, 
-  isActive, 
-  onClick, 
-  onChoose 
+  isHovered,
+  onHover
 }) => {
   return (
     <div 
       className={`relative bg-white rounded-2xl shadow-lg border transition-all duration-300 overflow-hidden h-full flex flex-col ${
-        isActive 
-          ? 'border-[#7BA7C2] scale-[1.02] shadow-xl' 
+        isHovered 
+          ? 'border-[#7BA7C2]/80 shadow-xl transform -translate-y-1' 
           : 'border-gray-100 hover:border-[#7BA7C2]/30 hover:shadow-xl'
       }`}
-      onClick={onClick}
+      onMouseEnter={() => onHover(true)}
+      onMouseLeave={() => onHover(false)}
     >
-      {/* Highlight bar at top when active */}
-      <div 
-        className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6] transition-opacity duration-300 ${
-          isActive ? 'opacity-100' : 'opacity-0'
-        }`}
-      ></div>
       
       {/* Card content */}
       <div className="p-6 md:p-8 flex-1 flex flex-col">
         {/* Icon and title */}
         <div className="flex items-center mb-4">
-          <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 mr-4 ${
-            isActive 
+        <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 mr-4 ${
+            isHovered 
               ? 'bg-[#7BA7C2] text-white' 
               : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
           }`}>
@@ -64,7 +57,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
           <ul className="space-y-2">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-start">
-                <Check className={`w-5 h-5 mr-2 mt-0.5 ${isActive ? 'text-[#7BA7C2]' : 'text-gray-400'}`} />
+                <Check className={`w-5 h-5 mr-2 mt-0.5 ${isHovered ? 'text-[#7BA7C2]' : 'text-gray-400'}`} />
                 <span className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light}`}>{benefit}</span>
               </li>
             ))}
@@ -72,36 +65,13 @@ const OptionCard: React.FC<OptionCardProps> = ({
         </div>
       </div>
       
-      {/* Button area */}
-      <div className="p-6 md:p-8 pt-0">
-        <button 
-          onClick={(e) => {
-            e.stopPropagation();
-            onChoose();
-          }}
-          className={`w-full ${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
-        >
-          <span className={buttonRippleClass}></span>
-          <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
-            Auswählen
-            <ArrowRight className={`${buttonArrowClass} ml-2`} />
-          </span>
-        </button>
-      </div>
-      
-      {/* Selected indicator */}
-      {isActive && (
-        <div className="absolute top-4 right-4 w-6 h-6 rounded-full bg-[#7BA7C2] flex items-center justify-center text-white">
-          <Check className="w-4 h-4" />
-        </div>
-      )}
     </div>
   );
 };
 
 const ConsultationOptionsSection: React.FC = () => {
   const { t } = useTranslation('contact');
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [hoveredOption, setHoveredOption] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   // Trigger entrance animations
@@ -109,23 +79,9 @@ const ConsultationOptionsSection: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  // Scroll to form section
-  const scrollToForm = () => {
-    const formSection = document.getElementById('appointmentForm');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  // Handle option selection
-  const handleOptionSelect = (option: string) => {
-    setSelectedOption(option);
-  };
-
-  // Handle choose button click
-  const handleChoose = (option: string) => {
-    setSelectedOption(option);
-    scrollToForm();
+  // Handle hover state
+  const handleHover = (option: string, isHovered: boolean) => {
+    setHoveredOption(isHovered ? option : null);
   };
 
   return (
@@ -155,9 +111,8 @@ const ConsultationOptionsSection: React.FC = () => {
             description={t('optionsSection.phoneOption.description')}
             benefits={t('optionsSection.phoneOption.benefits', { returnObjects: true }) as string[]}
             icon={<Phone strokeWidth={1.5} className="w-6 h-6" />}
-            isActive={selectedOption === 'phone'}
-            onClick={() => handleOptionSelect('phone')}
-            onChoose={() => handleChoose('phone')}
+            isHovered={hoveredOption === 'phone'}
+            onHover={(isHovered) => handleHover('phone', isHovered)}
           />
           
           {/* In-Person Consultation Option */}
@@ -166,9 +121,8 @@ const ConsultationOptionsSection: React.FC = () => {
             description={t('optionsSection.inPersonOption.description')}
             benefits={t('optionsSection.inPersonOption.benefits', { returnObjects: true }) as string[]}
             icon={<MapPin strokeWidth={1.5} className="w-6 h-6" />}
-            isActive={selectedOption === 'inPerson'}
-            onClick={() => handleOptionSelect('inPerson')}
-            onChoose={() => handleChoose('inPerson')}
+            isHovered={hoveredOption === 'inPerson'}
+            onHover={(isHovered) => handleHover('inPerson', isHovered)}
           />
         </div>
       </div>
