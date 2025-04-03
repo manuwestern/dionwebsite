@@ -14,8 +14,8 @@ interface FormField {
   rows?: number;
 }
 
-const FormSection: React.FC = () => {
-  const { t } = useTranslation('appointment');
+const AppointmentFormSection: React.FC = () => {
+  const { t } = useTranslation('contact');
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -38,59 +38,59 @@ const FormSection: React.FC = () => {
   const formFields: FormField[] = [
     {
       id: 'name',
-      label: t('formSection.nameLabel'),
-      placeholder: t('formSection.namePlaceholder'),
+      label: t('appointmentForm.nameLabel'),
+      placeholder: t('appointmentForm.namePlaceholder'),
       type: 'text',
       required: true
     },
     {
       id: 'email',
-      label: t('formSection.emailLabel'),
-      placeholder: t('formSection.emailPlaceholder'),
+      label: t('appointmentForm.emailLabel'),
+      placeholder: t('appointmentForm.emailPlaceholder'),
       type: 'email',
       required: true
     },
     {
       id: 'phone',
-      label: t('formSection.phoneLabel'),
-      placeholder: t('formSection.phonePlaceholder'),
+      label: t('appointmentForm.phoneLabel'),
+      placeholder: t('appointmentForm.phonePlaceholder'),
       type: 'tel',
       required: true
     },
     {
       id: 'appointmentType',
-      label: t('formSection.appointmentTypeLabel'),
-      placeholder: t('formSection.appointmentTypePlaceholder'),
+      label: t('appointmentForm.appointmentTypeLabel'),
+      placeholder: t('appointmentForm.appointmentTypePlaceholder'),
       type: 'select',
       required: true,
       options: [
-        { value: 'phone', label: t('formSection.appointmentTypeOptions.phone') },
-        { value: 'inPerson', label: t('formSection.appointmentTypeOptions.inPerson') }
+        { value: 'phone', label: t('appointmentForm.appointmentTypeOptions.phone') },
+        { value: 'inPerson', label: t('appointmentForm.appointmentTypeOptions.inPerson') }
       ]
     },
     {
       id: 'preferredDate',
-      label: t('formSection.preferredDateLabel'),
-      placeholder: t('formSection.preferredDatePlaceholder'),
+      label: t('appointmentForm.preferredDateLabel'),
+      placeholder: t('appointmentForm.preferredDatePlaceholder'),
       type: 'date',
       required: true
     },
     {
       id: 'preferredTime',
-      label: t('formSection.preferredTimeLabel'),
-      placeholder: t('formSection.preferredTimePlaceholder'),
+      label: t('appointmentForm.preferredTimeLabel'),
+      placeholder: t('appointmentForm.preferredTimePlaceholder'),
       type: 'select',
       required: true,
       options: [
-        { value: 'morning', label: t('formSection.preferredTimeOptions.morning') },
-        { value: 'afternoon', label: t('formSection.preferredTimeOptions.afternoon') },
-        { value: 'evening', label: t('formSection.preferredTimeOptions.evening') }
+        { value: 'morning', label: t('appointmentForm.preferredTimeOptions.morning') },
+        { value: 'afternoon', label: t('appointmentForm.preferredTimeOptions.afternoon') },
+        { value: 'evening', label: t('appointmentForm.preferredTimeOptions.evening') }
       ]
     },
     {
       id: 'message',
-      label: t('formSection.messageLabel'),
-      placeholder: t('formSection.messagePlaceholder'),
+      label: t('appointmentForm.messageLabel'),
+      placeholder: t('appointmentForm.messagePlaceholder'),
       type: 'textarea',
       required: false,
       rows: 4
@@ -153,10 +153,10 @@ const FormSection: React.FC = () => {
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className={`${textStyle.sectionTitle} mb-4`}>
-            {t('formSection.title')}
+            {t('appointmentForm.title')}
           </h2>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto`}>
-            {t('formSection.description')}
+            {t('appointmentForm.description')}
           </p>
           <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-6 mx-auto`}></div>
         </div>
@@ -169,7 +169,7 @@ const FormSection: React.FC = () => {
                 <CheckCircle className="w-16 h-16 text-green-500" />
               </div>
               <h3 className={`${textStyle.primaryHeading} mb-4`}>
-                {t('formSection.successMessage')}
+                {t('appointmentForm.successMessage')}
               </h3>
             </div>
           ) : (
@@ -201,23 +201,23 @@ const FormSection: React.FC = () => {
               
               {/* Appointment Type */}
               <div className="space-y-2">
-                <label 
-                  htmlFor="appointmentType" 
-                  className={`block ${fontSize.base} ${fontWeight.medium} ${textColor.dark}`}
-                >
-                  {t('formSection.appointmentTypeLabel')} <span className="text-red-500">*</span>
-                </label>
-                
-                <div className="relative">
-                  <select
-                    id="appointmentType"
-                    name="appointmentType"
-                    required
-                    value={formData.appointmentType}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#7BA7C2] focus:ring-2 focus:ring-[#7BA7C2]/20 outline-none transition-all duration-300 appearance-none bg-white"
+                  <label 
+                    htmlFor="appointmentType" 
+                    className={`block ${fontSize.base} ${fontWeight.medium} ${textColor.dark}`}
                   >
-                    <option value="" disabled>{t('formSection.appointmentTypePlaceholder')}</option>
+                    {t('appointmentForm.appointmentTypeLabel')} <span className="text-red-500">*</span>
+                  </label>
+                  
+                  <div className="relative">
+                    <select
+                      id="appointmentType"
+                      name="appointmentType"
+                      required
+                      value={formData.appointmentType}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#7BA7C2] focus:ring-2 focus:ring-[#7BA7C2]/20 outline-none transition-all duration-300 appearance-none bg-white"
+                    >
+                      <option value="" disabled>{t('appointmentForm.appointmentTypePlaceholder')}</option>
                     {formFields[3].options?.map((option) => (
                       <option key={option.value} value={option.value}>{option.label}</option>
                     ))}
@@ -238,7 +238,7 @@ const FormSection: React.FC = () => {
                     htmlFor="preferredDate" 
                     className={`block ${fontSize.base} ${fontWeight.medium} ${textColor.dark}`}
                   >
-                    {t('formSection.preferredDateLabel')} <span className="text-red-500">*</span>
+                    {t('appointmentForm.preferredDateLabel')} <span className="text-red-500">*</span>
                   </label>
                   
                   <div className="relative">
@@ -263,7 +263,7 @@ const FormSection: React.FC = () => {
                     htmlFor="preferredTime" 
                     className={`block ${fontSize.base} ${fontWeight.medium} ${textColor.dark}`}
                   >
-                    {t('formSection.preferredTimeLabel')} <span className="text-red-500">*</span>
+                    {t('appointmentForm.preferredTimeLabel')} <span className="text-red-500">*</span>
                   </label>
                   
                   <div className="relative">
@@ -275,7 +275,7 @@ const FormSection: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#7BA7C2] focus:ring-2 focus:ring-[#7BA7C2]/20 outline-none transition-all duration-300 appearance-none bg-white"
                     >
-                      <option value="" disabled>{t('formSection.preferredTimePlaceholder')}</option>
+                      <option value="" disabled>{t('appointmentForm.preferredTimePlaceholder')}</option>
                       {formFields[5].options?.map((option) => (
                         <option key={option.value} value={option.value}>{option.label}</option>
                       ))}
@@ -293,13 +293,13 @@ const FormSection: React.FC = () => {
                   htmlFor="message" 
                   className={`block ${fontSize.base} ${fontWeight.medium} ${textColor.dark}`}
                 >
-                  {t('formSection.messageLabel')}
+                  {t('appointmentForm.messageLabel')}
                 </label>
                 
                 <textarea
                   id="message"
                   name="message"
-                  placeholder={t('formSection.messagePlaceholder')}
+                  placeholder={t('appointmentForm.messagePlaceholder')}
                   rows={4}
                   value={formData.message}
                   onChange={handleInputChange}
@@ -325,7 +325,7 @@ const FormSection: React.FC = () => {
                     htmlFor="consent" 
                     className={`ml-3 ${fontSize.sm} ${textColor.medium}`}
                   >
-                    {t('formSection.consentText')}
+                    {t('appointmentForm.consentText')}
                   </label>
                 </div>
               </div>
@@ -338,7 +338,7 @@ const FormSection: React.FC = () => {
                 >
                   <span className={buttonRippleClass}></span>
                   <span className="relative flex items-center justify-center">
-                    {t('formSection.submitButton')}
+                    {t('appointmentForm.submitButton')}
                     <Send className="ml-2 w-4 h-4" />
                   </span>
                 </button>
@@ -351,4 +351,4 @@ const FormSection: React.FC = () => {
   );
 };
 
-export default FormSection;
+export default AppointmentFormSection;

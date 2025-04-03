@@ -1,33 +1,8 @@
 {
   "heroSection": {
-    "title": "Beratungstermin buchen",
-    "subtitle": "Persönlich oder telefonisch - wir sind für Sie da",
-    "welcomeText": "Vereinbaren Sie einen Beratungstermin mit unseren Experten, um Ihre individuellen Bedürfnisse und Möglichkeiten zu besprechen. Wir nehmen uns Zeit für Sie und beraten Sie umfassend zu allen Fragen rund um Haartransplantation und Haarausfalltherapie."
-  },
-  "optionsSection": {
-    "title": "Wählen Sie Ihre bevorzugte Beratungsart",
-    "subtitle": "Flexibel und auf Ihre Bedürfnisse abgestimmt",
-    "phoneOption": {
-      "title": "Telefonische Beratung",
-      "description": "Bequem von zu Hause aus - Unsere Experten beraten Sie telefonisch zu allen Fragen rund um Haartransplantation und Haarausfalltherapie.",
-      "benefits": [
-        "Zeitersparnis ohne Anfahrt",
-        "Flexible Terminvereinbarung",
-        "Diskrete Beratung in vertrauter Umgebung",
-        "Erste Einschätzung Ihrer Situation"
-      ]
-    },
-    "inPersonOption": {
-      "title": "Persönliche Beratung vor Ort",
-      "description": "Besuchen Sie uns in unserer Klinik für eine ausführliche persönliche Beratung mit detaillierter Haaranalyse.",
-      "benefits": [
-        "Ausführliche Haaranalyse mit modernster Technik",
-        "Persönliches Kennenlernen unseres Teams",
-        "Besichtigung unserer Klinik und Einrichtungen",
-        "Detaillierte Behandlungsplanung"
-      ]
-    },
-    "chooseButton": "Termin vereinbaren"
+    "title": "Termin vereinbaren",
+    "subtitle": "Ihr Weg zu neuem Haarwachstum beginnt hier",
+    "welcomeText": "Vereinbaren Sie einen Beratungstermin mit unseren Experten, um Ihre individuellen Möglichkeiten zu besprechen und einen maßgeschneiderten Behandlungsplan zu erstellen."
   },
   "formSection": {
     "title": "Terminanfrage",
@@ -58,5 +33,30 @@
     "consentText": "Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert und verwendet werden. Weitere Informationen finden Sie in unserer Datenschutzerklärung.",
     "submitButton": "Terminanfrage absenden",
     "successMessage": "Vielen Dank für Ihre Anfrage! Wir werden uns innerhalb von 24 Stunden bei Ihnen melden, um einen Termin zu vereinbaren."
+  },
+  "optionsSection": {
+    "title": "Wählen Sie Ihre bevorzugte Beratungsart",
+    "subtitle": "Flexibel und auf Ihre Bedürfnisse abgestimmt",
+    "phoneOption": {
+      "title": "Telefonische Beratung",
+      "description": "Bequem von zu Hause aus - Unsere Experten beraten Sie telefonisch zu allen Fragen rund um Haartransplantation und Haarausfalltherapie.",
+      "benefits": [
+        "Zeitersparnis ohne Anfahrt",
+        "Flexible Terminvereinbarung",
+        "Diskrete Beratung in vertrauter Umgebung",
+        "Erste Einschätzung Ihrer Situation"
+      ]
+    },
+    "inPersonOption": {
+      "title": "Persönliche Beratung vor Ort",
+      "description": "Besuchen Sie uns in unserer Klinik für eine ausführliche persönliche Beratung mit detaillierter Haaranalyse.",
+      "benefits": [
+        "Ausführliche Haaranalyse mit modernster Technik",
+        "Persönliches Kennenlernen unseres Teams",
+        "Besichtigung unserer Klinik und Einrichtungen",
+        "Detaillierte Behandlungsplanung"
+      ]
+    },
+    "chooseButton": "Termin vereinbaren"
   }
 }

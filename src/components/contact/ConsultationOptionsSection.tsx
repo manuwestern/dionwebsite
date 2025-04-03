@@ -99,8 +99,8 @@ const OptionCard: React.FC<OptionCardProps> = ({
   );
 };
 
-const OptionsSection: React.FC = () => {
-  const { t } = useTranslation('appointment');
+const ConsultationOptionsSection: React.FC = () => {
+  const { t } = useTranslation('contact');
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -176,4 +176,4 @@ const OptionsSection: React.FC = () => {
   );
 };
 
-export default OptionsSection;
+export default ConsultationOptionsSection;

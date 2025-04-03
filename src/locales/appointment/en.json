@@ -1,37 +1,12 @@
 {
   "heroSection": {
-    "title": "Book a Consultation",
-    "subtitle": "In person or by phone - we're here for you",
-    "welcomeText": "Schedule a consultation with our experts to discuss your individual needs and options. We take the time to provide comprehensive advice on all aspects of hair transplantation and hair loss therapy."
-  },
-  "optionsSection": {
-    "title": "Choose Your Preferred Consultation Type",
-    "subtitle": "Flexible and tailored to your needs",
-    "phoneOption": {
-      "title": "Phone Consultation",
-      "description": "Convenient from the comfort of your home - Our experts provide phone consultations on all aspects of hair transplantation and hair loss therapy.",
-      "benefits": [
-        "Save time with no travel required",
-        "Flexible appointment scheduling",
-        "Discreet consultation in familiar surroundings",
-        "Initial assessment of your situation"
-      ]
-    },
-    "inPersonOption": {
-      "title": "In-Person Consultation",
-      "description": "Visit us at our clinic for a detailed personal consultation with comprehensive hair analysis.",
-      "benefits": [
-        "Detailed hair analysis using state-of-the-art technology",
-        "Meet our team in person",
-        "Tour of our clinic and facilities",
-        "Detailed treatment planning"
-      ]
-    },
-    "chooseButton": "Schedule Appointment"
+    "title": "Book an Appointment",
+    "subtitle": "Your journey to new hair growth starts here",
+    "welcomeText": "Schedule a consultation with our experts to discuss your individual options and create a tailored treatment plan."
   },
   "formSection": {
     "title": "Appointment Request",
-    "description": "Fill out the form and we'll contact you within 24 hours to arrange a suitable appointment time.",
+    "description": "Fill out the form and we will contact you within 24 hours to arrange a suitable appointment.",
     "nameLabel": "Name",
     "namePlaceholder": "Your full name",
     "emailLabel": "Email",
@@ -58,5 +33,30 @@
     "consentText": "I agree that my data will be stored and used to process my request. For more information, please see our privacy policy.",
     "submitButton": "Submit Appointment Request",
     "successMessage": "Thank you for your request! We will contact you within 24 hours to arrange an appointment."
+  },
+  "optionsSection": {
+    "title": "Choose Your Preferred Consultation Type",
+    "subtitle": "Flexible and tailored to your needs",
+    "phoneOption": {
+      "title": "Phone Consultation",
+      "description": "Convenient from the comfort of your home - Our experts will advise you on all aspects of hair transplantation and hair loss therapy over the phone.",
+      "benefits": [
+        "Time-saving without travel",
+        "Flexible appointment scheduling",
+        "Discreet consultation in familiar surroundings",
+        "Initial assessment of your situation"
+      ]
+    },
+    "inPersonOption": {
+      "title": "In-Person Consultation",
+      "description": "Visit us at our clinic for a detailed personal consultation with comprehensive hair analysis.",
+      "benefits": [
+        "Detailed hair analysis with state-of-the-art technology",
+        "Personal introduction to our team",
+        "Tour of our clinic and facilities",
+        "Detailed treatment planning"
+      ]
+    },
+    "chooseButton": "Book an Appointment"
   }
 }
