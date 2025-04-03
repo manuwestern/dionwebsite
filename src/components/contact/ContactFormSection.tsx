@@ -127,7 +127,7 @@ const ContactFormSection: React.FC = () => {
         </div>
         
         {/* Contact Form */}
-        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-100">
+        <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-100">
           {formSubmitted ? (
             <div className="text-center py-12">
               <div className="flex justify-center mb-6">
