@@ -76,36 +76,6 @@
     "submitButton": "Nachricht senden",
     "successMessage": "Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden."
   },
-  "appointmentForm": {
-    "title": "Terminanfrage",
-    "description": "Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen, um einen passenden Termin zu vereinbaren.",
-    "nameLabel": "Name",
-    "namePlaceholder": "Ihr vollständiger Name",
-    "emailLabel": "E-Mail",
-    "emailPlaceholder": "Ihre E-Mail-Adresse",
-    "phoneLabel": "Telefonnummer",
-    "phonePlaceholder": "Ihre Telefonnummer für Rückfragen",
-    "appointmentTypeLabel": "Beratungsart",
-    "appointmentTypePlaceholder": "Bitte wählen Sie",
-    "appointmentTypeOptions": {
-      "phone": "Telefonische Beratung",
-      "inPerson": "Persönliche Beratung vor Ort"
-    },
-    "preferredDateLabel": "Bevorzugtes Datum",
-    "preferredDatePlaceholder": "TT.MM.JJJJ",
-    "preferredTimeLabel": "Bevorzugte Uhrzeit",
-    "preferredTimePlaceholder": "Bitte wählen Sie",
-    "preferredTimeOptions": {
-      "morning": "Vormittags (9:00 - 12:00 Uhr)",
-      "afternoon": "Nachmittags (13:00 - 16:00 Uhr)",
-      "evening": "Abends (17:00 - 19:00 Uhr)"
-    },
-    "messageLabel": "Ihre Nachricht (optional)",
-    "messagePlaceholder": "Teilen Sie uns mit, worum es bei Ihrer Beratung gehen soll oder wenn Sie spezielle Wünsche haben",
-    "consentText": "Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert und verwendet werden. Weitere Informationen finden Sie in unserer Datenschutzerklärung.",
-    "submitButton": "Terminanfrage absenden",
-    "successMessage": "Vielen Dank für Ihre Anfrage! Wir werden uns innerhalb von 24 Stunden bei Ihnen melden, um einen Termin zu vereinbaren."
-  },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
     "description": "Finden Sie schnelle Antworten auf häufige Fragen zu unseren Dienstleistungen und Beratungen.",
