@@ -285,6 +285,33 @@
     ],
     "cta": "Schedule your free consultation now"
   },
+  "painlessTreatmentSection": {
+    "premiumOption": "Premium Option",
+    "title": "Painless Anesthesia",
+    "subtitle": "Comfort technology for a pain-free treatment - Our innovative DPI method revolutionizes the anesthesia phase for a pleasant experience",
+    "description": "Experience a revolutionary treatment without the dreaded pain of the anesthesia phase. Our newly developed DPI procedure makes the anesthesia phase almost completely pain-free and transforms your treatment into a pleasant experience from start to finish. This premium option can be added to your treatment for an additional fee.",
+    "learnMore": "Learn more about DPI",
+    "additionalFee": "For an additional fee",
+    "benefitsTitle": "Benefits of DPI Technology",
+    "features": [
+      {
+        "title": "Painless Anesthesia",
+        "description": "Our newly developed procedure makes the anesthesia phase almost completely pain-free, for a pleasant treatment experience from the start."
+      },
+      {
+        "title": "Innovative Technology",
+        "description": "DPI technology uses computer-controlled precision injections with optimal speed and pressure for maximum comfort."
+      },
+      {
+        "title": "Reduced Anxiety",
+        "description": "The pain-free anesthesia significantly reduces treatment anxiety, leading to a more relaxed experience and better results."
+      },
+      {
+        "title": "Exclusive Comfort",
+        "description": "As a premium option, DPI offers exclusive comfort that makes your treatment a pleasant, stress-free experience."
+      }
+    ]
+  },
   "faqSection": {
     "title": "Frequently Asked Questions",
     "subtitle": "Answers to your most important questions - Find detailed information about our treatments for hair transplantation, eyebrows, beard, and hair loss therapy",

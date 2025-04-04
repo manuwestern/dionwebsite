@@ -14,7 +14,7 @@ const FooterSection: React.FC = () => {
           {/* Logo and Description */}
           <div className="col-span-1">
             <div className="flex items-center mb-6">
-              <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" className="h-12 mr-3 brightness-[1.15] contrast-[1.1]" />
+              <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" className="h-12 mr-3 brightness-0 invert" />
             </div>
             <p className="text-sm font-light text-gray-300 mb-6 leading-relaxed">
               {t('footer.clinicDescription')}

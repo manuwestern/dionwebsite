@@ -285,6 +285,33 @@
     ],
     "cta": "Vereinbaren Sie jetzt Ihr kostenloses Beratungsgespräch"
   },
+  "painlessTreatmentSection": {
+    "premiumOption": "Premium Option",
+    "title": "Schmerzfreie Betäubung",
+    "subtitle": "Komfort-Technologie für eine schmerzfreie Behandlung - Unsere innovative DPI-Methode revolutioniert die Betäubungsphase für ein angenehmes Erlebnis",
+    "description": "Erleben Sie eine revolutionäre Behandlung ohne den gefürchteten Schmerz der Betäubungsphase. Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende. Diese Premium-Option können Sie gegen einen Aufpreis zu Ihrer Behandlung hinzubuchen.",
+    "learnMore": "Mehr über DPI erfahren",
+    "additionalFee": "Gegen Aufpreis",
+    "benefitsTitle": "Vorteile der DPI-Technologie",
+    "features": [
+      {
+        "title": "Schmerzfreie Betäubung",
+        "description": "Unser neuentwickeltes Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei, für ein angenehmes Behandlungserlebnis von Anfang an."
+      },
+      {
+        "title": "Innovative Technologie",
+        "description": "Die DPI-Technologie nutzt computergesteuerte Präzisionsinjektionen mit optimaler Geschwindigkeit und Druck für maximalen Komfort."
+      },
+      {
+        "title": "Reduzierte Angst",
+        "description": "Durch die schmerzfreie Betäubung wird die Behandlungsangst deutlich reduziert, was zu einer entspannteren Erfahrung und besseren Ergebnissen führt."
+      },
+      {
+        "title": "Exklusiver Komfort",
+        "description": "Als Premium-Option bietet DPI einen exklusiven Komfort, der Ihre Behandlung zu einem angenehmen, stressfreien Erlebnis macht."
+      }
+    ]
+  },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
     "subtitle": "Antworten auf Ihre wichtigsten Fragen - Hier finden Sie detaillierte Informationen zu unseren Behandlungen für Haartransplantation, Augenbrauen, Bart und Haarausfalltherapie",

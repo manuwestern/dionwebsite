@@ -102,10 +102,31 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            {/* Decorative elements */}
-            <div className="mt-10 relative">
+            {/* Image section with enhanced visual effects */}
+            <div className="mt-[100px] relative">
+              {/* Decorative elements */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[300px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
+              </div>
+              
+              {/* Image with refined animation and effects */}
+              <div className={`relative flex justify-center transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="relative">
+                  {/* Enhanced glow effect */}
+                  <div className="absolute -inset-4 bottom-0 bg-gradient-to-t from-[#7BA7C2]/20 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
+                  
+                  {/* Subtle animated decorative elements */}
+                  <div className="absolute top-1/4 -left-4 w-12 h-12 rounded-full border border-[#7BA7C2]/20 animate-pulse-slow"></div>
+                  <div className="absolute bottom-1/3 -right-6 w-16 h-16 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
+                  
+                  <img 
+                    src="/images/Model_Kontakt.png"
+                    alt="Kontakt zur Dion Hair Clinic"
+                    className="w-auto h-auto max-h-[500px] object-contain relative z-10 scale-125"
+                    width="450"
+                    height="650"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -156,7 +177,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Decorative elements */}
+          {/* Image section with enhanced visual effects */}
           <div className={`absolute right-0 top-0 bottom-0 w-[40%] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="relative">
               {/* Enhanced glow effect */}
@@ -166,6 +187,14 @@ const HeroSection: React.FC = () => {
               <div className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full border border-[#7BA7C2]/20 animate-pulse-slow"></div>
               <div className="absolute bottom-1/3 right-1/3 w-28 h-28 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
               <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full border border-[#7BA7C2]/15 animate-pulse"></div>
+              
+              <img 
+                src="/images/Model_Kontakt.png"
+                alt="Kontakt zur Dion Hair Clinic"
+                className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10 scale-125"
+                width="650"
+                height="850"
+              />
             </div>
           </div>
         </div>

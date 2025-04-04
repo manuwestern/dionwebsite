@@ -4,6 +4,7 @@ import HeroSection from '../components/home/HeroSection';
 import BenefitsSection from '../components/home/BenefitsSection';
 import TreatmentAreasSection from '../components/home/TreatmentAreasSection';
 import TestimonialsSection from '../components/hairTransplantation/TestimonialsSection';
+import PainlessTreatmentSection from '../components/home/PainlessTreatmentSection';
 import FAQSection from '../components/home/FAQSection';
 import ContactSection from '../components/layout/ContactSection';
 import HairAnalysisPopup from '../components/home/HairAnalysisPopup';
@@ -146,6 +147,10 @@ const HomePage: React.FC = () => {
       </SectionWrapper>
       
       <SectionWrapper type="light">
+        <PainlessTreatmentSection />
+      </SectionWrapper>
+      
+      <SectionWrapper type="accent">
         <FAQSection />
       </SectionWrapper>
       
