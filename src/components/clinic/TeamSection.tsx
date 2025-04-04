@@ -62,17 +62,24 @@ const TeamSection: React.FC = () => {
                   </div>
 
                   {/* Team Member Info */}
-                  <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50/50">
-                    <h3 className={`${textStyle.cardTitle} mb-1 text-center`}>{member.name}</h3>
-                    <p className={`${fontSize.sm} ${textColor.primary} ${fontWeight.medium} ${tracking.wide} uppercase mb-4 text-center`}>
-                      {member.title}
-                    </p>
+                  <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50/50 flex flex-col h-[370px]">
+                    {/* Fixed height area for name and title */}
+                    <div className="h-[100px] flex flex-col justify-start">
+                      <h3 className={`${textStyle.cardTitle} mb-1 text-center`}>{member.name}</h3>
+                      <p className={`${fontSize.sm} ${textColor.primary} ${fontWeight.medium} ${tracking.wide} uppercase mb-0 text-center`}>
+                        {member.title}
+                      </p>
+                    </div>
+                    
+                    {/* Fixed height area for description */}
+                    <div className="h-[140px] overflow-hidden">
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                        {member.description}
+                      </p>
+                    </div>
 
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
-                      {member.description}
-                    </p>
-
-                    <div className="pt-4 mt-4 border-t border-gray-100">
+                    {/* Credentials at the bottom */}
+                    <div className="pt-4 mt-auto border-t border-gray-100">
                       <p className={`${fontSize.xs} ${textColor.light} ${tracking.wide}`}>
                         {member.credentials}
                       </p>
