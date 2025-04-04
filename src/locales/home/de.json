@@ -403,6 +403,53 @@
       }
     ]
   },
+  "appSection": {
+    "title": "Dion App - Ihr Begleiter für Ihre Behandlung",
+    "subtitle": "Ihr digitaler Assistent für eine optimale Betreuung - Unsere innovative Smartphone-App unterstützt Sie durch den gesamten Behandlungsprozess mit personalisierten Anleitungen und Erinnerungen",
+    "description": "Mit der Dion App bieten wir Ihnen einen umfassenden digitalen Assistenten als Smartphone-App, der Sie durch den gesamten Prozess Ihrer Behandlung führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.",
+    "subheading": "Ihr digitaler Assistent für den gesamten Behandlungsprozess",
+    "features": [
+      {
+        "title": "Terminplanung",
+        "description": "Alle wichtigen Termine vor und nach der Behandlung im Überblick"
+      },
+      {
+        "title": "Checklisten",
+        "description": "Personalisierte To-Do-Listen für optimale Vor- und Nachsorge"
+      },
+      {
+        "title": "Anleitungen",
+        "description": "Detaillierte Pflegeanleitungen für jede Phase Ihrer Behandlung"
+      },
+      {
+        "title": "Fortschrittsdokumentation",
+        "description": "Dokumentieren Sie Ihren Fortschritt mit Fotos und Notizen"
+      },
+      {
+        "title": "Erinnerungen",
+        "description": "Automatische Benachrichtigungen für wichtige Pflegeschritte"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Zugriff auf alle Funktionen über unsere benutzerfreundliche App"
+      }
+    ],
+    "appContent": {
+      "progress": "Ihr Fortschritt",
+      "day1": "Tag 1",
+      "month3": "3 Monate",
+      "month12": "12 Monate",
+      "todayTasks": "Heutige Aufgaben",
+      "task1": "Pflegeprodukte anwenden",
+      "task2": "Feuchtigkeitsspray benutzen",
+      "task3": "Fortschrittsfoto aufnehmen",
+      "nextAppointment": "Nächster Termin",
+      "appointmentDetails": "Kontrolluntersuchung: 15. April 2025, 14:00 Uhr"
+    },
+    "appStoreInfo": "Verfügbar für Android und iPhone – Laden Sie die App kostenlos im Google Play Store oder Apple App Store herunter.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
   "footerSection": {
     "description": "Premium-Spezialklinik für Haarwiederherstellung mit ganzheitlichen Behandlungsansätzen.",
     "services": {

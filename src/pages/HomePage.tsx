@@ -5,6 +5,7 @@ import BenefitsSection from '../components/home/BenefitsSection';
 import TreatmentAreasSection from '../components/home/TreatmentAreasSection';
 import TestimonialsSection from '../components/hairTransplantation/TestimonialsSection';
 import PainlessTreatmentSection from '../components/home/PainlessTreatmentSection';
+import AppSection from '../components/home/AppSection';
 import FAQSection from '../components/home/FAQSection';
 import ContactSection from '../components/layout/ContactSection';
 import HairAnalysisPopup from '../components/home/HairAnalysisPopup';
@@ -142,12 +143,16 @@ const HomePage: React.FC = () => {
         <BenefitsSection />
       </SectionWrapper>
       
-      <SectionWrapper type="accent">
-        <TestimonialsSection />
-      </SectionWrapper>
-      
       <SectionWrapper type="light">
         <PainlessTreatmentSection />
+      </SectionWrapper>
+      
+      <SectionWrapper type="medium">
+        <AppSection />
+      </SectionWrapper>
+      
+      <SectionWrapper type="accent">
+        <TestimonialsSection />
       </SectionWrapper>
       
       <SectionWrapper type="accent">

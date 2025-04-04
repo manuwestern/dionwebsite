@@ -398,6 +398,53 @@
       }
     ]
   },
+  "appSection": {
+    "title": "Dion App - Your Companion for Your Treatment",
+    "subtitle": "Your digital assistant for optimal care - Our innovative smartphone app supports you throughout the entire treatment process with personalized instructions and reminders",
+    "description": "With the Dion App, we offer you a comprehensive digital assistant as a smartphone app that guides you through the entire process of your treatment - from preparation to the procedure to long-term aftercare.",
+    "subheading": "Your digital assistant for the entire treatment process",
+    "features": [
+      {
+        "title": "Appointment Planning",
+        "description": "Overview of all important appointments before and after treatment"
+      },
+      {
+        "title": "Checklists",
+        "description": "Personalized to-do lists for optimal pre- and post-care"
+      },
+      {
+        "title": "Instructions",
+        "description": "Detailed care instructions for each phase of your treatment"
+      },
+      {
+        "title": "Progress Documentation",
+        "description": "Document your progress with photos and notes"
+      },
+      {
+        "title": "Reminders",
+        "description": "Automatic notifications for important care steps"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Access to all functions via our user-friendly app"
+      }
+    ],
+    "appContent": {
+      "progress": "Your Progress",
+      "day1": "Day 1",
+      "month3": "3 Months",
+      "month12": "12 Months",
+      "todayTasks": "Today's Tasks",
+      "task1": "Apply care products",
+      "task2": "Use moisturizing spray",
+      "task3": "Take progress photo",
+      "nextAppointment": "Next Appointment",
+      "appointmentDetails": "Check-up: April 15, 2025, 2:00 PM"
+    },
+    "appStoreInfo": "Available for Android and iPhone – Download the app for free from the Google Play Store or Apple App Store.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
   "footerSection": {
     "description": "Premium specialty clinic for hair restoration with holistic treatment approaches.",
     "services": {
