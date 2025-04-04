@@ -5,7 +5,8 @@
   },
   "hero": {
     "title": "Wissenswertes",
-    "subtitle": "Umfassende Informationen und Fakten rund um das Thema Haare und Haartransplantation"
+    "subtitle": "Umfassende Informationen und Fakten rund um das Thema Haare und Haartransplantation",
+    "welcomeText": "Entdecken Sie fundiertes Wissen über Haargesundheit, Haarausfall und moderne Behandlungsmethoden. Unsere Experten teilen wertvolle Einblicke und praktische Tipps, die Ihnen helfen, Ihre Haare besser zu verstehen und optimal zu pflegen."
   },
   "hairLossCauses": {
     "title": "Ursachen von Haarausfall",
@@ -86,6 +87,10 @@
     "myth5Text": "Wahrheit: Haare können nicht über Nacht ergrauen. Was manchmal als plötzliches Ergrauen wahrgenommen wird, ist oft das Ergebnis einer Erkrankung namens Alopecia areata, bei der dunkle Haare ausfallen, während graue Haare bestehen bleiben, was den Anschein eines plötzlichen Ergrauens erweckt.",
     "myth6Title": "Mythos: Sonneneinstrahlung verursacht Haarausfall",
     "myth6Text": "Wahrheit: Übermäßige Sonneneinstrahlung kann das Haar austrocknen und brüchig machen, verursacht aber keinen permanenten Haarausfall. UV-Strahlen können jedoch die Kopfhaut schädigen, daher ist ein angemessener Schutz durch Hüte oder spezielle Haarpflegeprodukte mit UV-Schutz empfehlenswert."
+  },
+  "ctaSection": {
+    "title": "Haben Sie Fragen zu Haarausfall oder Haarpflege?",
+    "description": "Unsere Experten stehen Ihnen für eine persönliche Beratung zur Verfügung. Wir helfen Ihnen, die richtige Lösung für Ihre individuellen Bedürfnisse zu finden und beantworten alle Ihre Fragen rund um das Thema Haargesundheit."
   },
   "nutrition": {
     "title": "Ernährung für gesundes Haar",
