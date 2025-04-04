@@ -30,14 +30,10 @@ const HeroSection: React.FC = () => {
       ref={heroRef}
       className="relative overflow-hidden min-h-[85vh] flex items-center"
     >
-      {/* Background with gradient and blur effects */}
+      {/* Background with simple gradient */}
       <div className="absolute inset-0 z-0">
         {/* Main gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -48,27 +44,18 @@ const HeroSection: React.FC = () => {
             backgroundRepeat: 'repeat'
           }}
         ></div>
-        
-        {/* Animated gradient lines */}
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x"></div>
-          <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slow"></div>
-          <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slower"></div>
-        </div>
       </div>
       
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col min-h-[90vh] px-4">
-          
-          
           {/* Main content area with perfect spacing */}
           <div className="flex-1 flex flex-col justify-between pt-4 pb-0">
             {/* Text content with refined typography and animations */}
             <div className="space-y-4 mt-2">
               {/* Title with elegant animation and perfect typography */}
               <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
-              <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto whitespace-pre-line`} lang="de">
+                <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto whitespace-pre-line`} lang="de">
                   {t('heroSection.title')}
                 </h1>
                 
@@ -102,37 +89,27 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            {/* Image section with enhanced visual effects */}
+            {/* Price tag section */}
             <div className="mt-10 mb-12 relative">
-              {/* Decorative elements */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[200px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
-              </div>
-              
               {/* Decorative price tag elements */}
               <div className={`relative flex justify-center transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-                <div className="relative">
-                  {/* Enhanced glow effect */}
-                  <div className="absolute -inset-4 bottom-0 bg-gradient-to-t from-[#7BA7C2]/20 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
-                  
-                  {/* Decorative price tags - Grid layout for better mobile display */}
-                  <div className="grid grid-cols-2 gap-4 max-w-[360px] mx-auto">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-300">
-                      <div className="text-[#7BA7C2] font-medium text-lg">Saphir FUE</div>
-                      <div className="text-gray-800 font-light text-2xl">ab 2599€</div>
-                    </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[2deg] hover:rotate-0 transition-all duration-300">
-                      <div className="text-[#7BA7C2] font-medium text-lg">DHI FUE</div>
-                      <div className="text-gray-800 font-light text-2xl">ab 3599€</div>
-                    </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[1deg] hover:rotate-0 transition-all duration-300">
-                      <div className="text-[#7BA7C2] font-medium text-lg">Beard</div>
-                      <div className="text-gray-800 font-light text-2xl">ab 2599€</div>
-                    </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[-2deg] hover:rotate-0 transition-all duration-300">
-                      <div className="text-[#7BA7C2] font-medium text-lg">Eyebrow</div>
-                      <div className="text-gray-800 font-light text-2xl">ab 1699€</div>
-                    </div>
+                {/* Decorative price tags - Grid layout for better mobile display */}
+                <div className="grid grid-cols-2 gap-4 max-w-[360px] mx-auto">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-300">
+                    <div className="text-[#7BA7C2] font-medium text-lg">Saphir FUE</div>
+                    <div className="text-gray-800 font-light text-2xl">ab 2599€</div>
+                  </div>
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[2deg] hover:rotate-0 transition-all duration-300">
+                    <div className="text-[#7BA7C2] font-medium text-lg">DHI FUE</div>
+                    <div className="text-gray-800 font-light text-2xl">ab 3599€</div>
+                  </div>
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[1deg] hover:rotate-0 transition-all duration-300">
+                    <div className="text-[#7BA7C2] font-medium text-lg">Beard</div>
+                    <div className="text-gray-800 font-light text-2xl">ab 2599€</div>
+                  </div>
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[-2deg] hover:rotate-0 transition-all duration-300">
+                    <div className="text-[#7BA7C2] font-medium text-lg">Eyebrow</div>
+                    <div className="text-gray-800 font-light text-2xl">ab 1699€</div>
                   </div>
                 </div>
               </div>
@@ -198,34 +175,29 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Price tag section with enhanced visual effects */}
+          {/* Price tag section */}
           <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
-            <div className="relative">
-              {/* Enhanced glow effect */}
-              <div className="absolute -inset-12 bg-gradient-to-tr from-[#7BA7C2]/10 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
-              
-              {/* Decorative price tags */}
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-300">
-                  <div className="text-[#7BA7C2] font-medium text-xl mb-1">Saphir FUE Hair</div>
-                  <div className="text-gray-800 font-light text-4xl mb-2">ab 2599€</div>
-                  <div className="text-gray-600 text-sm">Basic Paket bis 2000 Grafts</div>
-                </div>
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[2deg] hover:rotate-0 transition-all duration-300 mt-8">
-                  <div className="text-[#7BA7C2] font-medium text-xl mb-1">DHI FUE Hair</div>
-                  <div className="text-gray-800 font-light text-4xl mb-2">ab 3599€</div>
-                  <div className="text-gray-600 text-sm">Basic Paket bis 2000 Grafts</div>
-                </div>
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[1deg] hover:rotate-0 transition-all duration-300">
-                  <div className="text-[#7BA7C2] font-medium text-xl mb-1">Saphir FUE Beard</div>
-                  <div className="text-gray-800 font-light text-4xl mb-2">ab 2599€</div>
-                  <div className="text-gray-600 text-sm">Basic Paket bis 2000 Grafts</div>
-                </div>
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[-2deg] hover:rotate-0 transition-all duration-300 mt-4">
-                  <div className="text-[#7BA7C2] font-medium text-xl mb-1">Saphir FUE Eyebrow</div>
-                  <div className="text-gray-800 font-light text-4xl mb-2">ab 1699€</div>
-                  <div className="text-gray-600 text-sm">bis 1000 Grafts</div>
-                </div>
+            {/* Decorative price tags */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-300">
+                <div className="text-[#7BA7C2] font-medium text-xl mb-1">Saphir FUE Hair</div>
+                <div className="text-gray-800 font-light text-4xl mb-2">ab 2599€</div>
+                <div className="text-gray-600 text-sm">Basic Paket bis 2000 Grafts</div>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[2deg] hover:rotate-0 transition-all duration-300 mt-8">
+                <div className="text-[#7BA7C2] font-medium text-xl mb-1">DHI FUE Hair</div>
+                <div className="text-gray-800 font-light text-4xl mb-2">ab 3599€</div>
+                <div className="text-gray-600 text-sm">Basic Paket bis 2000 Grafts</div>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[1deg] hover:rotate-0 transition-all duration-300">
+                <div className="text-[#7BA7C2] font-medium text-xl mb-1">Saphir FUE Beard</div>
+                <div className="text-gray-800 font-light text-4xl mb-2">ab 2599€</div>
+                <div className="text-gray-600 text-sm">Basic Paket bis 2000 Grafts</div>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#7BA7C2]/20 transform rotate-[-2deg] hover:rotate-0 transition-all duration-300 mt-4">
+                <div className="text-[#7BA7C2] font-medium text-xl mb-1">Saphir FUE Eyebrow</div>
+                <div className="text-gray-800 font-light text-4xl mb-2">ab 1699€</div>
+                <div className="text-gray-600 text-sm">bis 1000 Grafts</div>
               </div>
             </div>
           </div>

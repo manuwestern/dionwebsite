@@ -144,10 +144,8 @@ const AppointmentFormSection: React.FC = () => {
 
   return (
     <section id="appointmentForm" className="py-16 md:py-24 relative overflow-hidden">
-      {/* Decorative elements */}
+      {/* Simple background */}
       <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-      <div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -ml-[400px] -mt-[400px] blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -mr-[300px] -mb-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}

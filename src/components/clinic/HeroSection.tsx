@@ -30,14 +30,10 @@ const HeroSection: React.FC = () => {
       ref={heroRef}
       className="relative overflow-hidden md:min-h-[85vh] flex items-center"
     >
-      {/* Background with gradient and blur effects */}
+      {/* Background with simple gradient */}
       <div className="absolute inset-0 z-0">
         {/* Main gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -mr-[400px] -mt-[400px] blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -ml-[300px] -mb-[300px] blur-3xl"></div>
         
         {/* Subtle pattern overlay */}
         <div 
@@ -48,13 +44,6 @@ const HeroSection: React.FC = () => {
             backgroundRepeat: 'repeat'
           }}
         ></div>
-        
-        {/* Animated gradient lines */}
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x"></div>
-          <div className="absolute top-1/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slow"></div>
-          <div className="absolute top-2/3 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent animate-gradient-x-slower"></div>
-        </div>
       </div>
       
       {/* Mobile Layout */}
@@ -102,31 +91,17 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            {/* Image section with enhanced visual effects */}
+            {/* Image section */}
             <div className="mt-[100px] relative">
-              {/* Decorative elements */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[300px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
-              </div>
-              
-              {/* Image with refined animation and effects */}
+              {/* Image with animation */}
               <div className={`relative flex justify-center transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-                <div className="relative">
-                  {/* Enhanced glow effect */}
-                  <div className="absolute -inset-4 bottom-0 bg-gradient-to-t from-[#7BA7C2]/20 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
-                  
-                  {/* Subtle animated decorative elements */}
-                  <div className="absolute top-1/4 -left-4 w-12 h-12 rounded-full border border-[#7BA7C2]/20 animate-pulse-slow"></div>
-                  <div className="absolute bottom-1/3 -right-6 w-16 h-16 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
-                  
-                  <img 
-                    src="/images/Dion_Model_Ok.png"
-                    alt="Dion Hair Clinic - Excellence in Hair Restoration"
-                    className="w-auto h-auto max-h-[500px] object-contain relative z-10 scale-125"
-                    width="450"
-                    height="650"
-                  />
-                </div>
+                <img 
+                  src="/images/Dion_Model_Ok.png"
+                  alt="Dion Hair Clinic - Excellence in Hair Restoration"
+                  className="w-auto h-auto max-h-[500px] object-contain relative z-10 scale-125"
+                  width="450"
+                  height="650"
+                />
               </div>
             </div>
           </div>
@@ -190,25 +165,15 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Image section with enhanced visual effects */}
+          {/* Image section */}
           <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
-            <div className="relative">
-              {/* Enhanced glow effect */}
-              <div className="absolute -inset-12 bg-gradient-to-tr from-[#7BA7C2]/10 to-[#7BA7C2]/5 rounded-full blur-3xl"></div>
-              
-              {/* Subtle animated decorative elements */}
-              <div className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full border border-[#7BA7C2]/20 animate-pulse-slow"></div>
-              <div className="absolute bottom-1/3 right-1/3 w-28 h-28 rounded-full border border-[#7BA7C2]/10 animate-pulse-slower"></div>
-              <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full border border-[#7BA7C2]/15 animate-pulse"></div>
-              
-              <img 
-                src="/images/Dion_Model_Ok.png"
-                alt="Dion Hair Clinic - Excellence in Hair Restoration"
-                className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10 scale-125"
-                width="650"
-                height="850"
-              />
-            </div>
+            <img 
+              src="/images/Dion_Model_Ok.png"
+              alt="Dion Hair Clinic - Excellence in Hair Restoration"
+              className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10 scale-125"
+              width="650"
+              height="850"
+            />
           </div>
         </div>
       </div>
