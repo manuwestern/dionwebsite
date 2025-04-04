@@ -139,7 +139,7 @@ const HomePage: React.FC = () => {
         <TreatmentAreasSection />
       </SectionWrapper>
       
-      <SectionWrapper type="light">
+      <SectionWrapper type="medium">
         <BenefitsSection />
       </SectionWrapper>
       
@@ -151,7 +151,7 @@ const HomePage: React.FC = () => {
         <AppSection />
       </SectionWrapper>
       
-      <SectionWrapper type="accent">
+      <SectionWrapper type="light">
         <TestimonialsSection />
       </SectionWrapper>
       

@@ -133,15 +133,15 @@ const ContactPage: React.FC = () => {
         <HeroSection />
       </SectionWrapper>
       
+      <SectionWrapper type="medium">
+        <ConsultationOptionsSection />
+      </SectionWrapper>
+
       <SectionWrapper type="light">
         <ContactInfoSection />
       </SectionWrapper>
       
       <SectionWrapper type="accent">
-        <ConsultationOptionsSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="medium">
         <ContactFormSection />
       </SectionWrapper>
       
