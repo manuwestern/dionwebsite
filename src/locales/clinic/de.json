@@ -60,28 +60,22 @@
     "description": "Unser Team besteht aus hochqualifizierten Spezialisten mit umfangreicher Erfahrung in der Haarwiederherstellung. Jedes Mitglied ist bestrebt, außergewöhnliche Betreuung zu bieten und die bestmöglichen Ergebnisse für unsere Patienten zu erzielen.",
     "members": [
       {
-        "name": "Dr. Michael Weber",
-        "title": "Ärztlicher Direktor & Haartransplantationsspezialist",
-        "description": "Mit über 15 Jahren Erfahrung in der Haarwiederherstellung leitet Dr. Weber unser medizinisches Team mit Expertise in den neuesten Transplantationstechniken.",
-        "credentials": "Facharzt für Dermatologie, Mitglied der International Society of Hair Restoration Surgery"
+        "name": "Blerina Bevapi",
+        "title": "Fachärztin für Innere Medizin und Expertin für Haartansplantationen",
+        "description": "Mit ihrer umfassenden medizinischen Expertise und spezialisiertem Wissen im Bereich Haartransplantationen sorgt Dr. Bevapi für höchste medizinische Standards und optimale Behandlungsergebnisse.",
+        "credentials": "Fachärztin für Innere Medizin, Spezialisierung auf Haartransplantationstechniken"
       },
       {
-        "name": "Dr. Anna Schmidt",
-        "title": "Chirurgin für Haarwiederherstellung",
-        "description": "Dr. Schmidt ist spezialisiert auf FUE- und DHI-Techniken und bekannt für ihre akribische Aufmerksamkeit für Details und natürlich aussehende Haaransatzdesigns.",
-        "credentials": "Zertifiziert in fortgeschrittenen Techniken der Haarwiederherstellung, Europäisches Board für Haarwiederherstellungschirurgie"
+        "name": "Dilek Ergüney",
+        "title": "Medizinische Haartechnikerin",
+        "description": "Dilek Ergüney bringt umfangreiche Erfahrung in der präzisen Durchführung von Haartransplantationstechniken mit und ist spezialisiert auf die sorgfältige Handhabung von Haarfollikeln für optimale Ergebnisse.",
+        "credentials": "Zertifizierte medizinische Haartechnikerin mit Spezialisierung auf FUE- und DHI-Techniken"
       },
       {
-        "name": "Thomas Müller",
-        "title": "Trichologe & Haarausfall-Spezialist",
-        "description": "Thomas führt umfassende Haar- und Kopfhautbeurteilungen durch und entwickelt personalisierte Behandlungspläne für nicht-chirurgische Haarwiederherstellung.",
-        "credentials": "Zertifizierter Trichologe, Mitglied der European Hair Research Society"
-      },
-      {
-        "name": "Lisa Becker",
-        "title": "Patientenbetreuungskoordinatorin",
-        "description": "Lisa sorgt dafür, dass jeder Patient während seiner Behandlungsreise, von der ersten Beratung bis zur Nachsorge, individuelle Aufmerksamkeit erhält.",
-        "credentials": "Zertifiziert in medizinischer Patientenbetreuung, über 10 Jahre Erfahrung im Gesundheitsmanagement"
+        "name": "Burak Gözel",
+        "title": "Medizinischer Haartechniker",
+        "description": "Burak Gözel verfügt über fundierte Expertise in der Anwendung modernster Haartransplantationstechniken und trägt mit seiner präzisen Arbeitsweise maßgeblich zu den hervorragenden Ergebnissen unserer Behandlungen bei.",
+        "credentials": "Zertifizierter medizinischer Haartechniker, Experte für Saphir-FUE und DHI-Methoden"
       }
     ]
   },

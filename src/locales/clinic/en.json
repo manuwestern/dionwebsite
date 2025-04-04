@@ -60,28 +60,22 @@
     "description": "Our team consists of highly trained specialists with extensive experience in hair restoration. Each member is committed to providing exceptional care and achieving the best possible results for our patients.",
     "members": [
       {
-        "name": "Dr. Michael Weber",
-        "title": "Medical Director & Hair Transplant Specialist",
-        "description": "With over 15 years of experience in hair restoration, Dr. Weber leads our medical team with expertise in the latest transplantation techniques.",
-        "credentials": "Board Certified in Dermatology, Member of the International Society of Hair Restoration Surgery"
+        "name": "Blerina Bevapi",
+        "title": "Internal Medicine Specialist & Hair Transplantation Expert",
+        "description": "With her comprehensive medical expertise and specialized knowledge in hair transplantation, Dr. Bevapi ensures the highest medical standards and optimal treatment outcomes.",
+        "credentials": "Specialist in Internal Medicine, Specialized in Hair Transplantation Techniques"
       },
       {
-        "name": "Dr. Anna Schmidt",
-        "title": "Hair Restoration Surgeon",
-        "description": "Dr. Schmidt specializes in FUE and DHI techniques, known for her meticulous attention to detail and natural-looking hairline designs.",
-        "credentials": "Certified in Advanced Hair Restoration Techniques, European Board of Hair Restoration Surgery"
+        "name": "Dilek Ergüney",
+        "title": "Medical Hair Technician",
+        "description": "Dilek Ergüney brings extensive experience in the precise execution of hair transplantation techniques and specializes in the careful handling of hair follicles for optimal results.",
+        "credentials": "Certified Medical Hair Technician with specialization in FUE and DHI techniques"
       },
       {
-        "name": "Thomas Müller",
-        "title": "Trichologist & Hair Loss Specialist",
-        "description": "Thomas provides comprehensive hair and scalp assessments, developing personalized treatment plans for non-surgical hair restoration.",
-        "credentials": "Certified Trichologist, Member of the European Hair Research Society"
-      },
-      {
-        "name": "Lisa Becker",
-        "title": "Patient Care Coordinator",
-        "description": "Lisa ensures each patient receives personalized attention throughout their treatment journey, from initial consultation to aftercare.",
-        "credentials": "Certified in Medical Patient Care, 10+ years experience in healthcare management"
+        "name": "Burak Gözel",
+        "title": "Medical Hair Technician",
+        "description": "Burak Gözel has profound expertise in applying state-of-the-art hair transplantation techniques and significantly contributes to the excellent results of our treatments with his precise work.",
+        "credentials": "Certified Medical Hair Technician, Expert in Sapphire FUE and DHI methods"
       }
     ]
   },
