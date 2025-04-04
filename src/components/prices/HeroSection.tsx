@@ -85,7 +85,7 @@ const HeroSection: React.FC = () => {
               
               {/* Welcome text with perfect spacing and animation */}
               <div className={`px-1 transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-center max-w-md mx-auto leading-relaxed`}>
+                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto leading-relaxed`}>
                   {t('heroSection.welcomeText')}
                 </p>
               </div>
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Image section with enhanced visual effects */}
-            <div className="mt-2 mb-12 relative">
+            <div className="mt-10 mb-12 relative">
               {/* Decorative elements */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[200px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>
