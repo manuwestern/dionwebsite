@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
   return (
     <div 
       ref={heroRef}
-      className="relative overflow-hidden min-h-[70vh] flex items-center"
+      className="relative overflow-hidden md:min-h-[70vh] flex items-center"
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 z-0">
@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
       
       {/* Mobile Layout */}
       <div className="md:hidden w-full max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col min-h-[70vh] px-5">
+        <div className="flex flex-col px-5">
           
           
           {/* Main content area with perfect spacing */}

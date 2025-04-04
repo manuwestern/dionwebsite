@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
   return (
     <div 
       ref={heroRef}
-      className="relative overflow-hidden min-h-[85vh] flex items-center"
+      className="relative overflow-hidden md:min-h-[85vh] flex items-center"
     >
       {/* Background with gradient and blur effects */}
       <div className="absolute inset-0 z-0">
@@ -59,11 +59,11 @@ const HeroSection: React.FC = () => {
       
       {/* Mobile Layout - Redesigned for perfect aesthetics */}
       <div className="md:hidden w-full max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col min-h-[100vh] px-5">
+        <div className="flex flex-col px-5">
          
           
           {/* Main content area with perfect spacing */}
-          <div className="flex-1 flex flex-col justify-between pt-4 pb-0">
+          <div className="flex-1 flex flex-col pt-4 pb-0">
             {/* Text content with refined typography and animations */}
             <div className="space-y-6 mt-4">
               {/* Title with elegant animation and perfect typography */}
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Image section with enhanced visual effects */}
-            <div className="mt-10 -mb-10 relative">
+            <div className="mt-[100px] relative">
               {/* Decorative elements */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120%] h-[300px] bg-gradient-to-t from-[#7BA7C2]/10 to-transparent rounded-[100%] blur-2xl opacity-60"></div>

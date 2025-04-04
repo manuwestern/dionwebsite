@@ -11,6 +11,8 @@ interface OptionCardProps {
   icon: React.ReactNode;
   isHovered: boolean;
   onHover: (isHovered: boolean) => void;
+  calendlyUrl: string;
+  buttonText: string;
 }
 
 const OptionCard: React.FC<OptionCardProps> = ({ 
@@ -19,7 +21,9 @@ const OptionCard: React.FC<OptionCardProps> = ({
   benefits, 
   icon, 
   isHovered,
-  onHover
+  onHover,
+  calendlyUrl,
+  buttonText
 }) => {
   return (
     <div 
@@ -65,6 +69,21 @@ const OptionCard: React.FC<OptionCardProps> = ({
         </div>
       </div>
       
+      {/* Button area */}
+      <div className="p-6 md:p-8 pt-0">
+        <a 
+          href={calendlyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`w-full ${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] block text-center`}
+        >
+          <span className={buttonRippleClass}></span>
+          <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+            {buttonText}
+            <ArrowRight className={`${buttonArrowClass} ml-2`} />
+          </span>
+        </a>
+      </div>
     </div>
   );
 };
@@ -113,6 +132,8 @@ const ConsultationOptionsSection: React.FC = () => {
             icon={<Phone strokeWidth={1.5} className="w-6 h-6" />}
             isHovered={hoveredOption === 'phone'}
             onHover={(isHovered) => handleHover('phone', isHovered)}
+            calendlyUrl="https://calendly.com/dionhairclinic/telefonische-beratung"
+            buttonText={t('optionsSection.chooseButton')}
           />
           
           {/* In-Person Consultation Option */}
@@ -123,6 +144,8 @@ const ConsultationOptionsSection: React.FC = () => {
             icon={<MapPin strokeWidth={1.5} className="w-6 h-6" />}
             isHovered={hoveredOption === 'inPerson'}
             onHover={(isHovered) => handleHover('inPerson', isHovered)}
+            calendlyUrl="https://calendly.com/dionhairclinic/persoenliche-beratung"
+            buttonText={t('optionsSection.chooseButton')}
           />
         </div>
       </div>

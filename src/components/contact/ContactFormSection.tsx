@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass } from '../../utils/buttons';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 interface FormField {
   id: string;
@@ -202,12 +202,12 @@ const ContactFormSection: React.FC = () => {
               <div className="pt-4">
                 <button 
                   type="submit" 
-                  className={`${buttonStyle.primary} w-full md:w-auto shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
+                  className={`w-full ${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] block text-center`}
                 >
                   <span className={buttonRippleClass}></span>
-                  <span className="relative flex items-center justify-center">
+                  <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
                     {t('formSection.submitButton')}
-                    <Send className="ml-2 w-4 h-4" />
+                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
                 </button>
               </div>

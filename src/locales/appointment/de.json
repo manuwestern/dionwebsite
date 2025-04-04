@@ -1,0 +1,43 @@
+{
+  "heroSection": {
+    "title": "Termin vereinbaren",
+    "subtitle": "Persönliche Beratung",
+    "welcomeText": "Vereinbaren Sie Ihre persönliche Beratung mit unseren Experten. Wir bieten verschiedene Beratungsoptionen an, um Ihren Bedürfnissen bestmöglich gerecht zu werden."
+  },
+  "formSection": {
+    "title": "Termin buchen",
+    "subtitle": "Füllen Sie das Formular aus, um Ihre Beratung zu planen",
+    "name": "Vollständiger Name",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer",
+    "consultationType": "Beratungsart",
+    "consultationTypes": {
+      "inPerson": "Persönliche Beratung",
+      "video": "Video-Beratung",
+      "phone": "Telefonische Beratung"
+    },
+    "date": "Bevorzugtes Datum",
+    "time": "Bevorzugte Uhrzeit",
+    "message": "Ihre Nachricht",
+    "messagePlaceholder": "Bitte teilen Sie uns kurz Ihre Anliegen mit und was Sie während der Beratung besprechen möchten.",
+    "submit": "Anfrage senden",
+    "success": "Vielen Dank! Ihre Terminanfrage wurde übermittelt. Wir werden uns in Kürze mit Ihnen in Verbindung setzen, um den Termin zu bestätigen.",
+    "error": "Bei der Übermittlung Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
+  },
+  "optionsSection": {
+    "title": "Beratungsoptionen",
+    "subtitle": "Wählen Sie die Beratungsart, die am besten zu Ihnen passt",
+    "inPerson": {
+      "title": "Persönliche Beratung",
+      "description": "Besuchen Sie unsere Klinik für eine umfassende persönliche Beratung mit unseren Spezialisten. Dies beinhaltet eine detaillierte Haaranalyse und personalisierte Behandlungsempfehlungen."
+    },
+    "video": {
+      "title": "Video-Beratung",
+      "description": "Verbinden Sie sich mit unseren Experten per Videoanruf von der Bequemlichkeit Ihres Zuhauses aus. Besprechen Sie Ihre Anliegen und erhalten Sie professionelle Beratung, ohne reisen zu müssen."
+    },
+    "phone": {
+      "title": "Telefonische Beratung",
+      "description": "Eine bequeme Option für ein erstes Gespräch über Ihre Haaranliegen und mögliche Behandlungsoptionen. Unsere Spezialisten sind bereit, alle Ihre Fragen zu beantworten."
+    }
+  }
+}
