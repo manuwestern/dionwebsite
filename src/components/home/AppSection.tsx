@@ -113,14 +113,7 @@ const AppSection: React.FC = () => {
               {t('appSection.description')}
             </p>
             <div className="flex flex-col md:flex-row items-center md:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center md:text-left">
-              <div className="flex space-x-3 mb-3 md:mb-0 md:mr-4">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-[#7BA7C2]" fill="currentColor">
-                  <path d="M17.05,20.28c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Z"/>
-                </svg>
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-[#7BA7C2]" fill="currentColor">
-                  <path d="M17.03,22H6.97c-1.63,0-2.97-1.34-2.97-2.97V4.97c0-1.63,1.34-2.97,2.97-2.97h10.05c1.63,0,2.97,1.34,2.97,2.97v14.05c0,1.63-1.34,2.97-2.97,2.97ZM12,18.75c.69,0,1.25-.56,1.25-1.25s-.56-1.25-1.25-1.25-1.25,.56-1.25,1.25,.56,1.25,1.25,1.25Z"/>
-                </svg>
-              </div>
+              
               <p className={`${fontSize.sm} ${textColor.dark}`}>
                 {t('appSection.appStoreInfo')}
               </p>
@@ -143,26 +136,22 @@ const AppSection: React.FC = () => {
               ))}
             </div>
             
-            {/* CTA buttons */}
-            <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-              <button className={`${buttonStyle.black} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
-                  <svg viewBox="0 0 24 24" className="w-5 h-5 mr-2" fill="currentColor">
-                    <path d="M17.03,22H6.97c-1.63,0-2.97-1.34-2.97-2.97V4.97c0-1.63,1.34-2.97,2.97-2.97h10.05c1.63,0,2.97,1.34,2.97,2.97v14.05c0,1.63-1.34,2.97-2.97,2.97ZM12,18.75c.69,0,1.25-.56,1.25-1.25s-.56-1.25-1.25-1.25-1.25,.56-1.25,1.25,.56,1.25,1.25,1.25Z"/>
-                  </svg>
-                  {t('appSection.appStore')}
-                </span>
-              </button>
-              <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
-                  <svg viewBox="0 0 24 24" className="w-5 h-5 mr-2" fill="currentColor">
-                    <path d="M17.05,20.28c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Zm-4.46,0c-.98,0-1.79-.8-1.79-1.78V5.5c0-.98,.8-1.78,1.79-1.78s1.79,.8,1.79,1.78V18.5c0,.98-.8,1.78-1.79,1.78Z"/>
-                  </svg>
-                  {t('appSection.googlePlay')}
-                </span>
-              </button>
+            {/* App store icons */}
+            <div className="mt-10 flex gap-6 justify-center md:justify-start">
+              <a href="#" className="transform transition-all duration-300 hover:scale-[1.1] active:scale-[0.98]">
+                <img 
+                  src="/images/apple_store.svg" 
+                  alt="Apple App Store" 
+                  className="w-32 h-32"
+                />
+              </a>
+              <a href="#" className="transform transition-all duration-300 hover:scale-[1.1] active:scale-[0.98]">
+                <img 
+                  src="/images/google_play.svg" 
+                  alt="Google Play Store" 
+                  className="w-32 h-32"
+                />
+              </a>
             </div>
           </div>
         </div>
