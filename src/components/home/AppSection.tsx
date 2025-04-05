@@ -114,6 +114,7 @@ const AppSection: React.FC = () => {
             </p>
             <div className="flex flex-col md:flex-row items-center md:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center md:text-left">
               
+            
               <p className={`${fontSize.sm} ${textColor.dark}`}>
                 {t('appSection.appStoreInfo')}
               </p>
