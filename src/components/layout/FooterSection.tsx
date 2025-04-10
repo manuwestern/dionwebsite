@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Phone, Mail, BookText, Apple } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +27,12 @@ const FooterSection: React.FC = () => {
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-[#1f1f1f] border border-gray-800"
                 aria-label="WhatsApp"
               >
-                <Apple size={16} />
+                <img 
+                  src="/images/whatsapp.svg" 
+                  alt="WhatsApp" 
+                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity"
+                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                />
               </a>
               <a 
                 href="https://www.instagram.com/dionhairclinic" 
@@ -36,7 +41,12 @@ const FooterSection: React.FC = () => {
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-[#1f1f1f] border border-gray-800"
                 aria-label="Instagram"
               >
-                <Instagram size={16} />
+                <img 
+                  src="/images/instagram.svg" 
+                  alt="Instagram" 
+                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity"
+                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                />
               </a>
               <a 
                 href="https://www.tiktok.com/@dionhairclinic" 
@@ -45,7 +55,12 @@ const FooterSection: React.FC = () => {
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-[#1f1f1f] border border-gray-800"
                 aria-label="TikTok"
               >
-                <BookText size={16} />
+                <img 
+                  src="/images/tiktok.svg" 
+                  alt="TikTok" 
+                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity"
+                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                />
               </a>
             </div>
           </div>

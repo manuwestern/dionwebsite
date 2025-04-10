@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, Instagram, Apple as WhatsApp, BookText as TikTok } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -36,21 +36,36 @@ const TopBar: React.FC = () => {
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-7 h-7 rounded-full hover:bg-[#1f1f1f]"
                 aria-label="WhatsApp"
               >
-                <WhatsApp size={16} />
+                <img 
+                  src="/images/whatsapp.svg" 
+                  alt="WhatsApp" 
+                  className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                />
               </a>
               <a 
                 href="#" 
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-7 h-7 rounded-full hover:bg-[#1f1f1f]"
                 aria-label="Instagram"
               >
-                <Instagram size={16} />
+                <img 
+                  src="/images/instagram.svg" 
+                  alt="Instagram" 
+                  className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                />
               </a>
               <a 
                 href="#" 
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-7 h-7 rounded-full hover:bg-[#1f1f1f]"
                 aria-label="TikTok"
               >
-                <TikTok size={16} />
+                <img 
+                  src="/images/tiktok.svg" 
+                  alt="TikTok" 
+                  className="w-4 h-4 opacity-80 hover:opacity-100 transition-opacity"
+                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                />
               </a>
             </div>
           </div>

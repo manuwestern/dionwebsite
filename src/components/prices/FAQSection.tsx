@@ -77,7 +77,7 @@ const FAQSection: React.FC = () => {
                 }`}
               >
                 <div className="px-6 pb-5">
-                  <div className={`w-full h-px ${gradientUnderline.light} mb-4`}></div>
+                  <div className={`w-full h-px ${gradientUnderline.light} mb-6`}></div>
                   <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center sm:text-left`}>
                     {faq.answer}
                   </p>

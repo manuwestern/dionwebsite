@@ -195,9 +195,6 @@ const FAQSection: React.FC = () => {
                     : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:shadow-md border border-gray-100'
                 }`}
               >
-                <span className={activeCategory === key ? 'text-white' : 'text-[#7BA7C2]'}>
-                  {icon}
-                </span>
                 {t(`faq.categories.${key}`, { ns: 'common' })}
               </button>
             ))}
@@ -226,17 +223,7 @@ const FAQSection: React.FC = () => {
                       aria-controls={`faq-answer-${index}`}
                     >
                       {/* Mobile layout: Icon on top, question below, centered */}
-                      <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 w-full sm:w-auto">
-                        {/* Larger circle with centered icon */}
-                        <div className={`w-12 h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
-                          openFAQ === index 
-                            ? 'bg-[#7BA7C2] text-white' 
-                            : 'bg-[#7BA7C2]/10 text-[#7BA7C2] group-hover:bg-[#7BA7C2]/20'
-                        }`}>
-                          <div className="flex items-center justify-center w-6 h-6 sm:w-5 sm:h-5">
-                            {getCategoryIcons()[faq.category as keyof ReturnType<typeof getCategoryIcons>]?.icon || <HelpCircle strokeWidth={1.5} />}
-                          </div>
-                        </div>
+                      <div className="flex flex-col sm:flex-row items-center text-center sm:text-left w-full sm:w-auto">
                         {/* Question text - centered on mobile */}
                         <span className={`${fontSize.base} ${fontWeight.normal} ${textColor.dark} text-center sm:text-left`}>
                           {faq.question}
@@ -253,6 +240,9 @@ const FAQSection: React.FC = () => {
                       </div>
                     </button>
                     
+                    {/* Divider */}
+                    <div className={`border-t border-gray-100 ${openFAQ === index ? 'opacity-100' : 'opacity-0'}`}></div>
+                    
                     {/* Answer content */}
                     <div 
                       id={`faq-answer-${index}`}
@@ -262,7 +252,7 @@ const FAQSection: React.FC = () => {
                           : 'max-h-0 opacity-0'
                       }`}
                     >
-                      <div className="p-6 pt-0 border-t border-gray-100">
+                      <div className="p-6 pt-4">
                         <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
                           {faq.answer}
                         </p>
