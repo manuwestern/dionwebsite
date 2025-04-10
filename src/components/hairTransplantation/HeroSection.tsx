@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
@@ -81,8 +82,8 @@ const HeroSection: React.FC = () => {
               
               {/* CTA button with refined styling and animation */}
               <div className={`flex justify-center mt-8 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <a 
-                  href="/kontakt#appointmentForm" 
+                <Link 
+                  to="/kontakt" 
                   className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
                 >
                   <span className={buttonRippleClass}></span>
@@ -90,7 +91,7 @@ const HeroSection: React.FC = () => {
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -162,8 +163,8 @@ const HeroSection: React.FC = () => {
             
             {/* CTA button with refined styling and animation */}
             <div className={`mt-12 flex justify-start transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <a 
-                href="/kontakt#appointmentForm" 
+              <Link 
+                to="/kontakt" 
                 className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
               >
                 <span className={buttonRippleClass}></span>
@@ -171,7 +172,7 @@ const HeroSection: React.FC = () => {
                   {t('buttons.consultation', { ns: 'common' })}
                   <ArrowRight className={`${buttonArrowClass} ml-2`} />
                 </span>
-              </a>
+              </Link>
             </div>
             
             {/* Trust badges removed as requested */}

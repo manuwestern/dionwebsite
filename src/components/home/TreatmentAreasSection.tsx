@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
@@ -140,8 +141,8 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
                     <div className="mt-auto pt-6 pb-2">
-                      <a 
-                        href={
+                      <Link 
+                        to={
                           area.id === 'head' 
                             ? '/haartransplantation' 
                             : area.id === 'beard' 
@@ -155,7 +156,7 @@ const TreatmentAreasSection: React.FC = () => {
                           {t('buttons.moreInfo', { ns: 'common' })}
                           <ArrowRight className={`${buttonArrowClass} ml-2`} />
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
               </div>
@@ -236,8 +237,8 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
                     <div className="mt-auto pt-6 pb-2">
-                      <a 
-                        href={
+                      <Link 
+                        to={
                           area.id === 'head' 
                             ? '/haartransplantation' 
                             : area.id === 'beard' 
@@ -251,7 +252,7 @@ const TreatmentAreasSection: React.FC = () => {
                           {t('buttons.moreInfo', { ns: 'common' })}
                           <ArrowRight className={`${buttonArrowClass} ml-2`} />
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -281,8 +282,8 @@ const TreatmentAreasSection: React.FC = () => {
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <a 
-                  href="/kontakt#appointmentForm" 
+                <Link 
+                  to="/kontakt" 
                   className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
                 >
                   <span className={buttonRippleClass}></span>
@@ -290,7 +291,7 @@ const TreatmentAreasSection: React.FC = () => {
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
