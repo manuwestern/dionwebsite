@@ -44,66 +44,24 @@ const CareSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left side: App mockup */}
           <div className="lg:w-1/2 relative">
-            <div className="bg-gradient-to-br from-[#7BA7C2] to-[#7BA7C2]/70 rounded-3xl p-1 shadow-xl max-w-sm mx-auto">
-              <div className="bg-white rounded-3xl overflow-hidden">
-                {/* App header */}
-                <div className="bg-[#7BA7C2] text-white p-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className={`${fontSize.lg} ${fontWeight.light}`}>Dion App</h3>
-                    <Shield className="w-5 h-5" />
-                  </div>
-                </div>
+            <div className="max-w-xs mx-auto relative -mt-8">
+              <div className="relative">
+                <img 
+                  src="/images/dionapp.png" 
+                  alt="Dion Hair Clinic App" 
+                  className="w-full h-auto"
+                />
                 
-                {/* App content mockup */}
-                <div className="p-4">
-                  {/* Progress tracker */}
-                  <div className="mb-6">
-                    <h4 className={`${fontSize.sm} ${textColor.light} mb-2`}>{t('careSection.appContent.progress')}</h4>
-                    <div className="w-full bg-gray-100 h-2 rounded-full">
-                      <div className="bg-[#7BA7C2] h-2 rounded-full w-[65%]"></div>
-                    </div>
-                    <div className="flex justify-between text-xs text-gray-500 mt-1">
-                      <span>{t('careSection.appContent.day1')}</span>
-                      <span>{t('careSection.appContent.month3')}</span>
-                      <span>{t('careSection.appContent.month12')}</span>
-                    </div>
-                  </div>
-                  
-                  {/* Today's tasks */}
-                  <div className="mb-6">
-                    <h4 className={`${fontSize.sm} ${fontWeight.medium} ${textColor.dark} mb-2`}>{t('careSection.appContent.todayTasks')}</h4>
-                    <div className="space-y-2">
-                      <div className="flex items-center p-2 bg-[#7BA7C2]/5 rounded-lg">
-                        <div className="w-5 h-5 rounded-full border-2 border-[#7BA7C2] flex items-center justify-center mr-2">
-                          <div className="w-2 h-2 bg-[#7BA7C2] rounded-full"></div>
-                        </div>
-                        <span className={`${fontSize.sm}`}>{t('careSection.appContent.task1')}</span>
-                      </div>
-                      <div className="flex items-center p-2 bg-[#7BA7C2]/5 rounded-lg">
-                        <div className="w-5 h-5 rounded-full border-2 border-[#7BA7C2] flex items-center justify-center mr-2">
-                          <div className="w-2 h-2 bg-[#7BA7C2] rounded-full"></div>
-                        </div>
-                        <span className={`${fontSize.sm}`}>{t('careSection.appContent.task2')}</span>
-                      </div>
-                      <div className="flex items-center p-2 bg-gray-50 rounded-lg">
-                        <div className="w-5 h-5 rounded-full border-2 border-gray-300 mr-2"></div>
-                        <span className={`${fontSize.sm} ${textColor.light}`}>{t('careSection.appContent.task3')}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Next appointment */}
-                  <div className="bg-[#7BA7C2]/10 p-3 rounded-xl">
-                    <h4 className={`${fontSize.sm} ${fontWeight.medium} ${textColor.primary} mb-1`}>{t('careSection.appContent.nextAppointment')}</h4>
-                    <p className={`${fontSize.sm}`}>{t('careSection.appContent.appointmentDetails')}</p>
-                  </div>
+                {/* Badge "ab Mai 2025" */}
+                <div className="absolute top-3 right-3 bg-[#7BA7C2] text-white px-3 py-1 rounded-full shadow-md transform rotate-12 text-sm font-medium">
+                  ab Mai 2025
                 </div>
               </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -z-10 w-64 h-64 bg-[#7BA7C2]/5 rounded-full -bottom-10 -left-10"></div>
+              <div className="absolute -z-10 w-32 h-32 bg-[#7BA7C2]/10 rounded-full -top-5 right-10"></div>
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -z-10 w-64 h-64 bg-[#7BA7C2]/5 rounded-full -bottom-10 -left-10"></div>
-            <div className="absolute -z-10 w-32 h-32 bg-[#7BA7C2]/10 rounded-full -top-5 right-10"></div>
           </div>
           
           {/* Right side: Features */}
