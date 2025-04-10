@@ -140,13 +140,22 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
                     <div className="mt-auto pt-6 pb-2">
-                      <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                      <a 
+                        href={
+                          area.id === 'head' 
+                            ? '/haartransplantation' 
+                            : area.id === 'beard' 
+                              ? '/barthaartransplantation' 
+                              : '/augenbrauentransplantation'
+                        }
+                        className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block text-center`}
+                      >
                         <span className={buttonRippleClass}></span>
                         <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
                           {t('buttons.moreInfo', { ns: 'common' })}
                           <ArrowRight className={`${buttonArrowClass} ml-2`} />
                         </span>
-                      </button>
+                      </a>
                     </div>
                   </div>
               </div>
@@ -227,13 +236,22 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Elegant button with ripple effect - positioned at bottom */}
                     <div className="mt-auto pt-6 pb-2">
-                      <button className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                      <a 
+                        href={
+                          area.id === 'head' 
+                            ? '/haartransplantation' 
+                            : area.id === 'beard' 
+                              ? '/barthaartransplantation' 
+                              : '/augenbrauentransplantation'
+                        }
+                        className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block text-center`}
+                      >
                         <span className={buttonRippleClass}></span>
                         <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
                           {t('buttons.moreInfo', { ns: 'common' })}
                           <ArrowRight className={`${buttonArrowClass} ml-2`} />
                         </span>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -263,13 +281,16 @@ const TreatmentAreasSection: React.FC = () => {
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
-                <button className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                <a 
+                  href="/kontakt#appointmentForm" 
+                  className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
+                >
                   <span className={buttonRippleClass}></span>
                   <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
