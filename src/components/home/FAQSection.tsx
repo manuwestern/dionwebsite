@@ -4,6 +4,7 @@ import { ChevronDown, Search, Clock, Stethoscope, HelpCircle, DollarSign, ArrowR
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import StructuredData from '../../components/seo/StructuredData';
 
 interface FAQ {
   question: string;
@@ -130,6 +131,16 @@ const FAQSection: React.FC = () => {
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden" id="faq-section">
+      {/* Add Schema.org structured data for FAQs */}
+      <StructuredData 
+        type="FAQPage"
+        data={{
+          questions: filteredFAQs.map(faq => ({
+            question: faq.question,
+            answer: faq.answer
+          }))
+        }}
+      />
       {/* Decorative elements */}
       <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
       <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>

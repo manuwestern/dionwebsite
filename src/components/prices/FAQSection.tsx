@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
+import StructuredData from '../../components/seo/StructuredData';
 
 interface FAQ {
   question: string;
@@ -22,6 +23,16 @@ const FAQSection: React.FC = () => {
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
+      {/* Add Schema.org structured data for FAQs */}
+      <StructuredData 
+        type="FAQPage"
+        data={{
+          questions: faqs.map(faq => ({
+            question: faq.question,
+            answer: faq.answer
+          }))
+        }}
+      />
       {/* Decorative elements */}
       <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
       <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
@@ -54,7 +65,6 @@ const FAQSection: React.FC = () => {
               <button 
                 className="w-full px-6 py-5 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left"
                 onClick={() => toggleFAQ(index)}
-                aria-expanded={openFAQ === index}
                 aria-controls={`faq-answer-${index}`}
               >
                 <h3 className={`${fontSize.base} ${fontWeight.medium} ${textColor.dark} pr-4 mb-3 sm:mb-0`}>

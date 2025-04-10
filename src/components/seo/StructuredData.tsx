@@ -45,9 +45,23 @@ interface ReviewProps {
   datePublished?: string;
 }
 
+interface FAQPageProps {
+  questions: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+interface BreadcrumbProps {
+  items: {
+    name: string;
+    url: string;
+  }[];
+}
+
 interface StructuredDataProps {
-  type: 'LocalBusiness' | 'MedicalService' | 'Review';
-  data: LocalBusinessProps | MedicalServiceProps | ReviewProps;
+  type: 'LocalBusiness' | 'MedicalService' | 'Review' | 'FAQPage' | 'BreadcrumbList';
+  data: LocalBusinessProps | MedicalServiceProps | ReviewProps | FAQPageProps | BreadcrumbProps;
 }
 
 /**
@@ -57,6 +71,8 @@ interface StructuredDataProps {
  * - LocalBusiness: For the clinic information
  * - MedicalService: For specific treatments offered
  * - Review: For testimonials and reviews
+ * - FAQPage: For FAQ sections to enhance search visibility
+ * - BreadcrumbList: For navigation breadcrumbs
  */
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   let structuredData = {};
@@ -147,6 +163,36 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           name: 'Dion Hair Clinic',
           url: 'https://dionhairclinic.de'
         }
+      };
+      break;
+
+    case 'FAQPage':
+      const faqData = data as FAQPageProps;
+      structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': faqData.questions.map(q => ({
+          '@type': 'Question',
+          'name': q.question,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': q.answer
+          }
+        }))
+      };
+      break;
+
+    case 'BreadcrumbList':
+      const breadcrumbData = data as BreadcrumbProps;
+      structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': breadcrumbData.items.map((item, index) => ({
+          '@type': 'ListItem',
+          'position': index + 1,
+          'name': item.name,
+          'item': item.url
+        }))
       };
       break;
 
