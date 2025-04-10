@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Kontakt | Dion Hair Clinic",
+    "description": "Nehmen Sie Kontakt mit unseren Spezialisten für Haarwiederherstellung auf. Vereinbaren Sie eine Beratung, stellen Sie Fragen oder besuchen Sie unsere Klinik in Mönchengladbach für individuelle Lösungen bei Haarausfall."
+  },
   "heroSection": {
     "title": "Kontakt",
     "subtitle": "Wir sind für Sie da",
@@ -10,14 +14,14 @@
     "address": {
       "title": "Besuchen Sie unsere Klinik",
       "line1": "Dion Hair Clinic",
-      "line2": "Hindenburgstraße 45",
-      "line3": "41061 Mönchengladbach",
+      "line2": "Schürenweg 61",
+      "line3": "41063 Mönchengladbach",
       "line4": "Deutschland"
     },
     "phone": {
       "title": "Rufen Sie uns an",
-      "number": "+49 (0) 2161 123 4567",
-      "hours": "Montag - Freitag: 9:00 - 18:00 Uhr"
+      "number": "+49 170 2637818",
+      "hours": "Montag - Freitag: 9:30 - 19:30 Uhr, Samstag: 9:30 - 16:00 Uhr"
     },
     "email": {
       "title": "Schreiben Sie uns",
@@ -26,7 +30,7 @@
     },
     "whatsapp": {
       "title": "WhatsApp",
-      "number": "+49 (0) 2161 123 4567",
+      "number": "+49 170 2637818",
       "response": "Schnelle Antworten und einfache Kommunikation per WhatsApp"
     },
     "social": {

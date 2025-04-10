@@ -1,4 +1,6 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/seo/SEO';
 import HeroSection from '../components/prices/HeroSection';
 import PriceOverviewSection from '../components/prices/PriceOverviewSection';
 import FAQSection from '../components/prices/FAQSection';
@@ -58,8 +60,11 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 };
 
 const PricesPage: React.FC = () => {
+  const { t } = useTranslation('prices');
+  
   return (
     <>
+      <SEO namespace="prices" />
       <SectionWrapper type="hero">
         <HeroSection />
       </SectionWrapper>

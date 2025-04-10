@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
+import SEO from '../components/seo/SEO';
 import HeroSection from '../components/clinic/HeroSection';
 import TeamSection from '../components/clinic/TeamSection';
 import TechnologySection from '../components/clinic/TechnologySection';
@@ -113,6 +114,7 @@ const ClinicPage: React.FC = () => {
       ref={pageRef}
       className={`relative transition-opacity duration-1000 ease-out ${isPageVisible ? 'opacity-100' : 'opacity-0'}`}
     >
+      <SEO namespace="clinic" />
       {/* Loading Screen */}
       {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">

@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Contact Us | Dion Hair Clinic",
+    "description": "Get in touch with our hair restoration specialists. Schedule a consultation, ask questions, or visit our clinic in Mönchengladbach for personalized hair loss solutions."
+  },
   "heroSection": {
     "title": "Contact Us",
     "subtitle": "We're Here to Help",
@@ -10,14 +14,14 @@
     "address": {
       "title": "Visit Our Clinic",
       "line1": "Dion Hair Clinic",
-      "line2": "Hindenburgstraße 45",
-      "line3": "41061 Mönchengladbach",
+      "line2": "Schürenweg 61",
+      "line3": "41063 Mönchengladbach",
       "line4": "Germany"
     },
     "phone": {
       "title": "Call Us",
-      "number": "+49 (0) 2161 123 4567",
-      "hours": "Monday - Friday: 9:00 - 18:00"
+      "number": "+49 170 2637818",
+      "hours": "Monday - Friday: 9:30 - 19:30, Saturday: 9:30 - 16:00"
     },
     "email": {
       "title": "Email Us",
@@ -26,7 +30,7 @@
     },
     "whatsapp": {
       "title": "WhatsApp",
-      "number": "+49 (0) 2161 123 4567",
+      "number": "+49 170 2637818",
       "response": "Quick responses and easy communication via WhatsApp"
     },
     "social": {

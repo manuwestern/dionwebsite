@@ -38,8 +38,8 @@
       "title": "Kontakt",
       "address": {
         "line1": "Dion Hair Clinic",
-        "line2": "Hindenburgstraße 123",
-        "line3": "41061 Mönchengladbach",
+        "line2": "Schürenweg 61",
+        "line3": "41063 Mönchengladbach",
         "line4": "Deutschland"
       }
     },
@@ -58,8 +58,8 @@
     "address": {
       "title": "Adresse",
       "line1": "Dion Hair Clinic",
-      "line2": "Hindenburgstraße 123",
-      "line3": "41061 Mönchengladbach",
+      "line2": "Schürenweg 61",
+      "line3": "41063 Mönchengladbach",
       "line4": "Deutschland"
     },
     "hairAnalysis": {

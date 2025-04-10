@@ -71,7 +71,7 @@ const MapSection: React.FC = () => {
           {/* Map caption */}
           <div className="bg-white p-4 border-t border-gray-100">
             <p className={`${textStyle.bodyText} text-center`}>
-              <span className={`${fontWeight.medium}`}>Dion Hair Clinic</span> • Hindenburgstraße 45, 41061 Mönchengladbach
+              <span className={`${fontWeight.medium}`}>Dion Hair Clinic</span> • Schürenweg 61, 41063 Mönchengladbach
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ const MapSection: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Parkmöglichkeiten in der Tiefgarage Hindenburgstraße</span>
+                <span className={textStyle.listItem}>Parkmöglichkeiten in der Nähe des Schürenwegs</span>
               </li>
             </ul>
           </div>
@@ -105,7 +105,7 @@ const MapSection: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Bushaltestelle Hindenburgstraße (2 Gehminuten)</span>
+                <span className={textStyle.listItem}>Bushaltestelle Schürenweg (2 Gehminuten)</span>
               </li>
               <li className="flex items-start">
                 <span className={`${textStyle.listItemBullet} mr-2`}>•</span>

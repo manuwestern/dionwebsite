@@ -1,4 +1,6 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/seo/SEO';
 import HeroSection from '../components/eyebrowTransplantation/HeroSection';
 import BenefitsSection from '../components/eyebrowTransplantation/BenefitsSection';
 import TestimonialsSection from '../components/eyebrowTransplantation/TestimonialsSection';
@@ -64,8 +66,11 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 };
 
 const EyebrowTransplantationPage: React.FC = () => {
+  const { t } = useTranslation('eyebrowTransplantation');
+  
   return (
     <>
+      <SEO namespace="eyebrowTransplantation" />
       <SectionWrapper type="hero">
         <HeroSection />
       </SectionWrapper>

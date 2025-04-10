@@ -1,4 +1,6 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/seo/SEO';
 import HeroSection from '../components/hairLossTherapy/HeroSection';
 import BenefitsSection from '../components/hairLossTherapy/BenefitsSection';
 import MethodsSection from '../components/hairLossTherapy/MethodsSection';
@@ -60,8 +62,11 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 };
 
 const HairLossTherapyPage: React.FC = () => {
+  const { t } = useTranslation('hairLossTherapy');
+  
   return (
     <>
+      <SEO namespace="hairLossTherapy" />
       <SectionWrapper type="hero">
         <HeroSection />
       </SectionWrapper>
