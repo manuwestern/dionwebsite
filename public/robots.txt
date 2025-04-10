@@ -1,14 +1,28 @@
 # robots.txt for Dion Hair Clinic
 # https://dionhairclinic.de
 
+# Global rules for all bots
 User-agent: *
 Allow: /
 
-# Disallow admin or private areas if they exist
+# Disallow admin, private, or temporary areas
 Disallow: /admin/
 Disallow: /private/
+Disallow: /temp/
+Disallow: /dev/
+Disallow: /*.json$
 
-# Allow all bots to access CSS, JS, and image files
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing-specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Allow all bots to access static assets
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.jpg$
@@ -17,6 +31,12 @@ Allow: /*.png$
 Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
+Allow: /*.pdf$
+Allow: /*.ico$
 
 # Sitemap location
 Sitemap: https://dionhairclinic.de/sitemap.xml
