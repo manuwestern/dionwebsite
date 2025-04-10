@@ -18,8 +18,8 @@ import CookieConsent from './components/cookies/CookieConsent';
 
 function App() {
   return (
-    <CookieConsent>
-      <Router>
+    <Router>
+      <CookieConsent>
         <ScrollToTop />
         <Layout>
           <Routes>
@@ -37,8 +37,8 @@ function App() {
             <Route path="/preise" element={<PricesPage />} />
           </Routes>
         </Layout>
-      </Router>
-    </CookieConsent>
+      </CookieConsent>
+    </Router>
   );
 }
 

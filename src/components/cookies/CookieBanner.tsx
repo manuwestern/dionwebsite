@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { useCookieConsent } from '../../contexts/CookieConsentContext';
 import { Shield, BarChart, Target, Settings, X } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
@@ -166,15 +167,15 @@ const CookieBanner: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 text-sm text-gray-500 mb-4 md:mb-0">
-            <a href="/datenschutz" className="hover:text-[#7BA7C2] transition-colors">
+            <Link to="/datenschutz" className="hover:text-[#7BA7C2] transition-colors">
               {t('banner.footer.privacyPolicy')}
-            </a>
-            <a href="/impressum" className="hover:text-[#7BA7C2] transition-colors">
+            </Link>
+            <Link to="/impressum" className="hover:text-[#7BA7C2] transition-colors">
               {t('banner.footer.imprint')}
-            </a>
-            <a href="/agb" className="hover:text-[#7BA7C2] transition-colors">
+            </Link>
+            <Link to="/agb" className="hover:text-[#7BA7C2] transition-colors">
               {t('banner.footer.terms')}
-            </a>
+            </Link>
           </div>
           
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 w-full md:w-auto">
