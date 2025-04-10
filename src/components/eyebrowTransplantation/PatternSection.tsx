@@ -75,11 +75,15 @@ const PatternSection: React.FC = () => {
                   {/* Pattern Image with background gradient */}
                   <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10`}>
                     <img 
-                      src={pattern.image}
-                      alt={pattern.title}
+                      src={pattern.image.replace('.png', '.webp')}
+                      alt={`${pattern.title} - Augenbrauentransplantation Muster`}
                       className={`w-full h-full object-cover transition-all duration-700 ${
                         isHovered ? 'scale-105' : 'scale-100'
                       }`}
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="300"
                     />
                     
                     {/* Pattern title overlay with fixed height for consistent multi-line titles */}

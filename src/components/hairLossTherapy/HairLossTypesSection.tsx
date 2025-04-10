@@ -12,14 +12,14 @@ const HairLossTypesSection: React.FC = () => {
 
   // Map type titles to images
   const typeImages = {
-    "Androgenetisch": "/images/norwood_scale_3.png",
-    "Androgenetic": "/images/norwood_scale_3.png",
-    "Kreisrund": "/images/haaranalyse.png",
-    "Alopecia Areata": "/images/haaranalyse.png",
-    "Diffus": "/images/frau_lichter_scheitel.png",
-    "Diffuse": "/images/frau_lichter_scheitel.png",
-    "Narbig": "/images/hairselection.jpeg",
-    "Scarring": "/images/hairselection.jpeg"
+    "Androgenetisch": "/images/norwood_scale_3.webp",
+    "Androgenetic": "/images/norwood_scale_3.webp",
+    "Kreisrund": "/images/haaranalyse.webp",
+    "Alopecia Areata": "/images/haaranalyse.webp",
+    "Diffus": "/images/frau_lichter_scheitel.webp",
+    "Diffuse": "/images/frau_lichter_scheitel.webp",
+    "Narbig": "/images/hairselection.webp",
+    "Scarring": "/images/hairselection.webp"
   };
 
   // Get image for a type
@@ -75,10 +75,14 @@ const HairLossTypesSection: React.FC = () => {
                     {typeImage ? (
                       <img 
                         src={typeImage}
-                        alt={type.title}
+                        alt={`${type.title} - Haarausfalltyp und Behandlungsmöglichkeiten`}
                         className={`w-full h-full object-cover transition-all duration-700 ${
                           isHovered ? 'scale-105' : 'scale-100'
                         }`}
+                        loading="lazy"
+                        decoding="async"
+                        width="400"
+                        height="300"
                       />
                     ) : (
                       <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5">

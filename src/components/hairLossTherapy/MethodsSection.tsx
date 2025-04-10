@@ -51,8 +51,8 @@ const MethodsSection: React.FC = () => {
                   <div className="h-72 overflow-hidden relative">
                     <div className="absolute inset-0 bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10 z-0"></div>
                     <img 
-                      src={`/images/${method.image || 'mesotherapie.png'}`}
-                      alt={method.title}
+                      src={`/images/${method.image ? method.image.replace('.png', '.webp').replace('.jpeg', '.webp') : 'mesotherapie.webp'}`}
+                      alt={`${method.title} - Haarausfalltherapie Methode`}
                       className={`h-full w-full relative z-10 transition-all duration-700 ${
                         isHovered ? 'scale-105' : 'scale-100'
                       } ${
@@ -60,6 +60,10 @@ const MethodsSection: React.FC = () => {
                           ? 'object-cover' 
                           : 'object-contain p-6'
                       }`}
+                      loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="400"
                     />
                     
                     {/* Method title overlay with fixed height for consistent multi-line titles */}

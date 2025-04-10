@@ -85,11 +85,14 @@ const HeroSection: React.FC = () => {
               {/* Image with animation */}
               <div className={`relative flex justify-center transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                 <img
-                  src="/images/Model_Wissen.png"
+                  src="/images/Model_Wissen.webp"
                   alt="Wissenswertes über Haare und Haarpflege"
                   className="w-auto h-auto max-h-[500px] object-contain relative z-10 scale-125"
                   width="450"
                   height="650"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="high"
                 />
               </div>
             </div>
@@ -160,11 +163,14 @@ const HeroSection: React.FC = () => {
           {/* Image section */}
           <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <img
-              src="/images/Model_Wissen.png"
+              src="/images/Model_Wissen.webp"
               alt="Wissenswertes über Haare und Haarpflege"
               className="w-auto h-auto max-h-[750px] object-contain object-center relative z-10 scale-125"
               width="650"
               height="850"
+              loading="lazy"
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
         </div>

@@ -12,13 +12,13 @@ const HairLossPatternsSection: React.FC = () => {
 
   // Map pattern titles to images
   const patternImages = {
-    "Norwood 1-2": "/images/norwood_scale_1.png",
-    "Norwood 3": "/images/norwood_scale_3.png",
-    "Norwood 4": "/images/norwood_scale_4.png",
-    "Norwood 5-6": "/images/norwood_scale_5.png",
-    "Norwood 7": "/images/norwood_scale_7.png",
-    "Frauen": "/images/frau_lichter_scheitel.png",
-    "Women": "/images/frau_lichter_scheitel.png"
+    "Norwood 1-2": "/images/norwood_scale_1.webp",
+    "Norwood 3": "/images/norwood_scale_3.webp",
+    "Norwood 4": "/images/norwood_scale_4.webp",
+    "Norwood 5-6": "/images/norwood_scale_5.webp",
+    "Norwood 7": "/images/norwood_scale_7.webp",
+    "Frauen": "/images/frau_lichter_scheitel.webp",
+    "Women": "/images/frau_lichter_scheitel.webp"
   };
 
   // Get image for a pattern
@@ -74,10 +74,14 @@ const HairLossPatternsSection: React.FC = () => {
                     {patternImage ? (
                       <img 
                         src={patternImage}
-                        alt={pattern.title}
+                        alt={`${pattern.title} - Haarausfall Muster bei Haartransplantation`}
                         className={`w-full h-full object-cover transition-all duration-700 ${
                           isHovered ? 'scale-105' : 'scale-100'
                         }`}
+                        loading="lazy"
+                        decoding="async"
+                        width="400"
+                        height="300"
                       />
                     ) : (
                       <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5">

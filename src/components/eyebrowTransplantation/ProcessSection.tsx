@@ -123,10 +123,14 @@ const ProcessSection: React.FC = () => {
                     <div className="w-full h-full flex items-center justify-center p-8">
                       <img 
                         src={step.image} 
-                        alt={step.title}
+                        alt={`${step.title} - Augenbrauentransplantation Prozess Schritt ${step.number}`}
                         className={`w-full h-full object-contain transition-all duration-500 ${
                           isHovered ? 'scale-110' : ''
                         }`}
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300"
                       />
                     </div>
                     

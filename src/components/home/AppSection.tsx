@@ -47,9 +47,12 @@ const AppSection: React.FC = () => {
             <div className="max-w-xs mx-auto relative -mt-20">
               <div className="relative">
                 <img 
-                  src="/images/dionapp.png" 
-                  alt="Dion Hair Clinic App" 
+                  src="/images/dionapp.webp" 
+                  alt="Dion Hair Clinic App - Haartransplantation Fortschritt verfolgen" 
                   className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="high"
                 />
                 
                
@@ -97,15 +100,19 @@ const AppSection: React.FC = () => {
               <a href="#" className="transform transition-all duration-300 hover:scale-[1.1] active:scale-[0.98]">
                 <img 
                   src="/images/apple_store.svg" 
-                  alt="Apple App Store" 
+                  alt="Apple App Store - Dion Hair Clinic App herunterladen" 
                   className="w-32 h-32"
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
               <a href="#" className="transform transition-all duration-300 hover:scale-[1.1] active:scale-[0.98]">
                 <img 
                   src="/images/google_play.svg" 
-                  alt="Google Play Store" 
+                  alt="Google Play Store - Dion Hair Clinic App herunterladen" 
                   className="w-32 h-32"
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>

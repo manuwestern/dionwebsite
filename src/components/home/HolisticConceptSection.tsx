@@ -106,24 +106,32 @@ const HolisticConceptSection: React.FC = () => {
             
             {/* Mobile image */}
             <img 
-              src="/images/Dion_Model_Ok.png" 
-              alt="Dion Hair Clinic - Ganzheitliches Konzept" 
+              src="/images/Dion_Model_Ok.webp" 
+              alt="Dion Hair Clinic - Ganzheitliches Konzept für Haartransplantation" 
               className="w-full h-auto block lg:hidden relative z-10"
               style={{ 
                 filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.05)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.1))'
               }}
               loading="lazy"
+              decoding="async"
+              fetchPriority="high"
+              width="450"
+              height="650"
             />
             
             {/* Desktop image */}
             <img 
-              src="/images/Dion_Model_Benefits.png" 
-              alt="Dion Hair Clinic - Ganzheitliches Konzept" 
+              src="/images/Dion_Model_Benefits.webp" 
+              alt="Dion Hair Clinic - Ganzheitliches Konzept für Haartransplantation" 
               className="w-full h-auto hidden lg:block relative z-10"
               style={{ 
                 filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.05)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.1))'
               }}
               loading="lazy"
+              decoding="async"
+              fetchPriority="high"
+              width="650"
+              height="850"
             />
           </div>
           

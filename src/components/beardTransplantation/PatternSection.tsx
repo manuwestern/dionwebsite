@@ -13,10 +13,10 @@ const PatternSection: React.FC = () => {
   // Map pattern titles to images based on pattern index
   const getPatternImage = (index: number) => {
     const images = [
-      "/images/Bart_komplett.png",
-      "/images/Bart_undicht.png", 
-      "/images/Bart_Kontur.png",
-      "/images/Bart_Lücken.png"
+      "/images/Bart_komplett.webp",
+      "/images/Bart_undicht.webp", 
+      "/images/Bart_Kontur.webp",
+      "/images/Bart_Lücken.webp"
     ];
     return images[index] || images[0];
   };
@@ -64,10 +64,14 @@ const PatternSection: React.FC = () => {
                     {patternImage ? (
                       <img 
                         src={patternImage}
-                        alt={pattern.title}
+                        alt={`${pattern.title} - Barthaartransplantation Muster`}
                         className={`w-full h-full object-cover transition-all duration-700 ${
                           isHovered ? 'scale-105' : 'scale-100'
                         }`}
+                        loading="lazy"
+                        decoding="async"
+                        width="400"
+                        height="300"
                       />
                     ) : (
                       <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5">

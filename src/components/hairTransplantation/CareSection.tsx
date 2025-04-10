@@ -47,9 +47,13 @@ const CareSection: React.FC = () => {
             <div className="max-w-xs mx-auto relative -mt-8">
               <div className="relative">
                 <img 
-                  src="/images/dionapp.png" 
-                  alt="Dion Hair Clinic App" 
+                  src="/images/dionapp.webp" 
+                  alt="Dion Hair Clinic App - Nachsorge und Fortschrittsverfolgung" 
                   className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                  width="320"
+                  height="640"
                 />
                 
                 {/* Badge "ab Mai 2025" */}
