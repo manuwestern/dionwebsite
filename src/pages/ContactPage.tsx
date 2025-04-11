@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import SEO from '../components/seo/SEO';
+import StructuredData from '../components/seo/StructuredData';
 import HeroSection from '../components/contact/HeroSection';
 import ContactInfoSection from '../components/contact/ContactInfoSection';
 import ContactFormSection from '../components/contact/ContactFormSection';
@@ -115,6 +116,34 @@ const ContactPage: React.FC = () => {
       className={`relative transition-opacity duration-1000 ease-out ${isPageVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <SEO namespace="contact" />
+      <StructuredData 
+        type="WebPage"
+        data={{
+          type: "ContactPage",
+          name: t('meta.title', { ns: 'contact' }),
+          description: t('meta.description', { ns: 'contact' }),
+          url: "https://dionhairclinic.de/kontakt"
+        }}
+      />
+      <StructuredData 
+        type="LocalBusiness"
+        data={{
+          name: "Dion Hair Clinic",
+          description: t('meta.description', { ns: 'contact' }),
+          address: {
+            streetAddress: "Schürenweg 61",
+            addressLocality: "Mönchengladbach",
+            postalCode: "41063",
+            addressCountry: "DE"
+          },
+          telephone: "+49 2161 5678900",
+          email: "info@dionhairclinic.de",
+          url: "https://dionhairclinic.de",
+          image: "/images/Dion_Model_Benefits.webp",
+          logo: "/images/DionHairClinic_Logo.svg",
+          openingHours: ["Mo-Fr 09:00-18:00"]
+        }}
+      />
       {/* Loading Screen */}
       {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
@@ -123,8 +152,10 @@ const ContactPage: React.FC = () => {
             <div className="absolute -inset-10 bg-gradient-to-r from-[#7BA7C2]/20 to-white rounded-full blur-2xl animate-pulse-slow"></div>
             <img 
               src="/images/DionHairClinic_Logo.svg" 
-              alt="Dion Hair Clinic" 
+              alt="Dion Hair Clinic Logo" 
               className="h-20 relative z-10 animate-pulse" 
+              width="200"
+              height="80"
             />
           </div>
         </div>
