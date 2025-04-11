@@ -65,7 +65,47 @@ const FooterSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Information */}
+          <div className="col-span-1">
+            <h3 className="text-base font-normal tracking-wide mb-5 flex items-center">
+              <span className="w-6 h-px bg-[#7BA7C2]/40 mr-3"></span>
+              {t('footer.information.title')}
+            </h3>
+            <ul className="space-y-3 text-sm font-light text-gray-300">
+              <li>
+                <Link to="/" className="hover:text-white transition-colors inline-flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
+                  {t('navigation.home')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/klinik" className="hover:text-white transition-colors inline-flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
+                  {t('navigation.clinic')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/wissenswertes" className="hover:text-white transition-colors inline-flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
+                  {t('navigation.information')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/preise" className="hover:text-white transition-colors inline-flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
+                  {t('navigation.priceCalculator')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/kontakt" className="hover:text-white transition-colors inline-flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
+                  {t('navigation.contact')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Treatments */}
           <div className="col-span-1">
             <h3 className="text-base font-normal tracking-wide mb-5 flex items-center">
               <span className="w-6 h-px bg-[#7BA7C2]/40 mr-3"></span>
@@ -94,40 +134,6 @@ const FooterSection: React.FC = () => {
                 <Link to="/haarausfalltherapie" className="hover:text-white transition-colors inline-flex items-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
                   {t('footer.services.hairLossTherapy')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Information */}
-          <div className="col-span-1">
-            <h3 className="text-base font-normal tracking-wide mb-5 flex items-center">
-              <span className="w-6 h-px bg-[#7BA7C2]/40 mr-3"></span>
-              {t('footer.information.title')}
-            </h3>
-            <ul className="space-y-3 text-sm font-light text-gray-300">
-              <li>
-                <Link to="/klinik" className="hover:text-white transition-colors inline-flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
-                  {t('footer.information.aboutUs')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/wissenswertes" className="hover:text-white transition-colors inline-flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
-                  {t('navigation.information')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/preise" className="hover:text-white transition-colors inline-flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
-                  {t('footer.information.priceCalculator')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/kontakt" className="hover:text-white transition-colors inline-flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
-                  {t('navigation.contact')}
                 </Link>
               </li>
             </ul>
