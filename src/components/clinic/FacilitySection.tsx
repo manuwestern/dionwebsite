@@ -42,11 +42,15 @@ const FacilitySection: React.FC = () => {
               {/* Placeholder image with gradient */}
               <div className="aspect-[4/3] bg-gradient-to-br from-[#7BA7C2]/20 to-[#7BA7C2]/5 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <img
-                    src="/images/Dion_Model_Benefits.png"
-                    alt="Dion Hair Clinic Facility"
-                    className="max-w-full h-auto rounded-xl shadow-lg"
-                  />
+                <img
+                  src="/images/Dion_Model_Benefits.webp"
+                  alt="Dion Hair Clinic Facility - Modern Treatment Rooms"
+                  className="max-w-full h-auto rounded-xl shadow-lg"
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                  decoding="async"
+                />
                 </div>
               </div>
             </div>

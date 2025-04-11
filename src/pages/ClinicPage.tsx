@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import SEO from '../components/seo/SEO';
+import StructuredData from '../components/seo/StructuredData';
 import HeroSection from '../components/clinic/HeroSection';
 import TeamSection from '../components/clinic/TeamSection';
 import TechnologySection from '../components/clinic/TechnologySection';
@@ -115,6 +116,40 @@ const ClinicPage: React.FC = () => {
       className={`relative transition-opacity duration-1000 ease-out ${isPageVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <SEO namespace="clinic" />
+      <StructuredData 
+        type="LocalBusiness"
+        data={{
+          name: "Dion Hair Clinic",
+          description: t('meta.description', { ns: 'clinic' }),
+          image: "/images/Dion_Model_Benefits.webp",
+          logo: "/images/DionHairClinic_Logo.svg"
+        }}
+      />
+      <StructuredData 
+        type="WebPage"
+        data={{
+          type: "AboutPage",
+          name: t('meta.title', { ns: 'clinic' }),
+          description: t('meta.description', { ns: 'clinic' }),
+          url: "https://dionhairclinic.de/klinik"
+        }}
+      />
+      <StructuredData 
+        type="FAQPage"
+        data={{
+          questions: (t('faqSection.faqs', { returnObjects: true }) as any[]).map((faq) => ({
+            question: faq.question,
+            answer: faq.answer
+          }))
+        }}
+      />
+      <StructuredData 
+        type="AggregateRating"
+        data={{
+          ratingValue: 5,
+          reviewCount: 4
+        }}
+      />
       {/* Loading Screen */}
       {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
@@ -123,8 +158,10 @@ const ClinicPage: React.FC = () => {
             <div className="absolute -inset-10 bg-gradient-to-r from-[#7BA7C2]/20 to-white rounded-full blur-2xl animate-pulse-slow"></div>
             <img 
               src="/images/DionHairClinic_Logo.svg" 
-              alt="Dion Hair Clinic" 
+              alt="Dion Hair Clinic Logo" 
               className="h-20 relative z-10 animate-pulse" 
+              width="200"
+              height="80"
             />
           </div>
         </div>
