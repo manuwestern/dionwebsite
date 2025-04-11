@@ -13,18 +13,41 @@ const ContactSection: React.FC = () => {
   const [formMessage, setFormMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   // Trigger entrance animations
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send form data to Pabbly webhook
+      const response = await fetch('https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0MzI1MjY5NTUzNTUxM2Ei_pc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formName,
+          email: formEmail,
+          phone: formPhone || 'Nicht angegeben',
+          message: formMessage,
+          formType: 'Footer-Kontaktformular',
+          timestamp: new Date().toISOString(),
+          source: window.location.href
+        }),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Fehler beim Senden: ${response.status}`);
+      }
+      
+      // Form submission successful
       setIsSubmitting(false);
       setIsSubmitted(true);
       
@@ -33,7 +56,11 @@ const ContactSection: React.FC = () => {
       setFormEmail('');
       setFormPhone('');
       setFormMessage('');
-    }, 1500);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitError('Es gab ein Problem beim Senden des Formulars. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per Telefon.');
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -137,6 +164,13 @@ const ContactSection: React.FC = () => {
                         onChange={(e) => setFormMessage(e.target.value)}
                       ></textarea>
                     </div>
+                    
+                    {/* Error Message */}
+                    {submitError && (
+                      <div className="mb-6 p-4 bg-red-50 border border-red-100 rounded-lg text-red-600">
+                        {submitError}
+                      </div>
+                    )}
                     
                     <button 
                       type="submit"

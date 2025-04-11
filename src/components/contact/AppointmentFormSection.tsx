@@ -115,14 +115,42 @@ const AppointmentFormSection: React.FC = () => {
     });
   };
 
+  // State for form submission status
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a server here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitError(null);
     
-    // Simulate form submission success
-    setTimeout(() => {
+    try {
+      // Send form data to Pabbly webhook
+      const response = await fetch('https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0MzI1MjY5NTUzNTUxM2Ei_pc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          appointmentType: formData.appointmentType,
+          preferredDate: formData.preferredDate,
+          preferredTime: formData.preferredTime,
+          message: formData.message || 'Keine Nachricht angegeben',
+          formType: 'Terminbuchungsformular',
+          timestamp: new Date().toISOString(),
+          source: window.location.href
+        }),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Fehler beim Senden: ${response.status}`);
+      }
+      
+      // Form submission successful
       setFormSubmitted(true);
       
       // Reset form after 5 seconds
@@ -139,7 +167,12 @@ const AppointmentFormSection: React.FC = () => {
           consent: false
         });
       }, 5000);
-    }, 1000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitError('Es gab ein Problem beim Senden des Formulars. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per Telefon.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -305,6 +338,13 @@ const AppointmentFormSection: React.FC = () => {
                 />
               </div>
               
+              {/* Error Message */}
+              {submitError && (
+                <div className="p-4 bg-red-50 border border-red-100 rounded-lg text-red-600">
+                  {submitError}
+                </div>
+              )}
+              
               {/* Consent Checkbox */}
               <div className="space-y-2">
                 <div className="flex items-start">
@@ -332,12 +372,25 @@ const AppointmentFormSection: React.FC = () => {
               <div className="pt-4">
                 <button 
                   type="submit" 
-                  className={`${buttonStyle.primary} w-full md:w-auto shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
+                  disabled={isSubmitting}
+                  className={`${buttonStyle.primary} w-full md:w-auto shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] disabled:opacity-70`}
                 >
                   <span className={buttonRippleClass}></span>
                   <span className="relative flex items-center justify-center">
-                    {t('appointmentForm.submitButton')}
-                    <Send className="ml-2 w-4 h-4" />
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        {t('appointmentForm.sending', { defaultValue: 'Wird gesendet...' })}
+                      </>
+                    ) : (
+                      <>
+                        {t('appointmentForm.submitButton')}
+                        <Send className="ml-2 w-4 h-4" />
+                      </>
+                    )}
                   </span>
                 </button>
               </div>
