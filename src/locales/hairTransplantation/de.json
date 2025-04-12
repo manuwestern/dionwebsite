@@ -331,52 +331,84 @@
     "subtitle": "Antworten auf Ihre Fragen zur Haartransplantation - Umfassende Informationen zu Ablauf, Kosten, Risiken und Ergebnissen unserer Behandlungen",
     "faqs": [
       {
-        "question": "Welche Methode ist für mich am besten geeignet?",
-        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln."
-      },
-      {
-        "question": "Wie lange dauert die Erholungsphase?",
-        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Die Rötungen und Schwellungen klingen in der Regel innerhalb von 7-10 Tagen ab. Die vollständige Heilung der Kopfhaut dauert etwa 2 Wochen."
-      },
-      {
-        "question": "Wann sehe ich die ersten Ergebnisse?",
-        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben."
-      },
-      {
-        "question": "Ist der Eingriff schmerzhaft?",
-        "answer": "Die Haartransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind."
-      },
-      {
-        "question": "Was kostet eine Haartransplantation?",
-        "answer": "Die Kosten einer Haartransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot."
-      },
-      {
         "question": "Ab welchem Alter kann ich eine Haartransplantation durchführen lassen?",
-        "answer": "Grundsätzlich empfehlen wir, eine Haartransplantation erst ab einem Alter von 25 Jahren durchzuführen, da sich das Haarausfallmuster bis dahin noch verändern kann. In einigen Fällen kann jedoch auch bei jüngeren Patienten eine Behandlung sinnvoll sein. Entscheidend ist, dass der Haarausfall stabil ist und ein klares Muster erkennbar ist."
+        "answer": "Grundsätzlich empfehlen wir, eine Haartransplantation erst ab einem Alter von 25 Jahren durchzuführen, da sich das Haarausfallmuster bis dahin noch verändern kann. In einigen Fällen kann jedoch auch bei jüngeren Patienten eine Behandlung sinnvoll sein. Entscheidend ist, dass der Haarausfall stabil ist und ein klares Muster erkennbar ist.",
+        "category": "general"
       },
       {
         "question": "Gibt es Risiken oder Nebenwirkungen?",
-        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Haartransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge."
-      },
-      {
-        "question": "Wie lange hält das Ergebnis einer Haartransplantation?",
-        "answer": "Die transplantierten Haare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Allerdings kann der natürliche Alterungsprozess oder fortschreitender Haarausfall in anderen Bereichen das Gesamtbild im Laufe der Zeit verändern. Ergänzende Behandlungen wie PRP oder Mesotherapie können helfen, die nicht transplantierten Haare zu stärken und zu erhalten."
+        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Haartransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge.",
+        "category": "general"
       },
       {
         "question": "Wie unterscheidet sich eine Behandlung in Deutschland von Angeboten im Ausland?",
-        "answer": "In Deutschland unterliegen Haartransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten."
+        "answer": "In Deutschland unterliegen Haartransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten.",
+        "category": "general"
       },
       {
-        "question": "Wie realistisch sind die Ergebnisse?",
-        "answer": "Moderne Haartransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können normal geschnitten, gefärbt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Haarwuchsmusters."
+        "question": "Wie lange dauert der Eingriff?",
+        "answer": "Die Dauer des Eingriffs hängt von der Anzahl der zu transplantierenden Grafts ab. In der Regel dauert eine Haartransplantation zwischen 4 und 8 Stunden. Bei größeren Transplantationen kann der Eingriff auf zwei Tage aufgeteilt werden, um optimale Ergebnisse zu erzielen und die Belastung für den Patienten zu reduzieren.",
+        "category": "procedure"
+      },
+      {
+        "question": "Welche Methode ist für mich am besten geeignet?",
+        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln.",
+        "category": "procedure"
+      },
+      {
+        "question": "Ist der Eingriff schmerzhaft?",
+        "answer": "Die Haartransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind.",
+        "category": "procedure"
       },
       {
         "question": "Wie sollte ich mich auf den Eingriff vorbereiten?",
-        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie bequeme Kleidung tragen, die nicht über den Kopf gezogen werden muss. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch."
+        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie bequeme Kleidung tragen, die nicht über den Kopf gezogen werden muss. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie lange dauert die Erholungsphase?",
+        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Die Rötungen und Schwellungen klingen in der Regel innerhalb von 7-10 Tagen ab. Die vollständige Heilung der Kopfhaut dauert etwa 2 Wochen.",
+        "category": "recovery"
       },
       {
         "question": "Wie sieht die Nachsorge aus?",
-        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Shampoos, Schlafpositionen und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden."
+        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Shampoos, Schlafpositionen und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann kann ich wieder Sport treiben nach einer Haartransplantation?",
+        "answer": "Leichte körperliche Aktivitäten können Sie bereits nach einer Woche wieder aufnehmen. Mit intensivem Sport und Krafttraining sollten Sie jedoch 3-4 Wochen warten, um die Heilung der Transplantationsstellen nicht zu gefährden. Schwimmen und Saunabesuche sollten ebenfalls für mindestens 3 Wochen vermieden werden, um Infektionen vorzubeugen.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann sehe ich die ersten Ergebnisse?",
+        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben.",
+        "category": "results"
+      },
+      {
+        "question": "Wie realistisch sind die Ergebnisse?",
+        "answer": "Moderne Haartransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können normal geschnitten, gefärbt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Haarwuchsmusters.",
+        "category": "results"
+      },
+      {
+        "question": "Wie lange hält das Ergebnis einer Haartransplantation?",
+        "answer": "Die transplantierten Haare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Allerdings kann der natürliche Alterungsprozess oder fortschreitender Haarausfall in anderen Bereichen das Gesamtbild im Laufe der Zeit verändern. Ergänzende Behandlungen wie PRP oder Mesotherapie können helfen, die nicht transplantierten Haare zu stärken und zu erhalten.",
+        "category": "results"
+      },
+      {
+        "question": "Kann ich meine transplantierten Haare färben oder schneiden?",
+        "answer": "Ja, nach vollständiger Heilung (etwa 3-4 Wochen nach dem Eingriff) können Sie Ihre transplantierten Haare wie Ihr natürliches Haar behandeln. Sie können sie schneiden, färben und stylen. Die transplantierten Haare verhalten sich wie Ihre eigenen Haare und wachsen in einem natürlichen Zyklus.",
+        "category": "results"
+      },
+      {
+        "question": "Was kostet eine Haartransplantation?",
+        "answer": "Die Kosten einer Haartransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot.",
+        "category": "costs"
+      },
+      {
+        "question": "Werden die Kosten einer Haartransplantation von der Krankenkasse übernommen?",
+        "answer": "In der Regel werden die Kosten für eine Haartransplantation nicht von den gesetzlichen Krankenkassen übernommen, da es sich um einen ästhetischen Eingriff handelt. Bei einigen privaten Krankenversicherungen kann eine teilweise Kostenübernahme möglich sein. Wir beraten Sie gerne zu den verschiedenen Finanzierungsmöglichkeiten, die wir anbieten.",
+        "category": "costs"
       }
     ]
   }
