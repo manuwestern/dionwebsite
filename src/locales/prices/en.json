@@ -12,6 +12,7 @@
     "title": "Our Treatment Packages",
     "subtitle": "Tailored solutions for your individual needs",
     "description": "We offer various packages tailored to your specific requirements. Each package includes all necessary services for optimal results.",
+    "packageIncludes": "Package includes:",
     "hairTransplantation": {
       "title": "Hair Transplantation",
       "description": "Our hair transplantation packages include all necessary services for a natural and permanent result.",

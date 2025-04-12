@@ -35,7 +35,7 @@
         "benefits": [
           "More precise incisions and less tissue damage",
           "Faster healing and less swelling",
-          "Higher success rate of transplanted hair follicles",
+          "Higher success rate of transplanted hair follicles", 
           "More natural appearance of beard hairs"
         ],
         "process": [
@@ -316,55 +316,87 @@
   },
   "faqSection": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Answers to your questions about beard transplantation - Comprehensive information about procedure, costs, risks, and results of our treatments",
+    "subtitle": "Answers to your questions about beard transplantation - Comprehensive information about the procedure, costs, risks, and results of our treatments",
     "faqs": [
       {
-        "question": "Which method is best suited for me?",
-        "answer": "The best method depends on various factors, such as the extent of beard gaps, the quality of the donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you."
-      },
-      {
-        "question": "How long is the recovery phase?",
-        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 5-7 days. Complete healing of the treated areas takes about 10-14 days."
-      },
-      {
-        "question": "When will I see the first results?",
-        "answer": "The first new beard hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months when the transplanted hairs have fully grown and reached their natural density."
-      },
-      {
-        "question": "Is the procedure painful?",
-        "answer": "The beard transplantation is performed under local anesthesia, so you will not feel any pain during the procedure. After the procedure, slight discomfort may occur, which can be well controlled with pain medication."
-      },
-      {
-        "question": "How much does a beard transplantation cost?",
-        "answer": "The cost of a beard transplantation depends on various factors, particularly the number of grafts to be transplanted and the chosen method. At Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you."
-      },
-      {
-        "question": "Can I get a beard transplant if I have little beard growth?",
-        "answer": "Yes, a beard transplant is also possible for men with little or no natural beard growth. In this case, the hair follicles are taken from suitable donor areas on the head and transplanted into the desired areas of the face. The result is a natural-looking beard that can be designed according to your wishes."
+        "question": "Can I get a beard transplantation if I have little to no beard growth?",
+        "answer": "Yes, a beard transplantation is also possible for men with little or no natural beard growth. In this case, the hair follicles are taken from suitable donor areas on the head and transplanted into the desired areas of the face. The result is a natural-looking beard that can be designed according to your wishes.",
+        "category": "general"
       },
       {
         "question": "Are there risks or side effects?",
-        "answer": "As with any medical procedure, there are certain risks associated with beard transplantation. However, these are minimal when performed properly. Possible side effects include temporary swelling, redness, slight bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare."
-      },
-      {
-        "question": "How long does the result of a beard transplantation last?",
-        "answer": "The transplanted beard hairs are permanent because they are taken from areas that are not genetically susceptible to hair loss. They grow for a lifetime like normal hair and can be cut, trimmed, and styled."
+        "answer": "As with any medical procedure, there are certain risks associated with beard transplantation. However, these are minimal when properly performed. Possible side effects include temporary swelling, redness, mild bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare.",
+        "category": "general"
       },
       {
         "question": "How does a treatment in Germany differ from offers abroad?",
-        "answer": "In Germany, beard transplantations are subject to strict medical standards and quality controls. At Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, our treatments are performed exclusively by experienced specialists, not trained assistants."
+        "answer": "In Germany, beard transplantations are subject to strict medical standards and quality controls. At Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, our treatments are performed exclusively by experienced specialists, not trained assistants.",
+        "category": "general"
       },
       {
-        "question": "How realistic are the results?",
-        "answer": "Modern beard transplantation techniques now enable very natural-looking results. The transplanted hair grows like your own beard hair and can be cut, trimmed, and styled normally. The experience of the treatment team, the correct placement of the hair follicles, and consideration of your individual facial features and natural beard growth pattern are crucial for a natural result."
+        "question": "How long does the procedure take?",
+        "answer": "The duration of the procedure depends on the number of grafts to be transplanted. Typically, a beard transplantation takes between 3 and 6 hours. For larger transplantations, the procedure may be divided over two days to achieve optimal results and reduce the strain on the patient.",
+        "category": "procedure"
+      },
+      {
+        "question": "Which method is best suited for me?",
+        "answer": "The best method depends on various factors, such as the extent of beard gaps, the quality of donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you.",
+        "category": "procedure"
+      },
+      {
+        "question": "Is the procedure painful?",
+        "answer": "The beard transplantation is performed under local anesthesia, so you won't feel any pain during the procedure. After the procedure, mild discomfort may occur, but this can be well controlled with pain medication.",
+        "category": "procedure"
       },
       {
         "question": "How should I prepare for the procedure?",
-        "answer": "For preparation, we recommend avoiding blood-thinning medications (after consulting with your doctor), alcohol, and nicotine for 10 days before the procedure. On the day of the procedure, you should wear comfortable clothing. We will advise you in detail about all further preparatory measures in a personal consultation."
+        "answer": "For preparation, we recommend avoiding blood-thinning medications (after consulting with your doctor), alcohol, and nicotine for 10 days before the procedure. On the day of the procedure, you should wear comfortable clothing. We will advise you in detail about all further preparatory measures in a personal consultation.",
+        "category": "procedure"
+      },
+      {
+        "question": "How long is the recovery period?",
+        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 5-7 days. Complete healing of the treated areas takes about 10-14 days.",
+        "category": "recovery"
       },
       {
         "question": "What does the aftercare look like?",
-        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, you will receive detailed instructions from us on how to care for the treated areas. This includes special cleaning products, sleeping positions, and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and that your questions are answered at any time."
+        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, we will provide you with detailed instructions for caring for the treated areas. This includes special cleaning products, sleeping positions, and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and your questions are answered at any time.",
+        "category": "recovery"
+      },
+      {
+        "question": "When can I shave or trim my beard again?",
+        "answer": "After a beard transplantation, you should avoid shaving for at least 14 days to not compromise the healing of the transplanted follicles. After about 3 weeks, you can carefully start trimming your beard with an electric hair clipper (not with a razor). After 4-6 weeks, full shaving is usually possible again, but we recommend doing this carefully and with an electric razor initially.",
+        "category": "recovery"
+      },
+      {
+        "question": "When will I see the first results?",
+        "answer": "The first new beard hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months, when the transplanted hairs have fully grown and reached their natural density.",
+        "category": "results"
+      },
+      {
+        "question": "How realistic are the results?",
+        "answer": "Modern beard transplantation techniques now enable very natural-looking results. The transplanted hairs grow like your own beard hairs and can be cut, trimmed, and styled normally. Crucial for a natural result are the experience of the treating team, the correct placement of the hair follicles, and consideration of your individual facial features and natural beard growth pattern.",
+        "category": "results"
+      },
+      {
+        "question": "How long does the result of a beard transplantation last?",
+        "answer": "The transplanted beard hairs are permanent, as they are taken from areas that are not genetically susceptible to hair loss. They grow for a lifetime like normal hair and can be cut, trimmed, and styled.",
+        "category": "results"
+      },
+      {
+        "question": "Can I color my transplanted beard?",
+        "answer": "Yes, after complete healing (about 4-6 weeks after the procedure), you can treat your transplanted beard like your natural beard. You can color, trim, and style it. The transplanted hairs behave like your own hair and grow in a natural cycle.",
+        "category": "results"
+      },
+      {
+        "question": "How much does a beard transplantation cost?",
+        "answer": "The cost of a beard transplantation depends on various factors, especially the number of grafts to be transplanted and the chosen method. At Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you.",
+        "category": "costs"
+      },
+      {
+        "question": "Are the costs of a beard transplantation covered by health insurance?",
+        "answer": "Generally, the costs for a beard transplantation are not covered by statutory health insurance, as it is considered an aesthetic procedure. Some private health insurance plans may offer partial coverage. We are happy to advise you on the various financing options we offer.",
+        "category": "costs"
       }
     ]
   }

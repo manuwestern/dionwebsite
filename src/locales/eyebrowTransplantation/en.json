@@ -328,55 +328,92 @@
   },
   "faqSection": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Answers to your questions about eyebrow transplantation",
+    "subtitle": "Answers to your questions about eyebrow transplantation - Comprehensive information about the procedure, costs, risks, and results of our treatments",
     "faqs": [
       {
-        "question": "Which method is best suited for me?",
-        "answer": "The best method depends on various factors, such as the extent of hair loss, the quality of the donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you."
-      },
-      {
-        "question": "How long is the recovery phase?",
-        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 5-7 days. Complete healing of the treated areas takes about 10-14 days."
-      },
-      {
-        "question": "When will I see the first results?",
-        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 6-9 months when the transplanted hairs have fully grown and reached their natural density."
-      },
-      {
-        "question": "Is the procedure painful?",
-        "answer": "The eyebrow transplantation is performed under local anesthesia, so you will not feel any pain during the procedure. After the procedure, slight discomfort may occur, which can be well controlled with pain medication."
-      },
-      {
-        "question": "How much does an eyebrow transplantation cost?",
-        "answer": "The cost of an eyebrow transplantation depends on various factors, particularly the number of grafts to be transplanted and the chosen method. At Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you."
-      },
-      {
-        "question": "Do I need to trim my eyebrows regularly after the transplantation?",
-        "answer": "Yes, since the transplanted hairs usually come from the head, they grow faster than natural eyebrow hairs and need to be trimmed regularly. We will show you how to care for and maintain the shape of your new eyebrows."
-      },
-      {
         "question": "Are there risks or side effects?",
-        "answer": "As with any medical procedure, there are certain risks associated with eyebrow transplantation. However, these are minimal when performed properly. Possible side effects include temporary swelling, redness, slight bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare."
-      },
-      {
-        "question": "How long does the result of an eyebrow transplantation last?",
-        "answer": "The transplanted hairs are permanent because they are taken from areas that are not genetically susceptible to hair loss. They grow for a lifetime and can be trimmed and styled."
+        "answer": "As with any medical procedure, there are certain risks associated with eyebrow transplantation. However, these are minimal when properly performed. Possible side effects include temporary swelling, redness, mild bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare.",
+        "category": "general"
       },
       {
         "question": "How does a treatment in Germany differ from offers abroad?",
-        "answer": "In Germany, eyebrow transplantations are subject to strict medical standards and quality controls. At Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, our treatments are performed exclusively by experienced specialists, not trained assistants."
+        "answer": "In Germany, eyebrow transplantations are subject to strict medical standards and quality controls. At Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, our treatments are performed exclusively by experienced specialists, not trained assistants.",
+        "category": "general"
       },
       {
-        "question": "How realistic are the results?",
-        "answer": "Modern eyebrow transplantation techniques now enable very natural-looking results. The transplanted hair grows like your own hair and can be trimmed and styled normally. The experience of the treatment team, the correct placement of the hair follicles, and consideration of your individual facial features and natural growth pattern are crucial for a natural result."
+        "question": "Can I get an eyebrow transplantation if I have no eyebrows at all?",
+        "answer": "Yes, an eyebrow transplantation is also possible for people who have no or very few eyebrows. In this case, the hair follicles are taken from suitable donor areas on the head and transplanted into the eyebrow area. Our specialists can design a natural-looking eyebrow shape that suits your facial features, even if there is no template from existing eyebrows.",
+        "category": "general"
+      },
+      {
+        "question": "Which method is best suited for me?",
+        "answer": "The best method depends on various factors, such as the extent of hair loss, the quality of donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you.",
+        "category": "procedure"
+      },
+      {
+        "question": "Is the procedure painful?",
+        "answer": "The eyebrow transplantation is performed under local anesthesia, so you won't feel any pain during the procedure. After the procedure, mild discomfort may occur, but this can be well controlled with pain medication.",
+        "category": "procedure"
       },
       {
         "question": "How should I prepare for the procedure?",
-        "answer": "For preparation, we recommend avoiding blood-thinning medications (after consulting with your doctor), alcohol, and nicotine for 10 days before the procedure. On the day of the procedure, you should not wear makeup in the eye area. We will advise you in detail about all further preparatory measures in a personal consultation."
+        "answer": "For preparation, we recommend avoiding blood-thinning medications (after consulting with your doctor), alcohol, and nicotine for 10 days before the procedure. On the day of the procedure, you should not wear makeup in the eye area. We will advise you in detail about all further preparatory measures in a personal consultation.",
+        "category": "procedure"
+      },
+      {
+        "question": "How long does the procedure take?",
+        "answer": "The duration of the procedure depends on the number of grafts to be transplanted. Typically, an eyebrow transplantation takes between 2 and 4 hours. The entire process, including preparation and aftercare, takes about half a day.",
+        "category": "procedure"
+      },
+      {
+        "question": "How long is the recovery period?",
+        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 5-7 days. Complete healing of the treated areas takes about 10-14 days.",
+        "category": "recovery"
       },
       {
         "question": "What does the aftercare look like?",
-        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, you will receive detailed instructions from us on how to care for the treated areas. This includes special cleaning products and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and that your questions are answered at any time."
+        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, we will provide you with detailed instructions for caring for the treated areas. This includes special cleaning products and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and your questions are answered at any time.",
+        "category": "recovery"
+      },
+      {
+        "question": "When can I use makeup in the eyebrow area again?",
+        "answer": "After an eyebrow transplantation, you should avoid using makeup in the eyebrow area for at least 10-14 days to not compromise the healing of the transplanted follicles. After this time, you can carefully start using makeup again, but should avoid aggressive products and strong rubbing. After about 3-4 weeks, the use of makeup is usually possible without restrictions.",
+        "category": "recovery"
+      },
+      {
+        "question": "When will I see the first results?",
+        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 6-9 months, when the transplanted hairs have fully grown and reached their natural density.",
+        "category": "results"
+      },
+      {
+        "question": "How realistic are the results?",
+        "answer": "Modern eyebrow transplantation techniques now enable very natural-looking results. The transplanted hairs grow like your own hairs and can be trimmed and styled normally. Crucial for a natural result are the experience of the treating team, the correct placement of the hair follicles, and consideration of your individual facial features and natural growth pattern.",
+        "category": "results"
+      },
+      {
+        "question": "How long does the result of an eyebrow transplantation last?",
+        "answer": "The transplanted hairs are permanent, as they are taken from areas that are not genetically susceptible to hair loss. They grow for a lifetime and can be trimmed and styled.",
+        "category": "results"
+      },
+      {
+        "question": "Do I need to trim my eyebrows regularly after the transplantation?",
+        "answer": "Yes, since the transplanted hairs usually come from the head, they grow faster than natural eyebrow hairs and need to be trimmed regularly. We will show you how to care for and maintain the shape of your new eyebrows.",
+        "category": "results"
+      },
+      {
+        "question": "Can I change the shape of my transplanted eyebrows later?",
+        "answer": "After an eyebrow transplantation, you can adjust the shape of your eyebrows through regular trimming and styling. However, major changes to the basic shape are limited, as the growth direction and placement of the hair follicles are determined during the transplantation. Therefore, it is important to discuss the desired shape in detail before the procedure. If needed, adjustments can be made in a second session.",
+        "category": "results"
+      },
+      {
+        "question": "How much does an eyebrow transplantation cost?",
+        "answer": "The cost of an eyebrow transplantation depends on various factors, especially the number of grafts to be transplanted and the chosen method. At Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you.",
+        "category": "costs"
+      },
+      {
+        "question": "Are the costs of an eyebrow transplantation covered by health insurance?",
+        "answer": "Generally, the costs for an eyebrow transplantation are not covered by statutory health insurance, as it is considered an aesthetic procedure. Some private health insurance plans may offer partial coverage, especially if the hair loss was caused by injuries, burns, or certain diseases. We are happy to advise you on the various financing options we offer.",
+        "category": "costs"
       }
     ]
   }

@@ -14,6 +14,7 @@ interface FAQ {
 
 // FAQ categories with icons - ensuring consistent sizing
 const getCategoryIcons = () => ({
+  general: { icon: <Stethoscope strokeWidth={1.5} /> },
   procedure: { icon: <Stethoscope strokeWidth={1.5} /> },
   recovery: { icon: <Clock strokeWidth={1.5} /> },
   results: { icon: <HelpCircle strokeWidth={1.5} /> },
@@ -32,14 +33,13 @@ const FAQSection: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  // Create FAQs from translation keys and assign categories
-  const faqCategories = ['procedure', 'recovery', 'results', 'costs'];
+  // Create FAQs from translation keys with categories from JSON
   const faqs: FAQ[] = Array.from(
     { length: (t('faqSection.faqs', { returnObjects: true }) as any[]).length },
     (_, index) => ({
       question: t(`faqSection.faqs.${index}.question`),
       answer: t(`faqSection.faqs.${index}.answer`),
-      category: faqCategories[index % faqCategories.length] // Assign categories cyclically
+      category: t(`faqSection.faqs.${index}.category`, { defaultValue: 'general' })
     })
   );
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Check, ChevronRight, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
@@ -182,7 +182,7 @@ const PriceOverviewSection: React.FC = () => {
                     {/* Features */}
                     <div className="mb-6">
                       <h4 className={`${fontSize.base} ${fontWeight.medium} ${textColor.primary} ${tracking.wide} mb-4`}>
-                        Im Paket enthalten:
+                        {t('priceOverviewSection.packageIncludes')}
                       </h4>
                       <ul className="grid gap-3">
                         {pkg.features.map((feature, i) => (

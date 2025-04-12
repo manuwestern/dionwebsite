@@ -331,52 +331,89 @@
     "subtitle": "Antworten auf Ihre Fragen zur Augenbrauentransplantation - Umfassende Informationen zu Ablauf, Kosten, Risiken und Ergebnissen unserer Behandlungen",
     "faqs": [
       {
-        "question": "Welche Methode ist für mich am besten geeignet?",
-        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln."
-      },
-      {
-        "question": "Wie lange dauert die Erholungsphase?",
-        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Rötungen und Schwellungen klingen in der Regel innerhalb von 5-7 Tagen ab. Die vollständige Heilung der behandelten Bereiche dauert etwa 10-14 Tage."
-      },
-      {
-        "question": "Wann sehe ich die ersten Ergebnisse?",
-        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 6-9 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben."
-      },
-      {
-        "question": "Ist der Eingriff schmerzhaft?",
-        "answer": "Die Augenbrauentransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind."
-      },
-      {
-        "question": "Was kostet eine Augenbrauentransplantation?",
-        "answer": "Die Kosten einer Augenbrauentransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot."
-      },
-      {
-        "question": "Muss ich meine Augenbrauen nach der Transplantation regelmäßig trimmen?",
-        "answer": "Ja, da die transplantierten Haare in der Regel vom Kopf stammen, wachsen sie schneller als natürliche Augenbrauenhaare und müssen regelmäßig getrimmt werden. Wir zeigen Ihnen, wie Sie Ihre neuen Augenbrauen pflegen und in Form halten können."
-      },
-      {
         "question": "Gibt es Risiken oder Nebenwirkungen?",
-        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Augenbrauentransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge."
-      },
-      {
-        "question": "Wie lange hält das Ergebnis einer Augenbrauentransplantation?",
-        "answer": "Die transplantierten Haare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Sie wachsen ein Leben lang und können getrimmt und gestylt werden."
+        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Augenbrauentransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge.",
+        "category": "general"
       },
       {
         "question": "Wie unterscheidet sich eine Behandlung in Deutschland von Angeboten im Ausland?",
-        "answer": "In Deutschland unterliegen Augenbrauentransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten."
+        "answer": "In Deutschland unterliegen Augenbrauentransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten.",
+        "category": "general"
       },
       {
-        "question": "Wie realistisch sind die Ergebnisse?",
-        "answer": "Moderne Augenbrauentransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können normal getrimmt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Wuchsmusters."
+        "question": "Kann ich eine Augenbrauentransplantation bekommen, wenn ich gar keine Augenbrauen mehr habe?",
+        "answer": "Ja, eine Augenbrauentransplantation ist auch für Personen möglich, die keine oder kaum noch Augenbrauen haben. Die Haarfollikel werden in diesem Fall aus geeigneten Spenderzonen am Kopf entnommen und in den Augenbrauenbereich transplantiert. Unsere Spezialisten können eine natürlich aussehende Augenbrauenform gestalten, die zu Ihren Gesichtszügen passt, selbst wenn keine Vorlage durch bestehende Augenbrauen vorhanden ist.",
+        "category": "general"
+      },
+      {
+        "question": "Welche Methode ist für mich am besten geeignet?",
+        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln.",
+        "category": "procedure"
+      },
+      {
+        "question": "Ist der Eingriff schmerzhaft?",
+        "answer": "Die Augenbrauentransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind.",
+        "category": "procedure"
       },
       {
         "question": "Wie sollte ich mich auf den Eingriff vorbereiten?",
-        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie im Augenbereich kein Make-up tragen. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch."
+        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie im Augenbereich kein Make-up tragen. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie lange dauert der Eingriff?",
+        "answer": "Die Dauer des Eingriffs hängt von der Anzahl der zu transplantierenden Grafts ab. In der Regel dauert eine Augenbrauentransplantation zwischen 2 und 4 Stunden. Der gesamte Prozess, einschließlich Vorbereitung und Nachsorge, nimmt etwa einen halben Tag in Anspruch.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie lange dauert die Erholungsphase?",
+        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Rötungen und Schwellungen klingen in der Regel innerhalb von 5-7 Tagen ab. Die vollständige Heilung der behandelten Bereiche dauert etwa 10-14 Tage.",
+        "category": "recovery"
       },
       {
         "question": "Wie sieht die Nachsorge aus?",
-        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Reinigungsprodukte und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden."
+        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Reinigungsprodukte und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann kann ich wieder Make-up im Augenbrauenbereich verwenden?",
+        "answer": "Nach einer Augenbrauentransplantation sollten Sie für mindestens 10-14 Tage auf Make-up im Augenbrauenbereich verzichten, um die Heilung der transplantierten Follikel nicht zu gefährden. Nach dieser Zeit können Sie vorsichtig beginnen, wieder Make-up zu verwenden, sollten jedoch aggressive Produkte und starkes Reiben vermeiden. Nach etwa 3-4 Wochen ist die Verwendung von Make-up in der Regel ohne Einschränkungen möglich.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann sehe ich die ersten Ergebnisse?",
+        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 6-9 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben.",
+        "category": "results"
+      },
+      {
+        "question": "Wie realistisch sind die Ergebnisse?",
+        "answer": "Moderne Augenbrauentransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können normal getrimmt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Wuchsmusters.",
+        "category": "results"
+      },
+      {
+        "question": "Wie lange hält das Ergebnis einer Augenbrauentransplantation?",
+        "answer": "Die transplantierten Haare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Sie wachsen ein Leben lang und können getrimmt und gestylt werden.",
+        "category": "results"
+      },
+      {
+        "question": "Muss ich meine Augenbrauen nach der Transplantation regelmäßig trimmen?",
+        "answer": "Ja, da die transplantierten Haare in der Regel vom Kopf stammen, wachsen sie schneller als natürliche Augenbrauenhaare und müssen regelmäßig getrimmt werden. Wir zeigen Ihnen, wie Sie Ihre neuen Augenbrauen pflegen und in Form halten können.",
+        "category": "results"
+      },
+      {
+        "question": "Kann ich die Form meiner transplantierten Augenbrauen später ändern?",
+        "answer": "Nach einer Augenbrauentransplantation können Sie die Form Ihrer Augenbrauen durch regelmäßiges Trimmen und Styling anpassen. Größere Änderungen der Grundform sind jedoch begrenzt, da die Wuchsrichtung und Platzierung der Haarfollikel während der Transplantation festgelegt werden. Daher ist es wichtig, die gewünschte Form bereits vor dem Eingriff genau zu besprechen. Bei Bedarf können jedoch in einer zweiten Sitzung Anpassungen vorgenommen werden.",
+        "category": "results"
+      },
+      {
+        "question": "Was kostet eine Augenbrauentransplantation?",
+        "answer": "Die Kosten einer Augenbrauentransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot.",
+        "category": "costs"
+      },
+      {
+        "question": "Werden die Kosten einer Augenbrauentransplantation von der Krankenkasse übernommen?",
+        "answer": "In der Regel werden die Kosten für eine Augenbrauentransplantation nicht von den gesetzlichen Krankenkassen übernommen, da es sich um einen ästhetischen Eingriff handelt. Bei einigen privaten Krankenversicherungen kann eine teilweise Kostenübernahme möglich sein, insbesondere wenn der Haarverlust durch Verletzungen, Verbrennungen oder bestimmte Erkrankungen verursacht wurde. Wir beraten Sie gerne zu den verschiedenen Finanzierungsmöglichkeiten, die wir anbieten.",
+        "category": "costs"
       }
     ]
   }

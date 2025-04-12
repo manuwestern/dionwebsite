@@ -129,7 +129,11 @@
         "title": "Comprehensive Aftercare",
         "description": "Our commitment extends beyond the procedure with detailed aftercare instructions and follow-up appointments."
       }
-    ]
+    ],
+    "cta": {
+      "title": "Highest Quality Standards for Your Treatment",
+      "description": "We place the utmost importance on quality and safety in all our treatments. Schedule an appointment for a personal consultation and learn more about our quality standards."
+    }
   },
   "testimonialsSection": {
     "title": "What Our Patients Say",

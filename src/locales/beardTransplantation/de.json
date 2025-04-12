@@ -319,52 +319,84 @@
     "subtitle": "Antworten auf Ihre Fragen zur Barthaartransplantation - Umfassende Informationen zu Ablauf, Kosten, Risiken und Ergebnissen unserer Behandlungen",
     "faqs": [
       {
-        "question": "Welche Methode ist für mich am besten geeignet?",
-        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß der Bartlücken, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln."
-      },
-      {
-        "question": "Wie lange dauert die Erholungsphase?",
-        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Die Rötungen und Schwellungen klingen in der Regel innerhalb von 5-7 Tagen ab. Die vollständige Heilung der behandelten Bereiche dauert etwa 10-14 Tage."
-      },
-      {
-        "question": "Wann sehe ich die ersten Ergebnisse?",
-        "answer": "Die ersten neuen Barthaare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben."
-      },
-      {
-        "question": "Ist der Eingriff schmerzhaft?",
-        "answer": "Die Barthaartransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind."
-      },
-      {
-        "question": "Was kostet eine Barthaartransplantation?",
-        "answer": "Die Kosten einer Barthaartransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot."
-      },
-      {
         "question": "Kann ich eine Barthaartransplantation bekommen, wenn ich kaum Bartwuchs habe?",
-        "answer": "Ja, eine Barthaartransplantation ist auch für Männer mit wenig oder keinem natürlichen Bartwuchs möglich. Die Haarfollikel werden in diesem Fall aus geeigneten Spenderzonen am Kopf entnommen und in die gewünschten Bereiche des Gesichts transplantiert. Das Ergebnis ist ein natürlich aussehender Bart, der nach Ihren Wünschen gestaltet werden kann."
+        "answer": "Ja, eine Barthaartransplantation ist auch für Männer mit wenig oder keinem natürlichen Bartwuchs möglich. Die Haarfollikel werden in diesem Fall aus geeigneten Spenderzonen am Kopf entnommen und in die gewünschten Bereiche des Gesichts transplantiert. Das Ergebnis ist ein natürlich aussehender Bart, der nach Ihren Wünschen gestaltet werden kann.",
+        "category": "general"
       },
       {
         "question": "Gibt es Risiken oder Nebenwirkungen?",
-        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Barthaartransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge."
-      },
-      {
-        "question": "Wie lange hält das Ergebnis einer Barthaartransplantation?",
-        "answer": "Die transplantierten Barthaare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Sie wachsen ein Leben lang wie normales Haar und können geschnitten, getrimmt und gestylt werden."
+        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Barthaartransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge.",
+        "category": "general"
       },
       {
         "question": "Wie unterscheidet sich eine Behandlung in Deutschland von Angeboten im Ausland?",
-        "answer": "In Deutschland unterliegen Barthaartransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten."
+        "answer": "In Deutschland unterliegen Barthaartransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten.",
+        "category": "general"
       },
       {
-        "question": "Wie realistisch sind die Ergebnisse?",
-        "answer": "Moderne Barthaartransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Barthaare und können normal geschnitten, getrimmt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Bartwuchsmusters."
+        "question": "Wie lange dauert der Eingriff?",
+        "answer": "Die Dauer des Eingriffs hängt von der Anzahl der zu transplantierenden Grafts ab. In der Regel dauert eine Barthaartransplantation zwischen 3 und 6 Stunden. Bei größeren Transplantationen kann der Eingriff auf zwei Tage aufgeteilt werden, um optimale Ergebnisse zu erzielen und die Belastung für den Patienten zu reduzieren.",
+        "category": "procedure"
+      },
+      {
+        "question": "Welche Methode ist für mich am besten geeignet?",
+        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß der Bartlücken, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln.",
+        "category": "procedure"
+      },
+      {
+        "question": "Ist der Eingriff schmerzhaft?",
+        "answer": "Die Barthaartransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind.",
+        "category": "procedure"
       },
       {
         "question": "Wie sollte ich mich auf den Eingriff vorbereiten?",
-        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie bequeme Kleidung tragen. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch."
+        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie bequeme Kleidung tragen. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie lange dauert die Erholungsphase?",
+        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Die Rötungen und Schwellungen klingen in der Regel innerhalb von 5-7 Tagen ab. Die vollständige Heilung der behandelten Bereiche dauert etwa 10-14 Tage.",
+        "category": "recovery"
       },
       {
         "question": "Wie sieht die Nachsorge aus?",
-        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Reinigungsprodukte, Schlafpositionen und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden."
+        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Reinigungsprodukte, Schlafpositionen und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann kann ich meinen Bart wieder rasieren oder trimmen?",
+        "answer": "Nach einer Barthaartransplantation sollten Sie für mindestens 14 Tage auf das Rasieren verzichten, um die Heilung der transplantierten Follikel nicht zu gefährden. Nach etwa 3 Wochen können Sie vorsichtig mit einer elektrischen Haarschneidemaschine (nicht mit einem Rasierer) beginnen, Ihren Bart zu trimmen. Nach 4-6 Wochen ist die vollständige Rasur in der Regel wieder möglich, aber wir empfehlen, dies zunächst vorsichtig und mit einer elektrischen Rasiermaschine zu tun.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann sehe ich die ersten Ergebnisse?",
+        "answer": "Die ersten neuen Barthaare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben.",
+        "category": "results"
+      },
+      {
+        "question": "Wie realistisch sind die Ergebnisse?",
+        "answer": "Moderne Barthaartransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Barthaare und können normal geschnitten, getrimmt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Bartwuchsmusters.",
+        "category": "results"
+      },
+      {
+        "question": "Wie lange hält das Ergebnis einer Barthaartransplantation?",
+        "answer": "Die transplantierten Barthaare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Sie wachsen ein Leben lang wie normales Haar und können geschnitten, getrimmt und gestylt werden.",
+        "category": "results"
+      },
+      {
+        "question": "Kann ich meinen transplantierten Bart färben?",
+        "answer": "Ja, nach vollständiger Heilung (etwa 4-6 Wochen nach dem Eingriff) können Sie Ihren transplantierten Bart wie Ihren natürlichen Bart behandeln. Sie können ihn färben, trimmen und stylen. Die transplantierten Haare verhalten sich wie Ihre eigenen Haare und wachsen in einem natürlichen Zyklus.",
+        "category": "results"
+      },
+      {
+        "question": "Was kostet eine Barthaartransplantation?",
+        "answer": "Die Kosten einer Barthaartransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot.",
+        "category": "costs"
+      },
+      {
+        "question": "Werden die Kosten einer Barthaartransplantation von der Krankenkasse übernommen?",
+        "answer": "In der Regel werden die Kosten für eine Barthaartransplantation nicht von den gesetzlichen Krankenkassen übernommen, da es sich um einen ästhetischen Eingriff handelt. Bei einigen privaten Krankenversicherungen kann eine teilweise Kostenübernahme möglich sein. Wir beraten Sie gerne zu den verschiedenen Finanzierungsmöglichkeiten, die wir anbieten.",
+        "category": "costs"
       }
     ]
   }

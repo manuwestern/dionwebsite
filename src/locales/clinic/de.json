@@ -129,7 +129,11 @@
         "title": "Umfassende Nachsorge",
         "description": "Unser Engagement geht über den Eingriff hinaus mit detaillierten Nachsorgeanweisungen und Folgeterminen."
       }
-    ]
+    ],
+    "cta": {
+      "title": "Höchste Qualitätsstandards für Ihre Behandlung",
+      "description": "Wir legen größten Wert auf Qualität und Sicherheit bei allen unseren Behandlungen. Vereinbaren Sie einen Termin für eine persönliche Beratung und erfahren Sie mehr über unsere Qualitätsstandards."
+    }
   },
   "testimonialsSection": {
     "title": "Was unsere Patienten sagen",
