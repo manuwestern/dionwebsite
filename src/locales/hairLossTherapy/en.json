@@ -350,48 +350,84 @@
     "subtitle": "Answers to your questions about hair loss therapy - Comprehensive information on procedures, costs, risks, and results of our treatments",
     "faqs": [
       {
-        "question": "Which method is best suited for me?",
-        "answer": "The best method depends on various factors, such as the cause of hair loss, the extent of hair loss, and your personal preferences. In a personal consultation, we can determine the optimal method for you."
-      },
-      {
-        "question": "How long does it take to see results?",
-        "answer": "The first results are usually visible after 3-4 months. The full effect of the therapy becomes apparent after about 6-12 months of regular treatment. The exact timeframe depends on the chosen therapy method and your individual response to the treatment."
-      },
-      {
-        "question": "Are the results of hair loss therapy permanent?",
-        "answer": "The results can be permanent if the therapy is consistently continued. For hormone-related hair loss, maintenance therapy is often necessary to secure the results in the long term. We advise you in detail about the necessary measures to maintain your results."
-      },
-      {
-        "question": "Is the treatment painful?",
-        "answer": "Most hair loss therapies are painless or cause only minimal discomfort. With PRP therapy, slight pain may occur during the injection, which can be minimized by the application of local anesthetics."
-      },
-      {
-        "question": "How much does hair loss therapy cost?",
-        "answer": "The cost of hair loss therapy depends on various factors, particularly the chosen method and the duration of treatment. At the Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you."
-      },
-      {
         "question": "Who is hair loss therapy suitable for?",
-        "answer": "Hair loss therapy is suitable for men and women of all ages who suffer from hair loss. It is particularly effective for early hair loss, diffuse hair loss, stress-induced hair loss, and hair loss due to nutrient deficiency. Good results can also be achieved with hormone-related hair loss."
+        "answer": "Hair loss therapy is suitable for men and women of all ages who suffer from hair loss. It is particularly effective for early hair loss, diffuse hair loss, stress-induced hair loss, and hair loss due to nutrient deficiency. Good results can also be achieved with hormone-related hair loss.",
+        "category": "general"
       },
       {
         "question": "Are there risks or side effects?",
-        "answer": "The risks and side effects of hair loss therapies are generally minimal. With medication therapies, side effects may occur in rare cases, about which we will inform you in detail. PRP therapy and nutrient therapy are very safe as they work with the body's own substances or natural nutrients."
-      },
-      {
-        "question": "How often do I need to come for treatment?",
-        "answer": "The frequency of treatments depends on the chosen therapy method. For PRP therapy, typically 3-4 treatments at intervals of 4-6 weeks are required, followed by maintenance treatments every 6-12 months. Medication therapies are performed daily at home, with regular check-ups at our clinic."
-      },
-      {
-        "question": "Can hair loss therapy be combined with a hair transplant?",
-        "answer": "Yes, hair loss therapy can be very well combined with a hair transplant. The therapy can be performed before a transplant to stabilize hair loss and optimally prepare the scalp. After a transplant, it helps to strengthen the transplanted hair and promote growth."
+        "answer": "The risks and side effects of hair loss therapies are generally minimal. With medication therapies, side effects may occur in rare cases, about which we will inform you in detail. PRP therapy and nutrient therapy are very safe as they work with the body's own substances or natural nutrients.",
+        "category": "general"
       },
       {
         "question": "How does a treatment in Germany differ from offers abroad?",
-        "answer": "In Germany, hair loss therapies are subject to strict medical standards and quality controls. At the Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, only experienced specialists perform the treatment with us."
+        "answer": "In Germany, hair loss therapies are subject to strict medical standards and quality controls. At the Dion Hair Clinic, you benefit from the highest medical expertise, state-of-the-art technology, and comprehensive aftercare without language barriers. Unlike some foreign offers, only experienced specialists perform the treatment with us.",
+        "category": "general"
+      },
+      {
+        "question": "What types of hair loss can be treated with therapy?",
+        "answer": "Our therapies can treat various types of hair loss, including androgenetic (hereditary) hair loss, diffuse hair loss, alopecia areata, stress-induced hair loss, hair loss due to nutrient deficiency, and hormone-related hair loss. The effectiveness of the treatment depends on the type of hair loss and the timing of treatment initiation.",
+        "category": "general"
+      },
+      {
+        "question": "Which method is best suited for me?",
+        "answer": "The best method depends on various factors, such as the cause of hair loss, the extent of hair loss, and your personal preferences. In a personal consultation, we can determine the optimal method for you.",
+        "category": "procedure"
+      },
+      {
+        "question": "Is the treatment painful?",
+        "answer": "Most hair loss therapies are painless or cause only minimal discomfort. With PRP therapy, slight pain may occur during the injection, which can be minimized by the application of local anesthetics.",
+        "category": "procedure"
+      },
+      {
+        "question": "How often do I need to come for treatment?",
+        "answer": "The frequency of treatments depends on the chosen therapy method. For PRP therapy, typically 3-4 treatments at intervals of 4-6 weeks are required, followed by maintenance treatments every 6-12 months. Medication therapies are performed daily at home, with regular check-ups at our clinic.",
+        "category": "procedure"
+      },
+      {
+        "question": "Can hair loss therapy be combined with a hair transplant?",
+        "answer": "Yes, hair loss therapy can be very well combined with a hair transplant. The therapy can be performed before a transplant to stabilize hair loss and optimally prepare the scalp. After a transplant, it helps to strengthen the transplanted hair and promote growth.",
+        "category": "procedure"
+      },
+      {
+        "question": "What does aftercare look like following hair loss therapy?",
+        "answer": "Aftercare is an important component of hair loss therapy. Depending on the treatment method, it includes regular check-ups at our clinic, consistent application of prescribed medications, adapted hair care with special products, and possibly maintenance treatments. We provide you with a detailed aftercare plan and accompany you throughout the entire process.",
+        "category": "recovery"
+      },
+      {
+        "question": "Can I return to work immediately after a PRP treatment?",
+        "answer": "Yes, after a PRP treatment, you can usually return to your normal activities immediately. There may be slight redness or swelling at the injection sites, but these subside within a few hours. We recommend avoiding intensive sports activities and sauna visits on the day of treatment and not straining the scalp too much.",
+        "category": "recovery"
+      },
+      {
+        "question": "Are there any restrictions during therapy?",
+        "answer": "The restrictions during hair loss therapy are minimal. For medication therapies, you should follow the application instructions exactly. After PRP treatments, you should avoid intensive sports activities for 24 hours and protect the scalp. In general, we recommend avoiding aggressive hair care products during therapy and not straining the scalp excessively.",
+        "category": "recovery"
+      },
+      {
+        "question": "How long does it take to see results?",
+        "answer": "The first results are usually visible after 3-4 months. The full effect of the therapy becomes apparent after about 6-12 months of regular treatment. The exact timeframe depends on the chosen therapy method and your individual response to the treatment.",
+        "category": "results"
+      },
+      {
+        "question": "Are the results of hair loss therapy permanent?",
+        "answer": "The results can be permanent if the therapy is consistently continued. For hormone-related hair loss, maintenance therapy is often necessary to secure the results in the long term. We advise you in detail about the necessary measures to maintain your results.",
+        "category": "results"
       },
       {
         "question": "How realistic are the results?",
-        "answer": "The results of hair loss therapy are usually very natural as they promote the growth of your own hair. The effectiveness depends on various factors, such as the cause of hair loss, the time of treatment initiation, and your individual response to the therapy. In a personal consultation, we can give you a realistic assessment of the expected results."
+        "answer": "The results of hair loss therapy are usually very natural as they promote the growth of your own hair. The effectiveness depends on various factors, such as the cause of hair loss, the time of treatment initiation, and your individual response to the therapy. In a personal consultation, we can give you a realistic assessment of the expected results.",
+        "category": "results"
+      },
+      {
+        "question": "How much does hair loss therapy cost?",
+        "answer": "The cost of hair loss therapy depends on various factors, particularly the chosen method and the duration of treatment. At the Dion Hair Clinic, we offer transparent pricing models and various financing options. In a personal consultation, we will create an individual offer for you.",
+        "category": "costs"
+      },
+      {
+        "question": "Are the costs covered by health insurance?",
+        "answer": "Generally, the costs for hair loss therapies are not covered by statutory health insurance, as they are usually considered aesthetic treatments. For certain medical indications, such as hair loss after chemotherapy or with autoimmune diseases, partial cost coverage may be possible. Private health insurance often has different regulations. We are happy to advise you on the possibilities of cost coverage and offer various financing options.",
+        "category": "costs"
       }
     ]
   }

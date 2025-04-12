@@ -350,48 +350,84 @@
     "subtitle": "Antworten auf Ihre Fragen zur Haarausfalltherapie - Umfassende Informationen zu Ablauf, Kosten, Risiken und Ergebnissen unserer Behandlungen",
     "faqs": [
       {
-        "question": "Welche Methode ist für mich am besten geeignet?",
-        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie der Ursache des Haarausfalls, dem Ausmaß des Haarverlusts und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln."
-      },
-      {
-        "question": "Wie lange dauert es, bis ich Ergebnisse sehe?",
-        "answer": "Die ersten Ergebnisse sind in der Regel nach 3-4 Monaten sichtbar. Der volle Effekt der Therapie zeigt sich nach etwa 6-12 Monaten regelmäßiger Behandlung. Die genaue Zeitspanne hängt von der gewählten Therapiemethode und Ihrem individuellen Ansprechen auf die Behandlung ab."
-      },
-      {
-        "question": "Sind die Ergebnisse einer Haarausfalltherapie dauerhaft?",
-        "answer": "Die Ergebnisse können dauerhaft sein, wenn die Therapie konsequent fortgeführt wird. Bei hormonell bedingtem Haarausfall ist oft eine Erhaltungstherapie notwendig, um die Ergebnisse langfristig zu sichern. Wir beraten Sie ausführlich über die notwendigen Maßnahmen zur Erhaltung Ihrer Ergebnisse."
-      },
-      {
-        "question": "Ist die Behandlung schmerzhaft?",
-        "answer": "Die meisten Haarausfalltherapien sind schmerzfrei oder verursachen nur minimale Beschwerden. Bei der PRP-Therapie können leichte Schmerzen während der Injektion auftreten, die jedoch durch die Anwendung von lokalen Betäubungsmitteln minimiert werden können."
-      },
-      {
-        "question": "Was kostet eine Haarausfalltherapie?",
-        "answer": "Die Kosten einer Haarausfalltherapie hängen von verschiedenen Faktoren ab, insbesondere von der gewählten Methode und der Dauer der Behandlung. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot."
-      },
-      {
         "question": "Für wen ist eine Haarausfalltherapie geeignet?",
-        "answer": "Eine Haarausfalltherapie ist für Männer und Frauen jeden Alters geeignet, die unter Haarausfall leiden. Besonders effektiv ist sie bei frühzeitigem Haarausfall, diffusem Haarausfall, stressbedingtem Haarausfall und Haarausfall durch Nährstoffmangel. Auch bei hormonell bedingtem Haarausfall können gute Ergebnisse erzielt werden."
+        "answer": "Eine Haarausfalltherapie ist für Männer und Frauen jeden Alters geeignet, die unter Haarausfall leiden. Besonders effektiv ist sie bei frühzeitigem Haarausfall, diffusem Haarausfall, stressbedingtem Haarausfall und Haarausfall durch Nährstoffmangel. Auch bei hormonell bedingtem Haarausfall können gute Ergebnisse erzielt werden.",
+        "category": "general"
       },
       {
         "question": "Gibt es Risiken oder Nebenwirkungen?",
-        "answer": "Die Risiken und Nebenwirkungen bei Haarausfalltherapien sind in der Regel minimal. Bei medikamentösen Therapien können in seltenen Fällen Nebenwirkungen auftreten, über die wir Sie ausführlich aufklären. Die PRP-Therapie und Nährstofftherapie sind sehr sicher, da sie mit körpereigenen Substanzen oder natürlichen Nährstoffen arbeiten."
-      },
-      {
-        "question": "Wie oft muss ich zur Behandlung kommen?",
-        "answer": "Die Häufigkeit der Behandlungen hängt von der gewählten Therapiemethode ab. Bei der PRP-Therapie sind in der Regel 3-4 Behandlungen im Abstand von 4-6 Wochen erforderlich, gefolgt von Erhaltungsbehandlungen alle 6-12 Monate. Medikamentöse Therapien werden täglich zu Hause durchgeführt, mit regelmäßigen Kontrollterminen in unserer Klinik."
-      },
-      {
-        "question": "Kann eine Haarausfalltherapie mit einer Haartransplantation kombiniert werden?",
-        "answer": "Ja, eine Haarausfalltherapie kann sehr gut mit einer Haartransplantation kombiniert werden. Die Therapie kann vor einer Transplantation durchgeführt werden, um den Haarausfall zu stabilisieren und die Kopfhaut optimal vorzubereiten. Nach einer Transplantation hilft sie, die transplantierten Haare zu stärken und das Wachstum zu fördern."
+        "answer": "Die Risiken und Nebenwirkungen bei Haarausfalltherapien sind in der Regel minimal. Bei medikamentösen Therapien können in seltenen Fällen Nebenwirkungen auftreten, über die wir Sie ausführlich aufklären. Die PRP-Therapie und Nährstofftherapie sind sehr sicher, da sie mit körpereigenen Substanzen oder natürlichen Nährstoffen arbeiten.",
+        "category": "general"
       },
       {
         "question": "Wie unterscheidet sich eine Behandlung in Deutschland von Angeboten im Ausland?",
-        "answer": "In Deutschland unterliegen Haarausfalltherapien strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch."
+        "answer": "In Deutschland unterliegen Haarausfalltherapien strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch.",
+        "category": "general"
+      },
+      {
+        "question": "Welche Arten von Haarausfall können mit einer Therapie behandelt werden?",
+        "answer": "Mit unseren Therapien können verschiedene Arten von Haarausfall behandelt werden, darunter androgenetischer (erblich bedingter) Haarausfall, diffuser Haarausfall, kreisrunder Haarausfall (Alopecia areata), stressbedingter Haarausfall, Haarausfall durch Nährstoffmangel und hormonell bedingter Haarausfall. Die Wirksamkeit der Behandlung hängt von der Art des Haarausfalls und dem Zeitpunkt des Behandlungsbeginns ab.",
+        "category": "general"
+      },
+      {
+        "question": "Welche Methode ist für mich am besten geeignet?",
+        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie der Ursache des Haarausfalls, dem Ausmaß des Haarverlusts und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln.",
+        "category": "procedure"
+      },
+      {
+        "question": "Ist die Behandlung schmerzhaft?",
+        "answer": "Die meisten Haarausfalltherapien sind schmerzfrei oder verursachen nur minimale Beschwerden. Bei der PRP-Therapie können leichte Schmerzen während der Injektion auftreten, die jedoch durch die Anwendung von lokalen Betäubungsmitteln minimiert werden können.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie oft muss ich zur Behandlung kommen?",
+        "answer": "Die Häufigkeit der Behandlungen hängt von der gewählten Therapiemethode ab. Bei der PRP-Therapie sind in der Regel 3-4 Behandlungen im Abstand von 4-6 Wochen erforderlich, gefolgt von Erhaltungsbehandlungen alle 6-12 Monate. Medikamentöse Therapien werden täglich zu Hause durchgeführt, mit regelmäßigen Kontrollterminen in unserer Klinik.",
+        "category": "procedure"
+      },
+      {
+        "question": "Kann eine Haarausfalltherapie mit einer Haartransplantation kombiniert werden?",
+        "answer": "Ja, eine Haarausfalltherapie kann sehr gut mit einer Haartransplantation kombiniert werden. Die Therapie kann vor einer Transplantation durchgeführt werden, um den Haarausfall zu stabilisieren und die Kopfhaut optimal vorzubereiten. Nach einer Transplantation hilft sie, die transplantierten Haare zu stärken und das Wachstum zu fördern.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie sieht die Nachsorge nach einer Haarausfalltherapie aus?",
+        "answer": "Die Nachsorge ist ein wichtiger Bestandteil der Haarausfalltherapie. Je nach Behandlungsmethode umfasst sie regelmäßige Kontrollen in unserer Klinik, die konsequente Anwendung verschriebener Medikamente, eine angepasste Haarpflege mit speziellen Produkten und gegebenenfalls Erhaltungsbehandlungen. Wir stellen Ihnen einen detaillierten Nachsorgeplan zur Verfügung und begleiten Sie während des gesamten Prozesses.",
+        "category": "recovery"
+      },
+      {
+        "question": "Kann ich direkt nach einer PRP-Behandlung wieder normal arbeiten?",
+        "answer": "Ja, nach einer PRP-Behandlung können Sie in der Regel sofort wieder Ihren normalen Aktivitäten nachgehen. Es kann zu leichten Rötungen oder Schwellungen an den Injektionsstellen kommen, die jedoch innerhalb weniger Stunden abklingen. Wir empfehlen, am Tag der Behandlung auf intensive sportliche Aktivitäten und Saunabesuche zu verzichten und die Kopfhaut nicht zu stark zu beanspruchen.",
+        "category": "recovery"
+      },
+      {
+        "question": "Gibt es Einschränkungen während der Therapie?",
+        "answer": "Die Einschränkungen während einer Haarausfalltherapie sind minimal. Bei medikamentösen Therapien sollten Sie die Anwendungshinweise genau befolgen. Nach PRP-Behandlungen sollten Sie für 24 Stunden auf intensive sportliche Aktivitäten verzichten und die Kopfhaut schonen. Generell empfehlen wir, während der Therapie auf aggressive Haarpflegeprodukte zu verzichten und die Kopfhaut nicht übermäßig zu beanspruchen.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wie lange dauert es, bis ich Ergebnisse sehe?",
+        "answer": "Die ersten Ergebnisse sind in der Regel nach 3-4 Monaten sichtbar. Der volle Effekt der Therapie zeigt sich nach etwa 6-12 Monaten regelmäßiger Behandlung. Die genaue Zeitspanne hängt von der gewählten Therapiemethode und Ihrem individuellen Ansprechen auf die Behandlung ab.",
+        "category": "results"
+      },
+      {
+        "question": "Sind die Ergebnisse einer Haarausfalltherapie dauerhaft?",
+        "answer": "Die Ergebnisse können dauerhaft sein, wenn die Therapie konsequent fortgeführt wird. Bei hormonell bedingtem Haarausfall ist oft eine Erhaltungstherapie notwendig, um die Ergebnisse langfristig zu sichern. Wir beraten Sie ausführlich über die notwendigen Maßnahmen zur Erhaltung Ihrer Ergebnisse.",
+        "category": "results"
       },
       {
         "question": "Wie realistisch sind die Ergebnisse?",
-        "answer": "Die Ergebnisse einer Haarausfalltherapie sind in der Regel sehr natürlich, da sie das Wachstum Ihrer eigenen Haare fördern. Die Wirksamkeit hängt von verschiedenen Faktoren ab, wie der Ursache des Haarausfalls, dem Zeitpunkt des Behandlungsbeginns und Ihrer individuellen Reaktion auf die Therapie. In einem persönlichen Beratungsgespräch können wir Ihnen eine realistische Einschätzung der zu erwartenden Ergebnisse geben."
+        "answer": "Die Ergebnisse einer Haarausfalltherapie sind in der Regel sehr natürlich, da sie das Wachstum Ihrer eigenen Haare fördern. Die Wirksamkeit hängt von verschiedenen Faktoren ab, wie der Ursache des Haarausfalls, dem Zeitpunkt des Behandlungsbeginns und Ihrer individuellen Reaktion auf die Therapie. In einem persönlichen Beratungsgespräch können wir Ihnen eine realistische Einschätzung der zu erwartenden Ergebnisse geben.",
+        "category": "results"
+      },
+      {
+        "question": "Was kostet eine Haarausfalltherapie?",
+        "answer": "Die Kosten einer Haarausfalltherapie hängen von verschiedenen Faktoren ab, insbesondere von der gewählten Methode und der Dauer der Behandlung. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot.",
+        "category": "costs"
+      },
+      {
+        "question": "Werden die Kosten von der Krankenkasse übernommen?",
+        "answer": "In der Regel werden die Kosten für Haarausfalltherapien nicht von den gesetzlichen Krankenkassen übernommen, da es sich meist um ästhetische Behandlungen handelt. Bei bestimmten medizinischen Indikationen, wie Haarausfall nach Chemotherapie oder bei Autoimmunerkrankungen, kann eine teilweise Kostenübernahme möglich sein. Private Krankenversicherungen haben oft andere Regelungen. Wir beraten Sie gerne zu den Möglichkeiten der Kostenübernahme und bieten verschiedene Finanzierungsoptionen an.",
+        "category": "costs"
       }
     ]
   }
