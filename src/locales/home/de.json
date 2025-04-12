@@ -318,92 +318,92 @@
   },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Antworten auf Ihre wichtigsten Fragen - Hier finden Sie detaillierte Informationen zu unseren Behandlungen für Haartransplantation, Augenbrauen, Bart und Haarausfalltherapie",
+    "subtitle": "Antworten auf Ihre wichtigsten Fragen - Hier finden Sie Informationen zu unseren Behandlungen für Haartransplantation, Augenbrauen, Bart und Haarausfalltherapie",
     "faqs": [
       {
-        "question": "Welche Methode ist für meine Haartransplantation am besten geeignet?",
-        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln. Wir bieten sowohl die Saphir-FUE-Technik als auch die DHI-Technik an, die jeweils spezifische Vorteile bieten.",
+        "question": "Wie läuft eine Behandlung bei Dion Hair Clinic ab?",
+        "answer": "Jede Behandlung beginnt mit einer ausführlichen Analyse und Beratung. Danach erstellen wir einen individuellen Behandlungsplan. Bei Transplantationen folgt ein vierstufiger Prozess: Planung, Entnahme der Haarfollikel, präzise Einpflanzung und Nachsorge. Unsere Dion App unterstützt Sie während des gesamten Prozesses mit personalisierten Anleitungen und Erinnerungen.",
+        "category": "general"
+      },
+      {
+        "question": "Wie lange dauert die Erholungsphase?",
+        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Rötungen und Schwellungen klingen in der Regel innerhalb von 5-10 Tagen ab. Die vollständige Heilung dauert etwa 10-14 Tage, wobei die Heilungszeit bei Bart- und Augenbrauentransplantationen tendenziell kürzer ist als bei Kopfhaartransplantationen.",
+        "category": "general"
+      },
+      {
+        "question": "Wann sehe ich die ersten Ergebnisse?",
+        "answer": "Bei allen Behandlungen beginnen die ersten neuen Haare nach etwa 3-4 Monaten zu wachsen. Die endgültigen Ergebnisse sind bei Haartransplantationen nach 12-18 Monaten, bei Augenbrauentransplantationen nach 6-9 Monaten und bei Barthaartransplantationen nach etwa 12 Monaten sichtbar.",
+        "category": "general"
+      },
+      {
+        "question": "Wie viel kosten die Behandlungen?",
+        "answer": "Die Kosten variieren je nach Behandlungsart und Umfang. Bei Transplantationen basiert der Preis hauptsächlich auf der Anzahl der benötigten Grafts: Haartransplantationen (1.500-5.000+ Grafts), Barthaartransplantationen (500-3.000 Grafts) und Augenbrauentransplantationen (100-400 Grafts). Für eine genaue Kosteneinschätzung empfehlen wir eine kostenlose Beratung.",
+        "category": "general"
+      },
+      {
+        "question": "Ist die Behandlung schmerzhaft?",
+        "answer": "Alle unsere Behandlungen werden so schmerzarm wie möglich gestaltet. Transplantationen werden unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Mit unserer optionalen DPI-Technologie ist sogar die Betäubungsphase nahezu schmerzfrei. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind.",
+        "category": "general"
+      },
+      {
+        "question": "Welche Haartransplantationstechniken bieten Sie an?",
+        "answer": "Wir bieten modernste Techniken wie Saphir-FUE und DHI an. Bei der Saphir-FUE-Technik werden spezielle Saphirklingen verwendet, die präzisere Schnitte ermöglichen. Die DHI-Technik ermöglicht die direkte Implantation ohne vorherige Kanalerstellung. In einer persönlichen Beratung empfehlen wir die für Sie optimale Methode.",
         "category": "hair"
       },
       {
-        "question": "Wie lange dauert eine Haartransplantation?",
-        "answer": "Die Dauer einer Haartransplantation hängt von der Anzahl der zu transplantierenden Grafts ab. In der Regel dauert der Eingriff zwischen 4 und 8 Stunden. Bei umfangreicheren Transplantationen kann die Behandlung auf zwei Tage aufgeteilt werden, um optimale Ergebnisse zu erzielen.",
+        "question": "Für welche Haarausfallmuster ist eine Haartransplantation geeignet?",
+        "answer": "Eine Haartransplantation ist für verschiedene Haarausfallmuster geeignet, von leichtem Rückgang des Haaransatzes bis hin zu ausgeprägtem Haarausfall. Wir behandeln erfolgreich Geheimratsecken, Tonsuren und diffusen Haarausfall bei Männern und Frauen. Die Anzahl der benötigten Grafts und Sitzungen hängt vom Ausmaß des Haarausfalls ab.",
         "category": "hair"
       },
       {
-        "question": "Sind die Ergebnisse einer Haartransplantation dauerhaft?",
-        "answer": "Ja, die transplantierten Haarfollikel stammen aus Bereichen, die genetisch nicht für Haarausfall anfällig sind. Diese Haare behalten ihre Eigenschaften bei und fallen in der Regel nicht aus. Sie wachsen ein Leben lang wie normales Haar und können geschnitten, gefärbt und gestylt werden.",
+        "question": "Wie natürlich sieht das Ergebnis einer Haartransplantation aus?",
+        "answer": "Moderne Haartransplantationstechniken ermöglichen sehr natürlich aussehende Ergebnisse. Wir achten besonders auf die korrekte Wuchsrichtung und den Winkel der Haarfollikel. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können geschnitten, gefärbt und gestylt werden.",
         "category": "hair"
       },
       {
-        "question": "Ab welchem Alter kann ich eine Haartransplantation durchführen lassen?",
-        "answer": "Grundsätzlich empfehlen wir, eine Haartransplantation erst ab einem Alter von 25 Jahren durchzuführen, da sich das Haarausfallmuster bis dahin noch verändern kann. In einigen Fällen kann jedoch auch bei jüngeren Patienten eine Behandlung sinnvoll sein. Entscheidend ist, dass der Haarausfall stabil ist und ein klares Muster erkennbar ist.",
-        "category": "hair"
-      },
-      {
-        "question": "Wie unterscheidet sich eine Barthaartransplantation von einer Haartransplantation?",
-        "answer": "Die grundlegende Technik ist ähnlich, jedoch erfordert eine Barthaartransplantation besondere Sorgfalt bei der Platzierung und dem Winkel der Haarfollikel, um ein natürliches Bartwachstum zu simulieren. Zudem muss die Dichte und Richtung der Barthaare genau an Ihre Gesichtsform und den gewünschten Bartstil angepasst werden. Die Heilungszeit ist in der Regel kürzer als bei einer Kopfhaartransplantation.",
+        "question": "Wie natürlich sieht eine Barthaartransplantation aus?",
+        "answer": "Moderne Barthaartransplantationstechniken ermöglichen sehr natürlich aussehende Ergebnisse. Wir achten besonders auf die korrekte Wuchsrichtung und den Winkel der Haarfollikel. Die transplantierten Haare wachsen wie normale Barthaare und können geschnitten, getrimmt und gestylt werden.",
         "category": "beard"
       },
       {
-        "question": "Kann ich eine Barthaartransplantation bekommen, wenn ich kaum Bartwuchs habe?",
-        "answer": "Ja, eine Barthaartransplantation ist auch für Männer mit wenig oder keinem natürlichen Bartwuchs möglich. Die Haarfollikel werden in diesem Fall aus geeigneten Spenderzonen am Kopf entnommen und in die gewünschten Bereiche des Gesichts transplantiert. Das Ergebnis ist ein natürlich aussehender Bart, der nach Ihren Wünschen gestaltet werden kann.",
+        "question": "Kann ich einen Vollbart bekommen, wenn ich kaum Bartwuchs habe?",
+        "answer": "Ja, eine Barthaartransplantation ist auch für Männer mit wenig oder keinem natürlichen Bartwuchs geeignet. Die Haarfollikel werden aus geeigneten Spenderbereichen am Kopf entnommen und in die gewünschten Bereiche des Gesichts transplantiert. Das Ergebnis ist ein natürlich aussehender Bart, der nach Ihren Wünschen gestaltet werden kann.",
         "category": "beard"
       },
       {
-        "question": "Wie lange dauert die Erholungsphase nach einer Barthaartransplantation?",
-        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Die Rötungen und Schwellungen klingen in der Regel innerhalb von 5-7 Tagen ab. Die vollständige Heilung der behandelten Bereiche dauert etwa 10-14 Tage, was etwas kürzer ist als bei einer Kopfhaartransplantation.",
+        "question": "Welche Bartformen können mit einer Transplantation erreicht werden?",
+        "answer": "Mit einer Barthaartransplantation können nahezu alle gewünschten Bartformen erreicht werden - von einem Vollbart über einen Kinnbart bis hin zu präzisen Konturen. Die Form wird individuell nach Ihren Wünschen und passend zu Ihrer Gesichtsform gestaltet. Wir beraten Sie ausführlich zu den Möglichkeiten und erstellen einen detaillierten Behandlungsplan.",
         "category": "beard"
       },
       {
-        "question": "Wie natürlich sieht eine Augenbrauentransplantation aus?",
-        "answer": "Bei einer fachgerecht durchgeführten Augenbrauentransplantation sind die Ergebnisse sehr natürlich. Unsere Spezialisten achten besonders auf den korrekten Winkel und die Richtung der Haarfollikel, um das natürliche Wachstumsmuster der Augenbrauen nachzuahmen. Die transplantierten Haare können nach dem Eingriff wie normale Augenbrauen getrimmt und gestylt werden.",
+        "question": "Muss ich meine transplantierten Augenbrauen regelmäßig trimmen?",
+        "answer": "Ja, da die transplantierten Haare vom Kopf stammen, wachsen sie schneller als natürliche Augenbrauenhaare und müssen regelmäßig getrimmt werden. Wir zeigen Ihnen, wie Sie Ihre neuen Augenbrauen pflegen und in Form halten können.",
         "category": "eyebrows"
       },
       {
-        "question": "Wie lange halten die Ergebnisse einer Augenbrauentransplantation?",
-        "answer": "Die Ergebnisse einer Augenbrauentransplantation sind dauerhaft. Die transplantierten Haarfollikel behalten ihre ursprünglichen Eigenschaften bei, was bedeutet, dass sie wie Kopfhaare wachsen werden. Daher müssen sie regelmäßig getrimmt werden, um die gewünschte Länge und Form zu erhalten. Mit der richtigen Pflege können Sie ein Leben lang von vollen, natürlich aussehenden Augenbrauen profitieren.",
+        "question": "Wie werden die Augenbrauen bei einer Transplantation gestaltet?",
+        "answer": "Bei einer Augenbrauentransplantation gestalten wir die Form individuell passend zu Ihrem Gesicht. Wir berücksichtigen dabei Ihre Gesichtsform, Ihren persönlichen Stil und natürliche Augenbrauenformen. Besondere Aufmerksamkeit wird auf den korrekten Winkel und die Richtung der Haarfollikel gelegt, um ein natürliches Wachstumsmuster zu erzielen.",
         "category": "eyebrows"
       },
       {
-        "question": "Muss ich meine Augenbrauen nach der Transplantation regelmäßig trimmen?",
-        "answer": "Ja, da die transplantierten Haare in der Regel vom Kopf stammen, wachsen sie schneller als natürliche Augenbrauenhaare und müssen regelmäßig getrimmt werden. Wir zeigen Ihnen, wie Sie Ihre neuen Augenbrauen pflegen und in Form halten können.",
+        "question": "Können Augenbrauen nach Microblading wiederhergestellt werden?",
+        "answer": "Ja, auch nach Microblading können Augenbrauen durch eine Transplantation wiederhergestellt werden. Wir berücksichtigen dabei den Zustand der Haut und eventuell vorhandene Pigmentierungen. Die transplantierten Haare wachsen natürlich und bieten im Gegensatz zum Microblading eine dauerhafte Lösung ohne regelmäßige Auffrischungen.",
         "category": "eyebrows"
       },
       {
-        "question": "Ist eine Transplantation schmerzhaft?",
-        "answer": "Nein, alle unsere Transplantationen werden unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind. Die meisten Patienten berichten von minimalen Unannehmlichkeiten.",
-        "category": "general"
+        "question": "Welche nicht-chirurgischen Therapien bieten Sie gegen Haarausfall an?",
+        "answer": "Wir bieten verschiedene nicht-chirurgische Therapien an: PRP-Behandlungen (Eigenbluttherapie), medikamentöse Therapien und Nährstoffbehandlungen. Diese Therapien stimulieren das Wachstum vorhandener Haare und verhindern weiteren Haarausfall. Oft kombinieren wir verschiedene Methoden für optimale Ergebnisse.",
+        "category": "therapy"
       },
       {
-        "question": "Wie lange dauert es, bis die Ergebnisse sichtbar werden?",
-        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben. Dies gilt für alle unsere Transplantationsarten (Haare, Bart und Augenbrauen).",
-        "category": "general"
+        "question": "Sind die Ergebnisse einer Haarausfalltherapie dauerhaft?",
+        "answer": "Die Ergebnisse können dauerhaft sein, wenn die Therapie konsequent fortgeführt wird. Bei hormonell bedingtem Haarausfall ist oft eine Erhaltungstherapie notwendig, um die Ergebnisse langfristig zu sichern. Wir beraten Sie ausführlich über die notwendigen Maßnahmen zum Erhalt Ihrer Ergebnisse.",
+        "category": "therapy"
       },
       {
-        "question": "Gibt es Risiken oder Nebenwirkungen bei den Behandlungen?",
-        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei unseren Transplantationen gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge.",
-        "category": "general"
-      },
-      {
-        "question": "Wie realistisch sind die Ergebnisse Ihrer Transplantationen?",
-        "answer": "Unsere modernen Transplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können normal geschnitten, gefärbt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung unseres Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Haarwuchsmusters.",
-        "category": "general"
-      },
-      {
-        "question": "Wie viel kostet eine Transplantation?",
-        "answer": "Die Kosten variieren je nach Umfang der Transplantation, der behandelten Körperregion und der gewählten Technik. Bei Dion Hair Clinic bieten wir transparente Preisgestaltung basierend auf der Anzahl der benötigten Grafts. Für eine genaue Kosteneinschätzung empfehlen wir eine kostenlose Beratung, bei der wir Ihren individuellen Fall analysieren können.",
-        "category": "costs"
-      },
-      {
-        "question": "Wie sieht die Nachsorge nach einer Transplantation aus?",
-        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Reinigungsprodukte, Schlafpositionen und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden.",
-        "category": "aftercare"
-      },
-      {
-        "question": "Welche zusätzlichen Behandlungen bieten Sie zur Unterstützung des Haarwachstums an?",
-        "answer": "Neben Transplantationen bieten wir ergänzende Behandlungen wie PRP (Platelet-Rich Plasma) Therapie, Mesotherapie und medikamentöse Behandlungen an. Diese können das Haarwachstum stimulieren, den bestehenden Haarausfall verlangsamen und die Qualität der vorhandenen Haare verbessern. In unserem ganzheitlichen Konzept kombinieren wir diese Behandlungen oft mit Transplantationen für optimale Ergebnisse.",
-        "category": "aftercare"
+        "question": "Für wen eignet sich eine Haarausfalltherapie besonders?",
+        "answer": "Eine Haarausfalltherapie eignet sich besonders für Personen mit beginnendem oder diffusem Haarausfall, bei denen noch ausreichend Haarfollikel vorhanden sind. Sie ist ideal für Patienten, die eine nicht-chirurgische Lösung suchen oder ihre Haartransplantation optimal unterstützen möchten. Auch für jüngere Patienten, bei denen eine Transplantation noch nicht empfohlen wird, ist sie eine gute Option.",
+        "category": "therapy"
       }
     ]
   },

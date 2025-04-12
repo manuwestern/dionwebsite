@@ -44,7 +44,7 @@ const AppSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left side: App mockup */}
           <div className="lg:w-1/2 relative">
-            <div className="max-w-xs mx-auto relative -mt-20">
+            <div className="max-w-xs mx-auto relative -mt-8">
               <div className="relative">
                 <img 
                   src="/images/dionapp.webp" 
@@ -52,10 +52,14 @@ const AppSection: React.FC = () => {
                   className="w-full h-auto"
                   loading="lazy"
                   decoding="async"
-                  fetchPriority="high"
+                  width="320"
+                  height="640"
                 />
                 
-               
+                {/* Badge "ab Mai 2025" */}
+                <div className="absolute top-3 right-3 bg-[#7BA7C2] text-white px-3 py-1 rounded-full shadow-md transform rotate-12 text-sm font-medium">
+                  ab Mai 2025
+                </div>
               </div>
               
               {/* Decorative elements */}

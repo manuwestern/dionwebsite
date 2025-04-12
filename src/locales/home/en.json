@@ -318,87 +318,92 @@
   },
   "faqSection": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Answers to your most important questions - Find detailed information about our treatments for hair transplantation, eyebrows, beard, and hair loss therapy",
+    "subtitle": "Answers to your most important questions - Find information about our treatments for hair transplantation, eyebrows, beard, and hair loss therapy",
     "faqs": [
       {
-        "question": "Which method is best suited for my hair transplantation?",
-        "answer": "The best method depends on various factors, such as the extent of hair loss, the quality of donor hair, and your personal preferences. In a personal consultation, we can determine the optimal method for you. We offer both the Sapphire-FUE technique and the DHI technique, each with specific advantages.",
-        "category": "hair"
-      },
-      {
-        "question": "How long does a hair transplant take?",
-        "answer": "The duration of a hair transplant depends on the number of grafts to be transplanted. Typically, the procedure takes between 4 and 8 hours. For more extensive transplants, the treatment may be divided over two days to achieve optimal results.",
-        "category": "hair"
-      },
-      {
-        "question": "Is a hair transplant painful?",
-        "answer": "No, hair transplantation is performed under local anesthesia, so you won't feel any pain during the procedure. After the procedure, mild discomfort may occur, but this can be well controlled with pain medication. Most patients report minimal discomfort.",
+        "question": "How does a treatment at Dion Hair Clinic proceed?",
+        "answer": "Each treatment begins with a detailed analysis and consultation. After that, we create an individual treatment plan. For transplantations, a four-stage process follows: planning, extraction of hair follicles, precise implantation, and aftercare. Our Dion App supports you throughout the entire process with personalized instructions and reminders.",
         "category": "general"
       },
       {
-        "question": "How long does it take to see results?",
-        "answer": "The first new hairs begin to grow after about 3-4 months. The final result is visible after 12-18 months, when the transplanted hair has fully grown and reached its natural density. This applies to all our transplantation types (hair, beard, and eyebrows).",
+        "question": "How long is the recovery period?",
+        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 5-10 days. Complete healing takes about 10-14 days, with the healing time for beard and eyebrow transplantations tending to be shorter than for scalp hair transplantations.",
         "category": "general"
       },
       {
-        "question": "Are the results of a hair transplant permanent?",
-        "answer": "Yes, the transplanted hair follicles come from areas that are not genetically susceptible to hair loss. These hairs retain their properties and typically do not fall out. They grow like normal hair for a lifetime and can be cut, colored, and styled.",
+        "question": "When will I see the first results?",
+        "answer": "For all treatments, the first new hairs begin to grow after about 3-4 months. The final results are visible after 12-18 months for hair transplantations, after 6-9 months for eyebrow transplantations, and after about 12 months for beard transplantations.",
+        "category": "general"
+      },
+      {
+        "question": "How much do the treatments cost?",
+        "answer": "Costs vary depending on the type of treatment and extent. For transplantations, the price is mainly based on the number of grafts needed: hair transplantations (1,500-5,000+ grafts), beard transplantations (500-3,000 grafts), and eyebrow transplantations (100-400 grafts). For an accurate cost estimate, we recommend a free consultation.",
+        "category": "general"
+      },
+      {
+        "question": "Is the treatment painful?",
+        "answer": "All our treatments are designed to be as pain-free as possible. Transplantations are performed under local anesthesia, so you won't feel any pain during the procedure. With our optional DPI technology, even the anesthesia phase is almost pain-free. After the procedure, mild discomfort may occur, but this can be well controlled with pain medication.",
+        "category": "general"
+      },
+      {
+        "question": "What hair transplantation techniques do you offer?",
+        "answer": "We offer state-of-the-art techniques such as Sapphire-FUE and DHI. The Sapphire-FUE technique uses special sapphire blades that enable more precise incisions. The DHI technique allows direct implantation without prior channel creation. In a personal consultation, we recommend the optimal method for you.",
         "category": "hair"
       },
       {
-        "question": "How much does a hair transplant cost?",
-        "answer": "Costs vary depending on the extent of the transplant and the technique chosen. At Dion Hair Clinic, we offer transparent pricing based on the number of grafts needed. For an accurate cost estimate, we recommend a free consultation where we can analyze your individual case.",
-        "category": "costs"
+        "question": "For which hair loss patterns is a hair transplantation suitable?",
+        "answer": "A hair transplantation is suitable for various hair loss patterns, from slight recession of the hairline to extensive hair loss. We successfully treat receding hairlines, vertex thinning, and diffuse hair loss in men and women. The number of grafts needed and sessions depends on the extent of hair loss.",
+        "category": "hair"
       },
       {
-        "question": "How does a beard transplant differ from a hair transplant?",
-        "answer": "The basic technique is similar, but a beard transplant requires special care in the placement and angle of the hair follicles to simulate natural beard growth. Additionally, the density and direction of the beard hairs must be precisely adapted to your facial shape and desired beard style. The healing time is usually shorter than for a scalp hair transplant.",
+        "question": "How natural does the result of a hair transplantation look?",
+        "answer": "Modern hair transplantation techniques enable very natural-looking results. We pay special attention to the correct growth direction and angle of the hair follicles. The transplanted hair grows like your own hair and can be cut, colored, and styled.",
+        "category": "hair"
+      },
+      {
+        "question": "How natural does a beard transplantation look?",
+        "answer": "Modern beard transplantation techniques enable very natural-looking results. We pay special attention to the correct growth direction and angle of the hair follicles. The transplanted hairs grow like normal beard hairs and can be cut, trimmed, and styled.",
         "category": "beard"
       },
       {
-        "question": "How natural does an eyebrow transplant look?",
-        "answer": "When properly performed, the results of an eyebrow transplant are very natural. Our specialists pay particular attention to the correct angle and direction of the hair follicles to mimic the natural growth pattern of eyebrows. The transplanted hairs can be trimmed and styled like normal eyebrows after the procedure.",
-        "category": "eyebrows"
-      },
-      {
-        "question": "How long is the recovery period after a transplant?",
-        "answer": "Most patients can return to their normal activities after 1-2 days. Redness and swelling usually subside within 7-10 days. Complete healing of the scalp takes about 2 weeks. For beard and eyebrow transplants, the healing time may be slightly shorter.",
-        "category": "aftercare"
-      },
-      {
-        "question": "Are there risks or side effects with the treatments?",
-        "answer": "As with any medical procedure, there are certain risks with our transplants. However, these are minimal when properly performed. Possible side effects include temporary swelling, redness, slight bruising, or, in rare cases, infections. Our experienced team minimizes these risks through the highest hygiene standards and careful aftercare.",
-        "category": "general"
-      },
-      {
-        "question": "What does aftercare look like following a transplant?",
-        "answer": "Proper aftercare is crucial for the success of the treatment. In the first days after the procedure, we provide you with detailed instructions for caring for the treated areas. This includes special shampoos, sleeping positions, and behavioral rules. Regular check-up appointments at our clinic ensure that the healing process proceeds optimally and your questions are answered at any time.",
-        "category": "aftercare"
-      },
-      {
-        "question": "Can I get a beard transplant if I have little beard growth?",
-        "answer": "Yes, a beard transplant is also possible for men with little or no natural beard growth. In this case, the hair follicles are taken from suitable donor areas on the head and transplanted into the desired areas of the face. The result is a natural-looking beard that can be designed according to your wishes.",
+        "question": "Can I get a full beard if I have little beard growth?",
+        "answer": "Yes, a beard transplantation is also suitable for men with little or no natural beard growth. The hair follicles are taken from suitable donor areas on the head and transplanted into the desired areas of the face. The result is a natural-looking beard that can be designed according to your wishes.",
         "category": "beard"
       },
       {
-        "question": "How long do the results of an eyebrow transplant last?",
-        "answer": "The results of an eyebrow transplant are permanent. The transplanted hair follicles retain their original properties, which means they will grow like head hair. Therefore, they need to be trimmed regularly to maintain the desired length and shape. With proper care, you can benefit from full, natural-looking eyebrows for a lifetime.",
+        "question": "What beard styles can be achieved with a transplantation?",
+        "answer": "With a beard transplantation, almost any desired beard style can be achieved - from a full beard to a goatee to precise contours. The style is individually designed according to your wishes and to match your facial shape. We advise you in detail about the possibilities and create a detailed treatment plan.",
+        "category": "beard"
+      },
+      {
+        "question": "Do I need to trim my transplanted eyebrows regularly?",
+        "answer": "Yes, since the transplanted hairs come from the head, they grow faster than natural eyebrow hairs and need to be trimmed regularly. We will show you how to care for and maintain the shape of your new eyebrows.",
         "category": "eyebrows"
       },
       {
-        "question": "What additional treatments do you offer to support hair growth?",
-        "answer": "In addition to transplants, we offer complementary treatments such as PRP (Platelet-Rich Plasma) therapy, mesotherapy, and medicinal treatments. These can stimulate hair growth, slow down existing hair loss, and improve the quality of existing hair. In our holistic concept, we often combine these treatments with transplants for optimal results.",
-        "category": "general"
+        "question": "How are the eyebrows designed during a transplantation?",
+        "answer": "During an eyebrow transplantation, we design the shape individually to match your face. We consider your facial shape, personal style, and natural eyebrow shapes. Special attention is paid to the correct angle and direction of the hair follicles to achieve a natural growth pattern.",
+        "category": "eyebrows"
       },
       {
-        "question": "From what age can I have a hair transplant?",
-        "answer": "In general, we recommend having a hair transplant from the age of 25, as the hair loss pattern can still change until then. In some cases, however, treatment may also be useful for younger patients. The crucial factor is that the hair loss is stable and a clear pattern is recognizable.",
-        "category": "hair"
+        "question": "Can eyebrows be restored after microblading?",
+        "answer": "Yes, eyebrows can be restored through transplantation even after microblading. We take into account the condition of the skin and any existing pigmentation. The transplanted hairs grow naturally and, unlike microblading, offer a permanent solution without regular touch-ups.",
+        "category": "eyebrows"
       },
       {
-        "question": "How realistic are the results of your transplants?",
-        "answer": "Our modern transplantation techniques enable very natural-looking results. The transplanted hair grows like your own hair and can be cut, colored, and styled normally. Crucial for a natural result are the experience of our team, the correct placement of the hair follicles, and consideration of your individual facial features and natural hair growth pattern.",
-        "category": "general"
+        "question": "What non-surgical therapies do you offer for hair loss?",
+        "answer": "We offer various non-surgical therapies: PRP treatments (Platelet-Rich Plasma), medicinal therapies, and nutrient treatments. These therapies stimulate the growth of existing hair and prevent further hair loss. We often combine different methods for optimal results.",
+        "category": "therapy"
+      },
+      {
+        "question": "Are the results of a hair loss therapy permanent?",
+        "answer": "The results can be permanent if the therapy is consistently continued. For hormone-related hair loss, maintenance therapy is often necessary to secure the results in the long term. We advise you in detail about the necessary measures to maintain your results.",
+        "category": "therapy"
+      },
+      {
+        "question": "Who is particularly suited for hair loss therapy?",
+        "answer": "Hair loss therapy is particularly suitable for individuals with early or diffuse hair loss where sufficient hair follicles are still present. It is ideal for patients seeking a non-surgical solution or wanting to optimally support their hair transplantation. It is also a good option for younger patients for whom a transplantation is not yet recommended.",
+        "category": "therapy"
       }
     ]
   },

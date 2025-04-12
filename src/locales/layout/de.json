@@ -77,7 +77,7 @@
       }
     },
     "form": {
-      "title": "Kostenlose Beratung",
+      "title": "Kontaktformular",
       "name": {
         "label": "Name",
         "placeholder": "Ihr Name"
@@ -94,7 +94,7 @@
         "label": "Ihre Nachricht",
         "placeholder": "Beschreiben Sie Ihr Anliegen oder stellen Sie Ihre Fragen"
       },
-      "submit": "Beratungstermin vereinbaren",
+      "submit": "Nachricht senden",
       "sending": "Wird gesendet...",
       "success": {
         "title": "Vielen Dank für Ihre Anfrage!",

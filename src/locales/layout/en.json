@@ -77,7 +77,7 @@
       }
     },
     "form": {
-      "title": "Free Consultation",
+      "title": "Contact Form",
       "name": {
         "label": "Name",
         "placeholder": "Your Name"
@@ -94,7 +94,7 @@
         "label": "Your Message",
         "placeholder": "Describe your concern or ask your questions"
       },
-      "submit": "Schedule Consultation",
+      "submit": "Send Message",
       "sending": "Sending...",
       "success": {
         "title": "Thank you for your inquiry!",

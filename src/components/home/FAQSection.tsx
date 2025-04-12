@@ -15,16 +15,11 @@ interface FAQ {
 
 // FAQ categories with icons - ensuring consistent sizing
 const getCategoryIcons = () => ({
+  general: { icon: <Stethoscope strokeWidth={1.5} /> },
   hair: { icon: <User strokeWidth={1.5} /> },
   beard: { icon: <Scissors strokeWidth={1.5} /> },
   eyebrows: { icon: <HelpCircle strokeWidth={1.5} /> },
-  therapy: { icon: <Droplet strokeWidth={1.5} /> },
-  general: { icon: <Stethoscope strokeWidth={1.5} /> },
-  costs: { icon: <DollarSign strokeWidth={1.5} /> },
-  aftercare: { icon: <Clock strokeWidth={1.5} /> },
-  procedure: { icon: <Stethoscope strokeWidth={1.5} /> },
-  recovery: { icon: <Clock strokeWidth={1.5} /> },
-  results: { icon: <HelpCircle strokeWidth={1.5} /> }
+  therapy: { icon: <Droplet strokeWidth={1.5} /> }
 });
 
 const FAQSection: React.FC = () => {
@@ -105,14 +100,19 @@ const FAQSection: React.FC = () => {
     })
   ).slice(0, 3); // Take only the first 3 FAQs
   
-  // Combine all FAQs
-  const faqs: FAQ[] = [
+  // Combine all FAQs and remove duplicates
+  const combinedFaqs: FAQ[] = [
     ...homeFaqs,
     ...hairTransplantationFaqs,
     ...beardTransplantationFaqs,
     ...eyebrowTransplantationFaqs,
     ...hairLossTherapyFaqs
   ];
+  
+  // Remove duplicates based on question text
+  const faqs: FAQ[] = combinedFaqs.filter((faq, index, self) => 
+    index === self.findIndex((f) => f.question === faq.question)
+  );
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -128,6 +128,15 @@ const FAQSection: React.FC = () => {
     
     return matchesSearch && matchesCategory;
   });
+
+  // Define category names for display
+  const categoryNames = {
+    general: t('faq.categories.general', { ns: 'common', defaultValue: 'General' }),
+    hair: t('faq.categories.hair', { ns: 'common', defaultValue: 'Hair Transplantation' }),
+    beard: t('faq.categories.beard', { ns: 'common', defaultValue: 'Beard Transplantation' }),
+    eyebrows: t('faq.categories.eyebrows', { ns: 'common', defaultValue: 'Eyebrow Transplantation' }),
+    therapy: t('faq.categories.therapy', { ns: 'common', defaultValue: 'Hair Loss Therapy' })
+  };
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden" id="faq-section">
