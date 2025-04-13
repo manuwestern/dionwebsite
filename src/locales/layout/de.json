@@ -94,6 +94,8 @@
         "label": "Ihre Nachricht",
         "placeholder": "Beschreiben Sie Ihr Anliegen oder stellen Sie Ihre Fragen"
       },
+      "consent": "Ich stimme zu, dass die Dion Hair Clinic meine persönlichen Daten gemäß ihrer Datenschutzrichtlinie verarbeitet.",
+      "newsletter": "Ich möchte den Newsletter abonnieren und über Neuigkeiten, Angebote und Behandlungsmethoden informiert werden.",
       "submit": "Nachricht senden",
       "sending": "Wird gesendet...",
       "success": {

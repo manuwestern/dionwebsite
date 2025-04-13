@@ -77,6 +77,7 @@
     "messageLabel": "Your Message",
     "messagePlaceholder": "Please provide details about your inquiry...",
     "consentText": "I consent to Dion Hair Clinic processing my personal data in accordance with their privacy policy.",
+    "newsletterText": "I would like to subscribe to the newsletter and receive updates about news, offers, and treatment methods.",
     "submitButton": "Send Message",
     "successMessage": "Thank you for your message! We'll get back to you shortly."
   },

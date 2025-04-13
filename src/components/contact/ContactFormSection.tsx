@@ -33,7 +33,8 @@ const ContactFormSection: React.FC = () => {
     phone: '',
     subject: '',
     message: '',
-    consent: false
+    consent: false,
+    newsletter: true
   });
   
   // reCAPTCHA state
@@ -161,6 +162,7 @@ const ContactFormSection: React.FC = () => {
           subject: formData.subject,
           message: formData.message,
           formType: 'Kontaktformular',
+          newsletter: formData.newsletter,
           recaptchaToken: recaptchaToken,
           timestamp: new Date().toISOString(),
           source: window.location.href
@@ -183,7 +185,8 @@ const ContactFormSection: React.FC = () => {
           phone: '',
           subject: '',
           message: '',
-          consent: false
+          consent: false,
+          newsletter: true
         });
       }, 5000);
     } catch (error) {
@@ -269,8 +272,9 @@ const ContactFormSection: React.FC = () => {
                 </div>
               )}
               
-              {/* Consent Checkbox */}
-              <div className="space-y-2">
+              {/* Consent and Newsletter Checkboxes */}
+              <div className="space-y-4">
+                {/* Privacy Consent Checkbox */}
                 <div className="flex items-start">
                   <div className="flex items-center h-5">
                     <input
@@ -281,6 +285,8 @@ const ContactFormSection: React.FC = () => {
                       checked={formData.consent}
                       onChange={handleCheckboxChange}
                       className="w-4 h-4 text-[#7BA7C2] border-gray-300 rounded focus:ring-[#7BA7C2]/20"
+                      aria-label={t('formSection.consentText')}
+                      title={t('formSection.consentText')}
                     />
                   </div>
                   <label 
@@ -288,6 +294,28 @@ const ContactFormSection: React.FC = () => {
                     className={`ml-3 ${fontSize.sm} ${textColor.medium}`}
                   >
                     {t('formSection.consentText')}
+                  </label>
+                </div>
+                
+                {/* Newsletter Checkbox */}
+                <div className="flex items-start">
+                  <div className="flex items-center h-5">
+                    <input
+                      id="newsletter"
+                      name="newsletter"
+                      type="checkbox"
+                      checked={formData.newsletter}
+                      onChange={handleCheckboxChange}
+                      className="w-4 h-4 text-[#7BA7C2] border-gray-300 rounded focus:ring-[#7BA7C2]/20"
+                      aria-label={t('formSection.newsletterText')}
+                      title={t('formSection.newsletterText')}
+                    />
+                  </div>
+                  <label 
+                    htmlFor="newsletter" 
+                    className={`ml-3 ${fontSize.sm} ${textColor.medium}`}
+                  >
+                    {t('formSection.newsletterText')}
                   </label>
                 </div>
               </div>

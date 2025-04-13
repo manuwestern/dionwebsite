@@ -1,0 +1,29 @@
+{
+  "popup": {
+    "title": "Stay Informed",
+    "subtitle": "Subscribe to our Newsletter",
+    "description": "Receive exclusive information about:",
+    "benefits": {
+      "promotions": "Current promotions and offers",
+      "hairCare": "Latest hair care tips",
+      "transplantation": "Innovations in hair transplantation",
+      "treatments": "New treatment methods"
+    },
+    "form": {
+      "email": "Your email address",
+      "placeholder": "example@email.com",
+      "privacy": "I accept the <a>privacy policy</a>",
+      "subscribe": "Subscribe",
+      "close": "Close"
+    },
+    "success": {
+      "title": "Thank you!",
+      "message": "You have successfully subscribed to our newsletter."
+    },
+    "error": {
+      "title": "An error occurred",
+      "message": "Please try again later or contact us directly.",
+      "invalidEmail": "Please enter a valid email address."
+    }
+  }
+}

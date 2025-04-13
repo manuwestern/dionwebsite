@@ -11,6 +11,8 @@ const ContactSection: React.FC = () => {
   const [formEmail, setFormEmail] = useState('');
   const [formPhone, setFormPhone] = useState('');
   const [formMessage, setFormMessage] = useState('');
+  const [formConsent, setFormConsent] = useState(false);
+  const [formNewsletter, setFormNewsletter] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -38,6 +40,7 @@ const ContactSection: React.FC = () => {
           phone: formPhone || 'Nicht angegeben',
           message: formMessage,
           formType: 'Footer-Kontaktformular',
+          newsletter: formNewsletter,
           timestamp: new Date().toISOString(),
           source: window.location.href
         }),
@@ -56,6 +59,8 @@ const ContactSection: React.FC = () => {
       setFormEmail('');
       setFormPhone('');
       setFormMessage('');
+      setFormConsent(false);
+      setFormNewsletter(true);
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitError('Es gab ein Problem beim Senden des Formulars. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per Telefon.');
@@ -158,6 +163,54 @@ const ContactSection: React.FC = () => {
                         value={formMessage}
                         onChange={(e) => setFormMessage(e.target.value)}
                       ></textarea>
+                    </div>
+                    
+                    {/* Consent and Newsletter Checkboxes */}
+                    <div className="space-y-4 mb-6">
+                      {/* Privacy Consent Checkbox */}
+                      <div className="flex items-start">
+                        <div className="flex items-center h-5">
+                          <input
+                            id="consent"
+                            name="consent"
+                            type="checkbox"
+                            required
+                            checked={formConsent}
+                            onChange={(e) => setFormConsent(e.target.checked)}
+                            className="w-4 h-4 text-[#7BA7C2] border-gray-300 rounded focus:ring-[#7BA7C2]/20"
+                            aria-label={t('contactSection.form.consent')}
+                            title={t('contactSection.form.consent')}
+                          />
+                        </div>
+                        <label 
+                          htmlFor="consent" 
+                          className={`ml-3 ${fontSize.sm} ${textColor.medium}`}
+                        >
+                          {t('contactSection.form.consent')}
+                        </label>
+                      </div>
+                      
+                      {/* Newsletter Checkbox */}
+                      <div className="flex items-start">
+                        <div className="flex items-center h-5">
+                          <input
+                            id="newsletter"
+                            name="newsletter"
+                            type="checkbox"
+                            checked={formNewsletter}
+                            onChange={(e) => setFormNewsletter(e.target.checked)}
+                            className="w-4 h-4 text-[#7BA7C2] border-gray-300 rounded focus:ring-[#7BA7C2]/20"
+                            aria-label={t('contactSection.form.newsletter')}
+                            title={t('contactSection.form.newsletter')}
+                          />
+                        </div>
+                        <label 
+                          htmlFor="newsletter" 
+                          className={`ml-3 ${fontSize.sm} ${textColor.medium}`}
+                        >
+                          {t('contactSection.form.newsletter')}
+                        </label>
+                      </div>
                     </div>
                     
                     {/* Error Message */}

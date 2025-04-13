@@ -94,6 +94,8 @@
         "label": "Your Message",
         "placeholder": "Describe your concern or ask your questions"
       },
+      "consent": "I consent to Dion Hair Clinic processing my personal data in accordance with their privacy policy.",
+      "newsletter": "I would like to subscribe to the newsletter and receive updates about news, offers, and treatment methods.",
       "submit": "Send Message",
       "sending": "Sending...",
       "success": {

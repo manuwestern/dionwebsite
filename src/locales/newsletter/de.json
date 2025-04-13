@@ -1,0 +1,29 @@
+{
+  "popup": {
+    "title": "Bleiben Sie informiert",
+    "subtitle": "Abonnieren Sie unseren Newsletter",
+    "description": "Erhalten Sie exklusive Informationen über:",
+    "benefits": {
+      "promotions": "Aktuelle Aktionen und Angebote",
+      "hairCare": "Neueste Tipps zur Haarpflege",
+      "transplantation": "Innovationen bei Haartransplantationen",
+      "treatments": "Neue Behandlungsmethoden"
+    },
+    "form": {
+      "email": "Ihre E-Mail-Adresse",
+      "placeholder": "beispiel@email.de",
+      "privacy": "Ich akzeptiere die <a>Datenschutzbestimmungen</a>",
+      "subscribe": "Abonnieren",
+      "close": "Schließen"
+    },
+    "success": {
+      "title": "Vielen Dank!",
+      "message": "Sie haben sich erfolgreich für unseren Newsletter angemeldet."
+    },
+    "error": {
+      "title": "Ein Fehler ist aufgetreten",
+      "message": "Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+    }
+  }
+}
