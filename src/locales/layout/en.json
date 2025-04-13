@@ -15,7 +15,7 @@
     "information": "Knowledge",
     "clinic": "Clinic",
     "contact": "Contact",
-    "priceCalculator": "Price Calculator"
+    "prices": "Prices"
   },
   "footer": {
     "clinicDescription": "Premium specialized clinic for hair restoration with holistic treatment approaches.",
@@ -30,7 +30,7 @@
       "title": "Information",
       "aboutUs": "About Us",
       "results": "Results",
-      "priceCalculator": "Price Calculator",
+      "prices": "Prices",
       "careInstructions": "Care Instructions",
       "career": "Career"
     },

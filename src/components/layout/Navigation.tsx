@@ -148,6 +148,11 @@ const Navigation: React.FC = () => {
               )}
             </div>
             
+            {/* Moved Prices link to be right after Treatments */}
+            <NavLink to="/preise" isActive={isActive('/preise')}>
+              {t('navigation.prices')}
+            </NavLink>
+            
             <NavLink to="/wissenswertes" isActive={isActive('/wissenswertes')}>
               {t('navigation.information')}
             </NavLink>
@@ -156,10 +161,6 @@ const Navigation: React.FC = () => {
             </NavLink>
             <NavLink to="/kontakt" isActive={isActive('/kontakt')}>
               {t('navigation.contact')}
-            </NavLink>
-            
-            <NavLink to="/preise" isActive={isActive('/preise')}>
-              Preise
             </NavLink>
           </div>
         </div>
@@ -226,6 +227,14 @@ const Navigation: React.FC = () => {
                 )}
               </div>
               
+              {/* Moved Prices link to be right after Treatments */}
+              <MobileNavLink 
+                to="/preise" 
+                isActive={isActive('/preise')}
+              >
+                {t('navigation.prices')}
+              </MobileNavLink>
+              
               <MobileNavLink 
                 to="/wissenswertes" 
                 isActive={isActive('/wissenswertes')}
@@ -243,13 +252,6 @@ const Navigation: React.FC = () => {
                 isActive={isActive('/kontakt')}
               >
                 {t('navigation.contact')}
-              </MobileNavLink>
-              
-              <MobileNavLink 
-                to="/preise" 
-                isActive={isActive('/preise')}
-              >
-                Preise
               </MobileNavLink>
             </div>
           </div>

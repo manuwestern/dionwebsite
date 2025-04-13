@@ -15,7 +15,7 @@
     "information": "Wissenswertes",
     "clinic": "Klinik",
     "contact": "Kontakt",
-    "priceCalculator": "Preisrechner"
+    "prices": "Preise"
   },
   "footer": {
     "clinicDescription": "Premium-Spezialklinik für Haarwiederherstellung mit ganzheitlichen Behandlungsansätzen.",
@@ -30,7 +30,7 @@
       "title": "Informationen",
       "aboutUs": "Über uns",
       "results": "Ergebnisse",
-      "priceCalculator": "Preisrechner",
+      "prices": "Preise",
       "careInstructions": "Pflegeanleitung",
       "career": "Karriere"
     },

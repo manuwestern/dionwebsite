@@ -90,7 +90,7 @@ const FooterSection: React.FC = () => {
               <li>
                 <Link to="/preise" className="hover:text-white transition-colors inline-flex items-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
-                  {t('navigation.priceCalculator')}
+                  {t('navigation.prices')}
                 </Link>
               </li>
               <li>
