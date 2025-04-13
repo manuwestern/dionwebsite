@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react';
+import React, { useRef } from 'react';
 import SEO from '../components/seo/SEO';
 import StructuredData from '../components/seo/StructuredData';
 import HeroSection from '../components/clinic/HeroSection';
@@ -50,34 +49,9 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 
 const ClinicPage: React.FC = () => {
   const { t } = useTranslation(['clinic', 'common']);
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  // State for scroll position tracking (only used for scroll-to-top button)
-  const [scrollY, setScrollY] = useState(0);
   
   // Create refs for potential scroll animations
   const pageRef = useRef<HTMLDivElement>(null);
-
-  // Handle scroll events for various effects
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
-      
-      // Show scroll-to-top button after scrolling down 500px
-      setShowScrollTop(currentScrollY > 500);
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Scroll to top function
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
 
   return (
     <div ref={pageRef} className="relative">
@@ -138,21 +112,8 @@ const ClinicPage: React.FC = () => {
         <ContactSection />
       </SectionWrapper>
       
-      {/* Scroll to Top Button */}
-      <button 
-        onClick={scrollToTop}
-        className={`fixed right-6 bottom-6 z-40 w-12 h-12 rounded-full bg-[#7BA7C2] text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-[#6A96B1] hover:scale-110 active:scale-95 ${
-          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
-        }`}
-        aria-label="Zum Seitenanfang scrollen"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
-      
       {/* Subtle page overlay for depth effect */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-30 opacity-30 bg-radial-gradient"
-      ></div>
+      <div className="pointer-events-none fixed inset-0 z-30 opacity-30 bg-radial-gradient"></div>
     </div>
   );
 };

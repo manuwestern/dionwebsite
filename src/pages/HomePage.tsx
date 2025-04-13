@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react';
+import React, { useRef, useEffect } from 'react';
 import SEO from '../components/seo/SEO';
 import HeroSection from '../components/home/HeroSection';
 import BenefitsSection from '../components/home/BenefitsSection';
@@ -20,8 +19,7 @@ interface SectionWrapperProps {
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, className = '' }) => {
   let bgClasses = '';
-  let patternStyle = {};
-  let borderStyle = {};
+  let borderClasses = '';
   
   switch (type) {
     case 'light':
@@ -29,24 +27,15 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
       break;
     case 'medium':
       bgClasses = 'bg-gray-50';
-      borderStyle = {
-        borderTop: '1px solid rgba(229, 231, 235, 0.5)',
-        borderBottom: '1px solid rgba(229, 231, 235, 0.5)'
-      };
+      borderClasses = 'border-t border-b border-gray-200/50';
       break;
     case 'accent':
       bgClasses = 'bg-[#F8FAFC]';
-      borderStyle = {
-        borderTop: '1px solid rgba(123, 167, 194, 0.1)',
-        borderBottom: '1px solid rgba(123, 167, 194, 0.1)'
-      };
+      borderClasses = 'border-t border-b border-[#7BA7C2]/10';
       break;
     case 'pattern':
       bgClasses = 'bg-gray-50';
-      borderStyle = {
-        borderTop: '1px solid rgba(229, 231, 235, 0.7)',
-        borderBottom: '1px solid rgba(229, 231, 235, 0.7)'
-      };
+      borderClasses = 'border-t border-b border-gray-200/70';
       break;
     case 'hero':
       bgClasses = 'bg-gradient-to-b from-[#F8FAFC] to-white';
@@ -56,7 +45,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
   }
 
   return (
-    <div className={`relative ${bgClasses} ${className}`} style={borderStyle}>
+    <div className={`relative ${bgClasses} ${borderClasses} ${className}`}>
       <div className="relative">
         {children}
       </div>
@@ -65,33 +54,18 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 };
 
 const HomePage: React.FC = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  
   // Create refs for potential scroll animations
   const pageRef = useRef<HTMLDivElement>(null);
 
   // Handle scroll events for various effects
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
-      
-      // Show scroll-to-top button after scrolling down 500px
-      setShowScrollTop(currentScrollY > 500);
+      // Keep the event listener for future use if needed
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Scroll to top function
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
 
   return (
     <div ref={pageRef} className="relative">
@@ -131,12 +105,7 @@ const HomePage: React.FC = () => {
       </SectionWrapper>
       
       {/* Subtle page overlay for depth effect */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-30 opacity-30"
-        style={{
-          background: `radial-gradient(circle at ${scrollY * 0.05}% ${scrollY * 0.02}%, rgba(123, 167, 194, 0.1) 0%, rgba(255, 255, 255, 0) 60%)`,
-        }}
-      ></div>
+      <div className="pointer-events-none fixed inset-0 z-30 opacity-30 bg-radial-gradient"></div>
       
       {/* KI Hair Analysis Popup */}
       <HairAnalysisPopup delay={5000} />

@@ -10,8 +10,7 @@ interface SectionWrapperProps {
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, className = '' }) => {
   let bgClasses = '';
-  let patternStyle = {};
-  let borderStyle = {};
+  let borderClasses = '';
   
   switch (type) {
     case 'light':
@@ -19,24 +18,15 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
       break;
     case 'medium':
       bgClasses = 'bg-gray-50';
-      borderStyle = {
-        borderTop: '1px solid rgba(229, 231, 235, 0.5)',
-        borderBottom: '1px solid rgba(229, 231, 235, 0.5)'
-      };
+      borderClasses = 'border-t border-b border-gray-200/50';
       break;
     case 'accent':
       bgClasses = 'bg-[#F8FAFC]';
-      borderStyle = {
-        borderTop: '1px solid rgba(123, 167, 194, 0.1)',
-        borderBottom: '1px solid rgba(123, 167, 194, 0.1)'
-      };
+      borderClasses = 'border-t border-b border-[#7BA7C2]/10';
       break;
     case 'pattern':
       bgClasses = 'bg-gray-50';
-      borderStyle = {
-        borderTop: '1px solid rgba(229, 231, 235, 0.7)',
-        borderBottom: '1px solid rgba(229, 231, 235, 0.7)'
-      };
+      borderClasses = 'border-t border-b border-gray-200/70';
       break;
     case 'hero':
       bgClasses = 'bg-gradient-to-b from-[#F8FAFC] to-white';
@@ -46,7 +36,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
   }
 
   return (
-    <div className={`relative ${bgClasses} ${className}`} style={borderStyle}>
+    <div className={`relative ${bgClasses} ${borderClasses} ${className}`}>
       <div className="relative">
         {children}
       </div>
