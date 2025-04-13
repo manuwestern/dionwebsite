@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Dion Hair Clinic</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    .logo {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #7BA7C2;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    
+    .icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: #7BA7C2;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #7BA7C2;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #6a96b1;
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.875rem;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .icon {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/images/DionHairClinic_Logo.svg" alt="Dion Hair Clinic" class="logo">
+  </header>
+  
+  <main>
+    <div class="icon">📶</div>
+    <h1>Sie sind offline</h1>
+    <p>Es scheint, dass Sie keine Internetverbindung haben. Diese Seite ist derzeit nicht im Offline-Modus verfügbar.</p>
+    <p>Bitte stellen Sie Ihre Internetverbindung wieder her und versuchen Sie es erneut.</p>
+    <a href="/" class="btn">Zur Startseite</a>
+  </main>
+  
+  <footer>
+    &copy; 2025 Dion Hair Clinic. Alle Rechte vorbehalten.
+  </footer>
+  
+  <script>
+    // Überprüfe regelmäßig, ob die Internetverbindung wiederhergestellt wurde
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+    
+    // Versuche, zur vorherigen Seite zurückzukehren, wenn der Benutzer auf die Schaltfläche klickt
+    document.querySelector('.btn').addEventListener('click', (e) => {
+      if (navigator.onLine) {
+        // Wenn online, normal zur Startseite navigieren
+        return;
+      }
+      
+      e.preventDefault();
+      
+      // Versuche, zur vorherigen Seite zurückzukehren
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        // Wenn keine vorherige Seite vorhanden ist, versuche, die Startseite aus dem Cache zu laden
+        window.location.href = '/';
+      }
+    });
+  </script>
+</body>
+</html>
