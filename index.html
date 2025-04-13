@@ -11,6 +11,17 @@
     <link rel="canonical" href="https://dionhairclinic.de/" />
     <title>Dion Hair Clinic | Haartransplantation in Mönchengladbach</title>
     
+    <!-- Google reCAPTCHA v3 -->
+    <script>
+      // Verwenden Sie einen Test-Schlüssel für localhost
+      // In der Produktionsumgebung sollte ein anderer Schlüssel verwendet werden
+      const siteKey = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' // Google Test-Schlüssel für localhost
+        : '6LfJLhUrAAAAAJwA_XBpQHOYHDMjmABDzHY1oZRt'; // Ihr Produktionsschlüssel
+      
+      document.write(`<script src="https://www.google.com/recaptcha/api.js?render=${siteKey}"><\/script>`);
+    </script>
+    
     <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
     {

@@ -49,5 +49,17 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.filter-social-icon': {
+          filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)'
+        },
+        '.bg-radial-gradient': {
+          background: 'radial-gradient(circle at 50% 50%, rgba(123, 167, 194, 0.1) 0%, rgba(255, 255, 255, 0) 60%)'
+        }
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 };

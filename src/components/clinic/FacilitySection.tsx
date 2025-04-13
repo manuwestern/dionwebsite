@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight, tracking } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
 import { ArrowRight } from 'lucide-react';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 

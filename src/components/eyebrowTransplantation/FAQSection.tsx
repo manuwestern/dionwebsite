@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Search, Clock, Stethoscope, HelpCircle, DollarSign, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 import StructuredData from '../../components/seo/StructuredData';
 
@@ -77,12 +77,7 @@ const FAQSection: React.FC = () => {
       
       {/* Subtle background pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.03] z-0" 
-        style={{ 
-          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-          backgroundSize: '200px',
-          backgroundRepeat: 'repeat'
-        }}
+        className="absolute inset-0 opacity-[0.03] z-0 bg-[url('/images/dionhairclinic_bg.svg')] bg-[length:200px_200px] bg-repeat"
       ></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
@@ -126,7 +121,7 @@ const FAQSection: React.FC = () => {
             >
               {t('faq.allQuestions', { ns: 'common' })}
             </button>
-            {Object.entries(getCategoryIcons()).map(([key, { icon }]) => (
+            {Object.entries(getCategoryIcons()).map(([key]) => (
               <button
                 key={key}
                 onClick={() => setActiveCategory(key)}

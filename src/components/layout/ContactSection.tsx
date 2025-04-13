@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MessageCircle, MapPin, ArrowRight, Calendar } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 const ContactSection: React.FC = () => {
@@ -67,12 +67,7 @@ const ContactSection: React.FC = () => {
     <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
       {/* Subtle background pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.02] z-0" 
-        style={{ 
-          backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-          backgroundSize: '200px',
-          backgroundRepeat: 'repeat'
-        }}
+        className="absolute inset-0 opacity-[0.02] z-0 bg-[url('/images/dionhairclinic_bg.svg')] bg-[length:200px_200px] bg-repeat"
       ></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">

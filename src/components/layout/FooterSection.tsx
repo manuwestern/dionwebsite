@@ -30,8 +30,7 @@ const FooterSection: React.FC = () => {
                 <img 
                   src="/images/whatsapp.svg" 
                   alt="WhatsApp" 
-                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity"
-                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity filter-social-icon"
                 />
               </a>
               <a 
@@ -44,8 +43,7 @@ const FooterSection: React.FC = () => {
                 <img 
                   src="/images/instagram.svg" 
                   alt="Instagram" 
-                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity"
-                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity filter-social-icon"
                 />
               </a>
               <a 
@@ -58,8 +56,7 @@ const FooterSection: React.FC = () => {
                 <img 
                   src="/images/tiktok.svg" 
                   alt="TikTok" 
-                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity"
-                  style={{ filter: 'invert(65%) sepia(13%) saturate(1095%) hue-rotate(166deg) brightness(89%) contrast(86%)' }}
+                  className="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity filter-social-icon"
                 />
               </a>
             </div>

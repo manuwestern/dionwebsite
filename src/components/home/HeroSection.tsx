@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  // State for animations only
   const heroRef = useRef<HTMLDivElement>(null);
 
   // Trigger entrance animations immediately
@@ -16,26 +16,6 @@ const HeroSection: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  // Handle scroll for parallax effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Scroll to next section
-  const scrollToNextSection = () => {
-    if (heroRef.current) {
-      const heroHeight = heroRef.current.offsetHeight;
-      window.scrollTo({
-        top: heroHeight,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <div 
@@ -49,12 +29,7 @@ const HeroSection: React.FC = () => {
         
         {/* Subtle pattern overlay */}
         <div 
-          className="absolute inset-0 opacity-[0.03]" 
-          style={{ 
-            backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-            backgroundSize: '200px',
-            backgroundRepeat: 'repeat'
-          }}
+          className="absolute inset-0 opacity-[0.03] bg-[url('/images/dionhairclinic_bg.svg')] bg-[length:200px_200px] bg-repeat"
         ></div>
       </div>
       

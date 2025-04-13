@@ -17,44 +17,30 @@ interface SectionWrapperProps {
 }
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, className = '' }) => {
-  let bgClasses = '';
-  let patternStyle = {};
-  let borderStyle = {};
+  let sectionClasses = '';
   
   switch (type) {
     case 'light':
-      bgClasses = 'bg-white';
+      sectionClasses = 'bg-white';
       break;
     case 'medium':
-      bgClasses = 'bg-gray-50';
-      borderStyle = {
-        borderTop: '1px solid rgba(229, 231, 235, 0.5)',
-        borderBottom: '1px solid rgba(229, 231, 235, 0.5)'
-      };
+      sectionClasses = 'bg-gray-50 border-t border-b border-gray-200/50';
       break;
     case 'accent':
-      bgClasses = 'bg-[#F8FAFC]';
-      borderStyle = {
-        borderTop: '1px solid rgba(123, 167, 194, 0.1)',
-        borderBottom: '1px solid rgba(123, 167, 194, 0.1)'
-      };
+      sectionClasses = 'bg-[#F8FAFC] border-t border-b border-[#7BA7C2]/10';
       break;
     case 'pattern':
-      bgClasses = 'bg-gray-50';
-      borderStyle = {
-        borderTop: '1px solid rgba(229, 231, 235, 0.7)',
-        borderBottom: '1px solid rgba(229, 231, 235, 0.7)'
-      };
+      sectionClasses = 'bg-gray-50 border-t border-b border-gray-200/70';
       break;
     case 'hero':
-      bgClasses = 'bg-gradient-to-b from-[#F8FAFC] to-white';
+      sectionClasses = 'bg-gradient-to-b from-[#F8FAFC] to-white';
       break;
     default:
-      bgClasses = 'bg-white';
+      sectionClasses = 'bg-white';
   }
 
   return (
-    <div className={`relative ${bgClasses} ${className}`} style={borderStyle}>
+    <div className={`relative ${sectionClasses} ${className}`}>
       <div className="relative">
         {children}
       </div>
@@ -68,7 +54,8 @@ const ContactPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isPageVisible, setIsPageVisible] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  // State for scroll position tracking (only used for scroll-to-top button)
+  const [, setScrollY] = useState(0);
   
   // Create refs for potential scroll animations
   const pageRef = useRef<HTMLDivElement>(null);
@@ -195,10 +182,7 @@ const ContactPage: React.FC = () => {
       
       {/* Subtle page overlay for depth effect */}
       <div 
-        className="pointer-events-none fixed inset-0 z-30 opacity-30"
-        style={{
-          background: `radial-gradient(circle at ${scrollY * 0.05}% ${scrollY * 0.02}%, rgba(123, 167, 194, 0.1) 0%, rgba(255, 255, 255, 0) 60%)`,
-        }}
+        className="pointer-events-none fixed inset-0 z-30 opacity-30 bg-radial-gradient"
       ></div>
     </div>
   );

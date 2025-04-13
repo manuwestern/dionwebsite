@@ -1,8 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Calendar, CheckSquare, FileText, Camera, Bell, Smartphone, Shield, ArrowRight } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { Calendar, CheckSquare, FileText, Camera, Bell, Smartphone } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
 
 const AppSection: React.FC = () => {
   const { t } = useTranslation(['home', 'common']);

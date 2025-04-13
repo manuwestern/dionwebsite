@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Send, CheckCircle, Calendar, Clock } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass } from '../../utils/buttons';
+
+// Declare global grecaptcha object
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 interface FormField {
   id: string;
@@ -14,6 +24,7 @@ interface FormField {
   rows?: number;
 }
 
+// Main form component
 const AppointmentFormSection: React.FC = () => {
   const { t } = useTranslation('contact');
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -28,6 +39,9 @@ const AppointmentFormSection: React.FC = () => {
     consent: false
   });
   const [isVisible, setIsVisible] = useState(false);
+
+  // reCAPTCHA state
+  const [recaptchaError, setRecaptchaError] = useState<boolean>(false);
 
   // Trigger entrance animations
   useEffect(() => {
@@ -119,13 +133,54 @@ const AppointmentFormSection: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
+  // Execute reCAPTCHA
+  const executeRecaptcha = async (action: string): Promise<string> => {
+    try {
+      if (typeof window.grecaptcha !== 'undefined' && window.grecaptcha) {
+        return new Promise((resolve) => {
+          try {
+            window.grecaptcha.ready(async () => {
+              try {
+                // Verwenden Sie einen Test-Schlüssel für localhost
+                // In der Produktionsumgebung sollte ein anderer Schlüssel verwendet werden
+                const siteKey = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                  ? '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' // Google Test-Schlüssel für localhost
+                  : '6LfJLhUrAAAAAJwA_XBpQHOYHDMjmABDzHY1oZRt'; // Ihr Produktionsschlüssel
+                
+                const token = await window.grecaptcha.execute(siteKey, { action });
+                resolve(token);
+              } catch (error) {
+                console.error('reCAPTCHA execution error:', error);
+                // Trotz Fehler fortfahren
+                resolve('recaptcha-execution-error');
+              }
+            });
+          } catch (error) {
+            console.error('reCAPTCHA ready error:', error);
+            resolve('recaptcha-ready-error');
+          }
+        });
+      }
+      console.log('reCAPTCHA not available, continuing with form submission');
+      return 'recaptcha-not-available';
+    } catch (error) {
+      console.error('reCAPTCHA general error:', error);
+      return 'recaptcha-error';
+    }
+  };
+
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError(null);
+    
+    // Get reCAPTCHA token
+    const recaptchaToken = await executeRecaptcha('appointment_form');
     
     try {
+      
+      setIsSubmitting(true);
+      setSubmitError(null);
+      
       // Send form data to Pabbly webhook
       const response = await fetch('https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0MzI1MjY5NTUzNTUxM2Ei_pc', {
         method: 'POST',
@@ -141,6 +196,7 @@ const AppointmentFormSection: React.FC = () => {
           preferredTime: formData.preferredTime,
           message: formData.message || 'Keine Nachricht angegeben',
           formType: 'Terminbuchungsformular',
+          recaptchaToken: recaptchaToken,
           timestamp: new Date().toISOString(),
           source: window.location.href
         }),
@@ -170,6 +226,7 @@ const AppointmentFormSection: React.FC = () => {
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitError('Es gab ein Problem beim Senden des Formulars. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per Telefon.');
+      setRecaptchaError(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -337,6 +394,13 @@ const AppointmentFormSection: React.FC = () => {
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#7BA7C2] focus:ring-2 focus:ring-[#7BA7C2]/20 outline-none transition-all duration-300"
                 />
               </div>
+              
+              {/* reCAPTCHA v3 is invisible, so we don't need to display it */}
+              {recaptchaError && (
+                <div className="p-4 bg-red-50 border border-red-100 rounded-lg text-red-600">
+                  Es gab ein Problem mit der Sicherheitsüberprüfung. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.
+                </div>
+              )}
               
               {/* Error Message */}
               {submitError && (

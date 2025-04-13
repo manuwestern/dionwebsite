@@ -15,16 +15,7 @@ const HeroSection: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  // Scroll to next section
-  const scrollToNextSection = () => {
-    if (heroRef.current) {
-      const heroHeight = heroRef.current.offsetHeight;
-      window.scrollTo({
-        top: heroHeight,
-        behavior: 'smooth'
-      });
-    }
-  };
+  // No scroll function needed
 
   return (
     <div 
@@ -38,12 +29,7 @@ const HeroSection: React.FC = () => {
         
         {/* Subtle pattern overlay */}
         <div 
-          className="absolute inset-0 opacity-[0.03]" 
-          style={{ 
-            backgroundImage: 'url("/images/dionhairclinic_bg.svg")',
-            backgroundSize: '200px',
-            backgroundRepeat: 'repeat'
-          }}
+          className="absolute inset-0 opacity-[0.03] bg-[url('/images/dionhairclinic_bg.svg')] bg-[length:200px_200px] bg-repeat"
         ></div>
       </div>
       

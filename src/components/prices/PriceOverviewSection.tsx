@@ -1,6 +1,6 @@
  import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Check, ChevronRight, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
