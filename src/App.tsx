@@ -1,21 +1,25 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
-import HomePage from './pages/HomePage';
-import HairTransplantationPage from './pages/HairTransplantationPage';
-import BeardTransplantationPage from './pages/BeardTransplantationPage';
-import EyebrowTransplantationPage from './pages/EyebrowTransplantationPage';
-import HairLossTherapyPage from './pages/HairLossTherapyPage';
-import ClinicPage from './pages/ClinicPage';
-import ContactPage from './pages/ContactPage';
-import ImprintPage from './pages/ImprintPage';
-import PrivacyPage from './pages/PrivacyPage';
-import TermsPage from './pages/TermsPage';
-import KnowledgePage from './pages/KnowledgePage';
-import PricesPage from './pages/PricesPage';
+import LoadingSpinner from './components/layout/LoadingSpinner';
 import CookieConsent from './components/cookies/CookieConsent';
 import { NewsletterProvider } from './contexts/NewsletterContext';
 import NewsletterPopup from './components/layout/NewsletterPopup';
+
+// Lazy load all pages to improve initial load time
+const HomePage = lazy(() => import('./pages/HomePage'));
+const HairTransplantationPage = lazy(() => import('./pages/HairTransplantationPage'));
+const BeardTransplantationPage = lazy(() => import('./pages/BeardTransplantationPage'));
+const EyebrowTransplantationPage = lazy(() => import('./pages/EyebrowTransplantationPage'));
+const HairLossTherapyPage = lazy(() => import('./pages/HairLossTherapyPage'));
+const ClinicPage = lazy(() => import('./pages/ClinicPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ImprintPage = lazy(() => import('./pages/ImprintPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const KnowledgePage = lazy(() => import('./pages/KnowledgePage'));
+const PricesPage = lazy(() => import('./pages/PricesPage'));
 
 function App() {
   return (
@@ -24,7 +28,8 @@ function App() {
         <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
           <ScrollToTop />
           <Layout>
-            <Routes>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/haartransplantation" element={<HairTransplantationPage />} />
               <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
@@ -37,7 +42,8 @@ function App() {
               <Route path="/agb" element={<TermsPage />} />
               <Route path="/wissenswertes" element={<KnowledgePage />} />
               <Route path="/preise" element={<PricesPage />} />
-            </Routes>
+              </Routes>
+            </Suspense>
           </Layout>
           <NewsletterPopup />
         </NewsletterProvider>

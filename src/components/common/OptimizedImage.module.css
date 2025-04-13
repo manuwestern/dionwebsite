@@ -1,0 +1,51 @@
+/* OptimizedImage component styles */
+
+.container {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s;
+  filter: blur(10px);
+  transform: scale(1.05);
+}
+
+.placeholderHidden {
+  opacity: 0;
+}
+
+.placeholderVisible {
+  opacity: 1;
+}
+
+.picture {
+  transition: opacity 0.5s;
+  will-change: opacity;
+}
+
+.pictureHidden {
+  opacity: 0;
+}
+
+.pictureVisible {
+  opacity: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Standard picture element */
+.standardPicture {
+  display: block;
+}
