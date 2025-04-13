@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+/* Import local fonts instead of Google Fonts for better performance */
+@import url('/fonts/montserrat/fonts.css');
 
 @tailwind base;
 @tailwind components;
