@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ImprintContent from '../components/imprint/ImprintContent';
 
 // Section wrapper component for elegant, subtle styling
@@ -55,44 +55,8 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 };
 
 const ImprintPage: React.FC = () => {
-  // State for page loading animation
-  const [isLoading, setIsLoading] = useState(true);
-  const [isPageVisible, setIsPageVisible] = useState(false);
-  
-  // Handle initial page load animation
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      
-      // Slight delay before showing content for smooth transition
-      setTimeout(() => {
-        setIsPageVisible(true);
-      }, 100);
-    }, 500);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div 
-      className={`relative transition-opacity duration-1000 ease-out ${isPageVisible ? 'opacity-100' : 'opacity-0'}`}
-    >
-      {/* Loading Screen */}
-      {isLoading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
-          <div className="relative">
-            {/* Logo with glow effect */}
-            <div className="absolute -inset-10 bg-gradient-to-r from-[#7BA7C2]/20 to-white rounded-full blur-2xl animate-pulse-slow"></div>
-            <img 
-              src="/images/DionHairClinic_Logo.svg" 
-              alt="Dion Hair Clinic" 
-              className="h-20 relative z-10 animate-pulse" 
-            />
-          </div>
-        </div>
-      )}
-      
+    <div className="relative">
       {/* Main Content */}
       <SectionWrapper type="hero">
         <ImprintContent />

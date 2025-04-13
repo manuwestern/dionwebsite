@@ -65,29 +65,11 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 };
 
 const HomePage: React.FC = () => {
-  // State for page loading animation
-  const [isLoading, setIsLoading] = useState(true);
-  const [isPageVisible, setIsPageVisible] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   
   // Create refs for potential scroll animations
   const pageRef = useRef<HTMLDivElement>(null);
-
-  // Handle initial page load animation
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      
-      // Slight delay before showing content for smooth transition
-      setTimeout(() => {
-        setIsPageVisible(true);
-      }, 100);
-    }, 800);
-    
-    return () => clearTimeout(timer);
-  }, []);
 
   // Handle scroll events for various effects
   useEffect(() => {
@@ -112,26 +94,8 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div 
-      ref={pageRef}
-      className={`relative transition-opacity duration-1000 ease-out ${isPageVisible ? 'opacity-100' : 'opacity-0'}`}
-    >
+    <div ref={pageRef} className="relative">
       <SEO namespace="home" />
-      
-      {/* Loading Screen */}
-      {isLoading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
-          <div className="relative">
-            {/* Logo with glow effect */}
-            <div className="absolute -inset-10 bg-gradient-to-r from-[#7BA7C2]/20 to-white rounded-full blur-2xl animate-pulse-slow"></div>
-            <img 
-              src="/images/DionHairClinic_Logo.svg" 
-              alt="Dion Hair Clinic" 
-              className="h-20 relative z-10 animate-pulse" 
-            />
-          </div>
-        </div>
-      )}
       
       {/* Main Content - Ordered sections with TreatmentAreas before Benefits */}
       <SectionWrapper type="hero">
@@ -165,8 +129,6 @@ const HomePage: React.FC = () => {
       <SectionWrapper type="pattern">
         <ContactSection />
       </SectionWrapper>
-      
-      {/* Scroll to Top Button removed as requested */}
       
       {/* Subtle page overlay for depth effect */}
       <div 

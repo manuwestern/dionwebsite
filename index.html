@@ -11,6 +11,33 @@
     <link rel="canonical" href="https://dionhairclinic.de/" />
     <title>Dion Hair Clinic | Haartransplantation in Mönchengladbach</title>
     
+    <!-- Preload CSS to prevent flash of unstyled content -->
+    <link rel="preload" href="/src/index.css" as="style">
+    
+    <!-- Inline style to prevent flash of unstyled content -->
+    <style>
+      /* Initial state - hide content until CSS is loaded */
+      #root {
+        opacity: 0;
+      }
+      /* Class added once CSS is loaded */
+      .css-loaded {
+        opacity: 1 !important;
+        transition: opacity 0.3s ease-in;
+      }
+    </style>
+    
+    <!-- Script to handle CSS loading -->
+    <script>
+      // Add event listener to mark when CSS is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        // Short timeout to ensure CSS is applied
+        setTimeout(function() {
+          document.getElementById('root').classList.add('css-loaded');
+        }, 50);
+      });
+    </script>
+    
     <!-- Google reCAPTCHA v3 -->
     <script>
       // Verwenden Sie einen Test-Schlüssel für localhost

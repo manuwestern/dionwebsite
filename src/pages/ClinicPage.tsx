@@ -50,30 +50,12 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 
 const ClinicPage: React.FC = () => {
   const { t } = useTranslation(['clinic', 'common']);
-  // State for page loading animation
-  const [isLoading, setIsLoading] = useState(true);
-  const [isPageVisible, setIsPageVisible] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   // State for scroll position tracking (only used for scroll-to-top button)
-  const [, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
   
   // Create refs for potential scroll animations
   const pageRef = useRef<HTMLDivElement>(null);
-
-  // Handle initial page load animation
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      
-      // Slight delay before showing content for smooth transition
-      setTimeout(() => {
-        setIsPageVisible(true);
-      }, 100);
-    }, 800);
-    
-    return () => clearTimeout(timer);
-  }, []);
 
   // Handle scroll events for various effects
   useEffect(() => {
@@ -98,10 +80,7 @@ const ClinicPage: React.FC = () => {
   };
 
   return (
-    <div 
-      ref={pageRef}
-      className={`relative transition-opacity duration-1000 ease-out ${isPageVisible ? 'opacity-100' : 'opacity-0'}`}
-    >
+    <div ref={pageRef} className="relative">
       <SEO namespace="clinic" />
       <StructuredData 
         type="LocalBusiness"
@@ -137,22 +116,6 @@ const ClinicPage: React.FC = () => {
           reviewCount: 4
         }}
       />
-      {/* Loading Screen */}
-      {isLoading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
-          <div className="relative">
-            {/* Logo with glow effect */}
-            <div className="absolute -inset-10 bg-gradient-to-r from-[#7BA7C2]/20 to-white rounded-full blur-2xl animate-pulse-slow"></div>
-            <img 
-              src="/images/DionHairClinic_Logo.svg" 
-              alt="Dion Hair Clinic Logo" 
-              className="h-20 relative z-10 animate-pulse" 
-              width="200"
-              height="80"
-            />
-          </div>
-        </div>
-      )}
       
       {/* Main Content */}
       <SectionWrapper type="hero">
