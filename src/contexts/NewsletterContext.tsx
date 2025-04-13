@@ -21,7 +21,7 @@ interface NewsletterProviderProps {
 
 export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({ 
   children, 
-  webhookUrl = 'https://api.example.com/newsletter-subscribe' // Replace with actual webhook URL
+  webhookUrl = 'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc' // Replace with actual webhook URL
 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [hasSubscribed, setHasSubscribed] = useState(false);
