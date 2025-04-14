@@ -100,13 +100,13 @@ const TreatmentAreasSection: React.FC = () => {
             >
               {/* Treatment area card with enhanced styling */}
               <div className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100/80">
-                {/* Image container with elegant styling */}
+                {/* Image container with elegant styling - larger for mobile */}
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-b from-[#7BA7C2]/10 to-transparent"></div>
                   <img
                     src={area.imageUrl}
                     alt={area.altText}
-                    className="w-full h-64 object-cover relative z-10"
+                    className="w-full h-96 object-cover relative z-10"
                     loading="lazy"
                   />
                   {/* Elegant overlay with title */}
@@ -114,28 +114,14 @@ const TreatmentAreasSection: React.FC = () => {
                     <h3 className={`${textStyle.primaryHeading} text-white mb-0`}>{t(area.titleKey)}</h3>
                   </div>
                 </div>
-                
-                  {/* Text content container with refined typography and fixed height - enhanced with features */}
-                  <div className="p-6 text-center flex flex-col h-[350px]">
+
+                  {/* Text content container with refined typography and reduced height (no features) */}
+                  <div className="p-6 text-center flex flex-col h-[200px]">
                     <div className="flex-grow">
-                      <div className="h-[80px] overflow-hidden p-2">
+                      <div className="overflow-hidden p-2">
                         <p className={`${textStyle.bodyText}`}>
                           {t(area.descriptionKey)}
                         </p>
-                      </div>
-                      
-                      {/* Key features with elegant styling and fixed height */}
-                      <div className="mt-4 h-[80px] space-y-2 pl-5">
-                        {area.features.map((feature, i) => (
-                          <div key={i} className="flex items-start gap-2">
-                            <div className="w-4 h-4 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <div className="w-2 h-2 rounded-full bg-[#7BA7C2]"></div>
-                            </div>
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-left`}>
-                              {feature}
-                            </p>
-                          </div>
-                        ))}
                       </div>
                     </div>
                     
