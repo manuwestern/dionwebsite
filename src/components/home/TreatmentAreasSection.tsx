@@ -125,22 +125,22 @@ const TreatmentAreasSection: React.FC = () => {
                       </div>
                     </div>
                     
-                    {/* Elegant button with ripple effect - positioned at bottom */}
-                    <div className="mt-auto pt-6 pb-2">
-                      <Link 
+                    {/* Smaller button for mobile view - positioned at bottom */}
+                    <div className="mt-auto pt-6 pb-2 flex justify-center">
+                      <Link
                         to={
-                          area.id === 'head' 
-                            ? '/haartransplantation' 
-                            : area.id === 'beard' 
-                              ? '/barthaartransplantation' 
+                          area.id === 'head'
+                            ? '/haartransplantation'
+                            : area.id === 'beard'
+                              ? '/barthaartransplantation'
                               : '/augenbrauentransplantation'
                         }
-                        className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block text-center`}
+                        className={`${buttonStyle.primary} w-4/5 shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
                       >
                         <span className={buttonRippleClass}></span>
-                        <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+                        <span className={`relative flex items-center justify-center text-sm uppercase tracking-wider`}>
                           {t('buttons.moreInfo', { ns: 'common' })}
-                          <ArrowRight className={`${buttonArrowClass} ml-2`} />
+                          <ArrowRight className={`w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1`} />
                         </span>
                       </Link>
                     </div>
@@ -221,8 +221,8 @@ const TreatmentAreasSection: React.FC = () => {
                       </div>
                     </div>
                     
-                    {/* Elegant button with ripple effect - positioned at bottom */}
-                    <div className="mt-auto pt-6 pb-2">
+                    {/* Elegant button with ripple effect - positioned at bottom - new smaller design */}
+                    <div className="mt-auto pt-6 pb-2 flex justify-center">
                       <Link 
                         to={
                           area.id === 'head' 
@@ -231,12 +231,12 @@ const TreatmentAreasSection: React.FC = () => {
                               ? '/barthaartransplantation' 
                               : '/augenbrauentransplantation'
                         }
-                        className={`${buttonStyle.primary} w-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block text-center`}
+                        className={`${buttonStyle.primary} w-4/5 shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
                       >
                         <span className={buttonRippleClass}></span>
-                        <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+                        <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
                           {t('buttons.moreInfo', { ns: 'common' })}
-                          <ArrowRight className={`${buttonArrowClass} ml-2`} />
+                          <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
                         </span>
                       </Link>
                     </div>
@@ -268,14 +268,15 @@ const TreatmentAreasSection: React.FC = () => {
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
+                {/* New button design for all screen sizes */}
                 <Link 
                   to="/kontakt" 
-                  className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
+                  className={`${buttonStyle.primary} w-4/5 md:w-auto shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
                 >
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
                     {t('buttons.consultation', { ns: 'common' })}
-                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
+                    <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Link>
               </div>

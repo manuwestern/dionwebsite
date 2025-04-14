@@ -85,7 +85,7 @@ export const textStyle = {
   listItemBullet: `${fontSize.base} ${fontWeight.medium} ${textColor.primary} mr-2`,
   
   // Spezielle Elemente
-  button: `${fontSize.base} ${fontWeight.medium} ${tracking.wider} ${textColor.white}`,
+  button: `${fontSize.sm} ${fontWeight.medium} ${tracking.wider} ${textColor.white}`,
   badge: `${fontSize.xs} ${fontWeight.medium} ${tracking.wide}`,
   stat: `${fontSize.h3} ${fontWeight.medium} ${textColor.primary} ${tracking.wider}`,
   

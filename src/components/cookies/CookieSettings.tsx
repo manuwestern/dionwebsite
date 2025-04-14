@@ -11,6 +11,7 @@ import {
   ChevronUp 
 } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 const CookieSettings: React.FC = () => {
   const { t } = useTranslation('cookies');
@@ -349,15 +350,21 @@ const CookieSettings: React.FC = () => {
           <div className="flex space-x-3">
             <button
               onClick={closeSettings}
-              className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors text-sm font-medium"
+              className={`${buttonStyle.light} text-sm shadow-sm`}
             >
-              {t('banner.buttons.close')}
+              <span className={buttonRippleClass}></span>
+              <span className="relative flex items-center justify-center">
+                {t('banner.buttons.close')}
+              </span>
             </button>
             <button
               onClick={saveConsent}
-              className="px-4 py-2 bg-[#7BA7C2] border border-[#7BA7C2] rounded-md text-white hover:bg-[#6A96B1] transition-colors text-sm font-medium"
+              className={`${buttonStyle.primary} text-sm shadow-sm`}
             >
-              {t('banner.buttons.save')}
+              <span className={buttonRippleClass}></span>
+              <span className="relative flex items-center justify-center">
+                {t('banner.buttons.save')}
+              </span>
             </button>
           </div>
         </div>

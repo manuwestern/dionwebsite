@@ -50,20 +50,24 @@ const MethodsSection: React.FC = () => {
                   {/* Method Image with background gradient */}
                   <div className="h-72 overflow-hidden relative">
                     <div className="absolute inset-0 bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10 z-0"></div>
-                    <img 
-                      src={`/images/${method.image || 'Augenbrauentransplantation_Einpflanzung.svg'}`}
+                    <img
+                      src={`/images/${
+                        method.image === 'saphir_fue.jpg' ? 'saphir_fue.webp' :
+                        method.image === 'dhi_fue.jpg' ? 'dhi_fue.webp' :
+                        method.image || 'Augenbrauentransplantation_Einpflanzung.svg'
+                      }`}
                       alt={`${method.title} - Augenbrauentransplantation Methode`}
                       className={`h-full w-full relative z-10 transition-all duration-700 ${
                         isHovered ? 'scale-105' : 'scale-100'
                       } ${
-                        method.image === 'saphir_fue.jpg' || method.image === 'dhi_fue.jpg' 
-                          ? 'object-cover' 
+                        method.image === 'saphir_fue.jpg' || method.image === 'dhi_fue.jpg'
+                          ? 'object-cover'
                           : 'object-contain p-6'
                       }`}
                       loading="lazy"
                       decoding="async"
-                      width="400"
-                      height="400"
+                      width={method.image === 'saphir_fue.jpg' || method.image === 'dhi_fue.jpg' ? "600" : "400"}
+                      height={method.image === 'saphir_fue.jpg' || method.image === 'dhi_fue.jpg' ? "400" : "400"}
                     />
                     
                     {/* Method title overlay with fixed height for consistent multi-line titles */}

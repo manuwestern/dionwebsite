@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useCookieConsent } from '../../contexts/CookieConsentContext';
 import { Shield, BarChart, Target, Settings, X } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 const CookieBanner: React.FC = () => {
   const { t } = useTranslation('cookies');
@@ -181,21 +182,30 @@ const CookieBanner: React.FC = () => {
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 w-full md:w-auto">
             <button
               onClick={openSettings}
-              className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors text-sm font-medium"
+              className={`${buttonStyle.light} text-sm shadow-sm`}
             >
-              {t('banner.buttons.settings')}
+              <span className={buttonRippleClass}></span>
+              <span className="relative flex items-center justify-center">
+                {t('banner.buttons.settings')}
+              </span>
             </button>
             <button
               onClick={acceptSelected}
-              className="px-4 py-2 border border-[#7BA7C2] rounded-md text-[#7BA7C2] hover:bg-[#7BA7C2]/5 transition-colors text-sm font-medium"
+              className={`${buttonStyle.secondary} text-sm shadow-sm`}
             >
-              {t('banner.buttons.acceptSelected')}
+              <span className={buttonRippleClass}></span>
+              <span className="relative flex items-center justify-center">
+                {t('banner.buttons.acceptSelected')}
+              </span>
             </button>
             <button
               onClick={acceptAll}
-              className="px-4 py-2 bg-[#7BA7C2] border border-[#7BA7C2] rounded-md text-white hover:bg-[#6A96B1] transition-colors text-sm font-medium"
+              className={`${buttonStyle.primary} text-sm shadow-sm`}
             >
-              {t('banner.buttons.acceptAll')}
+              <span className={buttonRippleClass}></span>
+              <span className="relative flex items-center justify-center">
+                {t('banner.buttons.acceptAll')}
+              </span>
             </button>
           </div>
         </div>
