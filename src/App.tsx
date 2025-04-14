@@ -6,6 +6,7 @@ import LoadingSpinner from './components/layout/LoadingSpinner';
 import CookieConsent from './components/cookies/CookieConsent';
 import { NewsletterProvider } from './contexts/NewsletterContext';
 import NewsletterPopup from './components/layout/NewsletterPopup';
+import MobileRedirect from './components/layout/MobileRedirect';
 
 // Lazy load all pages to improve initial load time
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -20,6 +21,7 @@ const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const KnowledgePage = lazy(() => import('./pages/KnowledgePage'));
 const PricesPage = lazy(() => import('./pages/PricesPage'));
+const MobileLandingPage = lazy(() => import('./pages/MobileLandingPage'));
 
 function App() {
   return (
@@ -27,10 +29,12 @@ function App() {
       <CookieConsent>
         <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
           <ScrollToTop />
-          <Layout>
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
+          <MobileRedirect>
+            <Layout>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/mobile" element={<MobileLandingPage />} />
               <Route path="/haartransplantation" element={<HairTransplantationPage />} />
               <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
               <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
@@ -45,6 +49,7 @@ function App() {
               </Routes>
             </Suspense>
           </Layout>
+          </MobileRedirect>
           <NewsletterPopup />
         </NewsletterProvider>
       </CookieConsent>
