@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import OptimizedImage from '../common/OptimizedImage';
 
 interface Testimonial {
   name: string;
@@ -57,11 +58,20 @@ const TestimonialsSection: React.FC = () => {
     })
   );
 
-  // Before/After image pairs (placeholders)
+  // Before/After image pairs
   const beforeAfterPairs = [
-    { before: 'bg-gray-300', after: 'bg-gray-300' },
-    { before: 'bg-gray-400', after: 'bg-gray-400' },
-    { before: 'bg-gray-500', after: 'bg-gray-500' }
+    { 
+      before: '/images/Bart_undicht.webp', 
+      after: '/images/Bart_komplett.webp' 
+    },
+    { 
+      before: '/images/Bart_Lücken.webp', 
+      after: '/images/Bart_Kontur.webp' 
+    },
+    { 
+      before: '/images/Bart_undicht.webp', 
+      after: '/images/Bart_komplett.webp' 
+    }
   ];
 
   const nextBeforeAfter = () => {
@@ -146,18 +156,36 @@ const TestimonialsSection: React.FC = () => {
           <div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-                <div className={`${beforeAfterPairs[activeBeforeAfter].before} h-96 w-full transition-all duration-700 ease-in-out transform group-hover:scale-105`}>
-                  {/* Placeholder for actual image */}
+                <div className="h-96 w-full transition-all duration-700 ease-in-out transform group-hover:scale-105">
+                  <OptimizedImage 
+                    sources={{
+                      webp: beforeAfterPairs[activeBeforeAfter].before,
+                      original: beforeAfterPairs[activeBeforeAfter].before.replace('.webp', '.jpg'),
+                      width: 1000,
+                      height: 667
+                    }}
+                    alt={`Vor der Barthaartransplantation - Patient mit lückigem Bartwuchs vor der Behandlung`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.before')}</div>
               </div>
               
               <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-                <div className={`${beforeAfterPairs[activeBeforeAfter].after} h-96 w-full transition-all duration-700 ease-in-out transform group-hover:scale-105`}>
-                  {/* Placeholder for actual image */}
+                <div className="h-96 w-full transition-all duration-700 ease-in-out transform group-hover:scale-105">
+                  <OptimizedImage 
+                    sources={{
+                      webp: beforeAfterPairs[activeBeforeAfter].after,
+                      original: beforeAfterPairs[activeBeforeAfter].after.replace('.webp', '.jpg'),
+                      width: 1000,
+                      height: 667
+                    }}
+                    alt={`Nach der Barthaartransplantation - Erfolgreiche Behandlung mit vollem Bartwuchs`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.after')}</div>
               </div>
             </div>

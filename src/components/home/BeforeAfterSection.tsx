@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import OptimizedImage from '../common/OptimizedImage';
 
 interface BeforeAfterCase {
   id: number;
@@ -53,16 +54,16 @@ const BeforeAfterSection: React.FC = () => {
   // Images for each case
   const caseImages = [
     {
-      beforeImage: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      afterImage: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      beforeImage: "/images/Haartransplantation_vorher_1.webp",
+      afterImage: "/images/Haartransplantation_nachher_1.webp"
     },
     {
-      beforeImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      afterImage: "https://images.unsplash.com/photo-1595163791530-b99f6c0dd4b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      beforeImage: "/images/Haartransplantation_vorher_2.webp",
+      afterImage: "/images/Haartransplantation_nachher_2.webp"
     },
     {
-      beforeImage: "https://images.unsplash.com/photo-1614859324669-927e70f7e6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      afterImage: "https://images.unsplash.com/photo-1626954079673-f3c3a7a5af61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      beforeImage: "/images/Haartransplantation_vorher_3.webp",
+      afterImage: "/images/Haartransplantation_nachher_3.webp"
     }
   ];
 
@@ -152,14 +153,17 @@ const BeforeAfterSection: React.FC = () => {
               
               {/* Before Image (Full Width) */}
               <div className="absolute inset-0 select-none">
-                <img 
-                  src={currentCase.beforeImage} 
+                <OptimizedImage 
+                  sources={{
+                    webp: currentCase.beforeImage,
+                    original: currentCase.beforeImage.replace('.webp', '.jpg'),
+                    width: 1000,
+                    height: 667
+                  }}
                   alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
-                  className="w-full h-full object-cover pointer-events-none"
-                  width="1000"
-                  height="667"
+                  className="w-full h-full pointer-events-none"
                   loading="lazy"
-                  draggable="false"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               
@@ -168,18 +172,21 @@ const BeforeAfterSection: React.FC = () => {
                 className="absolute inset-0 overflow-hidden select-none"
                 style={{ width: `${sliderPosition}%` }}
               >
-                <img 
-                  src={currentCase.afterImage} 
+                <OptimizedImage 
+                  sources={{
+                    webp: currentCase.afterImage,
+                    original: currentCase.afterImage.replace('.webp', '.jpg'),
+                    width: 1000,
+                    height: 667
+                  }}
                   alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
-                  className="w-full h-full object-cover pointer-events-none"
+                  className="w-full h-full pointer-events-none"
                   style={{ 
+                    objectFit: 'cover',
                     width: `${100 / (sliderPosition / 100)}%`,
                     maxWidth: 'none'
                   }}
-                  width="1000"
-                  height="667"
                   loading="lazy"
-                  draggable="false"
                 />
               </div>
               
@@ -334,14 +341,17 @@ const BeforeAfterSection: React.FC = () => {
                 
                 {/* Before Image (Full Width) */}
                 <div className="absolute inset-0 select-none">
-                  <img 
-                    src={currentCase.beforeImage} 
+                  <OptimizedImage 
+                    sources={{
+                      webp: currentCase.beforeImage,
+                      original: currentCase.beforeImage.replace('.webp', '.jpg'),
+                      width: 1000,
+                      height: 667
+                    }}
                     alt={`Vor der ${currentCase.technique} Haartransplantation in der Dion Hair Clinic - Patient mit Haarausfall vor der Behandlung`}
-                    className="w-full h-full object-cover pointer-events-none"
-                    width="1000"
-                    height="667"
+                    className="w-full h-full pointer-events-none"
                     loading="lazy"
-                    draggable="false"
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
                 
@@ -350,18 +360,21 @@ const BeforeAfterSection: React.FC = () => {
                   className="absolute inset-0 overflow-hidden select-none"
                   style={{ width: `${sliderPosition}%` }}
                 >
-                  <img 
-                    src={currentCase.afterImage} 
+                  <OptimizedImage 
+                    sources={{
+                      webp: currentCase.afterImage,
+                      original: currentCase.afterImage.replace('.webp', '.jpg'),
+                      width: 1000,
+                      height: 667
+                    }}
                     alt={`Ergebnis nach ${currentCase.result} - Erfolgreiche ${currentCase.technique} Haartransplantation mit ${currentCase.grafts} Grafts in der Dion Hair Clinic Mönchengladbach`}
-                    className="w-full h-full object-cover pointer-events-none"
+                    className="w-full h-full pointer-events-none"
                     style={{ 
+                      objectFit: 'cover',
                       width: `${100 / (sliderPosition / 100)}%`,
                       maxWidth: 'none'
                     }}
-                    width="1000"
-                    height="667"
                     loading="lazy"
-                    draggable="false"
                   />
                 </div>
                 

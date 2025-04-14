@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import OptimizedImage from '../common/OptimizedImage';
 
 interface Testimonial {
   id: number;
@@ -42,11 +43,11 @@ const TestimonialsSection: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Images for testimonials
+  // Images for testimonials - using local images instead of external URLs
   const testimonialImages = [
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    "/images/Model_Haare.webp",
+    "/images/Model_Bart.webp",
+    "/images/Model_Home.webp"
   ];
 
   // Create testimonials from translation keys
@@ -118,10 +119,16 @@ const TestimonialsSection: React.FC = () => {
               <div className="w-full md:w-2/5 h-[220px] md:h-[400px] relative">
                 {/* Image with overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2]/20 to-transparent z-10"></div>
-                <img 
-                  src={currentTestimonial.image} 
+                <OptimizedImage 
+                  sources={{
+                    webp: currentTestimonial.image,
+                    original: currentTestimonial.image.replace('.webp', '.jpg'),
+                    width: 800,
+                    height: 600
+                  }}
                   alt={`Patient ${t(currentTestimonial.nameKey)}`}
                   className="w-full h-full object-cover object-center"
+                  loading="lazy"
                 />
                 
                 {/* Mobile Rating Stars - Only visible on mobile */}
