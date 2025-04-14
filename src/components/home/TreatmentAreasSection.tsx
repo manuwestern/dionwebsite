@@ -115,8 +115,8 @@ const TreatmentAreasSection: React.FC = () => {
                   </div>
                 </div>
 
-                  {/* Text content container with refined typography and reduced height (no features) */}
-                  <div className="p-6 text-center flex flex-col h-[200px]">
+                  {/* Text content container with refined typography and conditional height based on card type */}
+                  <div className={`p-6 text-center flex flex-col ${area.id === 'eyebrows' ? 'h-[240px]' : 'h-[200px]'}`}>
                     <div className="flex-grow">
                       <div className="overflow-hidden p-2">
                         <p className={`${textStyle.bodyText}`}>
