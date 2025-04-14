@@ -16,11 +16,8 @@ const Navigation: React.FC = () => {
   const { t } = useTranslation('layout');
   const location = useLocation();
 
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setIsMenuOpen(false);
-    setIsTreatmentsOpen(false);
-  }, [location.pathname]);
+// We're not automatically closing the menu on route changes anymore
+// This allows the navigation to complete before the menu is closed
 
   // Close treatments dropdown when clicking outside
   useEffect(() => {
@@ -179,53 +176,39 @@ const Navigation: React.FC = () => {
                 {t('navigation.home')}
               </MobileNavLink>
               
-              {/* Mobile Treatments Submenu */}
-              <div className="border-b border-gray-100 pb-2">
-                <button 
-                  className={`flex items-center w-full text-left py-3 px-2 active:bg-gray-50 rounded ${
-                    isTreatmentActive() ? 'text-[#7BA7C2] font-normal' : ''
-                  }`}
-                  onClick={() => setIsTreatmentsOpen(!isTreatmentsOpen)}
-                >
-                  <span>
-                    {t('navigation.treatments')}
-                  </span>
-                  <ChevronDown 
-                    size={16} 
-                    className={`ml-1 transition-transform duration-200 ${isTreatmentsOpen ? 'rotate-180' : ''}`} 
-                  />
-                </button>
-                
-                {/* Submenu */}
-                {isTreatmentsOpen && (
-                  <div className="pl-4 mt-2 flex flex-col gap-2 text-base">
-                    <MobileSubNavLink 
-                      to="/haartransplantation" 
-                      isActive={isActive('/haartransplantation')}
-                    >
-                      {t('footer.services.hairTransplant')}
-                    </MobileSubNavLink>
-                    <MobileSubNavLink 
-                      to="/barthaartransplantation" 
-                      isActive={isActive('/barthaartransplantation')}
-                    >
-                      {t('footer.services.beardTransplant')}
-                    </MobileSubNavLink>
-                    <MobileSubNavLink 
-                      to="/augenbrauentransplantation" 
-                      isActive={isActive('/augenbrauentransplantation')}
-                    >
-                      {t('footer.services.eyebrowTransplant')}
-                    </MobileSubNavLink>
-                    <MobileSubNavLink 
-                      to="/haarausfalltherapie" 
-                      isActive={isActive('/haarausfalltherapie')}
-                    >
-                      {t('footer.services.hairLossTherapy')}
-                    </MobileSubNavLink>
-                  </div>
-                )}
+              {/* Treatments Category Label - Not clickable */}
+              <div className="py-3 px-2 font-medium text-[#7BA7C2] border-b border-gray-100">
+                {t('navigation.treatments')}
               </div>
+              
+              {/* Treatment Links - Direct in main menu */}
+              <MobileNavLink 
+                to="/haartransplantation" 
+                isActive={isActive('/haartransplantation')}
+              >
+                {t('footer.services.hairTransplant')}
+              </MobileNavLink>
+              
+              <MobileNavLink 
+                to="/barthaartransplantation" 
+                isActive={isActive('/barthaartransplantation')}
+              >
+                {t('footer.services.beardTransplant')}
+              </MobileNavLink>
+              
+              <MobileNavLink 
+                to="/augenbrauentransplantation" 
+                isActive={isActive('/augenbrauentransplantation')}
+              >
+                {t('footer.services.eyebrowTransplant')}
+              </MobileNavLink>
+              
+              <MobileNavLink 
+                to="/haarausfalltherapie" 
+                isActive={isActive('/haarausfalltherapie')}
+              >
+                {t('footer.services.hairLossTherapy')}
+              </MobileNavLink>
               
               {/* Moved Prices link to be right after Treatments */}
               <MobileNavLink 
@@ -313,16 +296,30 @@ interface MobileNavLinkProps {
   children: React.ReactNode;
 }
 
-const MobileNavLink: React.FC<MobileNavLinkProps> = ({ to, isActive, children }) => (
-  <Link 
-    to={to} 
-    className={`block w-full text-left py-3 px-2 border-b border-gray-100 rounded active:bg-gray-50 ${
-      isActive ? 'text-[#7BA7C2] font-normal' : ''
-    }`}
-  >
-    {children}
-  </Link>
-);
+const MobileNavLink: React.FC<MobileNavLinkProps> = ({ to, isActive, children }) => {
+  const navigate = useLocation();
+  
+  return (
+    <Link 
+      to={to} 
+      className={`block w-full text-left py-3 px-2 border-b border-gray-100 rounded active:bg-gray-50 ${
+        isActive ? 'text-[#7BA7C2] font-normal' : ''
+      }`}
+      onClick={() => {
+        // Close the mobile menu when a link is clicked
+        // We use setTimeout to ensure the navigation happens first
+        setTimeout(() => {
+          const mobileMenuButton = document.querySelector('.mobile-menu-button') as HTMLElement;
+          if (mobileMenuButton) {
+            mobileMenuButton.click();
+          }
+        }, 100);
+      }}
+    >
+      {children}
+    </Link>
+  );
+};
 
 // Mobile Sub Navigation Link Component
 interface MobileSubNavLinkProps {
@@ -332,14 +329,14 @@ interface MobileSubNavLinkProps {
 }
 
 const MobileSubNavLink: React.FC<MobileSubNavLinkProps> = ({ to, isActive, children }) => (
-  <Link 
-    to={to} 
+  <a
+    href={to}
     className={`block w-full text-left py-2 px-2 rounded active:bg-gray-50 ${
       isActive ? 'text-[#7BA7C2] font-normal' : 'text-gray-600'
     }`}
   >
     {children}
-  </Link>
+  </a>
 );
 
 export default Navigation;
