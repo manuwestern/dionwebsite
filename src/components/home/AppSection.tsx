@@ -31,10 +31,10 @@ const AppSection: React.FC = () => {
         {/* Header with gradient underline */}
         <div className="text-center mb-16">
           <div className="inline-block mb-3">
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('appSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} text-3xl md:text-4xl lg:text-5xl leading-tight md:leading-snug lg:leading-normal px-2 md:px-0`} lang="de">{t('appSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-2 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} text-sm md:text-base lg:text-lg leading-relaxed md:leading-relaxed max-w-[95%] md:max-w-3xl mx-auto mt-4 md:mt-6 px-2 md:px-0`}>
             {t('appSection.subtitle')}
           </p>
         </div>

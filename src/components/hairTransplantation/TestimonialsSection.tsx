@@ -94,10 +94,10 @@ const TestimonialsSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} text-3xl md:text-4xl lg:text-5xl leading-tight md:leading-snug lg:leading-normal px-2 md:px-0`} lang="de">{t('testimonialsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} text-sm md:text-base lg:text-lg leading-relaxed md:leading-relaxed max-w-[95%] md:max-w-3xl mx-auto mt-4 md:mt-6 px-2 md:px-0`}>
             {t('testimonialsSection.subtitle')}
           </p>
           <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mt-4 max-w-3xl mx-auto`}>

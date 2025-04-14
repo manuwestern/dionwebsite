@@ -74,10 +74,10 @@ const BenefitsSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-6 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('benefitsSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} text-3xl md:text-4xl lg:text-5xl leading-tight md:leading-snug lg:leading-normal px-2 md:px-0`} lang="de">{t('benefitsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${textStyle.sectionSubtitle} text-sm md:text-base lg:text-lg leading-relaxed md:leading-relaxed max-w-[95%] md:max-w-3xl mx-auto mt-4 md:mt-6 px-2 md:px-0`}>
             {t('benefitsSection.subtitle')}
           </p>
         </div>
@@ -172,7 +172,7 @@ const BenefitsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('benefits.personalConsultation', { ns: 'common' })}</h3>
+                <h3 className={`${fontSize.base} md:${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-3 md:mb-4 text-center md:text-left leading-tight md:leading-normal max-w-[90%] mx-auto md:mx-0`}>{t('benefits.personalConsultation', { ns: 'common' })}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                   {/* Different text for mobile and desktop */}
                   <span className="md:hidden">
