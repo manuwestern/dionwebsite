@@ -115,7 +115,8 @@
     ],
     "cta": {
       "title": "Kostenlose Erstberatung sichern",
-      "description": "Lassen Sie sich von unseren Experten beraten und erfahren Sie mehr über die für Sie optimale Behandlungsmethode. Wir nehmen uns Zeit, Ihre Fragen zu beantworten und erstellen gemeinsam mit Ihnen einen individuellen Behandlungsplan für Ihre Haare, Ihren Bart oder Ihre Augenbrauen."
+      "description": "Lassen Sie sich von unseren Experten beraten und erfahren Sie mehr über die für Sie optimale Behandlungsmethode. Wir nehmen uns Zeit, Ihre Fragen zu beantworten und erstellen gemeinsam mit Ihnen einen individuellen Behandlungsplan für Ihre Haare, Ihren Bart oder Ihre Augenbrauen.",
+      "mobileDescription": "Lassen Sie sich von unseren Experten beraten und erfahren Sie mehr über die optimale Behandlungsmethode für Ihre individuellen Bedürfnisse."
     }
   },
   "holisticConceptSection": {

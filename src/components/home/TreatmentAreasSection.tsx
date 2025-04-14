@@ -264,21 +264,29 @@ const TreatmentAreasSection: React.FC = () => {
               <div className="md:w-2/3">
                 <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('treatmentAreasSection.cta.title')}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  {t('treatmentAreasSection.cta.description')}
+                  {/* Different text for mobile and desktop */}
+                  <span className="md:hidden">
+                    {t('treatmentAreasSection.cta.mobileDescription')}
+                  </span>
+                  <span className="hidden md:inline">
+                    {t('treatmentAreasSection.cta.description')}
+                  </span>
                 </p>
               </div>
-              <div className="md:w-1/3 flex justify-center md:justify-end">
-                {/* New button design for all screen sizes */}
-                <Link 
-                  to="/kontakt" 
-                  className={`${buttonStyle.primary} w-4/5 md:w-auto shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
-                >
-                  <span className={buttonRippleClass}></span>
-                  <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
-                    {t('buttons.consultation', { ns: 'common' })}
-                    <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </Link>
+              <div className="md:w-1/3 flex justify-center md:justify-end w-full">
+                <div className="w-4/5">
+                  {/* Button with same width as "Mehr Infos" buttons */}
+                  <Link 
+                    to="/kontakt" 
+                    className={`${buttonStyle.primary} w-full shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
+                  >
+                    <span className={buttonRippleClass}></span>
+                    <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
+                      {t('buttons.consultation', { ns: 'common' })}
+                      <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
