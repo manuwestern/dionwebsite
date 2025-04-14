@@ -8,6 +8,7 @@ import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/bu
 interface BenefitCard {
   title: string;
   description: string;
+  shortDescription: string;
   icon: React.ReactNode;
 }
 
@@ -25,14 +26,33 @@ const BenefitsSection: React.FC = () => {
     <MapPin strokeWidth={1.5} />
   ];
 
+  // Function to get shorter descriptions for mobile view
+  const getShorterDescription = (fullDescription: string, index: number): string => {
+    // Predefined shorter descriptions for mobile view
+    const shortDescriptions = [
+      "Hochqualifizierte Spezialisten mit jahrelanger Erfahrung in Haar-, Bart- und Augenbrauentransplantationen.",
+      "Innovative Techniken wie Saphir-FUE und DHI für präzisere Ergebnisse und natürlicheres Aussehen.",
+      "Ganzheitlicher 360°-Ansatz mit umfassender Analyse, Ernährungsberatung und ergänzenden Behandlungen.",
+      "Maßgeschneiderte Behandlungspläne für Ihre spezifischen Bedürfnisse und persönlichen Wünsche.",
+      "Begleitung nach dem Eingriff mit regelmäßigen Kontrollterminen für langfristig beste Resultate.",
+      "Höchste medizinische Standards in Deutschland ohne Sprachbarrieren oder lange Reisen."
+    ];
+    
+    return shortDescriptions[index] || fullDescription;
+  };
+
   // Create benefit cards from translation keys
   const benefitCards: BenefitCard[] = Array.from(
     { length: (t('benefitsSection.cards', { returnObjects: true }) as any[]).length },
-    (_, index) => ({
-      title: t(`benefitsSection.cards.${index}.title`),
-      description: t(`benefitsSection.cards.${index}.description`),
-      icon: benefitIcons[index]
-    })
+    (_, index) => {
+      const fullDescription = t(`benefitsSection.cards.${index}.description`);
+      return {
+        title: t(`benefitsSection.cards.${index}.title`),
+        description: fullDescription,
+        shortDescription: getShorterDescription(fullDescription, index),
+        icon: benefitIcons[index]
+      };
+    }
   );
 
   return (
@@ -52,8 +72,51 @@ const BenefitsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Benefits Cards Grid - Equal height cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        {/* Mobile View - Only visible on small screens */}
+        <div className="md:hidden grid grid-cols-2 gap-4">
+          {benefitCards.map((card, index) => (
+            <div key={index} className="relative">
+              {/* Mobile card design with centered icon */}
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg h-full border border-gray-100/80">
+                {/* Elegant top section with centered icon */}
+                <div className="pt-5 pb-2 px-3 text-center relative">
+                  {/* Decorative background elements */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#7BA7C2]/5 to-transparent"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-[#7BA7C2]/5 -mr-16 -mt-16 blur-md"></div>
+                  
+                  {/* Premium icon container with subtle shadow and glow */}
+                  <div className="relative inline-flex mb-2">
+                    <div className="absolute inset-0 rounded-full bg-[#7BA7C2]/20 blur-md transform scale-110"></div>
+                    <div className="relative z-10 w-12 h-12 rounded-full bg-gradient-to-br from-[#7BA7C2] to-[#7BA7C2]/80 flex items-center justify-center shadow-lg">
+                      {React.cloneElement(card.icon as React.ReactElement, { 
+                        className: "w-6 h-6 text-white"
+                      })}
+                    </div>
+                  </div>
+                  
+                  {/* Title with elegant typography */}
+                  <h3 className={`relative z-10 text-sm ${fontWeight.medium} ${textColor.primary} mb-1 line-clamp-1`}>
+                    {card.title}
+                  </h3>
+                  
+                  {/* Subtle divider */}
+                  <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-[#7BA7C2]/30 to-transparent mx-auto"></div>
+                </div>
+                
+                {/* Content with subtle gradient background and fixed height */}
+                <div className="p-3 bg-gradient-to-b from-white to-gray-50/50 flex flex-col h-[120px]">
+                  {/* Description with perfect typography - shorter version for mobile */}
+                  <p className={`${fontSize.xs} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center`}>
+                    {card.shortDescription}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop View - Hidden on small screens, grid layout on medium and up */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {benefitCards.map((card, index) => {
             const isHovered = index === hoverCard;
             
@@ -94,18 +157,16 @@ const BenefitsSection: React.FC = () => {
                     <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
                   </div>
                   
-                  {/* Content with subtle gradient - removed fixed height to ensure text is fully visible */}
+                  {/* Content with subtle gradient */}
                   <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-auto flex flex-col">
                     {/* Description with perfect typography */}
                     <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
                       {card.description}
                     </p>
-                    
-                    {/* Subtle indicator removed as requested */}
                   </div>
                 </div>
                 
-                {/* Decorative elements */}
+                {/* Decorative shadow element */}
                 <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
                   isHovered ? 'opacity-70' : 'opacity-0'
                 }`}></div>
