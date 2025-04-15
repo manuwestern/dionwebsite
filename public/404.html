@@ -6,8 +6,19 @@
   <title>Seite wird umgeleitet - Dion Hair Clinic</title>
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png">
   <script>
-    // Leite zur Startseite um
-    window.location.href = '/';
+    // Speichere die ursprüngliche URL, zu der der Benutzer navigieren wollte
+    const originalPath = window.location.pathname;
+    
+    // Extrahiere den Pfad ohne führenden Slash
+    const path = originalPath.startsWith('/') ? originalPath.substring(1) : originalPath;
+    
+    // Leite zur Startseite mit Hash-Routing um
+    if (path && path !== '404.html' && path !== 'index.html') {
+      window.location.href = '/#/' + path;
+    } else {
+      // Wenn kein spezifischer Pfad oder es ist die 404.html selbst, leite zur Startseite um
+      window.location.href = '/';
+    }
   </script>
   <style>
     /* Montserrat-Schriftart einbinden */
