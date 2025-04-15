@@ -80,7 +80,7 @@ const ContactSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className={`${textStyle.sectionTitle} mb-4`}>{t('contactSection.title')}</h2>
           <div className={`${gradientUnderline.primary} w-64 mx-auto mb-6`}></div>
-          <p className={`${textStyle.sectionSubtitle} max-w-2xl mx-auto`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-2xl mx-auto`} lang="de">
             {t('contactSection.subtitle')}
           </p>
         </div>
@@ -101,7 +101,7 @@ const ContactSection: React.FC = () => {
                 {isSubmitted ? (
                   <div className="bg-green-50 border border-green-100 rounded-xl p-8 text-center">
                     <h4 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-4`}>{t('contactSection.form.success.title')}</h4>
-                    <p className={`${textStyle.bodyText} ${lineHeight.relaxed} mb-6`}>
+                    <p className={`${textStyle.bodyText} ${lineHeight.relaxed} mb-6`} lang="de">
                       {t('contactSection.form.success.message')}
                     </p>
                     <button 
@@ -305,7 +305,7 @@ const ContactSection: React.FC = () => {
                 
                 <div className="mt-12 pt-8 border-t border-[#7BA7C2]/20">
                   <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-3`}>{t('contactSection.address.title')}</h4>
-                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} break-words hyphens-auto`} lang="de">
                     {t('contactSection.address.line1')}<br />
                     {t('contactSection.address.line2')}<br />
                     {t('contactSection.address.line3')}<br />

@@ -85,10 +85,10 @@ const FAQSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('faqSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} break-words hyphens-auto`} lang="de">{t('faqSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 break-words hyphens-auto`} lang="de">
             {t('faqSection.subtitle')}
           </p>
         </div>
@@ -161,7 +161,7 @@ const FAQSection: React.FC = () => {
                       {/* Mobile layout: Icon on top, question below, centered */}
                       <div className="flex flex-col sm:flex-row items-center text-center sm:text-left w-full sm:w-auto">
                         {/* Question text - centered on mobile */}
-                        <span className={`${fontSize.base} ${fontWeight.normal} ${textColor.dark} text-center sm:text-left`}>
+                        <span className={`${fontSize.base} ${fontWeight.normal} ${textColor.dark} text-center sm:text-left break-words hyphens-auto`} lang="de">
                           {faq.question}
                         </span>
                       </div>
@@ -189,7 +189,7 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-4">
-                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left break-words hyphens-auto`} lang="de">
                           {faq.answer}
                         </p>
                       </div>
@@ -212,8 +212,8 @@ const FAQSection: React.FC = () => {
                     <HelpCircle className="w-full h-full text-[#7BA7C2]" />
                   </div>
                 </div>
-                <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2`}>{t('faq.noResults.title', { ns: 'common' })}</h3>
-                <p className={`${textColor.medium} ${fontWeight.light}`}>{t('faq.noResults.description', { ns: 'common' })}</p>
+                <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2 break-words hyphens-auto`} lang="de">{t('faq.noResults.title', { ns: 'common' })}</h3>
+                <p className={`${textColor.medium} ${fontWeight.light} break-words hyphens-auto`} lang="de">{t('faq.noResults.description', { ns: 'common' })}</p>
               </div>
             </div>
           )}
@@ -228,8 +228,8 @@ const FAQSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('faq.moreQuestions.title', { ns: 'common' })}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left break-words hyphens-auto`} lang="de">{t('faq.moreQuestions.title', { ns: 'common' })}</h3>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 break-words hyphens-auto`} lang="de">
                   {t('faq.moreQuestions.description', { ns: 'common' })}
                 </p>
               </div>

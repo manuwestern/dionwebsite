@@ -99,7 +99,7 @@ const PatternSection: React.FC = () => {
                     
                     {/* Pattern Details - always at the same position with perfect spacing */}
                     <div className="grid grid-cols-2 gap-2 md:gap-5 self-start mt-0 md:mt-1">
-                      <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[60px] md:h-[75px] flex flex-col justify-between ${
+                      <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[70px] md:h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
@@ -107,9 +107,9 @@ const PatternSection: React.FC = () => {
                         <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center whitespace-nowrap`}>
                           {t('patternSection.typicalGrafts')}
                         </h4>
-                        <p className={`${fontSize.sm} md:${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center hyphens-auto`} lang="de">{pattern.grafts}</p>
+                        <p className={`text-xs md:${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center hyphens-auto`} lang="de">{pattern.grafts}</p>
                       </div>
-                      <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[60px] md:h-[75px] flex flex-col justify-between ${
+                      <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[70px] md:h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'

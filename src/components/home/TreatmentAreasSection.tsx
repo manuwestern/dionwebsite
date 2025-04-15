@@ -85,7 +85,7 @@ const TreatmentAreasSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle} mb-4`} lang="de">{t('treatmentAreasSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`} lang="de">
             {t('treatmentAreasSection.subtitle')}
           </p>
         </div>
@@ -119,7 +119,7 @@ const TreatmentAreasSection: React.FC = () => {
                   <div className={`p-6 text-center flex flex-col ${area.id === 'eyebrows' ? 'h-[240px]' : 'h-[200px]'}`}>
                     <div className="flex-grow">
                       <div className="overflow-hidden p-2">
-                        <p className={`${textStyle.bodyText}`}>
+                      <p className={`${textStyle.bodyText}`} lang="de">
                           {t(area.descriptionKey)}
                         </p>
                       </div>
@@ -201,7 +201,7 @@ const TreatmentAreasSection: React.FC = () => {
                   <div className="p-8 flex flex-col h-[380px]">
                     <div className="flex-grow">
                       <div className="h-[100px] overflow-hidden">
-                        <p className={`${textStyle.bodyText}`}>
+                        <p className={`${textStyle.bodyText}`} lang="de">
                           {t(area.descriptionKey)}
                         </p>
                       </div>
@@ -213,7 +213,7 @@ const TreatmentAreasSection: React.FC = () => {
                             <div className="w-5 h-5 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                               <div className="w-2.5 h-2.5 rounded-full bg-[#7BA7C2]"></div>
                             </div>
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-left`}>
+                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} text-left break-words hyphens-auto`} lang="de">
                               {feature}
                             </p>
                           </div>
@@ -263,7 +263,7 @@ const TreatmentAreasSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('treatmentAreasSection.cta.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
                   {/* Different text for mobile and desktop */}
                   <span className="md:hidden">
                     {t('treatmentAreasSection.cta.mobileDescription')}

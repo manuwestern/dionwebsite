@@ -97,10 +97,10 @@ const TestimonialsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`} lang="de">
             {t('testimonialsSection.subtitle')}
           </p>
-          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mt-4 max-w-3xl mx-auto`}>
+          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mt-4 max-w-3xl mx-auto break-words hyphens-auto`} lang="de">
             {t('testimonialsSection.intro')}
           </p>
         </div>
@@ -135,7 +135,7 @@ const TestimonialsSection: React.FC = () => {
                     } mb-3`}>
                       {stat.value}
                     </div>
-                    <div className={`${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{stat.label}</div>
+                    <div className={`${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} break-words hyphens-auto`} lang="de">{stat.label}</div>
                   </div>
                 </div>
                 
@@ -245,7 +245,7 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className={`${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left`}>"{testimonial.text}"</p>
+                <p className={`${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left break-words hyphens-auto`} lang="de">"{testimonial.text}"</p>
                 
                 {/* Rating */}
                 <div className="flex justify-center md:justify-start mb-4 relative z-10">
@@ -275,7 +275,7 @@ const TestimonialsSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('testimonialsSection.ctaSection.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
                   {t('testimonialsSection.ctaSection.description')}
                 </p>
               </div>

@@ -94,13 +94,13 @@ const TestimonialsSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} break-words hyphens-auto`} lang="de">{t('testimonialsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 break-words hyphens-auto`} lang="de">
             {t('testimonialsSection.subtitle')}
           </p>
-          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mt-4 max-w-3xl mx-auto`}>
+          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mt-4 max-w-3xl mx-auto break-words hyphens-auto`} lang="de">
             {t('testimonialsSection.intro')}
           </p>
         </div>
@@ -133,7 +133,7 @@ const TestimonialsSection: React.FC = () => {
                     } mb-3`}>
                       {stat.value}
                     </div>
-                    <div className={`${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{stat.label}</div>
+                    <div className={`${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} break-words hyphens-auto`} lang="de">{stat.label}</div>
                   </div>
                 </div>
                 
@@ -149,7 +149,7 @@ const TestimonialsSection: React.FC = () => {
         {/* Before/After Slider with elegant design */}
         <div className={`mb-20 transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-8">
-            <h3 className={`${textStyle.primaryHeading} text-center md:text-left`}>{t('testimonialsSection.beforeAfterTitle')}</h3>
+            <h3 className={`${textStyle.primaryHeading} text-center md:text-left break-words hyphens-auto`} lang="de">{t('testimonialsSection.beforeAfterTitle')}</h3>
             <div className={`h-0.5 w-40 ${gradientUnderline.light} mx-auto mt-3`}></div>
           </div>
           
@@ -243,7 +243,7 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className={`${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left`}>"{testimonial.text}"</p>
+                <p className={`${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left break-words hyphens-auto`} lang="de">"{testimonial.text}"</p>
                 
                 {/* Rating */}
                 <div className="flex justify-center md:justify-start mb-4 relative z-10">
@@ -272,8 +272,8 @@ const TestimonialsSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('testimonialsSection.ctaSection.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left break-words hyphens-auto`} lang="de">{t('testimonialsSection.ctaSection.title')}</h3>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 break-words hyphens-auto`} lang="de">
                   {t('testimonialsSection.ctaSection.description')}
                 </p>
               </div>

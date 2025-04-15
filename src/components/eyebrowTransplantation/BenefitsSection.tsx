@@ -50,7 +50,7 @@ const BenefitsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('benefitsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`} lang="de">
             {t('benefitsSection.subtitle')}
           </p>
         </div>
@@ -81,7 +81,7 @@ const BenefitsSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('benefitsSection.cta.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
                   {t('benefitsSection.cta.description')}
                 </p>
               </div>

@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
                 
                 {/* Subtitle with refined styling */}
                 <div className="mt-3 mb-2">
-                  <span className={`block text-center ${fontSize.h4} ${textColor.medium} ${fontWeight.light} ${tracking.wider} leading-relaxed`}>
+                  <span className={`block text-center ${fontSize.h4} ${textColor.medium} ${fontWeight.light} ${tracking.wider} leading-relaxed break-words hyphens-auto`} lang="de">
                     {t('heroSection.subtitle')}
                   </span>
                 </div>
@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
               
               {/* Welcome text with perfect spacing and animation */}
               <div className={`px-2 transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto leading-relaxed`}>
+                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto leading-relaxed`} lang="de">
                   {t('heroSection.welcomeText')}
                 </p>
               </div>
@@ -132,7 +132,7 @@ const HeroSection: React.FC = () => {
               
               {/* Subtitle with refined styling */}
               <div className="mt-3 mb-2">
-                <span className={`block ${fontSize.h3} ${textColor.medium} ${fontWeight.light} ${tracking.elegant} leading-relaxed`}>
+                <span className={`block ${fontSize.h3} ${textColor.medium} ${fontWeight.light} ${tracking.elegant} leading-relaxed break-words hyphens-auto`} lang="de">
                   {t('heroSection.subtitle')}
                 </span>
               </div>
@@ -143,7 +143,7 @@ const HeroSection: React.FC = () => {
             
             {/* Welcome text with perfect spacing and animation */}
             <div className={`transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <p className={`${textStyle.bodyTextImportant} max-w-2xl leading-relaxed`}>
+              <p className={`${textStyle.bodyTextImportant} max-w-2xl leading-relaxed`} lang="de">
                 {t('heroSection.welcomeText')}
               </p>
             </div>
@@ -152,15 +152,15 @@ const HeroSection: React.FC = () => {
             <div className={`flex gap-14 mt-12 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>98%</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.satisfiedPatients', { ns: 'common' })}</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide break-words hyphens-auto`} lang="de">{t('stats.satisfiedPatients', { ns: 'common' })}</span>
               </div>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>5.000+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.successfulTreatments', { ns: 'common' })}</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide break-words hyphens-auto`} lang="de">{t('stats.successfulTreatments', { ns: 'common' })}</span>
               </div>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>15+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.yearsExperience', { ns: 'common' })}</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide break-words hyphens-auto`} lang="de">{t('stats.yearsExperience', { ns: 'common' })}</span>
               </div>
             </div>
             

@@ -59,10 +59,10 @@ const AnalysisSection: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('analysisSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} break-words hyphens-auto`} lang="de">{t('analysisSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 break-words hyphens-auto`} lang="de">
             {t('analysisSection.subtitle')}
           </p>
         </div>
@@ -75,9 +75,9 @@ const AnalysisSection: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
             <div className="relative z-10">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('analysisSection.benefitsTitle')}</h3>
+              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left break-words hyphens-auto`} lang="de">{t('analysisSection.benefitsTitle')}</h3>
               
-              <p className={`${textStyle.bodyText} mb-8 text-center md:text-left`}>
+              <p className={`${textStyle.bodyText} mb-8 text-center md:text-left break-words hyphens-auto`} lang="de">
                 {t('analysisSection.description')}
               </p>
               
@@ -106,12 +106,12 @@ const AnalysisSection: React.FC = () => {
                         </div>
                         
                         <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 ${
+                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 break-words hyphens-auto ${
                             isHovered ? textColor.primary : textColor.dark
-                          }`}>
+                          }`} lang="de">
                             {item.title}
                           </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} break-words hyphens-auto`} lang="de">
                             {item.description}
                           </p>
                         </div>

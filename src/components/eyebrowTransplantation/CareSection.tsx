@@ -1,8 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Calendar, CheckSquare, FileText, Camera, Bell, Smartphone, Shield, ArrowRight } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { Calendar, CheckSquare, FileText, Camera, Bell, Smartphone } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
 
 const CareSection: React.FC = () => {
   const { t } = useTranslation(['eyebrowTransplantation', 'common']);
@@ -32,10 +31,10 @@ const CareSection: React.FC = () => {
         {/* Header with gradient underline */}
         <div className="text-center mb-16">
           <div className="inline-block mb-3">
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('careSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} break-words hyphens-auto`} lang="de">{t('careSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-2 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
             {t('careSection.subtitle')}
           </p>
         </div>
@@ -48,7 +47,7 @@ const CareSection: React.FC = () => {
               <div className="relative">
                 <img 
                   src="/images/dionapp.webp" 
-                  alt="Dion Hair Clinic App - Nachsorge und Fortschrittsverfolgung" 
+                  alt="Dion Hair Clinic App - Augenbrauentransplantation Fortschritt verfolgen" 
                   className="w-full h-auto"
                   loading="lazy"
                   decoding="async"
@@ -70,13 +69,14 @@ const CareSection: React.FC = () => {
           
           {/* Right side: Features */}
           <div className="lg:w-1/2">
-            <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>{t('careSection.subheading')}</h3>
-            <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0`}>
+            <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left break-words hyphens-auto`} lang="de">{t('careSection.subheading')}</h3>
+            <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0 hyphens-auto`} lang="de">
               {t('careSection.description')}
             </p>
             <div className="flex flex-col md:flex-row items-center md:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center md:text-left">
               
-              <p className={`${fontSize.sm} ${textColor.dark}`}>
+            
+              <p className={`${fontSize.sm} ${textColor.dark} hyphens-auto`} lang="de">
                 {t('careSection.appStoreInfo')}
               </p>
             </div>
@@ -86,13 +86,15 @@ const CareSection: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
                   <div className="mb-3 md:mb-0 md:mr-4 md:mt-1">
-                    <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
-                      {feature.icon}
+                    <div className="w-14 h-14 md:w-10 md:h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto md:mx-0">
+                      {React.cloneElement(feature.icon as React.ReactElement, { 
+                        className: `w-7 h-7 md:w-6 md:h-6 text-[#7BA7C2] transition-all duration-300` 
+                      })}
                     </div>
                   </div>
-                  <div>
-                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-1`}>{feature.title}</h4>
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{feature.description}</p>
+                  <div className="flex-grow">
+                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-2 text-center md:text-left break-words hyphens-auto`} lang="de">{feature.title}</h4>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -103,15 +105,19 @@ const CareSection: React.FC = () => {
               <a href="#" className="transform transition-all duration-300 hover:scale-[1.1] active:scale-[0.98]">
                 <img 
                   src="/images/apple_store.svg" 
-                  alt="Apple App Store" 
+                  alt="Apple App Store - Dion Hair Clinic App herunterladen" 
                   className="w-32 h-32"
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
               <a href="#" className="transform transition-all duration-300 hover:scale-[1.1] active:scale-[0.98]">
                 <img 
                   src="/images/google_play.svg" 
-                  alt="Google Play Store" 
+                  alt="Google Play Store - Dion Hair Clinic App herunterladen" 
                   className="w-32 h-32"
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>

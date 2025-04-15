@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
                 
                 {/* Subtitle with refined styling */}
                 <div className="mt-3 mb-2">
-                  <span className={`block text-center ${fontSize.h4} ${textColor.medium} ${fontWeight.light} ${tracking.wider} leading-relaxed`}>
+                  <span className={`block text-center ${fontSize.h4} ${textColor.medium} ${fontWeight.light} ${tracking.wider} leading-relaxed break-words hyphens-auto`} lang="de">
                     {t('heroSection.subtitle').split('\n').map((line, i) => (
                       <React.Fragment key={i}>
                         {i > 0 && <br />}
@@ -66,7 +66,7 @@ const HeroSection: React.FC = () => {
               
               {/* Welcome text with perfect spacing and animation */}
               <div className={`px-2 transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto leading-relaxed`}>
+                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto leading-relaxed`} lang="de">
                   {t('heroSection.welcomeText')}
                 </p>
               </div>
@@ -121,7 +121,7 @@ const HeroSection: React.FC = () => {
               
               {/* Subtitle with refined styling */}
               <div className="mt-3 mb-2">
-                <span className={`block ${fontSize.h3} ${textColor.medium} ${fontWeight.light} ${tracking.elegant} leading-relaxed`}>
+                <span className={`block ${fontSize.h3} ${textColor.medium} ${fontWeight.light} ${tracking.elegant} leading-relaxed break-words hyphens-auto`} lang="de">
                   {t('heroSection.subtitle').split('\n').map((line, i) => (
                     <React.Fragment key={i}>
                       {i > 0 && <br />}
@@ -137,7 +137,7 @@ const HeroSection: React.FC = () => {
             
             {/* Welcome text with perfect spacing and animation */}
             <div className={`transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <p className={`${textStyle.bodyTextImportant} max-w-2xl leading-relaxed`}>
+              <p className={`${textStyle.bodyTextImportant} max-w-2xl leading-relaxed`} lang="de">
                 {t('heroSection.welcomeText')}
               </p>
             </div>

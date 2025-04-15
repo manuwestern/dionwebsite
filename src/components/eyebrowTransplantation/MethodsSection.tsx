@@ -24,7 +24,7 @@ const MethodsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('methodsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`} lang="de">
             {t('methodsSection.subtitle')}
           </p>
         </div>
@@ -80,7 +80,7 @@ const MethodsSection: React.FC = () => {
                   {/* Method Content */}
                   <div className="p-4 sm:p-6 md:p-8">
                     {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8 break-words hyphens-auto`} lang="de">
                       {method.description}
                     </p>
                     
@@ -96,7 +96,7 @@ const MethodsSection: React.FC = () => {
                             <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
                               <Check className="h-3 w-3 text-[#7BA7C2]" />
                             </div>
-                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{benefit}</span>
+                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal} break-words hyphens-auto`} lang="de">{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -114,7 +114,7 @@ const MethodsSection: React.FC = () => {
                             <div className="mr-3 flex-shrink-0 w-6 h-6 rounded-full bg-[#7BA7C2]/10 text-[#7BA7C2] flex items-center justify-center font-medium text-sm transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
                               {i + 1}
                             </div>
-                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{step}</span>
+                            <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal} break-words hyphens-auto`} lang="de">{step}</span>
                           </li>
                         ))}
                       </ol>
@@ -143,13 +143,13 @@ const MethodsSection: React.FC = () => {
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/2">
               <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('methodsSection.additionalInfo.personalConsultation.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
                 {t('methodsSection.additionalInfo.personalConsultation.description')}
               </p>
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
               <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('methodsSection.additionalInfo.combinedTechniques.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
                 {t('methodsSection.additionalInfo.combinedTechniques.description')}
               </p>
             </div>

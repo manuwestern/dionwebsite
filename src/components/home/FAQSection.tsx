@@ -161,7 +161,7 @@ const FAQSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('faqSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`} lang="de">
             {t('faqSection.subtitle')}
           </p>
         </div>
@@ -262,7 +262,7 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-4">
-                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left break-words hyphens-auto`} lang="de">
                           {faq.answer}
                         </p>
                       </div>
@@ -302,7 +302,7 @@ const FAQSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('faq.moreQuestions.title', { ns: 'common' })}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
                   {t('faq.moreQuestions.description', { ns: 'common' })}
                 </p>
               </div>

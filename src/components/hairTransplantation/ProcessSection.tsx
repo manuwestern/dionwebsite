@@ -78,7 +78,7 @@ const ProcessSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('processSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[300px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
             {t('processSection.subtitle')}
           </p>
         </div>
@@ -151,7 +151,7 @@ const ProcessSection: React.FC = () => {
                     
                     {/* Description - full text without scrollbars */}
                     <div className="flex-grow">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                         {step.description}
                       </p>
                     </div>
@@ -184,26 +184,28 @@ const ProcessSection: React.FC = () => {
                       onMouseEnter={() => setHoverAdvantage(index)}
                       onMouseLeave={() => setHoverAdvantage(null)}
                     >
-                      <div className={`flex gap-4 p-6 rounded-xl transition-all duration-300 ${
+                      <div className={`flex flex-col md:flex-row gap-4 p-6 rounded-xl transition-all duration-300 ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/5 shadow-sm' 
                           : 'hover:bg-[#7BA7C2]/5'
                       }`}>
-                        <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        <div className={`flex-shrink-0 w-12 h-12 rounded-full mx-auto md:mx-0 mb-3 md:mb-0 flex items-center justify-center transition-all duration-300 ${
                           isHovered 
                             ? 'bg-[#7BA7C2] text-white' 
                             : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
                         }`}>
-                          {item.icon}
+                          {React.cloneElement(item.icon as React.ReactElement, { 
+                            className: `w-6 h-6 md:w-6 md:h-6 transition-all duration-300` 
+                          })}
                         </div>
                         
                         <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 ${
+                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 text-center md:text-left ${
                             isHovered ? textColor.primary : textColor.dark
                           }`}>
                             {item.title}
                           </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                             {item.description}
                           </p>
                         </div>

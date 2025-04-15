@@ -34,7 +34,7 @@ const AppSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('appSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-2 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`} lang="de">
             {t('appSection.subtitle')}
           </p>
         </div>
@@ -70,7 +70,7 @@ const AppSection: React.FC = () => {
           {/* Right side: Features */}
           <div className="lg:w-1/2">
             <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>{t('appSection.subheading')}</h3>
-            <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0`}>
+            <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0`} lang="de">
               {t('appSection.description')}
             </p>
             <div className="flex flex-col md:flex-row items-center md:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center md:text-left">

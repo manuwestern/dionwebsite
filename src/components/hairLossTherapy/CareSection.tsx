@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Calendar, CheckSquare, FileText, Camera, Bell, Smartphone, Shield, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
@@ -32,10 +32,10 @@ const CareSection: React.FC = () => {
         {/* Header with gradient underline */}
         <div className="text-center mb-16">
           <div className="inline-block mb-3">
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('careSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} break-words hyphens-auto`} lang="de">{t('careSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-2 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
             {t('careSection.subtitle')}
           </p>
         </div>
@@ -57,7 +57,7 @@ const CareSection: React.FC = () => {
                 />
                 
                 {/* Badge "ab Mai 2025" */}
-                <div className="absolute top-3 right-3 bg-[#7BA7C2] text-white px-3 py-1 rounded-full shadow-md transform rotate-12 text-sm font-medium">
+                <div className="absolute top-10 right-10 bg-[#7BA7C2] text-white px-3 py-1 rounded-full shadow-md transform rotate-12 text-sm font-medium">
                   ab Mai 2025
                 </div>
               </div>
@@ -70,13 +70,13 @@ const CareSection: React.FC = () => {
           
           {/* Right side: Features */}
           <div className="lg:w-1/2">
-            <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left`}>{t('careSection.subheading')}</h3>
-            <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0`}>
+            <h3 className={`${textStyle.primaryHeading} mb-6 text-center md:text-left break-words hyphens-auto`} lang="de">{t('careSection.subheading')}</h3>
+            <p className={`${textStyle.bodyText} mb-4 text-center md:text-left px-2 md:px-0 hyphens-auto`} lang="de">
               {t('careSection.description')}
             </p>
-            <div className="flex flex-col md:flex-row items-center md:items-start mb-8 bg-[#7BA7C2]/5 p-3 rounded-lg text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center md:items-start mb-8 text-center md:text-left">
               
-              <p className={`${fontSize.sm} ${textColor.dark}`}>
+              <p className={`${fontSize.sm} ${textColor.dark} hyphens-auto`} lang="de">
                 {t('careSection.appStoreInfo')}
               </p>
             </div>
@@ -91,8 +91,8 @@ const CareSection: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-1`}>{feature.title}</h4>
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{feature.description}</p>
+                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-1 break-words hyphens-auto`} lang="de">{feature.title}</h4>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} hyphens-auto`} lang="de">{feature.description}</p>
                   </div>
                 </div>
               ))}

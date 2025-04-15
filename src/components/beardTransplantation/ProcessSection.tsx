@@ -189,13 +189,13 @@ const ProcessSection: React.FC = () => {
                           ? 'bg-[#7BA7C2]/5 shadow-sm' 
                           : 'hover:bg-[#7BA7C2]/5'
                       }`}>
-                        <div className={`flex-shrink-0 w-14 h-14 md:w-12 md:h-12 rounded-full mx-auto md:mx-0 mb-3 md:mb-0 flex items-center justify-center transition-all duration-300 ${
+                        <div className={`flex-shrink-0 w-12 h-12 md:w-12 md:h-12 rounded-full mx-auto md:mx-0 mb-3 md:mb-0 flex items-center justify-center transition-all duration-300 ${
                           isHovered 
                             ? 'bg-[#7BA7C2] text-white' 
                             : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
                         }`}>
                           {React.cloneElement(item.icon as React.ReactElement, { 
-                            className: `w-7 h-7 md:w-6 md:h-6 transition-all duration-300` 
+                            className: `w-6 h-6 md:w-6 md:h-6 transition-all duration-300` 
                           })}
                         </div>
                         

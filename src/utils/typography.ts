@@ -72,16 +72,16 @@ export const tracking = {
 export const textStyle = {
   // Überschriften
   sectionTitle: `${fontSize.h2} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.normal} break-words hyphens-auto px-2 md:px-0 md:tracking-widest md:font-normal`,
-  sectionSubtitle: `${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} ${textColor.medium} md:tracking-wide`,
-  cardTitle: `${fontSize.h4} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} md:tracking-wider`,
+  sectionSubtitle: `${fontSize.lg} ${fontWeight.normal} ${lineHeight.normal} ${textColor.medium} md:tracking-wide break-words hyphens-auto`,
+  cardTitle: `${fontSize.h4} ${fontWeight.normal} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} md:tracking-wider break-words hyphens-auto`,
   
   // Fließtext
-  bodyText: `${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} ${textColor.medium}`,
-  bodyTextImportant: `${fontSize.lg} ${fontWeight.normal} ${lineHeight.relaxed} ${textColor.dark}`,
-  bodyTextSmall: `${fontSize.sm} ${fontWeight.normal} ${lineHeight.normal} ${textColor.medium}`,
+  bodyText: `${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} ${textColor.medium} break-words hyphens-auto`,
+  bodyTextImportant: `${fontSize.lg} ${fontWeight.normal} ${lineHeight.relaxed} ${textColor.dark} break-words hyphens-auto`,
+  bodyTextSmall: `${fontSize.sm} ${fontWeight.normal} ${lineHeight.normal} ${textColor.medium} break-words hyphens-auto`,
   
   // Listen
-  listItem: `${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} ${textColor.medium} pl-2`,
+  listItem: `${fontSize.base} ${fontWeight.normal} ${lineHeight.relaxed} ${textColor.medium} pl-2 break-words hyphens-auto`,
   listItemBullet: `${fontSize.base} ${fontWeight.medium} ${textColor.primary} mr-2`,
   
   // Spezielle Elemente
@@ -90,11 +90,11 @@ export const textStyle = {
   stat: `${fontSize.h3} ${fontWeight.medium} ${textColor.primary} ${tracking.wider}`,
   
   // Primärfarben-Varianten
-  primaryHeading: `${fontSize.h3} ${fontWeight.light} ${lineHeight.tight} ${textColor.primary} ${tracking.wider} md:tracking-widest`,
-  primaryText: `${fontSize.base} ${fontWeight.normal} ${lineHeight.normal} ${textColor.primary}`,
+  primaryHeading: `${fontSize.h3} ${fontWeight.light} ${lineHeight.tight} ${textColor.primary} ${tracking.wider} md:tracking-widest break-words hyphens-auto`,
+  primaryText: `${fontSize.base} ${fontWeight.normal} ${lineHeight.normal} ${textColor.primary} break-words hyphens-auto`,
   
   // Hero-Titel mit besonderer Eleganz
-  heroTitle: `${fontSize.heroDesktop} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} md:tracking-widest md:leading-tight`,
+  heroTitle: `${fontSize.heroDesktop} ${fontWeight.light} ${lineHeight.tight} ${textColor.dark} ${tracking.wide} md:tracking-widest md:leading-tight break-words hyphens-auto`,
 };
 
 // Hilfsfunktion zum Kombinieren von Typografie-Klassen
