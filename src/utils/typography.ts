@@ -88,6 +88,7 @@ export const textStyle = {
   button: `${fontSize.sm} ${fontWeight.medium} ${tracking.elegant} ${textColor.white}`,
   badge: `${fontSize.xs} ${fontWeight.medium} ${tracking.wide}`,
   stat: `${fontSize.h3} ${fontWeight.medium} ${textColor.primary} ${tracking.wider}`,
+  quote: `${fontSize.sm} md:${fontSize.base} ${fontWeight.light} ${textColor.dark} italic ${lineHeight.relaxed} text-center md:text-left break-words hyphens-auto`,
   
   // Primärfarben-Varianten
   primaryHeading: `${fontSize.h3} ${fontWeight.light} ${lineHeight.tight} ${textColor.primary} ${tracking.wider} md:tracking-widest break-words hyphens-auto`,

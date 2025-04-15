@@ -90,7 +90,7 @@ const TestimonialsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`} lang="de">
             {t('testimonialsSection.subtitle')}
           </p>
         </div>
@@ -134,7 +134,7 @@ const TestimonialsSection: React.FC = () => {
                 {/* Mobile Rating Stars - Only visible on mobile */}
                 <div className="absolute top-4 left-4 flex md:hidden z-20">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                   ))}
                 </div>
               </div>
@@ -154,7 +154,7 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Quote */}
-                <blockquote className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} italic mb-8 text-center md:text-left relative z-10 leading-relaxed`}>
+                <blockquote className={`${textStyle.quote} mb-8 relative z-10`} lang="de">
                   "{t(currentTestimonial.quoteKey)}"
                 </blockquote>
                 

@@ -242,32 +242,44 @@
   },
   "testimonialsSection": {
     "title": "Erfolgsgeschichten unserer Patienten",
-    "subtitle": "Erfahrungsberichte und Ergebnisse - Lesen Sie authentische Bewertungen von zufriedenen Patienten, die ihre Haartransplantation bei uns durchgeführt haben",
-    "intro": "Unsere Patienten berichten von ihren Erfahrungen und teilen ihre Ergebnisse nach einer Haartransplantation in der Dion Hair Clinic.",
+    "subtitle": "Authentische Erfahrungsberichte - Entdecken Sie, wie unsere Behandlungen das Leben und Selbstbewusstsein unserer Patienten verändert haben",
     "beforeAfterTitle": "Vorher / Nachher Ergebnisse",
     "before": "Vorher",
     "after": "Nachher",
+    "navigation": {
+      "previous": "Vorheriges Testimonial",
+      "next": "Nächstes Testimonial"
+    },
     "ctaSection": {
       "title": "Werden Sie unser nächster Erfolgsfall",
       "description": "Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von unseren Experten beraten."
     },
     "testimonials": [
       {
-        "name": "Michael K., 42",
+        "name": "Michael K.",
+        "age": "42 Jahre",
+        "treatment": "Haartransplantation mit Saphir-FUE, 2.800 Grafts",
+        "quote": "Nach jahrelangem Haarausfall habe ich mich für eine Haartransplantation in der Dion Hair Clinic entschieden. Das Ergebnis hat meine Erwartungen übertroffen. Das Team war professionell und einfühlsam, und ich fühle mich wieder selbstbewusst.",
         "rating": 5,
         "text": "Nach jahrelangem Haarausfall habe ich mich für eine Haartransplantation in der Dion Hair Clinic entschieden. Das Ergebnis hat meine Erwartungen übertroffen. Das Team war professionell und einfühlsam, und ich fühle mich wieder selbstbewusst.",
         "procedure": "Saphir-FUE, 2.800 Grafts",
         "date": "März 2024"
       },
       {
-        "name": "Thomas S., 38",
+        "name": "Thomas S.",
+        "age": "38 Jahre",
+        "treatment": "Haartransplantation mit DHI-Technik, 2.200 Grafts",
+        "quote": "Die Beratung war ausführlich und ehrlich. Dr. Dion hat mir genau erklärt, was möglich ist und was nicht. Nach der Behandlung wurde ich hervorragend betreut. Das Ergebnis sieht völlig natürlich aus - niemand würde vermuten, dass ich eine Haartransplantation hatte.",
         "rating": 5,
         "text": "Die Beratung war ausführlich und ehrlich. Dr. Dion hat mir genau erklärt, was möglich ist und was nicht. Nach der Behandlung wurde ich hervorragend betreut. Das Ergebnis sieht völlig natürlich aus - niemand würde vermuten, dass ich eine Haartransplantation hatte.",
         "procedure": "DHI-Technik, 2.200 Grafts",
         "date": "Januar 2024"
       },
       {
-        "name": "Sandra M., 45",
+        "name": "Sandra M.",
+        "age": "45 Jahre",
+        "treatment": "Haartransplantation mit Saphir-FUE, 1.800 Grafts",
+        "quote": "Als Frau war es mir besonders wichtig, einen Spezialisten zu finden, der Erfahrung mit weiblichem Haarausfall hat. In der Dion Hair Clinic fühlte ich mich von Anfang an gut aufgehoben. Die Behandlung war schmerzfrei und die Ergebnisse sind fantastisch.",
         "rating": 5,
         "text": "Als Frau war es mir besonders wichtig, einen Spezialisten zu finden, der Erfahrung mit weiblichem Haarausfall hat. In der Dion Hair Clinic fühlte ich mich von Anfang an gut aufgehoben. Die Behandlung war schmerzfrei und die Ergebnisse sind fantastisch.",
         "procedure": "Saphir-FUE, 1.800 Grafts",

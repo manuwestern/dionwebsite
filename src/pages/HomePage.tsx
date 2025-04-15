@@ -3,7 +3,7 @@ import SEO from '../components/seo/SEO';
 import HeroSection from '../components/home/HeroSection';
 import BenefitsSection from '../components/home/BenefitsSection';
 import TreatmentAreasSection from '../components/home/TreatmentAreasSection';
-import TestimonialsSection from '../components/hairTransplantation/TestimonialsSection';
+import TestimonialsSection from '../components/home/TestimonialsSection';
 import PainlessTreatmentSection from '../components/home/PainlessTreatmentSection';
 import AppSection from '../components/home/AppSection';
 import FAQSection from '../components/home/FAQSection';
