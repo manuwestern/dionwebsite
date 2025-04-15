@@ -68,17 +68,15 @@ const DPISection: React.FC = () => {
         </div>
         
         {/* Mobile Image - Only visible on mobile */}
-        <div className="md:hidden mb-8 mx-auto max-w-md">
-          <div className="relative rounded-xl overflow-hidden shadow-lg">
+        <div className="md:hidden mb-8 mx-auto max-w-none -mx-4">
+          <div className="relative">
             <img 
               src="/images/DionPainlessInjection.webp" 
               alt="Dion Painless Injection Technology" 
-              className="w-full h-auto"
+              className="w-full h-auto object-cover"
               loading="lazy"
             />
-            {/* Light gradient behind the image */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent -z-10"></div>
-            <div className="absolute bottom-4 left-4 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-1 rounded-full">
+            <div className="absolute bottom-4 left-8 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-1 rounded-full">
               {t('dpiSection.premiumOption')}
             </div>
           </div>

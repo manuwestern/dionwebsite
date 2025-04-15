@@ -63,7 +63,7 @@ const CareSection: React.FC = () => {
           </p>
         </div>
         
-        {/* Mobile Image - Only visible on mobile */}
+        {/* Mobile Image with App Store Icons - Only visible on mobile */}
         <div className="md:hidden mb-8 mx-auto max-w-md">
           <div className="relative">
             <img 
@@ -79,6 +79,8 @@ const CareSection: React.FC = () => {
               ab Mai 2025
             </div>
           </div>
+          
+          {/* App store icons removed from mobile view */}
         </div>
         
         {/* Content with image for desktop */}
@@ -99,7 +101,7 @@ const CareSection: React.FC = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                  <div className="absolute top-4 right-4 bg-[#7BA7C2] text-white text-sm font-medium px-3 py-1 rounded-full transform rotate-12">
+                  <div className="absolute top-10 right-10 bg-[#7BA7C2] text-white text-sm font-medium px-3 py-1 rounded-full transform rotate-12">
                     ab Mai 2025
                   </div>
                 </div>
@@ -156,7 +158,7 @@ const CareSection: React.FC = () => {
                 </div>
                 
                 {/* App store info and icons */}
-                <div className="mt-8 p-4 bg-[#7BA7C2]/5 rounded-xl">
+                <div className="mt-8">
                   <p className={`${fontSize.sm} ${textColor.dark} mb-4 text-center md:text-left`}>
                     {t('careSection.appStoreInfo')}
                   </p>

@@ -243,8 +243,8 @@
   "careSection": {
     "title": "Dion App - Ihr Begleiter für Vor- und Nachsorge",
     "subtitle": "Ihr digitaler Assistent für eine optimale Vor- und Nachsorge - Unsere innovative Smartphone-App unterstützt Sie durch den gesamten Behandlungsprozess mit personalisierten Anleitungen und Erinnerungen",
-    "description": "Mit der Dion App bieten wir Ihnen einen umfassenden digitalen Assistenten als Smartphone-App, der Sie durch den gesamten Prozess Ihrer Barthaartransplantation führt - von der Vorbereitung über den Eingriff bis hin zur langfristigen Nachsorge.",
-    "subheading": "Ihr digitaler Assistent für den gesamten Behandlungsprozess",
+    "description": "Die Dion App führt Sie durch den gesamten Prozess Ihrer Barthaartransplantation - von der Vorbereitung bis zur Nachsorge.",
+    "subheading": "Ihr digitaler Begleiter für Ihre Behandlung",
     "features": [
       {
         "title": "Terminplanung",
@@ -259,7 +259,7 @@
         "description": "Detaillierte Pflegeanleitungen, z.B. zur Bartwäsche nach der Transplantation"
       },
       {
-        "title": "Fortschrittsdokumentation",
+        "title": "Fortschritts-\ndokumentation",
         "description": "Dokumentieren Sie Ihren Wachstumsverlauf mit Fotos und Notizen"
       },
       {
