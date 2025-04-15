@@ -11,10 +11,12 @@ if (process.env.NODE_ENV !== 'production') {
   // Only enable in development mode for now
   console.log('Performance monitoring enabled in development mode');
   initPerformanceMonitoring();
-} else {
-  // Register service worker only in production mode
-  registerServiceWorker();
 }
+// Service worker registration disabled due to caching issues
+// else {
+//   // Register service worker only in production mode
+//   registerServiceWorker();
+// }
 
 // Render the React app
 createRoot(document.getElementById('root')!).render(

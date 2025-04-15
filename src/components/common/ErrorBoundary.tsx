@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { clearCachesAndReload } from '../../utils/service-worker-registration';
 
 interface Props {
   children: ReactNode;
@@ -43,8 +42,8 @@ class ErrorBoundary extends Component<Props, State> {
     });
   }
 
-  handleClearCacheAndReload = (): void => {
-    clearCachesAndReload();
+  handleReload = (): void => {
+    window.location.reload();
   };
 
   render(): ReactNode {
@@ -63,10 +62,10 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-4">
               <button
-                onClick={this.handleClearCacheAndReload}
+                onClick={this.handleReload}
                 className="w-full bg-[#7BA7C2] hover:bg-[#5A8BA6] text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
               >
-                Cache löschen und neu laden
+                Seite neu laden
               </button>
               <a
                 href="/"

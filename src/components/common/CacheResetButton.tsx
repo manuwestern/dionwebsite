@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { clearCachesAndReload } from '../../utils/service-worker-registration';
 
 /**
- * CacheResetButton-Komponente, die einen Button anzeigt, der den Cache löscht und die Seite neu lädt
+ * CacheResetButton-Komponente, die einen Button anzeigt, der die Seite neu lädt
  * Diese Komponente kann verwendet werden, wenn der Benutzer auf einen 404-Fehler stößt
  */
 const CacheResetButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleClearCacheAndReload = (): void => {
+  const handleReload = (): void => {
     setIsLoading(true);
     // Kurze Verzögerung, um den Ladeindikator anzuzeigen
     setTimeout(() => {
-      clearCachesAndReload();
+      window.location.reload();
     }, 500);
   };
 
@@ -34,11 +33,11 @@ const CacheResetButton: React.FC = () => {
       </div>
       <h3 className="text-sm font-medium text-gray-900 mb-1">Probleme mit der Seite?</h3>
       <p className="text-xs text-gray-600 mb-3">
-        Wenn Sie Probleme beim Laden der Seite haben, könnte es an einem veralteten Cache liegen.
+        Wenn Sie Probleme beim Laden der Seite haben, versuchen Sie die Seite neu zu laden.
       </p>
       <div className="flex flex-col space-y-2">
         <button
-          onClick={handleClearCacheAndReload}
+          onClick={handleReload}
           disabled={isLoading}
           className="w-full bg-[#7BA7C2] hover:bg-[#5A8BA6] text-white text-xs font-medium py-2 px-3 rounded transition-colors duration-300 flex items-center justify-center"
         >
@@ -48,10 +47,10 @@ const CacheResetButton: React.FC = () => {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Cache wird gelöscht...
+              Seite wird neu geladen...
             </>
           ) : (
-            'Cache löschen und neu laden'
+            'Seite neu laden'
           )}
         </button>
         <button

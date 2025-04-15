@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { clearCachesAndReload } from '../../utils/service-worker-registration';
 
 /**
  * NotFoundPage-Komponente, die angezeigt wird, wenn eine Seite nicht gefunden wurde
  * Bietet auch die Möglichkeit, den Cache zu löschen und die Seite neu zu laden
  */
 const NotFoundPage: React.FC = () => {
-  const handleClearCacheAndReload = (): void => {
-    clearCachesAndReload();
+  const handleReload = (): void => {
+    window.location.reload();
   };
 
   return (
@@ -25,10 +24,10 @@ const NotFoundPage: React.FC = () => {
         </p>
         <div className="space-y-4">
           <button
-            onClick={handleClearCacheAndReload}
+            onClick={handleReload}
             className="w-full bg-[#7BA7C2] hover:bg-[#5A8BA6] text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
           >
-            Cache löschen und neu laden
+            Seite neu laden
           </button>
           <Link
             to="/"
