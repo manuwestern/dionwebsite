@@ -21,7 +21,7 @@ const MethodsSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('methodsSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} hyphens-auto break-words`} lang="de" style={{ overflowWrap: 'break-word', wordWrap: 'break-word' }}>{t('methodsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
