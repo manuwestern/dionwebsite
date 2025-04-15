@@ -68,17 +68,15 @@ const PainlessTreatmentSection: React.FC = () => {
         </div>
         
         {/* Mobile Image - Only visible on mobile */}
-        <div className="md:hidden mb-8 mx-auto max-w-none -mx-4">
-          <div className="relative">
+        <div className="md:hidden mb-8 mx-auto max-w-none -mx-6 sm:-mx-8">
+          <div className="relative w-[110%] sm:w-[120%] transform -translate-x-[5%] sm:-translate-x-[10%]">
             <img 
               src="/images/DionPainlessInjection.webp" 
               alt="Dion Painless Injection Technology" 
               className="w-full h-auto object-cover"
               loading="lazy"
             />
-            <div className="absolute bottom-4 left-8 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-1 rounded-full">
-              {t('painlessTreatmentSection.premiumOption')}
-            </div>
+            
           </div>
         </div>
         

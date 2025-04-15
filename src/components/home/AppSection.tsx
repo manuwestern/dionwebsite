@@ -43,7 +43,7 @@ const AppSection: React.FC = () => {
         <div className="flex flex-col gap-8 items-center">
           {/* Mobile App mockup - Only visible on mobile */}
           <div className="lg:hidden relative">
-            <div className="max-w-xs mx-auto relative -mt-8">
+            <div className="max-w-[240px] sm:max-w-[260px] mx-auto relative -mt-4 mb-4">
               <div className="relative">
                 <img 
                   src="/images/dionapp.webp" 
@@ -51,19 +51,19 @@ const AppSection: React.FC = () => {
                   className="w-full h-auto"
                   loading="lazy"
                   decoding="async"
-                  width="320"
-                  height="640"
+                  width="240"
+                  height="480"
                 />
                 
                 {/* Badge "ab Mai 2025" */}
-                <div className="absolute top-3 right-3 bg-[#7BA7C2] text-white px-3 py-1 rounded-full shadow-md transform rotate-12 text-sm font-medium">
+                <div className="absolute top-2 right-2 bg-[#7BA7C2] text-white px-2 py-0.5 rounded-full shadow-md transform rotate-12 text-xs font-medium">
                   ab Mai 2025
                 </div>
               </div>
               
               {/* Decorative elements */}
-              <div className="absolute -z-10 w-64 h-64 bg-[#7BA7C2]/5 rounded-full -bottom-10 -left-10"></div>
-              <div className="absolute -z-10 w-32 h-32 bg-[#7BA7C2]/10 rounded-full -top-5 right-10"></div>
+              <div className="absolute -z-10 w-48 h-48 bg-[#7BA7C2]/5 rounded-full -bottom-8 -left-8"></div>
+              <div className="absolute -z-10 w-24 h-24 bg-[#7BA7C2]/10 rounded-full -top-4 right-8"></div>
             </div>
             
             {/* App store icons removed as requested */}
