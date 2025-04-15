@@ -236,7 +236,7 @@ const ContactSection: React.FC = () => {
                       ) : (
                         <>
                           <span className={buttonRippleClass}></span>
-                          <span className={`relative flex items-center ${textStyle.button} uppercase`}>
+                          <span className={`relative flex items-center ${textStyle.button}`}>
                             {t('contactSection.form.submit')}
                             <ArrowRight className={buttonArrowClass} />
                           </span>

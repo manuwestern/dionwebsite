@@ -24,7 +24,7 @@ const MethodsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('methodsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
             {t('methodsSection.subtitle')}
           </p>
         </div>
@@ -80,7 +80,7 @@ const MethodsSection: React.FC = () => {
                   {/* Method Content */}
                   <div className="p-4 sm:p-6 md:p-8">
                     {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} mb-8`}>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto mb-8`} lang="de">
                       {method.description}
                     </p>
                     
@@ -143,13 +143,13 @@ const MethodsSection: React.FC = () => {
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/2">
               <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('methodsSection.additionalInfo.personalConsultation.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                 {t('methodsSection.additionalInfo.personalConsultation.description')}
               </p>
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
               <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('methodsSection.additionalInfo.combinedTechniques.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                 {t('methodsSection.additionalInfo.combinedTechniques.description')}
               </p>
             </div>

@@ -335,7 +335,7 @@ const ContactFormSection: React.FC = () => {
                   className={`w-full ${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] block text-center disabled:opacity-70`}
                 >
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center justify-center ${textStyle.button}`}>
                     {isSubmitting ? (
                       <>
                         <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

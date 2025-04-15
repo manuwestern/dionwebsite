@@ -78,7 +78,7 @@ const HeroSection: React.FC = () => {
                   onClick={scrollToForm}
                 >
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('formSection.title')}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
@@ -141,7 +141,7 @@ const HeroSection: React.FC = () => {
                 onClick={scrollToForm}
               >
                 <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                <span className={`relative flex items-center ${textStyle.button}`}>
                   {t('formSection.title')}
                   <ArrowRight className={`${buttonArrowClass} ml-2`} />
                 </span>

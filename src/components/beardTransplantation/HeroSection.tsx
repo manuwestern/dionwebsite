@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking } from '../../utils/typography';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 
 const HeroSection: React.FC = () => {
@@ -58,13 +58,13 @@ const HeroSection: React.FC = () => {
             <div className="space-y-6 mt-4">
               {/* Title with elegant animation and perfect typography */}
               <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
-              <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto whitespace-pre-line`} lang="de">
+              <h1 className={`${textStyle.heroTitle} text-center px-1 ${lineHeight.tight} break-words hyphens-auto whitespace-pre-line`} lang="de">
                   {t('heroSection.title')}
                 </h1>
                 
                 {/* Subtitle with refined styling */}
                 <div className="mt-3 mb-2">
-                  <span className={`block text-center ${fontSize.h4} ${textColor.medium} ${fontWeight.light} ${tracking.wider} leading-relaxed`}>
+                  <span className={`block text-center ${fontSize.h4} ${textColor.medium} ${fontWeight.light} ${tracking.wider} ${lineHeight.relaxed}`}>
                     {t('heroSection.subtitle')}
                   </span>
                 </div>
@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
               
               {/* Welcome text with perfect spacing and animation */}
               <div className={`px-2 transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto leading-relaxed`}>
+                <p className={`${textStyle.bodyText} text-center max-w-md mx-auto ${lineHeight.relaxed}`}>
                   {t('heroSection.welcomeText')}
                 </p>
               </div>
@@ -87,7 +87,7 @@ const HeroSection: React.FC = () => {
                   className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
                 >
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
@@ -126,13 +126,13 @@ const HeroSection: React.FC = () => {
           <div className="relative z-10 w-[50%] flex flex-col justify-center h-full pt-6 pr-12">
             {/* Title with elegant animation and perfect typography */}
             <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
-              <h1 className={`${textStyle.heroTitle} text-left leading-tight break-words hyphens-auto whitespace-pre-line`} lang="de">
+              <h1 className={`${textStyle.heroTitle} text-left ${lineHeight.tight} break-words hyphens-auto whitespace-pre-line`} lang="de">
                 {t('heroSection.title')}
               </h1>
               
               {/* Subtitle with refined styling */}
               <div className="mt-3 mb-2">
-                <span className={`block ${fontSize.h3} ${textColor.medium} ${fontWeight.light} ${tracking.elegant} leading-relaxed`}>
+                <span className={`block ${fontSize.h3} ${textColor.medium} ${fontWeight.light} ${tracking.elegant} ${lineHeight.relaxed}`}>
                   {t('heroSection.subtitle')}
                 </span>
               </div>
@@ -143,7 +143,7 @@ const HeroSection: React.FC = () => {
             
             {/* Welcome text with perfect spacing and animation */}
             <div className={`transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <p className={`${textStyle.bodyTextImportant} max-w-2xl leading-relaxed`}>
+              <p className={`${textStyle.bodyTextImportant} max-w-2xl ${lineHeight.relaxed}`}>
                 {t('heroSection.welcomeText')}
               </p>
             </div>
@@ -152,15 +152,15 @@ const HeroSection: React.FC = () => {
             <div className={`flex gap-14 mt-12 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>98%</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.satisfiedPatients', { ns: 'common' })}</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} ${tracking.wide}`}>{t('stats.satisfiedPatients', { ns: 'common' })}</span>
               </div>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>5.000+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.successfulTreatments', { ns: 'common' })}</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} ${tracking.wide}`}>{t('stats.successfulTreatments', { ns: 'common' })}</span>
               </div>
               <div className="flex flex-col">
                 <span className={`${textStyle.stat} text-[#7BA7C2]`}>15+</span>
-                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} tracking-wide`}>{t('stats.yearsExperience', { ns: 'common' })}</span>
+                <span className={`${fontSize.sm} ${textColor.light} ${fontWeight.light} ${tracking.wide}`}>{t('stats.yearsExperience', { ns: 'common' })}</span>
               </div>
             </div>
             
@@ -171,7 +171,7 @@ const HeroSection: React.FC = () => {
                 className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
               >
                 <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                <span className={`relative flex items-center ${textStyle.button}`}>
                   {t('buttons.consultation', { ns: 'common' })}
                   <ArrowRight className={`${buttonArrowClass} ml-2`} />
                 </span>

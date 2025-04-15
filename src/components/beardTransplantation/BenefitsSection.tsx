@@ -50,7 +50,7 @@ const BenefitsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('benefitsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-4 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6 hyphens-auto`} lang="de">
             {t('benefitsSection.subtitle')}
           </p>
         </div>
@@ -81,14 +81,14 @@ const BenefitsSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('benefitsSection.cta.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                   {t('benefitsSection.cta.description')}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
                 <Link to="/kontakt" className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>

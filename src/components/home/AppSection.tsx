@@ -86,13 +86,15 @@ const AppSection: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
                   <div className="mb-3 md:mb-0 md:mr-4 md:mt-1">
-                    <div className="w-10 h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center">
-                      {feature.icon}
+                    <div className="w-14 h-14 md:w-10 md:h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto md:mx-0">
+                      {React.cloneElement(feature.icon as React.ReactElement, { 
+                        className: `w-7 h-7 md:w-6 md:h-6 text-[#7BA7C2] transition-all duration-300` 
+                      })}
                     </div>
                   </div>
-                  <div>
-                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-1`}>{feature.title}</h4>
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{feature.description}</p>
+                  <div className="flex-grow">
+                    <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-2 text-center md:text-left`}>{feature.title}</h4>
+                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">{feature.description}</p>
                   </div>
                 </div>
               ))}

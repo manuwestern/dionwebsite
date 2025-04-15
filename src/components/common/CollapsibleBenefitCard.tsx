@@ -39,8 +39,8 @@ const CollapsibleBenefitCard: React.FC<CollapsibleBenefitCardProps> = ({
           ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
           : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
       }`}>
-        {/* Header with icon and title side by side */}
-        <div className="relative h-20 overflow-hidden flex items-center">
+        {/* Header with icon above title on mobile, side by side on desktop */}
+        <div className="relative overflow-hidden flex flex-row h-16 md:h-20 items-center justify-start py-4 md:py-0">
           {/* Gradient background */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/80"></div>
           
@@ -48,8 +48,8 @@ const CollapsibleBenefitCard: React.FC<CollapsibleBenefitCardProps> = ({
           <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/10 -mr-20 -mt-20"></div>
           <div className="absolute bottom-0 left-0 w-20 h-20 rounded-full bg-white/10 -ml-10 -mb-10"></div>
           
-          {/* Icon container */}
-          <div className="relative z-10 ml-6 mr-4">
+          {/* Icon container - centered on mobile, left-aligned on desktop */}
+          <div className="relative z-10 ml-4 md:ml-6 mr-3 md:mr-4">
             <div className={`w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-500 ${
               isHovered ? 'scale-110 bg-white/30' : ''
             }`}>
@@ -59,35 +59,37 @@ const CollapsibleBenefitCard: React.FC<CollapsibleBenefitCardProps> = ({
             </div>
           </div>
           
-          {/* Title */}
-          <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{title}</h3>
+          {/* Title - centered on mobile, left-aligned on desktop */}
+          <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm text-left flex-1 pr-12 md:pr-6 line-clamp-2`}>{title}</h3>
           
-          {/* Mobile toggle button - only visible on mobile */}
-          {isExpanded ? (
-            <button 
-              className="md:hidden relative z-10 mr-4 p-2 text-white focus:outline-none"
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleExpand();
-              }}
-              aria-expanded="true"
-              aria-label="Collapse card"
-            >
-              <ChevronUp size={20} />
-            </button>
-          ) : (
-            <button 
-              className="md:hidden relative z-10 mr-4 p-2 text-white focus:outline-none"
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleExpand();
-              }}
-              aria-expanded="false"
-              aria-label="Expand card"
-            >
-              <ChevronDown size={20} />
-            </button>
-          )}
+          {/* Mobile toggle button - only visible on mobile, positioned absolutely */}
+          <div className="absolute top-4 right-4 md:hidden">
+            {isExpanded ? (
+              <button 
+                className="relative z-10 p-2 text-white focus:outline-none"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleExpand();
+                }}
+                aria-expanded="true"
+                aria-label="Collapse card"
+              >
+                <ChevronUp size={20} />
+              </button>
+            ) : (
+              <button 
+                className="relative z-10 p-2 text-white focus:outline-none"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleExpand();
+                }}
+                aria-expanded="false"
+                aria-label="Expand card"
+              >
+                <ChevronDown size={20} />
+              </button>
+            )}
+          </div>
         </div>
         
         {/* Content with subtle gradient */}
@@ -97,7 +99,7 @@ const CollapsibleBenefitCard: React.FC<CollapsibleBenefitCardProps> = ({
             md:max-h-none md:p-6 md:h-auto md:min-h-[180px] md:h-[200px]`}
         >
           {/* Description with perfect typography */}
-          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow text-center md:text-left`}>
+          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
             {description}
           </p>
         </div>

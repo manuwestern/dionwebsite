@@ -88,7 +88,7 @@ const FAQSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('faqSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
             {t('faqSection.subtitle')}
           </p>
         </div>
@@ -189,7 +189,7 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-4">
-                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left`}>
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                           {faq.answer}
                         </p>
                       </div>
@@ -213,7 +213,7 @@ const FAQSection: React.FC = () => {
                   </div>
                 </div>
                 <h3 className={`${fontSize.h4} ${fontWeight.light} ${textColor.dark} mb-2`}>{t('faq.noResults.title', { ns: 'common' })}</h3>
-                <p className={`${textColor.medium} ${fontWeight.light}`}>{t('faq.noResults.description', { ns: 'common' })}</p>
+                <p className={`${textColor.medium} ${fontWeight.light} max-w-[280px] mx-auto hyphens-auto`} lang="de">{t('faq.noResults.description', { ns: 'common' })}</p>
               </div>
             </div>
           )}
@@ -229,14 +229,14 @@ const FAQSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('faq.moreQuestions.title', { ns: 'common' })}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                   {t('faq.moreQuestions.description', { ns: 'common' })}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
                 <Link to="/kontakt" className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>

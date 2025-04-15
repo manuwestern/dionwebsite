@@ -97,10 +97,10 @@ const TestimonialsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
             {t('testimonialsSection.subtitle')}
           </p>
-          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mt-4 max-w-3xl mx-auto`}>
+          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} mt-4 max-w-3xl mx-auto hyphens-auto`} lang="de">
             {t('testimonialsSection.intro')}
           </p>
         </div>
@@ -133,7 +133,7 @@ const TestimonialsSection: React.FC = () => {
                     } mb-3`}>
                       {stat.value}
                     </div>
-                    <div className={`${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>{stat.label}</div>
+                    <div className={`${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} hyphens-auto`} lang="de">{stat.label}</div>
                   </div>
                 </div>
                 
@@ -169,7 +169,7 @@ const TestimonialsSection: React.FC = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.before')}</div>
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full ${fontSize.sm} ${fontWeight.light} backdrop-blur-sm">{t('testimonialsSection.before')}</div>
               </div>
               
               <div className="relative rounded-2xl overflow-hidden shadow-lg group">
@@ -186,7 +186,7 @@ const TestimonialsSection: React.FC = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.after')}</div>
+                <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full ${fontSize.sm} ${fontWeight.light} backdrop-blur-sm">{t('testimonialsSection.after')}</div>
               </div>
             </div>
             
@@ -243,7 +243,7 @@ const TestimonialsSection: React.FC = () => {
                 </div>
                 
                 {/* Testimonial Text */}
-                <p className={`${textColor.dark} ${fontWeight.light} ${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left`}>"{testimonial.text}"</p>
+                <p className={`${textColor.dark} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">"{testimonial.text}"</p>
                 
                 {/* Rating */}
                 <div className="flex justify-center md:justify-start mb-4 relative z-10">
@@ -273,14 +273,14 @@ const TestimonialsSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('testimonialsSection.ctaSection.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                   {t('testimonialsSection.ctaSection.description')}
                 </p>
               </div>
               <div className="md:w-1/3 flex justify-center md:justify-end">
                 <Link to="/kontakt" className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('testimonialsSection.cta')}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>

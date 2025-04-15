@@ -78,7 +78,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
           className={`w-full ${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] block text-center`}
         >
           <span className={buttonRippleClass}></span>
-          <span className={`relative flex items-center justify-center ${textStyle.button} uppercase tracking-widest`}>
+          <span className={`relative flex items-center justify-center ${textStyle.button}`}>
             {buttonText}
             <ArrowRight className={`${buttonArrowClass} ml-2`} />
           </span>

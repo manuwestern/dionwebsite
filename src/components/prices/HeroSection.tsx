@@ -85,7 +85,7 @@ const HeroSection: React.FC = () => {
                   className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
                 >
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
@@ -94,7 +94,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Price tag section */}
-            <div className="mt-10 mb-12 relative">
+            <div className="mt-12 mb-12 relative">
               {/* Decorative price tag elements */}
               <div className={`relative flex justify-center transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                 {/* Decorative price tags - Grid layout for better mobile display */}
@@ -174,7 +174,7 @@ const HeroSection: React.FC = () => {
                 className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
               >
                 <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                <span className={`relative flex items-center ${textStyle.button}`}>
                   {t('buttons.consultation', { ns: 'common' })}
                   <ArrowRight className={`${buttonArrowClass} ml-2`} />
                 </span>

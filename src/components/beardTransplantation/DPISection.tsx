@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, ShieldCheck, Zap, HeartPulse, Sparkles } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
@@ -56,7 +56,7 @@ const DPISection: React.FC = () => {
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header with elegant design - exactly matching other sections */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('dpiSection.title')}</h2>
@@ -67,58 +67,100 @@ const DPISection: React.FC = () => {
           </p>
         </div>
         
-        {/* Additional Advantages Box - Exactly matching the ProcessSection */}
+        {/* Mobile Image - Only visible on mobile */}
+        <div className="md:hidden mb-8 mx-auto max-w-md">
+          <div className="relative rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src="/images/DionPainlessInjection.webp" 
+              alt="Dion Painless Injection Technology" 
+              className="w-full h-auto"
+              loading="lazy"
+            />
+            {/* Light gradient behind the image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent -z-10"></div>
+            <div className="absolute bottom-4 left-4 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-1 rounded-full">
+              {t('dpiSection.premiumOption')}
+            </div>
+          </div>
+        </div>
+        
+        {/* Content with image for desktop */}
         <div className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
             
-            <div className="relative z-10">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('dpiSection.benefitsTitle')}</h3>
-              
-              <p className={`${textStyle.bodyText} mb-8 text-center md:text-left`}>
-                {t('dpiSection.description')}
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {featureItems.map((item, index) => {
-                  const isHovered = index === hoverFeature;
-                  
-                  return (
-                    <div 
-                      key={index}
-                      className="relative group"
-                      onMouseEnter={() => setHoverFeature(index)}
-                      onMouseLeave={() => setHoverFeature(null)}
-                    >
-                      <div className={`flex gap-4 p-6 rounded-xl transition-all duration-300 ${
-                        isHovered 
-                          ? 'bg-[#7BA7C2]/5 shadow-sm' 
-                          : 'hover:bg-[#7BA7C2]/5'
-                      }`}>
-                        <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+            <div className="relative z-10 flex flex-col md:flex-row gap-8">
+              {/* Content section */}
+              <div className="flex-1">
+                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('dpiSection.benefitsTitle')}</h3>
+                
+                <p className={`${textStyle.bodyText} mb-8 text-center md:text-left`}>
+                  {t('dpiSection.description')}
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {featureItems.map((item, index) => {
+                    const isHovered = index === hoverFeature;
+                    
+                    return (
+                      <div 
+                        key={index}
+                        className="relative group"
+                        onMouseEnter={() => setHoverFeature(index)}
+                        onMouseLeave={() => setHoverFeature(null)}
+                      >
+                        <div className={`flex flex-col md:flex-row gap-4 p-5 rounded-xl transition-all duration-300 ${
                           isHovered 
-                            ? 'bg-[#7BA7C2] text-white' 
-                            : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
+                            ? 'bg-[#7BA7C2]/5 shadow-sm' 
+                            : 'hover:bg-[#7BA7C2]/5'
                         }`}>
-                          {item.icon}
-                        </div>
-                        
-                        <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 ${
-                            isHovered ? textColor.primary : textColor.dark
+                          <div className={`flex-shrink-0 w-14 h-14 md:w-12 md:h-12 rounded-full mx-auto md:mx-0 mb-3 md:mb-0 flex items-center justify-center transition-all duration-300 ${
+                            isHovered 
+                              ? 'bg-[#7BA7C2] text-white' 
+                              : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
                           }`}>
-                            {item.title}
-                          </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
-                            {item.description}
-                          </p>
+                            {React.cloneElement(item.icon as React.ReactElement, { 
+                              className: `w-7 h-7 md:w-6 md:h-6 transition-all duration-300` 
+                            })}
+                          </div>
+                          
+                          <div className="flex-grow">
+                            <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 text-center md:text-left ${
+                              isHovered ? textColor.primary : textColor.dark
+                            }`}>
+                              {item.title}
+                            </h4>
+                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                              {item.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
+              </div>
+              
+              {/* Image section - Only visible on desktop */}
+              <div className="hidden md:block md:w-2/5 lg:w-1/3 flex-shrink-0">
+                <div className="relative h-full rounded-xl overflow-hidden shadow-lg">
+                  <img 
+                    src="/images/DionPainlessInjection.webp" 
+                    alt="Dion Painless Injection Technology" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  {/* Light gradient behind the image */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent -z-10"></div>
+                  <div className="absolute top-4 right-4 bg-[#7BA7C2] text-white text-sm font-medium px-3 py-1 rounded-full">
+                    {t('dpiSection.premiumOption')}
+                  </div>
+                  <div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm text-[#7BA7C2] text-sm font-medium px-3 py-1 rounded-full">
+                    {t('dpiSection.additionalFee')}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

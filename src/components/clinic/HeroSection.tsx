@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
                   className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
                 >
                   <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                  <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('buttons.consultation', { ns: 'common' })}
                     <ArrowRight className={`${buttonArrowClass} ml-2`} />
                   </span>
@@ -152,7 +152,7 @@ const HeroSection: React.FC = () => {
                 className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] inline-block`}
               >
                 <span className={buttonRippleClass}></span>
-                <span className={`relative flex items-center ${textStyle.button} uppercase tracking-widest`}>
+                <span className={`relative flex items-center ${textStyle.button}`}>
                   {t('buttons.consultation', { ns: 'common' })}
                   <ArrowRight className={`${buttonArrowClass} ml-2`} />
                 </span>
