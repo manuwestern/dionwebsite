@@ -58,7 +58,7 @@ const CareSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('careSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
             {t('careSection.subtitle')}
           </p>
         </div>
@@ -145,7 +145,7 @@ const CareSection: React.FC = () => {
                             }`}>
                               {feature.title}
                             </h4>
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                               {feature.description}
                             </p>
                           </div>

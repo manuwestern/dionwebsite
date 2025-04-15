@@ -189,7 +189,7 @@ const FAQSection: React.FC = () => {
                       }`}
                     >
                       <div className="p-6 pt-4">
-                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                        <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                           {faq.answer}
                         </p>
                       </div>
