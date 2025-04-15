@@ -1,0 +1,3 @@
+# Netlify Redirects
+# Leite alle Anfragen an die index.html weiter, um clientseitiges Routing zu unterstützen
+/*    /index.html   200
