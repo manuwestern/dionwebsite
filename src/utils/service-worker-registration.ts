@@ -110,77 +110,23 @@ function checkForUpdates(swUrl: string) {
 
 /**
  * Zeigt eine Benachrichtigung an, wenn ein Update verfügbar ist
+ * (Deaktiviert, um keine störenden Hinweise anzuzeigen)
  */
 function showUpdateNotification() {
-  // Implementiere hier eine Benachrichtigung für den Benutzer
-  // z.B. mit einem Toast oder einem Banner
+  // Aktualisierungshinweis deaktiviert
+  console.log('Neuer Service Worker verfügbar. Aktualisierungshinweis deaktiviert.');
   
-  // Beispiel für eine einfache Benachrichtigung
-  if ('Notification' in window && Notification.permission === 'granted') {
-    new Notification('Dion Hair Clinic', {
-      body: 'Ein Update ist verfügbar. Bitte laden Sie die Seite neu, um die neuesten Funktionen zu erhalten.',
-      icon: '/images/DionHairClinic_Logo.svg'
-    });
-  } else {
-    // Fallback für Browser ohne Notification API oder ohne Berechtigung
-    const updateBanner = document.createElement('div');
-    updateBanner.style.position = 'fixed';
-    updateBanner.style.bottom = '0';
-    updateBanner.style.left = '0';
-    updateBanner.style.right = '0';
-    updateBanner.style.backgroundColor = '#7BA7C2';
-    updateBanner.style.color = 'white';
-    updateBanner.style.padding = '1rem';
-    updateBanner.style.textAlign = 'center';
-    updateBanner.style.zIndex = '9999';
-    
-    updateBanner.innerHTML = `
-      <p style="margin: 0; display: flex; justify-content: space-between; align-items: center;">
-        <span>Ein Update ist verfügbar. Bitte laden Sie die Seite neu, um die neuesten Funktionen zu erhalten.</span>
-        <button style="background: white; color: #7BA7C2; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin-left: 1rem;">
-          Jetzt aktualisieren
-        </button>
-        <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1.5rem; margin-left: 1rem;">
-          &times;
-        </button>
-      </p>
-    `;
-    
-    document.body.appendChild(updateBanner);
-    
-    // Event-Handler für die Schaltflächen
-    const updateButton = updateBanner.querySelector('button:first-of-type');
-    const closeButton = updateBanner.querySelector('button:last-of-type');
-    
-    if (updateButton) {
-      updateButton.addEventListener('click', () => {
-        window.location.reload();
-      });
-    }
-    
-    if (closeButton) {
-      closeButton.addEventListener('click', () => {
-        updateBanner.remove();
-      });
-    }
-  }
+  // Automatisch im Hintergrund aktualisieren, ohne den Benutzer zu stören
+  // Bei der nächsten Seitenaktualisierung wird die neue Version verwendet
 }
 
 /**
  * Zeigt eine Benachrichtigung an, wenn die Offline-Funktionalität bereit ist
+ * (Deaktiviert, um keine störenden Hinweise anzuzeigen)
  */
 function showOfflineReadyNotification() {
-  // Implementiere hier eine Benachrichtigung für den Benutzer
-  // z.B. mit einem Toast oder einem Banner
-  
-  // Beispiel für eine einfache Benachrichtigung
-  if ('Notification' in window && Notification.permission === 'granted') {
-    new Notification('Dion Hair Clinic', {
-      body: 'Die Website ist jetzt für die Offline-Nutzung verfügbar.',
-      icon: '/images/DionHairClinic_Logo.svg'
-    });
-  }
-  // Für diesen Fall keine Banner-Benachrichtigung, da es für den Benutzer nicht so wichtig ist
+  // Offline-Benachrichtigung deaktiviert
+  console.log('Service Worker installiert. Offline-Funktionalität bereit. Benachrichtigung deaktiviert.');
 }
 
 /**
