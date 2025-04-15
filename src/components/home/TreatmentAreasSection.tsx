@@ -251,44 +251,6 @@ const TreatmentAreasSection: React.FC = () => {
             );
           })}
         </div>
-        
-        {/* Elegant CTA Section */}
-        <div className={`mt-12 md:mt-20 relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
-            
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-              <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('treatmentAreasSection.cta.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
-                  {/* Different text for mobile and desktop */}
-                  <span className="md:hidden">
-                    {t('treatmentAreasSection.cta.mobileDescription')}
-                  </span>
-                  <span className="hidden md:inline">
-                    {t('treatmentAreasSection.cta.description')}
-                  </span>
-                </p>
-              </div>
-              <div className="md:w-1/3 flex justify-center md:justify-end">
-                {/* New button design for all screen sizes */}
-                <Link 
-                  to="/kontakt" 
-                  className={`${buttonStyle.primary} w-4/5 md:w-auto shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
-                >
-                  <span className={buttonRippleClass}></span>
-                  <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
-                    {t('buttons.consultation', { ns: 'common' })}
-                    <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

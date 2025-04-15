@@ -7,7 +7,7 @@
  */
 
 // Basis-Button-Klassen, die für alle Buttons gelten
-export const buttonBase = "group relative inline-flex items-center justify-center overflow-hidden transition-all duration-300 shadow-md font-medium";
+export const buttonBase = "group relative inline-flex items-center justify-center overflow-hidden transition-all duration-300 shadow-md font-medium uppercase";
 
 // Größen-Varianten für Buttons
 export const buttonSize = {
