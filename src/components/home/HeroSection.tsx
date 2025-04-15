@@ -44,9 +44,9 @@ const HeroSection: React.FC = () => {
             <div className="space-y-6 mt-4">
               {/* Title with elegant animation and perfect typography */}
               <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
-              <h1 className={`${textStyle.heroTitle} text-3xl md:text-4xl lg:text-5xl text-center px-1 leading-tight md:leading-snug lg:leading-normal break-words hyphens-auto`} lang="de">
-                {t('heroSection.title')}
-              </h1>
+                <h1 className={`${textStyle.heroTitle} text-center px-1 leading-tight break-words hyphens-auto`} lang="de">
+                  {t('heroSection.title')}
+                </h1>
                 
                 {/* Subtitle with refined styling */}
                 <div className="mt-3 mb-2">

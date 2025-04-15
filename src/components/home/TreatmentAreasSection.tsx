@@ -82,10 +82,10 @@ const TreatmentAreasSection: React.FC = () => {
         <div className="text-center mb-12 md:mb-20">
           <div className="inline-block relative">
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle} text-3xl md:text-4xl lg:text-5xl leading-tight md:leading-snug lg:leading-normal px-2 md:px-0 mb-4 hyphens-auto break-words`} lang="de">{t('treatmentAreasSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} mb-4`} lang="de">{t('treatmentAreasSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} text-sm md:text-base lg:text-lg leading-relaxed md:leading-relaxed max-w-[95%] md:max-w-3xl mx-auto mt-4 md:mt-6 px-2 md:px-0`}>
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`}>
             {t('treatmentAreasSection.subtitle')}
           </p>
         </div>
@@ -262,7 +262,7 @@ const TreatmentAreasSection: React.FC = () => {
             
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
-                <h3 className={`${fontSize.base} md:${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-3 md:mb-4 text-center md:text-left leading-tight md:leading-normal max-w-[90%] mx-auto md:mx-0`}>{t('treatmentAreasSection.cta.title')}</h3>
+                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>{t('treatmentAreasSection.cta.title')}</h3>
                 <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
                   {/* Different text for mobile and desktop */}
                   <span className="md:hidden">
@@ -273,20 +273,18 @@ const TreatmentAreasSection: React.FC = () => {
                   </span>
                 </p>
               </div>
-              <div className="md:w-1/3 flex justify-center md:justify-end w-full">
-                <div className="w-4/5">
-                  {/* Button with same width as "Mehr Infos" buttons */}
-                  <Link 
-                    to="/kontakt" 
-                    className={`${buttonStyle.primary} w-full shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
-                  >
-                    <span className={buttonRippleClass}></span>
-                    <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
-                      {t('buttons.consultation', { ns: 'common' })}
-                      <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
-                    </span>
-                  </Link>
-                </div>
+              <div className="md:w-1/3 flex justify-center md:justify-end">
+                {/* New button design for all screen sizes */}
+                <Link 
+                  to="/kontakt" 
+                  className={`${buttonStyle.primary} w-4/5 md:w-auto shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
+                >
+                  <span className={buttonRippleClass}></span>
+                  <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
+                    {t('buttons.consultation', { ns: 'common' })}
+                    <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
