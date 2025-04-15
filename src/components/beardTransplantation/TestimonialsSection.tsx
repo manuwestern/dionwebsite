@@ -97,62 +97,13 @@ const TestimonialsSection: React.FC = () => {
             <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('testimonialsSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
+          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`} lang="de">
             {t('testimonialsSection.subtitle')}
           </p>
-          <p className={`${fontSize.base} ${textColor.dark} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} mt-4 max-w-3xl mx-auto hyphens-auto`} lang="de">
-            {t('testimonialsSection.intro')}
-          </p>
-        </div>
-
-        {/* Stats Section with elegant cards */}
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          {stats.map((stat, index) => {
-            const isHovered = index === hoverStat;
-            
-            return (
-              <div 
-                key={index}
-                className="relative group"
-                onMouseEnter={() => setHoverStat(index)}
-                onMouseLeave={() => setHoverStat(null)}
-              >
-                {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full p-8 text-center border-2 ${
-                  isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
-                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                }`}>
-                  {/* Decorative circle */}
-                  <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 blur-xl transition-opacity duration-500 opacity-50 group-hover:opacity-100"></div>
-                  
-                  {/* Stat content */}
-                  <div className="relative z-10">
-                    <div className={`${fontSize.h2} ${fontWeight.light} transition-all duration-500 ${
-                      isHovered ? textColor.primaryDark : textColor.primary
-                    } mb-3`}>
-                      {stat.value}
-                    </div>
-                    <div className={`${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} hyphens-auto`} lang="de">{stat.label}</div>
-                  </div>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-                  isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
-              </div>
-            );
-          })}
         </div>
 
         {/* Before/After Slider with elegant design */}
         <div className={`mb-20 transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="text-center mb-8">
-            <h3 className={`${textStyle.primaryHeading} text-center md:text-left`}>{t('testimonialsSection.beforeAfterTitle')}</h3>
-            <div className={`h-0.5 w-40 ${gradientUnderline.light} mx-auto mt-3`}></div>
-          </div>
-          
           <div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative rounded-2xl overflow-hidden shadow-lg group">
@@ -169,7 +120,7 @@ const TestimonialsSection: React.FC = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full ${fontSize.sm} ${fontWeight.light} backdrop-blur-sm">{t('testimonialsSection.before')}</div>
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.before')}</div>
               </div>
               
               <div className="relative rounded-2xl overflow-hidden shadow-lg group">
@@ -186,7 +137,7 @@ const TestimonialsSection: React.FC = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full ${fontSize.sm} ${fontWeight.light} backdrop-blur-sm">{t('testimonialsSection.after')}</div>
+                <div className="absolute top-4 left-4 bg-[#7BA7C2]/90 text-white px-4 py-1.5 rounded-full text-sm font-light backdrop-blur-sm">{t('testimonialsSection.after')}</div>
               </div>
             </div>
             
@@ -224,45 +175,6 @@ const TestimonialsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Testimonials Grid - Elegant cards */}
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-xl border border-gray-100/80 hover:border-[#7BA7C2]/30 transform hover:-translate-y-1 h-full"
-            >
-              <div className="p-8 flex flex-col h-full relative">
-                {/* Decorative elements */}
-                <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#7BA7C2]/5 -mr-20 -mt-20 opacity-50"></div>
-                
-                {/* Quote Icon with elegant design */}
-                <div className="mb-6 relative z-10 flex justify-center md:justify-start">
-                  <div className="bg-gradient-to-br from-[#7BA7C2] to-[#5A8BA6] w-12 h-12 rounded-full flex items-center justify-center shadow-md">
-                    <Quote className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                
-                {/* Testimonial Text */}
-                <p className={`${textColor.dark} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} mb-6 flex-grow italic relative z-10 text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">"{testimonial.text}"</p>
-                
-                {/* Rating */}
-                <div className="flex justify-center md:justify-start mb-4 relative z-10">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className={`w-5 h-5 ${textColor.accent} fill-current`} />
-                  ))}
-                </div>
-                
-                {/* Patient Info */}
-                <div className="border-t border-gray-100 pt-4 relative z-10 text-center md:text-left">
-                  <div className={`${fontWeight.medium} ${textColor.dark}`}>{testimonial.name}</div>
-                  <div className={`${fontSize.sm} ${textColor.primary}`}>{testimonial.procedure}</div>
-                  <div className={`${fontSize.sm} ${textColor.light}`}>{testimonial.date}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* CTA Section with elegant design */}
         <div className={`relative transition-all duration-1000 delay-1200 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
@@ -273,7 +185,7 @@ const TestimonialsSection: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               <div className="md:w-2/3">
                 <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('testimonialsSection.ctaSection.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
                   {t('testimonialsSection.ctaSection.description')}
                 </p>
               </div>

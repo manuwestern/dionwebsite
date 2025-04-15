@@ -59,7 +59,7 @@ const DPISection: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-block mb-4 relative">
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle} break-words hyphens-auto`} lang="de">{t('dpiSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('dpiSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4 hyphens-auto`} lang="de">
@@ -68,15 +68,15 @@ const DPISection: React.FC = () => {
         </div>
         
         {/* Mobile Image - Only visible on mobile */}
-        <div className="md:hidden mb-8 mx-auto max-w-none -mx-4">
-          <div className="relative">
+        <div className="md:hidden mb-8 mx-auto max-w-none -mx-6 sm:-mx-8">
+          <div className="relative w-[110%] sm:w-[120%] transform -translate-x-[5%] sm:-translate-x-[10%]">
             <img 
               src="/images/DionPainlessInjection.webp" 
               alt="Dion Painless Injection Technology" 
               className="w-full h-auto object-cover"
               loading="lazy"
             />
-            <div className="absolute bottom-4 left-8 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-1 rounded-full">
+            <div className="absolute top-4 right-4 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-0.5 rounded-full">
               {t('dpiSection.premiumOption')}
             </div>
           </div>
@@ -92,13 +92,9 @@ const DPISection: React.FC = () => {
             <div className="relative z-10 flex flex-col md:flex-row gap-8">
               {/* Content section */}
               <div className="flex-1">
-                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left break-words hyphens-auto`} lang="de">{t('dpiSection.benefitsTitle')}</h3>
+                {/* Title and description text removed as requested */}
                 
-                <p className={`${textStyle.bodyText} mb-8 text-center md:text-left break-words hyphens-auto`} lang="de">
-                  {t('dpiSection.description')}
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                   {featureItems.map((item, index) => {
                     const isHovered = index === hoverFeature;
                     
@@ -106,31 +102,31 @@ const DPISection: React.FC = () => {
                       <div 
                         key={index}
                         className="relative group"
-                        onMouseEnter={() => setHoverFeature(index)}
-                        onMouseLeave={() => setHoverFeature(null)}
+                        onMouseEnter={() => window.innerWidth >= 768 ? setHoverFeature(index) : null}
+                        onMouseLeave={() => window.innerWidth >= 768 ? setHoverFeature(null) : null}
                       >
-                        <div className={`flex flex-col md:flex-row gap-4 p-5 rounded-xl transition-all duration-300 ${
-                          isHovered 
+                        <div className={`flex flex-col md:flex-row gap-3 md:gap-4 p-4 md:p-5 rounded-xl transition-all duration-300 ${
+                          isHovered && window.innerWidth >= 768
                             ? 'bg-[#7BA7C2]/5 shadow-sm' 
-                            : 'hover:bg-[#7BA7C2]/5'
+                            : 'md:hover:bg-[#7BA7C2]/5'
                         }`}>
-                          <div className={`flex-shrink-0 w-12 h-12 rounded-full mx-auto md:mx-0 mb-3 md:mb-0 flex items-center justify-center transition-all duration-300 ${
-                            isHovered 
+                          <div className={`flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full mx-auto md:mx-0 mb-2 md:mb-0 flex items-center justify-center transition-all duration-300 ${
+                            isHovered && window.innerWidth >= 768
                               ? 'bg-[#7BA7C2] text-white' 
                               : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
                           }`}>
                             {React.cloneElement(item.icon as React.ReactElement, { 
-                              className: `w-6 h-6 md:w-6 md:h-6 transition-all duration-300` 
+                              className: `w-5 h-5 md:w-6 md:h-6 transition-all duration-300` 
                             })}
                           </div>
                           
                           <div className="flex-grow">
-                            <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 text-center md:text-left break-words hyphens-auto ${
-                              isHovered ? textColor.primary : textColor.dark
-                            }`} lang="de">
+                            <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-1 md:mb-2 transition-colors duration-300 text-center md:text-left ${
+                              isHovered && window.innerWidth >= 768 ? textColor.primary : textColor.dark
+                            }`}>
                               {item.title}
                             </h4>
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[320px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                               {item.description}
                             </p>
                           </div>

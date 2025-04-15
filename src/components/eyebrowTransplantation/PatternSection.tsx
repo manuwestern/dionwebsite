@@ -46,7 +46,7 @@ const PatternSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('patternSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} hyphens-auto break-words`} lang="de" style={{ overflowWrap: 'break-word', wordWrap: 'break-word' }}>{t('patternSection.title')}</h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`} lang="de">
@@ -93,10 +93,10 @@ const PatternSection: React.FC = () => {
                   </div>
                   
                   {/* Pattern Content with grid layout for perfect alignment */}
-                  <div className="px-8 py-7 grid grid-rows-[120px_auto_auto_30px] h-[280px]">
-                    {/* Description with fixed height and scrolling if needed */}
-                    <div className="overflow-auto pr-1 mb-3">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left break-words hyphens-auto`} lang="de">
+                  <div className="px-5 md:px-8 py-5 md:py-7 grid grid-rows-[auto_auto_auto_auto] md:grid-rows-[120px_auto_auto_30px] min-h-[220px] h-auto md:h-[280px]">
+                    {/* Description with flexible height on mobile and fixed on desktop */}
+                    <div className="overflow-auto pr-1 mb-2 md:mb-3 max-h-[100px] md:max-h-[120px]">
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                         {pattern.description}
                       </p>
                     </div>
@@ -105,26 +105,26 @@ const PatternSection: React.FC = () => {
                     <div className={`w-full h-px ${gradientUnderline.light} mb-3`}></div>
                     
                     {/* Pattern Details - always at the same position with perfect spacing */}
-                    <div className="grid grid-cols-2 gap-5 self-start mt-1">
-                      <div className={`rounded-xl p-4 transition-all duration-300 h-[75px] flex flex-col justify-between ${
+                    <div className="grid grid-cols-2 gap-2 md:gap-5 self-start mt-0 md:mt-1">
+                      <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[70px] md:h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left whitespace-nowrap`}>
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center whitespace-nowrap`}>
                           {t('patternSection.typicalGrafts')}
                         </h4>
-                        <p className={`${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.grafts}</p>
+                        <p className={`text-xs md:${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center hyphens-auto`} lang="de">{pattern.grafts}</p>
                       </div>
-                      <div className={`rounded-xl p-4 transition-all duration-300 h-[75px] flex flex-col justify-between ${
+                      <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[70px] md:h-[75px] flex flex-col justify-between ${
                         isHovered 
                           ? 'bg-[#7BA7C2]/10' 
                           : 'bg-[#7BA7C2]/5'
                       }`}>
-                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center md:text-left whitespace-nowrap`}>
+                        <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center whitespace-nowrap`}>
                           {t('patternSection.treatment')}
                         </h4>
-                        <p className={`${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center md:text-left`}>{pattern.treatment}</p>
+                        <p className={`${fontSize.sm} md:${fontSize.base} ${textColor.primary} ${fontWeight.light} text-center hyphens-auto`} lang="de">{pattern.treatment}</p>
                       </div>
                     </div>
                   </div>
@@ -139,29 +139,7 @@ const PatternSection: React.FC = () => {
           })}
         </div>
         
-        {/* Additional information */}
-        <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
-          <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="md:w-1/3 mb-8 md:mb-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('patternSection.additionalInfo.individualConsultation.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
-                {t('patternSection.additionalInfo.individualConsultation.description')}
-              </p>
-            </div>
-            <div className="md:w-1/3 mb-8 md:mb-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('patternSection.additionalInfo.modernTechniques.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
-                {t('patternSection.additionalInfo.modernTechniques.description')}
-              </p>
-            </div>
-            <div className="md:w-1/3">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('patternSection.additionalInfo.longTermResults.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
-                {t('patternSection.additionalInfo.longTermResults.description')}
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
