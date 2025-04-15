@@ -181,31 +181,31 @@ const ProcessSection: React.FC = () => {
                     <div 
                       key={index}
                       className="relative group"
-                      onMouseEnter={() => setHoverAdvantage(index)}
-                      onMouseLeave={() => setHoverAdvantage(null)}
+                      onMouseEnter={() => window.innerWidth >= 768 ? setHoverAdvantage(index) : null}
+                      onMouseLeave={() => window.innerWidth >= 768 ? setHoverAdvantage(null) : null}
                     >
-                      <div className={`flex flex-col md:flex-row gap-4 p-6 rounded-xl transition-all duration-300 ${
-                        isHovered 
+                      <div className={`flex flex-col md:flex-row gap-3 md:gap-4 p-4 md:p-5 rounded-xl transition-all duration-300 ${
+                        isHovered && window.innerWidth >= 768
                           ? 'bg-[#7BA7C2]/5 shadow-sm' 
-                          : 'hover:bg-[#7BA7C2]/5'
+                          : 'md:hover:bg-[#7BA7C2]/5'
                       }`}>
-                        <div className={`flex-shrink-0 w-12 h-12 rounded-full mx-auto md:mx-0 mb-3 md:mb-0 flex items-center justify-center transition-all duration-300 ${
-                          isHovered 
+                        <div className={`flex-shrink-0 w-10 h-10 md:w-10 md:h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto md:mx-0 mb-2 md:mb-0 transition-all duration-300 ${
+                          isHovered && window.innerWidth >= 768
                             ? 'bg-[#7BA7C2] text-white' 
-                            : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
+                            : 'text-[#7BA7C2]'
                         }`}>
                           {React.cloneElement(item.icon as React.ReactElement, { 
-                            className: `w-6 h-6 md:w-6 md:h-6 transition-all duration-300` 
+                            className: `w-5 h-5 md:w-6 md:h-6 text-[#7BA7C2] transition-all duration-300` 
                           })}
                         </div>
                         
                         <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 text-center md:text-left ${
-                            isHovered ? textColor.primary : textColor.dark
+                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-1 md:mb-2 transition-colors duration-300 text-center md:text-left ${
+                            isHovered && window.innerWidth >= 768 ? textColor.primary : textColor.dark
                           }`}>
                             {item.title}
                           </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[320px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                             {item.description}
                           </p>
                         </div>
