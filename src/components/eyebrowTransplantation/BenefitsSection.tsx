@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Users, Zap, Compass, UserCheck, Clock, MapPin, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import CollapsibleBenefitCard from '../common/CollapsibleBenefitCard';
 
 interface BenefitCard {
   title: string;
@@ -56,64 +57,17 @@ const BenefitsSection: React.FC = () => {
 
         {/* Benefits Cards Grid - Equal height cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {benefitCards.map((card, index) => {
-            const isHovered = index === hoverCard;
-            
-            return (
-              <div 
-                key={index}
-                className="relative group"
-                onMouseEnter={() => setHoverCard(index)}
-                onMouseLeave={() => setHoverCard(null)}
-              >
-                {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full border-2 ${
-                  isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
-                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                }`}>
-                  {/* Header with icon and title side by side */}
-                  <div className="relative h-20 overflow-hidden flex items-center">
-                    {/* Gradient background */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/80"></div>
-                    
-                    {/* Decorative circles */}
-                    <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/10 -mr-20 -mt-20"></div>
-                    <div className="absolute bottom-0 left-0 w-20 h-20 rounded-full bg-white/10 -ml-10 -mb-10"></div>
-                    
-                    {/* Icon container */}
-                    <div className="relative z-10 ml-6 mr-4">
-                      <div className={`w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-500 ${
-                        isHovered ? 'scale-110 bg-white/30' : ''
-                      }`}>
-                        {React.cloneElement(card.icon as React.ReactElement, { 
-                          className: `w-6 h-6 text-white transition-all duration-500 ${isHovered ? 'scale-110' : ''}` 
-                        })}
-                      </div>
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm flex-1 pr-6 line-clamp-2`}>{card.title}</h3>
-                  </div>
-                  
-                  {/* Content with subtle gradient */}
-                  <div className="p-6 bg-gradient-to-b from-white to-gray-50/50 h-auto min-h-[180px] md:h-[200px] flex flex-col">
-                    {/* Description with perfect typography */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow text-center md:text-left`}>
-                      {card.description}
-                    </p>
-                    
-                    {/* Subtle indicator removed as requested */}
-                  </div>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-                  isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
-              </div>
-            );
-          })}
+          {benefitCards.map((card, index) => (
+            <CollapsibleBenefitCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              icon={card.icon}
+              index={index}
+              hoverCard={hoverCard}
+              setHoverCard={setHoverCard}
+            />
+          ))}
         </div>
 
         {/* Elegant CTA Section */}
