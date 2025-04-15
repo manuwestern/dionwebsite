@@ -22,12 +22,21 @@ export function registerServiceWorker() {
   window.addEventListener('load', () => {
     const swUrl = '/service-worker.js';
     
-    registerValidSW(swUrl);
+    // Füge einen Cache-Buster-Parameter hinzu, um sicherzustellen, dass der Browser
+    // immer die neueste Version des Service Workers lädt
+    const cacheBustedUrl = `${swUrl}?v=${new Date().getTime()}`;
+    
+    registerValidSW(cacheBustedUrl);
     
     // Überprüfe regelmäßig auf Updates
     setInterval(() => {
-      checkForUpdates(swUrl);
+      checkForUpdates(cacheBustedUrl);
     }, 60 * 60 * 1000); // Überprüfe stündlich
+    
+    // Zusätzlich bei jeder Navigation überprüfen
+    window.addEventListener('popstate', () => {
+      checkForUpdates(cacheBustedUrl);
+    });
   });
 }
 
@@ -71,11 +80,30 @@ function registerValidSW(swUrl: string) {
  */
 function checkForUpdates(swUrl: string) {
   // Überprüfe, ob der Service Worker aktualisiert werden kann
-  navigator.serviceWorker.getRegistration(swUrl).then((registration) => {
+  navigator.serviceWorker.getRegistration().then((registration) => {
     if (registration) {
-      registration.update().catch((error) => {
-        console.error('Fehler beim Überprüfen auf Updates:', error);
+      // Forciere ein Update durch Hinzufügen eines Zeitstempels
+      const cacheBustedUrl = `${swUrl.split('?')[0]}?v=${new Date().getTime()}`;
+      
+      // Lösche alle Caches, um sicherzustellen, dass keine veralteten Ressourcen verwendet werden
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            // Lösche nur Caches, die mit 'dion-' beginnen (unsere Anwendungscaches)
+            if (cacheName.startsWith('dion-')) {
+              console.log('Lösche veralteten Cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
       });
+      
+      // Aktualisiere den Service Worker
+      registration.update()
+        .then(() => console.log('Service Worker erfolgreich aktualisiert'))
+        .catch((error) => {
+          console.error('Fehler beim Überprüfen auf Updates:', error);
+        });
     }
   });
 }
@@ -170,12 +198,48 @@ export function unregisterServiceWorker() {
       return caches.keys().then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
+            console.log('Lösche Cache:', cacheName);
             return caches.delete(cacheName);
           })
         );
       });
     })
+    .then(() => {
+      // Seite neu laden, um sicherzustellen, dass keine gecachten Ressourcen verwendet werden
+      window.location.reload();
+    })
     .catch((error) => {
       console.error('Fehler beim Deregistrieren des Service Workers:', error);
+    });
+}
+
+/**
+ * Hilfsfunktion zum manuellen Löschen aller Caches und Neuladen der Seite
+ * Diese Funktion kann bei 404-Fehlern aufgerufen werden
+ */
+export function clearCachesAndReload() {
+  if (!isServiceWorkerSupported) {
+    window.location.reload();
+    return;
+  }
+  
+  // Lösche alle Caches
+  caches.keys()
+    .then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          console.log('Lösche Cache:', cacheName);
+          return caches.delete(cacheName);
+        })
+      );
+    })
+    .then(() => {
+      // Seite neu laden, um sicherzustellen, dass keine gecachten Ressourcen verwendet werden
+      window.location.reload();
+    })
+    .catch((error) => {
+      console.error('Fehler beim Löschen der Caches:', error);
+      // Trotzdem neu laden
+      window.location.reload();
     });
 }

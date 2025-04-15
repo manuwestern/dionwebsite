@@ -109,8 +109,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   
-  // Strategie für HTML-Seiten: Netzwerk, dann Cache
-  if (url.pathname.endsWith('/') || url.pathname.match(/\.(html?)$/)) {
+// Strategie für HTML-Seiten und SPA-Routen: Netzwerk, dann Cache
+  if (
+    url.pathname.endsWith('/') || 
+    url.pathname.match(/\.(html?)$/) ||
+    // Füge hier alle SPA-Routen hinzu
+    IMPORTANT_PAGES.includes(url.pathname)
+  ) {
     event.respondWith(handlePageRequest(event.request));
     return;
   }
@@ -152,10 +157,12 @@ async function handleFontRequest(request) {
 }
 
 /**
- * Behandelt Anfragen für HTML-Seiten
- * Strategie: Netzwerk, dann Cache
+ * Behandelt Anfragen für HTML-Seiten und SPA-Routen
+ * Strategie: Netzwerk, dann Cache, mit Fallback zur index.html für SPA-Routen
  */
 async function handlePageRequest(request) {
+  const url = new URL(request.url);
+  
   try {
     // Versuche zuerst, die Seite vom Netzwerk zu holen
     const networkResponse = await fetch(request);
@@ -171,6 +178,14 @@ async function handlePageRequest(request) {
     
     if (cachedResponse) {
       return cachedResponse;
+    }
+    
+    // Für SPA-Routen, versuche die index.html zu liefern
+    if (IMPORTANT_PAGES.includes(url.pathname)) {
+      const indexResponse = await caches.match('/index.html');
+      if (indexResponse) {
+        return indexResponse;
+      }
     }
     
     // Wenn die Seite nicht im Cache ist, zeige die Offline-Seite
