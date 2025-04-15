@@ -142,29 +142,7 @@ const HairLossPatternsSection: React.FC = () => {
           })}
         </div>
         
-        {/* Additional information */}
-        <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
-          <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="md:w-1/3 mb-8 md:mb-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairLossPatternsSection.additionalInfo.individualConsultation.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
-                {t('hairLossPatternsSection.additionalInfo.individualConsultation.description')}
-              </p>
-            </div>
-            <div className="md:w-1/3 mb-8 md:mb-0">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairLossPatternsSection.additionalInfo.modernTechniques.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
-                {t('hairLossPatternsSection.additionalInfo.modernTechniques.description')}
-              </p>
-            </div>
-            <div className="md:w-1/3">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('hairLossPatternsSection.additionalInfo.longTermResults.title')}</h3>
-              <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
-                {t('hairLossPatternsSection.additionalInfo.longTermResults.description')}
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
