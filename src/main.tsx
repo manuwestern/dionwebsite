@@ -4,7 +4,6 @@ import App from './App.tsx';
 import './index.css';
 import './i18n';
 import { initPerformanceMonitoring } from './utils/performance-monitoring';
-import { registerServiceWorker } from './utils/service-worker-registration';
 
 // Initialize performance monitoring
 if (process.env.NODE_ENV !== 'production') {
@@ -12,11 +11,6 @@ if (process.env.NODE_ENV !== 'production') {
   console.log('Performance monitoring enabled in development mode');
   initPerformanceMonitoring();
 }
-// Service worker registration disabled due to caching issues
-// else {
-//   // Register service worker only in production mode
-//   registerServiceWorker();
-// }
 
 // Render the React app
 createRoot(document.getElementById('root')!).render(
