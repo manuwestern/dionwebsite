@@ -163,8 +163,8 @@ const TestimonialsSection: React.FC = () => {
                 
                 {/* Patient Info */}
                 <div className="mb-2 text-center md:text-left">
-                  <h3 className={`${fontSize.h3} ${fontWeight.light} ${textColor.primary} mb-1`}>{t(currentTestimonial.nameKey)}</h3>
-                  <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light}`}>
+                  <h3 className={`text-lg md:${fontSize.h3} ${fontWeight.light} ${textColor.primary} mb-1`}>{t(currentTestimonial.nameKey)}</h3>
+                  <p className={`text-xs md:${fontSize.base} ${textColor.medium} ${fontWeight.light}`}>
                     {t(currentTestimonial.ageKey)}, {t(currentTestimonial.treatmentKey)}
                   </p>
                 </div>

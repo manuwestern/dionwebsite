@@ -68,15 +68,17 @@ const PainlessTreatmentSection: React.FC = () => {
         </div>
         
         {/* Mobile Image - Only visible on mobile */}
-        <div className="md:hidden mb-8 mx-auto max-w-none -mx-6 sm:-mx-8">
-          <div className="relative w-[110%] sm:w-[120%] transform -translate-x-[5%] sm:-translate-x-[10%]">
+        <div className="md:hidden mb-8 mx-auto max-w-xs">
+          <div className="relative w-full">
             <img 
               src="/images/DionPainlessInjection.webp" 
               alt="Dion Painless Injection Technology" 
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover rounded-xl shadow-md"
               loading="lazy"
             />
-            
+            <div className="absolute top-3 right-3 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-0.5 rounded-full">
+              {t('painlessTreatmentSection.premiumOption')}
+            </div>
           </div>
         </div>
         
@@ -144,8 +146,6 @@ const PainlessTreatmentSection: React.FC = () => {
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                  {/* Light gradient behind the image */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent -z-10"></div>
                   <div className="absolute top-4 right-4 bg-[#7BA7C2] text-white text-sm font-medium px-3 py-1 rounded-full">
                     {t('painlessTreatmentSection.premiumOption')}
                   </div>

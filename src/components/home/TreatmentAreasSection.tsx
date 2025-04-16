@@ -1,18 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass } from '../../utils/buttons';
+
+// Constants for fixed heights and styling
+const CARD_HEIGHTS = {
+  mobile: {
+    default: 'h-[200px]',
+    eyebrows: 'h-[240px]'
+  },
+  desktop: {
+    content: 'h-[380px]',
+    description: 'h-[100px]',
+    features: 'h-[120px]'
+  }
+};
 
 interface TreatmentArea {
   id: string;
   imageUrl: string;
   titleKey: string;
   descriptionKey: string;
-  mobileDescription: string;
   altText: string;
   features: string[];
+  path: string;
 }
 
 const TreatmentAreasSection: React.FC = () => {
@@ -20,58 +33,83 @@ const TreatmentAreasSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoverCard, setHoverCard] = useState<string | null>(null);
 
+  // Debounced scroll handler for better performance
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const element = document.getElementById('treatment-areas-section');
+    
+    if (element) {
+      const elementPosition = element.offsetTop + 200;
+      
+      if (scrollPosition > elementPosition) {
+        setIsVisible(true);
+      }
+    }
+  }, []);
+
   // Trigger entrance animations on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const element = document.getElementById('treatment-areas-section');
-      
-      if (element) {
-        const elementPosition = element.offsetTop + 200;
-        
-        if (scrollPosition > elementPosition) {
-          setIsVisible(true);
-        }
-      }
-    };
-
     // Initial check
     handleScroll();
     
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    // Add debounced event listener
+    let timeoutId: number;
+    const debouncedScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(handleScroll, 50);
+    };
+    
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', debouncedScroll);
+      clearTimeout(timeoutId);
+    };
+  }, [handleScroll]);
 
   // Treatment areas data with enhanced information
-  const treatmentAreas: TreatmentArea[] = [
+  const treatmentAreas = useMemo(() => [
     {
       id: 'head',
       imageUrl: '/images/Behandlung_Haartransplantation.webp',
       titleKey: 'treatmentAreasSection.areas.0.title',
       descriptionKey: 'treatmentAreasSection.areas.0.description',
-      mobileDescription: t(`treatmentAreasSection.areas.0.mobileDescription`),
       altText: 'Haartransplantation in Mönchengladbach - Wiederherstellung des Haupthaars mit modernsten FUE und DHI Techniken',
-      features: t(`treatmentAreasSection.areas.0.features`, { returnObjects: true }) as string[]
+      features: t(`treatmentAreasSection.areas.0.features`, { returnObjects: true }) as string[],
+      path: '/haartransplantation'
     },
     {
       id: 'beard',
       imageUrl: '/images/Behandlung_Barthaartransplantation.webp',
       titleKey: 'treatmentAreasSection.areas.1.title',
       descriptionKey: 'treatmentAreasSection.areas.1.description',
-      mobileDescription: t(`treatmentAreasSection.areas.1.mobileDescription`),
       altText: 'Barthaartransplantation in der Dion Hair Clinic - Verdichtung und Neugestaltung des Bartwuchses für einen volleren Bart',
-      features: t(`treatmentAreasSection.areas.1.features`, { returnObjects: true }) as string[]
+      features: t(`treatmentAreasSection.areas.1.features`, { returnObjects: true }) as string[],
+      path: '/barthaartransplantation'
     },
     {
       id: 'eyebrows',
       imageUrl: '/images/Behandlung_Augenbrauentransplantation.webp',
       titleKey: 'treatmentAreasSection.areas.2.title',
       descriptionKey: 'treatmentAreasSection.areas.2.description',
-      mobileDescription: t(`treatmentAreasSection.areas.2.mobileDescription`),
       altText: 'Augenbrauentransplantation bei Dion Hair Clinic - Wiederherstellung oder Verdichtung der Augenbrauen für einen ausdrucksstarken Blick',
-      features: t(`treatmentAreasSection.areas.2.features`, { returnObjects: true }) as string[]
+      features: t(`treatmentAreasSection.areas.2.features`, { returnObjects: true }) as string[],
+      path: '/augenbrauentransplantation'
     }
-  ];
+  ], [t]);
+
+  // Reusable button component to avoid duplication
+  const MoreInfoButton = ({ path }: { path: string }) => (
+    <Link
+      to={path}
+      className={`${buttonStyle.primary} w-4/5 shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
+    >
+      <span className={buttonRippleClass}></span>
+      <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
+        {t('buttons.moreInfo', { ns: 'common' })}
+        <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
+      </span>
+    </Link>
+  );
 
   return (
     <section id="treatment-areas-section" className="py-16 md:py-32 relative overflow-hidden">
@@ -82,7 +120,14 @@ const TreatmentAreasSection: React.FC = () => {
         <div className="text-center mb-12 md:mb-20">
           <div className="inline-block relative">
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
-            <h2 className={`${textStyle.sectionTitle} mb-4`} lang="de">{t('treatmentAreasSection.title')}</h2>
+            <h2 className={`${textStyle.sectionTitle} mb-4`} lang="de">
+              <span className="md:hidden">
+                Behandlungs-<br />bereiche
+              </span>
+              <span className="hidden md:inline">
+                {t('treatmentAreasSection.title')}
+              </span>
+            </h2>
             <div className={`${gradientUnderline.primary} w-[90%] max-w-[300px] mt-6 mx-auto`}></div>
           </div>
           <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-6`} lang="de">
@@ -115,36 +160,21 @@ const TreatmentAreasSection: React.FC = () => {
                   </div>
                 </div>
 
-                  {/* Text content container with refined typography and conditional height based on card type */}
-                  <div className={`p-6 text-center flex flex-col ${area.id === 'eyebrows' ? 'h-[240px]' : 'h-[200px]'}`}>
-                    <div className="flex-grow">
-                      <div className="overflow-hidden p-2">
+                {/* Text content container with refined typography and conditional height based on card type */}
+                <div className={`p-6 text-center flex flex-col ${CARD_HEIGHTS.mobile[area.id === 'eyebrows' ? 'eyebrows' : 'default']}`}>
+                  <div className="flex-grow">
+                    <div className="overflow-hidden p-2">
                       <p className={`${textStyle.bodyText}`} lang="de">
-                          {t(area.descriptionKey)}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    {/* Smaller button for mobile view - positioned at bottom */}
-                    <div className="mt-auto pt-6 pb-2 flex justify-center">
-                      <Link
-                        to={
-                          area.id === 'head'
-                            ? '/haartransplantation'
-                            : area.id === 'beard'
-                              ? '/barthaartransplantation'
-                              : '/augenbrauentransplantation'
-                        }
-                        className={`${buttonStyle.primary} w-4/5 shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
-                      >
-                        <span className={buttonRippleClass}></span>
-                        <span className={`relative flex items-center justify-center text-sm uppercase tracking-wider`}>
-                          {t('buttons.moreInfo', { ns: 'common' })}
-                          <ArrowRight className={`w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1`} />
-                        </span>
-                      </Link>
+                        {t(area.descriptionKey)}
+                      </p>
                     </div>
                   </div>
+                  
+                  {/* Smaller button for mobile view - positioned at bottom */}
+                  <div className="mt-auto pt-6 pb-2 flex justify-center">
+                    <MoreInfoButton path={area.path} />
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -198,16 +228,16 @@ const TreatmentAreasSection: React.FC = () => {
                   </div>
                   
                   {/* Text content container with refined typography and fixed height - enhanced with features */}
-                  <div className="p-8 flex flex-col h-[380px]">
+                  <div className={`p-8 flex flex-col ${CARD_HEIGHTS.desktop.content}`}>
                     <div className="flex-grow">
-                      <div className="h-[100px] overflow-hidden">
+                      <div className={CARD_HEIGHTS.desktop.description}>
                         <p className={`${textStyle.bodyText}`} lang="de">
                           {t(area.descriptionKey)}
                         </p>
                       </div>
                       
                       {/* Key features with elegant styling and fixed height */}
-                      <div className="mt-6 h-[120px] space-y-3">
+                      <div className={`mt-6 ${CARD_HEIGHTS.desktop.features} space-y-3`}>
                         {area.features.map((feature, i) => (
                           <div key={i} className="flex items-start gap-3">
                             <div className="w-5 h-5 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -223,22 +253,7 @@ const TreatmentAreasSection: React.FC = () => {
                     
                     {/* Elegant button with ripple effect - positioned at bottom - new smaller design */}
                     <div className="mt-auto pt-6 pb-2 flex justify-center">
-                      <Link 
-                        to={
-                          area.id === 'head' 
-                            ? '/haartransplantation' 
-                            : area.id === 'beard' 
-                              ? '/barthaartransplantation' 
-                              : '/augenbrauentransplantation'
-                        }
-                        className={`${buttonStyle.primary} w-4/5 shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
-                      >
-                        <span className={buttonRippleClass}></span>
-                        <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
-                          {t('buttons.moreInfo', { ns: 'common' })}
-                          <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
-                        </span>
-                      </Link>
+                      <MoreInfoButton path={area.path} />
                     </div>
                   </div>
                 </div>
