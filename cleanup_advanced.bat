@@ -21,6 +21,15 @@ for %%f in (%benefits_files%) do (
 )
 echo.
 
+REM TestimonialsSection files
+echo [TestimonialsSectionComponent] Files:
+set "testimonials_files=src\components\hairTransplantation\TestimonialsSection.tsx src\components\beardTransplantation\TestimonialsSection.tsx src\components\eyebrowTransplantation\TestimonialsSection.tsx"
+for %%f in (%testimonials_files%) do (
+    echo - %%f
+    set "files_to_remove=!files_to_remove! %%f"
+)
+echo.
+
 REM FAQSection files
 echo [FAQAccordionSection] Files:
 set "faq_files=src\components\home\FAQSection.tsx src\components\hairTransplantation\FAQSection.tsx src\components\beardTransplantation\FAQSection.tsx src\components\eyebrowTransplantation\FAQSection.tsx src\components\hairLossTherapy\FAQSection.tsx src\components\prices\FAQSection.tsx"
@@ -58,6 +67,7 @@ echo   ^<BenefitsSectionComponent translationNamespace="home" showCTA={false} /^
 echo.
 echo Similarly for other components:
 echo   ^<FAQSection /^> -^> ^<FAQAccordionSection translationNamespace="home" /^>
+echo   ^<TestimonialsSection /^> -^> ^<TestimonialsSectionComponent translationNamespace="hairTransplantation" beforeAfterPairs={beforeAfterPairs} /^>
 echo   ^<ProcessSection /^> -^> ^<ProcessStepsSection translationNamespace="hairTransplantation" /^>
 echo   ^<PatternSection /^> -^> ^<PatternCardsSection translationNamespace="beardTransplantation" /^>
 echo.

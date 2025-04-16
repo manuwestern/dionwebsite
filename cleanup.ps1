@@ -54,6 +54,12 @@ $benefitsFiles = @(
     "src\components\hairLossTherapy\BenefitsSection.tsx"
 )
 
+$testimonialsFiles = @(
+    "src\components\hairTransplantation\TestimonialsSection.tsx",
+    "src\components\beardTransplantation\TestimonialsSection.tsx",
+    "src\components\eyebrowTransplantation\TestimonialsSection.tsx"
+)
+
 $faqFiles = @(
     "src\components\home\FAQSection.tsx",
     "src\components\hairTransplantation\FAQSection.tsx",
@@ -82,6 +88,11 @@ foreach ($file in $benefitsFiles) {
     Write-Host "- $file"
 }
 
+Write-SubHeader "[TestimonialsSectionComponent] Files"
+foreach ($file in $testimonialsFiles) {
+    Write-Host "- $file"
+}
+
 Write-SubHeader "[FAQAccordionSection] Files"
 foreach ($file in $faqFiles) {
     Write-Host "- $file"
@@ -101,7 +112,7 @@ foreach ($file in $patternFiles) {
 Write-Header "IMPORT ANALYSIS"
 Write-Host "Checking which components are imported in other files..." -ForegroundColor Yellow
 
-$allFiles = $benefitsFiles + $faqFiles + $processFiles + $patternFiles
+$allFiles = $benefitsFiles + $testimonialsFiles + $faqFiles + $processFiles + $patternFiles
 $importMap = @{}
 
 foreach ($file in $allFiles) {
@@ -137,6 +148,14 @@ Write-Host "  <BenefitsSection />" -ForegroundColor Gray
 Write-Host "With:" -ForegroundColor Green
 Write-Host "  import { BenefitsSectionComponent } from '../components/common/BenefitsSectionComponent';" -ForegroundColor Green
 Write-Host "  <BenefitsSectionComponent translationNamespace=`"home`" showCTA={true} ctaLink=`"/kontakt`" />" -ForegroundColor Green
+
+Write-SubHeader "TestimonialsSection Replacement"
+Write-Host "Replace:" -ForegroundColor Gray
+Write-Host "  import TestimonialsSection from '../components/[area]/TestimonialsSection';" -ForegroundColor Gray
+Write-Host "  <TestimonialsSection />" -ForegroundColor Gray
+Write-Host "With:" -ForegroundColor Green
+Write-Host "  import TestimonialsSectionComponent from '../components/common/TestimonialsSectionComponent';" -ForegroundColor Green
+Write-Host "  <TestimonialsSectionComponent translationNamespace=`"hairTransplantation`" beforeAfterPairs={beforeAfterPairs} ctaLink=`"/kontakt`" />" -ForegroundColor Green
 
 Write-SubHeader "FAQSection Replacement"
 Write-Host "Replace:" -ForegroundColor Gray

@@ -10,6 +10,11 @@ echo - src\components\beardTransplantation\BenefitsSection.tsx
 echo - src\components\eyebrowTransplantation\BenefitsSection.tsx
 echo - src\components\hairLossTherapy\BenefitsSection.tsx
 echo.
+echo Files that have been refactored to use TestimonialsSectionComponent:
+echo - src\components\hairTransplantation\TestimonialsSection.tsx
+echo - src\components\beardTransplantation\TestimonialsSection.tsx
+echo - src\components\eyebrowTransplantation\TestimonialsSection.tsx
+echo.
 echo Files that have been refactored to use FAQAccordionSection:
 echo - src\components\home\FAQSection.tsx
 echo - src\components\hairTransplantation\FAQSection.tsx
