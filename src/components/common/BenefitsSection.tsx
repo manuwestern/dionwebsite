@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Users, Zap, Compass, UserCheck, Clock, MapPin, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
-import CollapsibleBenefitCard from './elements/CollapsibleBenefitCard';
+import StaticBenefitCard from './elements/StaticBenefitCard';
 
 interface BenefitCard {
   title: string;
@@ -81,7 +81,7 @@ const BenefitsSectionComponent: React.FC<BenefitsSectionComponentProps> = ({
                 transitionDelay: `${index * 50}ms` 
               }}
             >
-              <CollapsibleBenefitCard
+              <StaticBenefitCard
                 title={card.title}
                 description={card.description}
                 icon={card.icon}
