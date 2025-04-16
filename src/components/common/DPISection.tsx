@@ -7,7 +7,7 @@ export interface FeatureItem {
   description: string;
 }
 
-interface FeatureCardsSectionProps {
+interface DPISectionProps {
   title: string;
   subtitle: string;
   features: FeatureItem[];
@@ -20,7 +20,7 @@ interface FeatureCardsSectionProps {
   translationNamespace?: string;
 }
 
-const FeatureCardsSection: React.FC<FeatureCardsSectionProps> = ({
+const DPISection: React.FC<DPISectionProps> = ({
   title,
   subtitle,
   features,
@@ -181,4 +181,4 @@ const FeatureCardsSection: React.FC<FeatureCardsSectionProps> = ({
   );
 };
 
-export default FeatureCardsSection;
+export default DPISection;

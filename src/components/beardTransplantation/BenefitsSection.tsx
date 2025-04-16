@@ -1,5 +1,5 @@
 import React from 'react';
-import BenefitsSectionComponent from '../common/BenefitsSectionComponent';
+import BenefitsSectionComponent from '../common/BenefitsSection';
 
 const BenefitsSection: React.FC = () => {
   return (

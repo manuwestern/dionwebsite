@@ -6,8 +6,8 @@ import LoadingSpinner from './components/layout/LoadingSpinner';
 import CookieConsent from './components/cookies/CookieConsent';
 import { NewsletterProvider } from './contexts/NewsletterContext';
 import NewsletterPopup from './components/layout/NewsletterPopup';
-import ErrorBoundary from './components/common/ErrorBoundary';
-import NotFoundPage from './components/common/NotFoundPage';
+import ErrorBoundary from './components/common/elements/ErrorBoundary';
+import NotFoundPage from './pages/NotFoundPage';
 
 // Lazy load all pages to improve initial load time
 const HomePage = lazy(() => import('./pages/HomePage'));

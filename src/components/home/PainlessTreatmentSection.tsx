@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ShieldCheck, Zap, HeartPulse, Sparkles } from 'lucide-react';
-import FeatureCardsSection, { FeatureItem } from '../common/FeatureCardsSection';
+import DPISection, { FeatureItem } from '../common/DPISection';
 
 const PainlessTreatmentSection: React.FC = () => {
   // Get features from translation
@@ -23,7 +23,7 @@ const PainlessTreatmentSection: React.FC = () => {
   );
 
   return (
-    <FeatureCardsSection
+    <DPISection
       title={t('painlessTreatmentSection.title')}
       subtitle={t('painlessTreatmentSection.subtitle')}
       features={featureItems}

@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
-import OptimizedImage from '../common/OptimizedImage';
+import OptimizedImage from '../common/elements/OptimizedImage';
 
 interface BeforeAfterCase {
   id: number;

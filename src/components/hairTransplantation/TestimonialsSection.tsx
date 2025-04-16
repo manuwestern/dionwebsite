@@ -1,5 +1,5 @@
 import React from 'react';
-import TestimonialsSectionComponent from '../common/TestimonialsSectionComponent';
+import TestimonialsSectionComponent from '../common/TestimonialsSection';
 
 const TestimonialsSection: React.FC = () => {
   // Before/After image pairs

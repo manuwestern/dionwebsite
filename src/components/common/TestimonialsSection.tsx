@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from './elements/OptimizedImage';
 
 interface Testimonial {
   name: string;

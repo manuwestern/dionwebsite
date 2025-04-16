@@ -208,7 +208,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <div 
       ref={heroRef}
-      className={`relative overflow-hidden md:min-h-[${minHeightDesktop}] flex items-center`}
+      className={`relative overflow-hidden md:min-h-[85vh] flex items-center`}
     >
       {/* Background with simple gradient */}
       <div className="absolute inset-0 z-0">
@@ -225,7 +225,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="md:hidden w-full max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col px-5">
           {/* Main content area with perfect spacing */}
-          <div className={`flex-1 flex flex-col pt-4 pb-0 min-h-[${minHeightMobile}]`}>
+          <div className="flex-1 flex flex-col pt-4 pb-0 min-h-[85vh]">
             {/* Text content with refined typography and animations */}
             <div className="space-y-6 mt-4">
               {/* Title with elegant animation and perfect typography */}
@@ -271,9 +271,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       
       {/* Desktop Layout */}
       <div className="hidden md:block w-full max-w-7xl mx-auto px-8 relative z-10">
-        <div className={`relative min-h-[${minHeightDesktop}] flex items-center`}>
+        <div className="relative min-h-[85vh] flex items-center">
           {/* Text content with refined typography and animations */}
-          <div className={`relative z-10 w-[${leftColumnWidth}] flex flex-col justify-center h-full pt-6 pr-12`}>
+          <div className="relative z-10 w-[50%] flex flex-col justify-center h-full pt-6 pr-12">
             {/* Title with elegant animation and perfect typography */}
             <div className={`transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}>
               <h1 className={`${textStyle.heroTitle} text-left leading-tight ${getHyphenationClass()} whitespace-pre-line`} lang="de">
@@ -319,7 +319,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
           
           {/* Right content section */}
-          <div className={`absolute right-0 top-0 bottom-0 w-[${rightColumnWidth}] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`absolute right-0 top-0 bottom-0 w-[50%] h-full flex items-center justify-end transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             {renderRightContent()}
           </div>
         </div>
