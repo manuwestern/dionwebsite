@@ -52,7 +52,7 @@ const AppFeatureSection: React.FC<AppFeatureSectionProps> = ({
         <div className="flex flex-col gap-8 items-center">
           {/* Mobile App mockup - Only visible on mobile */}
           {appImageSrc && (
-            <div className="lg:hidden relative">
+            <div className="lg:hidden relative -mt-8">
               <div className="max-w-[240px] sm:max-w-[260px] mx-auto relative -mt-4 mb-4">
                 <div className="relative">
                   <img 
@@ -84,7 +84,7 @@ const AppFeatureSection: React.FC<AppFeatureSectionProps> = ({
           <div className="w-full flex flex-col lg:flex-row lg:gap-12 lg:items-start">
             {/* Desktop App mockup - Only visible on desktop */}
             {appImageSrc && (
-              <div className="hidden lg:block lg:w-1/3 relative">
+              <div className="hidden lg:block lg:w-1/3 relative -mt-4">
                 <div className="max-w-xs relative">
                   <div className="relative">
                     <img 
@@ -114,35 +114,62 @@ const AppFeatureSection: React.FC<AppFeatureSectionProps> = ({
             
             {/* Card layout with benefits */}
             <div className={`w-full ${appImageSrc ? 'lg:w-2/3' : 'lg:w-full'}`}>
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden mb-6">
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden mb-6 group">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+                
+                {/* Top accent line - only visible on hover */}
+                <div 
+                  className="absolute top-0 left-0 w-full h-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100" 
+                  style={{ background: `linear-gradient(to right, #7BA7C2, #7BA7C280)` }}
+                ></div>
                 
                 <div className="relative z-10">
                   {/* Features grid */}
                   <div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
-                      {features.map((feature, index) => (
-                        <div key={index} className="relative group">
-                          <div className="flex flex-col md:flex-row gap-3 md:gap-4 p-4 md:p-5 rounded-xl transition-all duration-300 md:hover:bg-[#7BA7C2]/5">
-                            <div className="flex-shrink-0 w-10 h-10 md:w-10 md:h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto md:mx-0 mb-2 md:mb-0">
-                              {React.cloneElement(feature.icon as React.ReactElement, { 
-                                className: `w-5 h-5 md:w-6 md:h-6 text-[#7BA7C2] transition-all duration-300` 
-                              })}
-                            </div>
-                            <div className="flex-grow">
-                              <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} mb-1 md:mb-2 text-center md:text-left`}>{feature.title}</h4>
-                              <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[320px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">{feature.description}</p>
+                      {features.map((feature, index) => {
+                        const [isHovered, setIsHovered] = React.useState(false);
+                        
+                        return (
+                          <div 
+                            key={index} 
+                            className="relative"
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                          >
+                            <div className="flex flex-col md:flex-row gap-3 md:gap-4 p-4 md:p-5 rounded-xl transition-all duration-300 md:hover:bg-[#7BA7C2]/5">
+                              <div 
+                                className="flex-shrink-0 w-10 h-10 md:w-10 md:h-10 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-2 md:mb-0 transition-all duration-300"
+                                style={{ 
+                                  backgroundColor: isHovered ? '#7BA7C220' : '#7BA7C210',
+                                  color: '#7BA7C2'
+                                }}
+                              >
+                                {React.cloneElement(feature.icon as React.ReactElement, { 
+                                  className: `w-5 h-5 md:w-6 md:h-6 transition-all duration-300 ${isHovered ? 'scale-110' : ''}` 
+                                })}
+                              </div>
+                              <div className="flex-grow">
+                                <h4 
+                                  className={`${fontSize.lg} ${fontWeight.normal} mb-1 md:mb-2 text-center md:text-left ${textColor.dark}`}
+                                >
+                                  {feature.title}
+                                </h4>
+                                <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[320px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                                  {feature.description}
+                                </p>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                     
                     {/* App Store Info */}
                     {appStoreInfo && (
-                      <div className="mt-8 bg-[#7BA7C2]/5 p-4 rounded-lg">
+                      <div className="mt-8 bg-[#7BA7C2]/5 p-5 rounded-lg border border-[#7BA7C2]/10">
                         <p className={`${fontSize.sm} ${textColor.dark} text-center md:text-left`}>
                           {appStoreInfo}
                         </p>

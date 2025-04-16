@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
+import DPIFeatureCard, { DPIFeatureItem } from './elements/DPIFeatureCard';
 
-export interface FeatureItem {
+export interface FeatureItem extends DPIFeatureItem {
   icon: React.ReactNode;
   title: string;
   description: string;
@@ -70,111 +71,18 @@ const DPISection: React.FC<DPISectionProps> = ({
           </p>
         </div>
         
-        {/* Mobile Image - Only visible on mobile */}
-        {imageSrc && (
-          <div className="md:hidden mb-8 mx-auto max-w-xs">
-            <div className="relative w-full">
-              <img 
-                src={imageSrc}
-                alt={imageAlt}
-                className="w-full h-auto object-cover rounded-xl shadow-md"
-                loading="lazy"
-              />
-              {premiumLabel && (
-                <div className="absolute top-3 right-3 bg-[#7BA7C2] text-white text-xs font-medium px-2 py-0.5 rounded-full">
-                  {premiumLabel}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
+        {/* Mobile Image is now handled inside the DPIFeatureCard component */}
         
-        {/* Content with image for desktop */}
+        {/* Content with integrated image */}
         <div className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative bg-white rounded-xl p-6 md:p-8 shadow-sm overflow-hidden">
-            <div className="relative z-10 flex flex-col md:flex-row gap-8">
-              {/* Content section */}
-              <div className="flex-1">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                  {features.map((item, index) => {
-                    const isHovered = index === hoverFeature;
-                    
-                    return (
-                      <div 
-                        key={index}
-                        className="relative group"
-                        onMouseEnter={() => window.innerWidth >= 768 ? setHoverFeature(index) : null}
-                        onMouseLeave={() => window.innerWidth >= 768 ? setHoverFeature(null) : null}
-                      >
-                        {/* Minimalist card design */}
-                        <div className={`relative bg-white rounded-xl overflow-hidden transition-all duration-500 h-full ${
-                          isHovered && window.innerWidth >= 768
-                            ? 'shadow-md transform -translate-y-1' 
-                            : 'shadow-sm hover:shadow-md'
-                        }`}>
-                          {/* Simple header with icon and title */}
-                          <div className="flex items-center px-5 py-4 border-b border-gray-50">
-                            {/* Icon container with subtle background */}
-                            <div className="mr-4">
-                              <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-                                isHovered && window.innerWidth >= 768 ? 'bg-gray-50 text-[#7BA7C2]' : 'text-gray-500'
-                              }`}>
-                                {React.cloneElement(item.icon as React.ReactElement, { 
-                                  className: `w-5 h-5 transition-all duration-300` 
-                                })}
-                              </div>
-                            </div>
-                            
-                            {/* Clean typography for title */}
-                            <h4 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} flex-1 pr-4 line-clamp-1`}>
-                              {item.title}
-                            </h4>
-                          </div>
-                          
-                          {/* Clean content area */}
-                          <div className="bg-white px-5 py-4">
-                            {/* Description with clean typography */}
-                            <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} hyphens-auto`} lang="de">
-                              {item.description}
-                            </p>
-                          </div>
-                          
-                          {/* Subtle accent line on hover */}
-                          <div className={`absolute top-0 left-0 w-full h-0.5 ${accentColor} transition-opacity duration-300 ${
-                            isHovered && window.innerWidth >= 768 ? 'opacity-100' : 'opacity-0'
-                          }`}></div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              
-              {/* Image section - Only visible on desktop */}
-              {imageSrc && (
-                <div className="hidden md:block md:w-2/5 lg:w-1/3 flex-shrink-0">
-                  <div className="relative h-full rounded-xl overflow-hidden shadow-sm">
-                    <img 
-                      src={imageSrc}
-                      alt={imageAlt}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    {premiumLabel && (
-                      <div className="absolute top-4 right-4 bg-white text-gray-700 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                        {premiumLabel}
-                      </div>
-                    )}
-                    {additionalFeeLabel && (
-                      <div className="absolute bottom-4 left-4 bg-white text-gray-700 text-sm font-medium px-3 py-1 rounded-full shadow-sm">
-                        {additionalFeeLabel}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+          <DPIFeatureCard 
+            features={features}
+            accentColor={accentColor}
+            imageSrc={imageSrc}
+            imageAlt={imageAlt}
+            premiumLabel={premiumLabel}
+            additionalFeeLabel={additionalFeeLabel}
+          />
         </div>
       </div>
     </section>
