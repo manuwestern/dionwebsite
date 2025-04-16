@@ -33,82 +33,60 @@ const CollapsibleBenefitCard: React.FC<CollapsibleBenefitCardProps> = ({
       onMouseEnter={() => setHoverCard(index)}
       onMouseLeave={() => setHoverCard(null)}
     >
-      {/* Card with glass morphism effect */}
-      <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full border-2 ${
+      {/* Minimalist card design */}
+      <div className={`relative bg-white rounded-xl overflow-hidden transition-all duration-500 h-full ${
         isHovered 
-          ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
-          : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
+          ? 'shadow-md transform -translate-y-1' 
+          : 'shadow-sm hover:shadow-md'
       }`}>
-        {/* Header with icon above title on mobile, side by side on desktop */}
-        <div className="relative overflow-hidden flex flex-row h-16 md:h-20 items-center justify-start py-4 md:py-0">
-          {/* Gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2] to-[#7BA7C2]/80"></div>
-          
-          {/* Decorative circles */}
-          <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/10 -mr-20 -mt-20"></div>
-          <div className="absolute bottom-0 left-0 w-20 h-20 rounded-full bg-white/10 -ml-10 -mb-10"></div>
-          
-          {/* Icon container - centered on mobile, left-aligned on desktop */}
-          <div className="relative z-10 ml-4 md:ml-6 mr-3 md:mr-4">
-            <div className={`w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-500 ${
-              isHovered ? 'scale-110 bg-white/30' : ''
+        {/* Simple header with icon and title */}
+        <div className="flex items-center px-5 py-4 border-b border-gray-50">
+          {/* Icon container with subtle background */}
+          <div className="mr-4">
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+              isHovered ? 'bg-gray-50 text-[#7BA7C2]' : 'text-gray-500'
             }`}>
               {React.cloneElement(icon as React.ReactElement, { 
-                className: `w-6 h-6 text-white transition-all duration-500 ${isHovered ? 'scale-110' : ''}` 
+                className: `w-5 h-5 transition-all duration-300` 
               })}
             </div>
           </div>
           
-          {/* Title - centered on mobile, left-aligned on desktop */}
-          <h3 className={`relative z-10 ${fontSize.lg} ${fontWeight.normal} ${textColor.white} drop-shadow-sm text-left flex-1 pr-12 md:pr-6 line-clamp-2`}>{title}</h3>
+          {/* Clean typography for title */}
+          <h3 className={`${fontSize.lg} ${fontWeight.normal} ${textColor.dark} flex-1 pr-8 line-clamp-1`}>{title}</h3>
           
-          {/* Mobile toggle button - only visible on mobile, positioned absolutely */}
-          <div className="absolute top-4 right-4 md:hidden">
-            {isExpanded ? (
-              <button 
-                className="relative z-10 p-2 text-white focus:outline-none"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleExpand();
-                }}
-                aria-expanded="true"
-                aria-label="Collapse card"
-              >
-                <ChevronUp size={20} />
-              </button>
-            ) : (
-              <button 
-                className="relative z-10 p-2 text-white focus:outline-none"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleExpand();
-                }}
-                aria-expanded="false"
-                aria-label="Expand card"
-              >
-                <ChevronDown size={20} />
-              </button>
-            )}
+          {/* Mobile toggle button - only visible on mobile */}
+          <div className="md:hidden">
+            <button 
+              className="text-gray-400 focus:outline-none"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleExpand();
+              }}
+              aria-label={isExpanded ? "Collapse card" : "Expand card"}
+            >
+              {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+            </button>
           </div>
         </div>
         
-        {/* Content with subtle gradient */}
+        {/* Clean content area */}
         <div 
-          className={`bg-gradient-to-b from-white to-gray-50/50 flex flex-col transition-all duration-300 overflow-hidden
-            ${isExpanded ? 'max-h-[1000px] p-6' : 'max-h-0 p-0'} 
-            md:max-h-none md:p-6 md:h-auto md:min-h-[180px] md:h-[200px]`}
+          className={`bg-white px-5 py-4 flex flex-col transition-all duration-300 overflow-hidden
+            ${isExpanded ? 'max-h-[1000px]' : 'max-h-0 py-0'} 
+            md:max-h-none md:py-4 md:h-auto md:min-h-[160px]`}
         >
-          {/* Description with perfect typography */}
-          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+          {/* Description with clean typography */}
+          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow hyphens-auto`} lang="de">
             {description}
           </p>
         </div>
+        
+        {/* Subtle accent line on hover */}
+        <div className={`absolute top-0 left-0 w-full h-0.5 bg-[#7BA7C2]/70 transition-opacity duration-300 ${
+          isHovered ? 'opacity-100' : 'opacity-0'
+        }`}></div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-        isHovered ? 'opacity-70' : 'opacity-0'
-      }`}></div>
     </div>
   );
 };

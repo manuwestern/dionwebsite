@@ -122,7 +122,7 @@ const TreatmentAreasSection: React.FC = () => {
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-[#7BA7C2]/10 blur-xl"></div>
             <h2 className={`${textStyle.sectionTitle} mb-4`} lang="de">
               <span className="md:hidden">
-                Behandlungs-<br />bereiche
+                Behandlung<wbr />s&shy;bereiche
               </span>
               <span className="hidden md:inline">
                 {t('treatmentAreasSection.title')}
