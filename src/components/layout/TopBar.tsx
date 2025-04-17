@@ -32,9 +32,11 @@ const TopBar: React.FC = () => {
             {/* Social icons */}
             <div className="flex items-center gap-3">
               <a 
-                href="#" 
+                href="https://wa.me/491702637818" 
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-7 h-7 rounded-full hover:bg-[#1f1f1f]"
                 aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img 
                   src="/images/whatsapp.svg" 
@@ -44,9 +46,11 @@ const TopBar: React.FC = () => {
                 />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/dionhairclinic" 
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-7 h-7 rounded-full hover:bg-[#1f1f1f]"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img 
                   src="/images/instagram.svg" 
@@ -56,9 +60,11 @@ const TopBar: React.FC = () => {
                 />
               </a>
               <a 
-                href="#" 
+                href="https://www.tiktok.com/@dionhairclinic" 
                 className="text-gray-300 hover:text-white transition-colors flex items-center justify-center w-7 h-7 rounded-full hover:bg-[#1f1f1f]"
                 aria-label="TikTok"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img 
                   src="/images/tiktok.svg" 
