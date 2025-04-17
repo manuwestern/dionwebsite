@@ -115,7 +115,7 @@ const TestimonialsSection: React.FC = () => {
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div className="flex flex-col md:flex-row">
               {/* Patient Image - Left Side */}
-              <div className="w-full md:w-2/5 h-[220px] md:h-[400px] relative">
+              <div className="w-full md:w-2/5 h-[300px] md:h-[400px] relative">
                 {/* Image with overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2]/20 to-transparent z-10"></div>
                 <OptimizedImage 

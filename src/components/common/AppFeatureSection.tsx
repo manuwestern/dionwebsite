@@ -124,7 +124,7 @@ const AppFeatureSection: React.FC<AppFeatureSectionProps> = ({
                 <div className="relative z-10 w-full">
                   {/* Features grid */}
                   <div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-6 w-full">
                       {features.map((feature, index) => {
                         const [isHovered, setIsHovered] = React.useState(false);
                         

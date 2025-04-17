@@ -172,15 +172,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   const renderMobileRightContent = () => {
     if (priceTags && priceTags.length > 0) {
       return (
-        <div className="grid grid-cols-2 gap-4 max-w-[360px] mx-auto">
+        <div className="grid grid-cols-2 gap-3 max-w-[360px] mx-auto">
           {priceTags.map((tag, index) => (
             <div 
               key={index} 
-              className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-md border border-[#7BA7C2]/20 transform rotate-[-3deg] hover:rotate-0 transition-all duration-300"
+              className="bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-md border border-[#7BA7C2]/20 transform rotate-[-2deg] hover:rotate-0 transition-all duration-300"
             >
-              <div className="text-[#7BA7C2] font-medium text-lg">{tag.title}</div>
-              <div className="text-gray-800 font-light text-2xl">{tag.price}</div>
-              {tag.description && <div className="text-gray-600 text-xs">{tag.description}</div>}
+              <div className="text-[#7BA7C2] font-medium text-sm">{tag.title}</div>
+              <div className="text-gray-800 font-light text-xl mb-1">{tag.price}</div>
+              {tag.description && <div className="text-gray-600 text-xs leading-tight">{tag.description}</div>}
             </div>
           ))}
         </div>
@@ -259,7 +259,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
             
             {/* Right content section */}
-            <div className="mt-[100px] relative">
+            <div className="mt-[70px] relative mb-8">
               {/* Content with animation */}
               <div className={`relative flex justify-center transition-all duration-1000 delay-1100 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                 {renderMobileRightContent()}
