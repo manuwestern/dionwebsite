@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/DionHairClinic_Logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta tags are managed by the SEO component -->
+    
+    <!-- Static Meta Tags for SEO Crawlers -->
     <title>Dion Hair Clinic | Haartransplantation in Mönchengladbach</title>
+    <meta name="description" content="Führende Haarklinik in Deutschland für natürlich aussehende Haar-, Bart- & Augenbrauentransplantationen mit Saphir-FUE & DHI-Technik. 15+ Jahre Erfahrung, ganzheitlicher Ansatz & umfassende Nachsorge. Jetzt kostenlose Beratung buchen!" />
+    <meta name="keywords" content="Haartransplantation, Barthaartransplantation, Augenbrauentransplantation, Haarausfall, Haarklinik, Mönchengladbach, Deutschland, Saphir-FUE, DHI-Technik" />
+    <link rel="canonical" href="https://dionhairclinic.de/" />
+    
+    <!-- Dynamic Meta Tags are managed by the SEO component -->
     
     <!-- Preload critical resources -->
     <!-- CSS is imported in main.tsx and bundled by Vite -->
@@ -49,9 +55,96 @@
     
     <!-- Google reCAPTCHA v3 is now lazy-loaded via src/utils/recaptcha-loader.ts -->
     
-    <!-- Structured Data is managed by the StructuredData component -->
+    <!-- Static Structured Data for SEO Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["MedicalBusiness", "HealthAndBeautyBusiness"],
+      "@id": "https://dionhairclinic.de/#organization",
+      "name": "Dion Hair Clinic",
+      "description": "Spezialisierte Haarklinik für Haartransplantationen und Haarausfallbehandlungen mit modernsten Techniken wie Saphir-FUE und DHI.",
+      "url": "https://dionhairclinic.de",
+      "telephone": "+49 170 2637818",
+      "email": "info@dionhairclinic.de",
+      "logo": "https://dionhairclinic.de/images/DionHairClinic_Logo.svg",
+      "image": "https://dionhairclinic.de/images/DionHairClinic_Logo.svg",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schürenweg 61",
+        "addressLocality": "Mönchengladbach",
+        "postalCode": "41063",
+        "addressCountry": "DE",
+        "addressRegion": "Nordrhein-Westfalen"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.1956,
+        "longitude": 6.4378
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:30",
+          "closes": "19:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:30",
+          "closes": "16:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hair Treatments",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Hair Transplantation",
+              "url": "https://dionhairclinic.de/haartransplantation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Beard Transplantation",
+              "url": "https://dionhairclinic.de/barthaartransplantation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Eyebrow Transplantation",
+              "url": "https://dionhairclinic.de/augenbrauentransplantation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTherapy",
+              "name": "Hair Loss Therapy",
+              "url": "https://dionhairclinic.de/haarausfalltherapie"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Dynamic Structured Data is managed by the StructuredData component -->
   </head>
   <body>
+    <!-- Static H1 for SEO Crawlers - Hidden for users but visible to crawlers -->
+    <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">Dion Hair Clinic - Ihr Spezialist für Haartransplantation in Mönchengladbach</h1>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

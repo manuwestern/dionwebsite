@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import TopBar from './TopBar';
 import Navigation from './Navigation';
+import Breadcrumbs from './Breadcrumbs';
 import FooterSection from './FooterSection';
 
 interface LayoutProps {
@@ -13,12 +14,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <TopBar />
       <div className="block md:hidden">
         <Navigation />
+        <Breadcrumbs />
         <main>
           {children}
         </main>
       </div>
       <div className="hidden md:block">
         <Navigation />
+        <Breadcrumbs />
         <main>
           {children}
         </main>

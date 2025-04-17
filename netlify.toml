@@ -8,7 +8,30 @@
   publish = "dist"
   
   # Umgebungsvariablen für den Build-Prozess
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true" }
+
+# Prerendering für SEO aktivieren
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+# WWW zu Non-WWW Redirects
+[[redirects]]
+  from = "https://www.dionhairclinic.de/*"
+  to = "https://dionhairclinic.de/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.dionhairclinic.de/*"
+  to = "https://dionhairclinic.de/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://dionhairclinic.de/*"
+  to = "https://dionhairclinic.de/:splat"
+  status = 301
+  force = true
 
 # Weiterleitungsregeln für SPA-Routing
 [[redirects]]
