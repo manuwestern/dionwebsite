@@ -94,8 +94,8 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
     <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -right-[400px] blur-3xl"></div>
-      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -left-[300px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/3 -top-[400px] -right-[400px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/3 -bottom-[300px] -left-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -138,16 +138,16 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                   {/* Decorative elements from TreatmentAreasSection */}
                   <div className="absolute top-0 right-0 w-48 h-48 rounded-full opacity-50 -mr-24 -mt-24 blur-xl transition-opacity duration-500"
                        style={{ 
-                         background: 'radial-gradient(circle at top right, #7BA7C215, transparent 70%)',
-                         opacity: isHovered ? 1 : 0
+                         background: 'radial-gradient(circle at top right, #7BA7C210, transparent 70%)',
+                         opacity: isHovered ? 0.8 : 0
                        }}></div>
                   <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full opacity-50 -ml-24 -mb-24 blur-xl transition-opacity duration-500"
                        style={{ 
-                         background: 'radial-gradient(circle at bottom left, #7BA7C215, transparent 70%)',
-                         opacity: isHovered ? 0.7 : 0
+                         background: 'radial-gradient(circle at bottom left, #7BA7C210, transparent 70%)',
+                         opacity: isHovered ? 0.5 : 0
                        }}></div>
-                  {/* Pattern Image with background gradient */}
-                  <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10`}>
+                  {/* Pattern Image with background gradient - dezenter gestaltet */}
+                  <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/30 to-[#7BA7C2]/5`}>
                     {patternImage ? (
                       <img 
                         src={patternImage}
@@ -193,8 +193,8 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                     <div className="grid grid-cols-2 gap-2 md:gap-5 self-start mt-0 md:mt-1">
                       <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[70px] md:h-[75px] flex flex-col justify-between ${
                         isHovered 
-                          ? 'bg-[#7BA7C2]/10' 
-                          : 'bg-[#7BA7C2]/5'
+                          ? 'bg-[#7BA7C2]/8' 
+                          : 'bg-[#7BA7C2]/3'
                       }`}>
                         <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center whitespace-nowrap`}>
                           {t(typicalGraftsKey)}
@@ -203,8 +203,8 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                       </div>
                       <div className={`rounded-xl p-2 md:p-4 transition-all duration-300 h-[70px] md:h-[75px] flex flex-col justify-between ${
                         isHovered 
-                          ? 'bg-[#7BA7C2]/10' 
-                          : 'bg-[#7BA7C2]/5'
+                          ? 'bg-[#7BA7C2]/8' 
+                          : 'bg-[#7BA7C2]/3'
                       }`}>
                         <h4 className={`${fontSize.xs} ${textColor.primary} ${fontWeight.medium} uppercase ${tracking.wider} text-center whitespace-nowrap`}>
                           {t(treatmentKey)}
@@ -215,10 +215,10 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                   </div>
                 </div>
                 
-                {/* Decorative shadow element - enhanced with TreatmentAreasSection styling */}
+                {/* Decorative shadow element - dezenter gestaltet */}
                 <div className={`absolute -z-10 w-[calc(100%+16px)] h-[calc(100%+16px)] rounded-2xl top-2 left-2 blur-md transition-all duration-500 ${
-                  isHovered ? 'opacity-80' : 'opacity-0'
-                }`} style={{ backgroundColor: '#7BA7C210' }}></div>
+                  isHovered ? 'opacity-60' : 'opacity-0'
+                }`} style={{ backgroundColor: '#7BA7C208' }}></div>
               </div>
             );
           })}
