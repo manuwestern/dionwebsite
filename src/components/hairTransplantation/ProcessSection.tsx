@@ -11,7 +11,7 @@ const ProcessSection: React.FC = () => {
   ];
 
   // Custom card heights for this specific page - medium heights for beard content
-  const cardMinHeight = "550px";  // Minimum height on mobile
+  const cardMinHeight = "580px";  // Minimum height on mobile
   const cardHeight = "520px";     // Height on desktop
   const contentMinHeight = "480px"; // Content area minimum height
   const contentHeight = "480px";   // Content area height on desktop
