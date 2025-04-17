@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, gradientUnderline, fontSize, fontWeight, textColor, lineHeight } from '../../utils/typography';
+import { textStyle, gradientUnderline } from '../../utils/typography';
+import FeatureContainer from '../common/elements/FeatureContainer';
 import {
   CalendarCheck,
   HeartPulse,
@@ -12,44 +13,37 @@ import {
 
 const TransplantCareSection: React.FC = () => {
   const { t } = useTranslation('knowledge');
-  const [hoverItem, setHoverItem] = useState<string | null>(null);
 
   const careItems = [
     {
-      id: 'before',
       icon: <CalendarCheck size={24} className="text-[#7BA7C2]" />,
       title: t('transplantCare.beforeTitle'),
-      text: t('transplantCare.beforeText')
+      description: t('transplantCare.beforeText')
     },
     {
-      id: 'after',
       icon: <HeartPulse size={24} className="text-[#7BA7C2]" />,
       title: t('transplantCare.afterTitle'),
-      text: t('transplantCare.afterText')
+      description: t('transplantCare.afterText')
     },
     {
-      id: 'washing',
       icon: <Droplets size={24} className="text-[#7BA7C2]" />,
       title: t('transplantCare.washingTitle'),
-      text: t('transplantCare.washingText')
+      description: t('transplantCare.washingText')
     },
     {
-      id: 'longTerm',
       icon: <Clock size={24} className="text-[#7BA7C2]" />,
       title: t('transplantCare.longTermTitle'),
-      text: t('transplantCare.longTermText')
+      description: t('transplantCare.longTermText')
     },
     {
-      id: 'medication',
       icon: <Pill size={24} className="text-[#7BA7C2]" />,
       title: t('transplantCare.medicationTitle'),
-      text: t('transplantCare.medicationText')
+      description: t('transplantCare.medicationText')
     },
     {
-      id: 'expectations',
       icon: <Goal size={24} className="text-[#7BA7C2]" />,
       title: t('transplantCare.expectationsTitle'),
-      text: t('transplantCare.expectationsText')
+      description: t('transplantCare.expectationsText')
     }
   ];
 
@@ -72,51 +66,13 @@ const TransplantCareSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {careItems.map((item) => {
-            const isHovered = item.id === hoverItem;
-            
-            return (
-              <div
-                key={item.id}
-                className="group relative h-full"
-                onMouseEnter={() => setHoverItem(item.id)}
-                onMouseLeave={() => setHoverItem(null)}
-              >
-                {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full border-2 ${
-                  isHovered
-                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
-                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                }`}>
-                  <div className="p-6 md:p-8 h-full flex flex-col">
-                    {/* Icon and Title */}
-                    <div className="flex items-center mb-6">
-                      <div className={`mr-4 p-3 rounded-full transition-all duration-300 ${
-                        isHovered ? 'bg-[#7BA7C2]/20' : 'bg-[#7BA7C2]/10'
-                      }`}>
-                        {item.icon}
-                      </div>
-                      <h3 className={`${fontSize.lg} ${fontWeight.medium} ${textColor.dark}`}>
-                        {item.title}
-                      </h3>
-                    </div>
-                    
-                    {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow`}>
-                      {item.text}
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-                  isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
-              </div>
-            );
-          })}
-        </div>
+        <FeatureContainer
+          title=""
+          features={careItems}
+          accentColor="#7BA7C2"
+          backgroundColor="bg-white"
+          columns={2}
+        />
       </div>
     </section>
   );

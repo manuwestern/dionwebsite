@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, gradientUnderline, fontSize, fontWeight, textColor, lineHeight } from '../../utils/typography';
+import { textStyle, gradientUnderline } from '../../utils/typography';
+import FeatureContainer from '../common/elements/FeatureContainer';
 import {
   ArrowUpRight,
   Hourglass,
@@ -12,44 +13,37 @@ import {
 
 const HairFactsSection: React.FC = () => {
   const { t } = useTranslation('knowledge');
-  const [hoverFact, setHoverFact] = useState<string | null>(null);
 
   const facts = [
     {
-      id: 'fact1',
       icon: <ArrowUpRight size={24} className="text-[#7BA7C2]" />,
       title: t('hairFacts.fact1Title'),
-      text: t('hairFacts.fact1Text')
+      description: t('hairFacts.fact1Text')
     },
     {
-      id: 'fact2',
       icon: <Hourglass size={24} className="text-[#7BA7C2]" />,
       title: t('hairFacts.fact2Title'),
-      text: t('hairFacts.fact2Text')
+      description: t('hairFacts.fact2Text')
     },
     {
-      id: 'fact3',
       icon: <Hash size={24} className="text-[#7BA7C2]" />,
       title: t('hairFacts.fact3Title'),
-      text: t('hairFacts.fact3Text')
+      description: t('hairFacts.fact3Text')
     },
     {
-      id: 'fact4',
       icon: <Weight size={24} className="text-[#7BA7C2]" />,
       title: t('hairFacts.fact4Title'),
-      text: t('hairFacts.fact4Text')
+      description: t('hairFacts.fact4Text')
     },
     {
-      id: 'fact5',
       icon: <Scissors size={24} className="text-[#7BA7C2]" />,
       title: t('hairFacts.fact5Title'),
-      text: t('hairFacts.fact5Text')
+      description: t('hairFacts.fact5Text')
     },
     {
-      id: 'fact6',
       icon: <Zap size={24} className="text-[#7BA7C2]" />,
       title: t('hairFacts.fact6Title'),
-      text: t('hairFacts.fact6Text')
+      description: t('hairFacts.fact6Text')
     }
   ];
 
@@ -72,51 +66,13 @@ const HairFactsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {facts.map((fact) => {
-            const isHovered = fact.id === hoverFact;
-
-            return (
-              <div
-                key={fact.id}
-                className="group relative h-full"
-                onMouseEnter={() => setHoverFact(fact.id)}
-                onMouseLeave={() => setHoverFact(null)}
-              >
-                {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full border-2 ${
-                  isHovered
-                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
-                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                }`}>
-                  <div className="p-6 md:p-8 h-full flex flex-col">
-                    {/* Icon and Title */}
-                    <div className="flex items-center mb-6">
-                      <div className={`mr-4 p-3 rounded-full transition-all duration-300 ${
-                        isHovered ? 'bg-[#7BA7C2]/20' : 'bg-[#7BA7C2]/10'
-                      }`}>
-                        {fact.icon}
-                      </div>
-                      <h3 className={`${fontSize.lg} ${fontWeight.medium} ${textColor.dark}`}>
-                        {fact.title}
-                      </h3>
-                    </div>
-
-                    {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow`}>
-                      {fact.text}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-                  isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
-              </div>
-            );
-          })}
-        </div>
+        <FeatureContainer
+          title=""
+          features={facts}
+          accentColor="#7BA7C2"
+          backgroundColor="bg-white"
+          columns={2}
+        />
       </div>
     </section>
   );

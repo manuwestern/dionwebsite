@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, gradientUnderline, fontSize, fontWeight, textColor, lineHeight } from '../../utils/typography';
+import { textStyle, gradientUnderline } from '../../utils/typography';
+import FeatureContainer from '../common/elements/FeatureContainer';
 import {
   Dna,
   FlaskConical,
@@ -12,44 +13,37 @@ import {
 
 const HairLossCausesSection: React.FC = () => {
   const { t } = useTranslation('knowledge');
-  const [hoverCause, setHoverCause] = useState<string | null>(null);
 
   const causes = [
     {
-      id: 'genetic',
       icon: <Dna size={24} className="text-[#7BA7C2]" />,
       title: t('hairLossCauses.geneticTitle'),
-      text: t('hairLossCauses.geneticText')
+      description: t('hairLossCauses.geneticText')
     },
     {
-      id: 'hormonal',
       icon: <FlaskConical size={24} className="text-[#7BA7C2]" />,
       title: t('hairLossCauses.hormonalTitle'),
-      text: t('hairLossCauses.hormonalText')
+      description: t('hairLossCauses.hormonalText')
     },
     {
-      id: 'medical',
       icon: <Stethoscope size={24} className="text-[#7BA7C2]" />,
       title: t('hairLossCauses.medicalTitle'),
-      text: t('hairLossCauses.medicalText')
+      description: t('hairLossCauses.medicalText')
     },
     {
-      id: 'nutritional',
       icon: <Salad size={24} className="text-[#7BA7C2]" />,
       title: t('hairLossCauses.nutritionalTitle'),
-      text: t('hairLossCauses.nutritionalText')
+      description: t('hairLossCauses.nutritionalText')
     },
     {
-      id: 'stress',
       icon: <Brain size={24} className="text-[#7BA7C2]" />,
       title: t('hairLossCauses.stressTitle'),
-      text: t('hairLossCauses.stressText')
+      description: t('hairLossCauses.stressText')
     },
     {
-      id: 'medication',
       icon: <Pill size={24} className="text-[#7BA7C2]" />,
       title: t('hairLossCauses.medicationTitle'),
-      text: t('hairLossCauses.medicationText')
+      description: t('hairLossCauses.medicationText')
     }
   ];
 
@@ -72,51 +66,13 @@ const HairLossCausesSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {causes.map((cause) => {
-            const isHovered = cause.id === hoverCause;
-
-            return (
-              <div
-                key={cause.id}
-                className="group relative h-full"
-                onMouseEnter={() => setHoverCause(cause.id)}
-                onMouseLeave={() => setHoverCause(null)}
-              >
-                {/* Card with glass morphism effect */}
-                <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full border-2 ${
-                  isHovered
-                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
-                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                }`}>
-                  <div className="p-6 md:p-8 h-full flex flex-col">
-                    {/* Icon and Title */}
-                    <div className="flex items-center mb-6">
-                      <div className={`mr-4 p-3 rounded-full transition-all duration-300 ${
-                        isHovered ? 'bg-[#7BA7C2]/20' : 'bg-[#7BA7C2]/10'
-                      }`}>
-                        {cause.icon}
-                      </div>
-                      <h3 className={`${fontSize.lg} ${fontWeight.medium} ${textColor.dark}`}>
-                        {cause.title}
-                      </h3>
-                    </div>
-
-                    {/* Description */}
-                    <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} flex-grow`}>
-                      {cause.text}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-                  isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
-              </div>
-            );
-          })}
-        </div>
+        <FeatureContainer
+          title=""
+          features={causes}
+          accentColor="#7BA7C2"
+          backgroundColor="bg-white"
+          columns={2}
+        />
       </div>
     </section>
   );

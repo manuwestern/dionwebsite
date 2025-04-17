@@ -95,16 +95,7 @@ const TeamSection: React.FC = () => {
           })}
         </div>
 
-        {/* CTA Section using the reusable component */}
-        <div className="mt-20">
-          <CTASection 
-            translationNamespace="clinic"
-            titleKey="teamSection.cta.title"
-            descriptionKey="teamSection.cta.description"
-            ctaTextKey="buttons.consultation"
-            ctaLink="/kontakt"
-          />
-        </div>
+        
       </div>
     </section>
   );

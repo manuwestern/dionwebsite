@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
+import { textStyle, gradientUnderline } from '../../utils/typography';
 import CTASection from '../common/elements/CTASection';
+import ElegantClinicCard from '../common/elements/ElegantClinicCard';
 
 const FacilitySection: React.FC = () => {
   const { t } = useTranslation(['clinic', 'common']);
@@ -61,46 +62,17 @@ const FacilitySection: React.FC = () => {
           {/* Facility Features */}
           <div className="w-full lg:w-1/2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {features.map((feature, index) => {
-                const isHovered = index === hoverFeature;
-
-                return (
-                  <div
-                    key={index}
-                    className="relative group"
-                    onMouseEnter={() => setHoverFeature(index)}
-                    onMouseLeave={() => setHoverFeature(null)}
-                  >
-                    {/* Card with glass morphism effect */}
-                    <div className={`relative bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 h-full border-2 ${
-                      isHovered
-                        ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
-                        : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                    }`}>
-                      <div className="p-6 md:p-8">
-                        {/* Number container */}
-                        <div className={`w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mb-4 transition-all duration-500 ${
-                          isHovered ? 'scale-110 bg-[#7BA7C2]/20' : ''
-                        }`}>
-                          <span className={`${fontSize.h3} ${fontWeight.light} text-[#7BA7C2] transition-all duration-500 ${isHovered ? 'scale-110' : ''}`}>
-                            {index + 1}
-                          </span>
-                        </div>
-
-                        <h3 className={`${textStyle.cardTitle} mb-3`}>{feature.title}</h3>
-                        <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Decorative elements */}
-                    <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-                      isHovered ? 'opacity-70' : 'opacity-0'
-                    }`}></div>
-                  </div>
-                );
-              })}
+              {features.map((feature, index) => (
+                <ElegantClinicCard
+                  key={index}
+                  title={feature.title}
+                  description={feature.description}
+                  index={index}
+                  hoverCard={hoverFeature}
+                  setHoverCard={setHoverFeature}
+                  accentColor="#7BA7C2"
+                />
+              ))}
             </div>
           </div>
         </div>

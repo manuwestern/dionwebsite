@@ -69,10 +69,6 @@ const KnowledgePage: React.FC = () => {
         <HairCareSection />
       </SectionWrapper>
 
-      <SectionWrapper type="accent" className="py-4">
-        <CTASection />
-      </SectionWrapper>
-
       <SectionWrapper type="light">
         <TransplantCareSection />
       </SectionWrapper>

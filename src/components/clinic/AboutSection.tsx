@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
+import { textStyle, gradientUnderline } from '../../utils/typography';
+import ElegantClinicCard from '../common/elements/ElegantClinicCard';
 
 const AboutSection: React.FC = () => {
   const { t } = useTranslation('clinic');
+  const [hoverValue, setHoverValue] = useState<number | null>(null);
+
+  // Get values from translation
+  const values = t('aboutSection.values.items', { returnObjects: true }) as any[];
 
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
@@ -38,20 +43,16 @@ const AboutSection: React.FC = () => {
         </h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {(t('aboutSection.values.items', { returnObjects: true }) as any[]).map((value, index) => (
-            <div 
+          {values.map((value, index) => (
+            <ElegantClinicCard
               key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100 group"
-            >
-              <div className="p-6">
-                <div className="w-12 h-12 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mb-4 group-hover:bg-[#7BA7C2]/20 transition-colors duration-300">
-                  <span className={`${fontSize.h3} ${fontWeight.medium} text-[#7BA7C2]`}>{index + 1}</span>
-                </div>
-                
-                <h4 className={`${textStyle.cardTitle} mb-3`}>{value.title}</h4>
-                <p className={`${textStyle.bodyText} ${textColor.medium}`}>{value.description}</p>
-              </div>
-            </div>
+              title={value.title}
+              description={value.description}
+              index={index}
+              hoverCard={hoverValue}
+              setHoverCard={setHoverValue}
+              accentColor="#7BA7C2"
+            />
           ))}
         </div>
         
