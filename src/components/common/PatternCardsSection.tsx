@@ -30,10 +30,6 @@ export interface PatternCardsSectionProps {
   
   // Alt text template for images
   imageAltTemplate?: string;
-  
-  // Optional styling props
-  minCardHeight?: string;
-  descriptionMaxHeight?: string;
 }
 
 const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
@@ -49,10 +45,28 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
   patternsTranslationKey,
   getPatternImage,
   patternImageMapping = {},
-  imageAltTemplate = "{title}",
-  minCardHeight = "280px",
-  descriptionMaxHeight = "120px"
+  imageAltTemplate = "{title}"
 }) => {
+  // Hardcoded height values for different screen sizes
+  const cardHeight = {
+    mobile: "280px",
+    desktop: "330px"
+  };
+  
+  const titleHeight = {
+    mobile: "50px",
+    desktop: "60px"
+  };
+  
+  const descHeight = {
+    mobile: "80px",
+    desktop: "100px"
+  };
+  
+  const imgHeight = {
+    mobile: "200px",
+    desktop: "250px"
+  };
   const { t } = useTranslation([translationNamespace, 'common']);
   const [hoverPattern, setHoverPattern] = useState<number | null>(null);
 
@@ -146,8 +160,8 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                          background: 'radial-gradient(circle at bottom left, #7BA7C210, transparent 70%)',
                          opacity: isHovered ? 0.5 : 0
                        }}></div>
-                  {/* Pattern Image with background gradient - dezenter gestaltet */}
-                  <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/30 to-[#7BA7C2]/5`}>
+                  {/* Pattern Image without dark gradient - hardcoded responsive height */}
+                  <div className={`h-[${imgHeight.mobile}] md:h-[${imgHeight.desktop}] overflow-hidden relative`}>
                     {patternImage ? (
                       <img 
                         src={patternImage}
@@ -165,22 +179,19 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                         <span className={`${fontSize.h3} ${fontWeight.light} text-gray-400`}>{pattern.title}</span>
                       </div>
                     )}
-                    
-                    {/* Pattern title overlay with fixed height for consistent multi-line titles */}
-                    <div className="absolute bottom-0 left-0 right-0 py-6 px-5 bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center justify-center md:justify-start">
-                      <h3 
-                        className={`${fontSize.lg} ${fontWeight.normal} drop-shadow-md ${lineHeight.tight} text-center md:text-left transition-colors duration-300`}
-                        style={{ 
-                          color: isHovered ? '#7BA7C2' : 'white',
-                        }}
-                      >{pattern.title}</h3>
-                    </div>
                   </div>
                   
-                  {/* Pattern Content with grid layout for perfect alignment */}
-                  <div className={`px-5 md:px-8 py-5 md:py-7 grid grid-rows-[${descriptionMaxHeight}_auto_auto_auto] md:grid-rows-[${descriptionMaxHeight}_auto_auto_30px] min-h-[220px] h-[${minCardHeight}] md:h-[${minCardHeight}]`}>
-                    {/* Description with fixed height on all devices */}
-                    <div className={`overflow-auto pr-1 mb-2 md:mb-3 h-[100px] max-h-[100px] md:h-[${descriptionMaxHeight}] md:max-h-[${descriptionMaxHeight}]`}>
+                  {/* Pattern Content with grid layout for perfect alignment - hardcoded responsive heights */}
+                  <div className={`px-5 md:px-8 py-5 md:py-7 grid grid-rows-[${titleHeight.mobile}_${descHeight.mobile}_auto_auto_auto] md:grid-rows-[${titleHeight.desktop}_${descHeight.desktop}_auto_auto_30px] min-h-[220px] h-[${cardHeight.mobile}] md:h-[${cardHeight.desktop}]`}>
+                    {/* Title moved from image overlay to here with hardcoded responsive fixed height */}
+                    <div className={`h-[${titleHeight.mobile}] md:h-[${titleHeight.desktop}] overflow-hidden mb-2`}>
+                      <h3 
+                        className={`${fontSize.lg} ${fontWeight.medium} ${lineHeight.tight} text-center md:text-left ${textColor.primary}`}
+                      >{pattern.title}</h3>
+                    </div>
+                    
+                    {/* Description with hardcoded responsive fixed height */}
+                    <div className={`overflow-auto pr-1 mb-2 md:mb-3 h-[${descHeight.mobile}] max-h-[${descHeight.mobile}] md:h-[${descHeight.desktop}] md:max-h-[${descHeight.desktop}]`}>
                       <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                         {pattern.description}
                       </p>
