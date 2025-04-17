@@ -119,11 +119,7 @@ const AppFeatureSection: React.FC<AppFeatureSectionProps> = ({
                 <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
                 
-                {/* Top accent line - only visible on hover */}
-                <div 
-                  className="absolute top-0 left-0 w-full h-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100" 
-                  style={{ background: `linear-gradient(to right, #7BA7C2, #7BA7C280)` }}
-                ></div>
+                {/* Removed top accent line hover effect */}
                 
                 <div className="relative z-10">
                   {/* Features grid */}

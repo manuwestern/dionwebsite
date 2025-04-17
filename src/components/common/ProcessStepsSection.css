@@ -1,0 +1,16 @@
+/* ProcessStepsSection.css */
+.process-card, .process-content {
+  transition: height 0.3s ease, min-height 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .process-card {
+    height: var(--card-desktop-height) !important;
+    min-height: var(--card-desktop-height) !important;
+  }
+  
+  .process-content {
+    height: var(--content-desktop-height) !important;
+    min-height: var(--content-desktop-height) !important;
+  }
+}

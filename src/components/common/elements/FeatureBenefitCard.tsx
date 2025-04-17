@@ -27,16 +27,24 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
   const color = colorMatch ? colorMatch[0] : "#7BA7C2";
 
   return (
-    <div 
-      className="relative bg-white/90 backdrop-blur-sm rounded-xl shadow-md border border-gray-100 overflow-hidden h-full transition-all duration-300"
+    <div
+      className="group relative h-full"
       onMouseEnter={() => setHoverCard(index)}
       onMouseLeave={() => setHoverCard(null)}
     >
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-[#7BA7C2]/5 -mr-16 -mt-16 blur-xl"></div>
-      <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-[#7BA7C2]/5 -ml-16 -mb-16 blur-xl"></div>
-      
-      <div className="relative z-10 p-6">
+      {/* Card with glass morphism effect */}
+      <div 
+        className={`relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-md transition-all duration-500 h-full border-2 ${
+          isHovered
+            ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
+            : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-lg'
+        }`}
+      >
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-[#7BA7C2]/5 -mr-16 -mt-16 blur-xl"></div>
+        <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-[#7BA7C2]/5 -ml-16 -mb-16 blur-xl"></div>
+        
+        <div className="relative z-10 p-6">
         <div className="flex flex-col gap-4">
           {/* Icon and title in a row */}
           <div className="flex items-center">
@@ -46,6 +54,8 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
                 backgroundColor: isHovered ? `${color}20` : `${color}10`,
                 color: color
               }}
+              onMouseEnter={() => setHoverCard(index)}
+              onMouseLeave={() => setHoverCard(null)}
             >
               {React.cloneElement(icon as React.ReactElement, { 
                 className: `w-5 h-5 transition-all duration-300 ${isHovered ? 'scale-110' : ''}` 
@@ -64,25 +74,24 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
             {description}
           </p>
         </div>
+        </div>
+        
+        {/* Removed accent line on top */}
+        
+        {/* More diffuse corner accent */}
+        <div 
+          className="absolute bottom-0 right-0 w-24 h-24 rounded-full blur-md transition-opacity duration-500"
+          style={{ 
+            background: `radial-gradient(circle at bottom right, ${color}15, transparent 70%)`,
+            opacity: isHovered ? 1 : 0
+          }}
+        ></div>
       </div>
       
-      {/* Accent line on top */}
-      <div 
-        className="absolute top-0 left-0 w-full h-1 transition-opacity duration-300"
-        style={{ 
-          background: `linear-gradient(to right, ${color}, ${color}80)`,
-          opacity: isHovered ? 1 : 0
-        }}
-      ></div>
-      
-      {/* Subtle corner accent */}
-      <div 
-        className="absolute bottom-0 right-0 w-16 h-16 rounded-tl-3xl transition-opacity duration-500"
-        style={{ 
-          background: `linear-gradient(to top left, ${color}20, transparent)`,
-          opacity: isHovered ? 1 : 0
-        }}
-      ></div>
+      {/* Decorative shadow element behind the card - appears on hover - more diffuse */}
+      <div className={`absolute -z-10 w-[calc(100%+16px)] h-[calc(100%+16px)] rounded-2xl bg-[#7BA7C2]/5 -top-2 -left-2 blur-md transition-all duration-500 ${
+        isHovered ? 'opacity-80' : 'opacity-0'
+      }`}></div>
     </div>
   );
 };

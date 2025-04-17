@@ -34,11 +34,7 @@ const DPIFeatureCard: React.FC<DPIFeatureCardProps> = ({
       <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
       
-      {/* Top accent line - only visible on hover */}
-      <div 
-        className="absolute top-0 left-0 w-full h-1 transition-opacity duration-300 opacity-0 hover:opacity-100" 
-        style={{ background: `linear-gradient(to right, ${color}, ${color}50)` }}
-      ></div>
+      {/* Removed top accent line hover effect */}
       
       <div className="relative z-10">
         <div className="flex flex-col md:flex-row gap-8">
@@ -65,22 +61,41 @@ const DPIFeatureCard: React.FC<DPIFeatureCardProps> = ({
           {/* Features section */}
           <div className={`flex-1 ${imageSrc ? 'md:w-3/5' : 'w-full'}`}>
             {/* Features grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="relative group">
-                  <div className="flex flex-col md:flex-row gap-3 md:gap-4 p-4 md:p-5 rounded-xl transition-all duration-300 md:hover:bg-[#7BA7C2]/5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 auto-rows-fr">
+              {features.map((feature, index) => {
+                const [isHovered, setIsHovered] = React.useState(false);
+                
+                return (
+                <div 
+                  key={index} 
+                  className="relative group h-full"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <div 
+                    className="flex flex-col md:flex-row gap-3 md:gap-4 p-4 md:p-5 rounded-xl transition-all duration-300 h-full"
+                    style={{
+                      backgroundColor: isHovered ? `${color}0D` : 'transparent', // 5% opacity equivalent
+                    }}
+                  >
+                    {/* Icon with hover effect */}
                     <div 
-                      className="flex-shrink-0 w-10 h-10 md:w-10 md:h-10 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-2 md:mb-0"
-                      style={{ backgroundColor: `${color}10` }} // 10% opacity
+                      className="flex-shrink-0 w-10 h-10 md:w-10 md:h-10 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-2 md:mb-0 transition-all duration-300"
+                      style={{ 
+                        backgroundColor: isHovered ? `${color}20` : `${color}10`,
+                        color: color
+                      }}
                     >
                       {React.cloneElement(feature.icon as React.ReactElement, { 
-                        className: `w-5 h-5 md:w-6 md:h-6 transition-all duration-300`,
-                        style: { color: color }
+                        className: `w-5 h-5 md:w-6 md:h-6 transition-all duration-300 ${isHovered ? 'scale-110' : ''}` 
                       })}
                     </div>
                     <div className="flex-grow">
                       <h4 
-                        className={`${fontSize.lg} ${fontWeight.normal} mb-1 md:mb-2 text-center md:text-left ${textColor.dark}`}
+                        className={`${fontSize.lg} ${fontWeight.normal} mb-1 md:mb-2 text-center md:text-left ${textColor.dark} transition-all duration-300`}
+                        style={{ 
+                          color: isHovered ? color : undefined
+                        }}
                       >
                         {feature.title}
                       </h4>
@@ -90,7 +105,8 @@ const DPIFeatureCard: React.FC<DPIFeatureCardProps> = ({
                     </div>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
           

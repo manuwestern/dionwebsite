@@ -125,11 +125,27 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                 onMouseLeave={() => setHoverPattern(null)}
               >
                 {/* Card with glass morphism effect */}
-                <div className={`relative h-full bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 border-2 ${
-                  isHovered 
-                    ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80' 
-                    : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
-                }`}>
+                <div 
+                  className={`relative h-full bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg transition-all duration-500 border-2 ${
+                    isHovered 
+                      ? 'shadow-xl transform -translate-y-2' 
+                      : 'hover:shadow-xl'
+                  }`}
+                  style={{
+                    borderColor: isHovered ? '#7BA7C2CC' : 'rgba(243, 244, 246, 0.8)', // 80% opacity for hover, gray-100/80 equivalent
+                  }}
+                >
+                  {/* Decorative elements from TreatmentAreasSection */}
+                  <div className="absolute top-0 right-0 w-48 h-48 rounded-full opacity-50 -mr-24 -mt-24 blur-xl transition-opacity duration-500"
+                       style={{ 
+                         background: 'radial-gradient(circle at top right, #7BA7C215, transparent 70%)',
+                         opacity: isHovered ? 1 : 0
+                       }}></div>
+                  <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full opacity-50 -ml-24 -mb-24 blur-xl transition-opacity duration-500"
+                       style={{ 
+                         background: 'radial-gradient(circle at bottom left, #7BA7C215, transparent 70%)',
+                         opacity: isHovered ? 0.7 : 0
+                       }}></div>
                   {/* Pattern Image with background gradient */}
                   <div className={`h-64 overflow-hidden relative bg-gradient-to-t from-[#7BA7C2]/60 to-[#7BA7C2]/10`}>
                     {patternImage ? (
@@ -151,15 +167,20 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                     )}
                     
                     {/* Pattern title overlay with fixed height for consistent multi-line titles */}
-                    <div className="absolute bottom-0 left-0 right-0 py-6 px-5 text-white bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center justify-center md:justify-start">
-                      <h3 className={`${fontSize.lg} ${fontWeight.normal} drop-shadow-md ${lineHeight.tight} text-center md:text-left`}>{pattern.title}</h3>
+                    <div className="absolute bottom-0 left-0 right-0 py-6 px-5 bg-gradient-to-t from-black/60 to-transparent min-h-[80px] flex items-center justify-center md:justify-start">
+                      <h3 
+                        className={`${fontSize.lg} ${fontWeight.normal} drop-shadow-md ${lineHeight.tight} text-center md:text-left transition-colors duration-300`}
+                        style={{ 
+                          color: isHovered ? '#7BA7C2' : 'white',
+                        }}
+                      >{pattern.title}</h3>
                     </div>
                   </div>
                   
                   {/* Pattern Content with grid layout for perfect alignment */}
-                  <div className={`px-5 md:px-8 py-5 md:py-7 grid grid-rows-[auto_auto_auto_auto] md:grid-rows-[${descriptionMaxHeight}_auto_auto_30px] min-h-[220px] h-auto md:h-[${minCardHeight}]`}>
-                    {/* Description with flexible height on mobile and fixed on desktop */}
-                    <div className={`overflow-auto pr-1 mb-2 md:mb-3 max-h-[100px] md:max-h-[${descriptionMaxHeight}]`}>
+                  <div className={`px-5 md:px-8 py-5 md:py-7 grid grid-rows-[${descriptionMaxHeight}_auto_auto_auto] md:grid-rows-[${descriptionMaxHeight}_auto_auto_30px] min-h-[220px] h-[${minCardHeight}] md:h-[${minCardHeight}]`}>
+                    {/* Description with fixed height on all devices */}
+                    <div className={`overflow-auto pr-1 mb-2 md:mb-3 h-[100px] max-h-[100px] md:h-[${descriptionMaxHeight}] md:max-h-[${descriptionMaxHeight}]`}>
                       <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
                         {pattern.description}
                       </p>
@@ -194,10 +215,10 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                   </div>
                 </div>
                 
-                {/* Decorative elements */}
-                <div className={`absolute -z-10 w-full h-full rounded-2xl bg-[#7BA7C2]/10 top-2 left-2 transition-all duration-500 ${
-                  isHovered ? 'opacity-70' : 'opacity-0'
-                }`}></div>
+                {/* Decorative shadow element - enhanced with TreatmentAreasSection styling */}
+                <div className={`absolute -z-10 w-[calc(100%+16px)] h-[calc(100%+16px)] rounded-2xl top-2 left-2 blur-md transition-all duration-500 ${
+                  isHovered ? 'opacity-80' : 'opacity-0'
+                }`} style={{ backgroundColor: '#7BA7C210' }}></div>
               </div>
             );
           })}

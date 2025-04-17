@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Sparkles, Scissors, Droplets, Compass } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import './ProcessStepsSection.css';
 
 export interface ProcessStep {
   image: string;
@@ -134,11 +135,16 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                 
                 {/* Card with optimized height for perfect visual balance */}
                 <div 
-                  className={`bg-white rounded-2xl shadow-lg overflow-hidden h-auto min-h-[${cardMinHeight}] md:h-[${cardHeight}] transition-all duration-500 border-2 ${
+                  className={`process-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 border-2 ${
                     isHovered
                       ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80 scale-[1.02]' 
                       : 'border-gray-100 hover:border-[#7BA7C2]/30 hover:shadow-md'
                   }`}
+                  style={{
+                    height: cardMinHeight,
+                    minHeight: cardMinHeight,
+                    '--card-desktop-height': cardHeight
+                  } as React.CSSProperties}
                 >
                   {/* Card Header with Image */}
                   <div className={`relative w-full aspect-[4/3] overflow-hidden ${
@@ -176,8 +182,15 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                     }`}></div>
                   </div>
                   
-                  {/* Card Content with optimized height */}
-                  <div className={`p-6 h-auto min-h-[${contentMinHeight}] md:h-[${contentHeight}] flex flex-col`}>
+                  {/* Card Content with fixed height */}
+                  <div 
+                    className="process-content p-6 flex flex-col overflow-hidden"
+                    style={{
+                      height: contentMinHeight,
+                      minHeight: contentMinHeight,
+                      '--content-desktop-height': contentHeight
+                    } as React.CSSProperties}
+                  >
                     {/* Title */}
                     <h3 className={`${fontSize.h4} ${fontWeight.normal} ${tracking.wide} mb-3 transition-colors duration-300 text-center md:text-left break-words hyphens-auto ${
                       isHovered ? textColor.primary : textColor.dark
@@ -185,9 +198,9 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                       {step.title}
                     </h3>
                     
-                    {/* Description - full text without scrollbars */}
-                    <div className="flex-grow">
-                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
+                    {/* Description - with overflow handling */}
+                    <div className="flex-grow overflow-auto">
+                      <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto pr-1`} lang="de">
                         {step.description}
                       </p>
                     </div>

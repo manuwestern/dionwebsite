@@ -13,6 +13,10 @@ const PatternSection: React.FC = () => {
     return images[index] || images[0];
   };
 
+  // Custom card heights for this specific page
+  const minCardHeight = "350px";  // Card height
+  const descriptionMaxHeight = "160px"; // Description area height
+
   return (
     <PatternCardsSection
       translationNamespace="beardTransplantation"
@@ -23,6 +27,9 @@ const PatternSection: React.FC = () => {
       treatmentKey="patternSection.treatment"
       getPatternImage={getPatternImage}
       imageAltTemplate="{title} - Barthaartransplantation Muster"
+      // Pass custom card heights
+      minCardHeight={minCardHeight}
+      descriptionMaxHeight={descriptionMaxHeight}
     />
   );
 };

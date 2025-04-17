@@ -27,6 +27,10 @@ const PatternSection: React.FC = () => {
     }
   ];
 
+  // Custom card heights for this specific page
+  const minCardHeight = "320px";  // Card height
+  const descriptionMaxHeight = "140px"; // Description area height
+
   return (
     <PatternCardsSection
       translationNamespace="eyebrowTransplantation"
@@ -36,6 +40,9 @@ const PatternSection: React.FC = () => {
       typicalGraftsKey="patternSection.typicalGrafts"
       treatmentKey="patternSection.treatment"
       imageAltTemplate="{title} - Augenbrauentransplantation Muster"
+      // Pass custom card heights
+      minCardHeight={minCardHeight}
+      descriptionMaxHeight={descriptionMaxHeight}
     />
   );
 };
