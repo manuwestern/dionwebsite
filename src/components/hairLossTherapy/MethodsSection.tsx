@@ -15,13 +15,6 @@ const MethodsSection: React.FC = () => {
     process: t('methodsSection.sectionLabels.process')
   };
 
-  // Define image mappings
-  const imageMapping = {
-    'mesotherapie.png': 'mesotherapie.webp',
-    'haaranalyse.png': 'haaranalyse.webp',
-    'hairselection.jpeg': 'hairselection.webp'
-  };
-
   return (
     <MethodsCardsSection
       title={t('methodsSection.title')}
@@ -31,7 +24,6 @@ const MethodsSection: React.FC = () => {
       defaultImagePath="mesotherapie.webp"
       altTextPrefix="Haarausfalltherapie Methode"
       sectionLabels={sectionLabels}
-      imageMapping={imageMapping}
       enableHyphenation={true}
     />
   );

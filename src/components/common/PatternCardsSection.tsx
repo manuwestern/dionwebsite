@@ -50,17 +50,17 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
   // Hardcoded height values for different screen sizes
   const cardHeight = {
     mobile: "280px",
-    desktop: "330px"
+    desktop: "350px"
   };
   
   const titleHeight = {
     mobile: "50px",
-    desktop: "60px"
+    desktop: "40px"
   };
   
   const descHeight = {
     mobile: "80px",
-    desktop: "100px"
+    desktop: "110px"
   };
   
   const imgHeight = {
@@ -160,8 +160,8 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                          background: 'radial-gradient(circle at bottom left, #7BA7C210, transparent 70%)',
                          opacity: isHovered ? 0.5 : 0
                        }}></div>
-                  {/* Pattern Image without dark gradient - hardcoded responsive height */}
-                  <div className={`h-[${imgHeight.mobile}] md:h-[${imgHeight.desktop}] overflow-hidden relative`}>
+                  {/* Pattern Image with subtle blue background - hardcoded responsive height */}
+                  <div className={`h-[${imgHeight.mobile}] md:h-[${imgHeight.desktop}] overflow-hidden relative bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5`}>
                     {patternImage ? (
                       <img 
                         src={patternImage}
@@ -186,7 +186,7 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                     {/* Title moved from image overlay to here with hardcoded responsive fixed height */}
                     <div className={`h-[${titleHeight.mobile}] md:h-[${titleHeight.desktop}] overflow-hidden mb-2`}>
                       <h3 
-                        className={`${fontSize.lg} ${fontWeight.medium} ${lineHeight.tight} text-center md:text-left ${textColor.primary}`}
+                        className={`${textStyle.cardTitle} text-center md:text-left`}
                       >{pattern.title}</h3>
                     </div>
                     

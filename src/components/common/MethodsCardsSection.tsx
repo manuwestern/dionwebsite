@@ -77,8 +77,13 @@ const MethodsCardsSection: React.FC<MethodsCardsSectionProps> = ({
 
   // Helper function to determine if an image should be displayed as cover or contain
   const isImageCover = (imageName: string): boolean => {
-    const coverImages = ['saphir_fue.jpg', 'dhi_fue.jpg', 'mesotherapie.png', 'haaranalyse.png', 'hairselection.jpeg'];
-    return coverImages.some(img => imageName.includes(img.replace(/\.(jpg|jpeg|png)$/, '')));
+    const coverImages = [
+      'saphir_fue.jpg', 'dhi_fue.jpg', 
+      'mesotherapie.png', 'mesotherapie.webp',
+      'haaranalyse.png', 'Medikation.webp',
+      'hairselection.jpeg', 'vitamintherapie.webp'
+    ];
+    return coverImages.some(img => imageName.includes(img.replace(/\.(jpg|jpeg|png|webp)$/, '')));
   };
 
   // Helper function to generate alt text

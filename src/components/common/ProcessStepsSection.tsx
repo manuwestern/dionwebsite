@@ -25,10 +25,6 @@ export interface ProcessStepsSectionProps {
   
   // Optional props
   imageAltTemplate?: string;
-  cardMinHeight?: string;
-  cardHeight?: string;
-  contentMinHeight?: string;
-  contentHeight?: string;
   objectFit?: 'contain' | 'cover';
   
   // Optional icon customization
@@ -42,15 +38,16 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
   
   // Optional props with defaults
   imageAltTemplate = "{title} - {treatmentType} Prozess Schritt {number}",
-  cardMinHeight = "450px",
-  cardHeight = "520px",
-  contentMinHeight = "180px",
-  contentHeight = "240px",
   objectFit = "contain",
   
   // Optional icon customization
   customAdvantageIcons
 }) => {
+  // Hardcoded height values
+  const cardMinHeight = "520px";  // Minimum height on mobile
+  const cardHeight = "520px";     // Height on desktop
+  const contentMinHeight = "480px"; // Content area minimum height
+  const contentHeight = "480px";   // Content area height on desktop
   const { t } = useTranslation([translationNamespace, 'common']);
   const [hoverStep, setHoverStep] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);

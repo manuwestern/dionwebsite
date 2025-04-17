@@ -30,7 +30,7 @@
       {
         "title": "Medikamentöse Therapie",
         "subtitle": "Wissenschaftlich bewährte Wirkstoffe",
-        "image": "mesotherapie.png",
+        "image": "Medikation.webp",
         "description": "Die medikamentöse Therapie umfasst die Anwendung von wissenschaftlich bewährten Wirkstoffen, die das Haarwachstum fördern und den Haarausfall stoppen.",
         "benefits": [
           "Einfache und bequeme Anwendung",
@@ -49,7 +49,7 @@
       {
         "title": "PRP-Therapie",
         "subtitle": "Eigenblut-Behandlung",
-        "image": "haaranalyse.png",
+        "image": "mesotherapie.webp",
         "description": "Die PRP-Therapie (Platelet-Rich Plasma) nutzt die Wachstumsfaktoren aus Ihrem eigenen Blut, um die Haarfollikel zu stimulieren und das Haarwachstum zu fördern.",
         "benefits": [
           "Natürliche Methode ohne Chemikalien",
@@ -68,7 +68,7 @@
       {
         "title": "Nährstofftherapie",
         "subtitle": "Gezielte Mikronährstoffe",
-        "image": "hairselection.jpeg",
+        "image": "vitamintherapie.webp",
         "description": "Die Nährstofftherapie versorgt die Haarfollikel mit wichtigen Vitaminen, Mineralien und Spurenelementen, die für ein gesundes Haarwachstum unerlässlich sind.",
         "benefits": [
           "Behebt Nährstoffmängel, die Haarausfall verursachen können",

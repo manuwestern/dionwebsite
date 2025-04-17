@@ -30,7 +30,7 @@
       {
         "title": "Medication Therapy",
         "subtitle": "Scientifically proven active ingredients",
-        "image": "mesotherapie.png",
+        "image": "Medikation.webp",
         "description": "Medication therapy involves the application of scientifically proven active ingredients that promote hair growth and stop hair loss.",
         "benefits": [
           "Simple and convenient application",
@@ -49,7 +49,7 @@
       {
         "title": "PRP Therapy",
         "subtitle": "Autologous blood treatment",
-        "image": "haaranalyse.png",
+        "image": "mesotherapie.webp",
         "description": "PRP therapy (Platelet-Rich Plasma) uses growth factors from your own blood to stimulate hair follicles and promote hair growth.",
         "benefits": [
           "Natural method without chemicals",
@@ -68,7 +68,7 @@
       {
         "title": "Nutrient Therapy",
         "subtitle": "Targeted micronutrients",
-        "image": "hairselection.jpeg",
+        "image": "vitamintherapie.webp",
         "description": "Nutrient therapy supplies hair follicles with important vitamins, minerals, and trace elements that are essential for healthy hair growth.",
         "benefits": [
           "Remedies nutrient deficiencies that can cause hair loss",
