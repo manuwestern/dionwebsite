@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ShieldCheck, Zap, HeartPulse, Sparkles } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
-
-interface FeatureItem {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
+import { ShieldCheck, Zap, HeartPulse, Sparkles } from 'lucide-react';
+import { textStyle, gradientUnderline } from '../../utils/typography';
+import FeatureContainer from '../common/elements/FeatureContainer';
 
 const AnalysisSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +23,7 @@ const AnalysisSection: React.FC = () => {
 
   // Get features from translation
   const { t } = useTranslation('hairLossTherapy');
-  const featureItems: FeatureItem[] = (t('analysisSection.features', { returnObjects: true }) as any[]).map(
+  const features = (t('analysisSection.features', { returnObjects: true }) as any[]).map(
     (feature: any, index: number) => ({
       icon: featureIcons[index],
       title: feature.title,
@@ -67,61 +61,16 @@ const AnalysisSection: React.FC = () => {
           </p>
         </div>
         
-        {/* Additional Advantages Box - Exactly matching the ProcessSection */}
-        <div className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
-            
-            <div className="relative z-10">
-              <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left break-words hyphens-auto`} lang="de">{t('analysisSection.benefitsTitle')}</h3>
-              
-              <p className={`${textStyle.bodyText} mb-8 text-center md:text-left break-words hyphens-auto`} lang="de">
-                {t('analysisSection.description')}
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {featureItems.map((item, index) => {
-                  const isHovered = index === hoverFeature;
-                  
-                  return (
-                    <div 
-                      key={index}
-                      className="relative group"
-                      onMouseEnter={() => setHoverFeature(index)}
-                      onMouseLeave={() => setHoverFeature(null)}
-                    >
-                      <div className={`flex gap-4 p-6 rounded-xl transition-all duration-300 ${
-                        isHovered 
-                          ? 'bg-[#7BA7C2]/5 shadow-sm' 
-                          : 'hover:bg-[#7BA7C2]/5'
-                      }`}>
-                        <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                          isHovered 
-                            ? 'bg-[#7BA7C2] text-white' 
-                            : 'bg-[#7BA7C2]/10 text-[#7BA7C2]'
-                        }`}>
-                          {item.icon}
-                        </div>
-                        
-                        <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-2 transition-colors duration-300 break-words hyphens-auto ${
-                            isHovered ? textColor.primary : textColor.dark
-                          }`} lang="de">
-                            {item.title}
-                          </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} break-words hyphens-auto`} lang="de">
-                            {item.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+        {/* Features Container using the reusable component */}
+        <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <FeatureContainer
+            title={t('analysisSection.benefitsTitle')}
+            description={t('analysisSection.description')}
+            features={features}
+            accentColor="#7BA7C2"
+            backgroundColor="bg-white/90"
+            columns={2}
+          />
         </div>
       </div>
     </section>

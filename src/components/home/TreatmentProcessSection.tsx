@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { FileText, Microscope, ClipboardList, Stethoscope, HeartPulse, Check, ChevronDown, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { FileText, Microscope, ClipboardList, Stethoscope, HeartPulse, Check, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
+import { buttonStyle, buttonRippleClass } from '../../utils/buttons';
+import CTASection from '../common/elements/CTASection';
 
 interface ProcessStep {
   icon: React.ReactNode;
@@ -315,15 +315,16 @@ const TreatmentProcessSection: React.FC<{
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className={`mt-12 flex justify-center transition-all duration-1000 delay-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <Link to="/kontakt" className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-            <span className={buttonRippleClass}></span>
-            <span className={`relative flex items-center ${textStyle.button}`}>
-              {t('buttons.consultation', { ns: 'common' })}
-              <ArrowRight className={`${buttonArrowClass} ml-2`} />
-            </span>
-          </Link>
+        {/* CTA Section using the reusable component */}
+        <div className={`mt-12 transition-all duration-1000 delay-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <CTASection 
+            translationNamespace="home"
+            titleKey="treatmentProcessSection.cta.title"
+            descriptionKey="treatmentProcessSection.cta.description"
+            ctaTextKey="buttons.consultation"
+            ctaLink="/kontakt"
+            showAnimation={false}
+          />
         </div>
       </div>
     </section>

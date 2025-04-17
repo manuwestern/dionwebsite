@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight, tracking } from '../../utils/typography';
-import { ArrowRight } from 'lucide-react';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import CTASection from '../common/elements/CTASection';
 
 const TeamSection: React.FC = () => {
   const { t } = useTranslation(['clinic', 'common']);
@@ -97,34 +95,15 @@ const TeamSection: React.FC = () => {
           })}
         </div>
 
-        {/* Elegant CTA Section */}
-        <div className="mt-20 relative">
-          <div className="absolute inset-0 bg-[#7BA7C2]/5 rounded-2xl"></div>
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
-
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-              <div className="md:w-2/3">
-                <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-4 text-center md:text-left`}>
-                  {t('teamSection.cta.title', { defaultValue: 'Lernen Sie unser Team kennen' })}
-                </h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`}>
-                  {t('teamSection.cta.description', { defaultValue: 'Unser erfahrenes Team steht Ihnen für eine persönliche Beratung zur Verfügung. Vereinbaren Sie einen Termin und lernen Sie uns persönlich kennen.' })}
-                </p>
-              </div>
-              <div className="md:w-1/3 flex justify-center md:justify-end">
-                <Link to="/kontakt" className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                  <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button}`}>
-                    {t('buttons.consultation', { ns: 'common' })}
-                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
+        {/* CTA Section using the reusable component */}
+        <div className="mt-20">
+          <CTASection 
+            translationNamespace="clinic"
+            titleKey="teamSection.cta.title"
+            descriptionKey="teamSection.cta.description"
+            ctaTextKey="buttons.consultation"
+            ctaLink="/kontakt"
+          />
         </div>
       </div>
     </section>

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Users, Zap, Compass, UserCheck, Clock, MapPin, ArrowRight } from 'lucide-react';
-import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { Users, Zap, Compass, UserCheck, Clock, MapPin } from 'lucide-react';
+import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
 import FeatureBenefitCard from './elements/FeatureBenefitCard';
+import CTASection from './elements/CTASection';
 
 interface BenefitCard {
   title: string;
@@ -94,49 +93,17 @@ const BenefitsSectionComponent: React.FC<BenefitsSectionComponentProps> = ({
           ))}
         </div>
 
-        {/* Enhanced Elegant CTA Section with improved visual design */}
+        {/* Use the reusable CTASection component */}
         {showCTA && (
-          <div className="mt-24 relative">
-            {/* Improved background with subtle gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#7BA7C2]/10 to-[#7BA7C2]/5 rounded-2xl"></div>
-            
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 
-              shadow-xl border border-gray-100/80 overflow-hidden">
-              {/* Enhanced decorative elements */}
-              <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-gradient-to-br from-[#7BA7C2]/10 to-transparent -mr-40 -mt-40 blur-2xl"></div>
-              <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-gradient-to-tr from-[#7BA7C2]/10 to-transparent -ml-40 -mb-40 blur-2xl"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-32 bg-white/30 blur-3xl -z-10"></div>
-              
-              <div className="flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
-                <div className="md:w-2/3">
-                  <h3 className={`${fontSize.h3} ${fontWeight.normal} ${textColor.primary} mb-5 text-center md:text-left
-                    relative inline-block`}>
-                    {t('benefitsSection.cta.title')}
-                    <div className="absolute -bottom-2 left-0 w-16 h-0.5 bg-[#7BA7C2]/50 hidden md:block"></div>
-                  </h3>
-                  <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 max-w-xl`}>
-                    {t('benefitsSection.cta.description')}
-                  </p>
-                </div>
-                <div className="md:w-1/3 flex justify-center md:justify-end">
-                  <Link 
-                    to={ctaLink} 
-                    className={`${buttonStyle.primary} shadow-lg hover:shadow-xl 
-                      transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]
-                      relative overflow-hidden group`}
-                  >
-                    <span className={buttonRippleClass}></span>
-                    {/* Subtle background animation on hover */}
-                    <span className="absolute inset-0 bg-gradient-to-r from-[#7BA7C2]/20 to-transparent 
-                      opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                    <span className={`relative flex items-center ${textStyle.button}`}>
-                      {t('buttons.consultation', { ns: 'common' })}
-                      <ArrowRight className={`${buttonArrowClass} ml-2 group-hover:translate-x-1 transition-transform duration-300`} />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
+          <div className="mt-24">
+            <CTASection 
+              translationNamespace={translationNamespace}
+              titleKey="benefitsSection.cta.title"
+              descriptionKey="benefitsSection.cta.description"
+              ctaTextKey="buttons.consultation"
+              ctaLink={ctaLink}
+              backgroundColor="bg-white/90"
+            />
           </div>
         )}
       </div>

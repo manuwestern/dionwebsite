@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Search, Stethoscope, HelpCircle, Clock, DollarSign, ArrowRight, User, Scissors, Droplet } from 'lucide-react';
+import { ChevronDown, Search, Stethoscope, HelpCircle, Clock, DollarSign, User, Scissors, Droplet } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 import StructuredData from '../seo/StructuredData';
+import CTASection from './elements/CTASection';
 
 export interface FAQ {
   question: string;
@@ -322,31 +321,16 @@ const FAQAccordionSection: React.FC<FAQAccordionSectionProps> = ({
           )}
         </div>
         
-        {/* Still have questions with elegant design */}
-        <div className={`w-full mt-16 relative transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
-            
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-              <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left break-words hyphens-auto`} lang="de">{t('faq.moreQuestions.title', { ns: 'common' })}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0 break-words hyphens-auto`} lang="de">
-                  {t('faq.moreQuestions.description', { ns: 'common' })}
-                </p>
-              </div>
-              <div className="md:w-1/3 flex justify-center md:justify-end">
-                <Link to="/kontakt" className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                  <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button}`}>
-                    {t('buttons.consultation', { ns: 'common' })}
-                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
+        {/* Still have questions - using the reusable CTASection component */}
+        <div className={`w-full mt-16 transition-all duration-1000 delay-600 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <CTASection 
+            translationNamespace="common"
+            titleKey="faq.moreQuestions.title"
+            descriptionKey="faq.moreQuestions.description"
+            ctaTextKey="buttons.consultation"
+            ctaLink="/kontakt"
+            showAnimation={false}
+          />
         </div>
       </div>
     </section>

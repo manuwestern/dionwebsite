@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Sparkles, Scissors, Droplets, Compass } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
+import BenefitsContainer from './elements/BenefitsContainer';
 import './ProcessStepsSection.css';
 
 export interface ProcessStep {
@@ -212,59 +213,15 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
           })}
         </div>
         
-        {/* Additional Advantages Box */}
-        <div className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
-            
-            <div className="relative z-10">
-              <h3 className={`${textStyle.primaryHeading} mb-8 text-center md:text-left break-words hyphens-auto`} lang="de">{t('processSection.expertiseTitle')}</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {advantageItems.map((item, index) => {
-                  const isHovered = index === hoverAdvantage;
-                  
-                  return (
-                    <div 
-                      key={index}
-                      className="relative group"
-                      onMouseEnter={() => window.innerWidth >= 768 ? setHoverAdvantage(index) : null}
-                      onMouseLeave={() => window.innerWidth >= 768 ? setHoverAdvantage(null) : null}
-                    >
-                      <div className={`flex flex-col md:flex-row gap-3 md:gap-4 p-4 md:p-5 rounded-xl transition-all duration-300 ${
-                        isHovered && window.innerWidth >= 768
-                          ? 'bg-[#7BA7C2]/5 shadow-sm' 
-                          : 'md:hover:bg-[#7BA7C2]/5'
-                      }`}>
-                        <div className={`flex-shrink-0 w-10 h-10 md:w-10 md:h-10 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center mx-auto md:mx-0 mb-2 md:mb-0 transition-all duration-300 ${
-                          isHovered && window.innerWidth >= 768
-                            ? 'bg-[#7BA7C2] text-white' 
-                            : 'text-[#7BA7C2]'
-                        }`}>
-                          {React.cloneElement(item.icon as React.ReactElement, { 
-                            className: `w-5 h-5 md:w-6 md:h-6 transition-all duration-300` 
-                          })}
-                        </div>
-                        
-                        <div className="flex-grow">
-                          <h4 className={`${fontSize.lg} ${fontWeight.normal} ${tracking.wide} mb-1 md:mb-2 transition-colors duration-300 text-center md:text-left break-words hyphens-auto ${
-                            isHovered && window.innerWidth >= 768 ? textColor.primary : textColor.dark
-                          }`} lang="de">
-                            {item.title}
-                          </h4>
-                          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} leading-relaxed md:${lineHeight.relaxed} text-center md:text-left max-w-[320px] mx-auto md:max-w-none md:mx-0 hyphens-auto`} lang="de">
-                            {item.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+        {/* Additional Advantages Box using the reusable BenefitsContainer */}
+        <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <BenefitsContainer
+            title={t('processSection.expertiseTitle')}
+            benefits={advantageItems}
+            accentColor="#7BA7C2"
+            backgroundColor="bg-white/90"
+            columns={2}
+          />
         </div>
         
       </div>

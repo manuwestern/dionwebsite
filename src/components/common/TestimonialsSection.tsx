@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
-import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 import OptimizedImage from './elements/OptimizedImage';
+import CTASection from './elements/CTASection';
 
 interface Testimonial {
   name: string;
@@ -192,32 +191,16 @@ const TestimonialsSectionComponent: React.FC<TestimonialsSectionComponentProps> 
           </div>
         </div>
 
-        {/* CTA Section with elegant design */}
-        <div className={`relative transition-all duration-1000 delay-1200 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
-            
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-              <div className="md:w-2/3">
-                <h3 className={`${textStyle.primaryHeading} mb-4 text-center md:text-left`}>{t('testimonialsSection.ctaSection.title')}</h3>
-                <p className={`${textStyle.bodyText} text-center md:text-left px-2 md:px-0`} lang="de">
-                  {t('testimonialsSection.ctaSection.description')}
-                </p>
-              </div>
-              <div className="md:w-1/3 flex justify-center md:justify-end">
-                <Link to={ctaLink} className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
-                  <span className={buttonRippleClass}></span>
-                  <span className={`relative flex items-center ${textStyle.button}`}>
-                    {t('testimonialsSection.cta')}
-                    <ArrowRight className={`${buttonArrowClass} ml-2`} />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* CTA Section using the reusable component */}
+        <CTASection 
+          translationNamespace={translationNamespace}
+          titleKey="testimonialsSection.ctaSection.title"
+          descriptionKey="testimonialsSection.ctaSection.description"
+          ctaTextKey="testimonialsSection.cta"
+          ctaLink={ctaLink}
+          animationDelay="delay-1200"
+          showAnimation={isVisible}
+        />
       </div>
     </section>
   );
