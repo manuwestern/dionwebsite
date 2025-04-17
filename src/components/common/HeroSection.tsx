@@ -253,7 +253,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
               
               {/* CTA button with refined styling and animation */}
-              <div className={`flex justify-center mt-8 md:static relative top-8 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+              <div className={`flex justify-center mt-8 md:static relative top-4 transition-all duration-1000 delay-900 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
                 {renderCTAButton()}
               </div>
             </div>

@@ -3,6 +3,18 @@
   transition: height 0.3s ease, min-height 0.3s ease;
 }
 
+/* Mobile: Auto height to adapt to content */
+.process-card {
+  height: auto;
+  min-height: auto;
+}
+
+.process-content {
+  height: auto;
+  min-height: auto;
+}
+
+/* Desktop: Fixed height for consistent appearance */
 @media (min-width: 768px) {
   .process-card {
     height: var(--card-desktop-height) !important;

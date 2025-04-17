@@ -43,11 +43,11 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
   // Optional icon customization
   customAdvantageIcons
 }) => {
-  // Hardcoded height values
-  const cardMinHeight = "520px";  // Minimum height on mobile
-  const cardHeight = "520px";     // Height on desktop
-  const contentMinHeight = "480px"; // Content area minimum height
-  const contentHeight = "480px";   // Content area height on desktop
+  // Height values - auto for mobile, fixed for desktop
+  const cardMinHeight = "auto";  // Auto height on mobile
+  const cardHeight = "520px";     // Fixed height on desktop
+  const contentMinHeight = "auto"; // Auto height on mobile
+  const contentHeight = "480px";   // Fixed height on desktop
   const { t } = useTranslation([translationNamespace, 'common']);
   const [hoverStep, setHoverStep] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
