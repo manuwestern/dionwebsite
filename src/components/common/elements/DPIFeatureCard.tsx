@@ -58,10 +58,10 @@ const DPIFeatureCard: React.FC<DPIFeatureCardProps> = ({
             </div>
           )}
           
-          {/* Features section */}
-          <div className={`flex-1 ${imageSrc ? 'md:w-3/5' : 'w-full'}`}>
+          {/* Features section - with vertical centering */}
+          <div className={`flex-1 ${imageSrc ? 'md:w-3/5' : 'w-full'} flex items-center`}>
             {/* Features grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 auto-rows-fr">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 auto-rows-fr w-full">
               {features.map((feature, index) => {
                 const [isHovered, setIsHovered] = React.useState(false);
                 

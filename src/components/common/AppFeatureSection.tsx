@@ -112,19 +112,19 @@ const AppFeatureSection: React.FC<AppFeatureSectionProps> = ({
               </div>
             )}
             
-            {/* Card layout with benefits */}
+            {/* Card layout with benefits - vertically centered */}
             <div className={`w-full ${appImageSrc ? 'lg:w-2/3' : 'lg:w-full'}`}>
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden mb-6 group">
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden mb-6 group flex items-center">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
                 
                 {/* Removed top accent line hover effect */}
                 
-                <div className="relative z-10">
+                <div className="relative z-10 w-full">
                   {/* Features grid */}
                   <div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 w-full">
                       {features.map((feature, index) => {
                         const [isHovered, setIsHovered] = React.useState(false);
                         

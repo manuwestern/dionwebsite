@@ -133,13 +133,17 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                 onMouseEnter={() => setHoverStep(index)}
                 onMouseLeave={() => setHoverStep(null)}
               >
+                {/* Decorative shadow element behind the card - appears on hover */}
+                <div className={`absolute -z-10 w-[calc(100%+16px)] h-[calc(100%+16px)] rounded-2xl bg-[#7BA7C2]/5 -top-2 -left-2 blur-md transition-all duration-700 ${
+                  isHovered ? 'opacity-80' : 'opacity-0'
+                }`}></div>
                 
                 {/* Card with optimized height for perfect visual balance */}
                 <div 
-                  className={`process-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 border-2 ${
+                  className={`process-card bg-white rounded-2xl overflow-hidden transition-all duration-700 border-2 ${
                     isHovered
-                      ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80 scale-[1.02]' 
-                      : 'border-gray-100 hover:border-[#7BA7C2]/30 hover:shadow-md'
+                      ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
+                      : 'border-gray-100/80 shadow-md hover:border-[#7BA7C2]/30 hover:shadow-lg'
                   }`}
                   style={{
                     height: cardMinHeight,
@@ -148,15 +152,11 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                   } as React.CSSProperties}
                 >
                   {/* Card Header with Image */}
-                  <div className={`relative w-full aspect-[4/3] overflow-hidden ${
-                    isHovered
-                      ? 'bg-gradient-to-br from-[#7BA7C2]/20 to-[#7BA7C2]/5' 
-                      : 'bg-gradient-to-br from-gray-50 to-white'
-                  }`}>
+                  <div className="relative w-full aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-50 to-white">
                     {/* Step Number Badge */}
-                    <div className={`absolute top-4 left-4 w-10 h-10 rounded-full flex items-center justify-center z-10 transition-all duration-300 ${
+                    <div className={`absolute top-4 left-4 w-10 h-10 rounded-full flex items-center justify-center z-10 transition-all duration-700 ${
                       isHovered
-                        ? 'bg-[#7BA7C2] text-white shadow-md' 
+                        ? 'bg-[#7BA7C2]/20 text-[#7BA7C2]' 
                         : 'bg-white text-[#7BA7C2] border-2 border-[#7BA7C2]/50 shadow-sm'
                     }`}>
                       <span className={`${fontSize.lg} ${fontWeight.medium}`}>{step.number}</span>
@@ -167,7 +167,7 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                       <img 
                         src={step.image} 
                         alt={getAltText(step)}
-                        className={`w-full h-full object-${objectFit} transition-all duration-500 ${
+                        className={`w-full h-full object-${objectFit} transition-all duration-700 ${
                           isHovered ? 'scale-110' : ''
                         }`}
                         loading="lazy"
@@ -178,14 +178,23 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                     </div>
                     
                     {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent transition-opacity duration-300 ${
+                    <div className={`absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent transition-opacity duration-700 ${
                       isHovered ? 'opacity-70' : 'opacity-0'
                     }`}></div>
                   </div>
                   
+                  {/* Diffuse corner accent - appears on hover */}
+                  <div 
+                    className="absolute bottom-0 right-0 w-24 h-24 rounded-full blur-md transition-opacity duration-700"
+                    style={{ 
+                      background: `radial-gradient(circle at bottom right, #7BA7C215, transparent 70%)`,
+                      opacity: isHovered ? 1 : 0
+                    }}
+                  ></div>
+                  
                   {/* Card Content with fixed height */}
                   <div 
-                    className="process-content p-6 flex flex-col overflow-hidden"
+                    className="process-content p-6 flex flex-col overflow-hidden relative z-10"
                     style={{
                       height: contentMinHeight,
                       minHeight: contentMinHeight,
@@ -193,9 +202,7 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                     } as React.CSSProperties}
                   >
                     {/* Title */}
-                    <h3 className={`${fontSize.h4} ${fontWeight.normal} ${tracking.wide} mb-3 transition-colors duration-300 text-center md:text-left break-words hyphens-auto ${
-                      isHovered ? textColor.primary : textColor.dark
-                    }`} lang="de">
+                    <h3 className={`${fontSize.h4} ${fontWeight.normal} ${tracking.wide} mb-3 transition-colors duration-700 text-center md:text-left break-words hyphens-auto ${textColor.dark}`} lang="de">
                       {step.title}
                     </h3>
                     
