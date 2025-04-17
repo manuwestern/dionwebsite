@@ -228,7 +228,7 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
           />
         </div>
         
-      </div>
+     </div>
     </section>
   );
 };
