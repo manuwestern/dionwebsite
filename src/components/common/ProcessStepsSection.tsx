@@ -203,8 +203,8 @@ const ProcessStepsSection: React.FC<ProcessStepsSectionProps> = ({
                       {step.title}
                     </h3>
                     
-                    {/* Description - with overflow handling */}
-                    <div className="flex-grow overflow-auto">
+                    {/* Description - without overflow handling to allow content to expand */}
+                    <div className="flex-grow">
                       <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} text-center md:text-left max-w-[280px] mx-auto md:max-w-none md:mx-0 hyphens-auto pr-1`} lang="de">
                         {step.description}
                       </p>
