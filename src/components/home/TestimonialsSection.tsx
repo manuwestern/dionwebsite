@@ -42,11 +42,11 @@ const TestimonialsSection: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Images for testimonials - using local images instead of external URLs
+  // Images for testimonials - using patient images
   const testimonialImages = [
-    "/images/Model_Haare.webp",
-    "/images/Model_Bart.webp",
-    "/images/Model_Home.webp"
+    "/images/Patient_Michael_K.webp",
+    "/images/Patient_Pedro_S.webp",
+    "/images/Patient_Kerstin_M.webp"
   ];
 
   // Create testimonials from translation keys

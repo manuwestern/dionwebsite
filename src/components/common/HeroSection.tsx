@@ -160,7 +160,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           height="850"
           loading="lazy"
           decoding="async"
-          fetchPriority="high"
+          {...{ fetchpriority: "high" } as any}
         />
       );
     }
@@ -197,7 +197,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           height="650"
           loading="lazy"
           decoding="async"
-          fetchPriority="high"
+          {...{ fetchpriority: "high" } as any}
         />
       );
     }

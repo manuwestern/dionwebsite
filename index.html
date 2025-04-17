@@ -15,13 +15,13 @@
     
     <!-- Preload critical resources -->
     <!-- CSS is imported in main.tsx and bundled by Vite -->
-    <link rel="preload" href="/images/DionHairClinic_Logo.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="/images/Dion_Model_Home.webp" as="image" type="image/webp">
+    <link rel="preload" href="/images/DionHairClinic_Logo.svg" as="image" type="image/svg+xml" fetchpriority="high">
+    <link rel="preload" href="/images/Dion_Model_Home.webp" as="image" type="image/webp" fetchpriority="high">
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="/fonts/montserrat/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/montserrat/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/montserrat/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/montserrat/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <link rel="preload" href="/fonts/montserrat/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <link rel="preload" href="/fonts/montserrat/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
     
     <!-- DNS prefetch and preconnect for external resources -->
     <link rel="preconnect" href="https://www.google.com">
