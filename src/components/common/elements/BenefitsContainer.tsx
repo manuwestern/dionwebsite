@@ -34,13 +34,14 @@ const BenefitsContainer: React.FC<BenefitsContainerProps> = ({
           
           <div className={`grid grid-cols-1 ${columns === 2 ? 'md:grid-cols-2' : ''} gap-3 md:gap-6`}>
             {benefits.map((benefit, index) => (
-              <BenefitCard
-                key={index}
-                icon={benefit.icon}
-                title={benefit.title}
-                description={benefit.description}
-                accentColor={accentColor}
-              />
+              <div key={index} className="h-full">
+                <BenefitCard
+                  icon={benefit.icon}
+                  title={benefit.title}
+                  description={benefit.description}
+                  accentColor={accentColor}
+                />
+              </div>
             ))}
           </div>
         </div>

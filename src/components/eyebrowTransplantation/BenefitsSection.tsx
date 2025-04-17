@@ -5,7 +5,7 @@ const BenefitsSection: React.FC = () => {
   return (
     <BenefitsSectionComponent
       translationNamespace="eyebrowTransplantation"
-      showCTA={true}
+      showCTA={false}
       ctaLink="/kontakt"
     />
   );

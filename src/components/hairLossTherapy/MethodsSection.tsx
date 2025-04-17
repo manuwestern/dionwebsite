@@ -8,18 +8,7 @@ const MethodsSection: React.FC = () => {
   // Get methods from translation
   const methods = t('methodsSection.methods', { returnObjects: true }) as Method[];
 
-  // Get additional info from translation
-  const additionalInfo = {
-    personalConsultation: {
-      title: t('methodsSection.additionalInfo.personalConsultation.title'),
-      description: t('methodsSection.additionalInfo.personalConsultation.description')
-    },
-    combinedTechniques: {
-      title: t('methodsSection.additionalInfo.combinedTechniques.title'),
-      description: t('methodsSection.additionalInfo.combinedTechniques.description')
-    }
-  };
-
+ 
   // Get section labels from translation
   const sectionLabels = {
     benefits: t('methodsSection.sectionLabels.benefits'),
@@ -41,7 +30,6 @@ const MethodsSection: React.FC = () => {
       translationNamespace="hairLossTherapy"
       defaultImagePath="mesotherapie.webp"
       altTextPrefix="Haarausfalltherapie Methode"
-      additionalInfo={additionalInfo}
       sectionLabels={sectionLabels}
       imageMapping={imageMapping}
       enableHyphenation={true}
