@@ -13,5 +13,5 @@ export { default as typography } from './typography';
 export * from './buttons';
 export { default as buttons } from './buttons';
 
-// Exportiere andere Utilities, wenn sie existieren
-// Beispiel: export * from './animations';
+// Exportiere Performance-Monitoring-Utilities
+export * from './performance-monitoring';

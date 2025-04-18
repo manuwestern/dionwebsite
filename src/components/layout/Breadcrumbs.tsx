@@ -2,12 +2,13 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ChevronRight } from 'lucide-react';
+import StructuredData from '../seo/StructuredData';
 
 /**
  * Breadcrumbs component for improved navigation and SEO
  * 
  * This component creates a breadcrumb trail based on the current URL path
- * and provides structured data for search engines.
+ * and provides structured data for search engines using the StructuredData component.
  */
 const Breadcrumbs: React.FC = () => {
   const location = useLocation();
@@ -95,24 +96,20 @@ const Breadcrumbs: React.FC = () => {
     breadcrumbItems.push({ name, path: currentPath });
   });
   
-  // Generate structured data for SEO
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': breadcrumbItems.map((item, index) => ({
-      '@type': 'ListItem',
-      'position': index + 1,
-      'name': item.name,
-      'item': `https://dionhairclinic.de${item.path}`
-    }))
-  };
+  // Breadcrumb items are now ready to be used in the StructuredData component
   
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-3">
-      {/* Structured data for SEO */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+      {/* Structured data for SEO using StructuredData component */}
+      <StructuredData 
+        type="BreadcrumbList"
+        data={{
+          items: breadcrumbItems.map(item => ({
+            name: item.name,
+            url: `https://dionhairclinic.de${item.path}`
+          }))
+        }}
+      />
       
       {/* Visual breadcrumbs */}
       <nav aria-label="Breadcrumb" className="text-sm text-gray-500">

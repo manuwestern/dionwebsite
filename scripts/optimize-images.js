@@ -8,11 +8,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const sourceDir = path.join(__dirname, '../public/images/new');
-const outputDir = path.join(__dirname, '../public/images/optimized');
+const sourceDir = path.join(__dirname, '../public/images');
+const outputDir = path.join(__dirname, '../public/images');
 const webpQuality = 80; // 0-100, higher is better quality but larger file
 const pngQuality = 80; // 0-100
 const jpegQuality = 85; // 0-100
+const avifQuality = 65; // 0-100, AVIF can use lower quality with good results
 
 // Create output directory if it doesn't exist
 if (!fs.existsSync(outputDir)) {
@@ -132,10 +133,25 @@ async function processImages() {
       const image = sharp(inputPath);
       const metadata = await image.metadata();
 
-      // Process to WebP
+      // Process to WebP and AVIF
+      const outputPathAvif = path.join(outputSubDir, `${fileName}.avif`);
+      
       await image
         .webp({ quality: webpQuality })
         .toFile(outputPathWebp);
+        
+      // Generate AVIF version for modern browsers
+      try {
+        await image
+          .avif({ quality: avifQuality })
+          .toFile(outputPathAvif);
+          
+        const avifSize = fs.statSync(outputPathAvif).size;
+        const avifSavings = originalSize - avifSize;
+        console.log(`   AVIF: ${formatBytes(avifSize)} (saved ${formatBytes(avifSavings)}, ${Math.round((avifSavings / originalSize) * 100)}%)`);
+      } catch (avifError) {
+        console.error(`  Error creating AVIF version for ${relativePath}:`, avifError);
+      }
 
       // Also optimize the original format
       if (fileExt === '.jpg' || fileExt === '.jpeg') {

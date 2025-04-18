@@ -1,10 +1,123 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // PWA Plugin für Progressive Web App Unterstützung
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: [
+        'favicon.ico',
+        'robots.txt',
+        'apple-touch-icon.png',
+        'images/*.svg',
+        'images/*.webp',
+        'fonts/**/*.woff2'
+      ],
+      manifest: {
+        name: 'Dion Hair Clinic',
+        short_name: 'Dion Clinic',
+        description: 'Spezialisierte Haarklinik für Haartransplantationen und Haarausfallbehandlungen',
+        theme_color: '#7BA7C2',
+        icons: [
+          {
+            src: '/images/DionHairClinic_Logo.svg',
+            sizes: '512x512',
+            type: 'image/svg+xml',
+            purpose: 'any'
+          }
+        ]
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'google-fonts-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 Jahr
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+          {
+            urlPattern: /^https:\/\/connect\.pabbly\.com\/.*/i,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'api-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 // 1 Tag
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          }
+        ]
+      }
+    }),
+    // Bundle-Analyse-Tool (nur im Produktionsmodus)
+    process.env.ANALYZE === 'true' && visualizer({
+      open: true,
+      filename: 'dist/stats.html',
+      gzipSize: true,
+      brotliSize: true
+    })
+  ],
+  // Abhängigkeiten, die nicht optimiert werden sollen
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  // Build-Optimierungen
+  build: {
+    target: 'es2015',
+    outDir: 'dist',
+    assetsDir: 'assets',
+    // Chunk-Splitting-Strategie
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Vendor-Chunks für große Bibliotheken
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-i18n': ['i18next', 'react-i18next'],
+          'vendor-ui': ['lucide-react', 'react-helmet']
+        }
+      }
+    },
+    // Kompression aktivieren
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    // CSS-Optimierungen
+    cssCodeSplit: true,
+    // Source Maps nur im Entwicklungsmodus
+    sourcemap: process.env.NODE_ENV !== 'production'
+  },
+  // Entwicklungsserver-Konfiguration
+  server: {
+    port: 3000,
+    strictPort: true,
+    open: true,
+    cors: true
+  },
+  // Vorschau-Server-Konfiguration
+  preview: {
+    port: 4173,
+    strictPort: true,
+    open: true
+  }
 });

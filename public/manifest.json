@@ -1,0 +1,79 @@
+{
+  "name": "Dion Hair Clinic",
+  "short_name": "Dion Clinic",
+  "description": "Spezialisierte Haarklinik für Haartransplantationen und Haarausfallbehandlungen mit modernsten Techniken wie Saphir-FUE und DHI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7BA7C2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/DionHairClinic_Logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/maskable-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/maskable-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Haartransplantation",
+      "short_name": "Haartransplantation",
+      "description": "Informationen zu Haartransplantationen",
+      "url": "/haartransplantation",
+      "icons": [{ "src": "/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Kontakt",
+      "short_name": "Kontakt",
+      "description": "Kontaktieren Sie uns",
+      "url": "/kontakt",
+      "icons": [{ "src": "/images/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "lang": "de",
+  "dir": "ltr",
+  "categories": ["medical", "health", "beauty"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Startseite der Dion Hair Clinic"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Mobile Ansicht der Dion Hair Clinic"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -11,11 +11,25 @@ Disallow: /private/
 Disallow: /temp/
 Disallow: /dev/
 Disallow: /*.json$
+Disallow: /*?*
+Disallow: /*?
+Disallow: /*/amp/
+Disallow: /*/print/
 
 # Google-specific rules
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
+
+# Google Image-specific rules
+User-agent: Googlebot-Image
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.avif$
 
 # Bing-specific rules
 User-agent: Bingbot
@@ -31,6 +45,7 @@ Allow: /*.png$
 Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.webp$
+Allow: /*.avif$
 Allow: /*.woff$
 Allow: /*.woff2$
 Allow: /*.ttf$

@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
       imageAltMobile="Kontakt zur Dion Hair Clinic - Beratung und Terminvereinbarung"
       imageAltDesktop="Kontakt zur Dion Hair Clinic - Beratung und Terminvereinbarung"
       translationNamespace="contact"
-      ctaText={t('formSection.title')}
+      ctaText="buttons.contactForm"
       ctaOnClick={scrollToForm}
       enableHyphenation={true}
       minHeightMobile="70vh"

@@ -74,14 +74,53 @@ const ContactPage: React.FC = () => {
             streetAddress: "Schürenweg 61",
             addressLocality: "Mönchengladbach",
             postalCode: "41063",
-            addressCountry: "DE"
+            addressCountry: "DE",
+            addressRegion: "Nordrhein-Westfalen"
           },
-          telephone: "+49 2161 5678900",
+          geo: {
+            latitude: 51.1956,
+            longitude: 6.4378
+          },
+          telephone: "+49 170 2637818",
           email: "info@dionhairclinic.de",
           url: "https://dionhairclinic.de",
-          image: "/images/Dion_Model_Benefits.webp",
-          logo: "/images/DionHairClinic_Logo.svg",
-          openingHours: ["Mo-Fr 09:00-18:00"]
+          image: [
+            "https://dionhairclinic.de/images/Dion_Model_Benefits.webp",
+            "https://dionhairclinic.de/images/Behandlung_Haartransplantation.webp",
+            "https://dionhairclinic.de/images/Model_Kontakt.webp"
+          ],
+          logo: "https://dionhairclinic.de/images/DionHairClinic_Logo.svg",
+          openingHours: ["Mo-Fr 09:30-19:30", "Sa 09:30-16:00"],
+          priceRange: "€€€",
+          paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
+          sameAs: [
+            "https://www.instagram.com/dionhairclinic",
+            "https://www.facebook.com/dionhairclinic",
+            "https://www.tiktok.com/@dionhairclinic"
+          ]
+        }}
+      />
+      <StructuredData 
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+              question: t('faqSection.faqs.0.question', { ns: 'contact' }),
+              answer: t('faqSection.faqs.0.answer', { ns: 'contact' })
+            },
+            {
+              question: t('faqSection.faqs.1.question', { ns: 'contact' }),
+              answer: t('faqSection.faqs.1.answer', { ns: 'contact' })
+            },
+            {
+              question: t('faqSection.faqs.2.question', { ns: 'contact' }),
+              answer: t('faqSection.faqs.2.answer', { ns: 'contact' })
+            },
+            {
+              question: t('faqSection.faqs.3.question', { ns: 'contact' }),
+              answer: t('faqSection.faqs.3.answer', { ns: 'contact' })
+            }
+          ]
         }}
       />
       
