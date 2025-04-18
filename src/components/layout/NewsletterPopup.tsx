@@ -52,9 +52,9 @@ const NewsletterPopup: React.FC = () => {
         onClick={handleClose}
       ></div>
       
-      {/* Popup card */}
+      {/* Popup card - more compact for mobile */}
       <div 
-        className={`relative bg-white rounded-2xl shadow-2xl overflow-hidden max-w-3xl w-full transition-all duration-300 ${
+        className={`relative bg-white rounded-2xl shadow-2xl overflow-hidden max-w-3xl w-[95%] md:w-full mx-auto transition-all duration-300 ${
           isClosing ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
         }`}
       >
@@ -64,15 +64,15 @@ const NewsletterPopup: React.FC = () => {
         {/* Close button */}
         <button 
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-3 right-3 md:top-4 md:right-4 text-gray-400 hover:text-gray-600 transition-colors"
           aria-label={t('popup.form.close')}
         >
-          <X size={24} />
+          <X size={20} className="md:w-6 md:h-6" />
         </button>
         
         <div className="flex flex-col md:flex-row">
           {/* Left content - Form */}
-          <div className="p-6 pt-8 md:w-1/2">
+          <div className="p-4 pt-6 md:p-6 md:pt-8 md:w-1/2">
             {/* Header */}
             <div className="mb-6">
               <h2 className={`${textStyle.primaryHeading} mb-2`}>
@@ -183,13 +183,35 @@ const NewsletterPopup: React.FC = () => {
             )}
           </div>
           
-          {/* Right content - Benefits */}
-          <div className="bg-[#F8FAFC] p-6 md:w-1/2 border-t md:border-t-0 md:border-l border-gray-100">
-            <h3 className={`${fontSize.lg} ${fontWeight.medium} ${textColor.dark} mb-4`}>
+          {/* Right content - Benefits - more compact for mobile */}
+          <div className="bg-[#F8FAFC] p-4 md:p-6 md:w-1/2 border-t md:border-t-0 md:border-l border-gray-100">
+            <h3 className={`${fontSize.base} md:${fontSize.lg} ${fontWeight.medium} ${textColor.dark} mb-3 md:mb-4`}>
               {t('popup.description')}
             </h3>
             
-            <ul className="space-y-4">
+            {/* Mobile: 2x2 grid for benefits, Desktop: vertical list */}
+            <div className="grid grid-cols-2 gap-3 md:hidden">
+              {/* First row - 2 most important benefits */}
+              <div className="flex flex-col items-center text-center p-2 bg-white/50 rounded-lg">
+                <div className="mb-2 bg-[#7BA7C2]/10 p-1.5 rounded-full">
+                  <Tag className="h-4 w-4 text-[#7BA7C2]" />
+                </div>
+                <span className={`${fontSize.sm} ${textColor.medium}`}>
+                  {t('popup.benefits.promotions')}
+                </span>
+              </div>
+              <div className="flex flex-col items-center text-center p-2 bg-white/50 rounded-lg">
+                <div className="mb-2 bg-[#7BA7C2]/10 p-1.5 rounded-full">
+                  <Sparkles className="h-4 w-4 text-[#7BA7C2]" />
+                </div>
+                <span className={`${fontSize.sm} ${textColor.medium}`}>
+                  {t('popup.benefits.transplantation')}
+                </span>
+              </div>
+            </div>
+            
+            {/* Desktop: vertical list */}
+            <ul className="hidden md:block space-y-4">
               <li className="flex items-start">
                 <div className="mr-3 mt-0.5 bg-[#7BA7C2]/10 p-1.5 rounded-full">
                   <Tag className="h-4 w-4 text-[#7BA7C2]" />
@@ -224,8 +246,8 @@ const NewsletterPopup: React.FC = () => {
               </li>
             </ul>
             
-            {/* Decorative image */}
-            <div className="mt-6 flex justify-center">
+            {/* Decorative image - hidden on mobile */}
+            <div className="hidden md:flex mt-6 justify-center">
               <img 
                 src="/images/Dion_Model_ThumbsUp.webp" 
                 alt="Dion Hair Clinic" 

@@ -5,27 +5,27 @@ import CommonHeroSection, { PriceTag } from '../common/HeroSection';
 const HeroSection: React.FC = () => {
   const { t } = useTranslation(['prices', 'common']);
 
-  // Define price tags
+  // Define price tags using translation keys
   const priceTags: PriceTag[] = [
     {
-      title: 'Saphir FUE Hair',
-      price: 'ab 2599€',
-      description: 'Basic Paket bis 2000 Grafts'
+      title: t('heroSection.priceTags.saphirFUEHair.title'),
+      price: t('heroSection.priceTags.saphirFUEHair.price'),
+      description: t('heroSection.priceTags.saphirFUEHair.description')
     },
     {
-      title: 'DHI FUE Hair',
-      price: 'ab 3599€',
-      description: 'Basic Paket bis 2000 Grafts'
+      title: t('heroSection.priceTags.dhiFUEHair.title'),
+      price: t('heroSection.priceTags.dhiFUEHair.price'),
+      description: t('heroSection.priceTags.dhiFUEHair.description')
     },
     {
-      title: 'Saphir FUE Beard',
-      price: 'ab 2599€',
-      description: 'Basic Paket bis 2000 Grafts'
+      title: t('heroSection.priceTags.saphirFUEBeard.title'),
+      price: t('heroSection.priceTags.saphirFUEBeard.price'),
+      description: t('heroSection.priceTags.saphirFUEBeard.description')
     },
     {
-      title: 'Saphir FUE Eyebrow',
-      price: 'ab 1699€',
-      description: 'bis 1000 Grafts'
+      title: t('heroSection.priceTags.saphirFUEEyebrow.title'),
+      price: t('heroSection.priceTags.saphirFUEEyebrow.price'),
+      description: t('heroSection.priceTags.saphirFUEEyebrow.description')
     }
   ];
 

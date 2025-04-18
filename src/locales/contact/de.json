@@ -105,6 +105,24 @@
   },
   "mapSection": {
     "title": "So finden Sie uns",
-    "description": "Unsere Klinik befindet sich zentral in Mönchengladbach, mit guter Anbindung an öffentliche Verkehrsmittel und Parkmöglichkeiten in der Nähe."
+    "description": "Unsere Klinik befindet sich zentral in Mönchengladbach, mit guter Anbindung an öffentliche Verkehrsmittel und Parkmöglichkeiten in der Nähe.",
+    "directions": {
+      "byCar": {
+        "title": "Mit dem Auto",
+        "items": [
+          "Autobahn A61, Ausfahrt Mönchengladbach-Zentrum",
+          "Folgen Sie der Beschilderung Richtung Zentrum",
+          "Parkmöglichkeiten in der Nähe des Schürenwegs"
+        ]
+      },
+      "byPublicTransport": {
+        "title": "Mit öffentlichen Verkehrsmitteln",
+        "items": [
+          "Hauptbahnhof Mönchengladbach (10 Gehminuten)",
+          "Bushaltestelle Schürenweg (2 Gehminuten)",
+          "Straßenbahnhaltestelle Marktplatz (5 Gehminuten)"
+        ]
+      }
+    }
   }
 }

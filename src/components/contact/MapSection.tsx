@@ -11,7 +11,7 @@ const MapSection: React.FC = () => {
   const { t } = useTranslation('contact');
   
   // Koordinaten der Dion Hair Clinic
-  const position: [number, number] = [51.1956, 6.4378]; // Ersetzen Sie dies durch die genauen Koordinaten
+  const position: [number, number] = [51.21099256537472, 6.434411059495113]; // Ersetzen Sie dies durch die genauen Koordinaten
   
   // Fix für Leaflet-Marker-Icons
   useEffect(() => {
@@ -92,38 +92,26 @@ const MapSection: React.FC = () => {
         {/* Directions */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-            <h3 className={`${textStyle.cardTitle} mb-4`}>Mit dem Auto</h3>
+            <h3 className={`${textStyle.cardTitle} mb-4`}>{t('mapSection.directions.byCar.title')}</h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Autobahn A61, Ausfahrt Mönchengladbach-Zentrum</span>
-              </li>
-              <li className="flex items-start">
-                <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Folgen Sie der Beschilderung Richtung Zentrum</span>
-              </li>
-              <li className="flex items-start">
-                <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Parkmöglichkeiten in der Nähe des Schürenwegs</span>
-              </li>
+              {(t('mapSection.directions.byCar.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                <li key={index} className="flex items-start">
+                  <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
+                  <span className={textStyle.listItem}>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
           
           <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-            <h3 className={`${textStyle.cardTitle} mb-4`}>Mit öffentlichen Verkehrsmitteln</h3>
+            <h3 className={`${textStyle.cardTitle} mb-4`}>{t('mapSection.directions.byPublicTransport.title')}</h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Hauptbahnhof Mönchengladbach (10 Gehminuten)</span>
-              </li>
-              <li className="flex items-start">
-                <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Bushaltestelle Schürenweg (2 Gehminuten)</span>
-              </li>
-              <li className="flex items-start">
-                <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
-                <span className={textStyle.listItem}>Straßenbahnhaltestelle Marktplatz (5 Gehminuten)</span>
-              </li>
+              {(t('mapSection.directions.byPublicTransport.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                <li key={index} className="flex items-start">
+                  <span className={`${textStyle.listItemBullet} mr-2`}>•</span>
+                  <span className={textStyle.listItem}>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

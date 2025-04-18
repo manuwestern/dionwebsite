@@ -105,6 +105,24 @@
   },
   "mapSection": {
     "title": "Find Us",
-    "description": "Our clinic is conveniently located in the heart of Mönchengladbach, with easy access to public transportation and parking facilities nearby."
+    "description": "Our clinic is conveniently located in the heart of Mönchengladbach, with easy access to public transportation and parking facilities nearby.",
+    "directions": {
+      "byCar": {
+        "title": "By Car",
+        "items": [
+          "Highway A61, exit Mönchengladbach-Zentrum",
+          "Follow the signs towards the city center",
+          "Parking available near Schürenweg"
+        ]
+      },
+      "byPublicTransport": {
+        "title": "By Public Transport",
+        "items": [
+          "Mönchengladbach Main Station (10 minutes walk)",
+          "Bus stop Schürenweg (2 minutes walk)",
+          "Tram stop Marktplatz (5 minutes walk)"
+        ]
+      }
+    }
   }
 }

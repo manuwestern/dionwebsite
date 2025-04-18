@@ -6,7 +6,29 @@
   "heroSection": {
     "title": "Transparent\nPricing",
     "subtitle": "Quality and fairness at an attractive price",
-    "welcomeText": "At Dion Hair Clinic, we offer high-quality treatments at transparent and fair prices. Our packages are designed to meet your individual needs while providing optimal value for money."
+    "welcomeText": "At Dion Hair Clinic, we offer high-quality treatments at transparent and fair prices. Our packages are designed to meet your individual needs while providing optimal value for money.",
+    "priceTags": {
+      "saphirFUEHair": {
+        "title": "Saphir FUE Hair",
+        "price": "from 2599€",
+        "description": "Basic package up to 2000 grafts"
+      },
+      "dhiFUEHair": {
+        "title": "DHI FUE Hair",
+        "price": "from 3599€",
+        "description": "Basic package up to 2000 grafts"
+      },
+      "saphirFUEBeard": {
+        "title": "Saphir FUE Beard",
+        "price": "from 2599€",
+        "description": "Basic package up to 2000 grafts"
+      },
+      "saphirFUEEyebrow": {
+        "title": "Saphir FUE Eyebrow",
+        "price": "from 1699€",
+        "description": "up to 1000 grafts"
+      }
+    }
   },
   "priceOverviewSection": {
     "title": "Our Treatment Packages",
