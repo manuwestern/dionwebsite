@@ -11,7 +11,7 @@ const MapSection: React.FC = () => {
   const { t } = useTranslation('contact');
   
   // Koordinaten der Dion Hair Clinic
-  const position: [number, number] = [51.21099256537472, 6.434411059495113]; // Ersetzen Sie dies durch die genauen Koordinaten
+  const position: [number, number] = [51.209551398654845, 6.435078297975941]; // Ersetzen Sie dies durch die genauen Koordinaten
   
   // Fix für Leaflet-Marker-Icons
   useEffect(() => {

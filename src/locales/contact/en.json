@@ -110,17 +110,17 @@
       "byCar": {
         "title": "By Car",
         "items": [
-          "Highway A61, exit Mönchengladbach-Zentrum",
-          "Follow the signs towards the city center",
-          "Parking available near Schürenweg"
+          "Via the A52 highway, exit Mönchengladbach-Nord (No. 8), direction city center/Kaldenkirchener Straße",
+          "Good parking options along Kaldenkirchener Straße 48",
+          "Public parking spaces also directly on Schürenweg and in the adjacent side streets"
         ]
       },
       "byPublicTransport": {
-        "title": "By Public Transport",
+        "title": "By Bus & Train",
         "items": [
-          "Mönchengladbach Main Station (10 minutes walk)",
-          "Bus stop Schürenweg (2 minutes walk)",
-          "Tram stop Marktplatz (5 minutes walk)"
+          "From Mönchengladbach Main Station: Bus line 015 or 089 to \"Schürenweg\" (approx. 6 min. ride, 2 min. walk)",
+          "Additional bus connections: 002, 019, 033, NE1 (stops Lochnerallee/Eickener Höhe, 3-4 min. walk)",
+          "Alternatively: Walking distance from the main station approx. 20 minutes (1.6 km)"
         ]
       }
     }

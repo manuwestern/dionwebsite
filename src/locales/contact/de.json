@@ -110,17 +110,17 @@
       "byCar": {
         "title": "Mit dem Auto",
         "items": [
-          "Autobahn A61, Ausfahrt Mönchengladbach-Zentrum",
-          "Folgen Sie der Beschilderung Richtung Zentrum",
-          "Parkmöglichkeiten in der Nähe des Schürenwegs"
+          "Über die A52, Ausfahrt Mönchengladbach-Nord (Nr. 8), Richtung Zentrum/Kaldenkirchener Straße",
+          "Gute Parkmöglichkeiten entlang der Kaldenkirchener Straße 48",
+          "Öffentliche Parkstreifen auch direkt am Schürenweg und in den angrenzenden Seitenstraßen"
         ]
       },
       "byPublicTransport": {
-        "title": "Mit öffentlichen Verkehrsmitteln",
+        "title": "Mit Bus & Bahn",
         "items": [
-          "Hauptbahnhof Mönchengladbach (10 Gehminuten)",
-          "Bushaltestelle Schürenweg (2 Gehminuten)",
-          "Straßenbahnhaltestelle Marktplatz (5 Gehminuten)"
+          "Ab Mönchengladbach Hbf: Buslinie 015 oder 089 bis \"Schürenweg\" (ca. 6 Min. Fahrt, 2 Min. Fußweg)",
+          "Zusätzliche Busverbindungen: 002, 019, 033, NE1 (Haltestellen Lochnerallee/Eickener Höhe, 3-4 Min. Fußweg)",
+          "Alternativ: Fußweg vom Hbf ca. 20 Minuten (1.6 km)"
         ]
       }
     }
