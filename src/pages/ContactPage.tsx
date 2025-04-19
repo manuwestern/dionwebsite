@@ -137,12 +137,12 @@ const ContactPage: React.FC = () => {
         <ContactInfoSection />
       </SectionWrapper>
       
-      <SectionWrapper type="accent">
-        <ContactFormSection />
-      </SectionWrapper>
-      
       <SectionWrapper type="medium">
         <MapSection />
+      </SectionWrapper>
+      
+      <SectionWrapper type="accent">
+        <ContactFormSection />
       </SectionWrapper>
       
       {/* Subtle page overlay for depth effect */}

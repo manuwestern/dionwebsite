@@ -199,7 +199,7 @@ const ContactFormSection: React.FC = () => {
   };
 
   return (
-    <section id="contactForm" className="py-16 md:py-24 relative overflow-hidden bg-gray-50 border-t border-b border-gray-100">
+    <section id="contactForm" className="py-16 md:py-24 relative overflow-hidden bg-gray-50 border-t border-b border-gray-100" data-section="contact-form">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -ml-[400px] -mt-[400px] blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -mr-[300px] -mb-[300px] blur-3xl"></div>
