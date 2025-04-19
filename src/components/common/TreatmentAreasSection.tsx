@@ -128,6 +128,20 @@ const TreatmentAreasSection: React.FC<TreatmentAreasSectionProps> = ({
 
   // Reusable button component to avoid duplication
   const MoreInfoButton = ({ path, areaId }: { path: string, areaId: string }) => {
+    // Get specific text based on area ID
+    const getButtonText = () => {
+      switch(areaId) {
+        case 'head':
+          return t('buttons.hairTransplantation', { ns: 'common' });
+        case 'beard':
+          return t('buttons.beardTransplantation', { ns: 'common' });
+        case 'eyebrows':
+          return t('buttons.eyebrowTransplantation', { ns: 'common' });
+        default:
+          return t('buttons.moreInfo', { ns: 'common' });
+      }
+    };
+
     // Get full descriptive text for aria-label
     const getAriaLabel = () => {
       switch(areaId) {
@@ -150,8 +164,8 @@ const TreatmentAreasSection: React.FC<TreatmentAreasSectionProps> = ({
         title={getAriaLabel()}
       >
         <span className={buttonRippleClass}></span>
-        <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
-          {t('buttons.moreInfo', { ns: 'common' })}
+        <span className="relative flex items-center justify-center text-sm uppercase tracking-wider whitespace-pre-line">
+          {getButtonText()}
           <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </Link>
@@ -226,7 +240,7 @@ const TreatmentAreasSection: React.FC<TreatmentAreasSectionProps> = ({
                   </div>
                   
                   {/* Smaller button for mobile view - positioned at bottom */}
-                  <div className="mt-auto pt-6 pb-2 flex justify-center">
+                  <div className="mt-auto pt-6 pb-4 flex justify-center">
                     <MoreInfoButton path={area.path} areaId={area.id} />
                   </div>
                 </div>
@@ -326,7 +340,7 @@ const TreatmentAreasSection: React.FC<TreatmentAreasSectionProps> = ({
                     </div>
                     
                     {/* Elegant button with ripple effect - positioned at bottom - new smaller design */}
-                    <div className="mt-auto pt-6 pb-2 flex justify-center">
+                    <div className="mt-auto pt-6 pb-4 flex justify-center">
                       <MoreInfoButton path={area.path} areaId={area.id} />
                     </div>
                   </div>
