@@ -174,7 +174,12 @@ const HolisticConceptSection: React.FC = () => {
               
               {/* CTA Button - Elegant styling */}
               <div className={`flex justify-center lg:justify-start mt-10 transition-all duration-1000 delay-1200 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <Link to="/klinik" className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}>
+                <Link 
+                  to="/klinik" 
+                  className={`${buttonStyle.primary} shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]`}
+                  aria-label="Mehr über unsere Klinik erfahren"
+                  title="Mehr über unsere Klinik erfahren"
+                >
                   <span className={buttonRippleClass}></span>
                   <span className={`relative flex items-center ${textStyle.button}`}>
                     {t('buttons.moreInfo', { ns: 'common' })}

@@ -127,18 +127,36 @@ const TreatmentAreasSection: React.FC<TreatmentAreasSectionProps> = ({
   }, [t, treatmentAreas, translationNamespace]);
 
   // Reusable button component to avoid duplication
-  const MoreInfoButton = ({ path }: { path: string }) => (
-    <Link
-      to={path}
-      className={`${buttonStyle.primary} w-4/5 shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
-    >
-      <span className={buttonRippleClass}></span>
-      <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
-        {t('buttons.moreInfo', { ns: 'common' })}
-        <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
-      </span>
-    </Link>
-  );
+  const MoreInfoButton = ({ path, areaId }: { path: string, areaId: string }) => {
+    // Get full descriptive text for aria-label
+    const getAriaLabel = () => {
+      switch(areaId) {
+        case 'head':
+          return 'Mehr über Haartransplantation erfahren';
+        case 'beard':
+          return 'Mehr über Barthaartransplantation erfahren';
+        case 'eyebrows':
+          return 'Mehr über Augenbrauentransplantation erfahren';
+        default:
+          return 'Mehr Informationen';
+      }
+    };
+
+    return (
+      <Link
+        to={path}
+        className={`${buttonStyle.primary} w-4/5 shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center`}
+        aria-label={getAriaLabel()}
+        title={getAriaLabel()}
+      >
+        <span className={buttonRippleClass}></span>
+        <span className="relative flex items-center justify-center text-sm uppercase tracking-wider">
+          {t('buttons.moreInfo', { ns: 'common' })}
+          <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
+        </span>
+      </Link>
+    );
+  };
 
   // Extract the color from the accentColor class (assuming it's in the format "bg-[#color]")
   const colorMatch = accentColor.match(/#[0-9A-Fa-f]+/);
@@ -209,7 +227,7 @@ const TreatmentAreasSection: React.FC<TreatmentAreasSectionProps> = ({
                   
                   {/* Smaller button for mobile view - positioned at bottom */}
                   <div className="mt-auto pt-6 pb-2 flex justify-center">
-                    <MoreInfoButton path={area.path} />
+                    <MoreInfoButton path={area.path} areaId={area.id} />
                   </div>
                 </div>
               </div>
@@ -309,7 +327,7 @@ const TreatmentAreasSection: React.FC<TreatmentAreasSectionProps> = ({
                     
                     {/* Elegant button with ripple effect - positioned at bottom - new smaller design */}
                     <div className="mt-auto pt-6 pb-2 flex justify-center">
-                      <MoreInfoButton path={area.path} />
+                      <MoreInfoButton path={area.path} areaId={area.id} />
                     </div>
                   </div>
                 </div>
