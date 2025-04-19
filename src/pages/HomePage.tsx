@@ -107,8 +107,8 @@ const HomePage: React.FC = () => {
       {/* Subtle page overlay for depth effect */}
       <div className="pointer-events-none fixed inset-0 z-30 opacity-30 bg-radial-gradient"></div>
       
-      {/* KI Hair Analysis Popup */}
-      <HairAnalysisPopup delay={5000} />
+      {/* KI Hair Analysis Popup - Temporarily disabled */}
+      {/* <HairAnalysisPopup delay={5000} /> */}
     </div>
   );
 };
