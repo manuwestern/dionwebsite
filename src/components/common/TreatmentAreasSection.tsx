@@ -8,7 +8,7 @@ import { buttonStyle, buttonRippleClass } from '../../utils/buttons';
 // Constants for fixed heights and styling
 const CARD_HEIGHTS = {
   mobile: {
-    default: 'h-[240px]',  // Increased from 200px to 240px
+    default: 'h-[280px]',  // Increased from 200px to 240px
     eyebrows: 'h-[280px]'  // Increased from 240px to 280px
   },
   desktop: {
