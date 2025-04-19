@@ -15,6 +15,7 @@ const TestimonialsSection: React.FC = () => {
       after: '/images/Augenbrauentransplantation_Nachher_2.webp',
       beforeAlt: 'Vor der Augenbrauentransplantation - Patient mit ungleichmäßigen Augenbrauen',
       afterAlt: 'Nach der Augenbrauentransplantation - Symmetrische, ausdrucksstarke Augenbrauen'
+    }
   ];
 
   return (
