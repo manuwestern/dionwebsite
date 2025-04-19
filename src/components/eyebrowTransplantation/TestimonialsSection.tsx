@@ -5,23 +5,16 @@ const TestimonialsSection: React.FC = () => {
   // Before/After image pairs
   const beforeAfterPairs = [
     { 
-      before: '/images/Augenbrauen_kahl.webp', 
-      after: '/images/Augenbrauen_Model.webp',
-      beforeAlt: 'Vor der Augenbrauentransplantation - Patientin mit fehlenden Augenbrauen',
+      before: '/images/Augenbrauentransplantation_Vorher_1.webp', 
+      after: '/images/Augenbrauentransplantation_Nachher_1.webp',
+      beforeAlt: 'Vor der Augenbrauentransplantation - Patient mit dünnen, lückenhaften Augenbrauen',
       afterAlt: 'Nach der Augenbrauentransplantation - Natürlich aussehende, volle Augenbrauen'
     },
     { 
-      before: '/images/Augenbrauen_undicht.webp', 
-      after: '/images/Augenbrauen_Model.webp',
-      beforeAlt: 'Vor der Augenbrauentransplantation - Patientin mit dünnen, lückenhaften Augenbrauen',
-      afterAlt: 'Nach der Augenbrauentransplantation - Dichte, ausdrucksstarke Augenbrauen'
-    },
-    { 
-      before: '/images/Augenbrauen_Microblading.webp', 
-      after: '/images/Augenbrauen_Model.webp',
-      beforeAlt: 'Vor der Augenbrauentransplantation - Patientin mit Microblading-Augenbrauen',
-      afterAlt: 'Nach der Augenbrauentransplantation - Natürliche Augenbrauen mit echten Haaren'
-    }
+      before: '/images/Augenbrauentransplantation_Vorher_2.webp', 
+      after: '/images/Augenbrauentransplantation_Nachher_2.webp',
+      beforeAlt: 'Vor der Augenbrauentransplantation - Patient mit ungleichmäßigen Augenbrauen',
+      afterAlt: 'Nach der Augenbrauentransplantation - Symmetrische, ausdrucksstarke Augenbrauen'
   ];
 
   return (

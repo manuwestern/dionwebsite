@@ -8,8 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const sourceDir = path.join(__dirname, '../public/images');
-const outputDir = path.join(__dirname, '../public/images');
+const sourceDir = path.join(__dirname, '../public/images/new');
+const outputDir = path.join(__dirname, '../public/images/optimized');
 const webpQuality = 80; // 0-100, higher is better quality but larger file
 const pngQuality = 80; // 0-100
 const jpegQuality = 85; // 0-100
