@@ -74,8 +74,9 @@ export default defineConfig({
       brotliSize: true
     })
   ],
-  // Abhängigkeiten, die nicht optimiert werden sollen
+  // Abhängigkeiten optimieren
   optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'i18next', 'react-i18next'],
     exclude: ['lucide-react'],
   },
   // Build-Optimierungen
@@ -83,23 +84,25 @@ export default defineConfig({
     target: 'es2015',
     outDir: 'dist',
     assetsDir: 'assets',
-    // Chunk-Splitting-Strategie
+    // Verbesserte Chunk-Splitting-Strategie
     rollupOptions: {
       output: {
         manualChunks: {
-          // Vendor-Chunks für große Bibliotheken
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-i18n': ['i18next', 'react-i18next'],
-          'vendor-ui': ['lucide-react', 'react-helmet']
-        }
+          // Zusammengefasste Vendor-Chunks für bessere Performance
+          'vendor': ['react', 'react-dom', 'react-router-dom', 'i18next', 'react-i18next', 'lucide-react', 'react-helmet']
+        },
+        // Chunk-Größe optimieren
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
       }
     },
-    // Kompression aktivieren
+    // Kompression aktivieren, aber Konsolenausgaben nur im Produktionsmodus entfernen
     minify: 'terser',
     terserOptions: {
       compress: {
-        drop_console: true,
-        drop_debugger: true
+        drop_console: process.env.NODE_ENV === 'production',
+        drop_debugger: process.env.NODE_ENV === 'production'
       }
     },
     // CSS-Optimierungen

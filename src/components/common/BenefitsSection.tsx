@@ -74,11 +74,7 @@ const BenefitsSectionComponent: React.FC<BenefitsSectionComponentProps> = ({
           {benefitCards.map((card, index) => (
             <div 
               key={index} 
-              className="transform transition-all duration-700 hover:z-10"
-              style={{ 
-                animationDelay: `${index * 100}ms`,
-                transitionDelay: `${index * 50}ms` 
-              }}
+              className="hover:z-10"
             >
               <FeatureBenefitCard
                 title={card.title}

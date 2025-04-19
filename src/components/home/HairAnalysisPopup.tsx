@@ -7,21 +7,15 @@ interface HairAnalysisPopupProps {
   delay?: number; // Delay in ms before showing the floating icon
 }
 
-const HairAnalysisPopup: React.FC<HairAnalysisPopupProps> = ({ delay = 2000 }) => {
+const HairAnalysisPopup: React.FC<HairAnalysisPopupProps> = ({ delay = 500 }) => {
   const [isIconVisible, setIsIconVisible] = useState(false);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const [isPulsing, setIsPulsing] = useState(false);
 
   useEffect(() => {
-    // Show icon after delay
+    // Show icon immediately or after a short delay
     const timer = setTimeout(() => {
       setIsIconVisible(true);
-      
-      // Start pulsing animation after icon appears
-      setTimeout(() => {
-        setIsPulsing(true);
-      }, 1000);
     }, delay);
     
     return () => clearTimeout(timer);
@@ -29,7 +23,6 @@ const HairAnalysisPopup: React.FC<HairAnalysisPopupProps> = ({ delay = 2000 }) =
 
   const handleOpenPopup = () => {
     setIsPopupVisible(true);
-    setIsPulsing(false); // Stop pulsing when popup is open
   };
 
   const handleClosePopup = () => {
@@ -53,15 +46,11 @@ const HairAnalysisPopup: React.FC<HairAnalysisPopupProps> = ({ delay = 2000 }) =
       {/* Floating icon button */}
       {isIconVisible && !isPopupVisible && (
         <div 
-          className={`fixed right-6 bottom-24 z-40 transition-all duration-500 ${
-            isIconVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-16'
-          }`}
+          className="fixed right-6 bottom-24 z-40 transition-all duration-300"
         >
           <button
             onClick={handleOpenPopup}
-            className={`relative group w-16 h-16 rounded-full bg-gradient-to-r from-[#7BA7C2] to-[#9BBFD9] text-white shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 ${
-              isPulsing ? 'animate-pulse' : ''
-            }`}
+            className="relative group w-16 h-16 rounded-full bg-gradient-to-r from-[#7BA7C2] to-[#9BBFD9] text-white shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
             aria-label="KI-Haaranalyse starten"
           >
             {/* Glow effect */}

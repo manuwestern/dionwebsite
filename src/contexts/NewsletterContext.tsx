@@ -32,19 +32,29 @@ export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({
   
   // Check localStorage on mount to see if user has already seen the popup
   useEffect(() => {
-    const hasSeenPopup = localStorage.getItem('dion_newsletter_seen');
-    const hasSubscribedBefore = localStorage.getItem('dion_newsletter_subscribed');
-    
-    if (hasSubscribedBefore === 'true') {
-      setHasSubscribed(true);
-    } else if (!hasSeenPopup) {
-      // Show popup after 15 seconds if user hasn't seen it before
-      const timer = setTimeout(() => {
-        setShowPopup(true);
-        localStorage.setItem('dion_newsletter_seen', new Date().toISOString());
-      }, 15000);
+    try {
+      const hasSeenPopup = localStorage.getItem('dion_newsletter_seen');
+      const hasSubscribedBefore = localStorage.getItem('dion_newsletter_subscribed');
       
-      return () => clearTimeout(timer);
+      if (hasSubscribedBefore === 'true') {
+        setHasSubscribed(true);
+      } else if (!hasSeenPopup) {
+        // Show popup after 30 seconds if user hasn't seen it before
+        // Increased from 15 to 30 seconds for better user experience
+        const timer = setTimeout(() => {
+          setShowPopup(true);
+          try {
+            localStorage.setItem('dion_newsletter_seen', new Date().toISOString());
+          } catch (error) {
+            console.error('Error saving to localStorage:', error);
+          }
+        }, 30000);
+        
+        return () => clearTimeout(timer);
+      }
+    } catch (error) {
+      // Handle case where localStorage is not available (e.g., private browsing)
+      console.error('Error accessing localStorage:', error);
     }
   }, []);
   
@@ -88,7 +98,11 @@ export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({
       // Success
       setIsSuccess(true);
       setHasSubscribed(true);
-      localStorage.setItem('dion_newsletter_subscribed', 'true');
+      try {
+        localStorage.setItem('dion_newsletter_subscribed', 'true');
+      } catch (error) {
+        console.error('Error saving to localStorage:', error);
+      }
       
       // Close popup after 3 seconds on success
       setTimeout(() => {
@@ -104,7 +118,8 @@ export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({
     }
   };
   
-  const value = {
+  // Memoize context value to prevent unnecessary re-renders
+  const value = React.useMemo(() => ({
     showPopup,
     hasSubscribed,
     isSubmitting,
@@ -114,7 +129,14 @@ export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({
     openPopup,
     closePopup,
     submitEmail,
-  };
+  }), [
+    showPopup,
+    hasSubscribed,
+    isSubmitting,
+    isSuccess,
+    isError,
+    errorMessage
+  ]);
   
   return (
     <NewsletterContext.Provider value={value}>

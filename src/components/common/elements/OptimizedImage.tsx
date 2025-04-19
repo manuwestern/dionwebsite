@@ -6,6 +6,7 @@ import styles from './OptimizedImage.module.css';
  */
 interface ImageSources {
   webp?: string;
+  avif?: string; // Added support for AVIF format
   original: string;
   placeholder?: string;
   width?: number;
@@ -26,6 +27,7 @@ interface OptimizedImageProps {
   sizes?: string;
   useLqip?: boolean;
   placeholderStyle?: React.CSSProperties;
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down'; // Added configurable object-fit
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -41,16 +43,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   loading = 'lazy',
   decoding = 'async',
-  fetchPriority = 'auto',
+  fetchPriority = loading === 'eager' ? 'high' : 'auto', // Automatically set high priority for eager loading
   className = '',
   style = {},
   sizes = '100vw',
   useLqip = false,
+  objectFit = 'cover',
   placeholderStyle = {},
   onLoad,
   onError,
 }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  // Assume all images are loaded to avoid layout shifts
+  const [imageLoaded, setImageLoaded] = useState(true);
 
   // Handle image load
   const handleImageLoad = () => {
@@ -95,7 +99,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             loading={loading}
             decoding={decoding}
             fetchPriority={fetchPriority}
-            className={styles.image}
+          className={styles.image}
+          style={{ objectFit }}
             onLoad={handleImageLoad}
             onError={handleImageError}
             width={sources.width}
@@ -106,9 +111,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
 
-  // Standard picture element with WebP support
+  // Standard picture element with WebP and AVIF support
   return (
     <picture className={`${styles.standardPicture} ${className}`}>
+      {sources.avif && (
+        <source
+          srcSet={sources.avif}
+          type="image/avif"
+          sizes={sizes}
+        />
+      )}
       {sources.webp && (
         <source
           srcSet={sources.webp}
@@ -128,6 +140,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         decoding={decoding}
         fetchPriority={fetchPriority}
         className={styles.image}
+        style={{ objectFit }}
         onLoad={handleImageLoad}
         onError={handleImageError}
         width={sources.width}

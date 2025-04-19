@@ -58,17 +58,22 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
   const [showBanner, setShowBanner] = useState<boolean>(true);
   const [showSettings, setShowSettings] = useState<boolean>(false);
 
-  // Load consent from localStorage on mount
+// Load consent from localStorage on mount
   useEffect(() => {
-    const storedConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (storedConsent) {
-      try {
-        const parsedConsent = JSON.parse(storedConsent);
-        setConsentState(parsedConsent);
-        setShowBanner(false); // Hide banner if consent is already given
-      } catch (error) {
-        console.error('Error parsing stored cookie consent:', error);
+    try {
+      const storedConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
+      if (storedConsent) {
+        try {
+          const parsedConsent = JSON.parse(storedConsent);
+          setConsentState(parsedConsent);
+          setShowBanner(false); // Hide banner if consent is already given
+        } catch (error) {
+          console.error('Error parsing stored cookie consent:', error);
+        }
       }
+    } catch (error) {
+      // Handle case where localStorage is not available (e.g., private browsing)
+      console.error('Error accessing localStorage:', error);
     }
   }, []);
 
@@ -128,27 +133,34 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
     setShowBanner(true);
   };
 
+  // Memoize context value to prevent unnecessary re-renders
+  const contextValue = React.useMemo(() => ({
+    consent,
+    showBanner,
+    showSettings,
+    setConsent,
+    saveConsent,
+    openSettings,
+    closeSettings,
+    acceptAll,
+    acceptSelected,
+    resetConsent
+  }), [consent, showBanner, showSettings]);
+
   return (
-    <CookieConsentContext.Provider
-      value={{
-        consent,
-        showBanner,
-        showSettings,
-        setConsent,
-        saveConsent,
-        openSettings,
-        closeSettings,
-        acceptAll,
-        acceptSelected,
-        resetConsent
-      }}
-    >
+    <CookieConsentContext.Provider value={contextValue}>
       {children}
     </CookieConsentContext.Provider>
   );
 };
 
 // Custom hook for using the cookie consent context
-export const useCookieConsent = () => useContext(CookieConsentContext);
+export const useCookieConsent = () => {
+  const context = useContext(CookieConsentContext);
+  if (context === undefined) {
+    throw new Error('useCookieConsent must be used within a CookieConsentProvider');
+  }
+  return context;
+};
 
 export default CookieConsentContext;

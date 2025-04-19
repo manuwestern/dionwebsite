@@ -19,15 +19,12 @@
     
     <!-- Dynamic Meta Tags are managed by the SEO component -->
     
-    <!-- Preload critical resources -->
+    <!-- Preload only the most critical resource -->
     <!-- CSS is imported in main.tsx and bundled by Vite -->
     <link rel="preload" href="/images/DionHairClinic_Logo.svg" as="image" type="image/svg+xml" fetchpriority="high">
-    <link rel="preload" href="/images/Dion_Model_Home.webp" as="image" type="image/webp" fetchpriority="high">
     
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="/fonts/montserrat/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-    <link rel="preload" href="/fonts/montserrat/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-    <link rel="preload" href="/fonts/montserrat/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+    <!-- Preload only the most critical font -->
+    <link rel="preload" href="/fonts/montserrat/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- DNS prefetch and preconnect for external resources -->
     <link rel="preconnect" href="https://www.google.com">
@@ -35,7 +32,7 @@
     <link rel="preconnect" href="https://connect.pabbly.com">
     <link rel="dns-prefetch" href="https://connect.pabbly.com">
     
-    <!-- Inline style to prevent flash of unstyled content -->
+    <!-- Critical CSS inline for faster rendering -->
     <style>
       /* Initial state - hide content until CSS is loaded */
       #root {
@@ -46,17 +43,57 @@
         opacity: 1 !important;
         transition: opacity 0.3s ease-in;
       }
+      
+      /* Critical styles from Tailwind and custom CSS */
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/fonts/montserrat/montserrat-regular.woff2') format('woff2');
+      }
+      
+      html {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      /* Basic layout styles */
+      .container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      /* Common utility classes */
+      .flex { display: flex; }
+      .items-center { align-items: center; }
+      .justify-center { justify-content: center; }
+      .relative { position: relative; }
+      .absolute { position: absolute; }
+      .w-full { width: 100%; }
+      .h-full { height: 100%; }
+      .text-center { text-align: center; }
     </style>
     
-    <!-- Script to handle CSS loading -->
+    <!-- Script to handle CSS and font loading -->
     <script>
-      // Add event listener to mark when CSS is loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        // Short timeout to ensure CSS is applied
-        setTimeout(function() {
+      // Add event listener to mark when content is ready to display
+      if (document.readyState === 'complete') {
+        document.getElementById('root').classList.add('css-loaded');
+      } else {
+        window.addEventListener('load', function() {
           document.getElementById('root').classList.add('css-loaded');
-        }, 50);
-      });
+        });
+      }
     </script>
     
     <!-- Google reCAPTCHA v3 is now lazy-loaded via src/utils/recaptcha-loader.ts -->

@@ -36,12 +36,52 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error to console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // Send error to error logging service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would send the error to your error logging service
+      // Example: sendToErrorLoggingService(error, errorInfo);
+    }
+    
     this.setState({
       error,
       errorInfo
     });
   }
 
+  // Clear cache and reload
+  handleClearCacheAndReload = (): void => {
+    try {
+      // Clear application cache
+      if ('caches' in window) {
+        caches.keys().then(cacheNames => {
+          cacheNames.forEach(cacheName => {
+            caches.delete(cacheName);
+          });
+        });
+      }
+      
+      // Clear local storage (except essential items)
+      const essentialItems = ['dion-cookie-consent']; // Items to keep
+      Object.keys(localStorage).forEach(key => {
+        if (!essentialItems.includes(key)) {
+          localStorage.removeItem(key);
+        }
+      });
+      
+      // Clear session storage
+      sessionStorage.clear();
+      
+      console.log('Cache cleared successfully');
+    } catch (e) {
+      console.error('Error clearing cache:', e);
+    }
+    
+    // Reload the page
+    window.location.reload();
+  };
+  
+  // Simple reload without clearing cache
   handleReload = (): void => {
     window.location.reload();
   };
@@ -62,10 +102,16 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-4">
               <button
-                onClick={this.handleReload}
+                onClick={this.handleClearCacheAndReload}
                 className="w-full bg-[#7BA7C2] hover:bg-[#5A8BA6] text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
               >
-                Seite neu laden
+                Cache löschen und neu laden
+              </button>
+              <button
+                onClick={this.handleReload}
+                className="w-full border border-[#7BA7C2] text-[#7BA7C2] font-medium py-2 px-4 rounded-lg hover:bg-[#7BA7C2]/10 transition-colors duration-300"
+              >
+                Nur neu laden
               </button>
               <a
                 href="/"

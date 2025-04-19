@@ -34,7 +34,7 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
     >
       {/* Card with glass morphism effect */}
       <div 
-        className={`relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-md transition-all duration-500 h-full border-2 ${
+        className={`relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-md transition-all duration-300 h-full border-2 ${
           isHovered
             ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
             : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-lg'
@@ -49,7 +49,7 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
           {/* Icon and title in a row */}
           <div className="flex items-center">
             <div 
-              className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4 transition-all duration-300"
+              className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4 transition-all duration-200"
               style={{ 
                 backgroundColor: isHovered ? `${color}20` : `${color}10`,
                 color: color
@@ -58,7 +58,7 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
               onMouseLeave={() => setHoverCard(null)}
             >
               {React.cloneElement(icon as React.ReactElement, { 
-                className: `w-5 h-5 transition-all duration-300 ${isHovered ? 'scale-110' : ''}` 
+                className: `w-5 h-5 ${isHovered ? 'scale-110' : ''}` 
               })}
             </div>
             
@@ -80,7 +80,7 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
         
         {/* More diffuse corner accent */}
         <div 
-          className="absolute bottom-0 right-0 w-24 h-24 rounded-full blur-md transition-opacity duration-500"
+          className="absolute bottom-0 right-0 w-24 h-24 rounded-full blur-md transition-opacity duration-200"
           style={{ 
             background: `radial-gradient(circle at bottom right, ${color}15, transparent 70%)`,
             opacity: isHovered ? 1 : 0
@@ -89,7 +89,7 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
       </div>
       
       {/* Decorative shadow element behind the card - appears on hover - more diffuse */}
-      <div className={`absolute -z-10 w-[calc(100%+16px)] h-[calc(100%+16px)] rounded-2xl bg-[#7BA7C2]/5 -top-2 -left-2 blur-md transition-all duration-500 ${
+      <div className={`absolute -z-10 w-[calc(100%+16px)] h-[calc(100%+16px)] rounded-2xl bg-[#7BA7C2]/5 -top-2 -left-2 blur-md transition-all duration-200 ${
         isHovered ? 'opacity-80' : 'opacity-0'
       }`}></div>
     </div>

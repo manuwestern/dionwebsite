@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
@@ -23,7 +23,8 @@ const TermsPage = lazy(() => import('./pages/TermsPage'));
 const KnowledgePage = lazy(() => import('./pages/KnowledgePage'));
 const PricesPage = lazy(() => import('./pages/PricesPage'));
 
-function App() {
+// Memoize the App component to prevent unnecessary re-renders
+const App: React.FC = React.memo(() => {
   return (
     <ErrorBoundary>
       <Router>
@@ -31,26 +32,24 @@ function App() {
           <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
             <ScrollToTop />
             <Layout>
-              <ErrorBoundary>
-                <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/haartransplantation" element={<HairTransplantationPage />} />
-                <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
-                <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
-                <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} />
-                <Route path="/klinik" element={<ClinicPage />} />
-                <Route path="/kontakt" element={<ContactPage />} />
-                <Route path="/impressum" element={<ImprintPage />} />
-                <Route path="/datenschutz" element={<PrivacyPage />} />
-                <Route path="/agb" element={<TermsPage />} />
-                <Route path="/wissenswertes" element={<KnowledgePage />} />
-                <Route path="/preise" element={<PricesPage />} />
-                {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
-                <Route path="*" element={<NotFoundPage />} />
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/haartransplantation" element={<HairTransplantationPage />} />
+                  <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
+                  <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
+                  <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} />
+                  <Route path="/klinik" element={<ClinicPage />} />
+                  <Route path="/kontakt" element={<ContactPage />} />
+                  <Route path="/impressum" element={<ImprintPage />} />
+                  <Route path="/datenschutz" element={<PrivacyPage />} />
+                  <Route path="/agb" element={<TermsPage />} />
+                  <Route path="/wissenswertes" element={<KnowledgePage />} />
+                  <Route path="/preise" element={<PricesPage />} />
+                  {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
+                  <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </Suspense>
-            </ErrorBoundary>
             </Layout>
             <NewsletterPopup />
           </NewsletterProvider>
@@ -58,6 +57,9 @@ function App() {
       </Router>
     </ErrorBoundary>
   );
-}
+});
+
+// Set display name for debugging
+App.displayName = 'App';
 
 export default App;

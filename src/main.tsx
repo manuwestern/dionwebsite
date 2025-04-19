@@ -3,13 +3,23 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import './i18n';
-import { initPerformanceMonitoring } from './utils/performance-monitoring';
+import { initPerformanceMonitoring, measureTTFB, measureLCP } from './utils/performance-monitoring';
 
 // Initialize performance monitoring
-if (process.env.NODE_ENV !== 'production') {
-  // Only enable in development mode for now
+if (process.env.NODE_ENV === 'development') {
+  // Only enable in development mode
   console.log('Performance monitoring enabled in development mode');
-  initPerformanceMonitoring();
+  // Use setTimeout to ensure it doesn't block rendering
+  setTimeout(() => {
+    initPerformanceMonitoring();
+  }, 0);
+} else {
+  // In production, only measure critical metrics
+  // Only measure TTFB and LCP in production to minimize overhead
+  setTimeout(() => {
+    measureTTFB();
+    measureLCP();
+  }, 0);
 }
 
 // Render the React app
