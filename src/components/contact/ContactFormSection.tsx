@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { trackEvent, trackFormSubmission, trackEnhancedConversion } from '../../utils/gtm';
 
 // Declare global grecaptcha object
 declare global {
@@ -175,6 +176,30 @@ const ContactFormSection: React.FC = () => {
       
       // Form submission successful
       setFormSubmitted(true);
+      
+      // Track form submission in Google Tag Manager
+      trackEvent('Contact', 'Form Submission', formData.subject || 'Contact Form');
+      
+      // Track form submission with form data
+      trackFormSubmission('contact_form', {
+        subject: formData.subject,
+        newsletter: formData.newsletter
+      });
+      
+      // Track enhanced conversion for Google Ads
+      // Extract first and last name from the full name
+      const nameParts = formData.name.split(' ');
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+      
+      // Send enhanced conversion data
+      trackEnhancedConversion(
+        'CONTACT_FORM', // This should be replaced with your actual conversion label from Google Ads
+        formData.email,
+        formData.phone || undefined,
+        firstName,
+        lastName
+      );
       
       // Reset form after 5 seconds
       setTimeout(() => {

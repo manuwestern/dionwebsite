@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { trackPhoneCall } from '../../utils/gtm';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const TopBar: React.FC = () => {
@@ -24,7 +25,11 @@ const TopBar: React.FC = () => {
             </a>
             
             {/* Phone */}
-            <a href="tel:+491702637818" className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors">
+            <a 
+              href="tel:+491702637818" 
+              className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors"
+              onClick={() => trackPhoneCall('+491702637818', 'header')}
+            >
               <Phone size={14} className="text-[#7BA7C2]" /> 
               <span className="hidden sm:inline">+49 170 2637818</span>
             </a>

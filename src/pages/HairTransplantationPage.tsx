@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { trackTreatmentView, TreatmentType } from '../utils/gtm';
 import SEO from '../components/seo/SEO';
 import HeroSection from '../components/hairTransplantation/HeroSection';
 import BenefitsSection from '../components/hairTransplantation/BenefitsSection';
@@ -67,6 +68,14 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, classNa
 
 const HairTransplantationPage: React.FC = () => {
   const { t } = useTranslation('hairTransplantation');
+  
+  // Track treatment view for remarketing
+  useEffect(() => {
+    trackTreatmentView(
+      TreatmentType.HAIR_TRANSPLANT,
+      'Haartransplantation'
+    );
+  }, []);
   
   return (
     <>

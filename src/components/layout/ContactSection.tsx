@@ -3,6 +3,7 @@ import { Phone, Mail, MessageCircle, MapPin, ArrowRight, Calendar } from 'lucide
 import { useTranslation } from 'react-i18next';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, lineHeight } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
+import { trackEvent, trackFormSubmission, trackPhoneCall, trackEnhancedConversion } from '../../utils/gtm';
 
 const ContactSection: React.FC = () => {
   const { t } = useTranslation(['layout', 'common']);
@@ -53,6 +54,29 @@ const ContactSection: React.FC = () => {
       // Form submission successful
       setIsSubmitting(false);
       setIsSubmitted(true);
+      
+      // Track form submission in Google Tag Manager
+      trackEvent('Contact', 'Form Submission', 'Footer Contact Form');
+      
+      // Track form submission with form data
+      trackFormSubmission('footer_contact_form', {
+        newsletter: formNewsletter
+      });
+      
+      // Track enhanced conversion for Google Ads
+      // Extract first and last name from the full name
+      const nameParts = formName.split(' ');
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+      
+      // Send enhanced conversion data
+      trackEnhancedConversion(
+        'FOOTER_CONTACT_FORM', // This should be replaced with your actual conversion label from Google Ads
+        formEmail,
+        formPhone || undefined,
+        firstName,
+        lastName
+      );
       
       // Reset form
       setFormName('');
@@ -263,7 +287,11 @@ const ContactSection: React.FC = () => {
                     </div>
                     <div>
                       <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-1`}>{t('contact.phone', { ns: 'common' })}</h4>
-                      <a href="tel:+491702637818" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
+                      <a 
+                        href="tel:+491702637818" 
+                        className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}
+                        onClick={() => trackPhoneCall('+491702637818', 'contact_section')}
+                      >
                         +49 170 2637818
                       </a>
                       <p className={`${fontSize.sm} ${textColor.light} ${lineHeight.relaxed} mt-1`}>

@@ -1,5 +1,6 @@
-import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { lazy, Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { initDataLayer, trackPageView } from './utils/gtm';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
 import LoadingSpinner from './components/layout/LoadingSpinner';
@@ -23,11 +24,31 @@ const TermsPage = lazy(() => import('./pages/TermsPage'));
 const KnowledgePage = lazy(() => import('./pages/KnowledgePage'));
 const PricesPage = lazy(() => import('./pages/PricesPage'));
 
+// Component to track route changes
+const RouteTracker: React.FC = () => {
+  const location = useLocation();
+  
+  // Initialize DataLayer on mount
+  useEffect(() => {
+    initDataLayer();
+  }, []);
+  
+  // Track page views on route change
+  useEffect(() => {
+    const path = location.pathname + location.search;
+    const title = document.title;
+    trackPageView(path, title);
+  }, [location]);
+  
+  return null;
+};
+
 // Memoize the App component to prevent unnecessary re-renders
 const App: React.FC = React.memo(() => {
   return (
     <ErrorBoundary>
       <Router>
+        <RouteTracker />
         <CookieConsent>
           <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
             <ScrollToTop />

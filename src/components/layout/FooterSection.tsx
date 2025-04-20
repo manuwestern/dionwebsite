@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { trackPhoneCall } from '../../utils/gtm';
 
 const FooterSection: React.FC = () => {
   const { t } = useTranslation('layout');
@@ -146,7 +147,11 @@ const FooterSection: React.FC = () => {
               <p className="leading-relaxed">{t('footer.contact.address.line2')}<br/>{t('footer.contact.address.line3')}<br/>{t('footer.contact.address.line4')}</p>
               
               <div className="pt-2">
-                <a href="tel:+491702637818" className="flex items-center gap-2.5 text-gray-300 hover:text-white transition-colors py-1.5">
+                <a 
+                  href="tel:+491702637818" 
+                  className="flex items-center gap-2.5 text-gray-300 hover:text-white transition-colors py-1.5"
+                  onClick={() => trackPhoneCall('+491702637818', 'footer')}
+                >
                   <Phone size={14} className="text-[#7BA7C2]" /> 
                   <span>+49 170 2637818</span>
                 </a>
