@@ -122,44 +122,26 @@
         "description": "Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige Ergebnisse. Wir berücksichtigen die natürliche Augenbrauenstruktur und planen die Behandlung entsprechend."
       }
     },
-    "patterns": [
-      {
-        "title": "Teilweise ausgedünnte Augenbrauen",
-        "description": "Lücken oder dünne Stellen in den Augenbrauen",
-        "grafts": "100-200",
-        "treatment": "1 Sitzung"
-      },
-      {
-        "title": "Stark ausgedünnte Augenbrauen",
-        "description": "Großflächig dünne oder fehlende Augenbrauen",
-        "grafts": "200-300",
-        "treatment": "1 Sitzung"
-      },
-      {
-        "title": "Narbenbedingte Augenbrauenlücken",
-        "description": "Lücken durch Narben oder Verletzungen",
-        "grafts": "50-150",
-        "treatment": "1 Sitzung"
-      },
-      {
-        "title": "Komplette Rekonstruktion",
-        "description": "Vollständige Neugestaltung der Augenbrauen",
+    "patterns": {
+      "kahleAugenbrauen": {
+        "title": "Kahle Augenbrauen",
+        "description": "Vollständig fehlende oder extrem dünne Augenbrauen, die eine komplette Rekonstruktion erfordern",
         "grafts": "250-400",
         "treatment": "1 Sitzung"
       },
-      {
-        "title": "Formkorrektur",
-        "description": "Anpassung der Augenbrauenform an Gesichtsform und Vorlieben",
-        "grafts": "100-250",
+      "undichteAugenbrauen": {
+        "title": "Undichte Augenbrauen",
+        "description": "Lücken oder dünne Stellen in den Augenbrauen, die eine Verdichtung benötigen",
+        "grafts": "150-250",
         "treatment": "1 Sitzung"
       },
-      {
-        "title": "Verdichtung",
-        "description": "Erhöhung der Dichte bei natürlich dünnen Augenbrauen",
-        "grafts": "150-300",
+      "microbladingAlternative": {
+        "title": "Microblading-Alternative",
+        "description": "Natürliche und dauerhafte Alternative zu Microblading für definierte Augenbrauen",
+        "grafts": "200-300",
         "treatment": "1 Sitzung"
       }
-    ]
+    }
   },
   "processSection": {
     "title": "Der Behandlungsprozess",

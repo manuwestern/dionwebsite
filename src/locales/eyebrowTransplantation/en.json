@@ -87,44 +87,26 @@
         "description": "Through our holistic approach, we achieve not only immediate but also long-term results. We consider the natural eyebrow structure and plan the treatment accordingly."
       }
     },
-    "patterns": [
-      {
-        "title": "Partially Thinned Eyebrows",
-        "description": "Gaps or thin areas in the eyebrows",
-        "grafts": "100-200",
-        "treatment": "1 Session"
-      },
-      {
-        "title": "Severely Thinned Eyebrows",
-        "description": "Extensively thin or missing eyebrows",
-        "grafts": "200-300",
-        "treatment": "1 Session"
-      },
-      {
-        "title": "Scar-Related Eyebrow Gaps",
-        "description": "Gaps caused by scars or injuries",
-        "grafts": "50-150",
-        "treatment": "1 Session"
-      },
-      {
-        "title": "Complete Reconstruction",
-        "description": "Complete redesign of the eyebrows",
+    "patterns": {
+      "kahleAugenbrauen": {
+        "title": "Bald Eyebrows",
+        "description": "Completely missing or extremely thin eyebrows requiring complete reconstruction",
         "grafts": "250-400",
         "treatment": "1 Session"
       },
-      {
-        "title": "Shape Correction",
-        "description": "Adjustment of eyebrow shape to facial shape and preferences",
-        "grafts": "100-250",
+      "undichteAugenbrauen": {
+        "title": "Sparse Eyebrows",
+        "description": "Gaps or thin areas in the eyebrows that need densification",
+        "grafts": "150-250",
         "treatment": "1 Session"
       },
-      {
-        "title": "Densification",
-        "description": "Increasing density in naturally thin eyebrows",
-        "grafts": "150-300",
+      "microbladingAlternative": {
+        "title": "Microblading Alternative",
+        "description": "Natural and permanent alternative to microblading for defined eyebrows",
+        "grafts": "200-300",
         "treatment": "1 Session"
       }
-    ]
+    }
   },
   "benefitsSection": {
     "title": "Why Choose Dion Hair Clinic?",

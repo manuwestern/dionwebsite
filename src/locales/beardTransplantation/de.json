@@ -91,13 +91,13 @@
       {
         "title": "Kompletter Bart",
         "description": "Umfassende Behandlung für einen vollständigen Bart mit optimaler Dichte",
-        "grafts": "1.500-3.000",
+        "grafts": "3.000-4.000",
         "treatment": "1-2 Sitzungen"
       },
       {
         "title": "Dünner Bart",
         "description": "Behandlung für spärlichen oder dünnen Bartwuchs zur Erhöhung der Dichte",
-        "grafts": "800-1.500",
+        "grafts": "2.500-3.000",
         "treatment": "1 Sitzung"
       },
       {
@@ -109,7 +109,7 @@
       {
         "title": "Bart mit Lücken",
         "description": "Gezielte Behandlung von lückenhaften Bereichen im Bartwuchs",
-        "grafts": "800-1.500",
+        "grafts": "500-1.000",
         "treatment": "1 Sitzung"
       }
     ]

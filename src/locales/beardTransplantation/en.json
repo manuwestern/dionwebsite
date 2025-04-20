@@ -91,13 +91,13 @@
       {
         "title": "Complete Beard",
         "description": "Comprehensive treatment for a full beard with optimal density",
-        "grafts": "1,500-3,000",
+        "grafts": "3,000-4,000",
         "treatment": "1-2 Sessions"
       },
       {
         "title": "Thin Beard",
         "description": "Treatment for sparse or thin beard growth to increase density",
-        "grafts": "800-1,500",
+        "grafts": "2,500-3,000",
         "treatment": "1 Session"
       },
       {
@@ -109,7 +109,7 @@
       {
         "title": "Beard with Gaps",
         "description": "Targeted treatment of patchy areas and gaps in beard growth",
-        "grafts": "800-1,500",
+        "grafts": "500-1,000",
         "treatment": "1 Session"
       }
     ]
