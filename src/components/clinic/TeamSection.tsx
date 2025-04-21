@@ -61,17 +61,17 @@ const TeamSection: React.FC = () => {
                   </div>
 
                   {/* Team Member Info */}
-                  <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50/50 flex flex-col h-[370px]">
-                    {/* Fixed height area for name and title */}
-                    <div className="h-[100px] flex flex-col justify-start">
+                  <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50/50 flex flex-col h-auto md:h-[370px]">
+                    {/* Name and title area - responsive height on mobile */}
+                    <div className="min-h-[80px] md:h-[100px] flex flex-col justify-start">
                       <h3 className={`${textStyle.cardTitle} mb-1 text-center`}>{member.name}</h3>
                       <p className={`${fontSize.sm} ${textColor.primary} ${fontWeight.medium} ${tracking.wide} uppercase mb-0 text-center`}>
                         {member.title}
                       </p>
                     </div>
                     
-                    {/* Fixed height area for description */}
-                    <div className="h-[140px] overflow-hidden">
+                    {/* Description area - auto height on mobile */}
+                    <div className="min-h-[100px] md:h-[140px] md:overflow-hidden">
                       <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                         {member.description}
                       </p>
