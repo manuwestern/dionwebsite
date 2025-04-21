@@ -140,34 +140,6 @@ const ImprintContent: React.FC = () => {
           </div>
         </Section>
 
-        {/* Professional Information */}
-        <Section title={t('professionalInfo.title')}>
-          <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-            <Subsection title={t('professionalInfo.authority.title')}>
-              <p className={`${textStyle.bodyText} mb-1`}>{t('professionalInfo.authority.name')}</p>
-              <p className={`${textStyle.bodyText}`}>{t('professionalInfo.authority.address')}</p>
-            </Subsection>
-            
-            <Subsection title={t('professionalInfo.professionalTitle.title')}>
-              <p className={`${textStyle.bodyText} mb-1`}>{t('professionalInfo.professionalTitle.name')}</p>
-              <p className={`${textStyle.bodyText}`}>{t('professionalInfo.professionalTitle.awardedBy')}</p>
-            </Subsection>
-            
-            <Subsection title={t('professionalInfo.professionalRegulations.title')}>
-              <p className={`${textStyle.bodyText} mb-2`}>{t('professionalInfo.professionalRegulations.text')}</p>
-              <a 
-                href={t('professionalInfo.professionalRegulations.link')} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-[#7BA7C2] hover:underline"
-              >
-                {t('professionalInfo.professionalRegulations.link')}
-                <ExternalLink className="ml-1 w-4 h-4" />
-              </a>
-            </Subsection>
-          </div>
-        </Section>
-
         {/* Dispute Resolution */}
         <Section title={t('disputeResolution.title')}>
           <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300">

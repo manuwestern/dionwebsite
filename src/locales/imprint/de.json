@@ -16,35 +16,17 @@
     "registration": {
       "title": "Handelsregister",
       "court": "Amtsgericht Mönchengladbach",
-      "number": "HRB 12345"
+      "number": "HRB 2183"
     },
     "vatId": {
       "title": "Umsatzsteuer-ID",
-      "number": "DE123456789"
+      "number": "DE310907744"
     }
   },
   "management": {
     "title": "Geschäftsführung",
-    "name": "Dr. med. Max Mustermann",
+    "name": "Dilek Ergüney",
     "responsibility": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV"
-  },
-  "professionalInfo": {
-    "title": "Berufsrechtliche Angaben",
-    "authority": {
-      "title": "Zuständige Aufsichtsbehörde",
-      "name": "Ärztekammer Nordrhein",
-      "address": "Tersteegenstraße 9, 40474 Düsseldorf"
-    },
-    "professionalTitle": {
-      "title": "Berufsbezeichnung",
-      "name": "Facharzt für Plastische und Ästhetische Chirurgie",
-      "awardedBy": "verliehen in der Bundesrepublik Deutschland"
-    },
-    "professionalRegulations": {
-      "title": "Berufsrechtliche Regelungen",
-      "text": "Berufsordnung der Ärztekammer Nordrhein",
-      "link": "https://www.aekno.de/aerzte/berufsordnung"
-    }
   },
   "disputeResolution": {
     "title": "Streitschlichtung",

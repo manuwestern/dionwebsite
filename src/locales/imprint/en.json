@@ -16,35 +16,17 @@
     "registration": {
       "title": "Commercial Register",
       "court": "Local Court of Mönchengladbach",
-      "number": "HRB 12345"
+      "number": "HRB 2183"
     },
     "vatId": {
       "title": "VAT ID",
-      "number": "DE123456789"
+      "number": "DE310907744"
     }
   },
   "management": {
     "title": "Management",
-    "name": "Dr. med. Max Mustermann",
+    "name": "Dilek Ergüney",
     "responsibility": "Responsible for content according to German Interstate Broadcasting Agreement"
-  },
-  "professionalInfo": {
-    "title": "Professional Information",
-    "authority": {
-      "title": "Responsible Supervisory Authority",
-      "name": "Medical Association of North Rhine",
-      "address": "Tersteegenstraße 9, 40474 Düsseldorf"
-    },
-    "professionalTitle": {
-      "title": "Professional Title",
-      "name": "Specialist in Plastic and Aesthetic Surgery",
-      "awardedBy": "awarded in the Federal Republic of Germany"
-    },
-    "professionalRegulations": {
-      "title": "Professional Regulations",
-      "text": "Professional Code of the Medical Association of North Rhine",
-      "link": "https://www.aekno.de/aerzte/berufsordnung"
-    }
   },
   "disputeResolution": {
     "title": "Dispute Resolution",
