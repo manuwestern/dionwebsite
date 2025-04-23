@@ -55,7 +55,7 @@
           "features": [
             "Normale Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "3 PRP Behandlungen"
+            "3 Mesotherapie Behandlungen"
           ]
         },
         "advancedSaphirFUE": {
@@ -75,7 +75,7 @@
             "Haarausfall Blut- und Mikronährstoffanalyse",
             "Schmerzfreie Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "4 PRP Behandlungen"
+            "4 Mesotherapie Behandlungen"
           ]
         },
         "basicDHIFUE": {
@@ -95,7 +95,7 @@
             "Keine Rasur des Haupthaars",
             "Normale Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "3 PRP Behandlungen"
+            "3 Mesotherapie Behandlungen"
           ]
         },
         "advancedDHIFUE": {
@@ -116,7 +116,7 @@
             "Haarausfall Blut- und Mikronährstoffanalyse",
             "Schmerzfreie Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "4 PRP Behandlungen"
+            "4 Mesotherapie Behandlungen"
           ]
         }
       }
@@ -136,7 +136,7 @@
           ],
           "features": [
             "Nackenkissen und Pflegeshampoo",
-            "1 PRP Behandlung"
+            "1 Mesotherapie Behandlung"
           ]
         },
         "dhiFUE": {
@@ -150,7 +150,7 @@
           ],
           "features": [
             "Nackenkissen und Pflegeshampoo",
-            "1 PRP Behandlung"
+            "1 Mesotherapie Behandlung"
           ]
         }
       }
@@ -175,7 +175,7 @@
           "features": [
             "Normale Betäubung",
             "Pflegeshampoo",
-            "3 PRP Behandlungen"
+            "3 Mesotherapie Behandlungen"
           ]
         },
         "dhiFUE": {
@@ -195,7 +195,7 @@
             "Keine Rasur des Haupthaars",
             "Normale Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "3 PRP Behandlungen"
+            "3 Mesotherapie Behandlungen"
           ]
         }
       }
@@ -210,14 +210,14 @@
           "description": "Umfassende Analyse der Ursachen Ihres Haarausfalls für eine gezielte Behandlung."
         },
         {
-          "title": "Basic PRP Behandlung",
+          "title": "Basic Mesotherapie Behandlung",
           "price": "179€",
           "description": "Stimuliert das Haarwachstum und verbessert die Haarqualität."
         },
         {
-          "title": "Advanced PRP Behandlung",
+          "title": "Advanced Mesotherapie Behandlung",
           "price": "239€",
-          "description": "Erweiterte PRP Behandlung mit zusätzlichen Wachstumsfaktoren."
+          "description": "Erweiterte Mesotherapie Behandlung mit zusätzlichen Wachstumsfaktoren."
         },
         {
           "title": "Mikronährstoff - Infusionstherapie",

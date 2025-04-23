@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Haarausfalltherapie | Dion Hair Clinic",
-    "description": "Fortschrittliche nicht-chirurgische Haarausfallbehandlungen in Deutschland: PRP-Therapie, Mesotherapie & personalisierte Medikamentenpläne. Ganzheitlicher Ansatz mit umfassender Diagnostik für Männer & Frauen. Kostenlose Beratung für wirksame, langfristige Lösungen."
+    "description": "Fortschrittliche nicht-chirurgische Haarausfallbehandlungen in Deutschland: Mesotherapie & personalisierte Medikamentenpläne. Ganzheitlicher Ansatz mit umfassender Diagnostik für Männer & Frauen. Kostenlose Beratung für wirksame, langfristige Lösungen."
   },
   "heroSection": {
     "title": "Haarausfall-\ntherapie",
@@ -23,7 +23,7 @@
       },
       "combinedTechniques": {
         "title": "Kombinierte Techniken",
-        "description": "In vielen Fällen erzielen wir die besten Ergebnisse durch die Kombination verschiedener Techniken. So können wir beispielsweise die medikamentöse Therapie mit PRP und einer gezielten Nährstofftherapie kombinieren. Dieser maßgeschneiderte Ansatz ermöglicht es uns, für jeden Patienten die optimale Lösung zu finden und natürlich aussehende, dauerhafte Ergebnisse zu erzielen."
+        "description": "In vielen Fällen erzielen wir die besten Ergebnisse durch die Kombination verschiedener Techniken. So können wir beispielsweise die medikamentöse Therapie mit Mesotherapie und einer gezielten Nährstofftherapie kombinieren. Dieser maßgeschneiderte Ansatz ermöglicht es uns, für jeden Patienten die optimale Lösung zu finden und natürlich aussehende, dauerhafte Ergebnisse zu erzielen."
       }
     },
     "methods": [
@@ -47,10 +47,10 @@
         "idealFor": "Ideal für: Frühzeitigen Haarausfall, langfristige Prävention"
       },
       {
-        "title": "PRP-Therapie",
+        "title": "Mesotherapie",
         "subtitle": "Eigenblut-Behandlung",
         "image": "mesotherapie.webp",
-        "description": "Die PRP-Therapie (Platelet-Rich Plasma) nutzt die Wachstumsfaktoren aus Ihrem eigenen Blut, um die Haarfollikel zu stimulieren und das Haarwachstum zu fördern.",
+        "description": "Die Mesotherapie nutzt Wachstumsfaktoren, um die Haarfollikel zu stimulieren und das Haarwachstum zu fördern.",
         "benefits": [
           "Natürliche Methode ohne Chemikalien",
           "Stimuliert die Haarfollikel und verbessert die Durchblutung",
@@ -59,8 +59,8 @@
         ],
         "process": [
           "Entnahme einer kleinen Menge Blut",
-          "Aufbereitung des Blutes zur Gewinnung des plättchenreichen Plasmas",
-          "Gezielte Injektion des PRP in die Kopfhaut",
+          "Aufbereitung der Wirkstoffe",
+          "Gezielte Injektion der Mesotherapie-Lösung in die Kopfhaut",
           "Wiederholung der Behandlung in regelmäßigen Abständen"
         ],
         "idealFor": "Ideal für: Diffusen Haarausfall, Verdichtung dünner werdendes Haar"
@@ -110,25 +110,25 @@
       {
         "title": "Androgenetischer Haarausfall",
         "description": "Erblich bedingter Haarausfall, der durch Hormone verursacht wird",
-        "therapy": "Medikamentöse Therapie, PRP",
+        "therapy": "Medikamentöse Therapie, Mesotherapie",
         "results": "Verlangsamung des Haarausfalls, teilweise Neuwachstum"
       },
       {
         "title": "Diffuser Haarausfall",
         "description": "Gleichmäßiger Haarverlust am gesamten Kopf",
-        "therapy": "Nährstofftherapie, PRP",
+        "therapy": "Nährstofftherapie, Mesotherapie",
         "results": "Deutliche Verbesserung der Haardichte"
       },
       {
         "title": "Kreisrunder Haarausfall",
         "description": "Plötzlicher Haarverlust in kreisrunden Bereichen",
-        "therapy": "PRP, medikamentöse Therapie",
+        "therapy": "Mesotherapie, medikamentöse Therapie",
         "results": "Häufig vollständige Wiederherstellung"
       },
       {
         "title": "Stressbedingter Haarausfall",
         "description": "Temporärer Haarverlust durch körperlichen oder emotionalen Stress",
-        "therapy": "Nährstofftherapie, PRP",
+        "therapy": "Nährstofftherapie, Mesotherapie",
         "results": "Vollständige Wiederherstellung in den meisten Fällen"
       },
       {
@@ -160,7 +160,7 @@
       },
       {
         "title": "Modernste Verfahren",
-        "description": "Wir setzen auf innovative Techniken wie PRP und fortschrittliche medikamentöse Therapien, die nachweislich wirksam sind und natürliche Ergebnisse ermöglichen."
+        "description": "Wir setzen auf innovative Techniken wie Mesotherapie und fortschrittliche medikamentöse Therapien, die nachweislich wirksam sind und natürliche Ergebnisse ermöglichen."
       },
       {
         "title": "Ganzheitliches Konzept",
@@ -213,7 +213,7 @@
       },
       {
         "title": "Behandlung",
-        "description": "Die Behandlungsphase umfasst die Durchführung der ausgewählten Therapien, wie medikamentöse Behandlungen, PRP-Injektionen oder Nährstofftherapien. Alle Behandlungen werden von unseren erfahrenen Spezialisten durchgeführt."
+        "description": "Die Behandlungsphase umfasst die Durchführung der ausgewählten Therapien, wie medikamentöse Behandlungen, Mesotherapie-Injektionen oder Nährstofftherapien. Alle Behandlungen werden von unseren erfahrenen Spezialisten durchgeführt."
       },
       {
         "title": "Nachsorge",
@@ -237,14 +237,14 @@
         "name": "Michael K., 42",
         "rating": 5,
         "text": "Nach jahrelangem Haarausfall habe ich mich für eine Haarausfalltherapie in der Dion Hair Clinic entschieden. Das Ergebnis hat meine Erwartungen übertroffen. Das Team war professionell und einfühlsam, und ich fühle mich wieder selbstbewusst.",
-        "procedure": "PRP-Therapie & Medikamentöse Behandlung",
+        "procedure": "Mesotherapie & Medikamentöse Behandlung",
         "date": "März 2024"
       },
       {
         "name": "Thomas S., 38",
         "rating": 5,
         "text": "Die Beratung war ausführlich und ehrlich. Dr. Dion hat mir genau erklärt, was möglich ist und was nicht. Nach der Behandlung wurde ich hervorragend betreut. Mein Haar ist deutlich dichter geworden und der Haarausfall wurde gestoppt.",
-        "procedure": "Nährstofftherapie & PRP",
+        "procedure": "Nährstofftherapie & Mesotherapie",
         "date": "Januar 2024"
       },
       {
@@ -312,7 +312,7 @@
       "task2": "Kopfhaut-Massage durchführen",
       "task3": "Fortschrittsfoto aufnehmen",
       "nextAppointment": "Nächster Termin",
-      "appointmentDetails": "PRP-Behandlung: 15. April 2025, 14:00 Uhr"
+      "appointmentDetails": "Mesotherapie-Behandlung: 15. April 2025, 14:00 Uhr"
     },
     "appStoreInfo": "Verfügbar für Android und iPhone – Laden Sie die App kostenlos im Google Play Store oder Apple App Store herunter.",
     "appStore": "App Store",
@@ -356,7 +356,7 @@
       },
       {
         "question": "Gibt es Risiken oder Nebenwirkungen?",
-        "answer": "Die Risiken und Nebenwirkungen bei Haarausfalltherapien sind in der Regel minimal. Bei medikamentösen Therapien können in seltenen Fällen Nebenwirkungen auftreten, über die wir Sie ausführlich aufklären. Die PRP-Therapie und Nährstofftherapie sind sehr sicher, da sie mit körpereigenen Substanzen oder natürlichen Nährstoffen arbeiten.",
+        "answer": "Die Risiken und Nebenwirkungen bei Haarausfalltherapien sind in der Regel minimal. Bei medikamentösen Therapien können in seltenen Fällen Nebenwirkungen auftreten, über die wir Sie ausführlich aufklären. Die Mesotherapie und Nährstofftherapie sind sehr sicher, da sie mit körpereigenen Substanzen oder natürlichen Nährstoffen arbeiten.",
         "category": "general"
       },
       {
@@ -376,12 +376,12 @@
       },
       {
         "question": "Ist die Behandlung schmerzhaft?",
-        "answer": "Die meisten Haarausfalltherapien sind schmerzfrei oder verursachen nur minimale Beschwerden. Bei der PRP-Therapie können leichte Schmerzen während der Injektion auftreten, die jedoch durch die Anwendung von lokalen Betäubungsmitteln minimiert werden können.",
+        "answer": "Die meisten Haarausfalltherapien sind schmerzfrei oder verursachen nur minimale Beschwerden. Bei der Mesotherapie können leichte Schmerzen während der Injektion auftreten, die jedoch durch die Anwendung von lokalen Betäubungsmitteln minimiert werden können.",
         "category": "procedure"
       },
       {
         "question": "Wie oft muss ich zur Behandlung kommen?",
-        "answer": "Die Häufigkeit der Behandlungen hängt von der gewählten Therapiemethode ab. Bei der PRP-Therapie sind in der Regel 3-4 Behandlungen im Abstand von 4-6 Wochen erforderlich, gefolgt von Erhaltungsbehandlungen alle 6-12 Monate. Medikamentöse Therapien werden täglich zu Hause durchgeführt, mit regelmäßigen Kontrollterminen in unserer Klinik.",
+        "answer": "Die Häufigkeit der Behandlungen hängt von der gewählten Therapiemethode ab. Bei der Mesotherapie sind in der Regel 3-4 Behandlungen im Abstand von 4-6 Wochen erforderlich, gefolgt von Erhaltungsbehandlungen alle 6-12 Monate. Medikamentöse Therapien werden täglich zu Hause durchgeführt, mit regelmäßigen Kontrollterminen in unserer Klinik.",
         "category": "procedure"
       },
       {
@@ -395,13 +395,13 @@
         "category": "recovery"
       },
       {
-        "question": "Kann ich direkt nach einer PRP-Behandlung wieder normal arbeiten?",
-        "answer": "Ja, nach einer PRP-Behandlung können Sie in der Regel sofort wieder Ihren normalen Aktivitäten nachgehen. Es kann zu leichten Rötungen oder Schwellungen an den Injektionsstellen kommen, die jedoch innerhalb weniger Stunden abklingen. Wir empfehlen, am Tag der Behandlung auf intensive sportliche Aktivitäten und Saunabesuche zu verzichten und die Kopfhaut nicht zu stark zu beanspruchen.",
+        "question": "Kann ich direkt nach einer Mesotherapie-Behandlung wieder normal arbeiten?",
+        "answer": "Ja, nach einer Mesotherapie-Behandlung können Sie in der Regel sofort wieder Ihren normalen Aktivitäten nachgehen. Es kann zu leichten Rötungen oder Schwellungen an den Injektionsstellen kommen, die jedoch innerhalb weniger Stunden abklingen. Wir empfehlen, am Tag der Behandlung auf intensive sportliche Aktivitäten und Saunabesuche zu verzichten und die Kopfhaut nicht zu stark zu beanspruchen.",
         "category": "recovery"
       },
       {
         "question": "Gibt es Einschränkungen während der Therapie?",
-        "answer": "Die Einschränkungen während einer Haarausfalltherapie sind minimal. Bei medikamentösen Therapien sollten Sie die Anwendungshinweise genau befolgen. Nach PRP-Behandlungen sollten Sie für 24 Stunden auf intensive sportliche Aktivitäten verzichten und die Kopfhaut schonen. Generell empfehlen wir, während der Therapie auf aggressive Haarpflegeprodukte zu verzichten und die Kopfhaut nicht übermäßig zu beanspruchen.",
+        "answer": "Die Einschränkungen während einer Haarausfalltherapie sind minimal. Bei medikamentösen Therapien sollten Sie die Anwendungshinweise genau befolgen. Nach Mesotherapie-Behandlungen sollten Sie für 24 Stunden auf intensive sportliche Aktivitäten verzichten und die Kopfhaut schonen. Generell empfehlen wir, während der Therapie auf aggressive Haarpflegeprodukte zu verzichten und die Kopfhaut nicht übermäßig zu beanspruchen.",
         "category": "recovery"
       },
       {

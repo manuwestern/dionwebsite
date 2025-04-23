@@ -55,7 +55,7 @@
           "features": [
             "Normal anesthesia",
             "Neck pillow and care shampoo",
-            "3 PRP treatments"
+            "3 Mesotherapy treatments"
           ]
         },
         "advancedSaphirFUE": {
@@ -75,7 +75,7 @@
             "Hair loss blood and micronutrient analysis",
             "Painless anesthesia",
             "Neck pillow and care shampoo",
-            "4 PRP treatments"
+            "4 Mesotherapy treatments"
           ]
         },
         "basicDHIFUE": {
@@ -95,7 +95,7 @@
             "No shaving of the main hair",
             "Normal anesthesia",
             "Neck pillow and care shampoo",
-            "3 PRP treatments"
+            "3 Mesotherapy treatments"
           ]
         },
         "advancedDHIFUE": {
@@ -116,7 +116,7 @@
             "Hair loss blood and micronutrient analysis",
             "Painless anesthesia",
             "Neck pillow and care shampoo",
-            "4 PRP treatments"
+            "4 Mesotherapy treatments"
           ]
         }
       }
@@ -136,7 +136,7 @@
           ],
           "features": [
             "Neck pillow and care shampoo",
-            "1 PRP treatment"
+            "1 Mesotherapy treatment"
           ]
         },
         "dhiFUE": {
@@ -150,7 +150,7 @@
           ],
           "features": [
             "Neck pillow and care shampoo",
-            "1 PRP treatment"
+            "1 Mesotherapy treatment"
           ]
         }
       }
@@ -175,7 +175,7 @@
           "features": [
             "Normal anesthesia",
             "Care shampoo",
-            "3 PRP treatments"
+            "3 Mesotherapy treatments"
           ]
         },
         "dhiFUE": {
@@ -195,7 +195,7 @@
             "No shaving of the main hair",
             "Normal anesthesia",
             "Neck pillow and care shampoo",
-            "3 PRP treatments"
+            "3 Mesotherapy treatments"
           ]
         }
       }
@@ -210,14 +210,14 @@
           "description": "Comprehensive analysis of the causes of your hair loss for targeted treatment."
         },
         {
-          "title": "Basic PRP Treatment",
+          "title": "Basic Mesotherapy Treatment",
           "price": "179€",
           "description": "Stimulates hair growth and improves hair quality."
         },
         {
-          "title": "Advanced PRP Treatment",
+          "title": "Advanced Mesotherapy Treatment",
           "price": "239€",
-          "description": "Advanced PRP treatment with additional growth factors."
+          "description": "Advanced Mesotherapy treatment with additional growth factors."
         },
         {
           "title": "Micronutrient Infusion Therapy",

@@ -42,7 +42,7 @@
     },
     "hairLossTherapy": {
       "title": "Hair Loss Therapy",
-      "text": "Hair loss therapy includes various treatment methods such as PRP therapy, mesotherapy, and medicinal treatments, which are individually tailored to the patient."
+      "text": "Hair loss therapy includes various treatment methods such as Mesotherapy, mesotherapy, and medicinal treatments, which are individually tailored to the patient."
     }
   },
   "patientObligations": {
@@ -131,12 +131,12 @@
     },
     "appointments": {
       "title": "Aftercare Appointments",
-      "text": "The appointments for the two follow-up examinations in combination with the PRP treatments are recommended at the following times: First check-up: 4-6 weeks after the procedure, Second check-up: 6-8 months after the procedure.",
+      "text": "The appointments for the two follow-up examinations in combination with the Mesotherapy treatments are recommended at the following times: First check-up: 4-6 weeks after the procedure, Second check-up: 6-8 months after the procedure.",
       "responsibility": "The patient is expressly informed that they are responsible for arranging these aftercare appointments themselves and must book them independently. The Clinic does not send automatic reminders for these appointments."
     },
     "services": {
       "title": "Aftercare Services",
-      "text": "Aftercare includes 2 check-ups after the procedure in combination with a PRP treatment (Platelet-Rich Plasma)."
+      "text": "Aftercare includes 2 check-ups after the procedure in combination with a Mesotherapy treatment."
     },
     "warning": {
       "title": "Warning",
@@ -158,8 +158,8 @@
       "text": "The patient has been informed that the following medications or therapies can support the result of hair transplantation: Minoxidil solution (applicable at the earliest 14 days after the procedure), Finasteride (after medical prescription and consultation), Mesotherapy (possible at the earliest 3 months after the procedure)."
     },
     "prp": {
-      "title": "PRP Treatments",
-      "text": "The PRP treatments (Platelet-Rich Plasma) included in the aftercare are carried out in combination with the aftercare appointments. PRP promotes wound healing and can support hair growth after transplantation."
+      "title": "Mesotherapy Treatments",
+      "text": "The Mesotherapy treatments included in the aftercare are carried out in combination with the aftercare appointments. Mesotherapy promotes wound healing and can support hair growth after transplantation."
     },
     "additionalTherapies": {
       "title": "Supplementary Therapies",

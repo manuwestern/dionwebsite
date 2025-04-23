@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Hair Loss Therapy | Dion Hair Clinic",
-    "description": "Advanced non-surgical hair loss treatments in Germany: PRP therapy, mesotherapy & personalized medication plans. Holistic approach with comprehensive diagnostics for men & women. Free consultation for effective, long-term solutions."
+    "description": "Advanced non-surgical hair loss treatments in Germany: Mesotherapy & personalized medication plans. Holistic approach with comprehensive diagnostics for men & women. Free consultation for effective, long-term solutions."
   },
   "heroSection": {
     "title": "Hair Loss\nTherapy",
@@ -23,7 +23,7 @@
       },
       "combinedTechniques": {
         "title": "Combined Techniques",
-        "description": "In many cases, we achieve the best results by combining different techniques. For example, we can combine medication therapy with PRP and targeted nutrient therapy. This tailored approach allows us to find the optimal solution for each patient and achieve natural-looking, lasting results."
+        "description": "In many cases, we achieve the best results by combining different techniques. For example, we can combine medication therapy with Mesotherapy and targeted nutrient therapy. This tailored approach allows us to find the optimal solution for each patient and achieve natural-looking, lasting results."
       }
     },
     "methods": [
@@ -47,10 +47,10 @@
         "idealFor": "Ideal for: Early hair loss, long-term prevention"
       },
       {
-        "title": "PRP Therapy",
+        "title": "Mesotherapy",
         "subtitle": "Autologous blood treatment",
         "image": "mesotherapie.webp",
-        "description": "PRP therapy (Platelet-Rich Plasma) uses growth factors from your own blood to stimulate hair follicles and promote hair growth.",
+        "description": "Mesotherapy uses growth factors to stimulate hair follicles and promote hair growth.",
         "benefits": [
           "Natural method without chemicals",
           "Stimulates hair follicles and improves blood circulation",
@@ -59,8 +59,8 @@
         ],
         "process": [
           "Taking a small amount of blood",
-          "Processing the blood to obtain platelet-rich plasma",
-          "Targeted injection of PRP into the scalp",
+          "Processing of active ingredients",
+          "Targeted injection of Mesotherapy solution into the scalp",
           "Repeating the treatment at regular intervals"
         ],
         "idealFor": "Ideal for: Diffuse hair loss, thickening thinning hair"
@@ -110,25 +110,25 @@
       {
         "title": "Androgenetic Hair Loss",
         "description": "Hereditary hair loss caused by hormones",
-        "therapy": "Medication therapy, PRP",
+        "therapy": "Medication therapy, Mesotherapy",
         "results": "Slowing of hair loss, partial regrowth"
       },
       {
         "title": "Diffuse Hair Loss",
         "description": "Even hair loss across the entire head",
-        "therapy": "Nutrient therapy, PRP",
+        "therapy": "Nutrient therapy, Mesotherapy",
         "results": "Significant improvement in hair density"
       },
       {
         "title": "Alopecia Areata",
         "description": "Sudden hair loss in circular areas",
-        "therapy": "PRP, medication therapy",
+        "therapy": "Mesotherapy, medication therapy",
         "results": "Often complete restoration"
       },
       {
         "title": "Stress-induced Hair Loss",
         "description": "Temporary hair loss due to physical or emotional stress",
-        "therapy": "Nutrient therapy, PRP",
+        "therapy": "Nutrient therapy, Mesotherapy",
         "results": "Complete restoration in most cases"
       },
       {
@@ -160,7 +160,7 @@
       },
       {
         "title": "State-of-the-art Procedures",
-        "description": "We use innovative techniques such as PRP and advanced medication therapies that are proven effective and enable natural results."
+        "description": "We use innovative techniques such as Mesotherapy and advanced medication therapies that are proven effective and enable natural results."
       },
       {
         "title": "Holistic Concept",
@@ -213,7 +213,7 @@
       },
       {
         "title": "Treatment",
-        "description": "The treatment phase includes the implementation of selected therapies, such as medication treatments, PRP injections, or nutrient therapies. All treatments are performed by our experienced specialists."
+        "description": "The treatment phase includes the implementation of selected therapies, such as medication treatments, Mesotherapy injections, or nutrient therapies. All treatments are performed by our experienced specialists."
       },
       {
         "title": "Aftercare",
@@ -237,14 +237,14 @@
         "name": "Michael K., 42",
         "rating": 5,
         "text": "After years of hair loss, I decided to undergo hair loss therapy at the Dion Hair Clinic. The result exceeded my expectations. The team was professional and empathetic, and I feel confident again.",
-        "procedure": "PRP Therapy & Medication Treatment",
+        "procedure": "Mesotherapy & Medication Treatment",
         "date": "March 2024"
       },
       {
         "name": "Thomas S., 38",
         "rating": 5,
         "text": "The consultation was thorough and honest. Dr. Dion explained exactly what was possible and what wasn't. After the treatment, I received excellent care. My hair is significantly thicker and the hair loss has stopped.",
-        "procedure": "Nutrient Therapy & PRP",
+        "procedure": "Nutrient Therapy & Mesotherapy",
         "date": "January 2024"
       },
       {
@@ -312,7 +312,7 @@
       "task2": "Perform scalp massage",
       "task3": "Take progress photo",
       "nextAppointment": "Next Appointment",
-      "appointmentDetails": "PRP Treatment: April 15, 2025, 2:00 PM"
+      "appointmentDetails": "Mesotherapy Treatment: April 15, 2025, 2:00 PM"
     },
     "appStoreInfo": "Available for Android and iPhone – Download the app for free from the Google Play Store or Apple App Store.",
     "appStore": "App Store",
@@ -356,7 +356,7 @@
       },
       {
         "question": "Are there risks or side effects?",
-        "answer": "The risks and side effects of hair loss therapies are generally minimal. With medication therapies, side effects may occur in rare cases, about which we will inform you in detail. PRP therapy and nutrient therapy are very safe as they work with the body's own substances or natural nutrients.",
+        "answer": "The risks and side effects of hair loss therapies are generally minimal. With medication therapies, side effects may occur in rare cases, about which we will inform you in detail. Mesotherapy and nutrient therapy are very safe as they work with the body's own substances or natural nutrients.",
         "category": "general"
       },
       {
@@ -376,12 +376,12 @@
       },
       {
         "question": "Is the treatment painful?",
-        "answer": "Most hair loss therapies are painless or cause only minimal discomfort. With PRP therapy, slight pain may occur during the injection, which can be minimized by the application of local anesthetics.",
+        "answer": "Most hair loss therapies are painless or cause only minimal discomfort. With Mesotherapy, slight pain may occur during the injection, which can be minimized by the application of local anesthetics.",
         "category": "procedure"
       },
       {
         "question": "How often do I need to come for treatment?",
-        "answer": "The frequency of treatments depends on the chosen therapy method. For PRP therapy, typically 3-4 treatments at intervals of 4-6 weeks are required, followed by maintenance treatments every 6-12 months. Medication therapies are performed daily at home, with regular check-ups at our clinic.",
+        "answer": "The frequency of treatments depends on the chosen therapy method. For Mesotherapy, typically 3-4 treatments at intervals of 4-6 weeks are required, followed by maintenance treatments every 6-12 months. Medication therapies are performed daily at home, with regular check-ups at our clinic.",
         "category": "procedure"
       },
       {
@@ -395,13 +395,13 @@
         "category": "recovery"
       },
       {
-        "question": "Can I return to work immediately after a PRP treatment?",
-        "answer": "Yes, after a PRP treatment, you can usually return to your normal activities immediately. There may be slight redness or swelling at the injection sites, but these subside within a few hours. We recommend avoiding intensive sports activities and sauna visits on the day of treatment and not straining the scalp too much.",
+        "question": "Can I return to work immediately after a Mesotherapy treatment?",
+        "answer": "Yes, after a Mesotherapy treatment, you can usually return to your normal activities immediately. There may be slight redness or swelling at the injection sites, but these subside within a few hours. We recommend avoiding intensive sports activities and sauna visits on the day of treatment and not straining the scalp too much.",
         "category": "recovery"
       },
       {
         "question": "Are there any restrictions during therapy?",
-        "answer": "The restrictions during hair loss therapy are minimal. For medication therapies, you should follow the application instructions exactly. After PRP treatments, you should avoid intensive sports activities for 24 hours and protect the scalp. In general, we recommend avoiding aggressive hair care products during therapy and not straining the scalp excessively.",
+        "answer": "The restrictions during hair loss therapy are minimal. For medication therapies, you should follow the application instructions exactly. After Mesotherapy treatments, you should avoid intensive sports activities for 24 hours and protect the scalp. In general, we recommend avoiding aggressive hair care products during therapy and not straining the scalp excessively.",
         "category": "recovery"
       },
       {
