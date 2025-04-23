@@ -1,11 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 /**
  * NotFoundPage-Komponente, die angezeigt wird, wenn eine Seite nicht gefunden wurde
  * Bietet auch die Möglichkeit, den Cache zu löschen und die Seite neu zu laden
  */
 const NotFoundPage: React.FC = () => {
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    // Automatische Umleitung zur Startseite nach 3 Sekunden
+    const redirectTimer = setTimeout(() => {
+      navigate('/');
+    }, 3000);
+    
+    // Timer aufräumen, wenn die Komponente unmounted wird
+    return () => clearTimeout(redirectTimer);
+  }, [navigate]);
+  
   const handleReload = (): void => {
     window.location.reload();
   };
