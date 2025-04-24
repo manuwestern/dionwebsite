@@ -59,17 +59,9 @@ const SEO: React.FC<SEOProps> = ({
   // Determine canonical URL
   const canonicalUrl = canonical || `${baseUrl}${location.pathname}`;
   
-  // Determine alternate URL paths for hreflang
-  let alternatePath = location.pathname;
-  if (currentLang === 'de' && !alternatePath.startsWith('/en/')) {
-    // If we're on German page, alternate is English
-    alternatePath = alternatePath === '/' ? '/en/' : `/en${alternatePath}`;
-  } else if (currentLang === 'en' && alternatePath.startsWith('/en/')) {
-    // If we're on English page, alternate is German
-    alternatePath = alternatePath.replace('/en', '');
-  }
-  
-  const alternateUrl = `${baseUrl}${alternatePath}`;
+  // Use the same URL for both languages since we're using i18next for translations
+  // without changing the URL
+  const alternateUrl = canonicalUrl;
   
   // Determine title and description from props or translations
   const pageTitle = title || t('meta.title', { ns: namespace });
