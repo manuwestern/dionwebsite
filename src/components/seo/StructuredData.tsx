@@ -146,7 +146,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         name: businessData.name || 'Dion Hair Clinic',
         description: businessData.description || 'Spezialisierte Haarklinik für Haartransplantationen und Haarausfallbehandlungen mit modernsten Techniken wie Saphir-FUE und DHI.',
         url: businessData.url || 'https://dionhairclinic.de',
-        telephone: businessData.telephone || '+49 216 12963017',
+        telephone: businessData.telephone || '+49 2161 2963017',
         email: businessData.email || 'info@dionhairclinic.de',
         logo: businessData.logo || 'https://dionhairclinic.de/images/DionHairClinic_Logo.svg',
         image: Array.isArray(businessData.image) 

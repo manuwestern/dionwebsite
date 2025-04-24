@@ -288,11 +288,11 @@ const ContactSection: React.FC = () => {
                     <div>
                       <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-1`}>{t('contact.phone', { ns: 'common' })}</h4>
                       <a 
-                        href="tel:+4921612963017" 
+                        href="tel:+4921612963017"
                         className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}
                         onClick={() => trackPhoneCall('+4921612963017', 'contact_section')}
                       >
-                        +49 216 12963017
+                        +49 2161 2963017
                       </a>
                       <p className={`${fontSize.sm} ${textColor.light} ${lineHeight.relaxed} mt-1`}>
                         {t('contact.businessHours', { ns: 'common' })}

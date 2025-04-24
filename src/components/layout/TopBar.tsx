@@ -31,7 +31,7 @@ const TopBar: React.FC = () => {
               onClick={() => trackPhoneCall('+4921612963017', 'header')}
             >
               <Phone size={14} className="text-[#7BA7C2]" /> 
-              <span className="hidden sm:inline">+49 216 12963017</span>
+              <span className="hidden sm:inline">+49 2161 2963017</span>
             </a>
             
             {/* Social icons */}

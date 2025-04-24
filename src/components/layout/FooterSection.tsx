@@ -143,12 +143,12 @@ const FooterSection: React.FC = () => {
               
               <div className="pt-2">
                 <a 
-                  href="tel:+4921612963017" 
+                  href="tel:+4921612963017"
                   className="flex items-center gap-2.5 text-gray-300 hover:text-white transition-colors py-1.5"
                   onClick={() => trackPhoneCall('+4921612963017', 'footer')}
                 >
                   <Phone size={14} className="text-[#7BA7C2]" /> 
-                  <span>+49 216 12963017</span>
+                  <span>+49 2161 2963017</span>
                 </a>
                 
                 <a href="mailto:info@dionhairclinic.de" className="flex items-center gap-2.5 text-gray-300 hover:text-white transition-colors py-1.5">

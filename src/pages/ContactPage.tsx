@@ -81,7 +81,7 @@ const ContactPage: React.FC = () => {
             latitude: 51.1956,
             longitude: 6.4378
           },
-          telephone: "+49 216 12963017",
+          telephone: "+49 2161 2963017",
           email: "info@dionhairclinic.de",
           url: "https://dionhairclinic.de",
           image: [
