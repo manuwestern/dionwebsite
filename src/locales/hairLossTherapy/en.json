@@ -48,7 +48,7 @@
       },
       {
         "title": "Mesotherapy",
-        "subtitle": "Autologous blood treatment",
+        "subtitle": "Nutrient treatment",
         "image": "mesotherapie.webp",
         "description": "Mesotherapy uses growth factors to stimulate hair follicles and promote hair growth.",
         "benefits": [
@@ -58,7 +58,7 @@
           "Minimal side effects due to body's own substances"
         ],
         "process": [
-          "Taking a small amount of blood",
+          "Preparation of nutrient solution",
           "Processing of active ingredients",
           "Targeted injection of Mesotherapy solution into the scalp",
           "Repeating the treatment at regular intervals"

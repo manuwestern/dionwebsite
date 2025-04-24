@@ -364,8 +364,8 @@ const TermsContent: React.FC = () => {
           </Card>
           
           <Card className="mb-6">
-            <Subsection title={t('medication.prp.title')}>
-              <p className={`${textStyle.bodyText}`}>{t('medication.prp.text')}</p>
+            <Subsection title={t('medication.mesotherapy.title')}>
+              <p className={`${textStyle.bodyText}`}>{t('medication.mesotherapy.text')}</p>
             </Subsection>
           </Card>
           
