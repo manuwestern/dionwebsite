@@ -26,12 +26,12 @@ const TopBar: React.FC = () => {
             
             {/* Phone */}
             <a 
-              href="tel:+491702637818" 
+              href="tel:+4921612963017" 
               className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors"
-              onClick={() => trackPhoneCall('+491702637818', 'header')}
+              onClick={() => trackPhoneCall('+4921612963017', 'header')}
             >
               <Phone size={14} className="text-[#7BA7C2]" /> 
-              <span className="hidden sm:inline">+49 170 2637818</span>
+              <span className="hidden sm:inline">+49 216 12963017</span>
             </a>
             
             {/* Social icons */}
