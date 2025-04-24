@@ -15,7 +15,8 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const HairTransplantationPage = lazy(() => import('./pages/HairTransplantationPage'));
 const BeardTransplantationPage = lazy(() => import('./pages/BeardTransplantationPage'));
 const EyebrowTransplantationPage = lazy(() => import('./pages/EyebrowTransplantationPage'));
-const HairLossTherapyPage = lazy(() => import('./pages/HairLossTherapyPage'));
+// HairLossTherapyPage removed due to Google Ads guidelines violation
+// const HairLossTherapyPage = lazy(() => import('./pages/HairLossTherapyPage'));
 const ClinicPage = lazy(() => import('./pages/ClinicPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const ImprintPage = lazy(() => import('./pages/ImprintPage'));
@@ -59,7 +60,8 @@ const App: React.FC = React.memo(() => {
                   <Route path="/haartransplantation" element={<HairTransplantationPage />} />
                   <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
                   <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
-                  <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} />
+                  {/* Route for HairLossTherapyPage removed due to Google Ads guidelines violation */}
+                  {/* <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} /> */}
                   <Route path="/klinik" element={<ClinicPage />} />
                   <Route path="/kontakt" element={<ContactPage />} />
                   <Route path="/impressum" element={<ImprintPage />} />

@@ -16,6 +16,9 @@ Disallow: /*?
 Disallow: /*/amp/
 Disallow: /*/print/
 
+# Disallow Hair Loss Therapy page due to Google Ads guidelines violation
+Disallow: /haarausfalltherapie
+
 # Google-specific rules
 User-agent: Googlebot
 Allow: /

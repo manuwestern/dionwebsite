@@ -70,23 +70,7 @@
     </image:image>
   </url>
 
-  <!-- Hair Loss Therapy -->
-  <url>
-    <loc>https://dionhairclinic.de/haarausfalltherapie</loc>
-    <lastmod>2025-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://dionhairclinic.de/images/Haarausfall_Model.webp</image:loc>
-      <image:title>Haarausfalltherapie bei Dion Hair Clinic</image:title>
-      <image:caption>Effektive Therapien gegen Haarausfall und zur Stärkung des Haarwuchses</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://dionhairclinic.de/images/mesotherapie.webp</image:loc>
-      <image:title>Mesotherapie gegen Haarausfall</image:title>
-      <image:caption>Innovative Mesotherapie-Behandlung zur Stimulation des Haarwuchses</image:caption>
-    </image:image>
-  </url>
+  <!-- Hair Loss Therapy page removed due to Google Ads guidelines violation -->
 
   <!-- Important Information Pages -->
   <!-- Prices -->

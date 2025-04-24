@@ -133,13 +133,7 @@ const Navigation: React.FC = () => {
                     >
                       {t('footer.services.eyebrowTransplant')}
                     </DropdownLink>
-                    <DropdownLink 
-                      to="/haarausfalltherapie" 
-                      isActive={isActive('/haarausfalltherapie')}
-                      onClick={() => setIsTreatmentsOpen(false)}
-                    >
-                      {t('footer.services.hairLossTherapy')}
-                    </DropdownLink>
+                    {/* Link to Hair Loss Therapy page removed due to Google Ads guidelines violation */}
                   </div>
                 </div>
               )}
@@ -203,12 +197,7 @@ const Navigation: React.FC = () => {
                 {t('footer.services.eyebrowTransplant')}
               </MobileNavLink>
               
-              <MobileNavLink 
-                to="/haarausfalltherapie" 
-                isActive={isActive('/haarausfalltherapie')}
-              >
-                {t('footer.services.hairLossTherapy')}
-              </MobileNavLink>
+              {/* Mobile link to Hair Loss Therapy page removed due to Google Ads guidelines violation */}
               
               {/* Moved Prices link to be right after Treatments */}
               <MobileNavLink 

@@ -128,12 +128,7 @@ const FooterSection: React.FC = () => {
                   {t('footer.services.eyebrowTransplant')}
                 </Link>
               </li>
-              <li>
-                <Link to="/haarausfalltherapie" className="hover:text-white transition-colors inline-flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#7BA7C2]/30 mr-2.5"></span>
-                  {t('footer.services.hairLossTherapy')}
-                </Link>
-              </li>
+              {/* Link to Hair Loss Therapy page removed due to Google Ads guidelines violation */}
             </ul>
           </div>
 
