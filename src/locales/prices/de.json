@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Preise & Finanzierung | Dion Hair Clinic",
-    "description": "Transparente Preise für Haartransplantation und Haarausfallbehandlungen. Sehen Sie unsere wettbewerbsfähigen Tarife und flexiblen Finanzierungsoptionen für alle Verfahren."
+    "description": "Transparente Preise für Haartransplantation und Haarausfallbehandlungen. Sehen Sie unsere wettbewerbsfähigen Tarife für alle Verfahren."
   },
   "heroSection": {
     "title": "Transparente\nPreisgestaltung",
@@ -252,15 +252,11 @@
       },
       {
         "question": "Bieten Sie Finanzierungsmöglichkeiten an?",
-        "answer": "Ja, wir bieten verschiedene Finanzierungsmöglichkeiten an, um Ihnen die Entscheidung für eine Behandlung zu erleichtern. Sprechen Sie uns gerne in einem persönlichen Beratungsgespräch darauf an."
+        "answer": "Nein, wir bieten derzeit keine Finanzierungsmöglichkeiten an. Die Bezahlung erfolgt vor der Behandlung in voller Höhe."
       },
       {
         "question": "Wie wird die Anzahl der benötigten Grafts bestimmt?",
         "answer": "Die Anzahl der benötigten Grafts wird in einem persönlichen Beratungsgespräch anhand Ihrer individuellen Situation und Ihrer Wünsche bestimmt. Dabei spielen Faktoren wie die Größe des zu behandelnden Bereichs und die gewünschte Dichte eine Rolle."
-      },
-      {
-        "question": "Kann ich die Behandlung mit meiner Krankenversicherung abrechnen?",
-        "answer": "In der Regel werden ästhetische Behandlungen nicht von den gesetzlichen Krankenversicherungen übernommen. Bei einigen privaten Krankenversicherungen besteht jedoch die Möglichkeit einer teilweisen oder vollständigen Kostenübernahme. Wir beraten Sie gerne zu den Möglichkeiten."
       }
     ]
   }

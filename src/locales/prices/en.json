@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Prices & Financing | Dion Hair Clinic",
-    "description": "Transparent pricing for hair transplantation and hair loss treatments. View our competitive rates and flexible financing options for all procedures."
+    "description": "Transparent pricing for hair transplantation and hair loss treatments. View our competitive rates for all procedures."
   },
   "heroSection": {
     "title": "Transparent\nPricing",
@@ -252,15 +252,11 @@
       },
       {
         "question": "Do you offer financing options?",
-        "answer": "Yes, we offer various financing options to make it easier for you to decide on a treatment. Please feel free to ask about this in a personal consultation."
+        "answer": "No, we currently do not offer financing options. Payment is required in full before the treatment."
       },
       {
         "question": "How is the number of required grafts determined?",
         "answer": "The number of required grafts is determined in a personal consultation based on your individual situation and your wishes. Factors such as the size of the area to be treated and the desired density play a role."
-      },
-      {
-        "question": "Can I bill the treatment with my health insurance?",
-        "answer": "As a rule, aesthetic treatments are not covered by statutory health insurance. However, some private health insurance companies may partially or fully cover the costs. We are happy to advise you on the possibilities."
       }
     ]
   }
