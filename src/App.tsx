@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { initDataLayer, trackPageView } from './utils/gtm';
+import { trackPageView } from './utils/gtm';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
 import LoadingSpinner from './components/layout/LoadingSpinner';
@@ -28,11 +28,6 @@ const PricesPage = lazy(() => import('./pages/PricesPage'));
 // Component to track route changes
 const RouteTracker: React.FC = () => {
   const location = useLocation();
-  
-  // Initialize DataLayer on mount
-  useEffect(() => {
-    initDataLayer();
-  }, []);
   
   // Track page views on route change
   useEffect(() => {
