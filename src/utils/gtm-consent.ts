@@ -51,7 +51,8 @@ export const updateConsentState = (consent: CookieConsent): void => {
 
 /**
  * Lädt das Google Tag Manager Script dynamisch
- * Diese Funktion sollte aufgerufen werden, wenn mindestens die essentiellen Cookies akzeptiert wurden
+ * Diese Funktion wird immer aufgerufen, unabhängig von der Cookie-Einwilligung
+ * Die eigentlichen Tracking-Funktionen werden durch den Consent Mode gesteuert
  */
 export const loadGTM = (): void => {
   if (typeof window !== 'undefined' && !window.gtmLoaded) {

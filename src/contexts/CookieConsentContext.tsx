@@ -59,10 +59,14 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
   const [showBanner, setShowBanner] = useState<boolean>(true);
   const [showSettings, setShowSettings] = useState<boolean>(false);
 
-// Initialize consent mode and load consent from localStorage on mount
+// Initialize consent mode, load GTM, and load consent from localStorage on mount
   useEffect(() => {
     // Initialize Google Consent Mode
     initConsentMode();
+    
+    // Load GTM unabhängig von der Cookie-Einwilligung
+    // Die Tracking-Funktionen werden durch den Consent Mode gesteuert
+    loadGTM();
     
     try {
       const storedConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
@@ -74,9 +78,6 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
           
           // Update consent state in GTM
           updateConsentState(parsedConsent);
-          
-          // Load GTM (essential cookies are always true)
-          loadGTM();
         } catch (error) {
           console.error('Error parsing stored cookie consent:', error);
         }
@@ -101,9 +102,6 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
     
     // Update consent state in GTM
     updateConsentState(consent);
-    
-    // Load GTM if not already loaded (essential cookies are always true)
-    loadGTM();
   };
 
   // Open settings
@@ -131,9 +129,6 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
     
     // Update consent state in GTM
     updateConsentState(allConsent);
-    
-    // Load GTM if not already loaded
-    loadGTM();
   };
 
   // Accept selected cookies and update GTM
@@ -144,9 +139,6 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
     
     // Update consent state in GTM
     updateConsentState(consent);
-    
-    // Load GTM if not already loaded (essential cookies are always true)
-    loadGTM();
   };
 
   // Reset consent and update GTM
