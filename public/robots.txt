@@ -1,5 +1,5 @@
 # robots.txt for Dion Hair Clinic
-# https://dionhairclinic.de
+# https://dionhairclinic.com
 
 # Global rules for all bots
 User-agent: *
@@ -57,4 +57,4 @@ Allow: /*.pdf$
 Allow: /*.ico$
 
 # Sitemap location
-Sitemap: https://dionhairclinic.de/sitemap.xml
+Sitemap: https://dionhairclinic.com/sitemap.xml

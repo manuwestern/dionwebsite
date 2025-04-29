@@ -4,12 +4,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Homepage -->
   <url>
-    <loc>https://dionhairclinic.de/</loc>
+    <loc>https://dionhairclinic.com/</loc>
     <lastmod>2025-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://dionhairclinic.de/images/Dion_Model_Home.webp</image:loc>
+      <image:loc>https://dionhairclinic.com/images/Dion_Model_Home.webp</image:loc>
       <image:title>Dion Hair Clinic - Haartransplantation Experten</image:title>
       <image:caption>Spezialisierte Haarklinik für Haartransplantationen und Haarausfallbehandlungen</image:caption>
     </image:image>
@@ -18,17 +18,17 @@
   <!-- Main Treatment Pages -->
   <!-- Hair Transplantation -->
   <url>
-    <loc>https://dionhairclinic.de/haartransplantation</loc>
+    <loc>https://dionhairclinic.com/haartransplantation</loc>
     <lastmod>2025-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://dionhairclinic.de/images/Behandlung_Haartransplantation.webp</image:loc>
+      <image:loc>https://dionhairclinic.com/images/Behandlung_Haartransplantation.webp</image:loc>
       <image:title>Haartransplantation bei Dion Hair Clinic</image:title>
       <image:caption>Moderne Haartransplantation mit FUE und DHI Techniken</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://dionhairclinic.de/images/Haartransplantation_nachher_1.webp</image:loc>
+      <image:loc>https://dionhairclinic.com/images/Haartransplantation_nachher_1.webp</image:loc>
       <image:title>Haartransplantation Ergebnisse</image:title>
       <image:caption>Vorher-Nachher Ergebnisse unserer Haartransplantationen</image:caption>
     </image:image>
@@ -36,17 +36,17 @@
 
   <!-- Beard Transplantation -->
   <url>
-    <loc>https://dionhairclinic.de/barthaartransplantation</loc>
+    <loc>https://dionhairclinic.com/barthaartransplantation</loc>
     <lastmod>2025-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://dionhairclinic.de/images/Behandlung_Barthaartransplantation.webp</image:loc>
+      <image:loc>https://dionhairclinic.com/images/Behandlung_Barthaartransplantation.webp</image:loc>
       <image:title>Barthaartransplantation bei Dion Hair Clinic</image:title>
       <image:caption>Professionelle Barthaartransplantation für einen volleren Bart</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://dionhairclinic.de/images/Model_Bart.webp</image:loc>
+      <image:loc>https://dionhairclinic.com/images/Model_Bart.webp</image:loc>
       <image:title>Barthaartransplantation Ergebnisse</image:title>
       <image:caption>Natürliche Ergebnisse unserer Barthaartransplantationen</image:caption>
     </image:image>
@@ -54,17 +54,17 @@
 
   <!-- Eyebrow Transplantation -->
   <url>
-    <loc>https://dionhairclinic.de/augenbrauentransplantation</loc>
+    <loc>https://dionhairclinic.com/augenbrauentransplantation</loc>
     <lastmod>2025-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://dionhairclinic.de/images/Behandlung_Augenbrauentransplantation.webp</image:loc>
+      <image:loc>https://dionhairclinic.com/images/Behandlung_Augenbrauentransplantation.webp</image:loc>
       <image:title>Augenbrauentransplantation bei Dion Hair Clinic</image:title>
       <image:caption>Spezialisierte Augenbrauentransplantation für natürlich aussehende Augenbrauen</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://dionhairclinic.de/images/Augenbrauen_Model.webp</image:loc>
+      <image:loc>https://dionhairclinic.com/images/Augenbrauen_Model.webp</image:loc>
       <image:title>Augenbrauentransplantation Ergebnisse</image:title>
       <image:caption>Natürliche Ergebnisse unserer Augenbrauentransplantationen</image:caption>
     </image:image>
@@ -75,7 +75,7 @@
   <!-- Important Information Pages -->
   <!-- Prices -->
   <url>
-    <loc>https://dionhairclinic.de/preise</loc>
+    <loc>https://dionhairclinic.com/preise</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -83,7 +83,7 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://dionhairclinic.de/kontakt</loc>
+    <loc>https://dionhairclinic.com/kontakt</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -92,7 +92,7 @@
   <!-- Secondary Pages -->
   <!-- Clinic -->
   <url>
-    <loc>https://dionhairclinic.de/klinik</loc>
+    <loc>https://dionhairclinic.com/klinik</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -100,7 +100,7 @@
 
   <!-- Knowledge -->
   <url>
-    <loc>https://dionhairclinic.de/wissenswertes</loc>
+    <loc>https://dionhairclinic.com/wissenswertes</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -108,28 +108,28 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://dionhairclinic.de/impressum</loc>
+    <loc>https://dionhairclinic.com/impressum</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://dionhairclinic.de/datenschutz</loc>
+    <loc>https://dionhairclinic.com/datenschutz</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://dionhairclinic.de/agb</loc>
+    <loc>https://dionhairclinic.com/agb</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://dionhairclinic.de/cookies</loc>
+    <loc>https://dionhairclinic.com/cookies</loc>
     <lastmod>2025-04-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

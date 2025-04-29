@@ -1,0 +1,1 @@
+node C:\dionwebsite\scripts\optimize-images.js
