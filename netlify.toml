@@ -10,64 +10,7 @@
   # Umgebungsvariablen für den Build-Prozess
   environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true" }
 
-# Prerendering für SEO aktivieren
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-  
-  [plugins.inputs]
-    baseUrl = "https://www.dionhairclinic.com"
-    changeFreq = "weekly"
-    priority = 0.8
-    trailingSlash = false
-    
-    # Alle wichtigen Seiten in die Sitemap aufnehmen
-    [[plugins.inputs.include]]
-      path = "/"
-      priority = 1.0
-      
-    [[plugins.inputs.include]]
-      path = "/haartransplantation"
-      priority = 0.9
-      
-    [[plugins.inputs.include]]
-      path = "/barthaartransplantation"
-      priority = 0.9
-      
-    [[plugins.inputs.include]]
-      path = "/augenbrauentransplantation"
-      priority = 0.9
-      
-    [[plugins.inputs.include]]
-      path = "/preise"
-      priority = 0.9
-      
-    [[plugins.inputs.include]]
-      path = "/kontakt"
-      priority = 0.8
-      
-    [[plugins.inputs.include]]
-      path = "/klinik"
-      priority = 0.8
-      
-    [[plugins.inputs.include]]
-      path = "/wissenswertes"
-      priority = 0.8
-      
-    [[plugins.inputs.include]]
-      path = "/impressum"
-      priority = 0.3
-      
-    [[plugins.inputs.include]]
-      path = "/datenschutz"
-      priority = 0.3
-      
-    [[plugins.inputs.include]]
-      path = "/agb"
-      priority = 0.3
-      
-    [[plugins.inputs.include]]
-      path = "/cookies"
-      priority = 0.3
+# Sitemap Plugin deaktiviert - stattdessen wird die statische sitemap.xml verwendet
 
 # Non-WWW zu WWW Redirects für .com Domain
 [[redirects]]
