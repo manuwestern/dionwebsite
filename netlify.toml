@@ -13,23 +13,97 @@
 # Prerendering für SEO aktivieren
 [[plugins]]
   package = "@netlify/plugin-sitemap"
+  
+  [plugins.inputs]
+    baseUrl = "https://www.dionhairclinic.com"
+    changeFreq = "weekly"
+    priority = 0.8
+    trailingSlash = false
+    
+    # Alle wichtigen Seiten in die Sitemap aufnehmen
+    [[plugins.inputs.include]]
+      path = "/"
+      priority = 1.0
+      
+    [[plugins.inputs.include]]
+      path = "/haartransplantation"
+      priority = 0.9
+      
+    [[plugins.inputs.include]]
+      path = "/barthaartransplantation"
+      priority = 0.9
+      
+    [[plugins.inputs.include]]
+      path = "/augenbrauentransplantation"
+      priority = 0.9
+      
+    [[plugins.inputs.include]]
+      path = "/preise"
+      priority = 0.9
+      
+    [[plugins.inputs.include]]
+      path = "/kontakt"
+      priority = 0.8
+      
+    [[plugins.inputs.include]]
+      path = "/klinik"
+      priority = 0.8
+      
+    [[plugins.inputs.include]]
+      path = "/wissenswertes"
+      priority = 0.8
+      
+    [[plugins.inputs.include]]
+      path = "/impressum"
+      priority = 0.3
+      
+    [[plugins.inputs.include]]
+      path = "/datenschutz"
+      priority = 0.3
+      
+    [[plugins.inputs.include]]
+      path = "/agb"
+      priority = 0.3
+      
+    [[plugins.inputs.include]]
+      path = "/cookies"
+      priority = 0.3
 
-# WWW zu Non-WWW Redirects
+# Non-WWW zu WWW Redirects für .com Domain
+[[redirects]]
+  from = "https://dionhairclinic.com/*"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://dionhairclinic.com/*"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
+# Redirects für .de Domain zu .com Domain
 [[redirects]]
   from = "https://www.dionhairclinic.de/*"
-  to = "https://dionhairclinic.de/:splat"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://dionhairclinic.de/*"
+  to = "https://www.dionhairclinic.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://www.dionhairclinic.de/*"
-  to = "https://dionhairclinic.de/:splat"
+  to = "https://www.dionhairclinic.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://dionhairclinic.de/*"
-  to = "https://dionhairclinic.de/:splat"
+  to = "https://www.dionhairclinic.com/:splat"
   status = 301
   force = true
 
