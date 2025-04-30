@@ -54,7 +54,7 @@ const SEO: React.FC<SEOProps> = ({
   const alternateLang = currentLang === 'de' ? 'en' : 'de';
   
   // Base URL for canonical and alternate URLs
-  const baseUrl = 'https://dionhairclinic.de';
+  const baseUrl = 'https://dionhairclinic.com';
   
   // Determine canonical URL
   const canonicalUrl = canonical || `${baseUrl}${location.pathname}`;
