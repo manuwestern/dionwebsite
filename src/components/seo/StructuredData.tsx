@@ -142,16 +142,16 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
       structuredData = {
         '@context': 'https://schema.org',
         '@type': ['MedicalBusiness', 'HealthAndBeautyBusiness'],
-        '@id': businessData.url || 'https://dionhairclinic.com/#organization',
+        '@id': businessData.url || 'https://www.dionhairclinic.com/#organization',
         name: businessData.name || 'Dion Hair Clinic',
         description: businessData.description || 'Spezialisierte Haarklinik für Haartransplantationen und Haarausfallbehandlungen mit modernsten Techniken wie Saphir-FUE und DHI.',
-        url: businessData.url || 'https://dionhairclinic.com',
+        url: businessData.url || 'https://www.dionhairclinic.com',
         telephone: businessData.telephone || '+49 2161 2963017',
         email: businessData.email || 'info@dionhairclinic.com',
-        logo: businessData.logo || 'https://dionhairclinic.com/images/DionHairClinic_Logo.svg',
+        logo: businessData.logo || 'https://www.dionhairclinic.com/images/DionHairClinic_Logo.svg',
         image: Array.isArray(businessData.image) 
           ? businessData.image 
-          : businessData.image || 'https://dionhairclinic.com/images/DionHairClinic_Logo.svg',
+          : businessData.image || 'https://www.dionhairclinic.com/images/DionHairClinic_Logo.svg',
         priceRange: businessData.priceRange || '€€',
         currenciesAccepted: 'EUR',
         paymentAccepted: businessData.paymentAccepted || ['Cash', 'Credit Card', 'Debit Card', 'Bank Transfer'],
@@ -206,7 +206,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
               itemOffered: {
                 '@type': 'MedicalProcedure',
                 name: 'Hair Transplantation',
-                url: 'https://dionhairclinic.com/haartransplantation'
+                url: 'https://www.dionhairclinic.com/haartransplantation'
               }
             },
             {
@@ -214,7 +214,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
               itemOffered: {
                 '@type': 'MedicalProcedure',
                 name: 'Beard Transplantation',
-                url: 'https://dionhairclinic.com/barthaartransplantation'
+                url: 'https://www.dionhairclinic.com/barthaartransplantation'
               }
             },
             {
@@ -222,7 +222,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
               itemOffered: {
                 '@type': 'MedicalProcedure',
                 name: 'Eyebrow Transplantation',
-                url: 'https://dionhairclinic.com/augenbrauentransplantation'
+                url: 'https://www.dionhairclinic.com/augenbrauentransplantation'
               }
             },
             {
@@ -230,7 +230,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
               itemOffered: {
                 '@type': 'MedicalTherapy',
                 name: 'Hair Loss Therapy',
-                url: 'https://dionhairclinic.com/haarausfalltherapie'
+                url: 'https://www.dionhairclinic.com/haarausfalltherapie'
               }
             }
           ]
@@ -289,12 +289,12 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         } : {
           '@type': 'Organization',
           name: 'Dion Hair Clinic',
-          url: 'https://dionhairclinic.com'
+          url: 'https://www.dionhairclinic.com'
         },
         itemReviewed: {
           '@type': 'MedicalBusiness',
           name: 'Dion Hair Clinic',
-          url: 'https://dionhairclinic.com'
+          url: 'https://www.dionhairclinic.com'
         }
       };
       break;
@@ -304,9 +304,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
       structuredData = {
         '@context': 'https://schema.org',
         '@type': 'MedicalBusiness',
-        '@id': 'https://dionhairclinic.com/#organization',
+        '@id': 'https://www.dionhairclinic.com/#organization',
         name: 'Dion Hair Clinic',
-        url: 'https://dionhairclinic.com',
+        url: 'https://www.dionhairclinic.com',
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: ratingData.ratingValue,
@@ -357,10 +357,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         description: pageData.description,
         url: pageData.url,
         isPartOf: {
-          '@id': 'https://dionhairclinic.com/#website'
+          '@id': 'https://www.dionhairclinic.com/#website'
         },
         about: {
-          '@id': 'https://dionhairclinic.com/#organization'
+          '@id': 'https://www.dionhairclinic.com/#organization'
         },
         datePublished: pageData.datePublished || new Date().toISOString().split('T')[0],
         dateModified: pageData.dateModified || new Date().toISOString().split('T')[0],
@@ -387,7 +387,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           worksFor: {
             '@type': 'MedicalBusiness',
             name: personData.worksFor.name,
-            url: personData.worksFor.url || 'https://dionhairclinic.com'
+            url: personData.worksFor.url || 'https://www.dionhairclinic.com'
           }
         }),
         ...(personData.address && {
