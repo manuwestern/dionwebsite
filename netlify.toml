@@ -16,23 +16,9 @@
   [plugins.inputs]
     exclude = ['**/*']
 
-# Critical redirect rules - sitemap first, then SPA routing
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml"
-  status = 200
-  force = true
 
 # SPA routing (must come after sitemap rule)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Header for XML sitemap
-[[headers]]
-  for = "/sitemap.xml"
-  [headers.values]
-    Content-Type = "application/xml"
-    X-Content-Type-Options = "nosniff"
-    Cache-Control = "public, max-age=86400"
