@@ -1,9 +1,5 @@
-# Netlify Redirects - Order is important!
+# Direct access to sitemap files
+/sitemap.xml    /sitemap.xml   200
 
-# Explicitly handle sitemap files - These must come BEFORE the catch-all rule
-/sitemap.xml    /sitemap.xml   200!
-/sitemap.html   /sitemap.html  200!
-/sitemap.txt    /sitemap.txt   200!
-
-# Leite alle Anfragen an die index.html weiter, um clientseitiges Routing zu unterstützen
+# SPA routing - all other paths
 /*    /index.html   200

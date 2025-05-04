@@ -2,40 +2,13 @@
 
 [build]
   # Der Befehl, der zum Bauen der Website verwendet wird
-  command = "npm run build && node scripts/ensure-sitemap.js"
+  command = "npm run build"
   
   # Das Verzeichnis, in dem die gebaute Website liegt
   publish = "dist"
   
   # Umgebungsvariablen für den Build-Prozess
-  environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true", NETLIFY_USE_YARN = "false" }
-
-# Production environment variables
-[context.production.environment]
-  DEPLOY_PRIME_URL = "https://www.dionhairclinic.com"
-
-# Sitemap Plugin deaktiviert - stattdessen wird die statische sitemap.xml verwendet
-[build.processing]
-  skip_processing = false
-
-[build.processing.html]
-  pretty_urls = true
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.images]
-  compress = true
-
-
-# Use our custom sitemap handler plugin
-[[plugins]]
-  package = "./netlify/plugins/sitemap-handler/index.cjs"
+  environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true" }
 
 # Disable the default Netlify sitemap plugin
 [[plugins]]
@@ -43,139 +16,23 @@
   [plugins.inputs]
     exclude = ['**/*']
 
-# Non-WWW zu WWW Redirects für .com Domain
-[[redirects]]
-  from = "https://dionhairclinic.com/*"
-  to = "https://www.dionhairclinic.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://dionhairclinic.com/*"
-  to = "https://www.dionhairclinic.com/:splat"
-  status = 301
-  force = true
-
-# Redirects für .de Domain zu .com Domain
-[[redirects]]
-  from = "https://www.dionhairclinic.de/*"
-  to = "https://www.dionhairclinic.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://dionhairclinic.de/*"
-  to = "https://www.dionhairclinic.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.dionhairclinic.de/*"
-  to = "https://www.dionhairclinic.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://dionhairclinic.de/*"
-  to = "https://www.dionhairclinic.com/:splat"
-  status = 301
-  force = true
-
-# Specific rules for sitemap files to ensure they're not redirected
+# Critical redirect rules - sitemap first, then SPA routing
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
   force = true
 
-[[redirects]]
-  from = "/sitemap.html"
-  to = "/sitemap.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/sitemap.txt"
-  to = "/sitemap.txt"
-  status = 200
-  force = true
-
-# Weiterleitungsregeln für SPA-Routing
+# SPA routing (must come after sitemap rule)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Header-Konfiguration
-[[headers]]
-  # Header für alle Dateien definieren
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    
-# Header für den Service Worker
-[[headers]]
-  for = "/service-worker.js"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"
-
-# Header für statische Assets
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.woff2"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.jpg"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.png"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.webp"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.svg"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Headers für die Sitemaps
+# Header for sitemap
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
     Content-Type = "application/xml"
-    X-Content-Type-Options = "nosniff"
-    Cache-Control = "public, max-age=86400"
-
-[[headers]]
-  for = "/sitemap.html"
-  [headers.values]
-    Content-Type = "text/html"
-    X-Content-Type-Options = "nosniff"
-    Cache-Control = "public, max-age=86400"
-
-[[headers]]
-  for = "/sitemap.txt"
-  [headers.values]
-    Content-Type = "text/plain"
     X-Content-Type-Options = "nosniff"
     Cache-Control = "public, max-age=86400"
