@@ -6,7 +6,10 @@ import ScrollToTop from './components/layout/ScrollToTop';
 import LoadingSpinner from './components/layout/LoadingSpinner';
 import CookieConsent from './components/cookies/CookieConsent';
 import { NewsletterProvider } from './contexts/NewsletterContext';
-import NewsletterPopup from './components/layout/NewsletterPopup';
+import { SpringPromotionProvider } from './contexts/SpringPromotionContext';
+import SpringPromotionPopup from './components/layout/SpringPromotionPopup';
+// Newsletter popup temporarily disabled for spring promotion
+// import NewsletterPopup from './components/layout/NewsletterPopup';
 import ErrorBoundary from './components/common/elements/ErrorBoundary';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -47,9 +50,10 @@ const App: React.FC = React.memo(() => {
         <RouteTracker />
         <CookieConsent>
           <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
-            <ScrollToTop />
-            <Layout>
-              <Suspense fallback={<LoadingSpinner />}>
+            <SpringPromotionProvider>
+              <ScrollToTop />
+              <Layout>
+                <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/haartransplantation" element={<HairTransplantationPage />} />
@@ -67,9 +71,10 @@ const App: React.FC = React.memo(() => {
                   {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
                   <Route path="*" element={<NotFoundPage />} />
                 </Routes>
-              </Suspense>
-            </Layout>
-            <NewsletterPopup />
+                </Suspense>
+              </Layout>
+              <SpringPromotionPopup />
+            </SpringPromotionProvider>
           </NewsletterProvider>
         </CookieConsent>
       </Router>
