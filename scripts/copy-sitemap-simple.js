@@ -1,4 +1,4 @@
-// Simple script to copy sitemap.xml to dist directory
+// Simple script to copy sitemap.xml to dist directory during build
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

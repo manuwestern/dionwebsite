@@ -1,4 +1,4 @@
-# Direct access to sitemap files
+# Direct access to sitemap
 /sitemap.xml    /sitemap.xml   200
 
 # SPA routing - all other paths

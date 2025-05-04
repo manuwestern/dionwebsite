@@ -29,7 +29,7 @@
   to = "/index.html"
   status = 200
 
-# Header for sitemap
+# Header for XML sitemap
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]

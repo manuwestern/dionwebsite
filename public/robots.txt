@@ -56,7 +56,5 @@ Allow: /*.eot$
 Allow: /*.pdf$
 Allow: /*.ico$
 
-# Sitemap locations
+# Sitemap location
 Sitemap: https://www.dionhairclinic.com/sitemap.xml
-Sitemap: https://www.dionhairclinic.com/sitemap.html
-Sitemap: https://www.dionhairclinic.com/sitemap.txt
