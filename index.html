@@ -232,11 +232,11 @@
     
     <!-- Floating Action Buttons -->
     <div class="floating-buttons">
-      <a href="https://wa.me/491702637818" target="_blank" rel="noopener noreferrer" class="floating-button whatsapp-button" aria-label="WhatsApp kontaktieren">
+      <a href="https://wa.me/491702637818" target="_blank" rel="noopener noreferrer" class="floating-button whatsapp-button" id="whatsapp-button" aria-label="WhatsApp kontaktieren">
         <img src="/images/whatsapp.svg" alt="WhatsApp" width="24" height="24">
         <span class="button-text">WhatsApp</span>
       </a>
-      <a href="/kontakt" class="floating-button appointment-button" aria-label="Termin vereinbaren">
+      <a href="/kontakt" class="floating-button appointment-button" id="appointment-button" aria-label="Termin vereinbaren">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
           <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -246,6 +246,87 @@
         <span class="button-text">Termin vereinbaren</span>
       </a>
     </div>
+    
+    <!-- Script to handle client-side navigation and translation for the floating buttons -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get button elements
+        const appointmentButton = document.getElementById('appointment-button');
+        const whatsappButton = document.getElementById('whatsapp-button');
+        
+        // Function to check if the current language is English
+        function isEnglishLanguage() {
+          // Check if we can detect the language from i18next
+          if (window.i18next && window.i18next.language) {
+            return window.i18next.language.startsWith('en');
+          } else {
+            // Fallback: Check URL or HTML lang attribute
+            const htmlLang = document.documentElement.lang;
+            return htmlLang === 'en' || window.location.pathname.includes('/en/');
+          }
+        }
+        
+        // Function to update button texts based on language
+        function updateButtonTexts() {
+          const isEnglish = isEnglishLanguage();
+          
+          // Update appointment button text
+          if (appointmentButton) {
+            const appointmentTextSpan = appointmentButton.querySelector('.button-text');
+            if (appointmentTextSpan) {
+              appointmentTextSpan.textContent = isEnglish ? 'Book Appointment' : 'Termin vereinbaren';
+              
+              // Also update the aria-label
+              appointmentButton.setAttribute('aria-label', 
+                isEnglish ? 'Book Appointment' : 'Termin vereinbaren'
+              );
+            }
+          }
+          
+          // Update WhatsApp button text (WhatsApp stays as WhatsApp, but we translate the aria-label)
+          if (whatsappButton) {
+            whatsappButton.setAttribute('aria-label', 
+              isEnglish ? 'Contact via WhatsApp' : 'WhatsApp kontaktieren'
+            );
+          }
+        }
+        
+        // Set up click handler for client-side navigation
+        if (appointmentButton) {
+          appointmentButton.addEventListener('click', function(e) {
+            // Only intercept if React Router is available
+            if (window.history && window.history.pushState) {
+              e.preventDefault();
+              
+              // Use history API for client-side navigation
+              window.history.pushState({}, '', '/kontakt');
+              
+              // Dispatch a popstate event to notify React Router of the change
+              const navEvent = new PopStateEvent('popstate');
+              window.dispatchEvent(navEvent);
+            }
+            // If React Router is not available, let the default navigation happen
+          });
+        }
+        
+        // Initial translation
+        updateButtonTexts();
+        
+        // Listen for language changes
+        window.addEventListener('languageChanged', updateButtonTexts);
+        
+        // Check periodically for i18next initialization (it might load after this script)
+        const checkI18next = setInterval(function() {
+          if (window.i18next) {
+            updateButtonTexts();
+            clearInterval(checkI18next);
+            
+            // Set up listener for language changes via i18next
+            window.i18next.on('languageChanged', updateButtonTexts);
+          }
+        }, 500);
+      });
+    </script>
 
     <style>
       /* Floating Action Buttons */
