@@ -29,7 +29,7 @@
   compress = true
 
 # Explicitly disable the Netlify sitemap plugin
-[plugins]
+[[plugins]]
   package = "@netlify/plugin-sitemap"
   [plugins.inputs]
     exclude = ['**/*']
