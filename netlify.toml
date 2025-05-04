@@ -2,7 +2,7 @@
 
 [build]
   # Der Befehl, der zum Bauen der Website verwendet wird
-  command = "npm run build"
+  command = "npm run build && node scripts/ensure-sitemap.js"
   
   # Das Verzeichnis, in dem die gebaute Website liegt
   publish = "dist"
@@ -44,7 +44,7 @@
 
 # Use our custom sitemap handler plugin
 [[plugins]]
-  package = "./netlify/plugins/sitemap-handler"
+  package = "./netlify/plugins/sitemap-handler/index.cjs"
 
 # Disable the default Netlify sitemap plugin
 [[plugins]]

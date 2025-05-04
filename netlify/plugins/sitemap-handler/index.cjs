@@ -1,12 +1,8 @@
 // Custom Netlify plugin to ensure sitemap files are properly handled
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default {
+module.exports = {
   onPostBuild: ({ constants, utils }) => {
     const { PUBLISH_DIR } = constants;
     const sitemapSource = path.join(process.cwd(), 'sitemap.xml');
