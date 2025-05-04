@@ -28,6 +28,10 @@
 [build.processing.images]
   compress = true
 
+# Ensure sitemap.xml is not processed
+[[build.processing.ignore]]
+  path = "sitemap.xml"
+
 # Explicitly disable the Netlify sitemap plugin
 [[plugins]]
   package = "@netlify/plugin-sitemap"
@@ -70,6 +74,13 @@
   from = "http://dionhairclinic.de/*"
   to = "https://www.dionhairclinic.com/:splat"
   status = 301
+  force = true
+
+# Specific rule for sitemap.xml to ensure it's not redirected
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
   force = true
 
 # Weiterleitungsregeln für SPA-Routing
