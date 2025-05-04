@@ -13,6 +13,7 @@ export default defineConfig({
       includeAssets: [
         'favicon.ico',
         'robots.txt',
+        'sitemap.xml',
         'apple-touch-icon.png',
         'images/*.svg',
         'images/*.webp',
@@ -33,7 +34,7 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2,xml}'],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -84,6 +85,8 @@ export default defineConfig({
     target: 'es2015',
     outDir: 'dist',
     assetsDir: 'assets',
+    // Ensure sitemap.xml is copied to the root
+    copyPublicDir: true,
     // Verbesserte Chunk-Splitting-Strategie
     rollupOptions: {
       output: {

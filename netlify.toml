@@ -11,6 +11,28 @@
   environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true" }
 
 # Sitemap Plugin deaktiviert - stattdessen wird die statische sitemap.xml verwendet
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.images]
+  compress = true
+
+# Explicitly disable the Netlify sitemap plugin
+[plugins]
+  package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+    exclude = ['**/*']
 
 # Non-WWW zu WWW Redirects für .com Domain
 [[redirects]]
@@ -107,3 +129,11 @@
   for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Header für die Sitemap
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=86400"
