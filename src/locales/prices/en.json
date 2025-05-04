@@ -1,39 +1,39 @@
 {
   "meta": {
-    "title": "Prices & Financing | Dion Hair Clinic",
-    "description": "Transparent pricing for hair transplantation and hair loss treatments. View our competitive rates for all procedures."
+    "title": "Spring Offer & Prices | Dion Hair Clinic",
+    "description": "Our Spring Offer: Hair transplantation from 2099€! Secure our reduced prices now - valid only from May to June 2025."
   },
   "heroSection": {
-    "title": "Transparent\nPricing",
-    "subtitle": "Quality and fairness at an attractive price",
-    "welcomeText": "At Dion Hair Clinic, we offer high-quality treatments at transparent and fair prices. Our packages are designed to meet your individual needs while providing optimal value for money.",
+    "title": "Spring Offer\nMay-June 2025",
+    "subtitle": "Save 500€ on all hair and beard transplantations",
+    "welcomeText": "Take advantage of our limited-time spring offer: High-quality treatments at specially attractive prices. All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
     "priceTags": {
       "saphirFUEHair": {
         "title": "Saphir FUE Hair",
-        "price": "from 2599€",
+        "price": "from 2099€",
         "description": "Basic package up to 2000 grafts"
       },
       "dhiFUEHair": {
         "title": "DHI FUE Hair",
-        "price": "from 3599€",
+        "price": "from 3099€",
         "description": "Basic package up to 2000 grafts"
       },
       "saphirFUEBeard": {
         "title": "Saphir FUE Beard",
-        "price": "from 2599€",
+        "price": "from 2099€",
         "description": "Basic package up to 2000 grafts"
       },
       "saphirFUEEyebrow": {
         "title": "Saphir FUE Eyebrow",
-        "price": "from 1699€",
+        "price": "from 1499€",
         "description": "up to 1000 grafts"
       }
     }
   },
   "priceOverviewSection": {
-    "title": "Our Treatment Packages",
-    "subtitle": "Tailored solutions for your individual needs",
-    "description": "We offer various packages tailored to your specific requirements. Each package includes all necessary services for optimal results.",
+    "title": "Our Spring Offers",
+    "subtitle": "Special prices from May to June 2025 - Limited time!",
+    "description": "Take advantage of our limited-time spring offer: All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
     "packageIncludes": "Package includes:",
     "hairTransplantation": {
       "title": "Hair Transplantation",
@@ -45,11 +45,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2599€"
+              "price": "2099€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "2999€"
+              "price": "2499€"
             }
           ],
           "features": [
@@ -64,11 +64,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3299€"
+              "price": "2799€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "3799€"
+              "price": "3299€"
             }
           ],
           "features": [
@@ -84,11 +84,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3599€"
+              "price": "3099€"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "3999€"
+              "price": "3499€"
             }
           ],
           "features": [
@@ -104,11 +104,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "4299€"
+              "price": "3799€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "4799€"
+              "price": "4299€"
             }
           ],
           "features": [
@@ -131,7 +131,7 @@
           "prices": [
             {
               "title": "up to 1000 Grafts",
-              "price": "1699€"
+              "price": "1499€"
             }
           ],
           "features": [
@@ -145,7 +145,7 @@
           "prices": [
             {
               "title": "Standard",
-              "price": "2099€"
+              "price": "1899€"
             }
           ],
           "features": [
@@ -165,11 +165,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2599€"
+              "price": "2099€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "2999€"
+              "price": "2499€"
             }
           ],
           "features": [
@@ -184,11 +184,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3599€"
+              "price": "3099€"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "3999€"
+              "price": "3499€"
             }
           ],
           "features": [

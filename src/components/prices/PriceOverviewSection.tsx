@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Flower } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 import ElegantPricePackageCard from '../common/elements/ElegantPricePackageCard';
@@ -69,16 +69,46 @@ const PriceOverviewSection: React.FC = () => {
       <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -right-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('priceOverviewSection.title')}</h2>
-            <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
+      {/* Spring Promotion Banner */}
+      <div className="relative w-full bg-gradient-to-r from-[#86C166] to-[#7BA7C2] rounded-2xl mb-16 overflow-hidden shadow-lg">
+        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 -mr-32 -mt-32 blur-xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/10 -ml-32 -mb-32 blur-xl"></div>
+        
+        <div className="relative z-10 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between">
+          <div className="text-white text-center md:text-left mb-6 md:mb-0">
+            <div className="flex items-center mb-3">
+              <Flower className="h-5 w-5 mr-2" />
+              <span className={`${fontSize.sm} ${fontWeight.semibold} ${tracking.wide}`}>
+                NUR MAI - JUNI 2025
+              </span>
+            </div>
+            <h2 className={`${fontSize.h2} ${fontWeight.light} mb-2`}>
+              Frühjahrsaktion
+            </h2>
+            <p className={`${fontSize.lg} ${fontWeight.medium} max-w-xl`}>
+              Sparen Sie 500€ auf alle Haar- und Barthaartransplantationen
+            </p>
           </div>
-          <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
-            {t('priceOverviewSection.subtitle')}
-          </p>
+          <div className="flex flex-col items-center">
+            <div className="bg-white/90 rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md mb-2">
+              <span className="text-[#86C166] text-xs font-medium">SPAREN SIE</span>
+              <span className="text-[#86C166] text-2xl font-bold">500€</span>
+            </div>
+            <span className="text-white text-xs">Begrenzte Zeit</span>
+          </div>
         </div>
+      </div>
+      
+      {/* Section Header */}
+      <div className="text-center mb-16">
+        <div className="inline-block mb-4">
+          <h2 className={`${textStyle.sectionTitle}`} lang="de">{t('priceOverviewSection.title')}</h2>
+          <div className={`${gradientUnderline.primary} w-[90%] max-w-[350px] mt-3 mx-auto`}></div>
+        </div>
+        <p className={`${textStyle.sectionSubtitle} max-w-3xl mx-auto mt-4`}>
+          {t('priceOverviewSection.subtitle')}
+        </p>
+      </div>
 
         {/* Treatment Type Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
