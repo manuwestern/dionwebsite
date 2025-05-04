@@ -32,15 +32,6 @@
 [build.processing.images]
   compress = true
 
-# Explicitly prevent sitemap files from being processed
-[[build.processing.ignore]]
-  path = "sitemap.xml"
-  
-[[build.processing.ignore]]
-  path = "sitemap.html"
-  
-[[build.processing.ignore]]
-  path = "sitemap.txt"
 
 # Use our custom sitemap handler plugin
 [[plugins]]
