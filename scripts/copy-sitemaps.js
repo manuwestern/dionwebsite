@@ -7,14 +7,14 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const sourceDir = path.join(__dirname, '..', 'public');
 const targetDir = path.join(__dirname, '..', 'dist');
 
-// List of sitemap files to copy
-const sitemapFiles = [
-  'sitemap.xml',
-  'sitemap.html',
-  'sitemap.txt'
+// Files to copy with their source directories
+const filesToCopy = [
+  { file: 'sitemap.xml', sourceDir: path.join(__dirname, '..') }, // Root directory
+  { file: 'sitemap.xml', sourceDir: path.join(__dirname, '..', 'public') },
+  { file: 'sitemap.html', sourceDir: path.join(__dirname, '..', 'public') },
+  { file: 'sitemap.txt', sourceDir: path.join(__dirname, '..', 'public') }
 ];
 
 // Function to copy a file
@@ -37,14 +37,14 @@ function copyFile(source, target) {
 
 // Copy all sitemap files
 console.log('📂 Copying sitemap files to dist directory...');
-sitemapFiles.forEach(file => {
-  const sourcePath = path.join(sourceDir, file);
-  const targetPath = path.join(targetDir, file);
+filesToCopy.forEach(item => {
+  const sourcePath = path.join(item.sourceDir, item.file);
+  const targetPath = path.join(targetDir, item.file);
   
   if (fs.existsSync(sourcePath)) {
     copyFile(sourcePath, targetPath);
   } else {
-    console.warn(`⚠️ Warning: ${file} not found in public directory`);
+    console.warn(`⚠️ Warning: ${item.file} not found in ${item.sourceDir}`);
   }
 });
 

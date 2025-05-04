@@ -42,7 +42,11 @@
 [[build.processing.ignore]]
   path = "sitemap.txt"
 
-# Explicitly disable the Netlify sitemap plugin
+# Use our custom sitemap handler plugin
+[[plugins]]
+  package = "./netlify/plugins/sitemap-handler"
+
+# Disable the default Netlify sitemap plugin
 [[plugins]]
   package = "@netlify/plugin-sitemap"
   [plugins.inputs]
