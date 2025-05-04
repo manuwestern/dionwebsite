@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { X, ArrowRight, Flower, CalendarRange, Gift, PhoneCall } from 'lucide-react';
 import { useSpringPromotion } from '../../contexts/SpringPromotionContext';
 import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
@@ -6,6 +6,56 @@ import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/bu
 
 const SpringPromotionPopup: React.FC = () => {
   const { showPopup, isClosing, closePopup } = useSpringPromotion();
+  const popupRef = useRef<HTMLDivElement>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [translateY, setTranslateY] = useState(0);
+  
+  // Reset transform when popup closes
+  useEffect(() => {
+    if (!showPopup) {
+      setTranslateY(0);
+    }
+  }, [showPopup]);
+  
+  // The minimum swipe distance (in px) to trigger close
+  const minSwipeDistance = 100;
+  
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientY);
+  };
+  
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    
+    const currentY = e.targetTouches[0].clientY;
+    const diff = currentY - touchStart;
+    
+    // Only allow swiping down (positive diff)
+    if (diff > 0) {
+      setTranslateY(diff);
+    }
+    
+    setTouchEnd(currentY);
+  };
+  
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchEnd - touchStart;
+    const isDownSwipe = distance > minSwipeDistance;
+    
+    if (isDownSwipe) {
+      closePopup();
+    } else {
+      // Reset position if swipe wasn't long enough
+      setTranslateY(0);
+    }
+    
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
   
   if (!showPopup) {
     return null;
@@ -28,20 +78,28 @@ const SpringPromotionPopup: React.FC = () => {
       
       {/* Popup card with spring-themed styling */}
       <div 
+        ref={popupRef}
         className={`relative bg-white rounded-2xl shadow-2xl overflow-hidden max-w-3xl w-[95%] md:w-full mx-auto transition-all duration-300 ${
           isClosing ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
         }`}
+        style={{ 
+          transform: `translateY(${translateY}px)`,
+          transition: translateY > 0 ? 'none' : 'all 0.3s ease',
+        }}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
       >
         {/* Spring-themed gradient top bar */}
         <div className="h-2 bg-gradient-to-r from-[#86C166] to-[#7BA7C2]"></div>
         
-        {/* Close button */}
+        {/* Close button - larger and more visible */}
         <button 
           onClick={closePopup}
-          className="absolute top-3 right-3 md:top-4 md:right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
+          className="absolute top-3 right-3 md:top-4 md:right-4 text-gray-700 hover:text-gray-900 transition-colors z-10 bg-white/80 rounded-full p-1.5 shadow-sm"
           aria-label="Schließen"
         >
-          <X size={20} className="md:w-6 md:h-6" />
+          <X size={24} className="md:w-7 md:h-7" />
         </button>
         
         {/* Spring-themed decorative elements */}
@@ -192,7 +250,22 @@ const SpringPromotionPopup: React.FC = () => {
                 — Michael K., zufriedener Patient
               </p>
             </div>
+            
+            {/* Additional close button for mobile - at the bottom of the content */}
+            <button 
+              onClick={closePopup}
+              className="md:hidden mt-4 w-full py-2 text-gray-500 text-sm font-medium border border-gray-200 rounded-lg flex items-center justify-center"
+            >
+              <X size={16} className="mr-2" />
+              Schließen
+            </button>
           </div>
+        </div>
+        
+        {/* Swipe hint for mobile - indicates user can swipe down to close */}
+        <div className="md:hidden w-full flex flex-col items-center pb-2">
+          <div className="w-10 h-1 bg-gray-300 rounded-full mb-1"></div>
+          <span className="text-xs text-gray-400">Nach unten wischen zum Schließen</span>
         </div>
       </div>
     </div>

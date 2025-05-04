@@ -29,7 +29,7 @@ export const SpringPromotionProvider: React.FC<SpringPromotionProviderProps> = (
       if (hasSeenPromotionPopup === 'true') {
         setHasSeenPopup(true);
       } else {
-        // Show popup after 15 seconds if user hasn't seen it before
+        // Show popup after 2 seconds if user hasn't seen it before
         const timer = setTimeout(() => {
           setShowPopup(true);
           try {
@@ -38,7 +38,7 @@ export const SpringPromotionProvider: React.FC<SpringPromotionProviderProps> = (
           } catch (error) {
             console.error('Error saving to localStorage:', error);
           }
-        }, 15000);
+        }, 2000);
         
         return () => clearTimeout(timer);
       }
