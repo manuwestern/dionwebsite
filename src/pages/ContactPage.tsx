@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import SEO from '../components/seo/SEO';
 import StructuredData from '../components/seo/StructuredData';
-import HeroSection from '../components/contact/HeroSection';
 import ContactInfoSection from '../components/contact/ContactInfoSection';
 import ContactFormSection from '../components/contact/ContactFormSection';
 import MapSection from '../components/contact/MapSection';
@@ -62,7 +61,7 @@ const ContactPage: React.FC = () => {
           type: "ContactPage",
           name: t('meta.title', { ns: 'contact' }),
           description: t('meta.description', { ns: 'contact' }),
-          url: "https://dionhairclinic.de/kontakt"
+          url: "https://www.dionhairclinic.com/kontakt"
         }}
       />
       <StructuredData 
@@ -82,14 +81,14 @@ const ContactPage: React.FC = () => {
             longitude: 6.4378
           },
           telephone: "+49 2161 2963017",
-          email: "info@dionhairclinic.de",
-          url: "https://dionhairclinic.de",
+          email: "info@dionhairclinic.com",
+          url: "https://www.dionhairclinic.com",
           image: [
-            "https://dionhairclinic.de/images/Dion_Model_Benefits.webp",
-            "https://dionhairclinic.de/images/Behandlung_Haartransplantation.webp",
-            "https://dionhairclinic.de/images/Model_Kontakt.webp"
+            "https://www.dionhairclinic.com/images/Dion_Model_Benefits.webp",
+            "https://www.dionhairclinic.com/images/Behandlung_Haartransplantation.webp",
+            "https://www.dionhairclinic.com/images/Model_Kontakt.webp"
           ],
-          logo: "https://dionhairclinic.de/images/DionHairClinic_Logo.svg",
+          logo: "https://www.dionhairclinic.com/images/DionHairClinic_Logo.svg",
           openingHours: ["Mo-Fr 09:30-19:30", "Sa 09:30-16:00"],
           priceRange: "€€€",
           paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
@@ -125,10 +124,6 @@ const ContactPage: React.FC = () => {
       />
       
       {/* Main Content */}
-      <SectionWrapper type="hero">
-        <HeroSection />
-      </SectionWrapper>
-      
       <SectionWrapper type="medium">
         <ConsultationOptionsSection />
       </SectionWrapper>
