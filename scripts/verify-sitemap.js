@@ -25,46 +25,46 @@ if (!fs.existsSync(distDir)) {
   console.log(`✓ dist directory exists: ${distDir}`);
 }
 
-// Check sitemap in dist
-if (fs.existsSync(sitemapDist)) {
+// If root sitemap exists, ALWAYS use it (overwriting anything in dist)
+if (fs.existsSync(sitemapRoot)) {
+  try {
+    console.log('🔄 Copying root sitemap.xml to dist directory...');
+    const content = fs.readFileSync(sitemapRoot, 'utf8');
+    fs.writeFileSync(sitemapDist, content, 'utf8');
+    console.log(`✅ Successfully copied sitemap.xml from root directory to dist (${content.length} bytes)`);
+    
+    // Verify the file in dist
+    const stats = fs.statSync(sitemapDist);
+    console.log(`✅ Verified: sitemap.xml EXISTS in dist directory (${stats.size} bytes)`);
+    console.log(`   First 60 chars: ${content.substring(0, 60)}...`);
+  } catch (e) {
+    console.error(`❌ Error copying/verifying sitemap: ${e.message}`);
+  }
+} 
+// If no root sitemap but dist has one (probably from public dir)
+else if (fs.existsSync(sitemapDist)) {
   const stats = fs.statSync(sitemapDist);
-  console.log(`✅ sitemap.xml EXISTS in dist directory (${stats.size} bytes)`);
+  console.log(`ℹ️ Using existing sitemap.xml in dist directory (${stats.size} bytes)`);
   
-  // Read first few bytes to verify it's not empty
   try {
     const content = fs.readFileSync(sitemapDist, 'utf8');
     console.log(`   First 60 chars: ${content.substring(0, 60)}...`);
   } catch (e) {
     console.error(`   Error reading sitemap in dist: ${e.message}`);
   }
-} else {
-  console.error('❌ sitemap.xml DOES NOT EXIST in dist directory!');
-  
-  // Try to copy it from public or root as a fallback
-  console.log('🔄 Attempting to copy sitemap.xml to dist...');
-  
-  // First try to copy from public directory
-  if (fs.existsSync(sitemapPublic)) {
-    try {
-      const content = fs.readFileSync(sitemapPublic, 'utf8');
-      fs.writeFileSync(sitemapDist, content, 'utf8');
-      console.log(`✅ Successfully copied sitemap.xml from public directory to dist (${content.length} bytes)`);
-    } catch (e) {
-      console.error(`❌ Error copying from public: ${e.message}`);
-    }
-  } 
-  // Then try from root as a fallback
-  else if (fs.existsSync(sitemapRoot)) {
-    try {
-      const content = fs.readFileSync(sitemapRoot, 'utf8');
-      fs.writeFileSync(sitemapDist, content, 'utf8');
-      console.log(`✅ Successfully copied sitemap.xml from root directory to dist (${content.length} bytes)`);
-    } catch (e) {
-      console.error(`❌ Error copying from root: ${e.message}`);
-    }
-  } else {
-    console.error('❌ No sitemap.xml found to copy to dist!');
+} 
+// If no root sitemap and no dist sitemap, try to copy from public
+else if (fs.existsSync(sitemapPublic)) {
+  try {
+    console.log('🔄 Copying public sitemap.xml to dist directory...');
+    const content = fs.readFileSync(sitemapPublic, 'utf8');
+    fs.writeFileSync(sitemapDist, content, 'utf8');
+    console.log(`✅ Successfully copied sitemap.xml from public directory to dist (${content.length} bytes)`);
+  } catch (e) {
+    console.error(`❌ Error copying from public: ${e.message}`);
   }
+} else {
+  console.error('❌ No sitemap.xml found in any location!');
 }
 
 // Check sitemap in public
