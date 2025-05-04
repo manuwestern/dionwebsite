@@ -24,24 +24,24 @@ export const SpringPromotionProvider: React.FC<SpringPromotionProviderProps> = (
   // Check localStorage on mount to see if user has already seen the popup
   useEffect(() => {
     try {
+      // Für Testzwecke: Zurücksetzen des localStorage-Wertes, damit das Popup immer angezeigt wird
+      localStorage.removeItem('dion_spring_promotion_seen');
       const hasSeenPromotionPopup = localStorage.getItem('dion_spring_promotion_seen');
       
-      if (hasSeenPromotionPopup === 'true') {
-        setHasSeenPopup(true);
-      } else {
-        // Show popup after 2 seconds if user hasn't seen it before
-        const timer = setTimeout(() => {
-          setShowPopup(true);
-          try {
-            localStorage.setItem('dion_spring_promotion_seen', 'true');
-            setHasSeenPopup(true);
-          } catch (error) {
-            console.error('Error saving to localStorage:', error);
-          }
-        }, 2000);
-        
-        return () => clearTimeout(timer);
-      }
+      // Immer das Popup anzeigen, unabhängig vom localStorage-Wert
+      // Show popup after 2 seconds
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        try {
+          // Kommentiert aus, damit das Popup bei jedem Seitenbesuch erscheint (nur zu Testzwecken)
+          // localStorage.setItem('dion_spring_promotion_seen', 'true');
+          setHasSeenPopup(true);
+        } catch (error) {
+          console.error('Error saving to localStorage:', error);
+        }
+      }, 2000);
+      
+      return () => clearTimeout(timer);
     } catch (error) {
       // Handle case where localStorage is not available (e.g., private browsing)
       console.error('Error accessing localStorage:', error);
