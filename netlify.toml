@@ -8,7 +8,11 @@
   publish = "dist"
   
   # Umgebungsvariablen für den Build-Prozess
-  environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true" }
+  environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true", NETLIFY_USE_YARN = "false" }
+
+# Production environment variables
+[context.production.environment]
+  DEPLOY_PRIME_URL = "https://www.dionhairclinic.com"
 
 # Sitemap Plugin deaktiviert - stattdessen wird die statische sitemap.xml verwendet
 [build.processing]
@@ -37,13 +41,6 @@
   
 [[build.processing.ignore]]
   path = "sitemap.txt"
-  
-# Custom build command to ensure sitemap files are copied correctly
-[build.environment]
-  NETLIFY_USE_YARN = "false"
-  
-[context.production.environment]
-  DEPLOY_PRIME_URL = "https://www.dionhairclinic.com"
 
 # Explicitly disable the Netlify sitemap plugin
 [[plugins]]
