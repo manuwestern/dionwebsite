@@ -13,6 +13,38 @@
     NETLIFY_USE_PRERENDER = "true"
     DEBUG = "netlify-plugin-inline-functions-env"
 
+# Domain redirects - ensure all traffic goes to www.dionhairclinic.com
+[[redirects]]
+  from = "https://dionhairclinic.de/*"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.dionhairclinic.de/*"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://dionhairclinic.de/*"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.dionhairclinic.de/*"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
+# Non-www to www redirect for canonical domain
+[[redirects]]
+  from = "https://dionhairclinic.com/*"
+  to = "https://www.dionhairclinic.com/:splat"
+  status = 301
+  force = true
+
 # Critical redirect rules - sitemap first, then SPA routing
 [[redirects]]
   from = "/sitemap.xml"
