@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { X, ArrowRight, Flower, CalendarRange, Gift, PhoneCall } from 'lucide-react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
+import { X, ArrowRight, Flower, CalendarRange, Gift, PhoneCall, ChevronDown, ChevronUp } from 'lucide-react';
 import { useSpringPromotion } from '../../contexts/SpringPromotionContext';
 import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
@@ -10,11 +10,13 @@ const SpringPromotionPopup: React.FC = () => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [translateY, setTranslateY] = useState(0);
+  const [isExpanded, setIsExpanded] = useState(false);
   
-  // Reset transform when popup closes
+  // Reset transform and expanded state when popup closes
   useEffect(() => {
     if (!showPopup) {
       setTranslateY(0);
+      setIsExpanded(false);
     }
   }, [showPopup]);
   
@@ -85,6 +87,8 @@ const SpringPromotionPopup: React.FC = () => {
         style={{ 
           transform: `translateY(${translateY}px)`,
           transition: translateY > 0 ? 'none' : 'all 0.3s ease',
+          maxHeight: isExpanded ? 'none' : '70vh',
+          overflow: 'hidden'
         }}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -110,7 +114,20 @@ const SpringPromotionPopup: React.FC = () => {
           <div className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-[#86C166]/10 rounded-full"></div>
         </div>
         
-        <div className="flex flex-col md:flex-row">
+        {/* Mobile expand/collapse toggle button */}
+        <button 
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="md:hidden absolute right-0 left-0 mx-auto bottom-4 w-12 h-12 flex items-center justify-center bg-white/90 rounded-full shadow-lg z-10 border border-gray-100"
+          aria-label={isExpanded ? "Einklappen" : "Ausklappen"}
+        >
+          {isExpanded ? (
+            <ChevronUp className="w-6 h-6 text-gray-700" />
+          ) : (
+            <ChevronDown className="w-6 h-6 text-gray-700" />
+          )}
+        </button>
+        
+        <div className={`flex flex-col md:flex-row overflow-auto ${isExpanded ? 'max-h-[70vh]' : 'max-h-[45vh]'} md:max-h-none transition-all duration-300`}>
           {/* Left content - Spring Promotion */}
           <div className="p-4 pt-6 md:p-6 md:pt-8 md:w-1/2 relative">
             {/* Flower icon with spring color */}
@@ -263,9 +280,11 @@ const SpringPromotionPopup: React.FC = () => {
         </div>
         
         {/* Swipe hint for mobile - indicates user can swipe down to close */}
-        <div className="md:hidden w-full flex flex-col items-center pb-2">
+        <div className="md:hidden w-full flex flex-col items-center pb-16">
           <div className="w-10 h-1 bg-gray-300 rounded-full mb-1"></div>
-          <span className="text-xs text-gray-400">Nach unten wischen zum Schließen</span>
+          <span className="text-xs text-gray-400">
+            {isExpanded ? "Nach unten wischen zum Schließen" : "Tippen zum Ausklappen"}
+          </span>
         </div>
       </div>
     </div>
