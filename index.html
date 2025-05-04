@@ -249,26 +249,19 @@
     
     <!-- Script to handle client-side navigation and translation for the floating buttons -->
     <script>
+      // Create a global object to expose functions to React
+      window.FloatingButtons = {};
+      
       document.addEventListener('DOMContentLoaded', function() {
         // Get button elements
         const appointmentButton = document.getElementById('appointment-button');
         const whatsappButton = document.getElementById('whatsapp-button');
         
-        // Function to check if the current language is English
-        function isEnglishLanguage() {
-          // Check if we can detect the language from i18next
-          if (window.i18next && window.i18next.language) {
-            return window.i18next.language.startsWith('en');
-          } else {
-            // Fallback: Check URL or HTML lang attribute
-            const htmlLang = document.documentElement.lang;
-            return htmlLang === 'en' || window.location.pathname.includes('/en/');
-          }
-        }
-        
         // Function to update button texts based on language
-        function updateButtonTexts() {
-          const isEnglish = isEnglishLanguage();
+        window.FloatingButtons.updateTexts = function(language) {
+          const isEnglish = language === 'en';
+          
+          console.log('Updating floating button texts to language:', language);
           
           // Update appointment button text
           if (appointmentButton) {
@@ -289,7 +282,7 @@
               isEnglish ? 'Contact via WhatsApp' : 'WhatsApp kontaktieren'
             );
           }
-        }
+        };
         
         // Set up click handler for client-side navigation
         if (appointmentButton) {
@@ -309,22 +302,14 @@
           });
         }
         
-        // Initial translation
-        updateButtonTexts();
+        // Initial translation - try to detect language
+        let currentLang = 'de'; // Default to German
         
-        // Listen for language changes
-        window.addEventListener('languageChanged', updateButtonTexts);
+        if (document.documentElement.lang) {
+          currentLang = document.documentElement.lang;
+        }
         
-        // Check periodically for i18next initialization (it might load after this script)
-        const checkI18next = setInterval(function() {
-          if (window.i18next) {
-            updateButtonTexts();
-            clearInterval(checkI18next);
-            
-            // Set up listener for language changes via i18next
-            window.i18next.on('languageChanged', updateButtonTexts);
-          }
-        }, 500);
+        window.FloatingButtons.updateTexts(currentLang);
       });
     </script>
 

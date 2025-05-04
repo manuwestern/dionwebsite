@@ -95,4 +95,12 @@ i18n
     }
   });
 
+// Add a language change listener to update floating buttons
+i18n.on('languageChanged', (lng: string) => {
+  // Update floating buttons if the global function exists
+  if (window.FloatingButtons && typeof window.FloatingButtons.updateTexts === 'function') {
+    window.FloatingButtons.updateTexts(lng);
+  }
+});
+
 export default i18n;

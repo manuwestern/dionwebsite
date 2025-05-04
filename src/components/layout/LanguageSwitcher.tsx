@@ -6,6 +6,11 @@ const LanguageSwitcher: React.FC = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    
+    // Update floating buttons text if the global function exists
+    if (window.FloatingButtons && typeof window.FloatingButtons.updateTexts === 'function') {
+      window.FloatingButtons.updateTexts(lng);
+    }
   };
 
   return (
