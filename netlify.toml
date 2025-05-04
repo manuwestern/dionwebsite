@@ -4,21 +4,20 @@
   # Der Befehl, der zum Bauen der Website verwendet wird
   command = "npm run build"
   
-  # Print debugging information after build
-  [build.environment]
-    DEBUG = "netlify-plugin-inline-functions-env"
-  
   # Das Verzeichnis, in dem die gebaute Website liegt
   publish = "dist"
   
   # Umgebungsvariablen für den Build-Prozess
-  environment = { NODE_VERSION = "18", NETLIFY_USE_PRERENDER = "true" }
+  [build.environment]
+    NODE_VERSION = "18"
+    NETLIFY_USE_PRERENDER = "true"
+    DEBUG = "netlify-plugin-inline-functions-env"
 
 # Disable the default Netlify sitemap plugin
 [[plugins]]
   package = "@netlify/plugin-sitemap"
   [plugins.inputs]
-    exclude = ['**/*']
+    exclude = ["**/*"]
 
 # Critical redirect rules - sitemap first, then SPA routing
 [[redirects]]
