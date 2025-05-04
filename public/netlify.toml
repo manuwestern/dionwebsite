@@ -1,0 +1,33 @@
+# Netlify configuration specifically for sitemap.xml
+
+# Headers for sitemap files
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/sitemap.html"
+  [headers.values]
+    Content-Type = "text/html"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/sitemap.txt"
+  [headers.values]
+    Content-Type = "text/plain"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=86400"
+
+# Ensure sitemap files are not processed
+[[build.processing.ignore]]
+  path = "sitemap.xml"
+
+[[build.processing.ignore]]
+  path = "sitemap.html"
+
+[[build.processing.ignore]]
+  path = "sitemap.txt"

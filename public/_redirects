@@ -1,3 +1,13 @@
 # Netlify Redirects
+
+# Explicitly handle sitemap files
+/sitemap.xml    /sitemap.xml   200
+/sitemap.html   /sitemap.html  200
+/sitemap.txt    /sitemap.txt   200
+
+# Fallback: Redirect sitemap.xml to alternative formats if there are issues
+/sitemap.xml    /sitemap.html  404
+/sitemap.xml    /sitemap.txt   404
+
 # Leite alle Anfragen an die index.html weiter, um clientseitiges Routing zu unterstützen
 /*    /index.html   200
