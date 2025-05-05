@@ -90,9 +90,9 @@ const PriceOverviewSection: React.FC = () => {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="bg-white/90 rounded-full w-28 h-28 flex flex-col items-center justify-center shadow-md mb-2">
-              <span className="text-[#86C166] text-sm font-medium">SPAREN SIE</span>
-              <span className="text-[#86C166] text-3xl font-bold">500€</span>
+            <div className="bg-white/90 rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md mb-2">
+              <span className="text-[#86C166] text-xs font-medium">SPAREN SIE</span>
+              <span className="text-[#86C166] text-2xl font-bold">500€</span>
             </div>
             <span className="text-white text-xs">Begrenzte Zeit</span>
           </div>

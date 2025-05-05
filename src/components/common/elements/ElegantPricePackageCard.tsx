@@ -5,6 +5,7 @@ import { fontSize, fontWeight, textColor, lineHeight } from '../../../utils/typo
 interface Price {
   title: string;
   price: string;
+  regularPrice?: string;
 }
 
 interface ElegantPricePackageCardProps {
@@ -57,10 +58,10 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
           }`}
         ></div>
         
-        {/* Spring offer badge - fixed positioning for visibility */}
+        {/* Spring offer badge - text shifted to the right */}
         {isSpringOffer && (
-          <div className="absolute -right-12 top-12 bg-[#86C166] text-white py-1 px-12 transform rotate-45 shadow-md z-10">
-            <span className="text-sm  tracking-wider">Frühjahrsangebot</span>
+          <div className="absolute -right-14 top-5 bg-[#86C166] text-white py-1.5 px-10 transform rotate-45 shadow-sm z-10">
+            <span className="text-xs font-medium tracking-wider pl-8">Frühjahrsangebot</span>
           </div>
         )}
         
@@ -87,18 +88,9 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
               <div key={i} className="flex justify-between items-center py-3 border-b border-gray-100 group">
                 <span className={`${fontSize.base} ${textColor.dark} ${fontWeight.normal}`}>{price.title}</span>
                 <div className="flex flex-col items-end">
-                  {isSpringOffer && (
+                  {isSpringOffer && price.regularPrice && (
                     <span className={`text-sm text-gray-500 line-through`}>
-                      {price.price.replace('2099€', '2599€')
-                               .replace('2499€', '2999€')
-                               .replace('2799€', '3299€')
-                               .replace('3299€', '3799€')
-                               .replace('3099€', '3599€')
-                               .replace('3499€', '3999€')
-                               .replace('3799€', '4299€')
-                               .replace('4299€', '4799€')
-                               .replace('1499€', '1699€')
-                               .replace('1899€', '2099€')}
+                      {price.regularPrice}
                     </span>
                   )}
                   <span className={`${fontSize.lg} ${isSpringOffer ? 'text-[#86C166]' : textColor.primary} ${fontWeight.medium} transition-all duration-300 group-hover:scale-110`}>

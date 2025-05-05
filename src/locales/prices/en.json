@@ -35,6 +35,22 @@
     "subtitle": "Special prices from May to June 2025 - Limited time!",
     "description": "Take advantage of our limited-time spring offer: All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
     "packageIncludes": "Package includes:",
+    "regularPrices": {
+      "basicSaphirFUEHair2000": "2599€",
+      "basicSaphirFUEHair4500": "2999€",
+      "advancedSaphirFUEHair2000": "3299€",
+      "advancedSaphirFUEHair4500": "3799€",
+      "basicDHIFUEHair2000": "3599€",
+      "basicDHIFUEHair4000": "3999€",
+      "advancedDHIFUEHair2000": "4299€",
+      "advancedDHIFUEHair4500": "4799€",
+      "saphirFUEEyebrow": "1699€",
+      "dhiFUEEyebrow": "2099€",
+      "saphirFUEBeard2000": "2599€",
+      "saphirFUEBeard4500": "2999€",
+      "dhiFUEBeard2000": "3599€",
+      "dhiFUEBeard4000": "3999€"
+    },
     "hairTransplantation": {
       "title": "Hair Transplantation",
       "description": "Our hair transplantation packages include all necessary services for a natural and permanent result.",
@@ -45,11 +61,13 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2099€"
+              "price": "2099€",
+              "regularPrice": "2599€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "2499€"
+              "price": "2499€",
+              "regularPrice": "2999€"
             }
           ],
           "features": [
@@ -64,11 +82,13 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2799€"
+              "price": "2799€",
+              "regularPrice": "3299€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "3299€"
+              "price": "3299€",
+              "regularPrice": "3799€"
             }
           ],
           "features": [
@@ -84,11 +104,13 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3099€"
+              "price": "3099€",
+              "regularPrice": "3599€"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "3499€"
+              "price": "3499€",
+              "regularPrice": "3999€"
             }
           ],
           "features": [
@@ -104,11 +126,13 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3799€"
+              "price": "3799€",
+              "regularPrice": "4299€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "4299€"
+              "price": "4299€",
+              "regularPrice": "4799€"
             }
           ],
           "features": [
@@ -131,7 +155,8 @@
           "prices": [
             {
               "title": "up to 1000 Grafts",
-              "price": "1499€"
+              "price": "1499€",
+              "regularPrice": "1699€"
             }
           ],
           "features": [
@@ -145,7 +170,8 @@
           "prices": [
             {
               "title": "Standard",
-              "price": "1899€"
+              "price": "1899€",
+              "regularPrice": "2099€"
             }
           ],
           "features": [
@@ -165,11 +191,13 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2099€"
+              "price": "2099€",
+              "regularPrice": "2599€"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "2499€"
+              "price": "2499€",
+              "regularPrice": "2999€"
             }
           ],
           "features": [
@@ -184,11 +212,13 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3099€"
+              "price": "3099€",
+              "regularPrice": "3599€"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "3499€"
+              "price": "3499€",
+              "regularPrice": "3999€"
             }
           ],
           "features": [
