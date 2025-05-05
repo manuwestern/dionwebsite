@@ -35,6 +35,13 @@
     "subtitle": "Sonderpreise von Mai bis Juni 2025 - Begrenzte Zeit!",
     "description": "Nutzen Sie unser zeitlich begrenztes Frühjahrsangebot: Alle Haar- und Barthaartransplantationen sind um 500€ reduziert, Augenbrauentransplantationen bereits ab 1499€ erhältlich.",
     "packageIncludes": "Im Paket enthalten:",
+    "springOffer": {
+      "badge": "Frühjahrsangebot",
+      "saveText": "SPAREN SIE",
+      "saveAmount": "500€",
+      "limitedTime": "Begrenzte Zeit",
+      "dateRange": "NUR MAI - JUNI 2025"
+    },
     "regularPrices": {
       "basicSaphirFUEHair2000": "2599€",
       "basicSaphirFUEHair4500": "2999€",

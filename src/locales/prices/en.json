@@ -35,6 +35,13 @@
     "subtitle": "Special prices from May to June 2025 - Limited time!",
     "description": "Take advantage of our limited-time spring offer: All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
     "packageIncludes": "Package includes:",
+    "springOffer": {
+      "badge": "Spring Offer",
+      "saveText": "SAVE",
+      "saveAmount": "500€",
+      "limitedTime": "Limited Time",
+      "dateRange": "ONLY MAY - JUNE 2025"
+    },
     "regularPrices": {
       "basicSaphirFUEHair2000": "2599€",
       "basicSaphirFUEHair4500": "2999€",

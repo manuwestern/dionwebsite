@@ -79,22 +79,22 @@ const PriceOverviewSection: React.FC = () => {
             <div className="flex items-center mb-3">
               <Flower className="h-5 w-5 mr-2" />
               <span className={`${fontSize.sm} ${fontWeight.semibold} ${tracking.wide}`}>
-                NUR MAI - JUNI 2025
+                {t('priceOverviewSection.springOffer.dateRange')}
               </span>
             </div>
             <h2 className={`${fontSize.h2} ${fontWeight.light} mb-2`}>
-              Frühjahrsaktion
+              {t('priceOverviewSection.springOffer.badge')}
             </h2>
             <p className={`${fontSize.lg} ${fontWeight.medium} max-w-xl`}>
-              Sparen Sie 500€ auf alle Haar- und Barthaartransplantationen
+              {t('heroSection.subtitle')}
             </p>
           </div>
           <div className="flex flex-col items-center">
             <div className="bg-white/90 rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md mb-2">
-              <span className="text-[#86C166] text-xs font-medium">SPAREN SIE</span>
-              <span className="text-[#86C166] text-2xl font-bold">500€</span>
+              <span className="text-[#86C166] text-xs font-medium">{t('priceOverviewSection.springOffer.saveText')}</span>
+              <span className="text-[#86C166] text-2xl font-bold">{t('priceOverviewSection.springOffer.saveAmount')}</span>
             </div>
-            <span className="text-white text-xs">Begrenzte Zeit</span>
+            <span className="text-white text-xs">{t('priceOverviewSection.springOffer.limitedTime')}</span>
           </div>
         </div>
       </div>

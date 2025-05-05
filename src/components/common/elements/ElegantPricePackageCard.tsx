@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { fontSize, fontWeight, textColor, lineHeight } from '../../../utils/typography';
+import { useTranslation } from 'react-i18next';
 
 interface Price {
   title: string;
@@ -31,6 +32,7 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
   packageIncludes,
   isSpringOffer = true // Default to true während des Aktionszeitraums
 }) => {
+  const { t } = useTranslation(['prices']);
   const isHovered = index === hoverPackage;
   
   return (
@@ -61,7 +63,9 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
         {/* Spring offer badge - text shifted to the right */}
         {isSpringOffer && (
           <div className="absolute -right-14 top-5 bg-[#86C166] text-white py-1.5 px-10 transform rotate-45 shadow-sm z-10">
-            <span className="text-xs font-medium tracking-wider pl-8">Frühjahrsangebot</span>
+            <span className="text-xs font-medium tracking-wider pl-8">
+              {t('priceOverviewSection.springOffer.badge')}
+            </span>
           </div>
         )}
         
