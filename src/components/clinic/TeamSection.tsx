@@ -47,23 +47,33 @@ const TeamSection: React.FC = () => {
                     ? 'shadow-xl transform -translate-y-1 border-[#7BA7C2]/80'
                     : 'border-gray-100/80 hover:border-[#7BA7C2]/30 hover:shadow-xl'
                 }`}>
-                  {/* Team Member Image Placeholder */}
-                  <div className={`h-48 bg-gradient-to-br from-[#7BA7C2]/20 to-[#7BA7C2]/5 flex items-center justify-center transition-all duration-300 ${
-                    isHovered ? 'bg-[#7BA7C2]/30' : ''
-                  }`}>
-                    <div className={`w-24 h-24 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center transition-all duration-500 ${
-                      isHovered ? 'scale-110 bg-[#7BA7C2]/30' : ''
-                    }`}>
-                      <span className={`${fontSize.h2} ${fontWeight.light} text-[#7BA7C2] transition-all duration-500 ${isHovered ? 'scale-110' : ''}`}>
-                        {member.name.split(' ').map((part: string) => part[0]).join('')}
-                      </span>
-                    </div>
+                  {/* Team Member Image - Square Format */}
+                  <div className="aspect-square w-full overflow-hidden">
+                    {member.name === "Blerina Bevapi" || member.name === "Dilek Ergüney" ? (
+                      <img 
+                        src={member.name === "Blerina Bevapi" ? "/images/Blerina_Bevapi.webp" : "/images/Dilek_Ergueney.webp"} 
+                        alt={member.name} 
+                        className={`w-full h-full object-cover transition-all duration-500 ${isHovered ? 'scale-105' : ''}`}
+                      />
+                    ) : (
+                      <div className={`w-full h-full bg-gradient-to-br from-[#7BA7C2]/20 to-[#7BA7C2]/5 flex items-center justify-center transition-all duration-300 ${
+                        isHovered ? 'bg-[#7BA7C2]/30' : ''
+                      }`}>
+                        <div className={`w-32 h-32 rounded-full bg-[#7BA7C2]/20 flex items-center justify-center transition-all duration-500 ${
+                          isHovered ? 'scale-110 bg-[#7BA7C2]/30' : ''
+                        }`}>
+                          <span className={`${fontSize.h1} ${fontWeight.light} text-[#7BA7C2] transition-all duration-500 ${isHovered ? 'scale-110' : ''}`}>
+                            {member.name.split(' ').map((part: string) => part[0]).join('')}
+                          </span>
+                        </div>
+                      </div>
+                    )}
                   </div>
 
-                  {/* Team Member Info */}
-                  <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50/50 flex flex-col h-auto md:h-[370px]">
+                  {/* Team Member Info - Adjusted for square images */}
+                  <div className="p-6 md:p-8 bg-gradient-to-b from-white to-gray-50/50 flex flex-col h-auto md:h-[300px]">
                     {/* Name and title area - responsive height on mobile */}
-                    <div className="min-h-[80px] md:h-[100px] flex flex-col justify-start">
+                    <div className="min-h-[70px] md:h-[80px] flex flex-col justify-start">
                       <h3 className={`${textStyle.cardTitle} mb-1 text-center`}>{member.name}</h3>
                       <p className={`${fontSize.sm} ${textColor.primary} ${fontWeight.medium} ${tracking.wide} uppercase mb-0 text-center`}>
                         {member.title}
@@ -71,7 +81,7 @@ const TeamSection: React.FC = () => {
                     </div>
                     
                     {/* Description area - auto height on mobile */}
-                    <div className="min-h-[100px] md:h-[140px] md:overflow-hidden">
+                    <div className="min-h-[80px] md:overflow-hidden md:h-[120px]">
                       <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
                         {member.description}
                       </p>
@@ -94,8 +104,6 @@ const TeamSection: React.FC = () => {
             );
           })}
         </div>
-
-        
       </div>
     </section>
   );

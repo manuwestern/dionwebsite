@@ -57,10 +57,10 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
           }`}
         ></div>
         
-        {/* Spring offer badge - text shifted to the right */}
+        {/* Spring offer badge - fixed positioning for visibility */}
         {isSpringOffer && (
-          <div className="absolute -right-14 top-7 bg-[#86C166] text-white py-1.5 px-16 transform rotate-45 shadow-sm z-10">
-            <span className="text-xs font-medium tracking-wider pl-8">Frühjahrsangebot</span>
+          <div className="absolute -right-12 top-12 bg-[#86C166] text-white py-1 px-12 transform rotate-45 shadow-md z-10">
+            <span className="text-sm  tracking-wider">Frühjahrsangebot</span>
           </div>
         )}
         
