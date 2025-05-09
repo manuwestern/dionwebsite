@@ -46,8 +46,8 @@ const OptionCard: React.FC<OptionCardProps> = ({
           <h3 className={`${fontSize.h3} ${fontWeight.medium} ${textColor.dark} min-h-[60px] flex items-center`}>{title}</h3>
         </div>
         
-        {/* Description - Fixed height to ensure consistent layout */}
-        <div className="h-[120px]">
+        {/* Description - Fixed height on desktop, auto on mobile */}
+        <div className="h-auto md:h-[120px] mb-6 md:mb-0">
           <p className={`${fontSize.base} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed}`}>
             {description}
           </p>
