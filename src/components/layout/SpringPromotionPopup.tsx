@@ -176,7 +176,7 @@ const SpringPromotionPopup: React.FC = () => {
                     </svg>
                   </div>
                   <span className={`${fontSize.sm} ${textColor.medium}`}>
-                    <strong>3 kostenlose PRP-Behandlungen</strong> im Wert von 750€
+                    <strong>3 kostenlose Mesotherapie-Behandlungen</strong> im Wert von 750€
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -236,10 +236,10 @@ const SpringPromotionPopup: React.FC = () => {
                 </div>
                 <div>
                   <span className={`${fontSize.sm} ${fontWeight.medium} ${textColor.dark}`}>
-                    Kostenlose PRP-Behandlungen
+                    Kostenlose Mesotherapie-Behandlungen
                   </span>
                   <p className={`${fontSize.sm} ${textColor.medium}`}>
-                    Die 3 inkludierten PRP-Behandlungen optimieren Ihren Heilungsprozess und verbessern das Ergebnis.
+                    Die 3 inkludierten Mesotherapie-Behandlungen optimieren Ihren Heilungsprozess und verbessern das Ergebnis.
                   </p>
                 </div>
               </li>
