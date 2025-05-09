@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Termin buchen | Dion Hair Clinic",
+    "description": "Buchen Sie einen Termin für ein kostenloses Beratungsgespräch oder eine Mesotherapie-Behandlung in der Dion Hair Clinic."
+  },
+  "bookingSection": {
+    "title": "Termin buchen",
+    "subtitle": "Wählen Sie die gewünschte Option",
+    "personalOption": {
+      "title": "Kostenloses Persönliches Beratungsgespräch",
+      "description": "Besuchen Sie uns in unserer Klinik für eine ausführliche persönliche Beratung mit detaillierter Haaranalyse.",
+      "benefits": [
+        "Ausführliche Haaranalyse mit modernster Technik",
+        "Persönliches Kennenlernen unseres Teams",
+        "Besichtigung unserer Klinik und Einrichtungen",
+        "Detaillierte Behandlungsplanung"
+      ]
+    },
+    "phoneOption": {
+      "title": "Kostenloses Telefonisches Beratungsgespräch",
+      "description": "Bequem von zu Hause aus - Unsere Experten beraten Sie telefonisch zu allen Fragen rund um Haartransplantation und Haarausfalltherapie.",
+      "benefits": [
+        "Zeitersparnis ohne Anfahrt",
+        "Flexible Terminvereinbarung",
+        "Diskrete Beratung in vertrauter Umgebung",
+        "Erste Einschätzung Ihrer Situation"
+      ]
+    },
+    "mesotherapyOption": {
+      "title": "Kostenlose Mesotherapie Behandlung",
+      "description": "Speziell für Haartransplantationspatienten - Stärken Sie Ihr Haarwachstum mit unserer effektiven Mesotherapie-Behandlung.",
+      "benefits": [
+        "Stärkung der Haarfollikel",
+        "Verbesserung der Durchblutung der Kopfhaut",
+        "Optimale Nährstoffversorgung",
+        "Unterstützung des Haarwachstums nach der Transplantation"
+      ]
+    },
+    "chooseButton": "Termin vereinbaren"
+  }
+}

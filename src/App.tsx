@@ -27,6 +27,7 @@ const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const KnowledgePage = lazy(() => import('./pages/KnowledgePage'));
 const PricesPage = lazy(() => import('./pages/PricesPage'));
+const AppointmentBookingPage = lazy(() => import('./pages/AppointmentBookingPage'));
 
 // Component to track route changes
 const RouteTracker: React.FC = () => {
@@ -68,6 +69,7 @@ const App: React.FC = React.memo(() => {
                   <Route path="/agb" element={<TermsPage />} />
                   <Route path="/wissenswertes" element={<KnowledgePage />} />
                   <Route path="/preise" element={<PricesPage />} />
+                  <Route path="/termin-buchen" element={<AppointmentBookingPage />} />
                   {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
                   <Route path="*" element={<NotFoundPage />} />
                 </Routes>

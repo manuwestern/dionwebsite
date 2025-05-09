@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Book Appointment | Dion Hair Clinic",
+    "description": "Book an appointment for a free consultation or mesotherapy treatment at Dion Hair Clinic."
+  },
+  "bookingSection": {
+    "title": "Book an Appointment",
+    "subtitle": "Choose your preferred option",
+    "personalOption": {
+      "title": "Free In-Person Consultation",
+      "description": "Visit us at our clinic for a detailed personal consultation with comprehensive hair analysis.",
+      "benefits": [
+        "Detailed hair analysis using state-of-the-art technology",
+        "Meet our team in person",
+        "Tour of our clinic and facilities",
+        "Detailed treatment planning"
+      ]
+    },
+    "phoneOption": {
+      "title": "Free Phone Consultation",
+      "description": "Convenient from the comfort of your home - Our experts provide phone consultations on all aspects of hair transplantation and hair loss therapy.",
+      "benefits": [
+        "Save time with no travel required",
+        "Flexible appointment scheduling",
+        "Discreet consultation in familiar surroundings",
+        "Initial assessment of your situation"
+      ]
+    },
+    "mesotherapyOption": {
+      "title": "Free Mesotherapy Treatment",
+      "description": "Specifically for hair transplantation patients - Strengthen your hair growth with our effective mesotherapy treatment.",
+      "benefits": [
+        "Strengthening of hair follicles",
+        "Improved blood circulation to the scalp",
+        "Optimal nutrient supply",
+        "Support for hair growth after transplantation"
+      ]
+    },
+    "chooseButton": "Schedule Appointment"
+  }
+}
