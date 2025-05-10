@@ -176,7 +176,7 @@ const SpringPromotionPopup: React.FC = () => {
                     </svg>
                   </div>
                   <span className={`${fontSize.sm} ${textColor.medium}`}>
-                    <strong>3 kostenlose Kopfhautbehandlungen</strong> im Wert von 750€
+                    <strong>3 kostenlose Augenbrauenbehandlungen</strong> im Wert von 750€
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -236,10 +236,10 @@ const SpringPromotionPopup: React.FC = () => {
                 </div>
                 <div>
                   <span className={`${fontSize.sm} ${fontWeight.medium} ${textColor.dark}`}>
-                    Kostenlose Kopfhautbehandlungen
+                    Kostenlose Augenbrauenbehandlungen
                   </span>
                   <p className={`${fontSize.sm} ${textColor.medium}`}>
-                    Die 3 inkludierten Kopfhautbehandlungen unterstützen Ihren Heilungsprozess und tragen zur Pflege der Kopfhaut bei.
+                    Die 3 inkludierten Augenbrauenbehandlungen unterstützen Ihren Heilungsprozess und tragen zur Pflege bei.
                   </p>
                 </div>
               </li>
