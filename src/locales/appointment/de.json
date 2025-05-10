@@ -26,5 +26,40 @@
     "title": "Vielen Dank für Ihre Anfrage",
     "message": "Wir werden uns in Kürze mit Ihnen in Verbindung setzen, um einen Termin zu vereinbaren.",
     "back": "Zurück zur Startseite"
+  },
+  "bookingSection": {
+    "title": "Terminbuchung",
+    "subtitle": "Wählen Sie die Art der Beratung, die Sie wünschen",
+    "chooseButton": "Termin vereinbaren",
+    "phoneOption": {
+      "title": "Kostenloses Telefonisches Beratungsgespräch",
+      "description": "Sprechen Sie bequem von zu Hause aus mit einem unserer Experten über Ihre Fragen und Anliegen.",
+      "benefits": [
+        "Bequem von zu Hause aus",
+        "Keine Anreise notwendig",
+        "Flexible Terminplanung",
+        "Persönliche Beratung durch Experten"
+      ]
+    },
+    "personalOption": {
+      "title": "Kostenloses Persönliches Beratungsgespräch",
+      "description": "Besuchen Sie uns in unserer Klinik für ein ausführliches Beratungsgespräch mit einem unserer Experten.",
+      "benefits": [
+        "Detaillierte Haaranalyse vor Ort",
+        "Persönliches Gespräch mit Experten",
+        "Besichtigung unserer modernen Klinik",
+        "Individuelle Behandlungsempfehlungen"
+      ]
+    },
+    "mesotherapyOption": {
+      "title": "Kostenlose Mesotherapie Behandlung",
+      "description": "Für Haartransplantationspatienten bieten wir eine kostenlose Mesotherapie-Behandlung an.",
+      "benefits": [
+        "Stimuliert die Haarfollikel",
+        "Verbessert die Durchblutung der Kopfhaut",
+        "Stärkt vorhandene Haare",
+        "Fördert das Haarwachstum"
+      ]
+    }
   }
 }
