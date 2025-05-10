@@ -1,93 +1,66 @@
-import React, { useRef, useEffect } from 'react';
-import SEO from '../components/seo/SEO';
-import StructuredData from '../components/seo/StructuredData';
-import BookingOptionsSection from '../components/appointment/BookingOptionsSection';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from 'react';
 
-// Section wrapper component for elegant, subtle styling
-interface SectionWrapperProps {
-  children: React.ReactNode;
-  type: 'light' | 'medium' | 'accent' | 'pattern' | 'hero';
-  className?: string;
-}
-
-const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, type, className = '' }) => {
-  let sectionClasses = '';
-  
-  switch (type) {
-    case 'light':
-      sectionClasses = 'bg-white';
-      break;
-    case 'medium':
-      sectionClasses = 'bg-gray-50 border-t border-b border-gray-200/50';
-      break;
-    case 'accent':
-      sectionClasses = 'bg-[#F8FAFC] border-t border-b border-[#7BA7C2]/10';
-      break;
-    case 'pattern':
-      sectionClasses = 'bg-gray-50 border-t border-b border-gray-200/70';
-      break;
-    case 'hero':
-      sectionClasses = 'bg-gradient-to-b from-[#F8FAFC] to-white';
-      break;
-    default:
-      sectionClasses = 'bg-white';
-  }
-
-  return (
-    <div className={`relative ${sectionClasses} ${className}`}>
-      <div className="relative">
-        {children}
-      </div>
-    </div>
-  );
-};
-
+// Main appointment booking page component
 const AppointmentBookingPage: React.FC = () => {
-  const { t } = useTranslation(['appointment', 'common']);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   
-  // Create refs for potential scroll animations
-  const pageRef = useRef<HTMLDivElement>(null);
-
-  // Hide the floating appointment button on this page
-  useEffect(() => {
-    // Get the appointment button
-    const appointmentButton = document.getElementById('appointment-button');
-    
-    // Hide the button if it exists
-    if (appointmentButton) {
-      appointmentButton.style.display = 'none';
+  // Appointment options
+  const options = [
+    {
+      id: 'personal',
+      title: 'Kostenloses Persönliches Beratungsgespräch',
+      description: 'Besuchen Sie uns in unserer Klinik für ein ausführliches Beratungsgespräch mit einem unserer Experten.'
+    },
+    {
+      id: 'phone',
+      title: 'Kostenloses Telefonisches Beratungsgespräch',
+      description: 'Sprechen Sie bequem von zu Hause aus mit einem unserer Experten über Ihre Fragen und Anliegen.'
+    },
+    {
+      id: 'mesotherapy',
+      title: 'Kostenlose Mesotherapie Behandlung',
+      description: 'Für Haartransplantationspatienten bieten wir eine kostenlose Mesotherapie-Behandlung an.'
     }
-    
-    // Show the button again when the component unmounts
-    return () => {
-      if (appointmentButton) {
-        appointmentButton.style.display = 'flex';
-      }
-    };
-  }, []);
-
+  ];
+  
   return (
-    <div ref={pageRef} className="relative">
-      <SEO namespace="appointment" />
-      <StructuredData 
-        type="WebPage"
-        data={{
-          type: "WebPage",
-          name: t('meta.title', { ns: 'appointment' }),
-          description: t('meta.description', { ns: 'appointment' }),
-          url: "https://www.dionhairclinic.com/termin-buchen"
-        }}
-      />
+    <>
+      <div className="bg-gradient-to-b from-[#F8FAFC] to-white">
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+              Terminbuchung
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 mb-8">
+              Wählen Sie die Art der Beratung, die Sie wünschen
+            </p>
+          </div>
+        </div>
+      </div>
       
-      {/* Main Content */}
-      <SectionWrapper type="medium">
-        <BookingOptionsSection />
-      </SectionWrapper>
-      
-      {/* Subtle page overlay for depth effect */}
-      <div className="pointer-events-none fixed inset-0 z-30 opacity-30 bg-radial-gradient"></div>
-    </div>
+      <div className="bg-white">
+        <div className="container mx-auto px-4 py-12 md:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {options.map(option => (
+              <div 
+                key={option.id}
+                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                onClick={() => setSelectedOption(option.id)}
+              >
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{option.title}</h3>
+                <p className="text-gray-600 mb-4">{option.description}</p>
+                <button 
+                  className="bg-[#7BA7C2] text-white px-6 py-2 rounded-md hover:bg-[#6A96B1] transition-colors"
+                  onClick={() => setSelectedOption(option.id)}
+                >
+                  Termin vereinbaren
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

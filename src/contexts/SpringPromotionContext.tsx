@@ -1,4 +1,44 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
+import { PromotionConfig } from '../components/layout/PromotionPopup';
+
+// Promotion configurations for different treatment types
+export const promotionConfigs: Record<string, PromotionConfig> = {
+  hair: {
+    treatmentType: 'hair',
+    title: 'Frühjahrsaktion',
+    subtitle: 'Limitiertes Angebot zur Haartransplantation',
+    originalPrice: 3499,
+    discountPrice: 2499,
+    benefits: [
+      'Maximale Anzahl an Grafts inklusive'
+    ],
+    therapyCount: 3,
+    therapyValue: 750,
+    testimonial: {
+      text: 'Die Haartransplantation bei Dion Hair Clinic war die beste Entscheidung. Das Ergebnis übertrifft alle meine Erwartungen!',
+      author: 'Michael K., zufriedener Patient'
+    },
+    whatsAppMessage: 'Hallo, ich interessiere mich für das Frühjahrsangebot (Haartransplantation für 2499€).'
+  },
+  eyebrow: {
+    treatmentType: 'eyebrow',
+    title: 'Frühjahrsaktion',
+    subtitle: 'Limitiertes Angebot zur Augenbrauentransplantation',
+    originalPrice: 2499,
+    discountPrice: 1499,
+    benefits: [
+      'Natürlich aussehende, dichte Augenbrauen'
+    ],
+    therapyCount: 2,
+    therapyValue: 500,
+    testimonial: {
+      text: 'Meine Augenbrauentransplantation bei Dion Hair Clinic hat mein Gesicht komplett verändert. Ich bin begeistert von dem natürlichen Ergebnis!',
+      author: 'Sandra L., zufriedene Patientin'
+    },
+    whatsAppMessage: 'Hallo, ich interessiere mich für das Frühjahrsangebot (Augenbrauentransplantation für 1499€).'
+  }
+};
 
 interface SpringPromotionContextType {
   showPopup: boolean;
@@ -6,6 +46,8 @@ interface SpringPromotionContextType {
   openPopup: () => void;
   closePopup: () => void;
   hasSeenPopup: boolean;
+  currentTreatmentType: 'hair' | 'eyebrow' | 'beard' | null;
+  getCurrentConfig: () => PromotionConfig | null;
 }
 
 const SpringPromotionContext = createContext<SpringPromotionContextType | undefined>(undefined);
@@ -17,9 +59,27 @@ interface SpringPromotionProviderProps {
 export const SpringPromotionProvider: React.FC<SpringPromotionProviderProps> = ({ 
   children
 }) => {
+  const location = useLocation();
   const [showPopup, setShowPopup] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [hasSeenPopup, setHasSeenPopup] = useState(false);
+  const [currentTreatmentType, setCurrentTreatmentType] = useState<'hair' | 'eyebrow' | 'beard' | null>(null);
+  
+  // Determine current treatment type based on route
+  useEffect(() => {
+    console.log('Current location:', location.pathname);
+    
+    if (location.pathname.includes('augenbrauentransplantation')) {
+      console.log('Setting treatment type to eyebrow');
+      setCurrentTreatmentType('eyebrow');
+    } else if (location.pathname.includes('barthaartransplantation')) {
+      console.log('Setting treatment type to beard');
+      setCurrentTreatmentType('beard');
+    } else {
+      console.log('Setting treatment type to hair');
+      setCurrentTreatmentType('hair');
+    }
+  }, [location]);
   
   // Check localStorage on mount to see if user has already seen the popup
   useEffect(() => {
@@ -60,17 +120,27 @@ export const SpringPromotionProvider: React.FC<SpringPromotionProviderProps> = (
     }, 300);
   };
   
+  const getCurrentConfig = (): PromotionConfig | null => {
+    if (!currentTreatmentType || !promotionConfigs[currentTreatmentType]) {
+      return null;
+    }
+    return promotionConfigs[currentTreatmentType];
+  };
+  
   // Memoize context value to prevent unnecessary re-renders
   const value = React.useMemo(() => ({
     showPopup,
     isClosing,
     openPopup,
     closePopup,
-    hasSeenPopup
+    hasSeenPopup,
+    currentTreatmentType,
+    getCurrentConfig
   }), [
     showPopup,
     isClosing,
-    hasSeenPopup
+    hasSeenPopup,
+    currentTreatmentType
   ]);
   
   return (
