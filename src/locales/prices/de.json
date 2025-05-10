@@ -80,7 +80,7 @@
           "features": [
             "Normale Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "3 Mesotherapie Behandlungen"
+            "3 unterstützende Kopfhautbehandlungen"
           ]
         },
         "advancedSaphirFUE": {
@@ -102,7 +102,7 @@
             "Haarausfall Blut- und Mikronährstoffanalyse",
             "Schmerzfreie Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "4 Mesotherapie Behandlungen"
+            "4 unterstützende Kopfhautbehandlungen"
           ]
         },
         "basicDHIFUE": {
@@ -124,7 +124,7 @@
             "Keine Rasur des Haupthaars",
             "Normale Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "3 Mesotherapie Behandlungen"
+            "3 unterstützende Kopfhautbehandlungen"
           ]
         },
         "advancedDHIFUE": {
@@ -147,7 +147,7 @@
             "Haarausfall Blut- und Mikronährstoffanalyse",
             "Schmerzfreie Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "4 Mesotherapie Behandlungen"
+            "4 unterstützende Kopfhautbehandlungen"
           ]
         }
       }
@@ -168,7 +168,7 @@
           ],
           "features": [
             "Nackenkissen und Pflegeshampoo",
-            "1 Mesotherapie Behandlung"
+            "1 unterstützende Kopfhautbehandlung"
           ]
         },
         "dhiFUE": {
@@ -183,7 +183,7 @@
           ],
           "features": [
             "Nackenkissen und Pflegeshampoo",
-            "1 Mesotherapie Behandlung"
+            "1 unterstützende Kopfhautbehandlung"
           ]
         }
       }
@@ -210,7 +210,7 @@
           "features": [
             "Normale Betäubung",
             "Pflegeshampoo",
-            "3 Mesotherapie Behandlungen"
+            "3 unterstützende Kopfhautbehandlungen"
           ]
         },
         "dhiFUE": {
@@ -232,7 +232,7 @@
             "Keine Rasur des Haupthaars",
             "Normale Betäubung",
             "Nackenkissen und Pflegeshampoo",
-            "3 Mesotherapie Behandlungen"
+            "3 unterstützende Kopfhautbehandlungen"
           ]
         }
       }
@@ -247,14 +247,14 @@
           "description": "Umfassende Analyse der Ursachen Ihres Haarausfalls für eine gezielte Behandlung."
         },
         {
-          "title": "Basic Mesotherapie Behandlung",
+          "title": "Basic Kopfhautbehandlung",
           "price": "179€",
-          "description": "Stimuliert das Haarwachstum und verbessert die Haarqualität."
+          "description": "Unterstützende Behandlung zur Verbesserung der Kopfhautgesundheit."
         },
         {
-          "title": "Advanced Mesotherapie Behandlung",
+          "title": "Advanced Kopfhautbehandlung",
           "price": "239€",
-          "description": "Erweiterte Mesotherapie Behandlung mit zusätzlichen Wachstumsfaktoren."
+          "description": "Erweiterte Kopfhautbehandlung mit zusätzlichen Nährstoffen."
         },
         {
           "title": "Mikronährstoff - Infusionstherapie",

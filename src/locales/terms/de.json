@@ -42,7 +42,7 @@
     },
     "hairLossTherapy": {
       "title": "Haarausfalltherapie",
-      "text": "Die Haarausfalltherapie umfasst verschiedene Behandlungsmethoden wie Mesotherapie und medikamentöse Behandlungen, die individuell auf den Patienten abgestimmt werden."
+      "text": "Die Haarausfalltherapie umfasst verschiedene Behandlungsmethoden wie unterstützende Kopfhautbehandlungen und medikamentöse Behandlungen, die individuell auf den Patienten abgestimmt werden."
     }
   },
   "patientObligations": {
@@ -131,12 +131,12 @@
     },
     "appointments": {
       "title": "Nachsorgetermine",
-      "text": "Die Termine für die zwei Nachsorgeuntersuchungen in Kombination mit den Mesotherapie-Behandlungen werden zu folgenden Zeitpunkten empfohlen: Erster Kontrolltermin: 4-6 Wochen nach dem Eingriff, Zweiter Kontrolltermin: 6-8 Monate nach dem Eingriff.",
+      "text": "Die Termine für die zwei Nachsorgeuntersuchungen in Kombination mit den unterstützenden Kopfhautbehandlungen werden zu folgenden Zeitpunkten empfohlen: Erster Kontrolltermin: 4-6 Wochen nach dem Eingriff, Zweiter Kontrolltermin: 6-8 Monate nach dem Eingriff.",
       "responsibility": "Der Patient wird ausdrücklich darauf hingewiesen, dass er selbst für die Vereinbarung dieser Nachsorgetermine verantwortlich ist und diese eigenständig buchen muss. Die Klinik sendet keine automatischen Erinnerungen für diese Termine."
     },
     "services": {
       "title": "Nachsorgeleistungen",
-      "text": "Die Nachsorge umfasst 2 Kontrollen nach dem Eingriff in Kombination mit einer Mesotherapie Behandlung."
+      "text": "Die Nachsorge umfasst 2 Kontrollen nach dem Eingriff in Kombination mit einer unterstützenden Kopfhautbehandlung."
     },
     "warning": {
       "title": "Hinweis",
@@ -155,11 +155,11 @@
     "title": "Medikamenteneinnahme und ergänzende Therapien",
     "general": {
       "title": "Allgemeines",
-      "text": "Der Patient wurde darüber informiert, dass folgende Medikamente oder Therapien das Ergebnis der Haartransplantation unterstützen können: Minoxidil-Lösung (frühestens 14 Tage nach dem Eingriff anwendbar), Finasterid (nach ärztlicher Verschreibung und Beratung), Mesotherapie (frühestens 3 Monate nach dem Eingriff möglich)."
+      "text": "Der Patient wurde darüber informiert, dass folgende Medikamente oder Therapien das Ergebnis der Haartransplantation unterstützen können: Minoxidil-Lösung (frühestens 14 Tage nach dem Eingriff anwendbar), Finasterid (nach ärztlicher Verschreibung und Beratung), unterstützende Kopfhautbehandlungen (frühestens 3 Monate nach dem Eingriff möglich)."
     },
     "mesotherapy": {
-      "title": "Mesotherapie-Behandlungen",
-      "text": "Die im Rahmen der Nachsorge enthaltenen Mesotherapie-Behandlungen werden in Kombination mit den Nachsorgeterminen durchgeführt. Mesotherapie fördert die Wundheilung und kann das Haarwachstum nach der Transplantation unterstützen."
+      "title": "Unterstützende Kopfhautbehandlungen",
+      "text": "Die im Rahmen der Nachsorge enthaltenen Kopfhautbehandlungen werden in Kombination mit den Nachsorgeterminen durchgeführt. Diese Behandlungen können die Wundheilung unterstützen und zur Pflege der Kopfhaut nach der Transplantation beitragen."
     },
     "additionalTherapies": {
       "title": "Ergänzende Therapien",

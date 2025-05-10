@@ -198,10 +198,10 @@
       {
         "title": "Langzeitbetreuung",
         "duration": "12+ Monate",
-        "description": "Unser Engagement endet nicht nach der Nachsorgephase. Wir begleiten Sie langfristig und dokumentieren Ihren Fortschritt über mindestens 12 Monate. Regelmäßige Mesotherapie-Behandlungen zur Stimulation des Haarwachstums sind Teil unseres umfassenden Langzeitkonzepts. Durch individualisierte Check-ups und Beratung zu Haarpflege stellen wir sicher, dass Sie lange Freude an Ihrem Ergebnis haben.",
+        "description": "Unser Engagement endet nicht nach der Nachsorgephase. Wir begleiten Sie langfristig und dokumentieren Ihren Fortschritt über mindestens 12 Monate. Regelmäßige unterstützende Kopfhautbehandlungen sind Teil unseres umfassenden Langzeitkonzepts. Durch individualisierte Check-ups und Beratung zu Haarpflege stellen wir sicher, dass Sie lange Freude an Ihrem Ergebnis haben.",
         "features": [
           "Dokumentierte Erfolgskontrolle über mindestens 12 Monate",
-          "Regelmäßige Mesotherapie-Behandlungen zur Wachstumsförderung",
+          "Regelmäßige unterstützende Kopfhautbehandlungen",
           "Individuelle Beratung zu Haarpflege und -erhalt",
           "Lebenslange Unterstützung bei weiteren Haarproblemen"
         ]
@@ -405,7 +405,7 @@
       },
       {
         "question": "Welche nicht-chirurgischen Therapien bieten Sie gegen Haarausfall an?",
-        "answer": "Wir bieten verschiedene nicht-chirurgische Therapien an: Mesotherapie-Behandlungen, medikamentöse Therapien und Nährstoffbehandlungen. Diese Therapien stimulieren das Wachstum vorhandener Haare und verhindern weiteren Haarausfall. Oft kombinieren wir verschiedene Methoden für optimale Ergebnisse.",
+        "answer": "Wir bieten verschiedene nicht-chirurgische Therapien an: unterstützende Kopfhautbehandlungen, medikamentöse Therapien und Nährstoffberatung. Diese Therapien können die Kopfhautgesundheit verbessern und bei der Erhaltung vorhandener Haare helfen. Oft kombinieren wir verschiedene Methoden für individuelle Lösungen.",
         "category": "therapy"
       },
       {

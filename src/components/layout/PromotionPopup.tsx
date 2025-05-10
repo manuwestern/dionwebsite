@@ -209,7 +209,7 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
                     </svg>
                   </div>
                   <span className={`${fontSize.sm} ${textColor.medium}`}>
-                    <strong>{config.therapyCount} kostenlose Mesotherapie-Behandlungen</strong> im Wert von {config.therapyValue}€
+                    <strong>{config.therapyCount} kostenlose Kopfhautbehandlungen</strong> im Wert von {config.therapyValue}€
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -269,10 +269,10 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
                 </div>
                 <div>
                   <span className={`${fontSize.sm} ${fontWeight.medium} ${textColor.dark}`}>
-                    Kostenlose Mesotherapie-Behandlungen
+                    Kostenlose Kopfhautbehandlungen
                   </span>
                   <p className={`${fontSize.sm} ${textColor.medium}`}>
-                    Die {config.therapyCount} inkludierten Mesotherapie-Behandlungen optimieren Ihren Heilungsprozess und verbessern das Ergebnis.
+                    Die {config.therapyCount} inkludierten Kopfhautbehandlungen unterstützen Ihren Heilungsprozess und tragen zur Pflege der Kopfhaut bei.
                   </p>
                 </div>
               </li>
