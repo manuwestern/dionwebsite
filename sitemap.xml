@@ -1,15 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.dionhairclinic.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.dionhairclinic.com/haartransplantation</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-<url><loc>https://www.dionhairclinic.com/barthaartransplantation</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-<url><loc>https://www.dionhairclinic.com/augenbrauentransplantation</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-<url><loc>https://www.dionhairclinic.com/preise</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-<url><loc>https://www.dionhairclinic.com/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.dionhairclinic.com/klinik</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.dionhairclinic.com/wissenswertes</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.dionhairclinic.com/impressum</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-<url><loc>https://www.dionhairclinic.com/datenschutz</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-<url><loc>https://www.dionhairclinic.com/agb</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-<url><loc>https://www.dionhairclinic.com/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+  <loc>https://www.dionhairclinic.com/</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/"/>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/haartransplantation</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/haartransplantation"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/haartransplantation"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/haartransplantation"/>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/barthaartransplantation</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/barthaartransplantation"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/barthaartransplantation"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/barthaartransplantation"/>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/augenbrauentransplantation</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/augenbrauentransplantation"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/augenbrauentransplantation"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/augenbrauentransplantation"/>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/preise</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/preise"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/preise"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/preise"/>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/kontakt</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/kontakt"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/kontakt"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/kontakt"/>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/klinik</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/klinik"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/klinik"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/klinik"/>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/wissenswertes</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/wissenswertes"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/wissenswertes"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/wissenswertes"/>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/impressum</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/impressum"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/impressum"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/impressum"/>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/datenschutz</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/datenschutz"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/datenschutz"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/datenschutz"/>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/agb</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/agb"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/agb"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/agb"/>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://www.dionhairclinic.com/cookies</loc>
+  <xhtml:link rel="alternate" hreflang="de" href="https://www.dionhairclinic.com/cookies"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.dionhairclinic.com/cookies"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dionhairclinic.com/cookies"/>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
 </urlset>

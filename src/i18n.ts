@@ -84,7 +84,15 @@ i18n
   .init({
     resources,
     fallbackLng: 'de',
+    lng: 'de', // Force German as default language
     debug: false, // Set to true for development
+    detection: {
+      // Order of language detection - prioritize path and cookie over browser settings
+      order: ['path', 'cookie', 'localStorage', 'navigator'],
+      lookupCookie: 'i18next',
+      lookupLocalStorage: 'i18nextLng',
+      caches: ['localStorage', 'cookie']
+    },
     
     // have a common namespace used around the full app
     ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact', 'imprint', 'privacy', 'terms', 'cookies', 'knowledge', 'prices', 'newsletter'],
