@@ -1,6 +1,10 @@
 # Aktiviere die Rewrite-Engine
 RewriteEngine On
 
+# Spezifische Weiterleitung für die alte index.html
+RewriteCond %{HTTP_HOST} ^(www\.)?dionhairclinic\.de$ [NC]
+RewriteRule ^index\.html$ https://www.dionhairclinic.com/ [R=301,L]
+
 # Wenn es sich nicht um eine Datei oder ein Verzeichnis handelt
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

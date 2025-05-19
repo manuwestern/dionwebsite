@@ -1,3 +1,7 @@
+# Specific redirect for old index.html
+https://www.dionhairclinic.de/index.html    https://www.dionhairclinic.com/    301!
+https://dionhairclinic.de/index.html    https://www.dionhairclinic.com/    301!
+
 # Direct access to sitemap
 /sitemap.xml    /sitemap.xml   200
 

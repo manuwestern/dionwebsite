@@ -14,6 +14,19 @@
     DEBUG = "netlify-plugin-inline-functions-env"
 
 # Domain redirects - ensure all traffic goes to www.dionhairclinic.com
+# Specific redirect for index.html
+[[redirects]]
+  from = "https://www.dionhairclinic.de/index.html"
+  to = "https://www.dionhairclinic.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://dionhairclinic.de/index.html"
+  to = "https://www.dionhairclinic.com/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "https://dionhairclinic.de/*"
   to = "https://www.dionhairclinic.com/:splat"

@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "https://www.dionhairclinic.de/index.html", "destination": "https://www.dionhairclinic.com/", "permanent": true },
+    { "source": "https://dionhairclinic.de/index.html", "destination": "https://www.dionhairclinic.com/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
