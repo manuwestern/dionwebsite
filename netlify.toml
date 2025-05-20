@@ -58,6 +58,13 @@
   status = 301
   force = true
 
+# Redirect for index.html on primary domain
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
 # Critical redirect rules - sitemap first, then SPA routing
 [[redirects]]
   from = "/sitemap.xml"
