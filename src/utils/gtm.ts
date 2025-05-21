@@ -20,7 +20,17 @@ export enum TreatmentType {
   HAIR_LOSS_THERAPY = 'hair_loss_therapy'
 }
 
-// Note: DataLayer initialization is now handled by gtm-consent.ts
+// Initialize DataLayer
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
+// Initialize DataLayer
+if (typeof window !== 'undefined') {
+  window.dataLayer = window.dataLayer || [];
+}
 
 /**
  * Sendet Daten an den DataLayer

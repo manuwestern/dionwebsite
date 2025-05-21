@@ -172,18 +172,6 @@ const FooterSection: React.FC = () => {
             <Link to="/impressum" className="hover:text-white transition-colors">{t('footer.legal.imprint')}</Link>
             <Link to="/datenschutz" className="hover:text-white transition-colors">{t('footer.legal.privacy')}</Link>
             <Link to="/agb" className="hover:text-white transition-colors">{t('footer.legal.terms')}</Link>
-            <button 
-              onClick={() => {
-                // Trigger cookie settings dialog if available
-                const cookieSettings = document.getElementById('cookie-settings-button');
-                if (cookieSettings) {
-                  cookieSettings.click();
-                }
-              }} 
-              className="hover:text-white transition-colors cursor-pointer"
-            >
-              {t('footer.legal.cookies')}
-            </button>
           </div>
         </div>
       </div>
