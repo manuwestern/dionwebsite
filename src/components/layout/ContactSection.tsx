@@ -306,7 +306,7 @@ const ContactSection: React.FC = () => {
                     </div>
                     <div>
                       <h4 className={`${fontSize.lg} ${fontWeight.light} ${textColor.dark} mb-1`}>{t('contact.whatsapp', { ns: 'common' })}</h4>
-                      <a href="https://wa.me/491702637818" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
+                      <a href="https://wa.me/491702637818" target="_blank" rel="noopener noreferrer" className={`${fontSize.base} ${textColor.medium} hover:text-[#7BA7C2] transition-colors`}>
                         +49 170 2637818
                       </a>
                       <p className={`${fontSize.sm} ${textColor.light} ${lineHeight.relaxed} mt-1`}>
