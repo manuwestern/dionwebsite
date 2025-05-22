@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Preise & Frühjahrsangebot | Dion Hair Clinic",
-    "description": "Unser Frühjahrsangebot: Haartransplantation ab 2099€! Sichern Sie sich jetzt unsere reduzierten Preise - nur von Mai bis Juni 2025 gültig."
+    "title": "Haartransplantation Preise in NRW, Köln, Düsseldorf & Deutschland | Dion Hair Clinic",
+    "description": "Transparente Preise für Haartransplantation, Barthaartransplantation und Augenbrauentransplantation in Deutschland. Saphir-FUE ab 2099€, DHI ab 3099€. Kostenlose Beratung in Mönchengladbach, nahe Köln und Düsseldorf.",
+    "keywords": "Haartransplantation Preise, Haartransplantation Kosten, Barthaartransplantation Preise, Augenbrauentransplantation Preise, Haartransplantation Deutschland Preise, Haartransplantation NRW Kosten, Haartransplantation Düsseldorf Preise, Haartransplantation Köln Kosten"
   },
   "heroSection": {
     "title": "Frühjahrsangebot\nMai-Juni 2025",
@@ -33,7 +34,7 @@
   "priceOverviewSection": {
     "title": "Unsere Frühjahrsangebote",
     "subtitle": "Sonderpreise von Mai bis Juni 2025 - Begrenzte Zeit!",
-    "description": "Nutzen Sie unser zeitlich begrenztes Frühjahrsangebot: Alle Haar- und Barthaartransplantationen sind um 500€ reduziert, Augenbrauentransplantationen bereits ab 1499€ erhältlich.",
+    "description": "Nutzen Sie unser zeitlich begrenztes Frühjahrsangebot: Alle Haar- und Barthaartransplantationen sind um 500€ reduziert, Augenbrauentransplantationen bereits ab 1499€ erhältlich. Unsere Klinik in Mönchengladbach ist zentral in NRW gelegen und leicht aus Köln und Düsseldorf zu erreichen.",
     "packageIncludes": "Im Paket enthalten:",
     "springOffer": {
       "badge": "Frühjahrsangebot",
@@ -60,7 +61,7 @@
     },
     "hairTransplantation": {
       "title": "Haartransplantation",
-      "description": "Unsere Haartransplantationspakete umfassen alle notwendigen Leistungen für ein natürliches und dauerhaftes Ergebnis.",
+      "description": "Unsere Haartransplantationspakete umfassen alle notwendigen Leistungen für ein natürliches und dauerhaftes Ergebnis. Als führende Klinik für Haartransplantation in Deutschland bieten wir transparente Preise und höchste Qualität.",
       "packages": {
         "basicSaphirFUE": {
           "title": "Basic Paket Saphir FUE Hair",
@@ -154,7 +155,7 @@
     },
     "eyebrowTransplantation": {
       "title": "Augenbrauentransplantation",
-      "description": "Unsere Augenbrauentransplantationspakete bieten Ihnen natürlich aussehende und dauerhafte Ergebnisse.",
+      "description": "Unsere Augenbrauentransplantationspakete bieten Ihnen natürlich aussehende und dauerhafte Ergebnisse. Als Experten für Augenbrauentransplantation in Deutschland garantieren wir höchste Qualität zu transparenten Preisen.",
       "packages": {
         "saphirFUE": {
           "title": "Saphir FUE Eyebrow",
@@ -190,7 +191,7 @@
     },
     "beardTransplantation": {
       "title": "Barthaartransplantation",
-      "description": "Unsere Barthaartransplantationspakete bieten Ihnen die Möglichkeit, Ihren Bart zu verdichten oder zu vervollständigen.",
+      "description": "Unsere Barthaartransplantationspakete bieten Ihnen die Möglichkeit, Ihren Bart zu verdichten oder zu vervollständigen. Als Spezialisten für Barthaartransplantation in Deutschland garantieren wir natürliche Ergebnisse zu transparenten Preisen.",
       "packages": {
         "saphirFUE": {
           "title": "Saphir FUE Beard",
@@ -276,7 +277,7 @@
   },
   "consultationSection": {
     "title": "Persönliche Beratung",
-    "description": "In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan. Wir beraten Sie ausführlich zu den verschiedenen Behandlungsmöglichkeiten und erstellen ein individuelles Angebot.",
+    "description": "In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan. Wir beraten Sie ausführlich zu den verschiedenen Behandlungsmöglichkeiten und erstellen ein individuelles Angebot. Unsere Klinik in Mönchengladbach ist zentral in NRW gelegen und leicht aus Köln und Düsseldorf zu erreichen.",
     "buttonText": "Beratungstermin vereinbaren"
   },
   "faqSection": {
@@ -285,15 +286,23 @@
     "faqs": [
       {
         "question": "Sind in den angegebenen Preisen alle Kosten enthalten?",
-        "answer": "Ja, unsere Preise sind Komplettpreise und beinhalten alle notwendigen Leistungen für Ihre Behandlung. Es gibt keine versteckten Kosten oder Zusatzgebühren."
+        "answer": "Ja, unsere Preise sind Komplettpreise und beinhalten alle notwendigen Leistungen für Ihre Behandlung. Es gibt keine versteckten Kosten oder Zusatzgebühren. Dies gilt für alle unsere Behandlungen, sei es Haartransplantation, Barthaartransplantation oder Augenbrauentransplantation in unserer Klinik in Mönchengladbach, NRW."
       },
       {
         "question": "Bieten Sie Finanzierungsmöglichkeiten an?",
-        "answer": "Nein, wir bieten derzeit keine Finanzierungsmöglichkeiten an. Die Bezahlung erfolgt vor der Behandlung in voller Höhe."
+        "answer": "Nein, wir bieten derzeit keine Finanzierungsmöglichkeiten an. Die Bezahlung erfolgt vor der Behandlung in voller Höhe. Unsere transparenten Preise für Haartransplantationen in Deutschland ermöglichen es Ihnen, im Voraus genau zu wissen, welche Kosten auf Sie zukommen."
       },
       {
         "question": "Wie wird die Anzahl der benötigten Grafts bestimmt?",
-        "answer": "Die Anzahl der benötigten Grafts wird in einem persönlichen Beratungsgespräch anhand Ihrer individuellen Situation und Ihrer Wünsche bestimmt. Dabei spielen Faktoren wie die Größe des zu behandelnden Bereichs und die gewünschte Dichte eine Rolle."
+        "answer": "Die Anzahl der benötigten Grafts wird in einem persönlichen Beratungsgespräch anhand Ihrer individuellen Situation und Ihrer Wünsche bestimmt. Dabei spielen Faktoren wie die Größe des zu behandelnden Bereichs und die gewünschte Dichte eine Rolle. In unserer Klinik in Mönchengladbach, nahe Köln und Düsseldorf, führen wir eine gründliche Analyse durch, um die optimale Anzahl an Grafts für Ihre Haartransplantation, Barthaartransplantation oder Augenbrauentransplantation zu bestimmen."
+      },
+      {
+        "question": "Warum unterscheiden sich die Preise für Haartransplantationen in Deutschland von denen im Ausland?",
+        "answer": "Die Preise für Haartransplantationen in Deutschland sind oft höher als im Ausland, da in Deutschland strengere medizinische Standards und Qualitätskontrollen gelten. Bei der Dion Hair Clinic in Mönchengladbach, NRW, profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten. Diese Qualitätsunterschiede spiegeln sich in den Preisen wider."
+      },
+      {
+        "question": "Gibt es Preisunterschiede zwischen verschiedenen Regionen in Deutschland?",
+        "answer": "Die Preise für Haartransplantationen können je nach Region in Deutschland variieren. In Großstädten wie Köln und Düsseldorf sind die Preise oft höher als in kleineren Städten. Unsere Klinik in Mönchengladbach, NRW, bietet Ihnen hochwertige Behandlungen zu fairen Preisen. Durch unsere zentrale Lage zwischen Köln und Düsseldorf sind wir für Patienten aus ganz NRW und Deutschland leicht erreichbar und bieten dabei ein ausgezeichnetes Preis-Leistungs-Verhältnis."
       }
     ]
   }
