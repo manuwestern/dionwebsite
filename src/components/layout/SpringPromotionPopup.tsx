@@ -197,17 +197,24 @@ const SpringPromotionPopup: React.FC = () => {
               * Angebot gültig vom 01.05.2025 bis 30.06.2025. Nicht kombinierbar mit anderen Aktionen.
             </p>
             
-            {/* WhatsApp CTA Button */}
-            <button 
-              onClick={handleWhatsAppContact}
-              className={`${buttonStyle.primary} w-full bg-gradient-to-r from-[#86C166] to-[#7BA7C2] relative overflow-hidden`}
+            {/* WhatsApp CTA Button - Von Button zu Link geändert für GTM-Tracking */}
+            <a 
+              href="https://wa.me/+491702637818?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Fr%C3%BChjahrsangebot%20(Haartransplantation%20f%C3%BCr%202499%E2%82%AC)."
+              target="_blank"
+              rel="noopener noreferrer"
+              id="spring-popup-whatsapp-button"
+              onClick={(e) => {
+                e.preventDefault(); // Verhindert die Standard-Navigation
+                handleWhatsAppContact(); // Führt die bestehende Funktion aus
+              }}
+              className={`${buttonStyle.primary} w-full bg-gradient-to-r from-[#86C166] to-[#7BA7C2] relative overflow-hidden cursor-pointer`}
             >
               <span className={buttonRippleClass}></span>
               <span className={`relative flex items-center justify-center ${textStyle.button}`}>
                 <span className="mr-2">Jetzt per WhatsApp kontaktieren</span>
                 <ArrowRight className={buttonArrowClass} />
               </span>
-            </button>
+            </a>
           </div>
           
           {/* Right content - Benefits */}
