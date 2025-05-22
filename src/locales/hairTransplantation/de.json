@@ -1,8 +1,7 @@
 {
   "meta": {
-    "title": "Haartransplantation in NRW, Köln, Düsseldorf & Deutschland | Preise & Infos",
-    "description": "Premium-Haartransplantation in NRW, Köln, Düsseldorf und ganz Deutschland mit fortschrittlicher Saphir-FUE & DHI-Technik. Die beste Klinik für natürliche, dauerhafte Ergebnisse in Mönchengladbach. Transparente Preise ab 2099€. Kostenlose Beratung verfügbar.",
-    "keywords": "Haartransplantation Deutschland, Haartransplantation NRW, Haartransplantation Düsseldorf, Haartransplantation Köln, Haartransplantation Preise, Haartransplantation Kosten, Haarklinik Deutschland, Haarklinik NRW, Haarklinik Düsseldorf, Haarklinik Köln"
+    "title": "Haartransplantation in NRW & Deutschland | Dion Hair Clinic",
+    "description": "Premium-Haartransplantation in NRW, Köln, Düsseldorf und ganz Deutschland mit fortschrittlicher Saphir-FUE & DHI-Technik. Die beste Klinik für natürliche, dauerhafte Ergebnisse in Mönchengladbach. Kostenlose Beratung verfügbar."
   },
   "heroSection": {
     "title": "Haar-\ntransplantation",
@@ -68,29 +67,347 @@
       }
     ]
   },
+  "hairLossPatternsSection": {
+    "title": "Typische Haarausfallmuster & Behandlungsoptionen",
+    "description": "Jedes Haarausfallmuster erfordert einen individuellen Behandlungsansatz. Hier finden Sie einen Überblick über die häufigsten Muster und die entsprechenden Behandlungsoptionen.",
+    "typicalGrafts": "Typische Grafts",
+    "treatment": "Behandlung",
+    "idealForYourHairType": "Ideal für Ihren Haartyp",
+    "additionalInfo": {
+      "individualConsultation": {
+        "title": "Individuelle Beratung",
+        "description": "Jedes Haarausfallmuster ist einzigartig und erfordert eine individuelle Behandlungsstrategie. In einem persönlichen Beratungsgespräch analysieren wir Ihr spezifisches Muster und entwickeln einen maßgeschneiderten Behandlungsplan."
+      },
+      "modernTechniques": {
+        "title": "Modernste Techniken",
+        "description": "Unsere fortschrittlichen Transplantationstechniken ermöglichen es uns, selbst bei fortgeschrittenem Haarausfall natürlich aussehende Ergebnisse zu erzielen. Wir passen die Methode an Ihr individuelles Haarausfallmuster an."
+      },
+      "longTermResults": {
+        "title": "Langfristige Ergebnisse",
+        "description": "Durch unseren ganzheitlichen Ansatz erzielen wir nicht nur sofortige, sondern auch langfristige Ergebnisse. Wir berücksichtigen den zukünftigen Haarverlust und planen die Behandlung entsprechend."
+      }
+    },
+    "patterns": [
+      {
+        "title": "Norwood 1-2 (Beginnender Haarausfall)",
+        "description": "Leichter Rückgang des Haaransatzes an den Schläfen",
+        "grafts": "800-1.500",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Norwood 3 (Geheimratsecken)",
+        "description": "Deutlicher Rückgang des Haaransatzes mit tiefen Geheimratsecken",
+        "grafts": "1.500-2.500",
+        "treatment": "1 Sitzung"
+      },
+      {
+        "title": "Norwood 4 (Fortgeschrittener Haarausfall)",
+        "description": "Deutlicher Haarausfall im vorderen Bereich und beginnende Tonsur",
+        "grafts": "2.500-3.500",
+        "treatment": "1-2 Sitzungen"
+      },
+      {
+        "title": "Norwood 5-6 (Ausgeprägter Haarausfall)",
+        "description": "Großflächiger Haarausfall mit verbindender Tonsur und Geheimratsecken",
+        "grafts": "3.500-5.000",
+        "treatment": "1-2 Sitzungen"
+      },
+      {
+        "title": "Norwood 7 (Sehr ausgeprägter Haarausfall)",
+        "description": "Nur noch Haarkranz an den Seiten und am Hinterkopf vorhanden",
+        "grafts": "5.000-7.000",
+        "treatment": "2-3 Sitzungen"
+      },
+      {
+        "title": "Frauen (Lichter Scheitel)",
+        "description": "Ausdünnung im Scheitelbereich bei Frauen",
+        "grafts": "1.500-3.000",
+        "treatment": "1-2 Sitzungen"
+      }
+    ]
+  },
+  "benefitsSection": {
+    "title": "Warum Dion Hair Clinic?",
+    "subtitle": "Die Vorteile einer Haartransplantation bei uns - Erfahren Sie, warum unsere Klinik die erste Wahl für anspruchsvolle Patienten ist, die Wert auf Qualität und Expertise legen",
+    "learnMore": "Mehr erfahren",
+    "cta": {
+      "title": "Persönliche Beratung vereinbaren",
+      "description": "Entdecken Sie, wie wir Ihnen helfen können, Ihr Selbstvertrauen zurückzugewinnen. In einem persönlichen Beratungsgespräch analysieren wir Ihre individuelle Situation und entwickeln einen maßgeschneiderten Behandlungsplan."
+    },
+      "cards": [
+      {
+        "title": "Erfahrenes Expertenteam",
+        "description": "Unser Team in Mönchengladbach besteht aus hochqualifizierten Spezialisten mit jahrelanger Erfahrung in der Haartransplantation, die regelmäßig an Fortbildungen teilnehmen und modernste Techniken beherrschen."
+      },
+      {
+        "title": "Modernste Verfahren",
+        "description": "Wir setzen auf innovative Techniken wie Saphir-FUE und DHI, die präzisere Ergebnisse, schnellere Heilung und natürlicheres Aussehen ermöglichen."
+      },
+      {
+        "title": "Ganzheitliches Konzept",
+        "description": "Unser 360°-Ansatz umfasst nicht nur die Transplantation, sondern auch Haaranalyse, Ernährungsberatung und ergänzende Behandlungen für optimale Ergebnisse."
+      },
+      {
+        "title": "Individuelle Beratung",
+        "description": "Jeder Patient erhält einen maßgeschneiderten Behandlungsplan, der auf seine spezifischen Bedürfnisse, Haarstruktur und Wünsche abgestimmt ist."
+      },
+      {
+        "title": "Langzeitnachsorge",
+        "description": "Wir begleiten Sie auch nach dem Eingriff mit regelmäßigen Kontrollterminen und unterstützenden Behandlungen für langfristig beste Resultate."
+      },
+      {
+        "title": "Keine Auslandsreise nötig",
+        "description": "Genießen Sie höchste medizinische Standards in Deutschland ohne Sprachbarrieren oder lange Reisen. Unsere zentrale Lage in NRW, mit guter Erreichbarkeit aus Köln und Düsseldorf, macht uns zur idealen Wahl für Patienten aus ganz Deutschland."
+      }
+    ]
+  },
+  "processSection": {
+    "title": "Der Behandlungsprozess",
+    "subtitle": "Ihr Weg zu neuem Haar - Transparente Darstellung aller Schritte von der ersten Planung bis zum endgültigen Ergebnis Ihrer Haartransplantation",
+    "expertiseTitle": "Unsere Expertise für Ihr perfektes Ergebnis",
+    "advantages": [
+      {
+        "title": "Optimale Gestaltung der Haarlinie",
+        "description": "Wir gestalten die Haarlinie individuell passend zum Gesicht des Patienten, unter Berücksichtigung von Gesichtsform, Alter und persönlichem Stil für ein natürliches und harmonisches Erscheinungsbild."
+      },
+      {
+        "title": "Unsichtbare Narben durch kleinste FUE Punches",
+        "description": "Durch den Einsatz modernster und kleinster FUE Punches hinterlassen wir praktisch unsichtbare Narben im Spenderbereich, sodass Sie Ihre Haare auch kurz tragen können."
+      },
+      {
+        "title": "Minimale Schwellungen durch reduzierte Flüssigkeiten",
+        "description": "Wir verwenden nur geringe Mengen an Flüssigkeiten wie NaCl während des Eingriffs, um Schwellungen auf ein Minimum zu reduzieren und die Erholungszeit zu verkürzen."
+      },
+      {
+        "title": "Präzise Platzierung für natürliche Übergänge",
+        "description": "Jedes Implantat wird präzise platziert, um natürliche Übergänge vom Haaransatz zum restlichen Haar zu schaffen und die natürliche Haarwuchsrichtung zu respektieren."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Planung",
+        "description": "In der Planungsphase wird die Haarlinie sorgfältig entworfen und die Anzahl der benötigten Grafts bestimmt. Eine detaillierte Analyse Ihrer Spenderzonen und des Empfängerbereichs ermöglicht eine präzise und individuelle Planung für optimale Ergebnisse."
+      },
+      {
+        "title": "Entnahme",
+        "description": "Bei der Entnahme werden einzelne Haarfollikel aus der Spenderzone (meist am Hinterkopf) entnommen. Diese Follikeleinheiten werden sorgfältig unter dem Mikroskop vorbereitet, um eine hohe Überlebensrate zu gewährleisten."
+      },
+      {
+        "title": "Einpflanzung",
+        "description": "Die vorbereiteten Haarfollikel werden präzise in die vorher festgelegten Empfängerzonen eingesetzt. Dabei wird besonders auf den natürlichen Wuchswinkel und die Verteilung geachtet, um ein ästhetisch ansprechendes Ergebnis zu erzielen."
+      },
+      {
+        "title": "Endergebnis",
+        "description": "Nach etwa 12-18 Monaten ist das endgültige Ergebnis sichtbar. Die transplantierten Haare wachsen natürlich und können wie Ihr eigenes Haar geschnitten, gefärbt und gestylt werden. Das Ergebnis ist dauerhaft und fügt sich harmonisch in Ihr bestehendes Haarbild ein."
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "Erfolgsgeschichten unserer Patienten",
+    "subtitle": "Erfahrungsberichte und Ergebnisse - Lesen Sie authentische Bewertungen von zufriedenen Patienten, die ihre Haartransplantation bei uns durchgeführt haben",
+    "beforeAfterTitle": "Vorher / Nachher Ergebnisse",
+    "before": "Vorher",
+    "after": "Nachher",
+    "ctaSection": {
+      "title": "Werden Sie unser nächster Erfolgsfall",
+      "description": "Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Haartransplantation Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von unseren Experten beraten."
+    },
+    "testimonials": [
+      {
+        "name": "Michael K., 42",
+        "rating": 5,
+        "text": "Nach jahrelangem Haarausfall habe ich mich für eine Haartransplantation in der Dion Hair Clinic entschieden. Das Ergebnis hat meine Erwartungen übertroffen. Das Team war professionell und einfühlsam, und ich fühle mich wieder selbstbewusst.",
+        "procedure": "Saphir-FUE, 2.800 Grafts",
+        "date": "März 2024"
+      },
+      {
+        "name": "Thomas S., 38",
+        "rating": 5,
+        "text": "Die Beratung war ausführlich und ehrlich. Dr. Dion hat mir genau erklärt, was möglich ist und was nicht. Nach der Behandlung wurde ich hervorragend betreut. Das Ergebnis sieht völlig natürlich aus - niemand würde vermuten, dass ich eine Haartransplantation hatte.",
+        "procedure": "DHI-Technik, 2.200 Grafts",
+        "date": "Januar 2024"
+      },
+      {
+        "name": "Sandra M., 45",
+        "rating": 5,
+        "text": "Als Frau war es mir besonders wichtig, einen Spezialisten zu finden, der Erfahrung mit weiblichem Haarausfall hat. In der Dion Hair Clinic fühlte ich mich von Anfang an gut aufgehoben. Die Behandlung war schmerzfrei und die Ergebnisse sind fantastisch.",
+        "procedure": "Saphir-FUE, 1.800 Grafts",
+        "date": "November 2023"
+      }
+    ],
+    "stats": [
+      {
+        "value": "98%",
+        "label": "Zufriedene Patienten"
+      },
+      {
+        "value": "5.000+",
+        "label": "Erfolgreiche Behandlungen"
+      },
+      {
+        "value": "15+",
+        "label": "Jahre Erfahrung"
+      }
+    ],
+    "cta": "Vereinbaren Sie jetzt Ihr kostenloses Beratungsgespräch"
+  },
+  "careSection": {
+    "title": "Dion App - Ihr Begleiter für Vor- und Nachsorge",
+    "subtitle": "Ihr digitaler Assistent für eine optimale Vor- und Nachsorge - Unsere innovative Smartphone-App unterstützt Sie durch den gesamten Behandlungsprozess mit personalisierten Anleitungen und Erinnerungen",
+    "description": "Die Dion App führt Sie durch den gesamten Prozess Ihrer Haartransplantation - von der Vorbereitung bis zur Nachsorge.",
+    "subheading": "Ihr digitaler Begleiter für Ihre Behandlung",
+    "features": [
+      {
+        "title": "Terminplanung",
+        "description": "Alle wichtigen Termine vor und nach der Behandlung im Überblick"
+      },
+      {
+        "title": "Checklisten",
+        "description": "Personalisierte To-Do-Listen für optimale Vor- und Nachsorge"
+      },
+      {
+        "title": "Anleitungen",
+        "description": "Detaillierte Pflegeanleitungen, z.B. zur Haarwäsche nach der Transplantation"
+      },
+      {
+        "title": "Fortschritts-\ndokumentation",
+        "description": "Dokumentieren Sie Ihren Wachstumsverlauf mit Fotos und Notizen"
+      },
+      {
+        "title": "Erinnerungen",
+        "description": "Automatische Benachrichtigungen für wichtige Pflegeschritte"
+      },
+      {
+        "title": "Mobile App",
+        "description": "Zugriff auf alle Funktionen über unsere benutzerfreundliche App"
+      }
+    ],
+    "appContent": {
+      "progress": "Ihr Fortschritt",
+      "day1": "Tag 1",
+      "month3": "3 Monate",
+      "month12": "12 Monate",
+      "todayTasks": "Heutige Aufgaben",
+      "task1": "Sanfte Haarwäsche mit speziellem Shampoo",
+      "task2": "Feuchtigkeitsspray anwenden",
+      "task3": "Fortschrittsfoto aufnehmen",
+      "nextAppointment": "Nächster Termin",
+      "appointmentDetails": "Kontrolluntersuchung: 15. April 2025, 14:00 Uhr"
+    },
+    "appStoreInfo": "Verfügbar für Android und iPhone – Laden Sie die App kostenlos im Google Play Store oder Apple App Store herunter.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "dpiSection": {
+    "premiumOption": "Premium Option",
+    "title": "Schmerzfreie Betäubung",
+    "subtitle": "Komfort-Technologie für eine schmerzfreie Behandlung - Unsere innovative DPI-Methode revolutioniert die Betäubungsphase für ein angenehmes Erlebnis",
+    "description": "Erleben Sie eine revolutionäre Haartransplantation ohne den gefürchteten Schmerz der Betäubungsphase. Unser neuentwickeltes DPI-Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei und verwandelt Ihre Behandlung in ein angenehmes Erlebnis von Anfang bis Ende. Diese Premium-Option können Sie gegen einen Aufpreis zu Ihrer Behandlung hinzubuchen.",
+    "learnMore": "Mehr über DPI erfahren",
+    "additionalFee": "Gegen Aufpreis",
+    "benefitsTitle": "Vorteile der DPI-Technologie",
+    "features": [
+      {
+        "title": "Schmerzfreie Betäubung",
+        "description": "Unser neuentwickeltes Verfahren macht die Phase der Betäubung nahezu vollständig schmerzfrei, für ein angenehmes Behandlungserlebnis von Anfang an."
+      },
+      {
+        "title": "Innovative Technologie",
+        "description": "Die DPI-Technologie nutzt computergesteuerte Präzisionsinjektionen mit optimaler Geschwindigkeit und Druck für maximalen Komfort."
+      },
+      {
+        "title": "Reduzierte Angst",
+        "description": "Durch die schmerzfreie Betäubung wird die Behandlungsangst deutlich reduziert, was zu einer entspannteren Erfahrung und besseren Ergebnissen führt."
+      },
+      {
+        "title": "Exklusiver Komfort",
+        "description": "Als Premium-Option bietet DPI einen exklusiven Komfort, der Ihre Haartransplantation zu einem angenehmen, stressfreien Erlebnis macht."
+      }
+    ]
+  },
   "faqSection": {
     "title": "Häufig gestellte Fragen",
     "subtitle": "Antworten auf Ihre Fragen zur Haartransplantation - Umfassende Informationen zu Ablauf, Kosten, Risiken und Ergebnissen unserer Behandlungen",
     "faqs": [
       {
-        "question": "Wie unterscheidet sich eine Haartransplantation in Deutschland von Angeboten im Ausland?",
+        "question": "Ab welchem Alter kann ich eine Haartransplantation durchführen lassen?",
+        "answer": "Grundsätzlich empfehlen wir, eine Haartransplantation erst ab einem Alter von 25 Jahren durchzuführen, da sich das Haarausfallmuster bis dahin noch verändern kann. In einigen Fällen kann jedoch auch bei jüngeren Patienten eine Behandlung sinnvoll sein. Entscheidend ist, dass der Haarausfall stabil ist und ein klares Muster erkennbar ist.",
+        "category": "general"
+      },
+      {
+        "question": "Gibt es Risiken oder Nebenwirkungen?",
+        "answer": "Wie bei jedem medizinischen Eingriff gibt es auch bei der Haartransplantation gewisse Risiken. Diese sind jedoch bei sachgemäßer Durchführung minimal. Zu den möglichen Nebenwirkungen gehören vorübergehende Schwellungen, Rötungen, leichte Blutergüsse oder in seltenen Fällen Infektionen. Unser erfahrenes Team minimiert diese Risiken durch höchste Hygienestandards und sorgfältige Nachsorge.",
+        "category": "general"
+      },
+      {
+        "question": "Wie unterscheidet sich eine Behandlung in Deutschland von Angeboten im Ausland?",
         "answer": "In Deutschland unterliegen Haartransplantationen strengen medizinischen Standards und Qualitätskontrollen. Bei der Dion Hair Clinic profitieren Sie von höchster medizinischer Expertise, modernster Technologie und einer umfassenden Nachsorge ohne Sprachbarrieren. Im Gegensatz zu manchen Auslandsangeboten führen bei uns ausschließlich erfahrene Spezialisten die Behandlung durch, nicht angelernte Assistenten.",
         "category": "general"
       },
       {
-        "question": "Was kostet eine Haartransplantation in Deutschland?",
-        "answer": "Die Kosten einer Haartransplantation in Deutschland hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle mit Haartransplantationen ab 2099€ an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot.",
+        "question": "Wie lange dauert der Eingriff?",
+        "answer": "Die Dauer des Eingriffs hängt von der Anzahl der zu transplantierenden Grafts ab. In der Regel dauert eine Haartransplantation zwischen 4 und 8 Stunden. Bei größeren Transplantationen kann der Eingriff auf zwei Tage aufgeteilt werden, um optimale Ergebnisse zu erzielen und die Belastung für den Patienten zu reduzieren.",
+        "category": "procedure"
+      },
+      {
+        "question": "Welche Methode ist für mich am besten geeignet?",
+        "answer": "Die beste Methode hängt von verschiedenen Faktoren ab, wie dem Ausmaß des Haarverlusts, der Qualität der Spenderhaare und Ihren persönlichen Vorlieben. In einem persönlichen Beratungsgespräch können wir die für Sie optimale Methode ermitteln.",
+        "category": "procedure"
+      },
+      {
+        "question": "Ist der Eingriff schmerzhaft?",
+        "answer": "Die Haartransplantation wird unter lokaler Betäubung durchgeführt, sodass Sie während des Eingriffs keine Schmerzen verspüren. Nach dem Eingriff können leichte Beschwerden auftreten, die jedoch mit Schmerzmitteln gut kontrollierbar sind.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie sollte ich mich auf den Eingriff vorbereiten?",
+        "answer": "Zur Vorbereitung empfehlen wir, 10 Tage vor dem Eingriff auf blutverdünnende Medikamente (nach Rücksprache mit Ihrem Arzt), Alkohol und Nikotin zu verzichten. Am Tag des Eingriffs sollten Sie bequeme Kleidung tragen, die nicht über den Kopf gezogen werden muss. Wir beraten Sie ausführlich über alle weiteren Vorbereitungsmaßnahmen in einem persönlichen Gespräch.",
+        "category": "procedure"
+      },
+      {
+        "question": "Wie lange dauert die Erholungsphase?",
+        "answer": "Die meisten Patienten können nach 1-2 Tagen wieder ihren normalen Aktivitäten nachgehen. Die Rötungen und Schwellungen klingen in der Regel innerhalb von 7-10 Tagen ab. Die vollständige Heilung der Kopfhaut dauert etwa 2 Wochen.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wie sieht die Nachsorge aus?",
+        "answer": "Die richtige Nachsorge ist entscheidend für den Erfolg der Behandlung. In den ersten Tagen nach dem Eingriff erhalten Sie von uns detaillierte Anweisungen zur Pflege der behandelten Bereiche. Dazu gehören spezielle Shampoos, Schlafpositionen und Verhaltensregeln. Regelmäßige Kontrolltermine in unserer Klinik stellen sicher, dass der Heilungsprozess optimal verläuft und Ihre Fragen jederzeit beantwortet werden.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann kann ich wieder Sport treiben nach einer Haartransplantation?",
+        "answer": "Leichte körperliche Aktivitäten können Sie bereits nach einer Woche wieder aufnehmen. Mit intensivem Sport und Krafttraining sollten Sie jedoch 3-4 Wochen warten, um die Heilung der Transplantationsstellen nicht zu gefährden. Schwimmen und Saunabesuche sollten ebenfalls für mindestens 3 Wochen vermieden werden, um Infektionen vorzubeugen.",
+        "category": "recovery"
+      },
+      {
+        "question": "Wann sehe ich die ersten Ergebnisse?",
+        "answer": "Die ersten neuen Haare beginnen nach etwa 3-4 Monaten zu wachsen. Das endgültige Ergebnis ist nach 12-18 Monaten sichtbar, wenn die transplantierten Haare vollständig gewachsen sind und ihre natürliche Dichte erreicht haben.",
+        "category": "results"
+      },
+      {
+        "question": "Wie realistisch sind die Ergebnisse?",
+        "answer": "Moderne Haartransplantationstechniken ermöglichen heute sehr natürlich aussehende Ergebnisse. Die transplantierten Haare wachsen wie Ihre eigenen Haare und können normal geschnitten, gefärbt und gestylt werden. Entscheidend für ein natürliches Ergebnis sind die Erfahrung des behandelnden Teams, die richtige Platzierung der Haarfollikel und die Berücksichtigung Ihrer individuellen Gesichtszüge und des natürlichen Haarwuchsmusters.",
+        "category": "results"
+      },
+      {
+        "question": "Wie lange hält das Ergebnis einer Haartransplantation?",
+        "answer": "Die transplantierten Haare sind dauerhaft, da sie aus Bereichen entnommen werden, die genetisch nicht für Haarausfall anfällig sind. Allerdings kann der natürliche Alterungsprozess oder fortschreitender Haarausfall in anderen Bereichen das Gesamtbild im Laufe der Zeit verändern. Ergänzende Behandlungen wie unterstützende Kopfhautbehandlungen können helfen, die nicht transplantierten Haare zu stärken und zu erhalten.",
+        "category": "results"
+      },
+      {
+        "question": "Kann ich meine transplantierten Haare färben oder schneiden?",
+        "answer": "Ja, nach vollständiger Heilung (etwa 3-4 Wochen nach dem Eingriff) können Sie Ihre transplantierten Haare wie Ihr natürliches Haar behandeln. Sie können sie schneiden, färben und stylen. Die transplantierten Haare verhalten sich wie Ihre eigenen Haare und wachsen in einem natürlichen Zyklus.",
+        "category": "results"
+      },
+      {
+        "question": "Was kostet eine Haartransplantation?",
+        "answer": "Die Kosten einer Haartransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot.",
         "category": "costs"
       },
       {
-        "question": "Wo kann ich eine Haartransplantation in NRW durchführen lassen?",
-        "answer": "Die Dion Hair Clinic in Mönchengladbach ist eine der führenden Adressen für Haartransplantationen in NRW. Unsere zentrale Lage zwischen Köln und Düsseldorf macht uns für Patienten aus ganz NRW und Deutschland leicht erreichbar. Wir bieten modernste Techniken wie Saphir-FUE und DHI für natürlich aussehende und dauerhafte Ergebnisse.",
-        "category": "location"
-      },
-      {
-        "question": "Welche Haartransplantations-Methoden werden in Köln und Düsseldorf angeboten?",
-        "answer": "In unserer Klinik in Mönchengladbach, nahe Köln und Düsseldorf, bieten wir die modernsten Haartransplantations-Methoden an: die Saphir-FUE-Technik und die DHI-Technik. Beide Methoden ermöglichen natürlich aussehende Ergebnisse mit minimalen Narben und schneller Heilung. In einem persönlichen Beratungsgespräch empfehlen wir Ihnen die für Sie optimale Methode.",
-        "category": "methods"
+        "question": "Werden die Kosten einer Haartransplantation von der Krankenkasse übernommen?",
+        "answer": "In der Regel werden die Kosten für eine Haartransplantation nicht von den gesetzlichen Krankenkassen übernommen, da es sich um einen ästhetischen Eingriff handelt. Bei einigen privaten Krankenversicherungen kann eine teilweise Kostenübernahme möglich sein. Wir beraten Sie gerne zu den verschiedenen Finanzierungsmöglichkeiten, die wir anbieten.",
+        "category": "costs"
       }
     ]
   }

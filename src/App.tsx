@@ -4,6 +4,7 @@ import { trackPageView } from './utils/gtm';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
 import LoadingSpinner from './components/layout/LoadingSpinner';
+import CookieConsent from './components/cookies/CookieConsent';
 import { NewsletterProvider } from './contexts/NewsletterContext';
 import { SpringPromotionProvider, useSpringPromotion } from './contexts/SpringPromotionContext';
 import PromotionPopup from './components/layout/PromotionPopup';
@@ -130,7 +131,8 @@ const App: React.FC = React.memo(() => {
     <ErrorBoundary>
       <Router>
         <RouteTracker />
-        <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
+        <CookieConsent>
+          <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
             <SpringPromotionProvider>
               <ScrollToTop />
               <Layout>
@@ -157,6 +159,7 @@ const App: React.FC = React.memo(() => {
               <PromotionPopupContainer />
             </SpringPromotionProvider>
           </NewsletterProvider>
+        </CookieConsent>
       </Router>
     </ErrorBoundary>
   );
