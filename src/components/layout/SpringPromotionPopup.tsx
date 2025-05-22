@@ -64,6 +64,16 @@ const SpringPromotionPopup: React.FC = () => {
   }
   
   const handleWhatsAppContact = () => {
+    // Explizites Event an dataLayer senden für GTM-Tracking
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'whatsapp_contact',
+        eventCategory: 'Contact',
+        eventAction: 'WhatsApp Click',
+        eventLabel: 'Spring Promotion Popup'
+      });
+    }
+    
     // Open WhatsApp with predefined message
     const message = encodeURIComponent("Hallo, ich interessiere mich für das Frühjahrsangebot (Haartransplantation für 2499€).");
     window.open(`https://wa.me/+491702637818?text=${message}`, '_blank');

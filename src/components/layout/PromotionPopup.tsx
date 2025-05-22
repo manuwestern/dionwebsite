@@ -90,6 +90,16 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
   }
   
   const handleWhatsAppContact = () => {
+    // Explizites Event an dataLayer senden für GTM-Tracking
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'whatsapp_contact',
+        eventCategory: 'Contact',
+        eventAction: 'WhatsApp Click',
+        eventLabel: 'Promotion Popup'
+      });
+    }
+    
     // Open WhatsApp with predefined message
     const message = encodeURIComponent(config.whatsAppMessage);
     window.open(`https://wa.me/+491702637818?text=${message}`, '_blank');
