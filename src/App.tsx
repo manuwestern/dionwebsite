@@ -34,12 +34,14 @@ const PromotionPopupContainer: React.FC = () => {
   // Check if we should show the popup based on the current path
   useEffect(() => {
     // Only show popup on homepage, hair transplantation and eyebrow transplantation pages
+    // Exclude Instagram landing page from showing popups
     const allowedPaths = ['/', '/haartransplantation', '/augenbrauentransplantation'];
     const shouldShowPopup = allowedPaths.some(path => 
       path === '/' ? location.pathname === '/' : location.pathname.includes(path)
     );
     
-    if (!shouldShowPopup) {
+    // Don't show popup on Instagram landing page
+    if (location.pathname === '/ig' || !shouldShowPopup) {
       setShowPopup(false);
       return;
     }
@@ -112,6 +114,7 @@ const KnowledgePage = lazy(() => import('./pages/KnowledgePage'));
 const PricesPage = lazy(() => import('./pages/PricesPage'));
 const LocalLandingPage = lazy(() => import('./pages/LocalLandingPage'));
 const CheapHairTransplantPage = lazy(() => import('./pages/CheapHairTransplantPage'));
+const InstagramLandingPage = lazy(() => import('./pages/InstagramLandingPage'));
 
 // Component to track route changes
 const RouteTracker: React.FC = () => {
@@ -127,6 +130,15 @@ const RouteTracker: React.FC = () => {
   return null;
 };
 
+// Instagram Landing Page Layout - No header/footer
+const InstagramLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <div className="min-h-screen">
+      {children}
+    </div>
+  );
+};
+
 // Memoize the App component to prevent unnecessary re-renders
 const App: React.FC = React.memo(() => {
   return (
@@ -137,29 +149,46 @@ const App: React.FC = React.memo(() => {
           <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
             <SpringPromotionProvider>
               <ScrollToTop />
-              <Layout>
-                <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/haartransplantation" element={<HairTransplantationPage />} />
-                  <Route path="/guenstige-haartransplantation" element={<CheapHairTransplantPage />} />
-                  <Route path="/haartransplantation-:city" element={<LocalLandingPage />} />
-                  <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
-                  <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
-                  {/* Route for HairLossTherapyPage removed due to Google Ads guidelines violation */}
-                  {/* <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} /> */}
-                  <Route path="/klinik" element={<ClinicPage />} />
-                  <Route path="/kontakt" element={<ContactPage />} />
-                  <Route path="/impressum" element={<ImprintPage />} />
-                  <Route path="/datenschutz" element={<PrivacyPage />} />
-                  <Route path="/agb" element={<TermsPage />} />
-                  <Route path="/wissenswertes" element={<KnowledgePage />} />
-                  <Route path="/preise" element={<PricesPage />} />
-                  {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
-                  <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-                </Suspense>
-              </Layout>
+              <Routes>
+                {/* Instagram Landing Page - No Layout (no header/footer) */}
+                <Route 
+                  path="/ig" 
+                  element={
+                    <InstagramLayout>
+                      <Suspense fallback={<LoadingSpinner />}>
+                        <InstagramLandingPage />
+                      </Suspense>
+                    </InstagramLayout>
+                  } 
+                />
+                
+                {/* All other pages with normal Layout */}
+                <Route path="/*" element={
+                  <Layout>
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/haartransplantation" element={<HairTransplantationPage />} />
+                        <Route path="/guenstige-haartransplantation" element={<CheapHairTransplantPage />} />
+                        <Route path="/haartransplantation-:city" element={<LocalLandingPage />} />
+                        <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
+                        <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
+                        {/* Route for HairLossTherapyPage removed due to Google Ads guidelines violation */}
+                        {/* <Route path="/haarausfalltherapie" element={<HairLossTherapyPage />} /> */}
+                        <Route path="/klinik" element={<ClinicPage />} />
+                        <Route path="/kontakt" element={<ContactPage />} />
+                        <Route path="/impressum" element={<ImprintPage />} />
+                        <Route path="/datenschutz" element={<PrivacyPage />} />
+                        <Route path="/agb" element={<TermsPage />} />
+                        <Route path="/wissenswertes" element={<KnowledgePage />} />
+                        <Route path="/preise" element={<PricesPage />} />
+                        {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
+                        <Route path="*" element={<NotFoundPage />} />
+                      </Routes>
+                    </Suspense>
+                  </Layout>
+                } />
+              </Routes>
               <PromotionPopupContainer />
             </SpringPromotionProvider>
           </NewsletterProvider>
