@@ -40,7 +40,7 @@ const InstagramBeforeAfter: React.FC = () => {
             </div>
             <div className="p-4">
               <h4 className="font-bold text-gray-800">Haartransplantation</h4>
-              <p className="text-sm text-gray-600">3.500 Grafts, 12 Monate</p>
+              <p className="text-sm text-gray-600">ca. 4.500 Grafts, 12 Monate</p>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ const InstagramBeforeAfter: React.FC = () => {
             </div>
             <div className="p-4">
               <h4 className="font-bold text-gray-800">Barthaartransplantation</h4>
-              <p className="text-sm text-gray-600">2.200 Grafts, 8 Monate</p>
+              <p className="text-sm text-gray-600">ca. 4.000 Grafts, 8 Monate</p>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ const InstagramBeforeAfter: React.FC = () => {
             </div>
             <div className="p-4">
               <h4 className="font-bold text-gray-800">Augenbrauentransplantation</h4>
-              <p className="text-sm text-gray-600">350 Grafts, 6 Monate</p>
+              <p className="text-sm text-gray-600">ca. 1000 Grafts, 6 Monate</p>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
               </div>
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-2">Haartransplantation</h3>
-            <p className="text-gray-600 mb-4">FUE & DHI Methode für natürliche Ergebnisse</p>
+            <p className="text-gray-600 mb-4">Saphir FUE für natürliche Ergebnisse</p>
             
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
@@ -145,10 +145,7 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
                 <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
                 Maßgeschneiderte Form
               </li>
-              <li className="flex items-center text-sm text-gray-600">
-                <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
-                2 kostenlose Augenbrauenbehandlungen
-              </li>
+              
               <li className="flex items-center text-sm text-gray-600">
                 <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
                 Präzise Platzierung
