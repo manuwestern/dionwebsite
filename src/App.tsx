@@ -110,6 +110,8 @@ const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const KnowledgePage = lazy(() => import('./pages/KnowledgePage'));
 const PricesPage = lazy(() => import('./pages/PricesPage'));
+const LocalLandingPage = lazy(() => import('./pages/LocalLandingPage'));
+const CheapHairTransplantPage = lazy(() => import('./pages/CheapHairTransplantPage'));
 
 // Component to track route changes
 const RouteTracker: React.FC = () => {
@@ -140,6 +142,8 @@ const App: React.FC = React.memo(() => {
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/haartransplantation" element={<HairTransplantationPage />} />
+                  <Route path="/guenstige-haartransplantation" element={<CheapHairTransplantPage />} />
+                  <Route path="/haartransplantation-:city" element={<LocalLandingPage />} />
                   <Route path="/barthaartransplantation" element={<BeardTransplantationPage />} />
                   <Route path="/augenbrauentransplantation" element={<EyebrowTransplantationPage />} />
                   {/* Route for HairLossTherapyPage removed due to Google Ads guidelines violation */}

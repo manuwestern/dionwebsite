@@ -70,9 +70,11 @@ const FeatureBenefitCard: React.FC<FeatureBenefitCardProps> = ({
           </div>
           
           {/* Description */}
-          <p className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} hyphens-auto`} lang="de">
-            {description}
-          </p>
+          <p 
+            className={`${fontSize.sm} ${textColor.medium} ${fontWeight.light} ${lineHeight.relaxed} hyphens-auto`} 
+            lang="de"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
         </div>
         

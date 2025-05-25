@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Haartransplantation Deutschland: Experten in Mönchengladbach, nahe Köln & Düsseldorf",
-    "description": "Haartransplantation in Deutschland von Experten durchgeführt. Unsere Klinik in Mönchengladbach ist optimal erreichbar aus Köln, Düsseldorf und ganz NRW. Faire Preise und modernste Saphir-FUE & DHI-Technik für natürliche Ergebnisse.",
-    "keywords": "Haartransplantation Deutschland, Haartransplantation NRW, Haartransplantation Mönchengladbach, Haartransplantation Köln, Haartransplantation Düsseldorf, Haartransplantation Preise, Beste Haartransplantation in Deutschland"
+    "title": "FUE Haartransplantation Deutschland - Ohne Rasur möglich",
+    "description": "FUE Haartransplantation ohne Rasur möglich ✓ DHI Methode ✓ Faire Festpreise ✓ Schmerzfreie Behandlung ✓ NRW Köln Düsseldorf ✓ Kostenlose Haaranalyse",
+    "keywords": "FUE Haartransplantation, Haartransplantation ohne Rasur, DHI Haartransplantation, Haartransplantation Deutschland, Haartransplantation NRW, Haartransplantation Kosten, Saphir-FUE"
   },
   "heroSection": {
     "title": "Haar-\ntransplantation",
-    "subtitle": "Modernste Techniken für natürliche Ergebnisse",
-    "welcomeText": "Als eine führende Klinik für Haartransplantation in NRW und Deutschland bieten wir Ihnen modernste Techniken für natürlich aussehende und dauerhafte Ergebnisse. Unsere Spezialisten in Mönchengladbach, nahe Köln und Düsseldorf, entwickeln individuelle Behandlungspläne, die perfekt auf Ihre Bedürfnisse abgestimmt sind."
+    "subtitle": "Experten für FUE & DHI Methode ohne Rasur",
+    "welcomeText": "Unsere Klinik hat sich auf die schonende FUE-Technik spezialisiert, die wir auch ohne Rasur durchführen können - ein entscheidender Vorteil für Ihre Privatsphäre. Mit den innovativen DHI und Saphir-FUE Methoden erzielen unsere erfahrenen Ärzte besonders natürliche und dichte Ergebnisse. Die präzise Platzierung jedes einzelnen Haarfollikels garantiert eine natürliche Haarlinie, die perfekt zu Ihrer Gesichtsform passt. Von unserem modernen Zentrum in NRW aus betreuen wir Patienten aus ganz Deutschland - besonders aus Köln und Düsseldorf, die uns in nur 30 Minuten erreichen."
   },
   "methodsSection": {
     "title": "Unsere Techniken",
@@ -158,7 +158,7 @@
       },
       {
         "title": "Keine Auslandsreise nötig",
-        "description": "Genießen Sie höchste medizinische Standards in Deutschland ohne Sprachbarrieren oder lange Reisen. Unsere zentrale Lage in NRW, mit guter Erreichbarkeit aus Köln und Düsseldorf, macht uns zur idealen Wahl für Patienten aus ganz Deutschland."
+        "description": "Genießen Sie höchste medizinische Standards in Deutschland ohne Sprachbarrieren oder lange Reisen. Unsere zentrale Lage in NRW, mit guter Erreichbarkeit aus <a href='/haartransplantation-koeln' class='text-primary hover:underline'>Köln</a> und <a href='/haartransplantation-duesseldorf' class='text-primary hover:underline'>Düsseldorf</a>, macht uns zur idealen Wahl für <a href='/guenstige-haartransplantation' class='text-primary hover:underline'>günstige Haartransplantationen</a> in Deutschland."
       }
     ]
   },
@@ -401,8 +401,13 @@
         "category": "results"
       },
       {
-        "question": "Was kostet eine Haartransplantation?",
-        "answer": "Die Kosten einer Haartransplantation hängen von verschiedenen Faktoren ab, insbesondere von der Anzahl der zu transplantierenden Grafts und der gewählten Methode. In der Dion Hair Clinic bieten wir transparente Preismodelle und verschiedene Finanzierungsmöglichkeiten an. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein individuelles Angebot.",
+        "question": "Was kostet eine günstige Haartransplantation in NRW?",
+        "answer": "Als beste Haarklinik für günstige Haartransplantation in NRW bieten wir faire Preise ab 1,50€ pro Graft. Die Gesamtkosten hängen von der Anzahl der benötigten Grafts ab. Im Vergleich zu anderen Kliniken in Köln und Düsseldorf bieten wir ein hervorragendes Preis-Leistungs-Verhältnis. In einem kostenlosen Beratungsgespräch erstellen wir Ihnen ein transparentes, individuelles Angebot.",
+        "category": "costs"
+      },
+      {
+        "question": "Warum ist Ihre Haartransplantation günstiger als in Köln oder Düsseldorf?",
+        "answer": "Durch unseren Standort in Mönchengladbach haben wir niedrigere Betriebskosten als Kliniken in Großstädten wie Köln oder Düsseldorf, was wir direkt an unsere Patienten weitergeben. Trotz günstigerer Preise bieten wir dieselbe hohe Qualität und modernste Techniken. Unsere zentrale Lage in NRW macht uns aus beiden Städten in nur 30 Minuten erreichbar.",
         "category": "costs"
       },
       {
