@@ -55,7 +55,7 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
               </li>
               <li className="flex items-center text-sm text-gray-600">
                 <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
-                3 kostenlose Kopfhautbehandlungen
+                3 zusätzliche Mesotherapiebehandlungen
               </li>
               <li className="flex items-center text-sm text-gray-600">
                 <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
@@ -145,7 +145,10 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
                 <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
                 Maßgeschneiderte Form
               </li>
-              
+                <li className="flex items-center text-sm text-gray-600">
+                <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
+                2 zusätzliche kostenlose Mesotherapiebehandlungen
+              </li>            
               <li className="flex items-center text-sm text-gray-600">
                 <CheckCircle className="w-4 h-4 text-[#86C166] mr-2 flex-shrink-0" />
                 Präzise Platzierung
