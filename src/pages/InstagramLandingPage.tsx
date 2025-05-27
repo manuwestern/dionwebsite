@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import InstagramHeroSection from '../components/instagram/InstagramHeroSection';
 import InstagramTreatmentOffers from '../components/instagram/InstagramTreatmentOffers';
 import InstagramWhyChooseUs from '../components/instagram/InstagramWhyChooseUs';
@@ -7,25 +7,6 @@ import InstagramTestimonial from '../components/instagram/InstagramTestimonial';
 import InstagramFinalCTA from '../components/instagram/InstagramFinalCTA';
 
 const InstagramLandingPage: React.FC = () => {
-  const [timeLeft, setTimeLeft] = useState({ hours: 47, minutes: 23, seconds: 45 });
-
-  // Countdown timer for the special offer
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
 
   // Hide floating buttons on Instagram landing page
   useEffect(() => {
@@ -89,7 +70,6 @@ const InstagramLandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <InstagramHeroSection 
-        timeLeft={timeLeft}
         onWhatsAppContact={handleWhatsAppContact}
         onCallContact={handleCallContact}
       />

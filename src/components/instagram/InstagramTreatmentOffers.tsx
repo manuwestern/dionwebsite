@@ -86,11 +86,11 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
             
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-gray-500">ab</span>
-                <span className="text-2xl font-bold text-[#86C166]">1.949€</span>
+                <span className="text-gray-500 line-through">2.999€</span>
+                <span className="text-2xl font-bold text-[#86C166]">2.449€</span>
               </div>
               <div className="text-sm text-gray-600">
-                Regulär ab 1.999€ - 50€ Instagram-Rabatt
+                Frühjahrsangebot 2.499€ - 50€ Instagram-Rabatt = 2.449€
               </div>
             </div>
 
@@ -110,7 +110,7 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
             </ul>
 
             <button
-              onClick={() => onWhatsAppContact('Hallo! Ich interessiere mich für die Barthaartransplantation mit dem 50€ Instagram-Special.')}
+              onClick={() => onWhatsAppContact('Hallo! Ich interessiere mich für die Barthaartransplantation mit dem 50€ Instagram-Special (2.449€ statt 2.999€).')}
               className={`${buttonStyle.primary} w-full bg-gradient-to-r from-[#7BA7C2] to-[#5A8BA6]`}
             >
               <span className={buttonRippleClass}></span>

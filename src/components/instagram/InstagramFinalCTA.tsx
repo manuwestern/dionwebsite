@@ -41,14 +41,7 @@ const InstagramFinalCTA: React.FC<InstagramFinalCTAProps> = ({
 
         <div className="text-sm opacity-75">
           <p>✓ Kostenlose Erstberatung ✓ Keine Wartezeit ✓ Sofortige Antwort</p>
-          <p className="mt-2">
-            Angebot gültig bis: {new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toLocaleDateString('de-DE', {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-          </p>
+          
         </div>
       </div>
     </section>
