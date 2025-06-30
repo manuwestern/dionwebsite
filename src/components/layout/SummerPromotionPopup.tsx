@@ -1,38 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { X, ArrowRight, Flower, CalendarRange, Gift, PhoneCall, ChevronDown, ChevronUp } from 'lucide-react';
+import { useSummerPromotion } from '../../contexts/SummerPromotionContext';
 import { textStyle, fontSize, fontWeight, textColor } from '../../utils/typography';
 import { buttonStyle, buttonRippleClass, buttonArrowClass } from '../../utils/buttons';
 import { useTranslation } from 'react-i18next';
 
-export interface PromotionConfig {
-  treatmentType: 'hair' | 'eyebrow' | 'beard';
-  title: string;
-  subtitle: string;
-  originalPrice: number;
-  discountPrice: number;
-  benefits: string[];
-  therapyCount: number;
-  therapyValue: number;
-  testimonial: {
-    text: string;
-    author: string;
-  };
-  whatsAppMessage: string;
-}
-
-interface PromotionPopupProps {
-  config: PromotionConfig;
-  showPopup?: boolean;
-  isClosing?: boolean;
-  closePopup?: () => void;
-}
-
-const PromotionPopup: React.FC<PromotionPopupProps> = ({ 
-  config, 
-  showPopup = true, 
-  isClosing = false, 
-  closePopup = () => console.log('Close popup not provided') 
-}) => {
+const SummerPromotionPopup: React.FC = () => {
+  const { showPopup, isClosing, closePopup } = useSummerPromotion();
   const { t } = useTranslation(['layout']);
   const popupRef = useRef<HTMLDivElement>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -98,19 +72,14 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
         event: 'whatsapp_contact',
         eventCategory: 'Contact',
         eventAction: 'WhatsApp Click',
-        eventLabel: 'Promotion Popup'
+        eventLabel: 'Summer Promotion Popup'
       });
     }
     
     // Open WhatsApp with predefined message
-    const message = encodeURIComponent(config.whatsAppMessage);
+    const message = encodeURIComponent(t('promotionPopup.whatsAppMessages.hair'));
     window.open(`https://wa.me/+491702637818?text=${message}`, '_blank');
     closePopup();
-  };
-  
-  // Format prices with Euro symbol and thousand separator
-  const formatPrice = (price: number) => {
-    return price.toLocaleString('de-DE') + '€';
   };
   
   return (
@@ -121,7 +90,7 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
         onClick={closePopup}
       ></div>
       
-      {/* Popup card with spring-themed styling */}
+      {/* Popup card with summer-themed styling */}
       <div 
         ref={popupRef}
         className={`relative bg-white rounded-2xl shadow-2xl overflow-hidden max-w-3xl w-[95%] md:w-full mx-auto transition-all duration-300 ${
@@ -171,7 +140,7 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
         </button>
         
         <div className={`flex flex-col md:flex-row overflow-auto ${isExpanded ? 'max-h-[70vh]' : 'max-h-[45vh]'} md:max-h-none transition-all duration-300`}>
-          {/* Left content - Spring Promotion */}
+          {/* Left content - Summer Promotion */}
           <div className="p-4 pt-6 md:p-6 md:pt-8 md:w-1/2 relative">
             {/* Flower icon with summer color */}
             <div className="mb-4 inline-flex items-center">
@@ -188,7 +157,7 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
               {t('promotionPopup.title')}
             </h2>
             <p className={`${fontSize.lg} ${fontWeight.medium} text-[#4FB5E6] mb-6`}>
-              {config.subtitle}
+              {t('promotionPopup.subtitles.hair')}
             </p>
             
             {/* Promotion details */}
@@ -196,24 +165,12 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
               <div className="flex justify-between items-center mb-3">
                 <span className={`${fontSize.base} ${fontWeight.semibold} text-gray-800`}>{t('promotionPopup.fixedPriceOffer')}</span>
                 <div className="flex flex-col items-end">
-                  <span className="text-sm text-gray-500 line-through">{formatPrice(config.originalPrice)}</span>
-                  <span className="text-xl font-bold text-[#4FB5E6]">{formatPrice(config.discountPrice)}</span>
+                  <span className="text-sm text-gray-500 line-through">3.499€</span>
+                  <span className="text-xl font-bold text-[#4FB5E6]">2.499€</span>
                 </div>
               </div>
               
               <ul className="space-y-3">
-                {config.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="mr-3 mt-0.5 text-[#4FB5E6]">
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className={`${fontSize.sm} ${textColor.medium}`}>
-                      {benefit}
-                    </span>
-                  </li>
-                ))}
                 <li className="flex items-start">
                   <div className="mr-3 mt-0.5 text-[#4FB5E6]">
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -221,7 +178,17 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
                     </svg>
                   </div>
                   <span className={`${fontSize.sm} ${textColor.medium}`}>
-                    <strong>{config.therapyCount} {t('promotionPopup.benefits.treatments', {treatmentType: t(`promotionPopup.treatmentTypes.${config.treatmentType}`), value: config.therapyValue})}</strong>
+                    {t('promotionPopup.benefits.maxGrafts')}
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-3 mt-0.5 text-[#4FB5E6]">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className={`${fontSize.sm} ${textColor.medium}`}>
+                    <strong>3 {t('promotionPopup.benefits.treatments', {treatmentType: t('promotionPopup.treatmentTypes.hair'), value: 750})}</strong>
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -244,10 +211,10 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
             
             {/* WhatsApp CTA Button - Von Button zu Link geändert für GTM-Tracking */}
             <a 
-              href={`https://wa.me/+491702637818?text=${encodeURIComponent(config.whatsAppMessage)}`}
+              href={`https://wa.me/+491702637818?text=${encodeURIComponent(t('promotionPopup.whatsAppMessages.hair'))}`}
               target="_blank"
               rel="noopener noreferrer"
-              id="popup-whatsapp-button"
+              id="summer-popup-whatsapp-button"
               onClick={(e) => {
                 e.preventDefault(); // Verhindert die Standard-Navigation
                 handleWhatsAppContact(); // Führt die bestehende Funktion aus
@@ -291,7 +258,7 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
                     {t('promotionPopup.reasons.freeTreatments.title')}
                   </span>
                   <p className={`${fontSize.sm} ${textColor.medium}`}>
-                    {t('promotionPopup.reasons.freeTreatments.description', {count: config.therapyCount, treatmentType: t(`promotionPopup.treatmentTypes.${config.treatmentType}`)})}
+                    {t('promotionPopup.reasons.freeTreatments.description', {count: 3, treatmentType: t('promotionPopup.treatmentTypes.hair')})}
                   </p>
                 </div>
               </li>
@@ -313,10 +280,10 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
             {/* Testimonial quote for added credibility */}
             <div className="mt-6 p-3 bg-white rounded-lg border border-gray-100">
               <p className={`${fontSize.sm} ${textColor.medium} italic`}>
-                "{config.testimonial.text}"
+                {t('promotionPopup.testimonial.hair.text')}
               </p>
               <p className={`${fontSize.xs} ${textColor.light} mt-2 text-right`}>
-                — {config.testimonial.author}
+                — {t('promotionPopup.testimonial.hair.author')}
               </p>
             </div>
             
@@ -343,4 +310,4 @@ const PromotionPopup: React.FC<PromotionPopupProps> = ({
   );
 };
 
-export default PromotionPopup;
+export default SummerPromotionPopup;

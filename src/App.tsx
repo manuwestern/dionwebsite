@@ -6,9 +6,9 @@ import ScrollToTop from './components/layout/ScrollToTop';
 import LoadingSpinner from './components/layout/LoadingSpinner';
 import CookieConsent from './components/cookies/CookieConsent';
 import { NewsletterProvider } from './contexts/NewsletterContext';
-import { SpringPromotionProvider, useSpringPromotion } from './contexts/SpringPromotionContext';
+import { SummerPromotionProvider, useSummerPromotion } from './contexts/SummerPromotionContext';
 import PromotionPopup from './components/layout/PromotionPopup';
-// Newsletter popup temporarily disabled for spring promotion
+// Newsletter popup temporarily disabled for summer promotion
 // import NewsletterPopup from './components/layout/NewsletterPopup';
 import ErrorBoundary from './components/common/elements/ErrorBoundary';
 import NotFoundPage from './pages/NotFoundPage';
@@ -58,7 +58,7 @@ const PromotionPopupContainer: React.FC = () => {
   const config = location.pathname.includes('augenbrauentransplantation')
     ? {
         treatmentType: 'eyebrow' as 'eyebrow',
-        title: 'Frühjahrsaktion',
+        title: 'Sommeraktion',
         subtitle: 'Limitiertes Angebot zur Augenbrauentransplantation',
         originalPrice: 1699,
         discountPrice: 1499,
@@ -71,11 +71,11 @@ const PromotionPopupContainer: React.FC = () => {
           text: 'Meine Augenbrauentransplantation bei Dion Hair Clinic hat mein Gesicht komplett verändert. Ich bin begeistert von dem natürlichen Ergebnis!',
           author: 'Sandra L., zufriedene Patientin'
         },
-        whatsAppMessage: 'Hallo, ich interessiere mich für das Frühjahrsangebot (Augenbrauentransplantation für 1499€).'
+        whatsAppMessage: 'Hallo, ich interessiere mich für das Sommerangebot (Augenbrauentransplantation für 1499€).'
       }
     : {
         treatmentType: 'hair' as 'hair',
-        title: 'Frühjahrsaktion',
+        title: 'Sommeraktion',
         subtitle: 'Limitiertes Angebot zur Haartransplantation',
         originalPrice: 2999,
         discountPrice: 2499,
@@ -88,7 +88,7 @@ const PromotionPopupContainer: React.FC = () => {
           text: 'Die Haartransplantation bei Dion Hair Clinic war die beste Entscheidung. Das Ergebnis übertrifft alle meine Erwartungen!',
           author: 'Michael K., zufriedener Patient'
         },
-        whatsAppMessage: 'Hallo, ich interessiere mich für das Frühjahrsangebot (Haartransplantation für 2499€).'
+        whatsAppMessage: 'Hallo, ich interessiere mich für das Sommerangebot (Haartransplantation für 2499€).'
       };
   
   if (!showPopup) {
@@ -147,7 +147,7 @@ const App: React.FC = React.memo(() => {
         <RouteTracker />
         <CookieConsent>
           <NewsletterProvider webhookUrl="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY4MDYzNjA0M2Q1MjY4NTUzMDUxMzQi_pc">
-            <SpringPromotionProvider>
+            <SummerPromotionProvider>
               <ScrollToTop />
               <Routes>
                 {/* Instagram Landing Page - No Layout (no header/footer) */}
@@ -190,7 +190,7 @@ const App: React.FC = React.memo(() => {
                 } />
               </Routes>
               <PromotionPopupContainer />
-            </SpringPromotionProvider>
+            </SummerPromotionProvider>
           </NewsletterProvider>
         </CookieConsent>
       </Router>

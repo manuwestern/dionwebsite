@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Spring Offer & Prices | Dion Hair Clinic",
-    "description": "Our Spring Offer: Hair transplantation from 2099€! Secure our reduced prices now - valid only from May to June 2025."
+    "title": "Summer Offer & Prices | Dion Hair Clinic",
+    "description": "Our Summer Offer: Hair transplantation from 2099€! Secure our reduced prices now - valid only from May to August 2025."
   },
   "heroSection": {
-    "title": "Spring Offer\nMay-June 2025",
+    "title": "Summer Offer\nJuly-August 2025",
     "subtitle": "Save 500€ on all hair and beard transplantations",
-    "welcomeText": "Take advantage of our limited-time spring offer: High-quality treatments at specially attractive prices. All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
+    "welcomeText": "Take advantage of our limited-time summer offer: High-quality treatments at specially attractive prices. All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
     "priceTags": {
       "saphirFUEHair": {
         "title": "Saphir FUE Hair",
@@ -31,16 +31,16 @@
     }
   },
   "priceOverviewSection": {
-    "title": "Our Spring Offers",
-    "subtitle": "Special prices from May to June 2025 - Limited time!",
-    "description": "Take advantage of our limited-time spring offer: All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
+    "title": "Our Summer Offers",
+    "subtitle": "Special prices from July to August 2025 - Limited time!",
+    "description": "Take advantage of our limited-time summer offer: All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
     "packageIncludes": "Package includes:",
     "springOffer": {
-      "badge": "Spring Offer",
+      "badge": "Summer Offer",
       "saveText": "SAVE",
       "saveAmount": "500€",
       "limitedTime": "Limited Time",
-      "dateRange": "ONLY MAY - JUNE 2025"
+      "dateRange": "ONLY JULY - AUGUST 2025"
     },
     "regularPrices": {
       "basicSaphirFUEHair2000": "2599€",

@@ -30,14 +30,14 @@ const ElegantPriceOptionCard: React.FC<ElegantPriceOptionCardProps> = ({
       <div 
         className={`relative bg-white backdrop-blur-sm rounded-xl overflow-hidden shadow-md transition-all duration-500 h-full border ${
           isHovered
-            ? 'shadow-lg transform -translate-y-1 border-[#7BA7C2]/60'
+            ? 'shadow-lg transform -translate-y-1 border-[#FFB74D]/60'
             : 'border-gray-100 hover:shadow-md'
         }`}
       >
         {/* Top accent line */}
         <div 
           className={`h-1 w-full transition-all duration-300 ${
-            isHovered ? 'bg-[#7BA7C2]' : 'bg-[#7BA7C2]/30'
+            isHovered ? 'bg-[#FFB74D]' : 'bg-[#FFB74D]/30'
           }`}
         ></div>
         
@@ -46,7 +46,7 @@ const ElegantPriceOptionCard: React.FC<ElegantPriceOptionCardProps> = ({
           <div className="flex justify-between items-start mb-4 pb-3 border-b border-gray-100">
             <h3 
               className={`${fontSize.base} ${fontWeight.medium} ${textColor.dark} transition-colors duration-300 ${
-                isHovered ? 'text-[#7BA7C2]' : ''
+                isHovered ? 'text-[#FFB74D]' : ''
               }`}
             >
               {title}
@@ -68,13 +68,13 @@ const ElegantPriceOptionCard: React.FC<ElegantPriceOptionCardProps> = ({
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ 
-            background: `radial-gradient(circle at bottom right, #7BA7C215, transparent 70%)`
+            background: `radial-gradient(circle at bottom right, #FFB74D15, transparent 70%)`
           }}
         ></div>
       </div>
       
       {/* Subtle shadow effect on hover */}
-      <div className={`absolute -z-10 w-full h-full rounded-xl bg-[#7BA7C2]/5 top-1 left-1 transition-opacity duration-500 ${
+      <div className={`absolute -z-10 w-full h-full rounded-xl bg-[#FFB74D]/5 top-1 left-1 transition-opacity duration-500 ${
         isHovered ? 'opacity-100' : 'opacity-0'
       }`}></div>
     </div>

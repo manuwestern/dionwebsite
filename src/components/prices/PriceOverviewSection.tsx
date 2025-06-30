@@ -65,12 +65,12 @@ const PriceOverviewSection: React.FC = () => {
     <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -left-[400px] blur-3xl"></div>
-      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/5 -bottom-[300px] -right-[300px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#4FB5E6]/5 -top-[400px] -left-[400px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#FFB74D]/5 -bottom-[300px] -right-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-      {/* Spring Promotion Banner */}
-      <div className="relative w-full bg-gradient-to-r from-[#86C166] to-[#7BA7C2] rounded-2xl mb-16 overflow-hidden shadow-lg">
+      {/* Summer Promotion Banner */}
+      <div className="relative w-full bg-gradient-to-r from-[#4FB5E6] to-[#FFB74D] rounded-2xl mb-16 overflow-hidden shadow-lg">
         <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 -mr-32 -mt-32 blur-xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/10 -ml-32 -mb-32 blur-xl"></div>
         
@@ -91,8 +91,8 @@ const PriceOverviewSection: React.FC = () => {
           </div>
           <div className="flex flex-col items-center">
             <div className="bg-white/90 rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md mb-2">
-              <span className="text-[#86C166] text-xs font-medium">{t('priceOverviewSection.springOffer.saveText')}</span>
-              <span className="text-[#86C166] text-2xl font-bold">{t('priceOverviewSection.springOffer.saveAmount')}</span>
+              <span className="text-[#4FB5E6] text-xs font-medium">{t('priceOverviewSection.springOffer.saveText')}</span>
+              <span className="text-[#4FB5E6] text-2xl font-bold">{t('priceOverviewSection.springOffer.saveAmount')}</span>
             </div>
             <span className="text-white text-xs">{t('priceOverviewSection.springOffer.limitedTime')}</span>
           </div>
@@ -116,8 +116,8 @@ const PriceOverviewSection: React.FC = () => {
             onClick={() => setActiveTab('hair')}
             className={`px-6 py-3 rounded-full transition-all duration-300 ${
               activeTab === 'hair' 
-                ? 'bg-[#7BA7C2] text-white shadow-md' 
-                : 'bg-white border border-[#7BA7C2]/30 text-[#7BA7C2] hover:bg-[#7BA7C2]/10'
+                ? 'bg-[#4FB5E6] text-white shadow-md' 
+                : 'bg-white border border-[#4FB5E6]/30 text-[#4FB5E6] hover:bg-[#4FB5E6]/10'
             }`}
           >
             <span className={`${fontSize.base} ${fontWeight.medium} ${tracking.wide}`}>
@@ -128,8 +128,8 @@ const PriceOverviewSection: React.FC = () => {
             onClick={() => setActiveTab('eyebrow')}
             className={`px-6 py-3 rounded-full transition-all duration-300 ${
               activeTab === 'eyebrow' 
-                ? 'bg-[#7BA7C2] text-white shadow-md' 
-                : 'bg-white border border-[#7BA7C2]/30 text-[#7BA7C2] hover:bg-[#7BA7C2]/10'
+                ? 'bg-[#4FB5E6] text-white shadow-md' 
+                : 'bg-white border border-[#4FB5E6]/30 text-[#4FB5E6] hover:bg-[#4FB5E6]/10'
             }`}
           >
             <span className={`${fontSize.base} ${fontWeight.medium} ${tracking.wide}`}>
@@ -140,8 +140,8 @@ const PriceOverviewSection: React.FC = () => {
             onClick={() => setActiveTab('beard')}
             className={`px-6 py-3 rounded-full transition-all duration-300 ${
               activeTab === 'beard' 
-                ? 'bg-[#7BA7C2] text-white shadow-md' 
-                : 'bg-white border border-[#7BA7C2]/30 text-[#7BA7C2] hover:bg-[#7BA7C2]/10'
+                ? 'bg-[#4FB5E6] text-white shadow-md' 
+                : 'bg-white border border-[#4FB5E6]/30 text-[#4FB5E6] hover:bg-[#4FB5E6]/10'
             }`}
           >
             <span className={`${fontSize.base} ${fontWeight.medium} ${tracking.wide}`}>
@@ -207,8 +207,8 @@ const PriceOverviewSection: React.FC = () => {
         {/* Consultation Section */}
         <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#4FB5E6]/5 -mr-32 -mt-32 blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#FFB74D]/5 -ml-32 -mb-32 blur-xl"></div>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
             <div className="md:w-2/3">

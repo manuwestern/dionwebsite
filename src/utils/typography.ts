@@ -45,8 +45,8 @@ export const lineHeight = {
 // Textfarben für verschiedene Elemente und Zustände
 export const textColor = {
   // Primäre Farben
-  primary: 'text-[#7BA7C2]', // Primärfarbe für Hervorhebungen
-  primaryDark: 'text-[#5A8BA6]', // Dunklere Variante der Primärfarbe
+  primary: 'text-[#4FB5E6]', // Primärfarbe für Hervorhebungen (Sommerfarbe - Hellblau)
+  primaryDark: 'text-[#3A9BD0]', // Dunklere Variante der Primärfarbe
   
   // Neutrale Farben
   dark: 'text-gray-800', // Haupttextfarbe
@@ -105,8 +105,8 @@ export const combineTypography = (...classes: string[]): string => {
 
 // Gradient-Unterstriche für Überschriften
 export const gradientUnderline = {
-  primary: 'h-px bg-gradient-to-r from-transparent via-[#7BA7C2] to-transparent',
-  light: 'h-px bg-gradient-to-r from-transparent via-[#7BA7C2]/25 to-transparent',
+  primary: 'h-px bg-gradient-to-r from-transparent via-[#4FB5E6] to-transparent',
+  light: 'h-px bg-gradient-to-r from-transparent via-[#FFB74D]/50 to-transparent',
 };
 
 // Export des gesamten Typografie-Systems als Standard

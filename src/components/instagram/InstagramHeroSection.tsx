@@ -35,7 +35,7 @@ const InstagramHeroSection: React.FC<InstagramHeroSectionProps> = ({
         </h1>
 
         <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Kombinierbar mit unseren aktuellen Frühjahrsaktionen. Angebot gültig bis zum 30. Juni.
+          Kombinierbar mit unseren aktuellen Sommeraktionen. Angebot gültig bis zum 31. August.
         </p>
 
         {/* CTA Buttons */}

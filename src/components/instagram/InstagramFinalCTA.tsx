@@ -17,7 +17,7 @@ const InstagramFinalCTA: React.FC<InstagramFinalCTAProps> = ({
           Sichern Sie sich jetzt Ihren 50€ Instagram-Rabatt!
         </h2>
         <p className="text-xl mb-8 opacity-90">
-          Kostenlose Beratung + 50€ Rabatt + Frühjahrsaktionen kombinierbar
+          Kostenlose Beratung + 50€ Rabatt + Sommeraktionen kombinierbar
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

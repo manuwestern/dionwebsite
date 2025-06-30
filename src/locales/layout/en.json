@@ -107,5 +107,65 @@
     "contactInfo": {
       "title": "Contact Information"
     }
+  },
+  "promotionPopup": {
+    "dateRange": "July-August 2025",
+    "title": "Summer Promotion",
+    "closeButton": "Close",
+    "fixedPriceOffer": "Fixed Price Offer:",
+    "benefits": {
+      "maxGrafts": "Maximum number of grafts included",
+      "treatments": "free {{treatmentType}} worth {{value}}€",
+      "aftercare": "Comprehensive aftercare by our expert team",
+      "naturalEyebrows": "Natural-looking, dense eyebrows"
+    },
+    "treatmentTypes": {
+      "hair": "scalp treatments",
+      "eyebrow": "eyebrow treatments",
+      "beard": "beard treatments"
+    },
+    "validityNote": "* Offer valid from July 1, 2025 to August 31, 2025. Cannot be combined with other promotions.",
+    "whatsAppButton": "Contact us via WhatsApp now",
+    "whyActNow": "Why you should act now:",
+    "reasons": {
+      "limitedTime": {
+        "title": "Limited Time Offer",
+        "description": "This offer is only valid for a limited time in summer 2025."
+      },
+      "freeTreatments": {
+        "title": "Free Treatments",
+        "description": "The {{count}} included {{treatmentType}} support your healing process and contribute to care."
+      },
+      "directContact": {
+        "title": "Direct Contact",
+        "description": "Via WhatsApp, you'll receive an immediate response and can ask your questions directly."
+      }
+    },
+    "testimonial": {
+      "hair": {
+        "text": "The hair transplantation at Dion Hair Clinic was the best decision. The result exceeds all my expectations!",
+        "author": "Michael K., satisfied patient"
+      },
+      "eyebrow": {
+        "text": "My eyebrow transplantation at Dion Hair Clinic has completely changed my face. I'm thrilled with the natural result!",
+        "author": "Sandra L., satisfied patient"
+      }
+    },
+    "mobileHint": {
+      "swipeDown": "Swipe down to close",
+      "tapToExpand": "Tap to expand",
+      "collapse": "Collapse",
+      "expand": "Expand"
+    },
+    "subtitles": {
+      "hair": "Limited offer for hair transplantation",
+      "eyebrow": "Limited offer for eyebrow transplantation",
+      "beard": "Limited offer for beard transplantation"
+    },
+    "whatsAppMessages": {
+      "hair": "Hello, I'm interested in the summer offer (hair transplantation for 2499€).",
+      "eyebrow": "Hello, I'm interested in the summer offer (eyebrow transplantation for 1499€).",
+      "beard": "Hello, I'm interested in the summer offer (beard transplantation for 2499€)."
+    }
   }
 }

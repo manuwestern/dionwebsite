@@ -30,7 +30,7 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
   hoverPackage,
   setHoverPackage,
   packageIncludes,
-  isSpringOffer = true // Default to true während des Aktionszeitraums
+  isSpringOffer = true // Default to true während des Aktionszeitraums (jetzt Sommeraktion mit sommerlichen Farben)
 }) => {
   const { t } = useTranslation(['prices']);
   const isHovered = index === hoverPackage;
@@ -45,24 +45,24 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
       <div 
         className={`relative bg-white backdrop-blur-sm rounded-xl overflow-hidden shadow-md transition-all duration-500 h-full border ${
           isHovered
-            ? 'shadow-lg transform -translate-y-1 border-[#7BA7C2]/60'
+            ? 'shadow-lg transform -translate-y-1 border-[#4FB5E6]/60'
             : isSpringOffer 
-              ? 'border-[#86C166]/30 hover:shadow-md' 
+              ? 'border-[#4FB5E6]/30 hover:shadow-md' 
               : 'border-gray-100 hover:shadow-md'
         }`}
       >
-        {/* Top accent line - Spring color for spring offers */}
+        {/* Top accent line - Summer color for summer offers */}
         <div 
           className={`h-1 w-full transition-all duration-300 ${
-            isHovered 
-              ? isSpringOffer ? 'bg-[#86C166]' : 'bg-[#7BA7C2]' 
-              : isSpringOffer ? 'bg-[#86C166]/30' : 'bg-[#7BA7C2]/30'
+          isHovered 
+              ? isSpringOffer ? 'bg-[#4FB5E6]' : 'bg-[#4FB5E6]' 
+              : isSpringOffer ? 'bg-[#4FB5E6]/30' : 'bg-[#4FB5E6]/30'
           }`}
         ></div>
         
-        {/* Spring offer badge - text shifted to the right */}
+        {/* Summer offer badge - text shifted to the right */}
         {isSpringOffer && (
-          <div className="absolute -right-14 top-5 bg-[#86C166] text-white py-1.5 px-10 transform rotate-45 shadow-sm z-10">
+          <div className="absolute -right-14 top-5 bg-[#4FB5E6] text-white py-1.5 px-10 transform rotate-45 shadow-sm z-10">
             <span className="text-xs font-medium tracking-wider pl-8">
               {t('priceOverviewSection.springOffer.badge')}
             </span>
@@ -74,7 +74,7 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
           <div className="mb-6 pb-3 border-b border-gray-100">
             <h3 
               className={`${fontSize.lg} ${fontWeight.medium} ${textColor.dark} transition-colors duration-300 ${
-                isHovered ? 'text-[#7BA7C2]' : ''
+                isHovered ? 'text-[#4FB5E6]' : ''
               }`}
             >
               {title}
@@ -97,7 +97,7 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
                       {price.regularPrice}
                     </span>
                   )}
-                  <span className={`${fontSize.lg} ${isSpringOffer ? 'text-[#86C166]' : textColor.primary} ${fontWeight.medium} transition-all duration-300 group-hover:scale-110`}>
+                  <span className={`${fontSize.lg} ${isSpringOffer ? 'text-[#4FB5E6]' : textColor.primary} ${fontWeight.medium} transition-all duration-300 group-hover:scale-110`}>
                     {price.price}
                   </span>
                 </div>
@@ -113,8 +113,8 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
             <ul className="grid gap-3">
               {features.map((feature, i) => (
                 <li key={i} className="flex items-start group">
-                  <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
-                    <Check className="h-3 w-3 text-[#7BA7C2]" />
+                  <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#FFB74D]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#FFB74D]/20">
+                    <Check className="h-3 w-3 text-[#FFB74D]" />
                   </div>
                   <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{feature}</span>
                 </li>
@@ -123,21 +123,21 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
           </div>
         </div>
         
-        {/* Bottom right subtle accent - spring themed during offer */}
+        {/* Bottom right subtle accent - summer themed during offer */}
         <div 
           className={`absolute bottom-0 right-0 w-16 h-16 transition-opacity duration-500 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ 
             background: isSpringOffer 
-              ? `radial-gradient(circle at bottom right, #86C16615, transparent 70%)`
-              : `radial-gradient(circle at bottom right, #7BA7C215, transparent 70%)`
+              ? `radial-gradient(circle at bottom right, #4FB5E615, transparent 70%)`
+              : `radial-gradient(circle at bottom right, #4FB5E615, transparent 70%)`
           }}
         ></div>
       </div>
       
-      {/* Subtle shadow effect on hover - spring themed during offer */}
-      <div className={`absolute -z-10 w-full h-full rounded-xl ${isSpringOffer ? 'bg-[#86C166]/5' : 'bg-[#7BA7C2]/5'} top-2 left-1 transition-opacity duration-500 ${
+      {/* Subtle shadow effect on hover - summer themed during offer */}
+      <div className={`absolute -z-10 w-full h-full rounded-xl ${isSpringOffer ? 'bg-[#4FB5E6]/5' : 'bg-[#4FB5E6]/5'} top-2 left-1 transition-opacity duration-500 ${
         isHovered ? 'opacity-100' : 'opacity-0'
       }`}></div>
     </div>

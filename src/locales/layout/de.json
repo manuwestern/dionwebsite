@@ -107,5 +107,65 @@
     "contactInfo": {
       "title": "Kontaktinformationen"
     }
+  },
+  "promotionPopup": {
+    "dateRange": "Juli-August 2025",
+    "title": "Sommeraktion",
+    "closeButton": "Schließen",
+    "fixedPriceOffer": "Festpreis-Angebot:",
+    "benefits": {
+      "maxGrafts": "Maximale Anzahl an Grafts inklusive",
+      "treatments": "kostenlose {{treatmentType}} im Wert von {{value}}€",
+      "aftercare": "Umfassende Nachsorge durch unser Expertenteam",
+      "naturalEyebrows": "Natürlich aussehende, dichte Augenbrauen"
+    },
+    "treatmentTypes": {
+      "hair": "Kopfhautbehandlungen",
+      "eyebrow": "Augenbrauenbehandlungen",
+      "beard": "Bartbehandlungen"
+    },
+    "validityNote": "* Angebot gültig vom 01.07.2025 bis 31.08.2025. Nicht kombinierbar mit anderen Aktionen.",
+    "whatsAppButton": "Jetzt per WhatsApp kontaktieren",
+    "whyActNow": "Warum Sie jetzt handeln sollten:",
+    "reasons": {
+      "limitedTime": {
+        "title": "Limitierte Zeitspanne",
+        "description": "Das Angebot ist nur für eine begrenzte Zeit im Sommer 2025 gültig."
+      },
+      "freeTreatments": {
+        "title": "Kostenlose Behandlungen",
+        "description": "Die {{count}} inkludierten {{treatmentType}} unterstützen Ihren Heilungsprozess und tragen zur Pflege bei."
+      },
+      "directContact": {
+        "title": "Direkter Kontakt",
+        "description": "Über WhatsApp erhalten Sie sofort eine Antwort und können Ihre Fragen direkt stellen."
+      }
+    },
+    "testimonial": {
+      "hair": {
+        "text": "Die Haartransplantation bei Dion Hair Clinic war die beste Entscheidung. Das Ergebnis übertrifft alle meine Erwartungen!",
+        "author": "Michael K., zufriedener Patient"
+      },
+      "eyebrow": {
+        "text": "Meine Augenbrauentransplantation bei Dion Hair Clinic hat mein Gesicht komplett verändert. Ich bin begeistert von dem natürlichen Ergebnis!",
+        "author": "Sandra L., zufriedene Patientin"
+      }
+    },
+    "mobileHint": {
+      "swipeDown": "Nach unten wischen zum Schließen",
+      "tapToExpand": "Tippen zum Ausklappen",
+      "collapse": "Einklappen",
+      "expand": "Ausklappen"
+    },
+    "subtitles": {
+      "hair": "Limitiertes Angebot zur Haartransplantation",
+      "eyebrow": "Limitiertes Angebot zur Augenbrauentransplantation",
+      "beard": "Limitiertes Angebot zur Barthaartransplantation"
+    },
+    "whatsAppMessages": {
+      "hair": "Hallo, ich interessiere mich für das Sommerangebot (Haartransplantation für 2499€).",
+      "eyebrow": "Hallo, ich interessiere mich für das Sommerangebot (Augenbrauentransplantation für 1499€).",
+      "beard": "Hallo, ich interessiere mich für das Sommerangebot (Barthaartransplantation für 2499€)."
+    }
   }
 }

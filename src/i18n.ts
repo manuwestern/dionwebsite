@@ -84,7 +84,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'de',
-    lng: 'de', // Force German as default language
+    // lng: 'de', // Removed forcing German as default language
     debug: false, // Set to true for development
     detection: {
       // Order of language detection - prioritize path and cookie over browser settings

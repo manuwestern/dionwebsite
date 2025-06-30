@@ -44,7 +44,7 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
                 <span className="text-2xl font-bold text-[#86C166]">2.449€</span>
               </div>
               <div className="text-sm text-gray-600">
-                Frühjahrsangebot 2.499€ - 50€ Instagram-Rabatt = 2.449€
+                Sommerangebot 2.499€ - 50€ Instagram-Rabatt = 2.449€
               </div>
             </div>
 
@@ -90,7 +90,7 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
                 <span className="text-2xl font-bold text-[#86C166]">2.449€</span>
               </div>
               <div className="text-sm text-gray-600">
-                Frühjahrsangebot 2.499€ - 50€ Instagram-Rabatt = 2.449€
+                Sommerangebot 2.499€ - 50€ Instagram-Rabatt = 2.449€
               </div>
             </div>
 
@@ -136,7 +136,7 @@ const InstagramTreatmentOffers: React.FC<InstagramTreatmentOffersProps> = ({
                 <span className="text-2xl font-bold text-[#86C166]">1.449€</span>
               </div>
               <div className="text-sm text-gray-600">
-                Frühjahrsangebot 1.499€ - 50€ Instagram-Rabatt = 1.449€
+                Sommerangebot 1.499€ - 50€ Instagram-Rabatt = 1.449€
               </div>
             </div>
 
