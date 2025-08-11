@@ -5,9 +5,9 @@
     "keywords": "Haartransplantation Preise, Haartransplantation Kosten, Haartransplantation Deutschland Preise, Haartransplantation Mönchengladbach Preise, Barthaartransplantation Preise, Augenbrauentransplantation Preise, GOÄ Haartransplantation"
   },
   "heroSection": {
-    "title": "Individuelle Preisberatung\nNach GOÄ",
-    "subtitle": "Transparente Kostenaufstellung nach ausführlicher Beratung",
-    "welcomeText": "Unsere Behandlungskosten orientieren sich an der Gebührenordnung für Ärzte (GOÄ) und werden individuell nach Aufwand und Behandlungsumfang berechnet. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein maßgeschneidertes Angebot.",
+    "title": "Faire & Transparente\nPreise",
+    "subtitle": "Individuelle Beratung für Ihr perfektes Ergebnis",
+    "welcomeText": "Wir glauben an ehrliche und transparente Preisgestaltung. In einem persönlichen Beratungsgespräch analysieren wir Ihre individuellen Bedürfnisse und erstellen Ihnen ein maßgeschneidertes Angebot - fair, transparent und ohne versteckte Kosten.",
     "priceTags": {
       "saphirFUEHair": {
         "title": "Saphir FUE Hair",
@@ -33,13 +33,13 @@
   },
   "priceOverviewSection": {
     "title": "Unsere Behandlungspakete",
-    "subtitle": "Individuelle Preisgestaltung nach GOÄ und Behandlungsaufwand",
-    "description": "Die Behandlungskosten werden individuell nach der Gebührenordnung für Ärzte (GOÄ) und dem tatsächlichen Behandlungsaufwand berechnet. Die angegebenen Preise dienen als Orientierung und können je nach individuellem Fall variieren.",
+    "subtitle": "Transparente Preise für erstklassige Ergebnisse",
+    "description": "Jede Behandlung ist so individuell wie Sie. Deshalb erstellen wir nach einer ausführlichen Beratung ein maßgeschneidertes Angebot, das perfekt zu Ihren Bedürfnissen und Wünschen passt.",
     "packageIncludes": "Im Paket enthalten:",
     "priceDisclaimer": {
-      "title": "Preishinweis",
-      "text": "* Alle Preise verstehen sich als Orientierungswerte. Die endgültigen Kosten werden nach ausführlicher Beratung und Untersuchung individuell nach GOÄ berechnet.",
-      "goaReference": "Preisgestaltung nach GOÄ (Gebührenordnung für Ärzte)"
+      "title": "Faire Preisgestaltung",
+      "text": "* Alle Preise sind Orientierungswerte. Nach Ihrer persönlichen Beratung erhalten Sie ein individuelles, transparentes Angebot ohne versteckte Kosten.",
+      "goaReference": "Medizinisch fundierte Preisgestaltung"
     },
     "regularPrices": {
       "basicSaphirFUEHair2000": "2599€",
@@ -266,23 +266,23 @@
   },
   "faqSection": {
     "title": "Häufig gestellte Fragen zu unseren Preisen",
-    "subtitle": "Antworten auf Ihre Fragen zur Preisgestaltung nach GOÄ",
+    "subtitle": "Transparente Antworten zu Kosten und Beratung",
     "faqs": [
       {
-        "question": "Wie werden die Behandlungskosten berechnet?",
-        "answer": "Unsere Behandlungskosten orientieren sich an der Gebührenordnung für Ärzte (GOÄ) und werden individuell nach dem tatsächlichen Behandlungsaufwand berechnet. Die angegebenen Preise dienen als Orientierungswerte und können je nach individuellem Fall variieren."
+        "question": "Wie entstehen die Behandlungskosten?",
+        "answer": "Jede Behandlung wird individuell geplant und berechnet. Die Kosten richten sich nach dem tatsächlichen Aufwand, der Anzahl der Grafts und Ihren persönlichen Wünschen. Die angegebenen Preise dienen als Orientierung - nach der Beratung erhalten Sie Ihr individuelles Angebot."
       },
       {
-        "question": "Warum sind die Preise mit 'ab' gekennzeichnet?",
-        "answer": "Die Preise sind mit 'ab' gekennzeichnet, da jede Behandlung individuell geplant wird. Der endgültige Preis hängt von verschiedenen Faktoren ab, wie der Anzahl der benötigten Grafts, dem Behandlungsaufwand und den gewählten Zusatzleistungen. Nach einer ausführlichen Beratung erhalten Sie ein individuelles Angebot."
+        "question": "Warum beginnen alle Preise mit 'ab'?",
+        "answer": "Weil jeder Patient einzigartig ist! Der endgültige Preis hängt von vielen Faktoren ab: Wie viele Grafts benötigen Sie? Welche Methode ist optimal? Welche Zusatzleistungen wünschen Sie? Nach der persönlichen Beratung wissen Sie genau, was Ihre Behandlung kostet."
       },
       {
-        "question": "Sind in den angegebenen Preisen alle Kosten enthalten?",
-        "answer": "Die angegebenen Orientierungspreise beinhalten die Grundleistungen des jeweiligen Pakets. Zusätzliche Leistungen oder ein erhöhter Behandlungsaufwand können zu Mehrkosten führen. In der persönlichen Beratung erhalten Sie eine transparente Kostenaufstellung."
+        "question": "Gibt es versteckte Kosten?",
+        "answer": "Nein, definitiv nicht! Transparenz ist uns wichtig. Die Orientierungspreise zeigen die Grundleistungen. Falls zusätzliche Behandlungen sinnvoll sind, besprechen wir das ausführlich mit Ihnen. Sie erhalten immer eine klare, verständliche Kostenaufstellung."
       },
       {
-        "question": "Wie wird die Anzahl der benötigten Grafts bestimmt?",
-        "answer": "Die Anzahl der benötigten Grafts wird in einem persönlichen Beratungsgespräch anhand Ihrer individuellen Situation und Ihrer Wünsche bestimmt. Dabei spielen Faktoren wie die Größe des zu behandelnden Bereichs, die gewünschte Dichte und Ihr Haartyp eine Rolle."
+        "question": "Wie wird mein individueller Bedarf ermittelt?",
+        "answer": "In einem ausführlichen Beratungsgespräch analysieren wir Ihre Situation: Wie ist der aktuelle Zustand? Was sind Ihre Wünsche? Welche Methode passt am besten? Faktoren wie Behandlungsbereich, gewünschte Dichte und Ihr Haartyp fließen in die Planung ein."
       }
     ]
   }
