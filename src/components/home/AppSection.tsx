@@ -32,7 +32,7 @@ const AppSection: React.FC = () => {
       features={features}
       appImageSrc="/images/dionapp.webp"
       appImageAlt="Dion Hair Clinic App - Haartransplantation Fortschritt verfolgen"
-      badgeText="ab Mai 2025"
+      badgeText="ab August 2025"
       appStoreInfo={t('appSection.appStoreInfo')}
       backgroundColor="bg-white"
       accentColor="text-[#7BA7C2]"

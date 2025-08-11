@@ -27,7 +27,7 @@ const AppFeatureSection: React.FC<AppFeatureSectionProps> = ({
   features,
   appImageSrc = "/images/dionapp.webp",
   appImageAlt = "Dion Hair Clinic App",
-  badgeText = "ab Mai 2025",
+  badgeText = "ab August 2025",
   appStoreInfo,
   backgroundColor = "bg-white",
   accentColor = "text-[#7BA7C2]",
