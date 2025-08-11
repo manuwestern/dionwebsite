@@ -69,32 +69,29 @@ const PriceOverviewSection: React.FC = () => {
       <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#FFB74D]/5 -bottom-[300px] -right-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
-      {/* Summer Promotion Banner */}
-      <div className="relative w-full bg-gradient-to-r from-[#4FB5E6] to-[#FFB74D] rounded-2xl mb-16 overflow-hidden shadow-lg">
-        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 -mr-32 -mt-32 blur-xl"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/10 -ml-32 -mb-32 blur-xl"></div>
+      {/* Price Disclaimer Banner */}
+      <div className="relative w-full bg-gradient-to-r from-gray-50 to-white rounded-2xl mb-16 overflow-hidden shadow-sm border border-gray-100">
+        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-blue-50/30 -mr-32 -mt-32 blur-xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-50/20 -ml-32 -mb-32 blur-xl"></div>
         
-        <div className="relative z-10 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between">
-          <div className="text-white text-center md:text-left mb-6 md:mb-0">
-            <div className="flex items-center mb-3">
-              <Flower className="h-5 w-5 mr-2" />
-              <span className={`${fontSize.sm} ${fontWeight.semibold} ${tracking.wide}`}>
-                {t('priceOverviewSection.springOffer.dateRange')}
+        <div className="relative z-10 p-6 md:p-8">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-3">
+              <div className="bg-blue-100 p-2 rounded-full mr-3">
+                <svg className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span className={`${fontSize.sm} ${fontWeight.semibold} ${tracking.wide} text-blue-600`}>
+                {t('priceOverviewSection.priceDisclaimer.title')}
               </span>
             </div>
-            <h2 className={`${fontSize.h2} ${fontWeight.light} mb-2`}>
-              {t('priceOverviewSection.springOffer.badge')}
-            </h2>
-            <p className={`${fontSize.lg} ${fontWeight.medium} max-w-xl`}>
-              {t('heroSection.subtitle')}
+            <p className={`${fontSize.base} ${fontWeight.normal} text-gray-700 max-w-4xl mx-auto mb-2`}>
+              {t('priceOverviewSection.priceDisclaimer.text')}
             </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-white/90 rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md mb-2">
-              <span className="text-[#4FB5E6] text-xs font-medium">{t('priceOverviewSection.springOffer.saveText')}</span>
-              <span className="text-[#4FB5E6] text-2xl font-bold">{t('priceOverviewSection.springOffer.saveAmount')}</span>
-            </div>
-            <span className="text-white text-xs">{t('priceOverviewSection.springOffer.limitedTime')}</span>
+            <p className={`${fontSize.sm} ${fontWeight.medium} text-blue-600`}>
+              {t('priceOverviewSection.priceDisclaimer.goaReference')}
+            </p>
           </div>
         </div>
       </div>

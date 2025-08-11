@@ -18,7 +18,6 @@ interface ElegantPricePackageCardProps {
   hoverPackage: number | null;
   setHoverPackage: (index: number | null) => void;
   packageIncludes: string;
-  isSpringOffer?: boolean;
 }
 
 const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
@@ -29,8 +28,7 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
   index,
   hoverPackage,
   setHoverPackage,
-  packageIncludes,
-  isSpringOffer = true // Default to true während des Aktionszeitraums (jetzt Sommeraktion mit sommerlichen Farben)
+  packageIncludes
 }) => {
   const { t } = useTranslation(['prices']);
   const isHovered = index === hoverPackage;
@@ -45,29 +43,16 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
       <div 
         className={`relative bg-white backdrop-blur-sm rounded-xl overflow-hidden shadow-md transition-all duration-500 h-full border ${
           isHovered
-            ? 'shadow-lg transform -translate-y-1 border-[#4FB5E6]/60'
-            : isSpringOffer 
-              ? 'border-[#4FB5E6]/30 hover:shadow-md' 
-              : 'border-gray-100 hover:shadow-md'
+            ? 'shadow-lg transform -translate-y-1 border-blue-500/60'
+            : 'border-gray-100 hover:shadow-md'
         }`}
       >
-        {/* Top accent line - Summer color for summer offers */}
+        {/* Top accent line */}
         <div 
           className={`h-1 w-full transition-all duration-300 ${
-          isHovered 
-              ? isSpringOffer ? 'bg-[#4FB5E6]' : 'bg-[#4FB5E6]' 
-              : isSpringOffer ? 'bg-[#4FB5E6]/30' : 'bg-[#4FB5E6]/30'
+            isHovered ? 'bg-blue-500' : 'bg-blue-500/30'
           }`}
         ></div>
-        
-        {/* Summer offer badge - text shifted to the right */}
-        {isSpringOffer && (
-          <div className="absolute -right-14 top-5 bg-[#4FB5E6] text-white py-1.5 px-10 transform rotate-45 shadow-sm z-10">
-            <span className="text-xs font-medium tracking-wider pl-8">
-              {t('priceOverviewSection.springOffer.badge')}
-            </span>
-          </div>
-        )}
         
         <div className="p-6 md:p-8">
           {/* Title with subtle underline */}
@@ -92,12 +77,7 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
               <div key={i} className="flex justify-between items-center py-3 border-b border-gray-100 group">
                 <span className={`${fontSize.base} ${textColor.dark} ${fontWeight.normal}`}>{price.title}</span>
                 <div className="flex flex-col items-end">
-                  {isSpringOffer && price.regularPrice && (
-                    <span className={`text-sm text-gray-500 line-through`}>
-                      {price.regularPrice}
-                    </span>
-                  )}
-                  <span className={`${fontSize.lg} ${isSpringOffer ? 'text-[#4FB5E6]' : textColor.primary} ${fontWeight.medium} transition-all duration-300 group-hover:scale-110`}>
+                  <span className={`${fontSize.lg} ${textColor.primary} ${fontWeight.medium} transition-all duration-300 group-hover:scale-110`}>
                     {price.price}
                   </span>
                 </div>
@@ -123,21 +103,19 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
           </div>
         </div>
         
-        {/* Bottom right subtle accent - summer themed during offer */}
+        {/* Bottom right subtle accent */}
         <div 
           className={`absolute bottom-0 right-0 w-16 h-16 transition-opacity duration-500 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ 
-            background: isSpringOffer 
-              ? `radial-gradient(circle at bottom right, #4FB5E615, transparent 70%)`
-              : `radial-gradient(circle at bottom right, #4FB5E615, transparent 70%)`
+            background: `radial-gradient(circle at bottom right, #4FB5E615, transparent 70%)`
           }}
         ></div>
       </div>
       
-      {/* Subtle shadow effect on hover - summer themed during offer */}
-      <div className={`absolute -z-10 w-full h-full rounded-xl ${isSpringOffer ? 'bg-[#4FB5E6]/5' : 'bg-[#4FB5E6]/5'} top-2 left-1 transition-opacity duration-500 ${
+      {/* Subtle shadow effect on hover */}
+      <div className={`absolute -z-10 w-full h-full rounded-xl bg-blue-500/5 top-2 left-1 transition-opacity duration-500 ${
         isHovered ? 'opacity-100' : 'opacity-0'
       }`}></div>
     </div>

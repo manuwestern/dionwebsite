@@ -1,47 +1,45 @@
 {
   "meta": {
-    "title": "Haartransplantation Preise Deutschland | Transparente Kosten in Mönchengladbach",
-    "description": "Transparente Preise für Haartransplantation in Deutschland. Unsere Klinik in Mönchengladbach bietet faire Kosten ohne versteckte Gebühren. Sommerangebot: Haartransplantation ab 2099€!",
-    "keywords": "Haartransplantation Preise, Haartransplantation Kosten, Haartransplantation Deutschland Preise, Haartransplantation Mönchengladbach Preise, Barthaartransplantation Preise, Augenbrauentransplantation Preise, günstige Haartransplantation Deutschland"
+    "title": "Haartransplantation Preise Deutschland | Individuelle Kostenberatung in Mönchengladbach",
+    "description": "Individuelle Preisgestaltung für Haartransplantation nach GOÄ. Unsere Klinik in Mönchengladbach bietet transparente Kostenberatung. Preise ab 2.599€ nach ausführlicher Beratung.",
+    "keywords": "Haartransplantation Preise, Haartransplantation Kosten, Haartransplantation Deutschland Preise, Haartransplantation Mönchengladbach Preise, Barthaartransplantation Preise, Augenbrauentransplantation Preise, GOÄ Haartransplantation"
   },
   "heroSection": {
-    "title": "Sommerangebot\nJuli-August 2025",
-    "subtitle": "Sparen Sie 500€ auf alle Haar- und Barthaartransplantationen",
-    "welcomeText": "Nutzen Sie unser zeitlich begrenztes Sommerangebot: Hochwertige Behandlungen zu besonders attraktiven Preisen. Alle Haar- und Barthaartransplantationen sind um 500€ reduziert, Augenbrauentransplantationen bereits ab 1499€ erhältlich.",
+    "title": "Individuelle Preisberatung\nNach GOÄ",
+    "subtitle": "Transparente Kostenaufstellung nach ausführlicher Beratung",
+    "welcomeText": "Unsere Behandlungskosten orientieren sich an der Gebührenordnung für Ärzte (GOÄ) und werden individuell nach Aufwand und Behandlungsumfang berechnet. In einem persönlichen Beratungsgespräch erstellen wir Ihnen ein maßgeschneidertes Angebot.",
     "priceTags": {
       "saphirFUEHair": {
         "title": "Saphir FUE Hair",
-        "price": "ab 2099€",
+        "price": "ab 2.599€*",
         "description": "Basic Paket bis 2000 Grafts"
       },
       "dhiFUEHair": {
         "title": "DHI FUE Hair",
-        "price": "ab 3099€",
+        "price": "ab 3.599€*",
         "description": "Basic Paket bis 2000 Grafts"
       },
       "saphirFUEBeard": {
         "title": "Saphir FUE Beard",
-        "price": "ab 2099€",
+        "price": "ab 2.599€*",
         "description": "Basic Paket bis 2000 Grafts"
       },
       "saphirFUEEyebrow": {
         "title": "Saphir FUE Eyebrow",
-        "price": "ab 1499€",
+        "price": "ab 1.699€*",
         "description": "bis 1000 Grafts"
       }
     }
   },
   "priceOverviewSection": {
-    "title": "Unsere Sommerangebote",
-    "subtitle": "Sonderpreise von Juli bis August 2025 - Begrenzte Zeit!",
-    "description": "Nutzen Sie unser zeitlich begrenztes Sommerangebot: Alle Haar- und Barthaartransplantationen sind um 500€ reduziert, Augenbrauentransplantationen bereits ab 1499€ erhältlich.",
+    "title": "Unsere Behandlungspakete",
+    "subtitle": "Individuelle Preisgestaltung nach GOÄ und Behandlungsaufwand",
+    "description": "Die Behandlungskosten werden individuell nach der Gebührenordnung für Ärzte (GOÄ) und dem tatsächlichen Behandlungsaufwand berechnet. Die angegebenen Preise dienen als Orientierung und können je nach individuellem Fall variieren.",
     "packageIncludes": "Im Paket enthalten:",
-    "springOffer": {
-      "badge": "Sommerangebot",
-      "saveText": "SPAREN SIE",
-      "saveAmount": "500€",
-      "limitedTime": "Begrenzte Zeit",
-      "dateRange": "NUR JULI - AUGUST 2025"
+    "priceDisclaimer": {
+      "title": "Preishinweis",
+      "text": "* Alle Preise verstehen sich als Orientierungswerte. Die endgültigen Kosten werden nach ausführlicher Beratung und Untersuchung individuell nach GOÄ berechnet.",
+      "goaReference": "Preisgestaltung nach GOÄ (Gebührenordnung für Ärzte)"
     },
     "regularPrices": {
       "basicSaphirFUEHair2000": "2599€",
@@ -65,17 +63,15 @@
       "packages": {
         "basicSaphirFUE": {
           "title": "Basic Paket Saphir FUE Hair",
-          "description": "Das Basic Paket bietet Ihnen eine hochwertige Haartransplantation mit der Saphir FUE Methode zu einem attraktiven Preis.",
+          "description": "Das Basic Paket bietet Ihnen eine hochwertige Haartransplantation mit der Saphir FUE Methode. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "bis 2000 Grafts",
-              "price": "2099€",
-              "regularPrice": "2599€"
+              "price": "ab 2.599€*"
             },
             {
               "title": "bis 4500 Grafts",
-              "price": "2499€",
-              "regularPrice": "2999€"
+              "price": "ab 2.999€*"
             }
           ],
           "features": [
@@ -86,17 +82,15 @@
         },
         "advancedSaphirFUE": {
           "title": "Advanced Paket Saphir FUE Hair",
-          "description": "Das Advanced Paket bietet Ihnen zusätzliche Leistungen für ein optimales Ergebnis und maximalen Komfort.",
+          "description": "Das Advanced Paket bietet Ihnen zusätzliche Leistungen für ein optimales Ergebnis und maximalen Komfort. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "bis 2000 Grafts",
-              "price": "2799€",
-              "regularPrice": "3299€"
+              "price": "ab 3.299€*"
             },
             {
               "title": "bis 4500 Grafts",
-              "price": "3299€",
-              "regularPrice": "3799€"
+              "price": "ab 3.799€*"
             }
           ],
           "features": [
@@ -108,17 +102,15 @@
         },
         "basicDHIFUE": {
           "title": "Basic Paket DHI FUE Hair",
-          "description": "Das Basic DHI Paket bietet Ihnen eine Haartransplantation ohne Rasur des Haupthaars mit der innovativen DHI Methode.",
+          "description": "Das Basic DHI Paket bietet Ihnen eine Haartransplantation ohne Rasur des Haupthaars mit der innovativen DHI Methode. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "bis 2000 Grafts",
-              "price": "3099€",
-              "regularPrice": "3599€"
+              "price": "ab 3.599€*"
             },
             {
               "title": "bis 4000 Grafts",
-              "price": "3499€",
-              "regularPrice": "3999€"
+              "price": "ab 3.999€*"
             }
           ],
           "features": [
@@ -130,17 +122,15 @@
         },
         "advancedDHIFUE": {
           "title": "Advanced Paket DHI FUE Hair",
-          "description": "Das Advanced DHI Paket kombiniert die Vorteile der DHI Methode mit zusätzlichen Leistungen für ein optimales Ergebnis.",
+          "description": "Das Advanced DHI Paket kombiniert die Vorteile der DHI Methode mit zusätzlichen Leistungen für ein optimales Ergebnis. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "bis 2000 Grafts",
-              "price": "3799€",
-              "regularPrice": "4299€"
+              "price": "ab 4.299€*"
             },
             {
               "title": "bis 4500 Grafts",
-              "price": "4299€",
-              "regularPrice": "4799€"
+              "price": "ab 4.799€*"
             }
           ],
           "features": [
@@ -155,16 +145,15 @@
     },
     "eyebrowTransplantation": {
       "title": "Augenbrauentransplantation",
-      "description": "Unsere Augenbrauentransplantationspakete bieten Ihnen natürlich aussehende und dauerhafte Ergebnisse.",
+      "description": "Unsere Augenbrauentransplantationspakete bieten Ihnen natürlich aussehende und dauerhafte Ergebnisse. Endgültiger Preis nach individueller Beratung.",
       "packages": {
         "saphirFUE": {
           "title": "Saphir FUE Eyebrow",
-          "description": "Die Saphir FUE Methode für Augenbrauen bietet präzise und natürlich aussehende Ergebnisse.",
+          "description": "Die Saphir FUE Methode für Augenbrauen bietet präzise und natürlich aussehende Ergebnisse. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "bis 1000 Grafts",
-              "price": "1499€",
-              "regularPrice": "1699€"
+              "price": "ab 1.699€*"
             }
           ],
           "features": [
@@ -174,12 +163,11 @@
         },
         "dhiFUE": {
           "title": "DHI FUE Eyebrow",
-          "description": "Die DHI FUE Methode für Augenbrauen ermöglicht eine präzise Platzierung der Haarfollikel für ein natürliches Ergebnis.",
+          "description": "Die DHI FUE Methode für Augenbrauen ermöglicht eine präzise Platzierung der Haarfollikel für ein natürliches Ergebnis. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "Standard",
-              "price": "1899€",
-              "regularPrice": "2099€"
+              "price": "ab 2.099€*"
             }
           ],
           "features": [
@@ -191,21 +179,19 @@
     },
     "beardTransplantation": {
       "title": "Barthaartransplantation",
-      "description": "Unsere Barthaartransplantationspakete bieten Ihnen die Möglichkeit, Ihren Bart zu verdichten oder zu vervollständigen.",
+      "description": "Unsere Barthaartransplantationspakete bieten Ihnen die Möglichkeit, Ihren Bart zu verdichten oder zu vervollständigen. Endgültiger Preis nach individueller Beratung.",
       "packages": {
         "saphirFUE": {
           "title": "Saphir FUE Beard",
-          "description": "Die Saphir FUE Methode für Barthaare bietet präzise und natürlich aussehende Ergebnisse.",
+          "description": "Die Saphir FUE Methode für Barthaare bietet präzise und natürlich aussehende Ergebnisse. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "bis 2000 Grafts",
-              "price": "2099€",
-              "regularPrice": "2599€"
+              "price": "ab 2.599€*"
             },
             {
               "title": "bis 4500 Grafts",
-              "price": "2499€",
-              "regularPrice": "2999€"
+              "price": "ab 2.999€*"
             }
           ],
           "features": [
@@ -216,17 +202,15 @@
         },
         "dhiFUE": {
           "title": "DHI FUE Beard",
-          "description": "Die DHI FUE Methode für Barthaare ermöglicht eine präzise Platzierung der Haarfollikel ohne Rasur.",
+          "description": "Die DHI FUE Methode für Barthaare ermöglicht eine präzise Platzierung der Haarfollikel ohne Rasur. Endgültiger Preis nach individueller Beratung.",
           "prices": [
             {
               "title": "bis 2000 Grafts",
-              "price": "3099€",
-              "regularPrice": "3599€"
+              "price": "ab 3.599€*"
             },
             {
               "title": "bis 4000 Grafts",
-              "price": "3499€",
-              "regularPrice": "3999€"
+              "price": "ab 3.999€*"
             }
           ],
           "features": [
@@ -282,19 +266,23 @@
   },
   "faqSection": {
     "title": "Häufig gestellte Fragen zu unseren Preisen",
-    "subtitle": "Antworten auf Ihre Fragen zur Preisgestaltung und Finanzierung",
+    "subtitle": "Antworten auf Ihre Fragen zur Preisgestaltung nach GOÄ",
     "faqs": [
       {
-        "question": "Sind in den angegebenen Preisen alle Kosten enthalten?",
-        "answer": "Ja, unsere Preise sind Komplettpreise und beinhalten alle notwendigen Leistungen für Ihre Behandlung. Es gibt keine versteckten Kosten oder Zusatzgebühren."
+        "question": "Wie werden die Behandlungskosten berechnet?",
+        "answer": "Unsere Behandlungskosten orientieren sich an der Gebührenordnung für Ärzte (GOÄ) und werden individuell nach dem tatsächlichen Behandlungsaufwand berechnet. Die angegebenen Preise dienen als Orientierungswerte und können je nach individuellem Fall variieren."
       },
       {
-        "question": "Bieten Sie Finanzierungsmöglichkeiten an?",
-        "answer": "Nein, wir bieten derzeit keine Finanzierungsmöglichkeiten an. Die Bezahlung erfolgt vor der Behandlung in voller Höhe."
+        "question": "Warum sind die Preise mit 'ab' gekennzeichnet?",
+        "answer": "Die Preise sind mit 'ab' gekennzeichnet, da jede Behandlung individuell geplant wird. Der endgültige Preis hängt von verschiedenen Faktoren ab, wie der Anzahl der benötigten Grafts, dem Behandlungsaufwand und den gewählten Zusatzleistungen. Nach einer ausführlichen Beratung erhalten Sie ein individuelles Angebot."
+      },
+      {
+        "question": "Sind in den angegebenen Preisen alle Kosten enthalten?",
+        "answer": "Die angegebenen Orientierungspreise beinhalten die Grundleistungen des jeweiligen Pakets. Zusätzliche Leistungen oder ein erhöhter Behandlungsaufwand können zu Mehrkosten führen. In der persönlichen Beratung erhalten Sie eine transparente Kostenaufstellung."
       },
       {
         "question": "Wie wird die Anzahl der benötigten Grafts bestimmt?",
-        "answer": "Die Anzahl der benötigten Grafts wird in einem persönlichen Beratungsgespräch anhand Ihrer individuellen Situation und Ihrer Wünsche bestimmt. Dabei spielen Faktoren wie die Größe des zu behandelnden Bereichs und die gewünschte Dichte eine Rolle."
+        "answer": "Die Anzahl der benötigten Grafts wird in einem persönlichen Beratungsgespräch anhand Ihrer individuellen Situation und Ihrer Wünsche bestimmt. Dabei spielen Faktoren wie die Größe des zu behandelnden Bereichs, die gewünschte Dichte und Ihr Haartyp eine Rolle."
       }
     ]
   }
