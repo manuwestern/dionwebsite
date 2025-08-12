@@ -93,8 +93,8 @@ const ElegantPricePackageCard: React.FC<ElegantPricePackageCardProps> = ({
             <ul className="grid gap-3">
               {features.map((feature, i) => (
                 <li key={i} className="flex items-start group">
-                  <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#FFB74D]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#FFB74D]/20">
-                    <Check className="h-3 w-3 text-[#FFB74D]" />
+                  <div className="mr-3 flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#7BA7C2]/10 flex items-center justify-center transition-all duration-300 group-hover:bg-[#7BA7C2]/20">
+                    <Check className="h-3 w-3 text-[#7BA7C2]" />
                   </div>
                   <span className={`${fontSize.sm} ${textColor.dark} ${fontWeight.normal}`}>{feature}</span>
                 </li>
