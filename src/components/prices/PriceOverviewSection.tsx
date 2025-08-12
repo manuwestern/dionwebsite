@@ -65,31 +65,31 @@ const PriceOverviewSection: React.FC = () => {
     <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute -z-10 w-full h-full inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
-      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#4FB5E6]/5 -top-[400px] -left-[400px] blur-3xl"></div>
-      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#FFB74D]/5 -bottom-[300px] -right-[300px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#7BA7C2]/5 -top-[400px] -left-[400px] blur-3xl"></div>
+      <div className="absolute -z-10 w-[600px] h-[600px] rounded-full bg-[#7BA7C2]/3 -bottom-[300px] -right-[300px] blur-3xl"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
       {/* Price Disclaimer Banner */}
-      <div className="relative w-full bg-gradient-to-r from-gray-50 to-white rounded-2xl mb-16 overflow-hidden shadow-sm border border-gray-100">
-        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-blue-50/30 -mr-32 -mt-32 blur-xl"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-50/20 -ml-32 -mb-32 blur-xl"></div>
+      <div className="relative w-full bg-gradient-to-r from-gray-50 to-white rounded-2xl mb-10 overflow-hidden shadow-sm border border-gray-100">
+        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/10 -mr-32 -mt-32 blur-xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
         
         <div className="relative z-10 p-6 md:p-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-3">
-              <div className="bg-blue-100 p-2 rounded-full mr-3">
-                <svg className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="bg-[#7BA7C2]/10 p-2 rounded-full mr-3">
+                <svg className="h-5 w-5 text-[#7BA7C2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <span className={`${fontSize.sm} ${fontWeight.semibold} ${tracking.wide} text-blue-600`}>
+              <span className={`${fontSize.sm} ${fontWeight.semibold} ${tracking.wide} text-[#7BA7C2]`}>
                 {t('priceOverviewSection.priceDisclaimer.title')}
               </span>
             </div>
             <p className={`${fontSize.base} ${fontWeight.normal} text-gray-700 max-w-4xl mx-auto mb-2`}>
               {t('priceOverviewSection.priceDisclaimer.text')}
             </p>
-            <p className={`${fontSize.sm} ${fontWeight.medium} text-blue-600`}>
+            <p className={`${fontSize.sm} ${fontWeight.medium} text-[#7BA7C2]`}>
               {t('priceOverviewSection.priceDisclaimer.goaReference')}
             </p>
           </div>
@@ -113,8 +113,8 @@ const PriceOverviewSection: React.FC = () => {
             onClick={() => setActiveTab('hair')}
             className={`px-6 py-3 rounded-full transition-all duration-300 ${
               activeTab === 'hair' 
-                ? 'bg-[#4FB5E6] text-white shadow-md' 
-                : 'bg-white border border-[#4FB5E6]/30 text-[#4FB5E6] hover:bg-[#4FB5E6]/10'
+                ? 'bg-[#7BA7C2] text-white shadow-md' 
+                : 'bg-white border border-[#7BA7C2]/30 text-[#7BA7C2] hover:bg-[#7BA7C2]/10'
             }`}
           >
             <span className={`${fontSize.base} ${fontWeight.medium} ${tracking.wide}`}>
@@ -125,8 +125,8 @@ const PriceOverviewSection: React.FC = () => {
             onClick={() => setActiveTab('eyebrow')}
             className={`px-6 py-3 rounded-full transition-all duration-300 ${
               activeTab === 'eyebrow' 
-                ? 'bg-[#4FB5E6] text-white shadow-md' 
-                : 'bg-white border border-[#4FB5E6]/30 text-[#4FB5E6] hover:bg-[#4FB5E6]/10'
+                ? 'bg-[#7BA7C2] text-white shadow-md' 
+                : 'bg-white border border-[#7BA7C2]/30 text-[#7BA7C2] hover:bg-[#7BA7C2]/10'
             }`}
           >
             <span className={`${fontSize.base} ${fontWeight.medium} ${tracking.wide}`}>
@@ -137,8 +137,8 @@ const PriceOverviewSection: React.FC = () => {
             onClick={() => setActiveTab('beard')}
             className={`px-6 py-3 rounded-full transition-all duration-300 ${
               activeTab === 'beard' 
-                ? 'bg-[#4FB5E6] text-white shadow-md' 
-                : 'bg-white border border-[#4FB5E6]/30 text-[#4FB5E6] hover:bg-[#4FB5E6]/10'
+                ? 'bg-[#7BA7C2] text-white shadow-md' 
+                : 'bg-white border border-[#7BA7C2]/30 text-[#7BA7C2] hover:bg-[#7BA7C2]/10'
             }`}
           >
             <span className={`${fontSize.base} ${fontWeight.medium} ${tracking.wide}`}>
@@ -204,8 +204,8 @@ const PriceOverviewSection: React.FC = () => {
         {/* Consultation Section */}
         <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#4FB5E6]/5 -mr-32 -mt-32 blur-xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#FFB74D]/5 -ml-32 -mb-32 blur-xl"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -mr-32 -mt-32 blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/3 -ml-32 -mb-32 blur-xl"></div>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
             <div className="md:w-2/3">
