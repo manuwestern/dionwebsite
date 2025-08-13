@@ -1,46 +1,45 @@
 {
   "meta": {
-    "title": "Summer Offer & Prices | Dion Hair Clinic",
-    "description": "Our Summer Offer: Hair transplantation from 2099€! Secure our reduced prices now - valid only from May to August 2025."
+    "title": "Hair Transplantation Prices Germany | Individual Cost Consultation in Mönchengladbach",
+    "description": "Individual pricing for hair transplantation according to medical standards. Our clinic in Mönchengladbach offers transparent cost consultation. Prices from 2,599€ after detailed consultation.",
+    "keywords": "Hair transplantation prices, Hair transplantation costs, Hair transplantation Germany prices, Hair transplantation Mönchengladbach prices, Beard transplantation prices, Eyebrow transplantation prices"
   },
   "heroSection": {
-    "title": "Summer Offer\nJuly-August 2025",
-    "subtitle": "Save 500€ on all hair and beard transplantations",
-    "welcomeText": "Take advantage of our limited-time summer offer: High-quality treatments at specially attractive prices. All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
+    "title": "Fair & Transparent\nPrices",
+    "subtitle": "Individual consultation for your perfect result",
+    "welcomeText": "We believe in honest and transparent pricing. In a personal consultation, we analyze your individual needs and create a customized offer - fair, transparent and without hidden costs.",
     "priceTags": {
       "saphirFUEHair": {
         "title": "Saphir FUE Hair",
-        "price": "from 2099€",
+        "price": "from 2,599€*",
         "description": "Basic package up to 2000 grafts"
       },
       "dhiFUEHair": {
         "title": "DHI FUE Hair",
-        "price": "from 3099€",
+        "price": "from 3,599€*",
         "description": "Basic package up to 2000 grafts"
       },
       "saphirFUEBeard": {
         "title": "Saphir FUE Beard",
-        "price": "from 2099€",
+        "price": "from 2,599€*",
         "description": "Basic package up to 2000 grafts"
       },
       "saphirFUEEyebrow": {
         "title": "Saphir FUE Eyebrow",
-        "price": "from 1499€",
+        "price": "from 1,699€*",
         "description": "up to 1000 grafts"
       }
     }
   },
   "priceOverviewSection": {
-    "title": "Our Summer Offers",
-    "subtitle": "Special prices from July to August 2025 - Limited time!",
-    "description": "Take advantage of our limited-time summer offer: All hair and beard transplantations are reduced by 500€, eyebrow transplantations available from just 1499€.",
+    "title": "Our Treatment Packages",
+    "subtitle": "Transparent prices for excellent results",
+    "description": "Every treatment is as individual as you are. That's why we create a customized offer after a detailed consultation that perfectly matches your needs and wishes.",
     "packageIncludes": "Package includes:",
-    "springOffer": {
-      "badge": "Summer Offer",
-      "saveText": "SAVE",
-      "saveAmount": "500€",
-      "limitedTime": "Limited Time",
-      "dateRange": "ONLY JULY - AUGUST 2025"
+    "priceDisclaimer": {
+      "title": "Fair Pricing",
+      "text": "* All prices are guide values. After your personal consultation, you will receive an individual, transparent offer without hidden costs.",
+      "goaReference": "Medically based pricing"
     },
     "regularPrices": {
       "basicSaphirFUEHair2000": "2599€",
@@ -64,82 +63,74 @@
       "packages": {
         "basicSaphirFUE": {
           "title": "Basic Package Saphir FUE Hair",
-          "description": "The Basic Package offers you a high-quality hair transplantation with the Saphir FUE method at an attractive price.",
+          "description": "The Basic Package offers you a high-quality hair transplantation with the Saphir FUE method. Final price after individual consultation.",
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2099€",
-              "regularPrice": "2599€"
+              "price": "from 2,599€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "2499€",
-              "regularPrice": "2999€"
+              "price": "from 2,999€*"
             }
           ],
           "features": [
             "Normal anesthesia",
             "Neck pillow and care shampoo",
-            "3 Mesotherapy treatments"
+            "3 supportive scalp treatments"
           ]
         },
         "advancedSaphirFUE": {
           "title": "Advanced Package Saphir FUE Hair",
-          "description": "The Advanced Package offers you additional services for optimal results and maximum comfort.",
+          "description": "The Advanced Package offers you additional services for optimal results and maximum comfort. Final price after individual consultation.",
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2799€",
-              "regularPrice": "3299€"
+              "price": "from 3,299€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "3299€",
-              "regularPrice": "3799€"
+              "price": "from 3,799€*"
             }
           ],
           "features": [
             "Hair loss blood and micronutrient analysis",
             "Painless anesthesia",
             "Neck pillow and care shampoo",
-            "4 Mesotherapy treatments"
+            "4 supportive scalp treatments"
           ]
         },
         "basicDHIFUE": {
           "title": "Basic Package DHI FUE Hair",
-          "description": "The Basic DHI Package offers you a hair transplantation without shaving your head using the innovative DHI method.",
+          "description": "The Basic DHI Package offers you a hair transplantation without shaving your head using the innovative DHI method. Final price after individual consultation.",
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3099€",
-              "regularPrice": "3599€"
+              "price": "from 3,599€*"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "3499€",
-              "regularPrice": "3999€"
+              "price": "from 3,999€*"
             }
           ],
           "features": [
             "No shaving of the main hair",
             "Normal anesthesia",
             "Neck pillow and care shampoo",
-            "3 Mesotherapy treatments"
+            "3 supportive scalp treatments"
           ]
         },
         "advancedDHIFUE": {
           "title": "Advanced Package DHI FUE Hair",
-          "description": "The Advanced DHI Package combines the benefits of the DHI method with additional services for optimal results.",
+          "description": "The Advanced DHI Package combines the benefits of the DHI method with additional services for optimal results. Final price after individual consultation.",
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3799€",
-              "regularPrice": "4299€"
+              "price": "from 4,299€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "4299€",
-              "regularPrice": "4799€"
+              "price": "from 4,799€*"
             }
           ],
           "features": [
@@ -147,92 +138,86 @@
             "Hair loss blood and micronutrient analysis",
             "Painless anesthesia",
             "Neck pillow and care shampoo",
-            "4 Mesotherapy treatments"
+            "4 supportive scalp treatments"
           ]
         }
       }
     },
     "eyebrowTransplantation": {
       "title": "Eyebrow Transplantation",
-      "description": "Our eyebrow transplantation packages offer you natural-looking and permanent results.",
+      "description": "Our eyebrow transplantation packages offer you natural-looking and permanent results. Final price after individual consultation.",
       "packages": {
         "saphirFUE": {
           "title": "Saphir FUE Eyebrow",
-          "description": "The Saphir FUE method for eyebrows offers precise and natural-looking results.",
+          "description": "The Saphir FUE method for eyebrows offers precise and natural-looking results. Final price after individual consultation.",
           "prices": [
             {
               "title": "up to 1000 Grafts",
-              "price": "1499€",
-              "regularPrice": "1699€"
+              "price": "from 1,699€*"
             }
           ],
           "features": [
             "Neck pillow and care shampoo",
-            "1 Mesotherapy treatment"
+            "1 supportive eyebrow treatment"
           ]
         },
         "dhiFUE": {
           "title": "DHI FUE Eyebrow",
-          "description": "The DHI FUE method for eyebrows allows precise placement of hair follicles for a natural result.",
+          "description": "The DHI FUE method for eyebrows allows precise placement of hair follicles for a natural result. Final price after individual consultation.",
           "prices": [
             {
               "title": "Standard",
-              "price": "1899€",
-              "regularPrice": "2099€"
+              "price": "from 2,099€*"
             }
           ],
           "features": [
             "Neck pillow and care shampoo",
-            "1 Mesotherapy treatment"
+            "1 supportive eyebrow treatment"
           ]
         }
       }
     },
     "beardTransplantation": {
       "title": "Beard Transplantation",
-      "description": "Our beard transplantation packages offer you the opportunity to densify or complete your beard.",
+      "description": "Our beard transplantation packages offer you the opportunity to densify or complete your beard. Final price after individual consultation.",
       "packages": {
         "saphirFUE": {
           "title": "Saphir FUE Beard",
-          "description": "The Saphir FUE method for beard hair offers precise and natural-looking results.",
+          "description": "The Saphir FUE method for beard hair offers precise and natural-looking results. Final price after individual consultation.",
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "2099€",
-              "regularPrice": "2599€"
+              "price": "from 2,599€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "2499€",
-              "regularPrice": "2999€"
+              "price": "from 2,999€*"
             }
           ],
           "features": [
             "Normal anesthesia",
             "Care shampoo",
-            "3 Mesotherapy treatments"
+            "3 supportive beard treatments"
           ]
         },
         "dhiFUE": {
           "title": "DHI FUE Beard",
-          "description": "The DHI FUE method for beard hair allows precise placement of hair follicles without shaving.",
+          "description": "The DHI FUE method for beard hair allows precise placement of hair follicles without shaving. Final price after individual consultation.",
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "3099€",
-              "regularPrice": "3599€"
+              "price": "from 3,599€*"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "3499€",
-              "regularPrice": "3999€"
+              "price": "from 3,999€*"
             }
           ],
           "features": [
             "No shaving of the main hair",
             "Normal anesthesia",
             "Neck pillow and care shampoo",
-            "3 Mesotherapy treatments"
+            "3 supportive beard treatments"
           ]
         }
       }
@@ -247,14 +232,14 @@
           "description": "Comprehensive analysis of the causes of your hair loss for targeted treatment."
         },
         {
-          "title": "Basic Mesotherapy Treatment",
+          "title": "Basic Scalp Treatment",
           "price": "179€",
-          "description": "Stimulates hair growth and improves hair quality."
+          "description": "Supportive treatment to improve scalp health."
         },
         {
-          "title": "Advanced Mesotherapy Treatment",
+          "title": "Advanced Scalp Treatment",
           "price": "239€",
-          "description": "Advanced Mesotherapy treatment with additional growth factors."
+          "description": "Advanced scalp treatment with additional nutrients."
         },
         {
           "title": "Micronutrient Infusion Therapy",
@@ -281,19 +266,23 @@
   },
   "faqSection": {
     "title": "Frequently Asked Questions about our Prices",
-    "subtitle": "Answers to your questions about pricing and financing",
+    "subtitle": "Transparent answers about costs and consultation",
     "faqs": [
       {
-        "question": "Do the prices include all costs?",
-        "answer": "Yes, our prices are all-inclusive and include all necessary services for your treatment. There are no hidden costs or additional fees."
+        "question": "How are treatment costs determined?",
+        "answer": "Each treatment is individually planned and calculated. The costs depend on the actual effort, the number of grafts and your personal wishes. The stated prices serve as guidance - after consultation you will receive your individual offer."
       },
       {
-        "question": "Do you offer financing options?",
-        "answer": "No, we currently do not offer financing options. Payment is required in full before the treatment."
+        "question": "Why do all prices start with 'from'?",
+        "answer": "Because every patient is unique! The final price depends on many factors: How many grafts do you need? Which method is optimal? Which additional services do you want? After personal consultation, you know exactly what your treatment costs."
       },
       {
-        "question": "How is the number of required grafts determined?",
-        "answer": "The number of required grafts is determined in a personal consultation based on your individual situation and your wishes. Factors such as the size of the area to be treated and the desired density play a role."
+        "question": "Are there hidden costs?",
+        "answer": "No, definitely not! Transparency is important to us. The guide prices show the basic services. If additional treatments make sense, we discuss this thoroughly with you. You always receive a clear, understandable cost breakdown."
+      },
+      {
+        "question": "How is my individual need determined?",
+        "answer": "In a detailed consultation, we analyze your situation: What is the current condition? What are your wishes? Which method fits best? Factors such as treatment area, desired density and your hair type flow into the planning."
       }
     ]
   }
