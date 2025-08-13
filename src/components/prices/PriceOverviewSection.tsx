@@ -70,7 +70,7 @@ const PriceOverviewSection: React.FC = () => {
       
       <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
       {/* Price Disclaimer Banner */}
-      <div className="relative w-full bg-gradient-to-r from-gray-50 to-white rounded-2xl mb-10 overflow-hidden shadow-sm border border-gray-100">
+      <div className="relative w-full bg-gradient-to-r from-gray-50 to-white rounded-2xl mb-6 overflow-hidden shadow-sm border border-gray-100">
         <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#7BA7C2]/10 -mr-32 -mt-32 blur-xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#7BA7C2]/5 -ml-32 -mb-32 blur-xl"></div>
         
