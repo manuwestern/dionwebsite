@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Quote, ChevronLeft, ChevronRight, Eye, Info } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight, Eye, Info, MessageCircle } from 'lucide-react';
 import { textStyle, fontSize, fontWeight, textColor, gradientUnderline, tracking, lineHeight } from '../../utils/typography';
 import OptimizedImage from './elements/OptimizedImage';
 import CTASection from './elements/CTASection';
@@ -49,7 +49,6 @@ const TestimonialsSectionComponent: React.FC<TestimonialsSectionComponentProps> 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [hoverStat, setHoverStat] = useState<number | null>(null);
-  const [isUnlocked, setIsUnlocked] = useState(false);
 
   // Trigger entrance animations
   useEffect(() => {
@@ -101,9 +100,30 @@ const TestimonialsSectionComponent: React.FC<TestimonialsSectionComponentProps> 
   const beforeLabelText = beforeLabel || t('testimonialsSection.before');
   const afterLabelText = afterLabel || t('testimonialsSection.after');
 
-  // Handle unlock functionality
-  const handleUnlock = () => {
-    setIsUnlocked(true);
+  // Handle WhatsApp request functionality
+  const handleWhatsAppRequest = () => {
+    // GTM tracking
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'whatsapp_contact',
+        eventCategory: 'Contact',
+        eventAction: 'WhatsApp Click',
+        eventLabel: `Testimonials Section - ${translationNamespace}`
+      });
+    }
+
+    // Create treatment-specific message
+    const treatmentType = translationNamespace === 'hairTransplantation' ? 'Haartransplantationen' :
+                         translationNamespace === 'beardTransplantation' ? 'Barthaartransplantationen' :
+                         'Augenbrauentransplantationen';
+    
+    const message = encodeURIComponent(
+      `Hallo, ich interessiere mich für Behandlungsergebnisse bei ${treatmentType}. Können Sie mir Vorher-Nachher-Bilder zusenden?`
+    );
+    
+    // Open WhatsApp with predefined message
+    const whatsappUrl = `https://wa.me/491702637818?text=${message}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -141,11 +161,11 @@ const TestimonialsSectionComponent: React.FC<TestimonialsSectionComponentProps> 
                     }}
                     alt={beforeAfterPairs[activeBeforeAfter].beforeAlt || `Vor der Behandlung - Patient vor dem Eingriff`}
                     className={`w-full h-full object-cover transition-all duration-500 ${
-                      requiresUnlock && !isUnlocked ? 'blur-md' : ''
+                      requiresUnlock ? 'blur-md' : ''
                     }`}
                     loading="lazy"
                   />
-                  {requiresUnlock && !isUnlocked && (
+                  {requiresUnlock && (
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                       <div className="text-white text-center px-4">
                         <Eye className="w-8 h-8 mx-auto mb-2 opacity-80" />
@@ -210,15 +230,15 @@ const TestimonialsSectionComponent: React.FC<TestimonialsSectionComponentProps> 
             </div>
           </div>
 
-          {/* Unlock Button and Legal Notice */}
-          {requiresUnlock && !isUnlocked && (
+          {/* WhatsApp Request Button and Legal Notice */}
+          {requiresUnlock && (
             <div className="mt-8 text-center">
               <button
-                onClick={handleUnlock}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#7BA7C2] to-[#6B9BC3] text-white px-8 py-4 rounded-xl font-medium text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 mb-6"
+                onClick={handleWhatsAppRequest}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white px-8 py-4 rounded-xl font-medium text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 mb-6"
               >
-                <Eye className="w-5 h-5" />
-                {t('testimonialsSection.unlockButton', 'Behandlungsergebnisse freischalten')}
+                <MessageCircle className="w-5 h-5" />
+                {t('testimonialsSection.whatsAppButton', 'Behandlungsergebnisse anfordern')}
               </button>
               
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-2xl mx-auto">
