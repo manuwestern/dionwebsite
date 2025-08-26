@@ -198,6 +198,10 @@
     "beforeAfterTitle": "Vorher / Nachher Ergebnisse",
     "before": "Vorher",
     "after": "Nachher",
+    "unlockButton": "Behandlungsergebnisse freischalten",
+    "blurNotice": "Bild aus rechtlichen Gründen unscharf",
+    "legalNoticeTitle": "Hinweis zum Heilmittelwerbegesetz",
+    "legalNotice": "Aus rechtlichen Gründen (§11 Heilmittelwerbegesetz) dürfen Vorher-Nachher-Bilder medizinischer Behandlungen nicht öffentlich dargestellt werden. Die Ergebnisse können individuell variieren und sind nicht garantiert.",
     "ctaSection": {
       "title": "Werden Sie unser nächster Erfolgsfall",
       "description": "Schließen Sie sich unseren zufriedenen Patienten an und erleben Sie selbst, wie eine Barthaartransplantation Ihr Leben verändern kann. Vereinbaren Sie noch heute eine kostenlose Beratung und lassen Sie sich von unseren Experten beraten."
