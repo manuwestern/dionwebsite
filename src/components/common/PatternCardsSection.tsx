@@ -198,7 +198,7 @@ const PatternCardsSection: React.FC<PatternCardsSectionProps> = ({
                     </div>
                     
                     {/* Elegant dividing line with subtle gradient */}
-                    <div className={`w-full h-px ${gradientUnderline.light} mb-2 md:mb-3`}></div>
+                    <div className={`w-full h-px ${gradientUnderline.primary} mb-2 md:mb-3`}></div>
                     
                     {/* Pattern Details - always at the same position with perfect spacing */}
                     <div className="grid grid-cols-2 gap-2 md:gap-5 self-start mt-0 md:mt-1">
