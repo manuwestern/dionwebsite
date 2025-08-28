@@ -52,10 +52,10 @@
         "image": "dhi_fue.jpg",
         "description": "The DHI technique enables direct implantation of hair follicles without prior channel creation.",
         "benefits": [
-          "Higher density of transplanted beard hairs",
-          "More precise control over direction and angle",
-          "Minimal manipulation of hair follicles",
-          "More natural growth direction"
+          "Precise control over beard growth direction and angle",
+          "Higher graft survival rate through minimal manipulation",
+          "Better adaptation to natural beard structure",
+          "Optimal beard contouring design"
         ],
         "process": [
           "Extraction of individual follicular units from the donor area",
@@ -63,7 +63,7 @@
           "Precise implantation without prior channel creation",
           "Control over depth, angle, and direction of implantation"
         ],
-        "idealFor": "Ideal for: High beard density, precise placement"
+        "idealFor": "Ideal for: Precise beard contouring, natural growth direction"
       }
     ]
   },
@@ -197,6 +197,10 @@
     "beforeAfterTitle": "Before / After Results",
     "before": "Before",
     "after": "After",
+    "whatsAppButton": "Request Treatment Results",
+    "blurNotice": "Image blurred for legal reasons",
+    "legalNoticeTitle": "Notice regarding Medical Advertising Law",
+    "legalNotice": "For legal reasons (§11 Medical Advertising Law), before-and-after images of medical treatments may not be publicly displayed. Results may vary individually and are not guaranteed.",
     "ctaSection": {
       "title": "Become Our Next Success Story",
       "description": "Join our satisfied patients and experience for yourself how a beard transplantation can change your life. Schedule a free consultation today and get advice from our experts."
