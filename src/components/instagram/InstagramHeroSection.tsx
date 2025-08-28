@@ -29,19 +29,19 @@ const InstagramHeroSection: React.FC<InstagramHeroSectionProps> = ({
 
         {/* Main Headline */}
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">
-          <span className="text-[#7BA7C2]">50€ Rabatt</span> auf Ihre
+          Professionelle <span className="text-[#7BA7C2]">Haartransplantation</span>
           <br />
-          Haar- oder Barthaartransplantation
+          in Mönchengladbach
         </h1>
 
         <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Kombinierbar mit unseren aktuellen Sommeraktionen. Angebot gültig bis zum 31. August.
+          Modernste Techniken für natürliche Ergebnisse. Kostenlose Beratung und individuelle Behandlungsplanung.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={() => onWhatsAppContact('Hallo! Ich interessiere mich für das 50€ Instagram-Special und möchte eine kostenlose Beratung.')}
+            onClick={() => onWhatsAppContact('Hallo! Ich interessiere mich für eine Haartransplantation und möchte eine kostenlose Beratung.')}
             className={`${buttonStyle.primary} bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white px-8 py-4 text-lg`}
           >
             <span className={buttonRippleClass}></span>
