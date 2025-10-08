@@ -13,6 +13,38 @@
     NETLIFY_USE_PRERENDER = "true"
     DEBUG = "netlify-plugin-inline-functions-env"
 
+# PDFs direkt ausliefern (vor allen anderen Redirects)
+[[redirects]]
+  from = "/pdf/*"
+  to = "/pdf/:splat"
+  status = 200
+  force = true
+
+# Ausnahmen für dionhairclinic.de – keine Domain-Weiterleitung für PDFs
+[[redirects]]
+  from = "https://dionhairclinic.de/pdf/*"
+  to = "/pdf/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.dionhairclinic.de/pdf/*"
+  to = "/pdf/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "http://dionhairclinic.de/pdf/*"
+  to = "/pdf/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "http://www.dionhairclinic.de/pdf/*"
+  to = "/pdf/:splat"
+  status = 200
+  force = true
+
 # Domain redirects - ensure all traffic goes to www.dionhairclinic.com
 # Specific redirect for index.html
 [[redirects]]
