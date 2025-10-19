@@ -132,7 +132,7 @@ const ConsultationOptionsSection: React.FC = () => {
             icon={<Phone strokeWidth={1.5} className="w-6 h-6" />}
             isHovered={hoveredOption === 'phone'}
             onHover={(isHovered) => handleHover('phone', isHovered)}
-            calendlyUrl="https://calendly.com/dionhairclinic/beratung-telefonisch"
+            calendlyUrl="https://cal.com/dionhairclinic/beratung-telefonisch"
             buttonText={t('optionsSection.chooseButton')}
           />
           
@@ -144,7 +144,7 @@ const ConsultationOptionsSection: React.FC = () => {
             icon={<MapPin strokeWidth={1.5} className="w-6 h-6" />}
             isHovered={hoveredOption === 'inPerson'}
             onHover={(isHovered) => handleHover('inPerson', isHovered)}
-            calendlyUrl="https://calendly.com/dionhairclinic/beratungklinik"
+            calendlyUrl="https://cal.com/dionhairclinic/beratung-vor-ort"
             buttonText={t('optionsSection.chooseButton')}
           />
         </div>
