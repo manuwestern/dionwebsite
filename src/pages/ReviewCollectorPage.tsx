@@ -55,7 +55,7 @@ const ReviewCollectorPage: React.FC = () => {
             data-businessunit-id="6578440cfa8c7e8d395fed19"
             data-style-height="52px"
             data-style-width="100%"
-            data-token="f8c15495-0e5c-4467-93b5-3a202537e419"
+            data-token="55e1e83e-c696-4e53-9baa-51924e30f619"
           >
             <a
               href="https://de.trustpilot.com/review/dionhairclinic.de"
