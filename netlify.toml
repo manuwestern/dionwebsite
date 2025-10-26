@@ -117,3 +117,9 @@
     Content-Type = "application/xml"
     X-Content-Type-Options = "nosniff"
     Cache-Control = "public, max-age=86400"
+
+# X-Robots-Tag for review collector page to prevent indexing
+[[headers]]
+  for = "/bewerten"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, noimageindex"
