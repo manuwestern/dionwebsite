@@ -68,10 +68,11 @@ const ReviewCollectorPage: React.FC = () => {
         <div className="max-w-2xl w-full">
           {/* Logo */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-light tracking-wider text-primary mb-2">
-              DION<span className="font-normal">HAIR CLINIC</span>
-            </h1>
-            <div className="w-24 h-1 bg-primary mx-auto"></div>
+            <img 
+              src="/images/DionHairClinic_Logo.svg" 
+              alt="Dion Hair Clinic" 
+              className="h-16 md:h-20 mx-auto"
+            />
           </div>
 
           {/* Main Card */}
