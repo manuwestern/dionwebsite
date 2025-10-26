@@ -1,15 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import SEO from '../components/seo/SEO';
 
 const ReviewCollectorPage: React.FC = () => {
+  const widgetRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    // Load Trustpilot script only on this page
-    const existing = document.querySelector('script[src*="tp.widget.bootstrap.min.js"]') as HTMLScriptElement | null;
-    if (!existing) {
-      const script = document.createElement('script');
+    // Ensure Trustpilot script is loaded and render the widget from this element
+    const init = () => {
+      const w: any = (window as any);
+      if (w.Trustpilot && widgetRef.current) {
+        try {
+          w.Trustpilot.loadFromElement(widgetRef.current, true);
+        } catch (e) {
+          // Ignore render errors
+        }
+      }
+    };
+
+    let script = document.querySelector('script[src*="tp.widget.bootstrap.min.js"]') as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement('script');
       script.src = 'https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js';
       script.async = true;
+      script.onload = init;
       document.head.appendChild(script);
+    } else {
+      // Script already present, initialize immediately
+      init();
     }
   }, []);
 
@@ -32,6 +48,7 @@ const ReviewCollectorPage: React.FC = () => {
 
           {/* TrustBox widget - Review Collector */}
           <div
+            ref={widgetRef}
             className="trustpilot-widget"
             data-locale="de-DE"
             data-template-id="56278e9abbbba0bdcd568bc"
