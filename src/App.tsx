@@ -86,6 +86,18 @@ const App: React.FC = React.memo(() => {
                   } 
                 />
                 
+                {/* Review Collector Page - No Layout (no header/footer) */}
+                <Route 
+                  path="/bewerten" 
+                  element={
+                    <InstagramLayout>
+                      <Suspense fallback={<LoadingSpinner />}>
+                        <ReviewCollectorPage />
+                      </Suspense>
+                    </InstagramLayout>
+                  } 
+                />
+                
                 {/* All other pages with normal Layout */}
                 <Route path="/*" element={
                   <Layout>
@@ -106,7 +118,6 @@ const App: React.FC = React.memo(() => {
                         <Route path="/agb" element={<TermsPage />} />
                         <Route path="/wissenswertes" element={<KnowledgePage />} />
                         <Route path="/preise" element={<PricesPage />} />
-                        <Route path="/bewerten" element={<ReviewCollectorPage />} />
                         {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
                         <Route path="*" element={<NotFoundPage />} />
                       </Routes>
