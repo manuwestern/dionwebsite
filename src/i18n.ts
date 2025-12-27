@@ -1,6 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Import translations
 import commonDE from './locales/common/de.json';
@@ -76,23 +75,14 @@ const resources = {
 };
 
 i18n
-  // detect user language
-  .use(LanguageDetector)
   // pass the i18n instance to react-i18next
   .use(initReactI18next)
   // init i18next
   .init({
     resources,
     fallbackLng: 'de',
-    // lng: 'de', // Removed forcing German as default language
+    lng: 'de', // Force German as default language
     debug: false, // Set to true for development
-    detection: {
-      // Order of language detection - prioritize path and cookie over browser settings
-      order: ['path', 'cookie', 'localStorage', 'navigator'],
-      lookupCookie: 'i18next',
-      lookupLocalStorage: 'i18nextLng',
-      caches: ['localStorage', 'cookie']
-    },
     
     // have a common namespace used around the full app
     ns: ['common', 'layout', 'home', 'hairTransplantation', 'beardTransplantation', 'eyebrowTransplantation', 'hairLossTherapy', 'clinic', 'contact', 'imprint', 'privacy', 'terms', 'cookies', 'knowledge', 'prices', 'newsletter'],
