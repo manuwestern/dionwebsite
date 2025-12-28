@@ -38,6 +38,7 @@ const LocalLandingPage = lazy(() => import('./pages/LocalLandingPage'));
 const CheapHairTransplantPage = lazy(() => import('./pages/CheapHairTransplantPage'));
 const InstagramLandingPage = lazy(() => import('./pages/InstagramLandingPage'));
 const ReviewCollectorPage = lazy(() => import('./pages/ReviewCollectorPage'));
+const LandingPage = lazy(() => import('./pages/LandingPage'));
 
 // Component to track route changes
 const RouteTracker: React.FC = () => {
@@ -95,7 +96,19 @@ const App: React.FC = React.memo(() => {
                         <ReviewCollectorPage />
                       </Suspense>
                     </InstagramLayout>
-                  } 
+                  }
+                />
+                
+                {/* Landing Page - No Layout (no header/footer) */}
+                <Route
+                  path="/lp"
+                  element={
+                    <InstagramLayout>
+                      <Suspense fallback={<LoadingSpinner />}>
+                        <LandingPage />
+                      </Suspense>
+                    </InstagramLayout>
+                  }
                 />
                 
                 {/* All other pages with normal Layout */}
