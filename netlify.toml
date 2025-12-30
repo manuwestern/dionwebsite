@@ -97,6 +97,31 @@
   status = 301
   force = true
 
+# Redirects for removed landing pages
+[[redirects]]
+  from = "/guenstige-haartransplantation"
+  to = "/haartransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/haartransplantation-koeln"
+  to = "/haartransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/haartransplantation-duesseldorf"
+  to = "/haartransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/haartransplantation-*"
+  to = "/haartransplantation"
+  status = 301
+  force = true
+
 # Critical redirect rules - sitemap first, then SPA routing
 [[redirects]]
   from = "/sitemap.xml"
