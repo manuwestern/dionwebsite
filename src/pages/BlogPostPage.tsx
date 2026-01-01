@@ -208,16 +208,32 @@ const BlogPostPage: React.FC = () => {
           {/* Article Body */}
           <div 
             className="prose prose-lg max-w-none
-                       prose-headings:text-gray-800 prose-headings:font-bold prose-headings:mt-8 prose-headings:mb-4
-                       prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl
-                       prose-p:text-gray-600 prose-p:leading-relaxed prose-p:mb-6
-                       prose-a:text-[#7BA7C2] prose-a:no-underline hover:prose-a:underline
+                       prose-headings:font-montserrat prose-headings:text-gray-800 prose-headings:font-bold prose-headings:leading-tight
+                       prose-h1:text-4xl prose-h1:mt-12 prose-h1:mb-6
+                       prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-5
+                       prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                       prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3
+                       prose-h5:text-lg prose-h5:mt-6 prose-h5:mb-3
+                       prose-h6:text-base prose-h6:mt-6 prose-h6:mb-3
+                       prose-p:font-montserrat prose-p:text-gray-600 prose-p:text-lg prose-p:leading-relaxed prose-p:mb-6
+                       prose-a:text-[#7BA7C2] prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-a:transition-colors
                        prose-strong:text-gray-800 prose-strong:font-semibold
-                       prose-ul:my-6 prose-ol:my-6
-                       prose-li:text-gray-600 prose-li:mb-2
-                       prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8
-                       prose-blockquote:border-l-4 prose-blockquote:border-[#7BA7C2] prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-700
-                       prose-code:text-[#7BA7C2] prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded"
+                       prose-em:text-gray-700 prose-em:italic
+                       prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
+                       prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
+                       prose-li:text-gray-600 prose-li:text-lg prose-li:mb-3 prose-li:leading-relaxed
+                       prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8 prose-img:w-full
+                       prose-figure:my-8
+                       prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-gray-500 prose-figcaption:mt-3
+                       prose-blockquote:border-l-4 prose-blockquote:border-[#7BA7C2] prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-6 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-gray-50 prose-blockquote:rounded-r-lg
+                       prose-code:text-[#7BA7C2] prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
+                       prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:p-6 prose-pre:my-6 prose-pre:overflow-x-auto
+                       prose-table:my-8 prose-table:w-full
+                       prose-thead:bg-gray-50 prose-thead:border-b-2 prose-thead:border-gray-200
+                       prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-gray-800
+                       prose-td:px-4 prose-td:py-3 prose-td:border-b prose-td:border-gray-200 prose-td:text-gray-600
+                       prose-hr:my-12 prose-hr:border-gray-200
+                       first:prose-p:text-xl first:prose-p:text-gray-700 first:prose-p:leading-relaxed"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
 
