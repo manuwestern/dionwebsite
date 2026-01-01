@@ -96,8 +96,10 @@ const SEO: React.FC<SEOProps> = ({
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       
-      {/* Robots directives */}
-      <meta name="robots" content={robotsContent.join(', ')} />
+      {/* Robots directives - Enhanced for AI crawlers */}
+      <meta name="robots" content={`${robotsContent.join(', ')}, max-snippet:-1, max-image-preview:large, max-video-preview:-1`} />
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       
       {/* Alternate language versions */}
       <link 

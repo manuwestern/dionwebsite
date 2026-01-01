@@ -115,9 +115,63 @@ interface PersonProps {
   };
 }
 
+interface ArticleProps {
+  headline: string;
+  description: string;
+  url: string;
+  image?: string | string[];
+  datePublished: string;
+  dateModified?: string;
+  author: {
+    name: string;
+    type?: 'Person' | 'Organization';
+    url?: string;
+  };
+  publisher: {
+    name: string;
+    logo: string;
+    url?: string;
+  };
+  articleBody?: string;
+  articleSection?: string;
+  wordCount?: number;
+  keywords?: string[];
+  inLanguage?: string;
+}
+
+interface HowToProps {
+  name: string;
+  description: string;
+  image?: string | string[];
+  totalTime?: string;
+  estimatedCost?: {
+    currency: string;
+    value: string;
+  };
+  supply?: string[];
+  tool?: string[];
+  step: {
+    name: string;
+    text: string;
+    image?: string;
+    url?: string;
+  }[];
+}
+
+interface VideoObjectProps {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration?: string;
+  contentUrl?: string;
+  embedUrl?: string;
+  transcript?: string;
+}
+
 interface StructuredDataProps {
-  type: 'LocalBusiness' | 'MedicalService' | 'Review' | 'AggregateRating' | 'FAQPage' | 'BreadcrumbList' | 'WebPage' | 'Person';
-  data: LocalBusinessProps | MedicalServiceProps | ReviewProps | AggregateRatingProps | FAQPageProps | BreadcrumbProps | WebPageProps | PersonProps;
+  type: 'LocalBusiness' | 'MedicalService' | 'Review' | 'AggregateRating' | 'FAQPage' | 'BreadcrumbList' | 'WebPage' | 'Person' | 'Article' | 'HowTo' | 'VideoObject';
+  data: LocalBusinessProps | MedicalServiceProps | ReviewProps | AggregateRatingProps | FAQPageProps | BreadcrumbProps | WebPageProps | PersonProps | ArticleProps | HowToProps | VideoObjectProps;
 }
 
 /**
@@ -399,6 +453,98 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             addressCountry: personData.address.addressCountry
           }
         })
+      };
+      break;
+
+    case 'Article':
+      const articleData = data as ArticleProps;
+      structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: articleData.headline,
+        description: articleData.description,
+        url: articleData.url,
+        image: Array.isArray(articleData.image) ? articleData.image : articleData.image ? [articleData.image] : [],
+        datePublished: articleData.datePublished,
+        dateModified: articleData.dateModified || articleData.datePublished,
+        author: {
+          '@type': articleData.author.type || 'Organization',
+          name: articleData.author.name,
+          ...(articleData.author.url && { url: articleData.author.url })
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: articleData.publisher.name,
+          logo: {
+            '@type': 'ImageObject',
+            url: articleData.publisher.logo
+          },
+          ...(articleData.publisher.url && { url: articleData.publisher.url })
+        },
+        ...(articleData.articleBody && { articleBody: articleData.articleBody }),
+        ...(articleData.articleSection && { articleSection: articleData.articleSection }),
+        ...(articleData.wordCount && { wordCount: articleData.wordCount }),
+        ...(articleData.keywords && { keywords: articleData.keywords.join(', ') }),
+        inLanguage: articleData.inLanguage || 'de-DE',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': articleData.url
+        }
+      };
+      break;
+
+    case 'HowTo':
+      const howToData = data as HowToProps;
+      structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: howToData.name,
+        description: howToData.description,
+        image: Array.isArray(howToData.image) ? howToData.image : howToData.image ? [howToData.image] : [],
+        ...(howToData.totalTime && { totalTime: howToData.totalTime }),
+        ...(howToData.estimatedCost && {
+          estimatedCost: {
+            '@type': 'MonetaryAmount',
+            currency: howToData.estimatedCost.currency,
+            value: howToData.estimatedCost.value
+          }
+        }),
+        ...(howToData.supply && {
+          supply: howToData.supply.map(item => ({
+            '@type': 'HowToSupply',
+            name: item
+          }))
+        }),
+        ...(howToData.tool && {
+          tool: howToData.tool.map(item => ({
+            '@type': 'HowToTool',
+            name: item
+          }))
+        }),
+        step: howToData.step.map((step, index) => ({
+          '@type': 'HowToStep',
+          position: index + 1,
+          name: step.name,
+          text: step.text,
+          ...(step.image && { image: step.image }),
+          ...(step.url && { url: step.url })
+        }))
+      };
+      break;
+
+    case 'VideoObject':
+      const videoData = data as VideoObjectProps;
+      structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: videoData.name,
+        description: videoData.description,
+        thumbnailUrl: videoData.thumbnailUrl,
+        uploadDate: videoData.uploadDate,
+        ...(videoData.duration && { duration: videoData.duration }),
+        ...(videoData.contentUrl && { contentUrl: videoData.contentUrl }),
+        ...(videoData.embedUrl && { embedUrl: videoData.embedUrl }),
+        ...(videoData.transcript && { transcript: videoData.transcript })
       };
       break;
 

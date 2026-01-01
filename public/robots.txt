@@ -1,60 +1,69 @@
-# robots.txt for Dion Hair Clinic
-# https://www.dionhairclinic.com
+# Robots.txt für Dion Hair Clinic
+# Optimiert für Suchmaschinen und AI-Crawler
 
-# Global rules for all bots
+# Allgemeine Suchmaschinen-Bots
 User-agent: *
 Allow: /
-
-# Disallow admin, private, or temporary areas
 Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /dev/
+Disallow: /api/
 Disallow: /*.json$
-Disallow: /*?*
-Disallow: /*?
-Disallow: /*/amp/
-Disallow: /*/print/
 
-# Disallow Hair Loss Therapy page due to Google Ads guidelines violation
-Disallow: /haarausfalltherapie
+# Sitemap
+Sitemap: https://www.dionhairclinic.com/sitemap.xml
 
-# Google-specific rules
-User-agent: Googlebot
+# OpenAI GPT Bot (ChatGPT)
+User-agent: GPTBot
 Allow: /
 Crawl-delay: 1
 
-# Google Image-specific rules
-User-agent: Googlebot-Image
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.avif$
+# ChatGPT User Agent
+User-agent: ChatGPT-User
+Allow: /
 
-# Bing-specific rules
+# Common Crawl Bot (verwendet von vielen AI-Systemen)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+# Anthropic AI (Claude)
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+# Google Bard / Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Bing AI / Copilot
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 2
 
-# Allow all bots to access static assets
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.avif$
-Allow: /*.woff$
-Allow: /*.woff2$
-Allow: /*.ttf$
-Allow: /*.eot$
-Allow: /*.pdf$
-Allow: /*.ico$
+# Spezielle Crawler blockieren (Scraper, die keinen Mehrwert bieten)
+User-agent: AhrefsBot
+Crawl-delay: 10
 
-# Sitemap location
-Sitemap: https://www.dionhairclinic.com/sitemap.xml
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Aggressive Crawler begrenzen
+User-agent: MJ12bot
+Crawl-delay: 30
+
+User-agent: BLEXBot
+Crawl-delay: 30
