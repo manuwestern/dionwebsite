@@ -8,8 +8,10 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /*.json$
 
-# Sitemap
+# Sitemaps
 Sitemap: https://www.dionhairclinic.com/sitemap.xml
+Sitemap: https://www.dionhairclinic.com/sitemap-pages.xml
+Sitemap: https://www.dionhairclinic.com/.netlify/functions/sitemap-blog
 
 # OpenAI GPT Bot (ChatGPT)
 User-agent: GPTBot
