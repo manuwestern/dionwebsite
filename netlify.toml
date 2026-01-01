@@ -97,6 +97,85 @@
   status = 301
   force = true
 
+# Case-sensitivity redirects for common URL variations
+[[redirects]]
+  from = "/Home"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Home.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Impressum"
+  to = "/impressum"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Kontakt"
+  to = "/kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Klinik"
+  to = "/klinik"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Wissenswertes"
+  to = "/wissenswertes"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Preise"
+  to = "/preise"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Haartransplantation"
+  to = "/haartransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Barthaartransplantation"
+  to = "/barthaartransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Augenbrauentransplantation"
+  to = "/augenbrauentransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Datenschutz"
+  to = "/datenschutz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/AGB"
+  to = "/agb"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Cookies"
+  to = "/cookies"
+  status = 301
+  force = true
+
 # Redirects for removed landing pages
 [[redirects]]
   from = "/guenstige-haartransplantation"
