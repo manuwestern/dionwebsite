@@ -144,6 +144,10 @@ const Navigation: React.FC = () => {
               {t('navigation.prices')}
             </NavLink>
             
+            <NavLink to="/blog" isActive={isActive('/blog')}>
+              Blog
+            </NavLink>
+            
             <NavLink to="/wissenswertes" isActive={isActive('/wissenswertes')}>
               {t('navigation.information')}
             </NavLink>
@@ -205,6 +209,13 @@ const Navigation: React.FC = () => {
                 isActive={isActive('/preise')}
               >
                 {t('navigation.prices')}
+              </MobileNavLink>
+              
+              <MobileNavLink 
+                to="/blog" 
+                isActive={isActive('/blog')}
+              >
+                Blog
               </MobileNavLink>
               
               <MobileNavLink 

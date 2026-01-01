@@ -39,6 +39,8 @@ const PricesPage = lazy(() => import('./pages/PricesPage'));
 // const CheapHairTransplantPage = lazy(() => import('./pages/CheapHairTransplantPage'));
 const InstagramLandingPage = lazy(() => import('./pages/InstagramLandingPage'));
 const ReviewCollectorPage = lazy(() => import('./pages/ReviewCollectorPage'));
+const BlogOverviewPage = lazy(() => import('./pages/BlogOverviewPage'));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 
 // Component to track route changes
 const RouteTracker: React.FC = () => {
@@ -120,6 +122,9 @@ const App: React.FC = React.memo(() => {
                         <Route path="/agb" element={<TermsPage />} />
                         <Route path="/wissenswertes" element={<KnowledgePage />} />
                         <Route path="/preise" element={<PricesPage />} />
+                        {/* Blog Routes */}
+                        <Route path="/blog" element={<BlogOverviewPage />} />
+                        <Route path="/blog/:slug" element={<BlogPostPage />} />
                         {/* Fallback-Route für 404-Fehler - zeigt die NotFoundPage an */}
                         <Route path="*" element={<NotFoundPage />} />
                       </Routes>
