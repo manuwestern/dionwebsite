@@ -56,7 +56,7 @@ const BlogOverviewPage: React.FC = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           {loading ? (
             <div className="flex justify-center items-center py-20">
@@ -105,11 +105,6 @@ const BlogOverviewPage: React.FC = () => {
               )}
 
               {/* All Posts */}
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                  Alle Artikel
-                </h2>
-              </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map(post => (
                   <BlogCard key={post.id} post={post} />
