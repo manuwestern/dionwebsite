@@ -201,6 +201,69 @@
   status = 301
   force = true
 
+# Redirects for old English URL variants
+[[redirects]]
+  from = "/en/Home.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/index"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/Ergebnisse"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/Ergebnisse.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/Klinik"
+  to = "/klinik"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/Augenbrauentransplantation.html"
+  to = "/augenbrauentransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/Redirect-WA.html"
+  to = "/kontakt"
+  status = 301
+  force = true
+
+# Redirects for .html variants
+[[redirects]]
+  from = "/Augenbrauentransplantation.html"
+  to = "/augenbrauentransplantation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Klinik.html"
+  to = "/klinik"
+  status = 301
+  force = true
+
+# Redirect for old booking page
+[[redirects]]
+  from = "/termin-buchen"
+  to = "/kontakt"
+  status = 301
+  force = true
+
 # Critical redirect rules - sitemap first, then SPA routing
 [[redirects]]
   from = "/sitemap.xml"
