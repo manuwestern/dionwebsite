@@ -37,25 +37,18 @@ const BlogOverviewPage: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#F8FAFC] via-white to-[#F0F8EA] py-16 overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#7BA7C2]/10 rounded-full"></div>
-          <div className="absolute top-1/3 -left-10 w-32 h-32 bg-[#86C166]/10 rounded-full"></div>
-          <div className="absolute bottom-10 right-1/4 w-6 h-6 bg-[#7BA7C2]/20 rounded-full"></div>
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md mb-6">
+      <section className="relative bg-gradient-to-b from-[#F8FAFC] to-white py-20 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-sm mb-6">
             <BookOpen className="w-5 h-5 text-[#7BA7C2] mr-2" />
             <span className="text-sm font-medium text-gray-700">Wissen & Expertise</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
             Blog & <span className="text-[#7BA7C2]">Wissenswertes</span>
           </h1>
           
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Aktuelle Artikel, Tipps und Informationen rund um Haartransplantation, 
             Haarpflege und Haargesundheit von unseren Experten
           </p>
