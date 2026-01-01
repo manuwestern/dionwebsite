@@ -44,7 +44,7 @@ const BlogOverviewPage: React.FC = () => {
             <span className="text-sm font-medium text-gray-700">Wissen & Expertise</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight tracking-wide md:tracking-widest">
             Blog & <span className="text-[#7BA7C2]">Wissenswertes</span>
           </h1>
           
