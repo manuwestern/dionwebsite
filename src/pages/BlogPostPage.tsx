@@ -51,14 +51,39 @@ const BlogPostPage: React.FC = () => {
     });
   };
 
-  const sharePost = () => {
-    if (navigator.share && post) {
-      navigator.share({
-        title: post.title,
-        text: post.excerpt,
-        url: window.location.href
-      });
+  const sharePost = async () => {
+    if (!post) return;
+
+    // Check if Web Share API is supported
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: post.title,
+          text: post.excerpt,
+          url: window.location.href
+        });
+      } catch (err) {
+        // User cancelled or error occurred
+        if ((err as Error).name !== 'AbortError') {
+          console.error('Error sharing:', err);
+          // Fallback: Copy to clipboard
+          copyToClipboard();
+        }
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      copyToClipboard();
     }
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert('Link wurde in die Zwischenablage kopiert!');
+    }).catch(err => {
+      console.error('Error copying to clipboard:', err);
+      // Final fallback: Show URL in prompt
+      prompt('Link kopieren:', window.location.href);
+    });
   };
 
   if (loading) {
