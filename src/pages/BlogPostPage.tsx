@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Calendar, Tag, Share2 } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, Tag, Share2, Facebook, Twitter, Linkedin, Mail, Link2, MessageCircle, Check } from 'lucide-react';
 import { getBlogPost, getRelatedPosts, GhostPost } from '../services/ghostApi';
 import BlogCard from '../components/blog/BlogCard';
 import SEO from '../components/seo/SEO';
@@ -13,6 +13,9 @@ const BlogPostPage: React.FC = () => {
   const [relatedPosts, setRelatedPosts] = useState<GhostPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [copySuccess, setCopySuccess] = useState(false);
+  const shareMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -43,6 +46,23 @@ const BlogPostPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  // Close share menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (shareMenuRef.current && !shareMenuRef.current.contains(event.target as Node)) {
+        setShowShareMenu(false);
+      }
+    };
+
+    if (showShareMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showShareMenu]);
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('de-DE', {
       year: 'numeric',
@@ -54,8 +74,8 @@ const BlogPostPage: React.FC = () => {
   const sharePost = async () => {
     if (!post) return;
 
-    // Check if Web Share API is supported
-    if (navigator.share) {
+    // On mobile devices, use Web Share API if available
+    if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       try {
         await navigator.share({
           title: post.title,
@@ -66,24 +86,61 @@ const BlogPostPage: React.FC = () => {
         // User cancelled or error occurred
         if ((err as Error).name !== 'AbortError') {
           console.error('Error sharing:', err);
-          // Fallback: Copy to clipboard
-          copyToClipboard();
+          // Fallback: Show share menu
+          setShowShareMenu(!showShareMenu);
         }
       }
     } else {
-      // Fallback for browsers that don't support Web Share API
-      copyToClipboard();
+      // On desktop, toggle share menu
+      setShowShareMenu(!showShareMenu);
     }
   };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(window.location.href).then(() => {
-      alert('Link wurde in die Zwischenablage kopiert!');
+      setCopySuccess(true);
+      setTimeout(() => {
+        setCopySuccess(false);
+        setShowShareMenu(false);
+      }, 2000);
     }).catch(err => {
       console.error('Error copying to clipboard:', err);
       // Final fallback: Show URL in prompt
       prompt('Link kopieren:', window.location.href);
     });
+  };
+
+  const getShareUrl = (platform: string) => {
+    if (!post) return '#';
+    
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(post.title);
+    const text = encodeURIComponent(post.excerpt);
+
+    switch (platform) {
+      case 'facebook':
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      case 'twitter':
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+      case 'linkedin':
+        return `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+      case 'whatsapp':
+        return `https://wa.me/?text=${title}%20${url}`;
+      case 'email':
+        return `mailto:?subject=${title}&body=${text}%0A%0A${url}`;
+      default:
+        return '#';
+    }
+  };
+
+  const handleSocialShare = (platform: string) => {
+    const shareUrl = getShareUrl(platform);
+    if (platform === 'email') {
+      window.location.href = shareUrl;
+    } else {
+      window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+    setShowShareMenu(false);
   };
 
   if (loading) {
@@ -219,15 +276,93 @@ const BlogPostPage: React.FC = () => {
       {/* Article Content */}
       <article className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          {/* Share Button */}
+          {/* Share Button with Dropdown */}
           <div className="flex justify-end mb-8">
-            <button
-              onClick={sharePost}
-              className="flex items-center gap-2 text-gray-600 hover:text-[#7BA7C2] transition-colors"
-            >
-              <Share2 className="w-5 h-5" />
-              <span>Teilen</span>
-            </button>
+            <div className="relative" ref={shareMenuRef}>
+              <button
+                onClick={sharePost}
+                className="flex items-center gap-2 text-gray-600 hover:text-[#7BA7C2] transition-colors"
+              >
+                <Share2 className="w-5 h-5" />
+                <span>Teilen</span>
+              </button>
+
+              {/* Share Dropdown Menu */}
+              {showShareMenu && (
+                <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50 animate-fadeIn">
+                  <div className="px-4 py-2 border-b border-gray-100">
+                    <p className="text-sm font-medium text-gray-700">Artikel teilen</p>
+                  </div>
+                  
+                  <div className="py-1">
+                    {/* Facebook */}
+                    <button
+                      onClick={() => handleSocialShare('facebook')}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                    >
+                      <Facebook className="w-5 h-5 text-[#1877F2]" />
+                      <span className="text-sm text-gray-700">Facebook</span>
+                    </button>
+
+                    {/* WhatsApp */}
+                    <button
+                      onClick={() => handleSocialShare('whatsapp')}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                    >
+                      <MessageCircle className="w-5 h-5 text-[#25D366]" />
+                      <span className="text-sm text-gray-700">WhatsApp</span>
+                    </button>
+
+                    {/* Twitter/X */}
+                    <button
+                      onClick={() => handleSocialShare('twitter')}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                    >
+                      <Twitter className="w-5 h-5 text-[#1DA1F2]" />
+                      <span className="text-sm text-gray-700">Twitter / X</span>
+                    </button>
+
+                    {/* LinkedIn */}
+                    <button
+                      onClick={() => handleSocialShare('linkedin')}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                    >
+                      <Linkedin className="w-5 h-5 text-[#0A66C2]" />
+                      <span className="text-sm text-gray-700">LinkedIn</span>
+                    </button>
+
+                    {/* Email */}
+                    <button
+                      onClick={() => handleSocialShare('email')}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                    >
+                      <Mail className="w-5 h-5 text-gray-600" />
+                      <span className="text-sm text-gray-700">E-Mail</span>
+                    </button>
+
+                    <div className="border-t border-gray-100 my-1"></div>
+
+                    {/* Copy Link */}
+                    <button
+                      onClick={copyToClipboard}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                    >
+                      {copySuccess ? (
+                        <>
+                          <Check className="w-5 h-5 text-green-600" />
+                          <span className="text-sm text-green-600 font-medium">Link kopiert!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Link2 className="w-5 h-5 text-gray-600" />
+                          <span className="text-sm text-gray-700">Link kopieren</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Article Body */}
