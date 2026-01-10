@@ -10,7 +10,6 @@ import ProcessSection from '../components/beardTransplantation/ProcessSection';
 import DPISection from '../components/beardTransplantation/DPISection';
 import CareSection from '../components/beardTransplantation/CareSection';
 import FAQSection from '../components/beardTransplantation/FAQSection';
-import ContactSection from '../components/layout/ContactSection';
 
 // Section wrapper component for elegant, subtle styling
 interface SectionWrapperProps {
@@ -105,10 +104,6 @@ const BeardTransplantationPage: React.FC = () => {
       
       <SectionWrapper type="light">
         <FAQSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="pattern">
-        <ContactSection />
       </SectionWrapper>
     </>
   );

@@ -7,7 +7,6 @@ import TestimonialsSection from '../components/home/TestimonialsSection';
 import PainlessTreatmentSection from '../components/home/PainlessTreatmentSection';
 import AppSection from '../components/home/AppSection';
 import FAQSection from '../components/home/FAQSection';
-import ContactSection from '../components/layout/ContactSection';
 import HairAnalysisPopup from '../components/home/HairAnalysisPopup';
 
 // Section wrapper component for elegant, subtle styling
@@ -98,10 +97,6 @@ const HomePage: React.FC = () => {
       
       <SectionWrapper type="light">
         <FAQSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="pattern">
-        <ContactSection />
       </SectionWrapper>
       
       {/* Subtle page overlay for depth effect */}

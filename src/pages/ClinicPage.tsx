@@ -5,7 +5,6 @@ import HeroSection from '../components/clinic/HeroSection';
 import TeamSection from '../components/clinic/TeamSection';
 import TechnologySection from '../components/clinic/TechnologySection';
 import QualitySection from '../components/clinic/QualitySection';
-import ContactSection from '../components/layout/ContactSection';
 import { useTranslation } from 'react-i18next';
 
 // Section wrapper component for elegant, subtle styling
@@ -106,10 +105,6 @@ const ClinicPage: React.FC = () => {
       
       <SectionWrapper type="light">
         <QualitySection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="pattern">
-        <ContactSection />
       </SectionWrapper>
       
       {/* Subtle page overlay for depth effect */}

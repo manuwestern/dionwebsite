@@ -10,7 +10,6 @@ import ProcessSection from '../components/eyebrowTransplantation/ProcessSection'
 import DPISection from '../components/eyebrowTransplantation/DPISection';
 import CareSection from '../components/eyebrowTransplantation/CareSection';
 import FAQSection from '../components/eyebrowTransplantation/FAQSection';
-import ContactSection from '../components/layout/ContactSection';
 
 // Section wrapper component for elegant, subtle styling
 interface SectionWrapperProps {
@@ -105,10 +104,6 @@ const EyebrowTransplantationPage: React.FC = () => {
       
       <SectionWrapper type="light">
         <FAQSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="pattern">
-        <ContactSection />
       </SectionWrapper>
     </>
   );

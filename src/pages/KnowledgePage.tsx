@@ -8,7 +8,6 @@ import TransplantCareSection from '../components/knowledge/TransplantCareSection
 import HairFactsSection from '../components/knowledge/HairFactsSection';
 import NutritionSection from '../components/knowledge/NutritionSection';
 import CTASection from '../components/knowledge/CTASection';
-import ContactSection from '../components/layout/ContactSection';
 
 // Section wrapper component for elegant subtle styling
 interface SectionWrapperProps {
@@ -79,10 +78,6 @@ const KnowledgePage: React.FC = () => {
 
       <SectionWrapper type="light">
         <NutritionSection />
-      </SectionWrapper>
-
-      <SectionWrapper type="pattern">
-        <ContactSection />
       </SectionWrapper>
     </>
   );

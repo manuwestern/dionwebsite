@@ -6,7 +6,6 @@ import BenefitsSection from '../components/hairLossTherapy/BenefitsSection';
 import MethodsSection from '../components/hairLossTherapy/MethodsSection';
 import AnalysisSection from '../components/hairLossTherapy/AnalysisSection';
 import FAQSection from '../components/hairLossTherapy/FAQSection';
-import ContactSection from '../components/layout/ContactSection';
 
 // Section wrapper component for elegant, subtle styling
 interface SectionWrapperProps {
@@ -85,10 +84,6 @@ const HairLossTherapyPage: React.FC = () => {
       
       <SectionWrapper type="light">
         <FAQSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="pattern">
-        <ContactSection />
       </SectionWrapper>
     </>
   );

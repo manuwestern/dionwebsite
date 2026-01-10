@@ -4,7 +4,6 @@ import SEO from '../components/seo/SEO';
 import HeroSection from '../components/prices/HeroSection';
 import PriceOverviewSection from '../components/prices/PriceOverviewSection';
 import FAQSection from '../components/prices/FAQSection';
-import ContactSection from '../components/layout/ContactSection';
 
 // Section wrapper component for elegant, subtle styling
 interface SectionWrapperProps {
@@ -75,10 +74,6 @@ const PricesPage: React.FC = () => {
       
       <SectionWrapper type="medium">
         <FAQSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="pattern">
-        <ContactSection />
       </SectionWrapper>
     </>
   );

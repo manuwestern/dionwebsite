@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import SEO from '../components/seo/SEO';
 import StructuredData from '../components/seo/StructuredData';
 import ContactInfoSection from '../components/contact/ContactInfoSection';
-import ContactFormSection from '../components/contact/ContactFormSection';
 import MapSection from '../components/contact/MapSection';
 import ConsultationOptionsSection from '../components/contact/ConsultationOptionsSection';
 import { useTranslation } from 'react-i18next';
@@ -134,10 +133,6 @@ const ContactPage: React.FC = () => {
       
       <SectionWrapper type="medium">
         <MapSection />
-      </SectionWrapper>
-      
-      <SectionWrapper type="accent">
-        <ContactFormSection />
       </SectionWrapper>
       
       {/* Subtle page overlay for depth effect */}
