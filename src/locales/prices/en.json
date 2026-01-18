@@ -11,22 +11,22 @@
     "priceTags": {
       "saphirFUEHair": {
         "title": "Saphir FUE Hair",
-        "price": "from 2,599€*",
+        "price": "from 3,099€*",
         "description": "Basic package up to 2000 grafts"
       },
       "dhiFUEHair": {
         "title": "DHI FUE Hair",
-        "price": "from 3,599€*",
+        "price": "from 4,099€*",
         "description": "Basic package up to 2000 grafts"
       },
       "saphirFUEBeard": {
         "title": "Saphir FUE Beard",
-        "price": "from 2,599€*",
+        "price": "from 3,099€*",
         "description": "Basic package up to 2000 grafts"
       },
       "saphirFUEEyebrow": {
         "title": "Saphir FUE Eyebrow",
-        "price": "from 1,699€*",
+        "price": "from 2,199€*",
         "description": "up to 1000 grafts"
       }
     }
@@ -42,20 +42,20 @@
       "goaReference": "Medically based pricing"
     },
     "regularPrices": {
-      "basicSaphirFUEHair2000": "2599€",
-      "basicSaphirFUEHair4500": "2999€",
-      "advancedSaphirFUEHair2000": "3299€",
-      "advancedSaphirFUEHair4500": "3799€",
-      "basicDHIFUEHair2000": "3599€",
-      "basicDHIFUEHair4000": "3999€",
-      "advancedDHIFUEHair2000": "4299€",
-      "advancedDHIFUEHair4500": "4799€",
-      "saphirFUEEyebrow": "1699€",
-      "dhiFUEEyebrow": "2099€",
-      "saphirFUEBeard2000": "2599€",
-      "saphirFUEBeard4500": "2999€",
-      "dhiFUEBeard2000": "3599€",
-      "dhiFUEBeard4000": "3999€"
+      "basicSaphirFUEHair2000": "3099€",
+      "basicSaphirFUEHair4500": "3499€",
+      "advancedSaphirFUEHair2000": "3799€",
+      "advancedSaphirFUEHair4500": "4299€",
+      "basicDHIFUEHair2000": "4099€",
+      "basicDHIFUEHair4000": "4499€",
+      "advancedDHIFUEHair2000": "4799€",
+      "advancedDHIFUEHair4500": "5299€",
+      "saphirFUEEyebrow": "2199€",
+      "dhiFUEEyebrow": "2599€",
+      "saphirFUEBeard2000": "3099€",
+      "saphirFUEBeard4500": "3499€",
+      "dhiFUEBeard2000": "4099€",
+      "dhiFUEBeard4000": "4499€"
     },
     "hairTransplantation": {
       "title": "Hair Transplantation",
@@ -67,11 +67,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "from 2,599€*"
+              "price": "from 3,099€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "from 2,999€*"
+              "price": "from 3,499€*"
             }
           ],
           "features": [
@@ -86,11 +86,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "from 3,299€*"
+              "price": "from 3,799€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "from 3,799€*"
+              "price": "from 4,299€*"
             }
           ],
           "features": [
@@ -106,11 +106,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "from 3,599€*"
+              "price": "from 4,099€*"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "from 3,999€*"
+              "price": "from 4,499€*"
             }
           ],
           "features": [
@@ -126,11 +126,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "from 4,299€*"
+              "price": "from 4,799€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "from 4,799€*"
+              "price": "from 5,299€*"
             }
           ],
           "features": [
@@ -153,7 +153,7 @@
           "prices": [
             {
               "title": "up to 1000 Grafts",
-              "price": "from 1,699€*"
+              "price": "from 2,199€*"
             }
           ],
           "features": [
@@ -167,7 +167,7 @@
           "prices": [
             {
               "title": "Standard",
-              "price": "from 2,099€*"
+              "price": "from 2,599€*"
             }
           ],
           "features": [
@@ -187,11 +187,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "from 2,599€*"
+              "price": "from 3,099€*"
             },
             {
               "title": "up to 4500 Grafts",
-              "price": "from 2,999€*"
+              "price": "from 3,499€*"
             }
           ],
           "features": [
@@ -206,11 +206,11 @@
           "prices": [
             {
               "title": "up to 2000 Grafts",
-              "price": "from 3,599€*"
+              "price": "from 4,099€*"
             },
             {
               "title": "up to 4000 Grafts",
-              "price": "from 3,999€*"
+              "price": "from 4,499€*"
             }
           ],
           "features": [
